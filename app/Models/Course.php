@@ -2,12 +2,14 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Course extends Model
 {
     use HasFactory;
+    
 
     public function degree() {
         return $this->BelongsTo(Degree::class);
@@ -39,6 +41,8 @@ class Course extends Model
 
     protected $casts = [
         'datelimite' => 'datetime',
-
     ];
+
+
+  
 }

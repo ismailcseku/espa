@@ -3,17 +3,16 @@
 namespace App\Nova;
 
 
-
-use Emilianotisato\NovaTinyMCE\NovaTinyMCE;
-use Laravel\Nova\Fields\BelongsTo;
-use Laravel\Nova\Fields\Date;
-use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Date;
+use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Number;
-use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\Textarea;
-use Laravel\Nova\Fields\Trix;
+use Laravel\Nova\Fields\BelongsTo;
+use Emilianotisato\NovaTinyMCE\NovaTinyMCE;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use NumaxLab\NovaCKEditor5Classic\CKEditor5Classic;
 
@@ -57,9 +56,7 @@ class Course extends Resource
             Image::make('Photo'),
 
             //CKEditor5Classic::make('description'),
-
             NovaTinyMCE::make('description'),
-
             //Trix::make('Description','description'),
             
             //Textarea::make('Description','description'),
