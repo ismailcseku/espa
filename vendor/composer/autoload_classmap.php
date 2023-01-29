@@ -36,6 +36,7 @@ return array(
     'App\\Models\\Modality' => $baseDir . '/app/Models/Modality.php',
     'App\\Models\\Mode' => $baseDir . '/app/Models/Mode.php',
     'App\\Models\\Program' => $baseDir . '/app/Models/Program.php',
+    'App\\Models\\Slide' => $baseDir . '/app/Models/Slide.php',
     'App\\Models\\Subtitle' => $baseDir . '/app/Models/Subtitle.php',
     'App\\Models\\Tab' => $baseDir . '/app/Models/Tab.php',
     'App\\Models\\TrainingType' => $baseDir . '/app/Models/TrainingType.php',

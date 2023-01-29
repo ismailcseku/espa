@@ -50,7 +50,9 @@ class CourseController extends Controller
      */
     public function show(Course $course)
     {
-        return view('courses.detail', compact('course'));
+        return view('courses.details')->with([
+            'course'=>$course
+        ]);
     }
 
     /**

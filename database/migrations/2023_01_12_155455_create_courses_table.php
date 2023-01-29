@@ -28,7 +28,7 @@ return new class extends Migration
             $table->text('admission')->nullable();
             $table->text('dossier')->nullable();
             $table->text('candidature')->nullable();
-            $table->date('datelimite')->nullable();
+            $table->dateTime('datelimite')->nullable();
             $table->text('selection')->nullable();
             $table->string('daterentre')->nullable();
             $table->string('grade')->nullable();

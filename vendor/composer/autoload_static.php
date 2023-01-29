@@ -627,6 +627,7 @@ class ComposerStaticInit8e002b5a0e483662cc63bf31cc950f31
         'App\\Models\\Modality' => __DIR__ . '/../..' . '/app/Models/Modality.php',
         'App\\Models\\Mode' => __DIR__ . '/../..' . '/app/Models/Mode.php',
         'App\\Models\\Program' => __DIR__ . '/../..' . '/app/Models/Program.php',
+        'App\\Models\\Slide' => __DIR__ . '/../..' . '/app/Models/Slide.php',
         'App\\Models\\Subtitle' => __DIR__ . '/../..' . '/app/Models/Subtitle.php',
         'App\\Models\\Tab' => __DIR__ . '/../..' . '/app/Models/Tab.php',
         'App\\Models\\TrainingType' => __DIR__ . '/../..' . '/app/Models/TrainingType.php',

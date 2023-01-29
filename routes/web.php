@@ -15,5 +15,5 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', [HomeController::class, '__invoke'])->name('home');
-Route::get('/courses/{course}', [\App\Http\Controllers\CourseController::class, 'show']);
+Route::get('/courses/{course}', [\App\Http\Controllers\CourseController::class, 'show'])->name('course.details');
 Route::get('/degree', [\App\Http\Controllers\DegreeController::class, 'index']);

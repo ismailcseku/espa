@@ -9,7 +9,22 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Course extends Model
 {
     use HasFactory;
-    
+    protected $fillable=[
+        'name',
+        'photo',
+        'description',
+        'duration',
+        'admission',
+        'dossier',
+        'candidature',
+        'datelimite',
+        'selection',
+        'daterentrer',
+        'grade',
+        'profile',
+        'opportunity',
+        'reviews',
+    ];
 
     public function degree() {
         return $this->BelongsTo(Degree::class);
@@ -40,8 +55,9 @@ class Course extends Model
     }
 
     protected $casts = [
-        'datelimite' => 'datetime',
+        'datelimite' => 'datetime:Y-m-d ',
     ];
+
 
 
   

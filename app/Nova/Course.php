@@ -3,6 +3,7 @@
 namespace App\Nova;
 
 
+use Carbon\CarbonInterval;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\Text;
@@ -10,6 +11,7 @@ use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\HasMany;
+use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Fields\BelongsTo;
 use Emilianotisato\NovaTinyMCE\NovaTinyMCE;
@@ -58,7 +60,6 @@ class Course extends Resource
             //CKEditor5Classic::make('description'),
             NovaTinyMCE::make('description'),
             //Trix::make('Description','description'),
-            
             //Textarea::make('Description','description'),
 
             Number::make('Durée en mois','duration'),
@@ -69,7 +70,7 @@ class Course extends Resource
             NovaTinyMCE::make('Prérequis et admission','admission'),
             NovaTinyMCE::make('Dossier','dossier'),
             NovaTinyMCE::make('Candidature','candidature'),
-            Date::make('Date limite','datelimite'),
+            DateTime::make('Date limite','datelimite'),
             NovaTinyMCE::make('Modaliés de selection','selection'),
             NovaTinyMCE::make('Date rentrée','daterentre'),
 
