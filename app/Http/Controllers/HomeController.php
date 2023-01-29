@@ -19,7 +19,9 @@ class HomeController extends Controller
     public function __invoke(Request $request)
     {
         $courses = DB::table('courses')->join('modalities','modalities.id','=','courses.modality_id')
-        ->select('courses.id','courses.created_at','courses.name','courses.photo','courses.description','courses.datelimite','courses.photo','courses.duration','modalities.name as modalitiy_name')
+        ->join('degrees','degrees.id','=','courses.degree_id')
+        ->join('languages','languages.id','=','courses.language_id')
+        ->select('courses.*','modalities.name as modalitiy_name','degrees.name as degrees_name','languages.name as languages_name')
         ->orderByDesc('courses.created_at')
         ->limit(8)->get();
         $slides=Slide::all();

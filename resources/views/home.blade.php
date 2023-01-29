@@ -348,7 +348,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="owl-carousel-3col owl-nav-top" data-nav="tru">
-
+                  
                             @foreach ($courses as $course)
                                 <a href="{{route('course.details',$course->id)}}" class="item">
                                     <div class="course-single-item bg-white border-1px clearfix">
@@ -367,6 +367,10 @@
                                                 <a href="page-course-details.html">
                                                     <h4 class="mt-5 mb-5">{{ $course->name }}</h4>
                                                 </a>
+                                                
+                                                <a href="page-course-details.html">
+                                                    <h4 class="mt-5 mb-5" style="opacity: 0.5">{{ $course->degrees_name }}</h4>
+                                                </a>
                                                 <h5 class="text-gray font-12 mt-0">Durée : {{ $course->duration }} mois
                                                 </h5>
                                             </div>
@@ -377,7 +381,7 @@
                                         </div>
                                         <div class="course-meta">
                                             <ul class="list-inline">
-                                                <li><i class="lnr lnr-users font-20"></i>{{ $course->modalitiy_name }}
+                                                <li><i class="lnr lnr-users font-20"></i>{{ $course->languages_name }}
                                                 </li>
                                                 <li><i class="ficon-clock font-18"></i>{{ $course->datelimite }}</li>
                                             </ul>

@@ -120,7 +120,7 @@
                                 class="menuzord-brand pull-left flip mt-20 mt-sm-10 mb-sm-20 pt-5"
                                 href="index-mp-layout1.html"><img src="images/logo-wide.png" alt=""></a>
                             <ul class="menuzord-menu">
-                                <li class="active"><a href="#home">Formations</a>
+                                <li class="active"><a href="{{route('course.index')}}">Formations</a>
                                     <ul class="dropdown">
                                         <li><a href="#">Ingénieur d’État en Agronomie</a>
                                             <ul class="dropdown">
@@ -140,10 +140,8 @@
                                                 <li><a href="index-sp-layout4.html"> Locust Science (fr)</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="#">Licence professionnelle</a>
 
-                                        </li>
-                                        <li><a href="#">Technicien Spécialisé</a>
+                                        <li><a href="#">Licence professionnelle</a>
                                             <ul class="dropdown">
                                                 <li><a href="index-dark-mp-layout1.html">Horticulture Ornementale et
                                                         Espaces verts</a></li>
@@ -151,7 +149,7 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li><a href="#">Programme doctoral</a>
+                                        <li><a href="#">Technicien Spécialisé</a>
                                             <ul class="dropdown">
                                                 <li><a href="index-home-variation-owl-carousel.html">Technico-Commercial
                                                         en Productions Horticoles</a></li>
@@ -163,6 +161,9 @@
                                                         href="index-home-variation-video-background.html">Aquaculture</a>
                                                 </li>
                                             </ul>
+                                        </li>
+                                        <li><a href="#">Programme doctoral</a>
+    
                                         </li>
                                         <li><a href="#">Formation Exécutive <span
                                                     class="label label-danger">New</span></a>

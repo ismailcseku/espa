@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CourseController;
+use App\Http\Controllers\DegreeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,5 +17,6 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', [HomeController::class, '__invoke'])->name('home');
-Route::get('/courses/{course}', [\App\Http\Controllers\CourseController::class, 'show'])->name('course.details');
-Route::get('/degree', [\App\Http\Controllers\DegreeController::class, 'index']);
+Route::get('/courses/{course}', [CourseController::class, 'show'])->name('course.details');
+Route::get('/courses', [CourseController::class, 'index'])->name('course.index');
+Route::get('/degree', [DegreeController::class, 'index']);

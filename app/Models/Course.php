@@ -55,7 +55,7 @@ class Course extends Model
     }
 
     protected $casts = [
-        'datelimite' => 'datetime:Y-m-d ',
+        'datelimite' => 'datetime',
     ];
 
 

@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Models\Course;
+use App\Models\Degree;
 use App\Models\Timing;
+use App\Models\Program;
+use App\Models\Download;
 use Illuminate\Http\Request;
 
 class CourseController extends Controller
@@ -16,8 +20,7 @@ class CourseController extends Controller
     public function index()
     {
         $courses = Course::all();
-        //$timingMode = TimingMode::find('id');
-       // dd($courses);
+
         return  view('courses.index',compact('courses'));
     }
 
@@ -50,8 +53,30 @@ class CourseController extends Controller
      */
     public function show(Course $course)
     {
+        $val=$course->join('modalities','modalities.id','=','courses.modality_id')
+        ->join('degrees','degrees.id','=','courses.degree_id')
+        ->join('languages','languages.id','=','courses.language_id')
+        ->join('modes','modes.id','=','courses.mode_id')
+        ->select('courses.*','modalities.name as modalitiy_name','degrees.name as degrees_name','languages.name as languages_name','modes.name as modes_name')
+        ->get();
+        foreach ($val as $key => $item) {
+            Carbon::parse($item->datelimite)->locale('FR_fr')->diffForHumans();
+        }
+        $programs=Program::where('course_id',$course->id)->get();
+        $downloads=Download::where('course_id',$course->id)->get();
+        $degrees=Degree::all();
+
+        $last_courses= $course->join('modalities','modalities.id','=','courses.modality_id')
+        ->select('courses.name','courses.id','modalities.name as modalitiy_name')
+        ->orderByDesc('courses.created_at')
+        ->limit(3)->get();
+        
         return view('courses.details')->with([
-            'course'=>$course
+            'courses'=>$val,
+            'programs'=> $programs, 
+            'downloads'=> $downloads, 
+            'degrees'=>$degrees,
+            'last_courses'=>$last_courses
         ]);
     }
 
@@ -65,7 +90,6 @@ class CourseController extends Controller
     {
         //
     }
-
     /**
      * Update the specified resource in storage.
      *
