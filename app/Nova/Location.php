@@ -45,6 +45,9 @@ class Location extends Resource
             Text::make('name')
         ];
     }
+    public static function label() {
+        return 'Localisations';
+    }
 
     /**
      * Get the cards available for the request.

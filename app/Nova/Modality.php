@@ -46,6 +46,9 @@ class Modality extends Resource
             Text::make('name'),
         ];
     }
+    public static function label() {
+        return 'Rythme';
+    }
 
     /**
      * Get the cards available for the request.

@@ -57,6 +57,9 @@ class Download extends Resource
 
         ];
     }
+    public static function label() {
+        return 'Téléchargement';
+    }
 
     /**
      * Get the cards available for the request.

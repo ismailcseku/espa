@@ -90,6 +90,9 @@ class Course extends Resource
 
         ];
     }
+    public static function label() {
+        return 'Formations';
+    }
 
     /**
      * Get the cards available for the request.

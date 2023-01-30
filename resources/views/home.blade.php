@@ -11,7 +11,7 @@
                     <ul>
                         <!-- SLIDE 1 -->
                         @foreach ($slides as $slide)
-                            <li >
+                            <li>
                                 <!-- MAIN IMAGE -->
                                 <img src="{{ url('storage') }}/{{ $slide->photo }}" alt=""
                                     data-bgposition="center 20%" data-bgfit="cover" data-bgrepeat="no-repeat"
@@ -60,8 +60,8 @@
                                     data-mask_out="x:0;y:0;s:inherit;e:inherit;" data-start="1000" data-splitin="none"
                                     data-splitout="none" data-responsive_offset="on"
                                     style="z-index: 7; white-space: nowrap;">
-                                    @foreach ($slide->description  as $item)
-                                        {{$item}} <br>
+                                    @foreach ($slide->description as $item)
+                                        {{ $item }} <br>
                                     @endforeach
                                 </div>
                                 <!-- LAYER NR. 4 -->
@@ -194,34 +194,40 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-4 mb-sm-30">
                     <div class="feature-box text-center bg-silver-light p-30 pb-20">
-                        <div class="feature-icon">
-                            <img src="images/icons/1.png" alt="">
+                        <div class="feature-icon flex justify-center">
+                            <img src="{{ asset('/images/Formation.svg') }}" alt="">
                         </div>
                         <div class="feature-title">
-                            <h3>Apprentissage facile</h3>
-                            <p>Les apprenants comprennent mieux les concepts avec Learn Smart Classroom</p>
+                            <h3>formations</h3>
+                            <p>Des structures d’apprentissage
+                                pratique et des solutions
+                                technologiques de pointe</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4 mb-sm-30">
-                    <div class="feature-box text-center bg-silver-light p-30 pb-20">
-                        <div class="feature-icon">
-                            <img src="images/icons/2.png" alt="">
+                    <div class="feature-box text-center bg-silver-light p-30 pb-20 ">
+                        <div class="feature-icon flex justify-center">
+                            <img src="{{ asset('/images/Partenariat.svg') }}" alt="">
                         </div>
                         <div class="feature-title">
-                            <h3>La qualité </h3>
-                            <p>Les étudiants ont estimé que la qualité de l'enseignement s'était améliorée</p>
+                            <h3>Partenariat</h3>
+                            <p>Les leaders de l’agro-technologie et
+                                les acteurs clés de l’innovation en
+                                agriculture</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <div class="feature-box text-center bg-silver-light p-30 pb-20">
-                        <div class="feature-icon">
-                            <img src="images/icons/3.png" alt="">
+                        <div class="feature-icon flex justify-center">
+                            <img src="{{ asset('/images/Performance.svg') }}" alt="">
                         </div>
                         <div class="feature-title">
-                            <h3>La pratique </h3>
-                            <p>Nous pratiquons tous les concepts afin de rester dans la tendance </p>
+                            <h3>Performance</h3>
+                            <p>Créer une agriculture durable,
+                                efficiente et résiliente : Solutions
+                                innovantes </p>
                         </div>
                     </div>
                 </div>
@@ -331,75 +337,138 @@
             </div>
         </div>
     </section>
-
     <!-- Section: Courses -->
     <section id="courses" class="bg-silver-light">
         <div class="container">
-            <div class="section-title mb-40">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h2 class="title text-uppercase mb-5">Cours <span class="text-theme-colored2">Populaire</span>
-                        </h2>
-                        <h5 class="font-16 text-gray-darkgray mt-5">Choisissez votre préférence</h5>
+            <section id="gallery">
+                <div class="container">
+                    <div class="section-title">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2 class="text-uppercase title">Nos <span class="text-theme-colored2">Formations</span>
+                                </h2>
+                                <p class="text-uppercase mb-0">Choisir un cycle</p>
+                                <div class="double-line-bottom-theme-colored-2"></div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="section-content">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="owl-carousel-3col owl-nav-top" data-nav="tru">
-                  
-                            @foreach ($courses as $course)
-                                <a href="{{route('course.details',$course->id)}}" class="item">
-                                    <div class="course-single-item bg-white border-1px clearfix">
-                                        <div class="course-thumb ">
-                                            <img class="img-fullwidth" alt=""
-                                                src="{{ url('storage') }}/{{ $course->photo }}">
-                                            <div class="course-top-meta">
-                                                <ul class="list-inline">
-                                                    <li><i class="ficon-heart font-14"></i>224 personnes aiment</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="course-details clearfix p-20 pt-15">
-                                            <div class="course-top-part">
+                    <div class="section-content">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <!-- Works Filter -->
+                                <div class="portfolio-filter font-alt align-center">
 
-                                                <a href="page-course-details.html">
-                                                    <h4 class="mt-5 mb-5">{{ $course->name }}</h4>
-                                                </a>
-                                                
-                                                <a href="page-course-details.html">
-                                                    <h4 class="mt-5 mb-5" style="opacity: 0.5">{{ $course->degrees_name }}</h4>
-                                                </a>
-                                                <h5 class="text-gray font-12 mt-0">Durée : {{ $course->duration }} mois
-                                                </h5>
-                                            </div>
-                                            <p class="course-description mt-15 mb-0">{!!$course->description!!} ...</p>
-                                            <div class="author-thumb">
-                                                <img src="http://placehold.it/54x54" alt="" class="img-circle">
-                                            </div>
-                                        </div>
-                                        <div class="course-meta">
-                                            <ul class="list-inline">
-                                                <li><i class="lnr lnr-users font-20"></i>{{ $course->languages_name }}
-                                                </li>
-                                                <li><i class="ficon-clock font-18"></i>{{ $course->datelimite }}</li>
-                                            </ul>
-                                            <div class="course-tag">
+                                    @foreach ($degrees as $degree)
+                                        @if ($loop->first)
+                                            <a class="active " id="first_element" href="#select{{ $degree->id }}"
+                                                data-filter=".select{{ $degree->id }}">{{ $degree->name }}</a>
+                                        @else
+                                            <a href="#select{{ $degree->id }}"
+                                                data-filter=".select{{ $degree->id }}">{{ $degree->name }}</a>
+                                        @endif
+                                    @endforeach
 
-                                                <h5>{{ $course->modalitiy_name }}</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            @endforeach
 
+                                </div>
+                                <!-- End Works Filter -->
+
+                                <!-- Portfolio Gallery Grid -->
+                                <div id="grid"
+                                    class="gallery-isotope default-animation-effect grid-4 gutter clearfix">
+
+
+                                    @foreach ($degrees as $degree)
+                                        <div class="gallery-item select{{ $degree->id }} section-content"
+                                            style="width:100%;">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="owl-carousel-3col owl-nav-top" data-nav="tru">
+
+                                                        @foreach ($courses as $course)
+                                                            @if ($course->degrees_id == $degree->id)
+                                                                <a href="{{ route('course.details', $course->id) }}"
+                                                                    class="item">
+                                                                    <div
+                                                                        class="course-single-item bg-white border-1px clearfix">
+                                                                        <div class="course-thumb ">
+                                                                            <img class="img-fullwidth" alt=""
+                                                                                src="{{ url('storage') }}/{{ $course->photo }}">
+
+                                                                        </div>
+                                                                        <div class="course-details clearfix p-20 pt-15">
+                                                                            <div class="course-top-part">
+
+                                                                                <a
+                                                                                    href="{{ route('course.details', $course->id) }}">
+                                                                                    <h4 class="mt-5 mb-5">
+                                                                                        {{ $course->name }}</h4>
+                                                                                </a>
+
+                                                                                <a
+                                                                                    href="{{ route('course.details', $course->id) }}">
+                                                                                    <h4 class="mt-5 mb-5"
+                                                                                        style="opacity: 0.5">
+                                                                                        {{ $course->degrees_name }}</h4></a>
+                                                                            </div>
+                                                                            <p class="course-description mt-15 mb-0">
+                                                                                {!! $course->description !!} ...</p>
+                                                                        </div>
+                                                                        <a href="{{ route('course.details', $course->id) }}"
+                                                                            style="display: block" class="course-meta">
+                                                                            <ul class="list-inline">
+                                                                                <li><i class="ficon-clock font-18"></i>
+                                                                                    {{ $course->datelimite->day }}
+                                                                                    @php
+                                                                                        $list = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
+                                                                                        $month_return = $list[$course->datelimite->month];
+                                                                                        echo $month_return;
+                                                                                    @endphp
+
+                                                                                    @php
+                                                                                        $year = $course->datelimite->year;
+                                                                                        $year_return = substr($year, 2, 4);
+                                                                                        echo $year_return;
+                                                                                    @endphp
+                                                                                </li>
+                                                                                <li><i
+                                                                                        class="lnr lnr-users font-20"></i>{{ $course->languages_name }}
+                                                                                </li>
+                                                                            </ul>
+                                                                            <div class="course-tag">
+
+                                                                                <h5>Découvrir</h5>
+                                                                            </div>
+                                                                        </a>
+                                                                    </div>
+                                                                </a>
+                                                            @endif
+                                                        @endforeach
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    @endforeach
+
+
+
+
+                                </div>
+                                <!-- End Portfolio Gallery Grid -->
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
+
+
+
+
         </div>
     </section>
+
 
     <!-- Section About -->
     <section id="about">
@@ -756,6 +825,8 @@
                             url: '//thememascot.us9.list-manage.com/subscribe/post?u=a01f440178e35febc8cf4e51f&amp;id=49d6d30e1e'
                         });
 
+
+
                         function mailChimpCallBack(resp) {
                             // Hide any previous response text
                             var $mailchimpform = $('#mailchimp-subscription-form2'),
@@ -772,6 +843,12 @@
                             }
                             $mailchimpform.prepend($response);
                         }
+                        $(document).ready(function(){
+                            setTimeout(() => {
+                                $('#first_element').click()
+                            }, 500);
+                        })
+                     
                     </script>
                 </div>
             </div>

@@ -51,6 +51,9 @@ class Degree extends Resource
 
         ];
     }
+    public static function label() {
+        return 'Cycles';
+    }
 
     /**
      * Get the cards available for the request.

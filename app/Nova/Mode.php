@@ -45,6 +45,9 @@ class Mode extends Resource
             Text::make('name')
         ];
     }
+    public static function label() {
+        return 'Modes';
+    }
 
     /**
      * Get the cards available for the request.

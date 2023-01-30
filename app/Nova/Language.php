@@ -46,6 +46,9 @@ class Language extends Resource
             Text::make('name'),
         ];
     }
+    public static function label() {
+        return 'Langues';
+    }
 
     /**
      * Get the cards available for the request.
@@ -57,6 +60,7 @@ class Language extends Resource
     {
         return [];
     }
+    
 
     /**
      * Get the filters available for the resource.

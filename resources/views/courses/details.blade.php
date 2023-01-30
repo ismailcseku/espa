@@ -51,7 +51,7 @@
                                     <li>
                                         <i class="pe-7s-cash text-theme-colored2 font-48"></i>
                                         <div class="pull-right ml-10">
-                                            <span>Prix</span>
+                                            <span>Rythme</span>
                                             <h5 class="mt-0">{{ $course->modalitiy_name }}</h5>
                                         </div>
                                     </li>
@@ -62,10 +62,12 @@
                                 </p>
                                 <ul id="myTab" class="nav nav-tabs mt-30">
                                     <li class="active"><a href="#tab1" data-toggle="tab">Description</a></li>
-                                    <li><a href="#tab2" data-toggle="tab">Information cours</a></li>
+                                    <li><a href="#tab2" data-toggle="tab">Admissions</a></li>
+                                    <li><a href="#tab5" data-toggle="tab">Programmes</a></li>
+                                    <li><a href="#tab5" data-toggle="tab">Carrières</a></li>
                                     <li><a href="#tab3" data-toggle="tab">Télécharger</a></li>
                                     <li><a href="#tab4" data-toggle="tab">Témoignages</a></li>
-                                    <li><a href="#tab5" data-toggle="tab">Programmes</a></li>
+                                    
                                 </ul>
                                 <div id="myTabContent" class="tab-content">
                                     <div class="tab-pane fade in active" id="tab1">

@@ -46,6 +46,9 @@ class Curriculum extends Resource
         ];
     }
 
+    public static function label() {
+        return 'Cursus';
+    }
     /**
      * Get the cards available for the request.
      *

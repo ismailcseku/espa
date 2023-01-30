@@ -9,6 +9,7 @@ use App\Models\Timing;
 use App\Models\Program;
 use App\Models\Download;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CourseController extends Controller
 {
@@ -19,11 +20,23 @@ class CourseController extends Controller
      */
     public function index()
     {
-        $courses = Course::all();
+        $courses=DB::table('courses')->join('modalities','modalities.id','=','courses.modality_id')
+        ->join('degrees','degrees.id','=','courses.degree_id')
+        ->join('languages','languages.id','=','courses.language_id')
+        ->join('modes','modes.id','=','courses.mode_id')
+        ->select('courses.*','modalities.name as modalitiy_name','degrees.name as degrees_name','languages.name as languages_name','modes.name as modes_name')
+        ->get();
+        foreach ($courses as $key => $item) {
+            $item->datelimite=Carbon::parse($item->datelimite)->toObject();
+            $item->description=substr($item->description,0,200);
 
-        return  view('courses.index',compact('courses'));
+            
+        } 
+        return view('courses.index')->with([
+            'courses'=>$courses,
+        ]);
+
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -53,7 +66,8 @@ class CourseController extends Controller
      */
     public function show(Course $course)
     {
-        $val=$course->join('modalities','modalities.id','=','courses.modality_id')
+        
+        $val=$course->where('courses.id',$course->id)->join('modalities','modalities.id','=','courses.modality_id')
         ->join('degrees','degrees.id','=','courses.degree_id')
         ->join('languages','languages.id','=','courses.language_id')
         ->join('modes','modes.id','=','courses.mode_id')

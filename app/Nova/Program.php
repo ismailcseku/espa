@@ -55,6 +55,9 @@ class Program extends Resource
         ];
     }
 
+    public static function label() {
+        return 'Programmes';
+    }
     /**
      * Get the cards available for the request.
      *

@@ -173,8 +173,8 @@ return [
     // ],
 
      'brand' => [
-         'logo' => public_path('/images/logo_iav2.svg'),
-         'logo_url' => 'http://complexe-horticole.test/images/logo_iav2.png',
+         'logo' => ('https://espa.cha-agadir.ma/storage/images/logo.svg'),
+         'logo_url' =>('https://espa.cha-agadir.ma/storage/images/logo.svg'),
          'logo_link' => 'https://google.com',
          'logo_class' => 'h-10',
 
