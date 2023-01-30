@@ -1,0 +1,14 @@
+<li><i class="ficon-clock font-18"></i>
+                                                                                    {{ $course->datelimite->day }}
+                                                                                    @php
+                                                                                        $list = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
+                                                                                        $month_return = $list[$course->datelimite->month];
+                                                                                        echo $month_return;
+                                                                                    @endphp
+
+                                                                                    @php
+                                                                                        $year = $course->datelimite->year;
+                                                                                        $year_return = substr($year, 2, 4);
+                                                                                        echo $year_return;
+                                                                                    @endphp
+                                                                                </li>

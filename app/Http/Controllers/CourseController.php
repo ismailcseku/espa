@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers; 
 
 use Carbon\Carbon;
 use App\Models\Course;
@@ -8,7 +8,10 @@ use App\Models\Degree;
 use App\Models\Timing;
 use App\Models\Program;
 use App\Models\Download;
+use App\Http\Utils\Levels;
 use Illuminate\Http\Request;
+use App\Http\Utils\Countries;
+use App\Http\Utils\Provinces;
 use Illuminate\Support\Facades\DB;
 
 class CourseController extends Controller
@@ -24,7 +27,8 @@ class CourseController extends Controller
         ->join('degrees','degrees.id','=','courses.degree_id')
         ->join('languages','languages.id','=','courses.language_id')
         ->join('modes','modes.id','=','courses.mode_id')
-        ->select('courses.*','modalities.name as modalitiy_name','degrees.name as degrees_name','languages.name as languages_name','modes.name as modes_name')
+        ->join('responsables','responsables.id','=','courses.responsable_id')
+        ->select('courses.*','modalities.name as modalitiy_name','degrees.name as degrees_name','languages.name as languages_name','modes.name as modes_name','responsables.photo as responsables_photo')
         ->get();
         foreach ($courses as $key => $item) {
             $item->datelimite=Carbon::parse($item->datelimite)->toObject();
@@ -34,6 +38,7 @@ class CourseController extends Controller
         } 
         return view('courses.index')->with([
             'courses'=>$courses,
+            'countries'=>Countries::getting(),
         ]);
 
     }
@@ -71,7 +76,8 @@ class CourseController extends Controller
         ->join('degrees','degrees.id','=','courses.degree_id')
         ->join('languages','languages.id','=','courses.language_id')
         ->join('modes','modes.id','=','courses.mode_id')
-        ->select('courses.*','modalities.name as modalitiy_name','degrees.name as degrees_name','languages.name as languages_name','modes.name as modes_name')
+        ->join('responsables','responsables.id','=','courses.responsable_id')
+        ->select('courses.*','modalities.name as modalitiy_name','degrees.name as degrees_name','languages.name as languages_name','modes.name as modes_name','responsables.name as responsables_name')
         ->get();
         foreach ($val as $key => $item) {
             Carbon::parse($item->datelimite)->locale('FR_fr')->diffForHumans();
@@ -90,7 +96,11 @@ class CourseController extends Controller
             'programs'=> $programs, 
             'downloads'=> $downloads, 
             'degrees'=>$degrees,
-            'last_courses'=>$last_courses
+            'last_courses'=>$last_courses,
+            'countries'=>Countries::getting(),
+            'provinces'=>Provinces::getting(),
+            'levels'=>Levels::getting(),
+
         ]);
     }
 

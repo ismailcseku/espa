@@ -31,6 +31,7 @@
                                     <img class="img-fullwidth" alt="" src="{{ url('storage') }}/{{ $course->photo }}">
                                    
                                 </a>
+                                
                                 <div class="course-details clearfix p-20 pt-15">
                                     <div class="course-top-part">
                                         <a href="{{ route('course.details', $course->id) }}">
@@ -42,23 +43,15 @@
 
                                     </div>
                                     <a href="{{ route('course.details', $course->id) }}" class="course-description mt-15 mb-0"> {!! $course->description !!}...</a>
+                                    <div class="author-thumb">
+                                        <img src="{{ url('storage') }}/{{ $course->responsables_photo }}" alt="" class="img-circle">
+                                      </div>
                                 
                                 </div>
                                 <a href="{{ route('course.details', $course->id) }}" class="course-meta" style="display:block;">
                                   <ul class="list-inline">
                                     <li><i class="ficon-clock font-18"></i>
-                                        {{ $course->datelimite->day }}
-                                        @php
-                                            $list = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
-                                            $month_return = $list[$course->datelimite->month];
-                                            echo $month_return;
-                                        @endphp
-
-                                        @php
-                                            $year = $course->datelimite->year;
-                                            $year_return = substr($year, 2, 4);
-                                            echo $year_return;
-                                        @endphp
+                                        {{$course->duration}} Mois
                                     </li>
                                     <li><i
                                             class="lnr lnr-users font-20"></i>{{ $course->languages_name }}

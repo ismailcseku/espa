@@ -3,7 +3,18 @@
 namespace App\Models;
 
 
+use App\Models\Mode;
+use App\Models\Degree;
+use App\Models\Program;
+use App\Models\Download;
+use App\Models\Language;
+use App\Models\Location;
+use App\Models\Modality;
+use App\Models\Interested;
+use App\Models\Responsable;
+use Laravel\Nova\Fields\HasMany;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Course extends Model
@@ -49,9 +60,27 @@ class Course extends Model
     public function programs() {
         return $this->hasMany(Program::class);
     }
+    /**
+     * Get the responsable that owns the Course
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function responsable(): BelongsTo
+    {
+        return $this->belongsTo(Responsable::class);
+    }
     
     public function downloads() {
         return $this->hasMany(Download::class);
+    }
+    /**
+     * Get all of the interested for the Course
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function interested(): HasMany
+    {
+        return $this->hasMany(Interested::class, 'course_id', 'local_key');
     }
 
     protected $casts = [

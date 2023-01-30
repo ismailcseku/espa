@@ -54,9 +54,9 @@ class Course extends Resource
         return [
             //ID::make()->sortable(),
             BelongsTo::make('Cycle','degree','App\Nova\Degree'),
+            BelongsTo::make('Responsable','responsable','App\Nova\Responsable'),
             Text::make('Intitulé de la formation','name'),
             Image::make('Photo'),
-
             //CKEditor5Classic::make('description'),
             NovaTinyMCE::make('description'),
             //Trix::make('Description','description'),
@@ -84,6 +84,8 @@ class Course extends Resource
             HasMany::make('programs'),
             
             HasMany::make('downloads'),
+            HasMany::make('interesteds'),
+            
 
 
             //Date::make('Date limite','datelimite'),

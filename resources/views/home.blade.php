@@ -76,10 +76,10 @@
                                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
                                     data-mask_out="x:0;y:0;s:inherit;e:inherit;" data-start="1000" data-splitin="none"
                                     data-splitout="none" data-responsive_offset="on"
-                                    style="z-index: 7; white-space: nowrap;"><a href="#"
-                                        class="btn btn-dark btn-circled btn-theme-colored2 btn-xl mr-10 pr-30 pl-30">Démarrer</a>
-                                    <a href="#"
-                                        class="btn btn-transparent btn-border btn-circled btn-xl pr-30 pl-30">M'inscrire</a>
+                                    style="z-index: 7; white-space: nowrap;"><a href="{{route('course.index')}}"
+                                        class="btn btn-dark btn-circled btn-theme-colored2 btn-xl mr-10 pr-30 pl-30">Découvrir</a>
+                                    <a href="{{route('course.index')}}"
+                                        class="btn btn-transparent btn-border btn-circled btn-xl pr-30 pl-30">Contact</a>
                                 </div>
                             </li>
                         @endforeach
@@ -410,25 +410,18 @@
                                                                                         style="opacity: 0.5">
                                                                                         {{ $course->degrees_name }}</h4></a>
                                                                             </div>
-                                                                            <p class="course-description mt-15 mb-0">
-                                                                                {!! $course->description !!} ...</p>
+                                                                            <a href="{{ route('course.details', $course->id) }}"class="course-description mt-15 mb-0">
+                                                                                {!! $course->description !!} ...</a>
+                                                                                <div class="author-thumb">
+                                                                                    <img src="{{ url('storage') }}/{{ $course->responsables_photo }}" alt="" class="img-circle">
+                                                                                  </div>
                                                                         </div>
                                                                         <a href="{{ route('course.details', $course->id) }}"
                                                                             style="display: block" class="course-meta">
                                                                             <ul class="list-inline">
                                                                                 <li><i class="ficon-clock font-18"></i>
-                                                                                    {{ $course->datelimite->day }}
-                                                                                    @php
-                                                                                        $list = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
-                                                                                        $month_return = $list[$course->datelimite->month];
-                                                                                        echo $month_return;
-                                                                                    @endphp
-
-                                                                                    @php
-                                                                                        $year = $course->datelimite->year;
-                                                                                        $year_return = substr($year, 2, 4);
-                                                                                        echo $year_return;
-                                                                                    @endphp
+                                                                                    {{$course->duration}} Mois
+                                                                                    
                                                                                 </li>
                                                                                 <li><i
                                                                                         class="lnr lnr-users font-20"></i>{{ $course->languages_name }}
