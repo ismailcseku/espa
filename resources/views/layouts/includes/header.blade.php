@@ -78,4 +78,130 @@
         </div>
 
         <!-- Header -->
-      <p>sdfsqdf</p>
+        <header id="header" class="header">
+            <div class="header-top bg-theme-colored border-top-theme-colored2-2px sm-text-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="widget">
+                                <ul class="styled-icons icon-sm icon-white">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+         
+                            <div class="widget">
+                                <ul class="list-inline text-right flip sm-text-center">
+                                    <li>
+                                        <a class="text-white" href="#">FAQss</a>
+                                    </li>
+                                    <li class="text-white">|</li>
+                                    <li>
+                                        <a class="text-white" href="#">Nous joindre</a>
+                                    </li>
+                                    <li class="text-white">|</li>
+                                    <li>
+                                        <a class="text-white" href="#">0600670388</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-nav">
+                <div class="header-nav-wrapper navbar-scrolltofixed bg-white">
+                    <div class="container">
+                        <nav id="menuzord-right" class="menuzord default theme-colored"><a
+                                class="menuzord-brand pull-left flip mt-20 mt-sm-10 mb-sm-20 pt-5"
+                                href="index-mp-layout1.html"><img src="images/logo-wide.png" alt=""></a>
+                            <ul class="menuzord-menu">
+                                <li class="active"><a href="{{route('course.index')}}">Formations</a>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Ingénieur d’État en Agronomie</a>
+                                            <ul class="dropdown">
+                                                <li><a href="index-mp-layout1.html">Horticulture</a></li>
+                                                <li><a href="index-mp-layout3.html">Protection des Plantes</a></li>
+                                                <li><a href="index-mp-layout4.html"> Architecture du Paysage</a></li>
+
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">International Master</a>
+                                            <ul class="dropdown">
+                                                <li><a href="index-sp-layout1.html">Water & Sustainaible Horticulture
+                                                        (ang)</a></li>
+                                                <li><a href="index-sp-layout2.html"> Architecture du Paysage (fr)</a>
+                                                </li>
+                                                <li><a href="index-sp-layout3.html"> Locust Science (ang)</a></li>
+                                                <li><a href="index-sp-layout4.html"> Locust Science (fr)</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li><a href="#">Licence professionnelle</a>
+                                            <ul class="dropdown">
+                                                <li><a href="index-dark-mp-layout1.html">Horticulture Ornementale et
+                                                        Espaces verts</a></li>
+                                                <li><a href="index-dark-mp-layout1.html">Aménagement du Paysage</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Technicien Spécialisé</a>
+                                            <ul class="dropdown">
+                                                <li><a href="index-home-variation-owl-carousel.html">Technico-Commercial
+                                                        en Productions Horticoles</a></li>
+                                                <li><a href="index-home-variation-owl-image-slider.html">Conditionnement
+                                                        et Valorisation des Produits Agricoles</a></li>
+                                                <li><a href="index-home-variation-typed-text.html">Cultures
+                                                        Ornementales et Aménagement des Espaces Verts</a></li>
+                                                <li><a
+                                                        href="index-home-variation-video-background.html">Aquaculture</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Programme doctoral</a>
+    
+                                        </li>
+                                        <li><a href="#">Formation Exécutive <span
+                                                    class="label label-danger">New</span></a>
+                                            <ul class="dropdown">
+                                                <li><a href="index-home-variation-owl-carousel.html">Farm Manager</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+
+                                    </ul>
+                                </li>
+
+
+                                <li><a href="#home">Ecole</a>
+                                    <ul class="dropdown">
+                                        <li><a href="page-course-gird.html">Mot du directeur</a></li>
+                                        <li><a href="page-course-list.html">Qui sommes-nous ?</a></li>
+                                        <li><a href="page-course-details.html">Corps Professoral</a></li>
+                                        <li><a href="page-course-details.html">Vie Estudiantine</a></li>
+                                        <li><a href="page-course-details.html">Évènements</a></li>
+                                        <li><a href="page-course-details.html">Actualités</a></li>
+                                        <li><a href="page-course-details.html">Médiathèque</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Recherche</a>
+                                <li><a href="#">Centre d’Excellence</a>
+                                <li><a href="#">Ferme Expérimentale</a>
+                                <li><a href="#">Impact Cluster</a>
+                                <li><a href="#">Agri-Business </a>
+
+                                </li>
+
+
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
