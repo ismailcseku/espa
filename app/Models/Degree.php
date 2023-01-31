@@ -19,5 +19,10 @@ class Degree extends Model
         return $this->BelongsTo(TrainingType::class);
     }
 
+    /**
+     * Get all of the comments for the Degree
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
 
 }

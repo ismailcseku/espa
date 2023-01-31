@@ -3,19 +3,18 @@
 namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
+use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Textarea;
-use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Degree extends Resource
+class Contact extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\Degree>
+     * @var class-string<\App\Models\Contact>
      */
-    public static $model = \App\Models\Degree::class;
+    public static $model = \App\Models\Contact::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -32,7 +31,6 @@ class Degree extends Resource
     public static $search = [
         'id',
     ];
-    public static $group = 'Gestion formation';
 
     /**
      * Get the fields displayed by the resource.
@@ -43,17 +41,13 @@ class Degree extends Resource
     public function fields(NovaRequest $request)
     {
         return [
-            //ID::make()->sortable(),
-            Text::make('name'),
-            Textarea::make('Description'),
-            BelongsTo::make('Curriculum'),
-            BelongsTo::make('Training_Type'),
-    
-            //BelongsTo::make('TrainingType', 'Training_Type_id', 'App\Nova\TrainingType'),
+            ID::make()->sortable(),
+            Text::make('Nom','name'),
+            Text::make('E-mail','email'),
+            Text::make('Sujet','subject'),
+            Text::make('Téléphone','phone'),
+            Text::make('Message','message'),
         ];
-    }
-    public static function label() {
-        return 'Cycles';
     }
 
     /**
@@ -98,5 +92,9 @@ class Degree extends Resource
     public function actions(NovaRequest $request)
     {
         return [];
+    }
+    public static function label()
+    {
+       return 'Message';
     }
 }

@@ -23,6 +23,7 @@ class CourseController extends Controller
      */
     public function index()
     {
+      
         $courses=DB::table('courses')->join('modalities','modalities.id','=','courses.modality_id')
         ->join('degrees','degrees.id','=','courses.degree_id')
         ->join('languages','languages.id','=','courses.language_id')

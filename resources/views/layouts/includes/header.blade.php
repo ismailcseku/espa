@@ -67,16 +67,16 @@
 </head>
 
 <body class="has-side-panel side-panel-right fullwidth-page">
- 
+
     <div id="wrapper" class="clearfix">
         <!-- preloader -->
         <div id="preloader">
+
             <div id="spinner">
-                <img alt="" src="images/preloaders/5.gif">
+                <img alt="" src="{{ asset('images/logo_home.svg') }}">
             </div>
             <div id="disable-preloader" class="btn btn-default btn-sm">Chargement</div>
         </div>
-
         <!-- Header -->
         <header id="header" class="header">
             <div class="header-top bg-theme-colored border-top-theme-colored2-2px sm-text-center">
@@ -94,11 +94,11 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-         
+
                             <div class="widget">
                                 <ul class="list-inline text-right flip sm-text-center">
                                     <li>
-                                        <a class="text-white" href="#">FAQ</a>
+                                        <a class="text-white" href="{{ route('contact.create') }}">Nous joindre</a>
                                     </li>
                                     <li class="text-white">|</li>
                                     <li>
@@ -114,22 +114,27 @@
                     </div>
                 </div>
             </div>
+
+            
             <div class="header-nav">
                 <div class="header-nav-wrapper navbar-scrolltofixed bg-white">
                     <div class="container">
-                        <nav id="menuzord-right" class="menuzord default theme-colored"><a
-                                class="menuzord-brand pull-left flip mt-20 mt-sm-10 mb-sm-20 pt-5"
-                                href="index-mp-layout1.html"><img src="images/logo-wide.png" alt=""></a>
+                        <nav id="menuzord-right" class="menuzord default theme-colored">
                             <ul class="menuzord-menu">
-                                <li class="active"><a href="{{route('course.index')}}">Formations</a>
+                                <li @if (Route::current()->getName() == 'home') class='active' @endif>
+                                    <a href="{{ route('home') }}">Acceuil</a>
+                                </li>
+                                <li @if (Route::current()->getName() == 'course.index') class="active" @endif><a href="{{ route('course.index') }}">Formations</a>
                                     <ul class="dropdown">
-                                        <li><a href="#">Ingénieur d’État en Agronomie</a>
+                                        <li>
+                                            <a href="#">Ingénieur d’État en Agronomie</a>
                                             <ul class="dropdown">
                                                 <li><a href="index-mp-layout1.html">Horticulture</a></li>
                                                 <li><a href="index-mp-layout3.html">Protection des Plantes</a></li>
                                                 <li><a href="index-mp-layout4.html"> Architecture du Paysage</a></li>
 
                                             </ul>
+                                            
                                         </li>
                                         <li><a href="#">International Master</a>
                                             <ul class="dropdown">
@@ -164,7 +169,7 @@
                                             </ul>
                                         </li>
                                         <li><a href="#">Programme doctoral</a>
-    
+
                                         </li>
                                         <li><a href="#">Formation Exécutive <span
                                                     class="label label-danger">New</span></a>
@@ -200,6 +205,7 @@
 
 
                             </ul>
+                      
                         </nav>
                     </div>
                 </div>

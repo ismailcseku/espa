@@ -52,7 +52,7 @@ class Program extends Resource
             Number::make('hours'),
             NovaTinyMCE::make('description'),
             //Trix::make('description'),
-            BelongsTo::make('Cour','course','App\Nova\Course'),
+            BelongsTo::make('Formation','course','App\Nova\Course'),
 
         ];
     }
