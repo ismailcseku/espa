@@ -38,5 +38,7 @@ class HomeController extends Controller
             $course->description=substr($course->description,0,200);
         }
 ;        return  view('home')->with(['courses'=>$courses,'slides'=>$slides,'degrees'=>$degrees,'responsables'=>$responsables]);
-    }
+    } 
+
+    
 }
