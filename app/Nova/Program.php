@@ -26,6 +26,8 @@ class Program extends Resource
      * @var string
      */
     public static $title = 'name';
+    public static $group = 'Gestion formation';
+
 
     /**
      * The columns that should be searched.

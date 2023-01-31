@@ -26,6 +26,8 @@ class Interested extends Resource
      * @var string
      */
     public static $title = 'name';
+    public static $group = 'Visiteurs';
+
 
     /**
      * The columns that should be searched.

@@ -31,6 +31,8 @@ class Mode extends Resource
     public static $search = [
         'id',
     ];
+    public static $group = 'Gestion formation';
+
 
     /**
      * Get the fields displayed by the resource.
