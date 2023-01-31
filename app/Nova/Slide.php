@@ -51,7 +51,7 @@ class Slide extends Resource
             Text::make('Sujet','subject'),
             Text::make('Titre','title'),
             Textarea::make('Decription','description'),
-            Image::make('Une imgae','photo')->disk('public')
+            Image::make('Une image','photo')->disk('public')
             ->storeAs(function (Request $request) {
                     return $request->photo->getClientOriginalName();
                  }),

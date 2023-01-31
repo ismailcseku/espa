@@ -12,7 +12,6 @@ use App\Models\Location;
 use App\Models\Modality;
 use App\Models\Interested;
 use App\Models\Responsable;
-use Laravel\Nova\Fields\HasMany;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -78,7 +77,9 @@ class Course extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function interested(): HasMany
+   
+     
+    public function interesteds()
     {
         return $this->hasMany(Interested::class, 'course_id', 'local_key');
     }

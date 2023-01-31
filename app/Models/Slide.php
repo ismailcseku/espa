@@ -16,11 +16,5 @@ class Slide extends Model
         'photo'
     ];
 
-    public function description(): Attribute
-    {
-        return new Attribute(
-            get: fn ($value) => str_split($value,100),
-           
-        );
-    }
+
 }

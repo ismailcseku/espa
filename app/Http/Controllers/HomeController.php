@@ -27,6 +27,7 @@ class HomeController extends Controller
         ->orderByDesc('courses.created_at')
         ->get();
         $slides=Slide::all();
+        $slides[0]->description=str_split($slides[0]->description,100);
         $degrees=Degree::all();
 
         foreach ($courses as $key => $course) {
