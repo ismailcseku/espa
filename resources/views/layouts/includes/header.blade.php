@@ -98,7 +98,7 @@
                             <div class="widget">
                                 <ul class="list-inline text-right flip sm-text-center">
                                     <li>
-                                        <a class="text-white" href="#">FAQs</a>
+                                        <a class="text-white" href="#">FAQS</a>
                                     </li>
                                     <li class="text-white">|</li>
                                     <li>
