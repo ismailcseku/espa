@@ -26,7 +26,7 @@
     <link href="{{ asset('app-assets/css/css-plugin-collections.css') }}" rel="stylesheet" />
     <!-- CSS | menuzord megamenu skins -->
     <link href="{{ asset('app-assets/css/menuzord-megamenu.css') }}" rel="stylesheet" />
-    <link id="menuzord-menu-skins"
+    <link id="menuzord-menu-skins" 
         href="{{ asset('app-assets/css/menuzord-skins/menuzord-boxed.css') }} rel="stylesheet" />
     <!-- CSS | Main style file -->
     <link href="{{ asset('app-assets/css/style-main.css') }}" rel="stylesheet" type="text/css">
@@ -134,7 +134,7 @@
                                                 <li><a href="index-mp-layout4.html"> Architecture du Paysage</a></li>
 
                                             </ul>
-                                            
+
                                         </li>
                                         <li><a href="#">International Master</a>
                                             <ul class="dropdown">
