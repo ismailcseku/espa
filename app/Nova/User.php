@@ -50,7 +50,7 @@ class User extends Resource
 
             Gravatar::make()->maxWidth(50),
 
-            Text::make('Name')
+            Text::make('Nom','Name')
                 ->sortable()
                 ->rules('required', 'max:255'),
 
@@ -60,7 +60,7 @@ class User extends Resource
                 ->creationRules('unique:users,email')
                 ->updateRules('unique:users,email,{{resourceId}}'),
 
-            Password::make('Password')
+            Password::make('Mot de passe','Password')
                 ->onlyOnForms()
                 ->creationRules('required', Rules\Password::defaults())
                 ->updateRules('nullable', Rules\Password::defaults()),

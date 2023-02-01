@@ -45,7 +45,7 @@ class Language extends Resource
     {
         return [
             //ID::make()->sortable(),
-            Text::make('name'),
+            Text::make('Nom','name'),
         ];
     }
     public static function label() {

@@ -53,7 +53,7 @@ class Download extends Resource
                             return $request->file->getClientOriginalName();
                          }),
                     
-            BelongsTo::make('Cour','course','App\Nova\Course'),
+            BelongsTo::make('Formation','course','App\Nova\Course'),
             
             
 

@@ -44,7 +44,7 @@ class Curriculum extends Resource
     {
         return [
            // ID::make()->sortable(),
-            Text::make('Name')
+            Text::make('Nom','name')
         ];
     }
 

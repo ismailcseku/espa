@@ -48,8 +48,8 @@ class Program extends Resource
     {
         return [
            // ID::make()->sortable(),
-            Text::make('title'),
-            Number::make('hours'),
+            Text::make('tiitre','title'),
+            Number::make('heure','hours'),
             NovaTinyMCE::make('description'),
             //Trix::make('description'),
             BelongsTo::make('Formation','course','App\Nova\Course'),
