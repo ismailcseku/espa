@@ -60,9 +60,8 @@
                                     data-mask_out="x:0;y:0;s:inherit;e:inherit;" data-start="1000" data-splitin="none"
                                     data-splitout="none" data-responsive_offset="on"
                                     style="z-index: 7; white-space: nowrap;">
-                                    @foreach ($slide->description as $item)
-                                        {{ $item }} <br>
-                                    @endforeach
+                                   
+                                        {{ $slide->description}} 
                                 </div>
                                 <!-- LAYER NR. 4 -->
                                 <div class="tp-caption tp-resizeme text-white rs-parallaxlevel-0" id="slide-1-layer-4"
