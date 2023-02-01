@@ -523,7 +523,7 @@
     </section>
 
     <!-- Divider: Funfact -->
-    <section class="layer-overlay overlay-dark-7 parallax" data-bg-img="http://placehold.it/1920x1280">
+    <section class="layer-overlay overlay-dark-7 parallax" data-bg-img="{{asset('images/details_course.png')}}">
         <div class="container pt-80 pb-90 pt-md-70 pb-md-50 pb-sm-50">
             <div class="row mt-30 text-center">
                 <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
@@ -608,7 +608,7 @@
     </section>
 
     <!-- Divider: Divider -->
-    <section class="parallax divider layer-overlay overlay-dark-7" data-bg-img="http://placehold.it/1920x1280"
+    <section class="parallax divider layer-overlay overlay-dark-7" data-bg-img="{{asset('images/details_course.png')}}"
         data-parallax-ratio="0.4">
         <div class="container pt-80 pb-90">
             <div class="row">
