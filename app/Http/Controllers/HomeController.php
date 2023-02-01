@@ -36,12 +36,14 @@ class HomeController extends Controller
             $slides[0]->description=str_split($slides[0]->description,100);
         }
         $degrees=Degree::all();
-        dd($degrees);
+        
         $responsables=DB::table('responsables')->limit(4)->get();
         foreach ($courses as $key => $course) {
             $course->datelimite=Carbon::parse($course->datelimite)->toObject();
             $course->description=substr($course->description,0,200);
         }
+        dd($responsables);
+
 ;        return  view('home')->with(['courses'=>$courses,'slides'=>$slides,'degrees'=>$degrees,'responsables'=>$responsables]);
     } 
 }
