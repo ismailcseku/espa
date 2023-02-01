@@ -260,15 +260,6 @@
                                 <!-- Works Filter -->
                                 <div class="portfolio-filter font-alt align-center">
 
-                                    @foreach ($degrees as $degree)
-                                        @if ($loop->first)
-                                            <a class="active " id="first_element" href="#select{{ $degree->id }}"
-                                                data-filter=".select{{ $degree->id }}">{{ $degree->name }}</a>
-                                        @else
-                                            <a href="#select{{ $degree->id }}"
-                                                data-filter=".select{{ $degree->id }}">{{ $degree->name }}</a>
-                                        @endif
-                                    @endforeach
 
 
                                 </div>
