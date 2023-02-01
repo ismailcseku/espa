@@ -31,7 +31,7 @@ class HomeController extends Controller
         ->get();
         $slides=Slide::all();
        
-        if ($slides->count()->0) {
+        if ($slides->count()==0) {
             
             $slides[0]->description=str_split($slides[0]->description,100);
         }
