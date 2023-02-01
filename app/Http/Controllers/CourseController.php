@@ -101,9 +101,7 @@ class CourseController extends Controller
             'downloads'=> $downloads, 
             'degrees'=>$degrees,
             'last_courses'=>$last_courses,
-            'countries'=>$countries,
-            'provinces'=>$provinces,
-            'levels'=>$levels,
+           
         ]);
     }
 
