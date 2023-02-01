@@ -33,9 +33,9 @@ class CourseController extends Controller
         ->get();
         foreach ($courses as $key => $item) {
             $item->datelimite=Carbon::parse($item->datelimite)->toObject();
-            $item->description=substr($item->description,0,200);
+            $item->description=substr($item->description,0,200);    
         } 
-        dd($courses);
+       
         return view('courses.index')->with([
             'courses'=>$courses,
             'countries'=>Countries::getting(),
