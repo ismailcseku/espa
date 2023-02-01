@@ -95,9 +95,7 @@ class CourseController extends Controller
         $countries=Countries::getting();
         $cprovinces=Provinces::getting();
         $levels=Levels::getting();
-        return view('courses.details')->with([
-          
-        ]);
+        return 'fdgfdg';
     }
 
     /**
