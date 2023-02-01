@@ -38,7 +38,7 @@ class CourseController extends Controller
        
         return view('courses.index')->with([
             'courses'=>$courses,
-            
+            //'countries'=>Countries::getting(),
         ]);
 
     }
