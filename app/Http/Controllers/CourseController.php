@@ -40,7 +40,7 @@ class CourseController extends Controller
             'courses'=>$courses,
         ]);
 
-    }
+    } 
     /**
      * Show the form for creating a new resource.
      *
