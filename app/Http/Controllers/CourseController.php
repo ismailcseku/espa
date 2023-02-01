@@ -79,6 +79,8 @@ class CourseController extends Controller
         ->join('responsables','responsables.id','=','courses.responsable_id')
         ->select('courses.*','modalities.name as modalitiy_name','degrees.name as degrees_name','languages.name as languages_name','modes.name as modes_name','responsables.name as responsables_name')
         ->get();
+        dd($last_course);
+
         foreach ($val as $key => $item) {
             Carbon::parse($item->datelimite)->locale('FR_fr')->diffForHumans();
         }
@@ -90,7 +92,6 @@ class CourseController extends Controller
         ->select('courses.name','courses.id','modalities.name as modalitiy_name')
         ->orderByDesc('courses.created_at')
         ->limit(3)->get();
-        dd($last_course);
         return view('courses.details')->with([
             'courses'=>$val,
             'programs'=> $programs, 
