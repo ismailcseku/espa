@@ -87,11 +87,12 @@ class CourseController extends Controller
         $programs=Program::where('course_id',$course->id)->get();
         $downloads=Download::where('course_id',$course->id)->get();
         $degrees=Degree::all();
-        dd('fgf');
+        
         $last_courses= $course->join('modalities','modalities.id','=','courses.modality_id')
         ->select('courses.name','courses.id','modalities.name as modalitiy_name')
         ->orderByDesc('courses.created_at')
         ->limit(3)->get();
+        dd('fgf');
         return view('courses.details')->with([
             'courses'=>$val,
             'programs'=> $programs, 
