@@ -81,6 +81,14 @@ class CourseController extends Controller
         ->get();
        
 
+        foreach ($val as $key => $item) {
+            Carbon::parse($item->datelimite)->locale('FR_fr')->diffForHumans();
+        }
+        $programs=Program::where('course_id',$course->id)->get();
+        $downloads=Download::where('course_id',$course->id)->get();
+        $degrees=Degree::all();
+        
+   
         return 'fdgfdg';
     }
 
