@@ -93,18 +93,11 @@ class CourseController extends Controller
         ->orderByDesc('courses.created_at')
         ->limit(3)->get();
         $countries=Countries::getting();
+        return 'fdgfdg';
+
         $provinces=Provinces::getting();
         $levels=Levels::getting();
-        return view('courses.details')->with([
-            'courses'=>$val,
-            'programs'=> $programs, 
-            'downloads'=> $downloads, 
-            'degrees'=>$degrees,
-            'last_courses'=>$last_courses,
-            'countries'=>$countries,
-            'provinces'=>$provinces,
-            'levels'=>$levels,
-        ]);
+        
     }
 
     /**
