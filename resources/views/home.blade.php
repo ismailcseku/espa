@@ -311,7 +311,9 @@
                                                                                         style="opacity: 0.5">
                                                                                         {{ $course->degrees_name }}</h4></a>
                                                                             </div>
-                                                                          
+                                                                            <a href="{{ route('course.details', $course->id) }}"class="course-description mt-15 mb-0">
+                                                                                {!! $course->description !!} ...</a>
+                                                                               
                                                                         </div>
                                                                         <a href="{{ route('course.details', $course->id) }}"
                                                                             style="display: block" class="course-meta">
