@@ -31,11 +31,12 @@ class CourseController extends Controller
         ->join('responsables','responsables.id','=','courses.responsable_id')
         ->select('courses.*','modalities.name as modalitiy_name','degrees.name as degrees_name','languages.name as languages_name','modes.name as modes_name','responsables.photo as responsables_photo')
         ->get();
+        d($courses);
         foreach ($courses as $key => $item) {
             $item->datelimite=Carbon::parse($item->datelimite)->toObject();
             $item->description=substr($item->description,0,200);    
         } 
-        d($courses);
+       
        
         return view('courses.index')->with([
             'courses'=>$courses,
