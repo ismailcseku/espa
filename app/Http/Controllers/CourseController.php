@@ -92,8 +92,8 @@ class CourseController extends Controller
         ->select('courses.name','courses.id','modalities.name as modalitiy_name')
         ->orderByDesc('courses.created_at')
         ->limit(3)->get();
-        $countries=Countries::getting();
         return 'fdgfdg';
+        $countries=Countries::getting();
 
         $provinces=Provinces::getting();
         $levels=Levels::getting();
