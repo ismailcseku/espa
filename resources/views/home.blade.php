@@ -296,7 +296,28 @@
                                                                                 src="{{ url('storage') }}/{{ $course->photo }}">
 
                                                                         </div>
-                                                                  
+                                                                        <div class="course-details clearfix p-20 pt-15">
+                                                                            <div class="course-top-part">
+
+                                                                                <a
+                                                                                    href="{{ route('course.details', $course->id) }}">
+                                                                                    <h4 class="mt-5 mb-5">
+                                                                                        {{ $course->name }}</h4>
+                                                                                </a>
+
+                                                                                <a
+                                                                                    href="{{ route('course.details', $course->id) }}">
+                                                                                    <h4 class="mt-5 mb-5"
+                                                                                        style="opacity: 0.5">
+                                                                                        {{ $course->degrees_name }}</h4></a>
+                                                                            </div>
+                                                                            <a href="{{ route('course.details', $course->id) }}"class="course-description mt-15 mb-0">
+                                                                                {!! $course->description !!} ...</a>
+                                                                                <div class="author-thumb">
+                                                                                    <img src="{{ url('storage') }}/{{ $course->responsables_photo }}" alt="" class="img-circle">
+                                                                                  </div>
+                                                                        </div>
+                                                                       
                                                                     </div>
                                                                 </a>
                                                             @endif
