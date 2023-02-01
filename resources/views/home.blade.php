@@ -188,52 +188,8 @@
     </div>
     </section>
 
-    <!-- Section Features -->
-    <section id="features" class="bg-silver-deep">
-        <div class="container pb-50">
-            <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-4 mb-sm-10">
-                    <div class="feature-box text-center bg-silver-light p-30 pb-20">
-                        <div class="feature-icon flex justify-center">
-                            <img src="{{ asset('images/Formation.svg') }}" alt="">
-                        </div>
-                        <div class="feature-title">
-                            <h3>Formation</h3>
-                            <p>Des structures d’apprentissage
-                                pratique et des solutions
-                                technologiques de pointe</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 mb-sm-30">
-                    <div class="feature-box text-center bg-silver-light p-30 pb-20 ">
-                        <div class="feature-icon flex justify-center">
-                            <img src="{{ asset('images/Partenariat.svg') }}" alt="">
-                        </div>
-                        <div class="feature-title">
-                            <h3>Partenariat</h3>
-                            <p>Les leaders de l’agro-technologie et
-                                les acteurs clés de l’innovation en
-                                agriculture</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                    <div class="feature-box text-center bg-silver-light p-30 pb-20">
-                        <div class="feature-icon flex justify-center">
-                            <img src="{{ asset('images/Performance.svg') }}" alt="">
-                        </div>
-                        <div class="feature-title">
-                            <h3>Performance</h3>
-                            <p>Créer une agriculture durable,
-                                efficiente et résiliente : Solutions
-                                innovantes </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+   
+    <p>{{ asset('images/Performance.svg') }}</p>
     <!-- Section Choose Course -->
 
 
