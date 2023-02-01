@@ -240,10 +240,10 @@
 
         <!-- Section: Courses -->
         <section id="courses" class="bg-silver-light">
-            <div class="container">
+            <div class="container" >
                 <section id="gallery">
                     <div class="container ">
-                        <div class="section-title ">
+                        <div class="section-title " style="margin-top:-10%;"  >
                             <div class="row">
                                 <div class="col-md-12">
                                     <h2 class="text-uppercase title">Nos <span
@@ -794,47 +794,6 @@
             </div>
         </section>
 
-        <!-- Divider: Clients -->
-        <section class="clients bg-silver-light">
-            <div class="container pt-40 pb-40">
-                <div class="row">
-                    <div class="col-md-12">
-                        <!-- Section: Clients -->
-                        <div class="owl-carousel-6col clients-logo transparent text-center">
-                            <div class="item"> <a href="#"><img src="http://placehold.it/170x50"
-                                        alt=""></a>
-                            </div>
-                            <div class="item"> <a href="#"><img src="http://placehold.it/170x50"
-                                        alt=""></a>
-                            </div>
-                            <div class="item"> <a href="#"><img src="http://placehold.it/170x50"
-                                        alt=""></a>
-                            </div>
-                            <div class="item"> <a href="#"><img src="http://placehold.it/170x50"
-                                        alt=""></a>
-                            </div>
-                            <div class="item"> <a href="#"><img src="http://placehold.it/169x50"
-                                        alt=""></a>
-                            </div>
-                            <div class="item"> <a href="#"><img src="http://placehold.it/170x50"
-                                        alt=""></a>
-                            </div>
-                            <div class="item"> <a href="#"><img src="http://placehold.it/170x50"
-                                        alt=""></a>
-                            </div>
-                            <div class="item"> <a href="#"><img src="http://placehold.it/170x50"
-                                        alt=""></a>
-                            </div>
-                            <div class="item"> <a href="#"><img src="http://placehold.it/169x50"
-                                        alt=""></a>
-                            </div>
-                            <div class="item"> <a href="#"><img src="http://placehold.it/170x50"
-                                        alt=""></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    
         </div>
     @endsection
