@@ -42,8 +42,8 @@ class HomeController extends Controller
             $course->datelimite=Carbon::parse($course->datelimite)->toObject();
             $course->description=substr($course->description,0,200);
         }
-        dd($responsables);
+       
 
-;        return  view('home')->with(['courses'=>$courses,'slides'=>$slides,'degrees'=>$degrees,'responsables'=>$responsables]);
+;        return  view('home');
     } 
 }
