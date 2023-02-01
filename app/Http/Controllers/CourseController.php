@@ -35,12 +35,14 @@ class CourseController extends Controller
             $item->datelimite=Carbon::parse($item->datelimite)->toObject();
             $item->description=substr($item->description,0,200);    
         } 
+        d($courses);
        
         return view('courses.index')->with([
             'courses'=>$courses,
+            
         ]);
 
-    } 
+    }
     /**
      * Show the form for creating a new resource.
      *
