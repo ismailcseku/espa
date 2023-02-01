@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-<section class="inner-header divider layer-overlay overlay-theme-colored-7" data-bg-img="{{ url('storage/details_course.png') }}">
+<section class="inner-header divider layer-overlay overlay-theme-colored-7" data-bg-img="{{   asset('images/details_course.png') }}">
     <div class="container pt-120 pb-60">
       <!-- Section Content -->
       <div class="section-content">
