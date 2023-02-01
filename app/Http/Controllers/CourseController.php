@@ -72,30 +72,7 @@ class CourseController extends Controller
     public function show(Course $course)
     {
       
-        $val=$course->where('courses.id',$course->id)->join('modalities','modalities.id','=','courses.modality_id')
-        ->join('degrees','degrees.id','=','courses.degree_id')
-        ->join('languages','languages.id','=','courses.language_id')
-        ->join('modes','modes.id','=','courses.mode_id')
-        ->join('responsables','responsables.id','=','courses.responsable_id')
-        ->select('courses.*','modalities.name as modalitiy_name','degrees.name as degrees_name','languages.name as languages_name','modes.name as modes_name','responsables.name as responsables_name')
-        ->get();
-       
-
-        foreach ($val as $key => $item) {
-            Carbon::parse($item->datelimite)->locale('FR_fr')->diffForHumans();
-        }
-        $programs=Program::where('course_id',$course->id)->get();
-        $downloads=Download::where('course_id',$course->id)->get();
-        $degrees=Degree::all();
-        
-        $last_courses= $course->join('modalities','modalities.id','=','courses.modality_id')
-        ->select('courses.name','courses.id','modalities.name as modalitiy_name')
-        ->orderByDesc('courses.created_at')
-        ->limit(3)->get();
-        $countries=Countries::getting();
-        $cprovinces=Provinces::getting();
-        $levels=Levels::getting();
-        return 'fdgfdg';
+     return 'hh';
     }
 
     /**
