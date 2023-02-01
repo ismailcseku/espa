@@ -26,11 +26,14 @@ class HomeController extends Controller
         ->join('degrees','degrees.id','=','courses.degree_id')
         ->join('languages','languages.id','=','courses.language_id')
         ->join('responsables','responsables.id','=','courses.responsable_id')
-        ->select('courses.*','modalities.name as modalitiy_name','degrees.name as degrees_name','degrees.id as degrees_id','languages.name as languages_name','responsables.photo as responsables_photo')
+        ->select('courses.*','modalities.name as modalitiy_name','degrees.name as degrees_name','degrees.id as degrees_id','languages.name as languages_name','responsables.*')
         ->orderByDesc('courses.created_at')
         ->get();
         $slides=Slide::all();
-        $slides[0]->description=str_split($slides[0]->description,100);
+        if ($slides->count()>0) {
+            
+            $slides[0]->description=str_split($slides[0]->description,100);
+        }
         $degrees=Degree::all();
         $responsables=DB::table('responsables')->limit(4)->get();
         foreach ($courses as $key => $course) {

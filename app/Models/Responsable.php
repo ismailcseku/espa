@@ -13,6 +13,7 @@ class Responsable extends Model
     protected $fillable=[
         'name',
         'surname',
+        'poste',
         'email',
         'phone',
         'photo',

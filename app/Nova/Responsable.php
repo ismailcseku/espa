@@ -48,6 +48,7 @@ class Responsable extends Resource
             //ID::make()->sortable(),
             Text::make('Nom','name'),
             Text::make('Prénom','surname'),
+            Text::make('Poste','poste'),
             Text::make('E-mail','email'),
             Text::make('Téléphone','phone'),
             Text::make('Gsm','gsm'),

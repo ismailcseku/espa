@@ -102,7 +102,7 @@
                                     </li>
                                     <li class="text-white">|</li>
                                     <li>
-                                        <a class="text-white" href="#">Nous joindre</a>
+                                        <a class="text-white" href="{{route('about.index')}}">À propos</a>
                                     </li>
                                     <li class="text-white">|</li>
                                     <li>
@@ -187,7 +187,7 @@
                                 <li><a href="#home">Ecole</a>
                                     <ul class="dropdown">
                                         <li><a href="page-course-gird.html">Mot du directeur</a></li>
-                                        <li><a href="page-course-list.html">Qui sommes-nous ?</a></li>
+                                        <li><a href="{{route('about.index')}}">Qui sommes-nous ?</a></li>
                                         <li><a href="page-course-details.html">Corps Professoral</a></li>
                                         <li><a href="page-course-details.html">Vie Estudiantine</a></li>
                                         <li><a href="page-course-details.html">Évènements</a></li>

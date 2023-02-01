@@ -34,8 +34,6 @@ class CourseController extends Controller
         foreach ($courses as $key => $item) {
             $item->datelimite=Carbon::parse($item->datelimite)->toObject();
             $item->description=substr($item->description,0,200);
-
-            
         } 
         return view('courses.index')->with([
             'courses'=>$courses,

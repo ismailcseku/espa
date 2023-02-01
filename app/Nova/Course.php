@@ -73,7 +73,7 @@ class Course extends Resource
             NovaTinyMCE::make('Candidature','candidature'),
             DateTime::make('Date limite','datelimite'),
             NovaTinyMCE::make('Modaliés de selection','selection'),
-            NovaTinyMCE::make('Date rentrée','daterentre'),
+            Date::make('Date rentrée','daterentre'),
 
             NovaTinyMCE::make('Diplôme','grade'),
 
@@ -86,8 +86,7 @@ class Course extends Resource
             
             HasMany::make('downloads'),
             HasMany::make('interesteds'),
-            
-
+    
 
             //Date::make('Date limite','datelimite'),
 

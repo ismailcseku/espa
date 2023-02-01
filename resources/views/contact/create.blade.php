@@ -28,13 +28,12 @@
                 <div class="row pt-10">
                     <div class="col-md-5">
                         <h4 class="mt-0 mb-30 line-bottom-theme-colored2">Nous trouver</h4>
-                        <!-- Google Map HTML Codes -->
-                        <div data-address="121 King Street, Melbourne Victoria 3000 Australia"
-                            data-popupstring-id="#popupstring1" class="map-canvas autoload-map" data-mapstyle="style1"
-                            data-height="400" data-latlng="-37.817314,144.955431" data-title="sample title" data-zoom="12"
-                            data-marker="images/map-icon-blue.png">
-                        </div>
-
+                       
+                        <div style="height:400px;" id="map-container-google-3" class="z-depth-1-half map-container-3">
+                            <iframe src="https://maps.google.com/maps?q=warsaw&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                              style="border:0" allowfullscreen></iframe>
+                          </div>
+                         
                         <!-- Google Map Javascript Codes -->
                         <script src="http://maps.google.com/maps/api/js?key=AIzaSyAh6VjA5IqdYdqqQ5ky4jTwKT3k8cCbPXQ"></script>
                         <script src="js/google-map-init.js"></script>

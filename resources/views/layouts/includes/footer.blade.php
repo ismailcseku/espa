@@ -2,12 +2,12 @@
     <div class="container pt-60 pb-20">
       <div class="col-sm-6 col-md-3">
         <div class="widget dark">
-          <img alt="" src="images/logo-footer.png">          
+          <img alt="" src="{{asset('images/logo_footer.png')}}">          
           <p class="mt-20">CHA Agadir </p>
           <ul class="list-inline">
             <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone mr-5"></i> <a href="#">123-456-789</a> </li>
-            <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o mr-5"></i> <a href="#">contact@yourdomain.com</a> </li>
-            <li class="m-0 pl-10 pr-10"> <i class="fa fa-globe mr-5"></i> <a href="#">www.yourdomain.com</a> </li>
+            <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o mr-5"></i> <a href="mail:samir.belghol@gmail.com">prestavert@gmail.com</a> </li>
+            <li class="m-0 pl-10 pr-10"> <i class="fa fa-globe mr-5"></i> <a href="https://prestavert.com">wwww.prestavert.com</a> </li>
           </ul> <ul class="styled-icons icon-sm icon-dark icon-theme-colored2 icon-circled clearfix mt-10">
             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -23,10 +23,6 @@
           <div class="row clearfix">
             <div class="col-xs-12 col-sm-6 col-md-6">
               <ul class="footer-link">
-                <li><a href="#">Mot du directeur</a></li>
-                <li><a href="#">Qui sommes nous ?</a></li>
-                <li><a href="#">Corps professoral </a></li>
-                <li><a href="#">Vie estudiantine</a></li>
                 <li><a href="#">Évènements</a></li>
                 <li><a href="#">Actualités</a></li>
               </ul>
@@ -34,9 +30,6 @@
             <div class="col-xs-12 col-sm-6 col-md-6">
               <ul class="footer-link">
                 <li><a href="#">Recherche</a></li>
-                <li><a href="#">Centre d'd’Excellence</a></li>
-                <li><a href="#">Ferme Expemrimentale</a></li>
-                <li><a href="#">impact Cluster</a></li>
                 <li><a href="#">Agri-Business</a></li>
               </ul>
             </div>
@@ -45,7 +38,7 @@
       </div>
       <div class="col-sm-6 col-md-3">
         <div class="widget dark">
-          <h4 class="widget-title line-bottom-theme-colored2">Récents</h4>
+          <h4 class="widget-title line-bottom-theme-colored2">Blog</h4>
           <div class="latest-posts">
             <article class="post media-post clearfix pb-0 mb-10">
               <a class="post-thumb" href="#"><img src="http://placehold.it/80x55" alt=""></a>
@@ -79,7 +72,10 @@
               <li class="clearfix"> <span> Lun - vendredi :  </span>
                 <div class="value pull-right"> 8.00 am - 6.00 pm </div>
               </li>
-      
+            
+              <li class="clearfix"> <span> Sam : </span>
+                <div class="value pull-right bg-theme-colored2 text-white closed">Fermé</div>
+              </li>
               <li class="clearfix"> <span> Dim : </span>
                 <div class="value pull-right bg-theme-colored2 text-white closed">Fermé</div>
               </li>
@@ -93,7 +89,7 @@
         <div class="row">
             
           <div class="col-md-6">
-            <p class="font-14 sm-text-center m-0">Copyright &copy;2023 <span class="text-theme-colored2">CHA agadir</span>. Tous droits réservés - <a href="https://yatachi-code.org" target="_blank">Développé par yatachi code</a></p>
+            <p class="font-14 sm-text-center m-0">Copyright &copy;2023 <span class="text-theme-colored2">CHA agadir</span>. Tous droits réservés </p>
           </div>
           <div class="col-md-6 text-right">
             <div class="widget no-border m-0">

@@ -193,13 +193,13 @@
     <section id="features" class="bg-silver-deep">
         <div class="container pb-50">
             <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-4 mb-sm-30">
+                <div class="col-xs-12 col-sm-6 col-md-4 mb-sm-10">
                     <div class="feature-box text-center bg-silver-light p-30 pb-20">
                         <div class="feature-icon flex justify-center">
                             <img src="{{ asset('/images/Formation.svg') }}" alt="">
                         </div>
                         <div class="feature-title">
-                            <h3>formations</h3>
+                            <h3>Formation</h3>
                             <p>Des structures d’apprentissage
                                 pratique et des solutions
                                 technologiques de pointe</p>
@@ -240,11 +240,11 @@
 
 
     <!-- Section: Courses -->
-    <section id="courses" class="bg-silver-light">
+    <section id="courses" class="bg-silver-light" >
         <div class="container">
             <section id="gallery">
-                <div class="container">
-                    <div class="section-title">
+                <div class="container ">
+                    <div class="section-title " >
                         <div class="row">
                             <div class="col-md-12">
                                 <h2 class="text-uppercase title">Nos <span class="text-theme-colored2">Formations</span>
@@ -373,10 +373,10 @@
                     <div class="col-lg-4">
                         <h3 class="font-28 mt-0"><span class="text-theme-colored2">À propos </span>De nous</h3>
                         <div class="line-bottom-theme-colored2"></div>
-                        <img src="http://placehold.it/360x210" class="img-fullwidth" alt="">
+                        <img src="https://kodesolution.com/html/2018/imfundo-html/demo/images/about/2.jpg   " class="img-fullwidth" alt="">
                         <p class="mt-15">Lorem ipsum dolor sit amet, conse ctetur adipis elit. Totam perferendis,
                             assumenda vitae cum beatae Pariatur, ratione adipis elit. Totam perfereding.</p>
-                        <a href="#" class="btn btn-colored btn-sm btn-theme-colored2">Lire plus</a>
+                        <a href="{{route('about.index')}}" class="btn btn-colored btn-sm btn-theme-colored2">Lire plus</a>
                     </div>
                     <div class="col-lg-4">
                         <h3 class="font-28 mt-md-30 mt-0"><span class="text-theme-colored2">Évènements</span> à venir
@@ -529,33 +529,33 @@
                 <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
                     <div class="funfact">
                         <i class="pe-7s-smile mb-20 text-white"></i>
-                        <h2 data-animation-duration="2000" data-value="754"
+                        <h2 data-animation-duration="2000" data-value="1000"
                             class="animate-number text-theme-colored2 font-42 font-weight-600 mt-0 mb-15">0</h2>
-                        <h5 class="text-white text-uppercase">Apprenants heureux</h5>
+                        <h5 class="text-white text-uppercase">ÉTUDIANTS</h5>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
                     <div class="funfact">
                         <i class="pe-7s-notebook mb-20 text-white"></i>
-                        <h2 data-animation-duration="2000" data-value="675"
+                        <h2 data-animation-duration="2000" data-value="42"
                             class="animate-number text-theme-colored2 font-42 font-weight-600 mt-0 mb-15">0</h2>
-                        <h5 class="text-white text-uppercase">Année d'experience</h5>
+                        <h5 class="text-white text-uppercase">ANNÉES</h5>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
                     <div class="funfact">
                         <i class="pe-7s-users mb-20 text-white"></i>
-                        <h2 data-animation-duration="2000" data-value="675"
+                        <h2 data-animation-duration="2000" data-value="100"
                             class="animate-number text-theme-colored2 font-42 font-weight-600 mt-0 mb-15">0</h2>
-                        <h5 class="text-white text-uppercase">cases completées</h5>
+                        <h5 class="text-white text-uppercase">STARTUPS</h5>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
                     <div class="funfact">
                         <i class="pe-7s-study mb-20 text-white"></i>
-                        <h2 data-animation-duration="2000" data-value="1248"
+                        <h2 data-animation-duration="2000" data-value="50"
                             class="animate-number text-theme-colored2 font-42 font-weight-600 mt-0 mb-15">0</h2>
-                        <h5 class="text-white text-uppercase">Diplomés</h5>
+                        <h5 class="text-white text-uppercase">PHD (2033)</h5>
                     </div>
                 </div>
             </div>
@@ -585,13 +585,13 @@
                                 <img src="{{url('storage')}}/{{$responsable->photo}}" alt="" class="img-fullwidth">
                             </div>
                             <div class="team-bottom-part border-1px p-15">
-                                <h4 class="text-uppercase m-0 pb-5">{{$responsable->name}} </h4>
-                                <h6 class="font-13 text-gray mt-0">{{$responsable->surname}}</h6>
+                                <h4 class="text-uppercase m-0 pb-5">{{$responsable->name}} {{$responsable->surname}}</h4>
+                                <h6 class="font-13 text-gray mt-0">{{$responsable->poste}}</h6>
                                 <ul class="list-inline mt-15">
                                     <li class="m-0 pr-10"> <i class="fa fa-phone text-theme-colored2 mr-5"></i> <span
                                             class="text-gray" href="#">{{$responsable->phone}}</span> </li>
                                     <li class="m-0 pr-10"> <i class="fa fa-envelope-o text-theme-colored2 mr-5"></i>
-                                        <span class="text-gray" href="#">{{$responsable->email}}</span>
+                                        <a class="text-gray" href="mailto:{{$responsable->email}}">{{$responsable->email}}</a>
                                     </li>
                                     
                                 </ul>
@@ -615,9 +615,8 @@
                 <div class="col-md-8 col-md-offset-2 text-center">
                     <a href="https://www.youtube.com/watch?v=kt-4lJs_8fE" data-lightbox-gallery="youtube-video"><img
                             src="images/play-button/s11.png" alt=""></a>
-                    <h3 class="text-white font-38 font-weight-700 mt-10 mb-0">Faisons une <span
-                            class="text-theme-colored2">Visite</span> vidéo et voyons nos activités <span
-                            class="text-theme-colored2">Récentes</span></h3>
+                    <h3 class="text-white font-38 font-weight-700 mt-10 mb-0">Notre<span
+                            class="text-theme-colored2">Newsletters</span> </h3>
                     <!-- Mailchimp Subscription Form-->
                     <form id="mailchimp-subscription-form2" class="newsletter-form max-width-535 mt-10">
                         <label for="mce-EMAIL"></label>
@@ -667,99 +666,7 @@
         </div>
     </section>
 
-    <!-- Divider: Testimonials -->
-    <section class="bg-silver-light">
-        <div class="container pt-70 pb-30">
-            <div class="section-title">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h2 class="text-uppercase title mb-0">Nos <span class="text-theme-colored2">Étudiants
-                            </span>Disent</h2>
-                        <h5 class="font-16 text-gray-darkgray mt-5 mb-0">Avis etudiants et parents</h5>
-                        <div class="line-bottom-theme-colored2 pt-10 mb-0"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 mb-30">
-                    <div class="owl-carousel-2col boxed" data-dots="true">
-                        <div class="item">
-                            <div class="testimonial pt-10">
-                                <div class="testimonial-content">
-                                    <p class="mt-0 font-16">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Quas vel sint, ut. Quisquam doloremque minus possimus eligendi dolore ad.Lorem
-                                        ipsum dolor sit amet, consectetur adipisicing elit. Quas vel sint, ut. Quisquam
-                                        doloremque minus possimus eligendi dolore ad.Lorem ipsum dolor sit</p>
-                                </div>
-                                <div class="testimonial-details mb-0 mr-0">
-                                    <img alt="" src="http://placehold.it/55x55"
-                                        class="img-thumbnail img-circle pull-left mr-15 mt-15" width="42">
-                                    <div class="author-info pt-15">
-                                        <h5 class="mt-10 font-16 mb-0">Catherine Grace</h5>
-                                        <h6 class="mt-5">CEO apple.inc</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimonial pt-10">
-                                <div class="testimonial-content">
-                                    <p class="mt-0 font-16">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Quas vel sint, ut. Quisquam doloremque minus possimus eligendi dolore ad.Lorem
-                                        ipsum dolor sit amet, consectetur adipisicing elit. Quas vel sint, ut. Quisquam
-                                        doloremque minus possimus eligendi dolore ad.Lorem ipsum dolor sit</p>
-                                </div>
-                                <div class="testimonial-details mb-0 mr-0">
-                                    <img alt="" src="http://placehold.it/55x55"
-                                        class="img-thumbnail img-circle pull-left mr-15 mt-15" width="42">
-                                    <div class="author-info pt-15">
-                                        <h5 class="mt-10 font-16 mb-0">Catherine Grace</h5>
-                                        <h6 class="mt-5">CEO apple.inc</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimonial pt-10">
-                                <div class="testimonial-content">
-                                    <p class="mt-0 font-16">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Quas vel sint, ut. Quisquam doloremque minus possimus eligendi dolore ad.Lorem
-                                        ipsum dolor sit amet, consectetur adipisicing elit. Quas vel sint, ut. Quisquam
-                                        doloremque minus possimus eligendi dolore ad.Lorem ipsum dolor sit</p>
-                                </div>
-                                <div class="testimonial-details mb-0 mr-0">
-                                    <img alt="" src="http://placehold.it/55x55"
-                                        class="img-thumbnail img-circle pull-left mr-15 mt-15" width="42">
-                                    <div class="author-info pt-15">
-                                        <h5 class="mt-10 font-16 mb-0">Catherine Grace</h5>
-                                        <h6 class="mt-5">CEO apple.inc</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimonial pt-10">
-                                <div class="testimonial-content">
-                                    <p class="mt-0 font-16">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Quas vel sint, ut. Quisquam doloremque minus possimus eligendi dolore ad.Lorem
-                                        ipsum dolor sit amet, consectetur adipisicing elit. Quas vel sint, ut. Quisquam
-                                        doloremque minus possimus eligendi dolore ad.Lorem ipsum dolor sit</p>
-                                </div>
-                                <div class="testimonial-details mb-0 mr-0">
-                                    <img alt="" src="http://placehold.it/55x55"
-                                        class="img-thumbnail img-circle pull-left mr-15 mt-15" width="42">
-                                    <div class="author-info pt-15">
-                                        <h5 class="mt-10 font-16 mb-0">Catherine Grace</h5>
-                                        <h6 class="mt-5">CEO apple.inc</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- Section: blog -->
     <section id="blog">

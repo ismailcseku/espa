@@ -30,7 +30,7 @@ return new class extends Migration
             $table->text('candidature')->nullable();
             $table->dateTime('datelimite')->nullable();
             $table->text('selection')->nullable();
-            $table->string('daterentre')->nullable();
+            $table->date('daterentre')->nullable();
             $table->string('grade')->nullable();
             $table->text('profile')->nullable();
             $table->text('opportunity')->nullable();

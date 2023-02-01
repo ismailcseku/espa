@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\DegreeController;
 use App\Http\Controllers\ContactController;
@@ -25,3 +26,5 @@ Route::get('/degree', [DegreeController::class, 'index']);
 Route::post('/interested/{id}', [InterestedController::class, '__invoke'])->name('interested');
 Route::get('/contact', [ContactController::class, 'create'])->name('contact.create');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+
+Route::get('/about', [AboutController::class, '__invoke'])->name('about.index');
