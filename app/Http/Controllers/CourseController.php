@@ -71,7 +71,7 @@ class CourseController extends Controller
      */
     public function show(Course $course)
     {
-        dd($last_course);
+        dd('fgf');
         $val=$course->where('courses.id',$course->id)->join('modalities','modalities.id','=','courses.modality_id')
         ->join('degrees','degrees.id','=','courses.degree_id')
         ->join('languages','languages.id','=','courses.language_id')
