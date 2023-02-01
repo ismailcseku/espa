@@ -21,8 +21,10 @@ use App\Http\Controllers\InterestedController;
 
 Route::get('/', [HomeController::class, '__invoke'])->name('home');
 Route::get('/courses/{course}', [CourseController::class, 'show'])->name('course.details');
+Route::get('/courses/{res}', [CourseController::class, 'showByName'])->name('course.byname');
 Route::get('/courses', [CourseController::class, 'index'])->name('course.index');
-Route::get('/degree', [DegreeController::class, 'index']);
+Route::get('/cycle', [DegreeController::class, 'index'])->name('degree.index');
+Route::get('/cycle/{res}', [DegreeController::class, 'show'])->name('degree.show');
 Route::post('/interested/{id}', [InterestedController::class, '__invoke'])->name('interested');
 Route::get('/contact', [ContactController::class, 'create'])->name('contact.create');
 Route::post('/contact/post', [ContactController::class, 'store'])->name('contact.store');

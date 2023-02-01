@@ -55,7 +55,7 @@ class Course extends Resource
         return [
             //ID::make()->sortable(),
             BelongsTo::make('Cycle','degree','App\Nova\Degree'),
-            BelongsTo::make('Responsable','responsable','App\Nova\Responsable'),
+            BelongsTo::make('Responsable','responsable','App\Nova\Responsable')->nullable(),
             Text::make('Intitulé de la formation','name'),
             Image::make('Photo'),
             //CKEditor5Classic::make('description'),
@@ -65,8 +65,9 @@ class Course extends Resource
 
             Number::make('Durée en mois','duration'),
             BelongsTo::make('Lieu','location','App\Nova\Location'),
-            BelongsTo::make('Rythme','mode', 'App\Nova\Mode'),
-            BelongsTo::make('Modalité', 'modality','App\Nova\Modality'),
+            BelongsTo::make('Mode','mode', 'App\Nova\Mode'),
+            BelongsTo::make('Type de formation','trainingType', 'App\Nova\TrainingType'),
+            BelongsTo::make('Rythme', 'modality','App\Nova\Modality'),
             BelongsTo::make('Langue','language','App\Nova\Language'),
             NovaTinyMCE::make('Prérequis et admission','admission'),
             NovaTinyMCE::make('Dossier','dossier'),

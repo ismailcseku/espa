@@ -12,6 +12,7 @@ use App\Models\Location;
 use App\Models\Modality;
 use App\Models\Interested;
 use App\Models\Responsable;
+use App\Models\TrainingType;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -68,10 +69,15 @@ class Course extends Model
     {
         return $this->belongsTo(Responsable::class);
     }
+    public function trainingType()
+    {
+        return $this->belongsTo(TrainingType::class);
+    }
     
     public function downloads() {
         return $this->hasMany(Download::class);
     }
+
     /**
      * Get all of the interested for the Course
      *

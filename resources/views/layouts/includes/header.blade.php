@@ -127,54 +127,49 @@
                                 <li @if (Route::current()->getName() == 'course.index') class="active" @endif><a href="{{ route('course.index') }}">Formations</a>
                                     <ul class="dropdown">
                                         <li>
-                                            <a href="#">Ingénieur d’État en Agronomie</a>
+                                            <a href="{{route('degree.show','Ingénieur d’État en Agronomie')}}">Ingénieur d’État en Agronomie</a>
                                             <ul class="dropdown">
-                                                <li><a href="index-mp-layout1.html">Horticulture</a></li>
-                                                <li><a href="index-mp-layout3.html">Protection des Plantes</a></li>
-                                                <li><a href="index-mp-layout4.html"> Architecture du Paysage</a></li>
+                                                <li><a href="{{route('course.byname','Horticulture')}}">Horticulture</a></li>
+                                                <li><a href="{{route('course.byname','Protection des Plantes')}}">Protection des Plantes</a></li>
+                                                <li><a href="{{route('course.byname','Architecture du Paysage')}}"> Architecture du Paysage</a></li>
 
                                             </ul>
 
                                         </li>
-                                        <li><a href="#">International Master</a>
+                                        <li><a href="{{route('degree.show','International Master')}}">International Master</a>
                                             <ul class="dropdown">
-                                                <li><a href="index-sp-layout1.html">Water & Sustainaible Horticulture
-                                                        (ang)</a></li>
-                                                <li><a href="index-sp-layout2.html"> Architecture du Paysage (fr)</a>
+                                                <li><a href="{{route('course.byname','Water & Sustainaible Horticulture (ang)')}}">Water & Sustainaible Horticulture (ang)</a></li>
+                                                <li><a href="{{route('course.byname','Architecture du Paysage (fr)')}}"> Architecture du Paysage (fr)</a>
                                                 </li>
-                                                <li><a href="index-sp-layout3.html"> Locust Science (ang)</a></li>
-                                                <li><a href="index-sp-layout4.html"> Locust Science (fr)</a></li>
+                                                <li><a href="{{route('course.byname','Locust Science (ang)')}}"> Locust Science (ang)</a></li>
+                                                <li><a href="{{route('course.byname',' Locust Science (fr)')}}"> Locust Science (fr)</a></li>
                                             </ul>
                                         </li>
 
-                                        <li><a href="#">Licence professionnelle</a>
+                                        <li><a href="{{route('degree.show','Licence professionnelle')}}">Licence professionnelle</a>
                                             <ul class="dropdown">
-                                                <li><a href="index-dark-mp-layout1.html">Horticulture Ornementale et
-                                                        Espaces verts</a></li>
-                                                <li><a href="index-dark-mp-layout1.html">Aménagement du Paysage</a>
+                                                <li><a href="{{route('course.byname','Horticulture Ornementale et Espaces verts')}}">Horticulture Ornementale et Espaces verts</a></li>
+                                                <li><a href="{{route('course.byname','Aménagement du Paysage')}}">Aménagement du Paysage</a>
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li><a href="#">Technicien Spécialisé</a>
+                                        <li><a href="{{route('degree.show','Technicien Spécialisé')}}">Technicien Spécialisé</a>
                                             <ul class="dropdown">
-                                                <li><a href="index-home-variation-owl-carousel.html">Technico-Commercial
-                                                        en Productions Horticoles</a></li>
-                                                <li><a href="index-home-variation-owl-image-slider.html">Conditionnement
-                                                        et Valorisation des Produits Agricoles</a></li>
-                                                <li><a href="index-home-variation-typed-text.html">Cultures
-                                                        Ornementales et Aménagement des Espaces Verts</a></li>
+                                                <li><a href="{{route('course.byname','Technico-Commercial en Productions Horticoles')}}" >Technico-Commercial en Productions Horticoles</a></li>
+                                                <li><a href="{{route('course.byname','Conditionnement et Valorisation des Produits Agricoles')}}">Conditionnement et Valorisation des Produits Agricoles</a></li>
+                                                <li><a href="{{route('course.byname','Cultures Ornementales et Aménagement des Espaces Verts')}}" >Cultures Ornementales et Aménagement des Espaces Verts</a></li>
                                                 <li><a
-                                                        href="index-home-variation-video-background.html">Aquaculture</a>
+                                                        href="Aquaculture">Aquaculture</a>
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li><a href="#">Programme doctoral</a>
+                                        <li><a href="{{route('degree.show','Programme doctoral')}}">Programme doctoral</a>
 
                                         </li>
-                                        <li><a href="#">Formation Exécutive <span
+                                        <li><a href="{{route('degree.show','Formation Exécutive')}}">Formation Exécutive<span
                                                     class="label label-danger">New</span></a>
                                             <ul class="dropdown">
-                                                <li><a href="index-home-variation-owl-carousel.html">Farm Manager</a>
+                                                <li><a href="{{route('course.byname','Farm Manager')}}">Farm Manager</a>
                                                 </li>
                                             </ul>
                                         </li>

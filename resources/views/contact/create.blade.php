@@ -4,7 +4,7 @@
     <div class="main-content">
         <!-- Section: inner-header -->
         <section class="inner-header divider layer-overlay overlay-theme-colored-7"
-            data-bg-img="{{  asset('images/details_course.png')}}">
+            data-bg-img="{{ asset('images/details_course.jpeg') }}">
             <div class="container pt-120 pb-60">
                 <!-- Section Content -->
                 <div class="section-content">
@@ -28,12 +28,12 @@
                 <div class="row pt-10">
                     <div class="col-md-5">
                         <h4 class="mt-0 mb-30 line-bottom-theme-colored2">Nous trouver</h4>
-                       
+
                         <div style="height:400px;" id="map-container-google-3" class="z-depth-1-half map-container-3">
-                            <iframe src="https://maps.google.com/maps?q=warsaw&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
-                              style="border:0" allowfullscreen></iframe>
-                          </div>
-                         
+                            <iframe src="https://maps.google.com/maps?q=warsaw&t=k&z=13&ie=UTF8&iwloc=&output=embed"
+                                frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+
                         <!-- Google Map Javascript Codes -->
                         <script src="http://maps.google.com/maps/api/js?key=AIzaSyAh6VjA5IqdYdqqQ5ky4jTwKT3k8cCbPXQ"></script>
                         <script src="js/google-map-init.js"></script>

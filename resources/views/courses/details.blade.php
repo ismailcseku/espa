@@ -4,7 +4,7 @@
     <div class="main-content">
         <!-- Section: inner-header -->
         <section class="inner-header divider layer-overlay overlay-theme-colored-7"
-            data-bg-img="{{  asset('images/details_course.png') }}">
+            data-bg-img="{{ asset('images/details_course.jpeg') }}">
             <div class="container pt-120 pb-60">
                 <!-- Section Content -->
                 <div class="section-content">
@@ -199,13 +199,13 @@
                                                                             Prochaine rentrée :</h5>
                                                                         <div class="comment-date">
                                                                             @php
-                                                                                $getYears=$course->daterentre->format('Y');
-                                                                                $getMonth=$course->daterentre->format('m');
-                                                                                echo $getMonth.'/';
+                                                                                $getYears = $course->daterentre->format('Y');
+                                                                                $getMonth = $course->daterentre->format('m');
+                                                                                echo $getMonth . '/';
                                                                                 echo $getYears;
-
+                                                                                
                                                                             @endphp
-                                                                            </div>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </li>
@@ -368,7 +368,8 @@
                                                         </h4>
                                                         @if (session()->has('success'))
                                                             <h6 class='alert alert-success' role="alert">
-                                                                Felicitation !! Vous avez postulé à cette formation avec reiussite , nous vous contacterons très bientôt .
+                                                                Felicitation !! Vous avez postulé à cette formation avec
+                                                                reiussite , nous vous contacterons très bientôt .
                                                             </h6>
                                                         @endif
                                                         <div class="line-bottom mb-30"></div>
@@ -568,13 +569,13 @@
                                                             <div class="col-xs-2 col-sm-1">
 
                                                                 <div class=" mb-10">
-                                                                    <input name="accepted" value='accepted' type="checkbox"
-                                                                        checked required>
+                                                                    <input name="accepted" value='accepted'
+                                                                        type="checkbox" checked required>
                                                                 </div>
                                                                 @if ($errors->has('accepted'))
-                                                                <span
-                                                                    class="text-danger">{{ $errors->first('accepted') }}</span>
-                                                            @endif
+                                                                    <span
+                                                                        class="text-danger">{{ $errors->first('accepted') }}</span>
+                                                                @endif
                                                             </div>
                                                             <p class="col-xs-10 col-span-10">
                                                                 Conformément à la loi 09-08, vous disposez d&#39;un droit

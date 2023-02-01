@@ -18,6 +18,7 @@ class Degree extends Model
     public function trainingType() {
         return $this->BelongsTo(TrainingType::class);
     }
+    
 
     /**
      * Get all of the comments for the Degree

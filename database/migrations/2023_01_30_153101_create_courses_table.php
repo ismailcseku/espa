@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('photo')->nullable();
             $table->foreignId('degree_id')->constrained();
             $table->foreignId('modality_id')->constrained();
+            $table->foreignId('training_type_id')->constrained();
             $table->text('description');
             $table->integer('duration')->nullable();
             $table->foreignId('location_id')->constrained();
@@ -35,7 +36,7 @@ return new class extends Migration
             $table->text('profile')->nullable();
             $table->text('opportunity')->nullable();
             $table->text('review')->nullable();
-            $table->foreignId('responsable_id')->constrained();
+            $table->foreignId('responsable_id')->nullable();
             $table->string('form')->nullable();
             $table->string('brochure')->nullable();
             $table->timestamps();

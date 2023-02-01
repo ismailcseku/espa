@@ -46,8 +46,8 @@ class Degree extends Resource
             //ID::make()->sortable(),
             Text::make('name'),
             Textarea::make('Description'),
-            BelongsTo::make('Curriculum'),
-            BelongsTo::make('Training_Type'),
+            BelongsTo::make('Cursus','curriculum','App\Nova\Curriculum'),
+            BelongsTo::make('Type de formation','trainingtype','App\Nova\TrainingType'),
     
             //BelongsTo::make('TrainingType', 'Training_Type_id', 'App\Nova\TrainingType'),
         ];

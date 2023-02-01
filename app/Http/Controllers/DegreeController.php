@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Models\Degree;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class DegreeController extends Controller
 {
@@ -46,9 +48,30 @@ class DegreeController extends Controller
      * @param  \App\Models\Degree  $degree
      * @return \Illuminate\Http\Response
      */
-    public function show(Degree $degree)
+    public function show(string $res)
     {
-        //
+        $getId=Degree::where('name',$res)->get('id');
+        $courses=[];
+        if (count($getId)>0) {
+            $courses=DB::table('courses')->where('courses.degree_id',$getId[0]->id)->join('modalities','modalities.id','=','courses.modality_id')
+            ->join('degrees','degrees.id','=','courses.degree_id')
+            ->join('languages','languages.id','=','courses.language_id')
+            ->join('modes','modes.id','=','courses.mode_id')
+            ->join('responsables','responsables.id','=','courses.responsable_id')
+            ->select('courses.*','modalities.name as modalitiy_name','degrees.name as degrees_name','languages.name as languages_name','modes.name as modes_name','responsables.photo as responsables_photo')
+            ->get();
+            foreach ($courses as $key => $item) {
+                $item->datelimite=Carbon::parse($item->datelimite)->toObject();
+                $item->description=substr($item->description,0,200);    
+            } 
+        }
+  
+        
+        return view('degree.show')->with([
+            'courses'=>$courses,
+            'degrees_name'=>$res,
+            
+        ]);
     }
 
     /**
