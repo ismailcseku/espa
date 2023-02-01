@@ -30,7 +30,7 @@ class HomeController extends Controller
         ->orderByDesc('courses.created_at')
         ->get();
         $slides=Slide::all();
-        dd($dslide);
+        dd($slides);
         if ($slides->count()>0) {
             
             $slides[0]->description=str_split($slides[0]->description,100);
