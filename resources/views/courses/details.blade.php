@@ -85,7 +85,7 @@
                                                     class="pe-7s-prev font-26 vertical-align-middle text-theme-colored2 mr-10"></i>Rythme
                                                 : {{ $course->modalitiy_name }}</li>
                                             <li><i
-                                                    class="pe-7s-headphones font-26 vertical-align-middle text-theme-colored2 mr-10 "></i>Langue
+                                                    class="pe-7s-global font-26 vertical-align-middle text-theme-colored2 mr-10 "></i>Langue
                                                 : {{ $course->languages_name }}</li>
                                         </ul>
 

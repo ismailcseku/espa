@@ -34,7 +34,7 @@ class Slide extends Resource
     public static $search = [
         'id',
     ];
-    public static $group = 'Interface';
+    
 
 
     /**

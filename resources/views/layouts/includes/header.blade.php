@@ -69,14 +69,7 @@
 <body class="has-side-panel side-panel-right fullwidth-page">
 
     <div id="wrapper" class="clearfix">
-        <!-- preloader -->
-        <div id="preloader">
-
-            <div id="spinner">
-                <img alt="" src="{{ asset('images/logo_home.svg') }}">
-            </div>
-            <div id="disable-preloader" class="btn btn-default btn-sm">Chargement</div>
-        </div>
+  
         <!-- Header -->
         <header id="header" class="header">
             <div class="header-top bg-theme-colored border-top-theme-colored2-2px sm-text-center">

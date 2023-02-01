@@ -19,6 +19,7 @@ abstract class Resource extends NovaResource
     {
         return $query;
     }
+    
 
     /**
      * Build a Scout search query for the given resource.

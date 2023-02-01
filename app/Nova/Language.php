@@ -23,7 +23,7 @@ class Language extends Resource
      * @var string
      */
     public static $title = 'name';
-    public static $group = 'Gestion formation';
+    
 
 
     /**

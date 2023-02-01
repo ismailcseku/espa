@@ -34,7 +34,7 @@ class User extends Resource
     public static $search = [
         'id', 'name', 'email',
     ];
-    public static $group = 'Utilisateurs';
+    
 
 
     /**
@@ -113,7 +113,7 @@ class User extends Resource
 
     public static function label()
     {
-        return __('Users');
+        return __('Admin');
     }
     public static function singularLabel()
     {

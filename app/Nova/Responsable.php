@@ -33,7 +33,7 @@ class Responsable extends Resource
     public static $search = [
         'id',
     ];
-    public static $group = 'Gestion formation';
+    
     
 
     /**

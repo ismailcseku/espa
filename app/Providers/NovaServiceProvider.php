@@ -2,7 +2,25 @@
 
 namespace App\Providers;
 
+use App\Nova\Mode;
+use App\Nova\User;
+use App\Nova\Slide;
+use App\Nova\Course;
+use App\Nova\Degree;
+use App\Nova\Contact;
+use App\Nova\Program;
+use App\Nova\Download;
+use App\Nova\Language;
+use App\Nova\Location;
+use App\Nova\Modality;
 use Laravel\Nova\Nova;
+use App\Nova\Curriculum;
+use App\Nova\Interested;
+use App\Nova\Responsable;
+use App\Nova\TrainingType;
+use Laravel\Nova\Menu\MenuItem;
+use Laravel\Nova\Dashboards\Main;
+use Laravel\Nova\Menu\MenuSection;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Blade;
 use Laravel\Nova\NovaApplicationServiceProvider;
@@ -28,6 +46,35 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
           @endenv
          ');
         });
+        
+        Nova::mainMenu(function () {
+            return [
+              
+                    MenuItem::resource(Course::class),
+                    MenuItem::resource(Program::class),
+                    MenuItem::resource(Responsable::class),
+                    MenuItem::resource(Download::class),
+                    MenuItem::resource(Curriculum::class),
+                    MenuItem::resource(TrainingType::class),
+                    MenuItem::resource(Degree::class),
+                    MenuItem::resource(Language::class),
+                    MenuItem::resource(Location::class),
+                    MenuItem::resource(Modality::class),
+                    MenuItem::resource(Mode::class),
+                    MenuItem::resource(Slide::class),
+                    MenuSection::make('Visiteurs', [
+                        MenuItem::resource(Interested::class),
+                        MenuItem::resource(Contact::class),
+
+                    ])->icon('user')->collapsable(),
+                    MenuItem::resource(User::class),
+
+                  
+                
+            ];
+        });
+
+
     }
 
     /**
