@@ -95,15 +95,8 @@ class CourseController extends Controller
         $countries=Countries::getting();
         $cprovinces=Provinces::getting();
         $levels=Levels::getting();
-        return view('course.details')->with([
-            'courses'=>$val,
-            'programs'=> $programs, 
-            'downloads'=> $downloads, 
-            'degrees'=>$degrees,
-            'last_courses'=>$last_courses,
-            'countries'=>$countries,
-            'provinces'=>$provinces,
-            'levels'=>$levels,
+        return view('courses.details')->with([
+          
         ]);
     }
 
