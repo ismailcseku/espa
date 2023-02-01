@@ -287,7 +287,18 @@
                                                     <div class="owl-carousel-3col owl-nav-top" data-nav="tru">
                                                         @foreach ($courses as $course)
                                                             @if ($course->degrees_id == $degree->id)
-                                                               
+                                                                <a href="{{ route('course.details', $course->id) }}"
+                                                                    class="item">
+                                                                    <div
+                                                                        class="course-single-item bg-white border-1px clearfix">
+                                                                        <div class="course-thumb ">
+                                                                            <img class="img-fullwidth" alt=""
+                                                                                src="{{ url('storage') }}/{{ $course->photo }}">
+
+                                                                        </div>
+                                                                  
+                                                                    </div>
+                                                                </a>
                                                             @endif
                                                         @endforeach
 
