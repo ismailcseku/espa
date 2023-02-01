@@ -44,6 +44,6 @@ class HomeController extends Controller
         }
        
 
-;        return  view('home');
+;        return  view('home')->with(['courses'=>$courses,'slides'=>$slides,'degrees'=>$degrees,'responsables'=>$responsables]);
     } 
 }
