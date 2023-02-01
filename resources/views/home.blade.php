@@ -296,7 +296,23 @@
                                                                                 src="{{ url('storage') }}/{{ $course->photo }}">
 
                                                                         </div>
-                                                                  
+                                                                        <div class="course-details clearfix p-20 pt-15">
+                                                                            <div class="course-top-part">
+
+                                                                                <a
+                                                                                    href="{{ route('course.details', $course->id) }}">
+                                                                                    <h4 class="mt-5 mb-5">
+                                                                                        {{ $course->name }}</h4>
+                                                                                </a>
+
+                                                                                <a
+                                                                                    href="{{ route('course.details', $course->id) }}">
+                                                                                    <h4 class="mt-5 mb-5"
+                                                                                        style="opacity: 0.5">
+                                                                                        {{ $course->degrees_name }}</h4></a>
+                                                                            </div>
+                                                                          
+                                                                        </div>
                                                                         <a href="{{ route('course.details', $course->id) }}"
                                                                             style="display: block" class="course-meta">
                                                                             <ul class="list-inline">
