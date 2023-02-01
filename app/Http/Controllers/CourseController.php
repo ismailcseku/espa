@@ -592,7 +592,9 @@ class CourseController extends Controller
           "Autres",
          ];
         
-        return view('courses.details')->with([
+      
+       
+         return view('courses.details')->with([
             'courses'=>$val,
             'programs'=> $programs, 
             'downloads'=> $downloads, 
@@ -606,26 +608,41 @@ class CourseController extends Controller
     }
     public function showByName(string $res)
     {
-      
-      $getId=Degree::where('name',$res)->get('id');
+      $getId=DB::table('courses')->where('name','=','Horticulture')->get();
+ 
+      $programs=[];
+      $downloads=[];
+      $degrees=[];
+      $last_courses=[];
+      $countries=[];
+      $levels=[];
+      $provinces=[];
       $val=[];
-      if (count($getId)>0) {
-      $val=$course->where('courses.degree_id',$getId[0]->id)->join('modalities','modalities.id','=','courses.modality_id')
+    
+      if (count($getId)) {
+    
+     
+     
+      $val=DB::table('courses')->where('courses.degree_id',$getId[0]->id)->join('modalities','modalities.id','=','courses.modality_id')
       ->join('degrees','degrees.id','=','courses.degree_id')
       ->join('languages','languages.id','=','courses.language_id')
       ->join('modes','modes.id','=','courses.mode_id')
+      ->join('locations','locations.id','=','courses.location_id')
       ->leftjoin('responsables','responsables.id','=','courses.responsable_id')
-      ->select('courses.*','modalities.name as modalitiy_name','degrees.name as degrees_name','languages.name as languages_name','modes.name as modes_name','responsables.name as responsables_name')
+      ->select('courses.*','modalities.name as modalitiy_name','locations.name as locations_name','degrees.name as degrees_name','languages.name as languages_name','modes.name as modes_name','responsables.name as responsables_name')
       ->get();
+    }
 
+      if (count($val)>0) {
+      
       foreach ($val as $key => $item) {
           Carbon::parse($item->datelimite)->locale('FR_fr')->diffForHumans();
       }
-      $programs=Program::where('course_id',$course->id)->get();
-      $downloads=Download::where('course_id',$course->id)->get();
+      $programs=Program::where('course_id',$val[0]->id)->get();
+      $downloads=Download::where('course_id',$val[0]->id)->get();
       $degrees=Degree::all();
       
-      $last_courses= $course->join('modalities','modalities.id','=','courses.modality_id')
+      $last_courses= DB::table('courses')->join('modalities','modalities.id','=','courses.modality_id')
       ->select('courses.name','courses.id','modalities.name as modalitiy_name')
       ->orderByDesc('courses.created_at')
       ->limit(3)->get();
@@ -1129,6 +1146,7 @@ class CourseController extends Controller
         "Autres",
        ];
       }
+     
    
        return view('courses.byname')->with([
           'courses'=>$val,
@@ -1142,36 +1160,6 @@ class CourseController extends Controller
       ]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Course  $course
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Course $course)
-    {
-        //
-    }
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Course  $course
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Course $course)
-    {
-        //
-    }
+ 
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Course  $course
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Course $course)
-    {
-        //
-    }
 }

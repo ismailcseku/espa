@@ -21,7 +21,7 @@ use App\Http\Controllers\InterestedController;
 
 Route::get('/', [HomeController::class, '__invoke'])->name('home');
 Route::get('/courses/{course}', [CourseController::class, 'show'])->name('course.details');
-Route::get('/courses/{res}', [CourseController::class, 'showByName'])->name('course.byname');
+Route::get('/course/{res}', [CourseController::class, 'showByName'])->name('course.byname');
 Route::get('/courses', [CourseController::class, 'index'])->name('course.index');
 Route::get('/cycle', [DegreeController::class, 'index'])->name('degree.index');
 Route::get('/cycle/{res}', [DegreeController::class, 'show'])->name('degree.show');

@@ -81,7 +81,7 @@
                                                     Durée : {{ $course->duration }} Mois</li>
                                                 <li><i
                                                         class="pe-7s-global font-26 vertical-align-middle text-theme-colored2  mr-10"></i>
-                                                    Lieu : {{ $course->location->name }}</li>
+                                                    Lieu : {{ $course->locations_name}}</li>
                                                 <li> <i
                                                         class="pe-7s-prev font-26 vertical-align-middle text-theme-colored2 mr-10"></i>Rythme
                                                     : {{ $course->modalitiy_name }}</li>
@@ -200,9 +200,8 @@
                                                                                 Prochaine rentrée :</h5>
                                                                             <div class="comment-date">
                                                                                 @php
-                                                                                    $getYears = $course->daterentre->format('Y');
-                                                                                    $getMonth = $course->daterentre->format('m');
-                                                                                    echo $getMonth . '/';
+                                                                                    $getYears=date('m-Y', strtotime($course->daterentre)) ;
+                                                                        
                                                                                     echo $getYears;
                                                                                     
                                                                                 @endphp

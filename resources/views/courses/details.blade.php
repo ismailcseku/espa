@@ -199,12 +199,11 @@
                                                                             Prochaine rentrée :</h5>
                                                                         <div class="comment-date">
                                                                             @php
-                                                                                $getYears = $course->daterentre->format('Y');
-                                                                                $getMonth = $course->daterentre->format('m');
-                                                                                echo $getMonth . '/';
-                                                                                echo $getYears;
-                                                                                
-                                                                            @endphp
+                                                                            $getYears=date('m-Y', strtotime($course->daterentre)) ;
+                                                                
+                                                                            echo $getYears;
+                                                                            
+                                                                        @endphp
                                                                         </div>
                                                                     </div>
                                                                 </div>
