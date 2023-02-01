@@ -91,4 +91,8 @@ class TrainingType extends Resource
     {
         return [];
     }
+    public static function label()
+    {
+        return 'Modalité';
+    }
 }
