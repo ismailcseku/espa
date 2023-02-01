@@ -189,7 +189,7 @@
     </section>
 
    
-    <p>{{ asset('images/Performance.svg') }}</p>
+    <p>gdgdgf</p>
     <!-- Section Choose Course -->
 
 
