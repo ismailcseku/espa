@@ -90,7 +90,7 @@ class CourseController extends Controller
         ->select('courses.name','courses.id','modalities.name as modalitiy_name')
         ->orderByDesc('courses.created_at')
         ->limit(3)->get();
-        
+        dd($last_course);
         return view('courses.details')->with([
             'courses'=>$val,
             'programs'=> $programs, 
