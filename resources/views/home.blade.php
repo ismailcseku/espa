@@ -313,7 +313,9 @@
                                                                             </div>
                                                                             <a href="{{ route('course.details', $course->id) }}"class="course-description mt-15 mb-0">
                                                                                 {!! $course->description !!} ...</a>
-                                                                               
+                                                                                <div class="author-thumb">
+                                                                                    <img src="{{ url('storage')}}/{{ $course->responsables_photo }}" alt="" class="img-circle">
+                                                                                  </div>
                                                                         </div>
                                                                         <a href="{{ route('course.details', $course->id) }}"
                                                                             style="display: block" class="course-meta">
