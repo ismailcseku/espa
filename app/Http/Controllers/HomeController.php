@@ -26,7 +26,7 @@ class HomeController extends Controller
         ->join('degrees','degrees.id','=','courses.degree_id')
         ->join('languages','languages.id','=','courses.language_id')
         ->join('responsables','responsables.id','=','courses.responsable_id')
-        ->select('courses.*','modalities.name as modalitiy_name','degrees.name as degrees_name','degrees.id as degrees_id','languages.name as languages_name','responsables.*')
+        ->select('courses.*','modalities.name as modalitiy_name','degrees.name as degrees_name','degrees.id as degrees_id','languages.name as languages_name','responsables.photo as responsables_photo')
         ->orderByDesc('courses.created_at')
         ->get();
         $slides=Slide::all();
