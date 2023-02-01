@@ -296,28 +296,23 @@
                                                                                 src="{{ url('storage') }}/{{ $course->photo }}">
 
                                                                         </div>
-                                                                        <div class="course-details clearfix p-20 pt-15">
-                                                                            <div class="course-top-part">
+                                                                  
+                                                                        <a href="{{ route('course.details', $course->id) }}"
+                                                                            style="display: block" class="course-meta">
+                                                                            <ul class="list-inline">
+                                                                                <li><i class="ficon-clock font-18"></i>
+                                                                                    {{$course->duration}} Mois
+                                                                                    
+                                                                                </li>
+                                                                                <li><i
+                                                                                        class="lnr lnr-users font-20"></i>{{ $course->languages_name }}
+                                                                                </li>
+                                                                            </ul>
+                                                                            <div class="course-tag">
 
-                                                                                <a
-                                                                                    href="{{ route('course.details', $course->id) }}">
-                                                                                    <h4 class="mt-5 mb-5">
-                                                                                        {{ $course->name }}</h4>
-                                                                                </a>
-
-                                                                                <a
-                                                                                    href="{{ route('course.details', $course->id) }}">
-                                                                                    <h4 class="mt-5 mb-5"
-                                                                                        style="opacity: 0.5">
-                                                                                        {{ $course->degrees_name }}</h4></a>
+                                                                                <h5>Découvrir</h5>
                                                                             </div>
-                                                                            <a href="{{ route('course.details', $course->id) }}"class="course-description mt-15 mb-0">
-                                                                                {!! $course->description !!} ...</a>
-                                                                                <div class="author-thumb">
-                                                                                    <img src="{{ url('storage') }}/{{ $course->responsables_photo }}" alt="" class="img-circle">
-                                                                                  </div>
-                                                                        </div>
-                                                                       
+                                                                        </a>
                                                                     </div>
                                                                 </a>
                                                             @endif
