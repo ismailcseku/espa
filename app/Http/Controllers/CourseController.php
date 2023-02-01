@@ -24,8 +24,22 @@ class CourseController extends Controller
     public function index()
     {
       
-       
-        return 'dffghfh';
+        $courses=DB::table('courses')->join('modalities','modalities.id','=','courses.modality_id')
+        ->join('degrees','degrees.id','=','courses.degree_id')
+        ->join('languages','languages.id','=','courses.language_id')
+        ->join('modes','modes.id','=','courses.mode_id')
+        ->join('responsables','responsables.id','=','courses.responsable_id')
+        ->select('courses.*','modalities.name as modalitiy_name','degrees.name as degrees_name','languages.name as languages_name','modes.name as modes_name','responsables.photo as responsables_photo')
+        ->get();
+        foreach ($courses as $key => $item) {
+            $item->datelimite=Carbon::parse($item->datelimite)->toObject();
+            $item->description=substr($item->description,0,200);
+        } 
+        dd($courses);
+        return view('courses.index')->with([
+            'courses'=>$courses,
+            'countries'=>Countries::getting(),
+        ]);
 
     }
     /**
