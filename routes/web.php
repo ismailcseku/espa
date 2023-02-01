@@ -25,6 +25,6 @@ Route::get('/courses', [CourseController::class, 'index'])->name('course.index')
 Route::get('/degree', [DegreeController::class, 'index']);
 Route::post('/interested/{id}', [InterestedController::class, '__invoke'])->name('interested');
 Route::get('/contact', [ContactController::class, 'create'])->name('contact.create');
-Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+Route::post('/contact/post', [ContactController::class, 'store'])->name('contact.store');
 
 Route::get('/about', [AboutController::class, '__invoke'])->name('about.index');
