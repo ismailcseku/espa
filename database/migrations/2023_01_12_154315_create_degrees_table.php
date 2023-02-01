@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('description')->nullable();
-            $table->foreignId('curriculum_id')->constrained();
-            $table->foreignId('training_type_id')->constrained();
+            $table->foreignId('curriculum_id')->onDelete('cascade');
+            $table->foreignId('training_type_id')->onDelete('cascade');
             $table->timestamps();
         });
     }

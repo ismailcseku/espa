@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('title');
             $table->integer('hours')->nullable();
             $table->text('description')->nullable();
-            $table->foreignId('course_id')->constrained();
+            $table->foreignId('course_id')->onDelete('cascade');
             $table->timestamps();
         });
     }
