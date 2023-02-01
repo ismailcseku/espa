@@ -72,7 +72,16 @@ class CourseController extends Controller
     public function show(Course $course)
     {
       
-     return 'hh';
+        $val=$course->where('courses.id',$course->id)->join('modalities','modalities.id','=','courses.modality_id')
+        ->join('degrees','degrees.id','=','courses.degree_id')
+        ->join('languages','languages.id','=','courses.language_id')
+        ->join('modes','modes.id','=','courses.mode_id')
+        ->join('responsables','responsables.id','=','courses.responsable_id')
+        ->select('courses.*','modalities.name as modalitiy_name','degrees.name as degrees_name','languages.name as languages_name','modes.name as modes_name','responsables.name as responsables_name')
+        ->get();
+       
+
+        return 'fdgfdg';
     }
 
     /**
