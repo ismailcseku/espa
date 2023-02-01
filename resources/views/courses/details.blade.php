@@ -198,7 +198,14 @@
                                                                         <h5 class="media-heading comment-heading">
                                                                             Prochaine rentrée :</h5>
                                                                         <div class="comment-date">
-                                                                            {{ $course->daterentre }}</div>
+                                                                            @php
+                                                                                $getYears=$course->daterentre->format('Y');
+                                                                                $getMonth=$course->daterentre->format('m');
+                                                                                echo $getMonth.'/';
+                                                                                echo $getYears;
+
+                                                                            @endphp
+                                                                            </div>
                                                                     </div>
                                                                 </div>
                                                             </li>
