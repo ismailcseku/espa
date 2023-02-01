@@ -275,7 +275,27 @@
                                 <!-- End Works Filter -->
 
                                 <!-- Portfolio Gallery Grid -->
-                             
+                                <div id="grid"
+                                    class="gallery-isotope default-animation-effect grid-4 gutter clearfix">
+
+
+                                    @foreach ($degrees as $degree)
+                                        <div class="gallery-item select{{ $degree->id }} section-content"
+                                            style="width:100%;">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    @endforeach
+
+
+
+
+                                </div>
                                 <!-- End Portfolio Gallery Grid -->
                             </div>
                         </div>
