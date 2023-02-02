@@ -315,7 +315,7 @@
                                                                                 </div>
                                                                                 <a
                                                                                     href="{{ route('course.details', $course->id) }}"class="course-description mt-15 mb-0">
-                                                                                    <span>  {!! $course->description !!}</span><span style="text-decoration: underline">lire plus </span>
+                                                                                    <span>  {!! $course->description !!}</span><span style="text-decoration: underline"> lire plus </span>
                                                                                    </a>
                                                                                 <div class="author-thumb">
                                                                                     <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
@@ -382,7 +382,7 @@
                                 class="img-fullwidth" alt="">
                             <p class="mt-15">Lorem ipsum dolor sit amet, conse ctetur adipis elit. Totam perferendis,
                                 assumenda vitae cum beatae Pariatur, ratione adipis elit. Totam perfereding.</p>
-                            <a href="{{ route('about.index') }}" class="btn btn-colored btn-sm btn-theme-colored2">Lire
+                            <a href="{{ route('about.index') }}" class="btn btn-colored btn-sm btn-theme-colored2"> Lire
                                 plus</a>
                         </div>
                         @if (count($evenements) > 0)

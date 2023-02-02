@@ -272,9 +272,6 @@
                                                                                 @endif
                                                                                 @if ($program->hours)
                                                                             <div class="comment-date">
-                                                                               
-                                                                                    
-                                                                               
                                                                                 {{ $program->hours }} heures
                                                                                
                                                                             </div>
@@ -283,14 +280,10 @@
                                                                             <p> {!! $program->description !!}
                                                                             </p>
                                                                             @endif
-
-
                                                                         </div>
                                                                     </div>
                                                                 </li>
                                                             @endforeach
-
-
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -338,9 +331,6 @@
                                                                         </div>
                                                                     </div>
                                                                 </li>
-                                                                
-                                                                
-                                                                
                                                             </ul>
                                                             @endif
                                                         </div>
@@ -365,9 +355,6 @@
                                                                         </div>
                                                                     </div>
                                                                 </li>
-                                                                
-                                                                
-                                                                
                                                                 @endif
                                                             </ul>
                                                         </div>
