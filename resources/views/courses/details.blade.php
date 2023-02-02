@@ -271,7 +271,7 @@
                                                        
                                                       <h4>Heure : {{$program->hours}}</h4>
                                                       @endif 
-                                                        <p>{{$program->description}}</p>
+                                                        <p>{!!$program->description!!}</p>
                                                     </div>
                                                     @endforeach
 

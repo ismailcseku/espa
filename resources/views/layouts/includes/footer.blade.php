@@ -7,16 +7,11 @@
       <div class="col-md-12">
         <!-- Section: Clients -->
         <div class="owl-carousel-6col clients-logo transparent text-center">
-          <div class="item"> <a href="#"><img src="https://picsum.photos/170/50" alt=""></a></div>
-          <div class="item"> <a href="#"><img src="https://picsum.photos/170/50" alt=""></a></div>
-          <div class="item"> <a href="#"><img src="https://picsum.photos/170/50" alt=""></a></div>
-          <div class="item"> <a href="#"><img src="https://picsum.photos/170/50" alt=""></a></div>
-          <div class="item"> <a href="#"><img src="https://picsum.photos/170/50" alt=""></a></div>
-          <div class="item"> <a href="#"><img src="https://picsum.photos/170/50" alt=""></a></div>
-          <div class="item"> <a href="#"><img src="https://picsum.photos/170/50" alt=""></a></div>
-          <div class="item"> <a href="#"><img src="https://picsum.photos/170/50" alt=""></a></div>
-          <div class="item"> <a href="#"><img src="https://picsum.photos/170/50" alt=""></a></div>
-          <div class="item"> <a href="#"><img src="https://picsum.photos/170/50" alt=""></a></div>
+          <div class="item"> <a href="#"><img src="{{asset('images/partenaire1.jpeg')}}" alt=""></a></div>
+          <div class="item"> <a href="#"><img src="{{asset('images/partenaire2.jpeg')}}" alt=""></a></div>
+          <div class="item"> <a href="#"><img src="{{asset('images/partenaire3.png')}}" alt=""></a></div>
+          <div class="item"> <a href="#"><img src="{{asset('images/partenaire4.png')}}" alt=""></a></div>
+          <div class="item"> <a href="#"><img src="{{asset('images/partenaire5.jpeg')}}" alt=""></a></div>
         </div>
       </div>
     </div>

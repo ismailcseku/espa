@@ -759,14 +759,9 @@
                     <div class="col-sm-6 col-md-4">
                         <article class="post mb-sm-30">
                             <div class="post-thumb">
-                                <img src="http://placehold.it/370x245" class="img-fullwidth" alt="">
+                                <img src="{{asset('images/smart1.png')}}" class="img-fullwidth" alt="">
                                 <div class="post-date"><span>26 </span><br> Oct</div>
-                                <div class="post-top-meta">
-                                    <ul class="list-inline">
-                                        <li><i class="ficon-heart text-theme-colored2 font-14"></i>224 Likes</li>
-                                        <li><i class="lnr lnr-bullhorn text-theme-colored2 font-14"></i>84 Share</li>
-                                    </ul>
-                                </div>
+                               
                             </div>
                             <div class="post-description border-1px p-20">
                                 <a href="#">
@@ -788,14 +783,9 @@
                     <div class="col-sm-6 col-md-4">
                         <article class="post mb-sm-30">
                             <div class="post-thumb">
-                                <img src="http://placehold.it/370x245" class="img-fullwidth" alt="">
+                                <img src="{{asset('images/smart2.png')}}" class="img-fullwidth" alt="">
                                 <div class="post-date"><span>26 </span><br> Oct</div>
-                                <div class="post-top-meta">
-                                    <ul class="list-inline">
-                                        <li><i class="ficon-heart text-theme-colored2 font-14"></i>224 Likes</li>
-                                        <li><i class="lnr lnr-bullhorn text-theme-colored2 font-14"></i>84 Share</li>
-                                    </ul>
-                                </div>
+                               
                             </div>
                             <div class="post-description border-1px p-20">
                                 <a href="#">
@@ -817,14 +807,9 @@
                     <div class="col-sm-6 col-md-4">
                         <article class="post mb-sm-30">
                             <div class="post-thumb">
-                                <img src="http://placehold.it/370x245" class="img-fullwidth" alt="">
+                                <img src="{{asset('images/smart3.png')}}" class="img-fullwidth" alt="">
                                 <div class="post-date"><span>26 </span><br> Oct</div>
-                                <div class="post-top-meta">
-                                    <ul class="list-inline">
-                                        <li><i class="ficon-heart text-theme-colored2 font-14"></i>224 Likes</li>
-                                        <li><i class="lnr lnr-bullhorn text-theme-colored2 font-14"></i>84 Share</li>
-                                    </ul>
-                                </div>
+                                
                             </div>
                             <div class="post-description border-1px p-20">
                                 <a href="#">
