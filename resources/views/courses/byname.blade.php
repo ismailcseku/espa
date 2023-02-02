@@ -91,12 +91,11 @@
                                                         Mois</span>
                                                 </li>
                                             @endif
-                                            @if ($course->location->name)
-
+                                            @if ($course->locations_name)
 
                                                 <li><i
                                                         class="pe-7s-global font-26 vertical-align-middle text-theme-colored2  mr-10"></i>
-                                                    <span class="font-16">Lieu </span>: {{ $course->locations_name }}
+                                                    <span class="font-16">Lieu </span>: {{ $course->locations_name}}
                                                 </li>
                                                 @endif
                                             @if ($course->modalitiy_name)
