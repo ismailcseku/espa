@@ -6,7 +6,9 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\DegreeController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\EvenementController;
 use App\Http\Controllers\InterestedController;
+use App\Http\Controllers\ResponsableController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,4 +31,7 @@ Route::post('/interested/{id}', [InterestedController::class, '__invoke'])->name
 Route::get('/contact', [ContactController::class, 'create'])->name('contact.create');
 Route::post('/contact/post', [ContactController::class, 'store'])->name('contact.store');
 
+
 Route::get('/about', [AboutController::class, '__invoke'])->name('about.index');
+Route::get('/evenement', [EvenementController::class, '__invoke'])->name('evenement.index');
+Route::get('/responsable', [ResponsableController::class, '__invoke'])->name('responsable.index');

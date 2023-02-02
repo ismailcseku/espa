@@ -39,12 +39,13 @@
                                                 <h4 class="mt-5 mb-5">{{ $course->name }}</h4>
                                             </a>
                                             <a href="{{ route('course.details', $course->id) }}">
-                                                <h4 class="text-gray font-12 mt-0">{{ $course->degrees_name }}</h4>
+                                                <h4 class=" mt-0">{{ $course->degrees_name }}</h4>
                                             </a>
 
                                         </div>
                                         <a href="{{ route('course.details', $course->id) }}"
-                                            class="course-description mt-15 mb-0"> {!! $course->description !!}...</a>
+                                            class="course-description mt-15 mb-0"> <span>{!! $course->description !!}</span><span
+                                                style="text-decoration:underline">lire plus </span></a>
                                         <div class="author-thumb">
                                             <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
                                                 alt="" class="img-circle">

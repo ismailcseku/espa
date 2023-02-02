@@ -2,7 +2,7 @@
   
   <div class="container pt-40 pb-40 ">
     <h3 class="text-white font-38 font-weight-700 mt-10 mb-0"><span
-      class="text-theme-colored2">Partenanires</span> </h3>
+      class="text-theme-colored2">Parténanaires</span> </h3>
 
     <div class="row">
       <div class="col-md-12">
@@ -48,7 +48,7 @@
           <div class="row clearfix">
             <div class="col-xs-12 col-sm-6 col-md-6">
               <ul class="footer-link">
-                <li><a href="#">Évènements</a></li>
+                <li><a href="{{route('evenement.index')}}">Évènements</a></li>
                 <li><a href="#">Actualités</a></li>
               </ul>
             </div>

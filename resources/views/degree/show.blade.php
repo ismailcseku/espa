@@ -40,7 +40,7 @@
                                                     <h4 class="mt-5 mb-5">{{ $course->name }}</h4>
                                                 </a>
                                                 <a href="{{ route('course.details', $course->id) }}">
-                                                    <h4 class="text-gray font-12 mt-0">{{ $course->degrees_name }}</h4>
+                                                    <h4 class=" mt-0">{{ $course->degrees_name }}</h4>
                                                 </a>
 
                                             </div>

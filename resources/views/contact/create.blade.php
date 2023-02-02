@@ -23,17 +23,18 @@
         </section>
 
         <!-- Divider: Contact -->
+
         <section class="divider">
             <div class="container pt-50 pb-70">
                 <div class="row pt-10">
                     <div class="col-md-5">
                         <h4 class="mt-0 mb-30 line-bottom-theme-colored2">Nous trouver</h4>
-
-                        <div style="height:400px;" id="map-container-google-3" class="z-depth-1-half map-container-3">
-                            <iframe src="https://maps.google.com/maps?q=warsaw&t=k&z=13&ie=UTF8&iwloc=&output=embed"
-                                frameborder="0" style="border:0" allowfullscreen></iframe>
-                        </div>
-
+                        <!-- Google Map HTML Codes -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d723.7731107777314!2d-9.476822224020928!3d30.35479968641361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb3c61795413197%3A0x404955676be14a54!2sComplexe%20horticole%20d&#39;Agadir!5e0!3m2!1sfr!2sma!4v1675327226532!5m2!1sfr!2sma"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                       
                         <!-- Google Map Javascript Codes -->
                         <script src="http://maps.google.com/maps/api/js?key=AIzaSyAh6VjA5IqdYdqqQ5ky4jTwKT3k8cCbPXQ"></script>
                         <script src="js/google-map-init.js"></script>

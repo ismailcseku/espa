@@ -29,7 +29,7 @@ class CourseController extends Controller
         ->join('languages','languages.id','=','courses.language_id')
         ->join('modes','modes.id','=','courses.mode_id')
         ->leftjoin('responsables','responsables.id','=','courses.responsable_id')
-        ->select('courses.*','modalities.name as modalitiy_name','degrees.name as degrees_name','languages.name as languages_name','modes.name as modes_name','responsables.photo as responsables_photo')
+        ->select('courses.*','modalities.name as modalitiy_name','degrees.name as degrees_name','responsables.surname as responsables_surname','languages.name as languages_name','modes.name as modes_name','responsables.photo as responsables_photo')
         ->get();
         
         
@@ -78,7 +78,7 @@ class CourseController extends Controller
         ->join('languages','languages.id','=','courses.language_id')
         ->join('modes','modes.id','=','courses.mode_id')
         ->leftjoin('responsables','responsables.id','=','courses.responsable_id')
-        ->select('courses.*','modalities.name as modalitiy_name','degrees.name as degrees_name','languages.name as languages_name','modes.name as modes_name','responsables.name as responsables_name')
+        ->select('courses.*','modalities.name as modalitiy_name','degrees.name as degrees_name','responsables.surname as responsables_surname','languages.name as languages_name','modes.name as modes_name','responsables.name as responsables_name')
         ->get();
 
         foreach ($val as $key => $item) {
@@ -608,8 +608,7 @@ class CourseController extends Controller
     }
     public function showByName(string $res)
     {
-      $getId=DB::table('courses')->where('name','=','Horticulture')->get();
- 
+    
       $programs=[];
       $downloads=[];
       $degrees=[];
@@ -618,20 +617,19 @@ class CourseController extends Controller
       $levels=[];
       $provinces=[];
       $val=[];
-    
-      if (count($getId)) {
-    
-     
-     
-      $val=DB::table('courses')->where('courses.degree_id',$getId[0]->id)->join('modalities','modalities.id','=','courses.modality_id')
+      
+
+      $val=DB::table('courses')->where('courses.name',$res)->join('modalities','modalities.id','=','courses.modality_id')
       ->join('degrees','degrees.id','=','courses.degree_id')
       ->join('languages','languages.id','=','courses.language_id')
       ->join('modes','modes.id','=','courses.mode_id')
       ->join('locations','locations.id','=','courses.location_id')
       ->leftjoin('responsables','responsables.id','=','courses.responsable_id')
-      ->select('courses.*','modalities.name as modalitiy_name','locations.name as locations_name','degrees.name as degrees_name','languages.name as languages_name','modes.name as modes_name','responsables.name as responsables_name')
+      ->select('courses.*','modalities.name as modalitiy_name','locations.name as locations_name','degrees.name as degrees_name','responsables.surname as responsables_surname','languages.name as languages_name','modes.name as modes_name','responsables.name as responsables_name')
       ->get();
-    }
+
+
+
 
       if (count($val)>0) {
       

@@ -35,7 +35,7 @@
                             consectetur illo culpa, quisquam Quas voluptatem maiores eaque similique</p>
                     </div>
                     <div class="col-md-6">
-                        <img class="img-fullwidth" src="http://placehold.it/560x345" alt="">
+                        <img class="img-fullwidth" src="{{asset('images/about.jpg')}}" alt="">
                     </div>
                 </div>
             </div>

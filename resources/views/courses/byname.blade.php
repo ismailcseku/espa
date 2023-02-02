@@ -14,7 +14,7 @@
                             <ol class="breadcrumb text-left mt-10 white">
                                 <li><a href="/">Acceuil</a></li>
                                 <li><a href="{{ route('course.index') }}">formations</a></li>
-                                <li class="active">details de formations</li>
+                                <li class="active">detail de formation</li>
                             </ol>
                         </div>
                     </div>
@@ -33,34 +33,41 @@
                             <div class="col-sm-12 col-md-6 col-lg-7">
                                 <div class="single-service">
                                     <h3 class="text-uppercase mt-0 mb-30">{{ $course->name }}</h3>
-                                    <img src="{{ url('storage') }}/{{ $course->photo }}" style="width:70%;" alt="">
+                                    <img src="{{ url('storage') }}/{{ $course->photo }}" style="width:100%;" alt="">
                                     <ul class="list-inline mt-20 mb-15">
-                                        <li>
-                                            <i class="pe-7s-user text-theme-colored2 font-48"></i>
-                                            <div class="pull-right ml-5">
-                                                <span>Responsable</span>
-                                                <h5 class="mt-0">{{ $course->responsables_name }}</h5>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <i class="pe-7s-ribbon text-theme-colored2 font-48"></i>
-                                            <div class="pull-right ml-5">
-                                                <span>Diplôme</span>
-                                                <h5 class="mt-0">{!! $course->grade !!}</h5>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <i class="pe-7s-refresh-2 text-theme-colored2 font-48"></i>
-                                            <div class="pull-right ml-10">
-                                                <span>Rythme</span>
-                                                <h5 class="mt-0">{{ $course->modalitiy_name }}</h5>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <p>
+                                        @if ($course->responsables_name)
+                                            <li>
+                                                <i class="pe-7s-user text-theme-colored2 font-48"></i>
+                                                <div class="pull-right ml-5">
+                                                    <span>Responsable</span>
+                                                    <h5 class="mt-0">
+                                                        {{ $course->responsables_name . ' ' . $course->responsables_surname }}
+                                                    </h5>
+                                                </div>
+                                            </li>
+                                        @endif
+                                        @if ($course->grade)
+                                            <li>
+                                                <i class="pe-7s-ribbon text-theme-colored2 font-48"></i>
+                                                <div class="pull-right ml-5">
+                                                    <span>Diplôme</span>
+                                                    <h5 class="mt-0">{!! $course->grade !!}</h5>
+                                                </div>
+                                            </li>
+                                        @endif
+                                        @if ($course->modalitiy_name)
+                                            <li>
+                                                <i class="pe-7s-refresh-2 text-theme-colored2 font-48"></i>
+                                                <div class="pull-right ml-10">
+                                                    <span>Rythme</span>
+                                                    <h5 class="mt-0">{{ $course->modalitiy_name }}</h5>
+                                                </div>
+                                            </li>
+                                        @endif
 
-                                        {!! $course->description !!}
-                                    </p>
+                                    </ul>
+
+
                                     <ul id="myTab" class="nav nav-tabs mt-30">
                                         <li class="active"><a href="#tab1" data-toggle="tab">Description</a></li>
                                         <li><a href="#tab2" data-toggle="tab">Admissions</a></li>
@@ -76,18 +83,37 @@
 
                                             <p> {!! $course->description !!}</p>
                                             <ul>
+                                            @if ($course->duration)
+
                                                 <li> <i
                                                         class="pe-7s-timer font-26 vertical-align-middle text-theme-colored2 mr-10 "></i>
-                                                    Durée : {{ $course->duration }} Mois</li>
+                                                    <span class="font-16">Durée</span> : <span> {{ $course->duration }}
+                                                        Mois</span>
+                                                </li>
+                                            @endif
+                                            @if ($course->location->name)
+
+
                                                 <li><i
                                                         class="pe-7s-global font-26 vertical-align-middle text-theme-colored2  mr-10"></i>
-                                                    Lieu : {{ $course->locations_name}}</li>
+                                                    <span class="font-16">Lieu </span>: {{ $course->locations_name }}
+                                                </li>
+                                                @endif
+                                            @if ($course->modalitiy_name)
                                                 <li> <i
-                                                        class="pe-7s-prev font-26 vertical-align-middle text-theme-colored2 mr-10"></i>Rythme
-                                                    : {{ $course->modalitiy_name }}</li>
+                                                        class="pe-7s-prev font-26 vertical-align-middle text-theme-colored2 mr-10"></i>
+                                                    <span class="font-16">Rythme
+                                                        :</span> {{ $course->modalitiy_name }}
+                                                </li>
+                                                @endif
+                                                @if ($course->languages_name )
                                                 <li><i
-                                                        class="pe-7s-global  font-26 vertical-align-middle text-theme-colored2 mr-10 "></i>Langue
-                                                    : {{ $course->languages_name }}</li>
+                                                        class="pe-7s-global  font-26 vertical-align-middle text-theme-colored2 mr-10 "></i>
+                                                    <span class="font-16">Langue
+                                                        : </span>{{ $course->languages_name }}
+                                                </li>
+                                            @endif
+
                                             </ul>
 
                                         </div>
@@ -106,8 +132,9 @@
                                                                                 src="images/blog/comment1.jpg"
                                                                                 alt=""></a>
                                                                         <div class="media-body">
-                                                                            <h5 class="media-heading comment-heading">
-                                                                                Préréquis et admission :</h5>
+                                                                            <h5
+                                                                                class="media-heading comment-heading font-16">
+                                                                                Préréquis et admission </h5>
                                                                             <div class="comment-date">
                                                                                 {!! $course->admission !!}</div>
                                                                         </div>
@@ -128,8 +155,9 @@
                                                                                 src="images/blog/comment1.jpg"
                                                                                 alt=""></a>
                                                                         <div class="media-body">
-                                                                            <h5 class="media-heading comment-heading">
-                                                                                Dossier :</h5>
+                                                                            <h5
+                                                                                class="media-heading comment-heading font-16">
+                                                                                Dossier </h5>
                                                                             <div class="comment-date">
                                                                                 {!! $course->dossier !!}</div>
 
@@ -152,8 +180,9 @@
                                                                                 src="images/blog/comment1.jpg"
                                                                                 alt=""></a>
                                                                         <div class="media-body">
-                                                                            <h5 class="media-heading comment-heading">
-                                                                                Candidature :</h5>
+                                                                            <h5
+                                                                                class="media-heading comment-heading font-16">
+                                                                                Candidature </h5>
                                                                             <div class="comment-date">
                                                                                 {!! $course->candidature !!}</div>
                                                                         </div>
@@ -174,8 +203,9 @@
                                                                                 src="images/blog/comment1.jpg"
                                                                                 alt=""></a>
                                                                         <div class="media-body">
-                                                                            <h5 class="media-heading comment-heading">
-                                                                                Modalité de selection :</h5>
+                                                                            <h5
+                                                                                class="media-heading comment-heading font-16">
+                                                                                Modalité de selection </h5>
                                                                             <div class="comment-date">
                                                                                 {{ $course->modalitiy_name }}</div>
                                                                         </div>
@@ -196,12 +226,13 @@
                                                                                 src="images/blog/comment1.jpg"
                                                                                 alt=""></a>
                                                                         <div class="media-body">
-                                                                            <h5 class="media-heading comment-heading">
-                                                                                Prochaine rentrée :</h5>
+                                                                            <h5
+                                                                                class="media-heading comment-heading font-16">
+                                                                                Prochaine rentrée </h5>
                                                                             <div class="comment-date">
                                                                                 @php
-                                                                                    $getYears=date('m-Y', strtotime($course->daterentre)) ;
-                                                                        
+                                                                                    $getYears = date('m-Y', strtotime($course->daterentre));
+                                                                                    
                                                                                     echo $getYears;
                                                                                     
                                                                                 @endphp
@@ -241,11 +272,21 @@
                                                                                     src="images/blog/comment1.jpg"
                                                                                     alt=""></a>
                                                                             <div class="media-body">
-                                                                                <h5 class="media-heading comment-heading">
-                                                                                    {{ $program->title }}:</h5>
+                                                                            @if ($program->title)
+
+                                                                                <h5
+                                                                                    class="media-heading comment-heading font-16">
+                                                                                    {{ $program->title }}</h5>
+                                                                                    @endif
+                                                                                @if ($program->hours)
+
                                                                                 <div class="comment-date">
+
                                                                                     {{ $program->hours }} heures</div>
+                                                                                    @endif
+                                                                                    @if ($program->description )
                                                                                 <p>{!! $program->description !!}</p>
+                                                                                @endif
 
                                                                             </div>
                                                                         </div>
@@ -265,7 +306,7 @@
                                                 @foreach ($downloads as $download)
                                                     <div class="col-md-3">
 
-                                                        <h5 class="mb-0">{{ $download->name }}</h5>
+                                                        <h5 class="mb-0 font-16">{{ $download->name }}</h5>
                                                         <a href="{{ url('storage') }}/{{ $download->file }}">Cliquer
                                                             ici</a>
                                                     </div>
@@ -281,6 +322,8 @@
                                                     <div class="col-md-12">
                                                         <div class="blog-posts single-post">
                                                             <div class="comments-area">
+                                                                
+                                                                @if ( $course->grade )
                                                                 <ul class="comment-list">
 
                                                                     <li>
@@ -290,8 +333,9 @@
                                                                                     src="images/blog/comment1.jpg"
                                                                                     alt=""></a>
                                                                             <div class="media-body">
-                                                                                <h5 class="media-heading comment-heading">
-                                                                                    Diplome :</h5>
+                                                                                <h5
+                                                                                    class="media-heading comment-heading font-16">
+                                                                                    Diplome </h5>
                                                                                 <div class="comment-date">
                                                                                     {!! $course->grade !!}</div>
                                                                             </div>
@@ -301,9 +345,13 @@
 
 
                                                                 </ul>
+                                                                @endif
+
                                                             </div>
                                                             <div class="comments-area">
+                                                                @if ( $course->profile )
                                                                 <ul class="comment-list">
+
 
                                                                     <li>
                                                                         <div class="media comment-author"> <a
@@ -312,8 +360,9 @@
                                                                                     src="images/blog/comment1.jpg"
                                                                                     alt=""></a>
                                                                             <div class="media-body">
-                                                                                <h5 class="media-heading comment-heading">
-                                                                                    Profil / Compétences à acquérir :</h5>
+                                                                                <h5
+                                                                                    class="media-heading comment-heading font-16">
+                                                                                    Profil / Compétences à acquérir </h5>
                                                                                 <div class="comment-date">
                                                                                     {!! $course->profile !!}</div>
                                                                             </div>
@@ -323,8 +372,11 @@
 
 
                                                                 </ul>
+                                                                @endif
                                                             </div>
                                                             <div class="comments-area">
+                                                            @if ( $course->opportunity )
+
                                                                 <ul class="comment-list">
                                                                     <li>
                                                                         <div class="media comment-author"> <a
@@ -333,8 +385,9 @@
                                                                                     src="images/blog/comment1.jpg"
                                                                                     alt=""></a>
                                                                             <div class="media-body">
-                                                                                <h5 class="media-heading comment-heading">
-                                                                                    Débouchés :</h5>
+                                                                                <h5
+                                                                                    class="media-heading comment-heading font-16">
+                                                                                    Débouchés </h5>
                                                                                 <div class="comment-date">
                                                                                     {!! $course->opportunity !!}</div>
                                                                             </div>
@@ -344,6 +397,8 @@
 
 
                                                                 </ul>
+                                                            @endif
+
                                                             </div>
 
                                                         </div>
@@ -498,7 +553,9 @@
                                                                         <div class="form-group mb-10">
                                                                             <select name="province" required
                                                                                 class="form-control  "
-                                                                                value="{{ old('^rovince') }}">
+                                                                                value="{{ old('province') }}">
+                                                                            <option value="_" selected>_</option>
+
                                                                                 @foreach ($provinces as $province)
                                                                                     <option value="{{ $province }}">
                                                                                         {{ $province }}</option>
@@ -616,7 +673,9 @@
                                         <div class="categories">
                                             <ul class="list-border">
                                                 @foreach ($degrees as $degree)
-                                                    <li><a href="#">{{ $degree->name }}</a></li>
+                                                    <li><a
+                                                            href="{{ route('degree.show', $degree->name) }}">{{ $degree->name }}</a>
+                                                    </li>
                                                 @endforeach
 
                                             </ul>

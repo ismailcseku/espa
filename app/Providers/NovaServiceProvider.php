@@ -14,6 +14,7 @@ use App\Nova\Language;
 use App\Nova\Location;
 use App\Nova\Modality;
 use Laravel\Nova\Nova;
+use App\Nova\Evenement;
 use App\Nova\Curriculum;
 use App\Nova\Interested;
 use App\Nova\Responsable;
@@ -62,11 +63,15 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                     MenuItem::resource(Modality::class),
                     MenuItem::resource(Mode::class),
                     MenuItem::resource(Slide::class),
+                    
                     MenuSection::make('Visiteurs', [
                         MenuItem::resource(Interested::class),
                         MenuItem::resource(Contact::class),
 
                     ])->icon('user')->collapsable(),
+                    MenuSection::make('Interation', [
+                        MenuItem::resource(Evenement::class),
+                    ])->collapsable(),
                     MenuItem::resource(User::class),
 
                   

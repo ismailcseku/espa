@@ -176,9 +176,9 @@
                                     <ul class="dropdown">
                                         <li><a href="page-course-gird.html">Mot du directeur</a></li>
                                         <li><a href="{{route('about.index')}}">Qui sommes-nous ?</a></li>
-                                        <li><a href="page-course-details.html">Corps Professoral</a></li>
+                                        <li><a href="{{route('responsable.index')}}">Corps Professoral</a></li>
                                         <li><a href="page-course-details.html">Vie Estudiantine</a></li>
-                                        <li><a href="page-course-details.html">Évènements</a></li>
+                                        <li><a href="{{route('evenement.index')}}">Évènements</a></li>
                                         <li><a href="page-course-details.html">Actualités</a></li>
                                         <li><a href="page-course-details.html">Médiathèque</a></li>
                                     </ul>
