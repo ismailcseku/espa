@@ -58,7 +58,7 @@
                                             <li><i class="ficon-clock font-18"></i>
                                                 {{ $course->duration }} Mois
                                             </li>
-                                            <li><i class="pe-7s-global  font-20"></i>{{ $course->languages_name }}
+                                            <li><i class="pe-7s-notebook   font-20"></i>{{ $course->languages_name }}
                                             </li>
                                         </ul>
                                         <div class="course-tag">
