@@ -180,7 +180,7 @@
                                         <li><a href="page-course-details.html">Vie Estudiantine</a></li>
                                         <li><a href="{{route('evenement.index')}}">Évènements</a></li>
                                         <li><a href="page-course-details.html">Actualités</a></li>
-                                        <li><a href="page-course-details.html">Médiathèque</a></li>
+                                        <li><a href="{{route('media.index')}}">Médiathèque</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">Recherche</a>
