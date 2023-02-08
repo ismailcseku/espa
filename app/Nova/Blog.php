@@ -4,31 +4,28 @@ namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Email;
+use Laravel\Nova\Fields\Image;
+use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Fields\BelongsTo;
+use Emilianotisato\NovaTinyMCE\NovaTinyMCE;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-
-class Interested extends Resource
+class Blog extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\Interested>
+     * @var class-string<\App\Models\Blog>
      */
-    public static $model = \App\Models\Interested::class;
+    public static $model = \App\Models\Blog::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'name';
-    
-    
-
+    public static $title = 'id';
 
     /**
      * The columns that should be searched.
@@ -49,20 +46,15 @@ class Interested extends Resource
     {
         return [
             ID::make()->sortable(),
-            Text::make('gender'),
-            Text::make('name'),
-            Text::make('surname'),
-            Email::make('email'),
-            Date::make('birth'),
-            Text::make('country'),
-            Text::make('province'),
-            Text::make('level'),
-            Text::make('phone'),
-            Text::make('grade'),
-            Text::make('accepted'),
-            BelongsTo::make('Formations','course','App\Nova\Course'),
-
-            
+            BelongsTo::make('Catégories','blog','App\Nova\CategoryBlog'),
+            Text::make('Titre','title'),
+            Textarea::make('Description','description'),
+            Image::make('Une image','photo')->disk('public')
+            ->storeAs(function (Request $request) {
+                    return $request->photo->getClientOriginalName();
+                 }),
+            NovaTinyMCE::make('Contenu','content'),
+                 
         ];
     }
 
@@ -111,6 +103,6 @@ class Interested extends Resource
     }
     public static function label()
     {
-        return 'Intéressé';
+     return 'Mon blog';
     }
 }

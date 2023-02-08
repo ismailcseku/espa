@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Nova\Blog;
 use App\Nova\Mode;
 use App\Nova\User;
 use App\Nova\Slide;
@@ -18,6 +19,7 @@ use App\Nova\Evenement;
 use App\Nova\Curriculum;
 use App\Nova\Interested;
 use App\Nova\Responsable;
+use App\Nova\CategoryBlog;
 use App\Nova\TrainingType;
 use Laravel\Nova\Menu\MenuItem;
 use Laravel\Nova\Dashboards\Main;
@@ -71,6 +73,10 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                     ])->icon('user')->collapsable(),
                     MenuSection::make('Interation', [
                         MenuItem::resource(Evenement::class),
+                    ])->collapsable(),
+                    MenuSection::make('Blog', [
+                        MenuItem::resource(CategoryBlog::class),
+                        MenuItem::resource(Blog::class),
                     ])->collapsable(),
                     MenuItem::resource(User::class),
 

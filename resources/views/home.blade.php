@@ -61,7 +61,10 @@
                                     data-splitout="none" data-responsive_offset="on"
                                     style="z-index: 7; white-space: nowrap;">
 
+
                                     {{ $slide->description }}
+
+
                                 </div>
                                 <!-- LAYER NR. 4 -->
                                 <div class="tp-caption tp-resizeme text-white rs-parallaxlevel-0" id="slide-1-layer-4"
@@ -102,7 +105,7 @@
                             jsFileLocation: "js/revolution-slider/js/",
                             sliderLayout: "fullwidth",
                             dottedOverlay: "none",
-                            delay: 9000,
+                            delay: 3000,
                             navigation: {
                                 keyboardNavigation: "on",
                                 keyboard_direction: "horizontal",
@@ -272,8 +275,8 @@
                                     class="gallery-isotope default-animation-effect grid-4 gutter clearfix">
 
                                     <div class="gallery-item select0 section-content" style="width:100%;">
-                                        <div class="row">
-                                            <div class="col-md-12">
+                                        <div class="row ">
+                                            <div class="col-md-12 ">
                                                 <div class="owl-carousel-3col owl-nav-top" data-nav="tru">
                                                     @foreach ($courses as $course)
                                                         <a href="{{ route('course.details', $course->id) }}"
@@ -301,8 +304,8 @@
                                                                     <a
                                                                         href="{{ route('course.details', $course->id) }}"class="course-description mt-15 mb-0">
                                                                         <span> {!! $course->description !!}</span><span
-                                                                            style="text-decoration: underline">
-                                                                            lire plus </span>
+                                                                            style="color:orange ; opacity:0.8; font-weight:bold;">
+                                                                            . . . Lire plus </span>
                                                                     </a>
                                                                     <div class="author-thumb">
                                                                         <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
@@ -323,7 +326,7 @@
                                                                     </ul>
                                                                     <div class="course-tag">
 
-                                                                        <h5>Découvrir</h5>
+                                                                        <h5>Détail</h5>
                                                                     </div>
                                                                 </a>
                                                             </div>
@@ -334,6 +337,7 @@
                                             </div>
                                         </div>
                                     </div>
+
 
                                     @foreach ($degrees as $degree)
                                         <div class="gallery-item select{{ $degree->id }} section-content"
@@ -423,7 +427,15 @@
 
 
 
+
+
+
+
+
+
+
     <!-- Section About -->
+
     <section id="about">
         <div class="container pt-50 pb-40">
             <div class="section-title">
@@ -633,113 +645,113 @@
 
     <!-- Section: team -->
     <!--
-                            <section id="team">
-                                <div class="container">
-                                    <div class="section-title mb-40">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <h2 class="title text-uppercase mb-5">Nos <span
-                                                        class="text-theme-colored2">responsables</span>
-                                                </h2>
-                                                <h5 class="font-16 text-gray-darkgray mt-5">Discuter avec un responsable</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="section-content">
-                                        <div class="row">
-                                            @foreach ($responsables as $responsable)
+                                                                    <section id="team">
+                                                                        <div class="container">
+                                                                            <div class="section-title mb-40">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12">
+                                                                                        <h2 class="title text-uppercase mb-5">Nos <span
+                                                                                                class="text-theme-colored2">responsables</span>
+                                                                                        </h2>
+                                                                                        <h5 class="font-16 text-gray-darkgray mt-5">Discuter avec un responsable</h5>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="section-content">
+                                                                                <div class="row">
+                                                                                    @foreach ($responsables as $responsable)
     <div class="col-xs-12 col-sm-6 col-md-6">
-                                                    <div class="team-members mb-40">
-                                                        <div class="team-thumb pull-left team-pull-none flip mr-sm-0 t-mr-0">
-                                                            <img src="{{ url('storage') }}/{{ $responsable->photo }}" alt=""
-                                                                class="img-fullwidth">
-                                                        </div>
-                                                        <div class="team-bottom-part border-1px p-15">
-                                                            <h4 class="text-uppercase m-0 pb-5">{{ $responsable->name }}
-                                                                {{ $responsable->surname }}</h4>
-                                                            <h6 class="font-13 text-gray mt-0">{{ $responsable->poste }}</h6>
-                                                            <ul class="list-inline mt-15">
-                                                                <li class="m-0 pr-10"> <i class="fa fa-phone text-theme-colored2 mr-5"></i>
-                                                                    <span class="text-gray" href="#">{{ $responsable->phone }}</span>
-                                                                </li>
-                                                                <li class="m-0 pr-10"> <i
-                                                                        class="fa fa-envelope-o text-theme-colored2 mr-5"></i>
-                                                                    <a class="text-gray"
-                                                                        href="mailto:{{ $responsable->email }}">{{ $responsable->email }}</a>
-                                                                </li>
+                                                                                            <div class="team-members mb-40">
+                                                                                                <div class="team-thumb pull-left team-pull-none flip mr-sm-0 t-mr-0">
+                                                                                                    <img src="{{ url('storage') }}/{{ $responsable->photo }}" alt=""
+                                                                                                        class="img-fullwidth">
+                                                                                                </div>
+                                                                                                <div class="team-bottom-part border-1px p-15">
+                                                                                                    <h4 class="text-uppercase m-0 pb-5">{{ $responsable->name }}
+                                                                                                        {{ $responsable->surname }}</h4>
+                                                                                                    <h6 class="font-13 text-gray mt-0">{{ $responsable->poste }}</h6>
+                                                                                                    <ul class="list-inline mt-15">
+                                                                                                        <li class="m-0 pr-10"> <i class="fa fa-phone text-theme-colored2 mr-5"></i>
+                                                                                                            <span class="text-gray" href="#">{{ $responsable->phone }}</span>
+                                                                                                        </li>
+                                                                                                        <li class="m-0 pr-10"> <i
+                                                                                                                class="fa fa-envelope-o text-theme-colored2 mr-5"></i>
+                                                                                                            <a class="text-gray"
+                                                                                                                href="mailto:{{ $responsable->email }}">{{ $responsable->email }}</a>
+                                                                                                        </li>
 
-                                                            </ul>
+                                                                                                    </ul>
 
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
     @endforeach
 
-                                        </div>
+                                                                                </div>
 
-                                    </div>
-                                </div>
-                            </section>
-                        -->
+                                                                            </div>
+                                                                        </div>
+                                                                    </section>
+                                                                -->
     <!--
-                            
-                            <section class="parallax divider layer-overlay overlay-dark-7"
-                                data-bg-img="{{ asset('images/details_course.jpeg') }}" data-parallax-ratio="0.4">
-                                <div class="container pt-80 pb-90">
-                                    <div class="row">
-                                        <div class="col-md-8 col-md-offset-2 text-center">
-                                            <a href="https://www.youtube.com/watch?v=kt-4lJs_8fE" data-lightbox-gallery="youtube-video"><img
-                                                    src="images/play-button/s11.png" alt=""></a>
-                                            <h3 class="text-white font-38 font-weight-700 mt-10 mb-0">Notre <span
-                                                    class="text-theme-colored2"> Newsletters</span> </h3>
-                                            Mailchimp Subscription Form
-                                            <form id="mailchimp-subscription-form2" class="newsletter-form max-width-535 mt-10">
-                                                <label for="mce-EMAIL"></label>
-                                                <div class="input-group">
-                                                    <input type="email" id="mce-EMAIL" data-height="45px" class="form-control input-lg"
-                                                        placeholder="Votre email" name="EMAIL" value="">
-                                                    <span class="input-group-btn">
-                                                        <button type="submit" class="btn btn-colored btn-theme-colored2 btn-lg m-0"
-                                                            data-height="45px">Soumettre</button>
-                                                    </span>
-                                                </div>
-                                            </form>
-                                            Mailchimp Subscription Form Validation
-                                            <script>
-                                                $('#mailchimp-subscription-form2').ajaxChimp({
-                                                    callback: mailChimpCallBack,
-                                                    url: '//thememascot.us9.list-manage.com/subscribe/post?u=a01f440178e35febc8cf4e51f&amp;id=49d6d30e1e'
-                                                });
+                                                                    
+                                                                    <section class="parallax divider layer-overlay overlay-dark-7"
+                                                                        data-bg-img="{{ asset('images/details_course.jpeg') }}" data-parallax-ratio="0.4">
+                                                                        <div class="container pt-80 pb-90">
+                                                                            <div class="row">
+                                                                                <div class="col-md-8 col-md-offset-2 text-center">
+                                                                                    <a href="https://www.youtube.com/watch?v=kt-4lJs_8fE" data-lightbox-gallery="youtube-video"><img
+                                                                                            src="images/play-button/s11.png" alt=""></a>
+                                                                                    <h3 class="text-white font-38 font-weight-700 mt-10 mb-0">Notre <span
+                                                                                            class="text-theme-colored2"> Newsletters</span> </h3>
+                                                                                    Mailchimp Subscription Form
+                                                                                    <form id="mailchimp-subscription-form2" class="newsletter-form max-width-535 mt-10">
+                                                                                        <label for="mce-EMAIL"></label>
+                                                                                        <div class="input-group">
+                                                                                            <input type="email" id="mce-EMAIL" data-height="45px" class="form-control input-lg"
+                                                                                                placeholder="Votre email" name="EMAIL" value="">
+                                                                                            <span class="input-group-btn">
+                                                                                                <button type="submit" class="btn btn-colored btn-theme-colored2 btn-lg m-0"
+                                                                                                    data-height="45px">Soumettre</button>
+                                                                                            </span>
+                                                                                        </div>
+                                                                                    </form>
+                                                                                    Mailchimp Subscription Form Validation
+                                                                                    <script>
+                                                                                        $('#mailchimp-subscription-form2').ajaxChimp({
+                                                                                            callback: mailChimpCallBack,
+                                                                                            url: '//thememascot.us9.list-manage.com/subscribe/post?u=a01f440178e35febc8cf4e51f&amp;id=49d6d30e1e'
+                                                                                        });
 
 
 
-                                                function mailChimpCallBack(resp) {
-                                                    // Hide any previous response text
-                                                    var $mailchimpform = $('#mailchimp-subscription-form2'),
-                                                        $response = '';
-                                                    $mailchimpform.children(".alert").remove();
-                                                    if (resp.result === 'success') {
-                                                        $response =
-                                                            '<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
-                                                            resp.msg + '</div>';
-                                                    } else if (resp.result === 'error') {
-                                                        $response =
-                                                            '<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
-                                                            resp.msg + '</div>';
-                                                    }
-                                                    $mailchimpform.prepend($response);
-                                                }
-                                                $(document).ready(function() {
-                                                    setTimeout(() => {
-                                                        $('#first_element').click()
-                                                    }, 500);
-                                                })
-                                            </script>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-                        -->
+                                                                                        function mailChimpCallBack(resp) {
+                                                                                            // Hide any previous response text
+                                                                                            var $mailchimpform = $('#mailchimp-subscription-form2'),
+                                                                                                $response = '';
+                                                                                            $mailchimpform.children(".alert").remove();
+                                                                                            if (resp.result === 'success') {
+                                                                                                $response =
+                                                                                                    '<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
+                                                                                                    resp.msg + '</div>';
+                                                                                            } else if (resp.result === 'error') {
+                                                                                                $response =
+                                                                                                    '<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
+                                                                                                    resp.msg + '</div>';
+                                                                                            }
+                                                                                            $mailchimpform.prepend($response);
+                                                                                        }
+                                                                                        $(document).ready(function() {
+                                                                                            setTimeout(() => {
+                                                                                                $('#first_element').click()
+                                                                                            }, 500);
+                                                                                        })
+                                                                                    </script>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </section>
+                                                                -->
 
 
 
@@ -756,78 +768,34 @@
             </div>
             <div class="section-content">
                 <div class="row">
-                    <div class="col-sm-6 col-md-4">
-                        <article class="post mb-sm-30">
-                            <div class="post-thumb">
-                                <img src="{{asset('images/smart1.png')}}" class="img-fullwidth" alt="">
-                                <div class="post-date"><span>26 </span><br> Oct</div>
-                               
-                            </div>
-                            <div class="post-description border-1px p-20">
-                                <a href="#">
-                                    <h3 class="post-title font-weight-600 mt-0 mb-15">Programing Festival 2017</h3>
-                                </a>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo provident neque
-                                    deleniti eos dicta possimus dolores</p>
-                            </div>
-                            <div class="post-meta">
-                                <ul class="list-inline pull-left flip">
-                                    <li><i class="lnr lnr-users text-theme-colored2 font-20"></i>By Admin</li>
-                                </ul>
-                                <a href="#"
-                                    class="text-theme-colored2 font-14 text-gray-darkgray pull-right flip">Read
-                                    More</a>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-sm-6 col-md-4">
-                        <article class="post mb-sm-30">
-                            <div class="post-thumb">
-                                <img src="{{asset('images/smart2.png')}}" class="img-fullwidth" alt="">
-                                <div class="post-date"><span>26 </span><br> Oct</div>
-                               
-                            </div>
-                            <div class="post-description border-1px p-20">
-                                <a href="#">
-                                    <h3 class="post-title font-weight-600 mt-0 mb-15">Annual Campus Seminar</h3>
-                                </a>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo provident neque
-                                    deleniti eos dicta possimus dolores</p>
-                            </div>
-                            <div class="post-meta">
-                                <ul class="list-inline pull-left flip">
-                                    <li><i class="lnr lnr-users text-theme-colored2 font-20"></i>By Admin</li>
-                                </ul>
-                                <a href="#"
-                                    class="text-theme-colored2 font-14 text-gray-darkgray pull-right flip">Read
-                                    More</a>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-sm-6 col-md-4">
-                        <article class="post mb-sm-30">
-                            <div class="post-thumb">
-                                <img src="{{asset('images/smart3.png')}}" class="img-fullwidth" alt="">
-                                <div class="post-date"><span>26 </span><br> Oct</div>
-                                
-                            </div>
-                            <div class="post-description border-1px p-20">
-                                <a href="#">
-                                    <h3 class="post-title font-weight-600 mt-0 mb-15">Programming Contest</h3>
-                                </a>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo provident neque
-                                    deleniti eos dicta possimus dolores</p>
-                            </div>
-                            <div class="post-meta">
-                                <ul class="list-inline pull-left flip">
-                                    <li><i class="lnr lnr-users text-theme-colored2 font-20"></i>By Admin</li>
-                                </ul>
-                                <a href="#"
-                                    class="text-theme-colored2 font-14 text-gray-darkgray pull-right flip">Read
-                                    More</a>
-                            </div>
-                        </article>
-                    </div>
+                    @foreach ($blogs as $blog)
+                        <div class="col-sm-6 col-md-4">
+                            <article class="post mb-sm-30">
+                                <div class="post-thumb">
+                                    <img src="{{ url('storage') }}/{{ $blog->photo }}" class="img-fullwidth"
+                                        alt="">
+                                    @php
+                                        $getMonth = date('F', strtotime($evenement->start_at));
+                                        $getDays = date('d', strtotime($evenement->start_at));
+                                    @endphp
+                                    <div class="post-date"><span>{{$getDays}} </span><br> {{$getMonth}}</div>
+
+                                </div>
+                                <div class="post-description border-1px p-20">
+                                    <a href="#">
+                                        <h3 class="post-title font-weight-600 mt-0 mb-15">{{$blog->title}}</h3>
+                                    </a>
+                                    <p>{{$blog->description}} [...]</p>
+                                </div>
+                                <div class="post-meta">
+                                    
+                                    <a href="{{route('blog.show',$blog->id)}}"
+                                        class="text-theme-colored2 font-14 text-gray-darkgray pull-right flip">Lire plus </a>
+                                </div>
+                            </article>
+                        </div>
+                    @endforeach
+
                 </div>
             </div>
         </div>
@@ -837,16 +805,17 @@
     </div>
 
     <script lang="js">
-        
-        let btn=document.getElementById("first_element");
-        btn.addEventListener("click",()=>{
-            
+        let btn = document.getElementById("first_element");
+        btn.addEventListener("click", () => {
+
         })
 
         setTimeout(() => {
             btn.click()
         }, 1000);
-
-
     </script>
+
+
+
+
 @endsection

@@ -4,21 +4,18 @@ namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Email;
-use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-
-class Interested extends Resource
+class CategoryBlog extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\Interested>
+     * @var class-string<\App\Models\CategoryBlog>
      */
-    public static $model = \App\Models\Interested::class;
+    public static $model = \App\Models\CategoryBlog::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -26,9 +23,6 @@ class Interested extends Resource
      * @var string
      */
     public static $title = 'name';
-    
-    
-
 
     /**
      * The columns that should be searched.
@@ -49,19 +43,8 @@ class Interested extends Resource
     {
         return [
             ID::make()->sortable(),
-            Text::make('gender'),
-            Text::make('name'),
-            Text::make('surname'),
-            Email::make('email'),
-            Date::make('birth'),
-            Text::make('country'),
-            Text::make('province'),
-            Text::make('level'),
-            Text::make('phone'),
-            Text::make('grade'),
-            Text::make('accepted'),
-            BelongsTo::make('Formations','course','App\Nova\Course'),
-
+            Text::make('Nom','name'),
+            HasMany::make('Blog'),
             
         ];
     }
@@ -111,6 +94,6 @@ class Interested extends Resource
     }
     public static function label()
     {
-        return 'Intéressé';
+        return 'Catégories de blog';
     }
 }

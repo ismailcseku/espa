@@ -39,8 +39,12 @@ class HomeController extends Controller
             $course->description=substr($course->description,0,200);
         }
         $evenements=DB::table('evenements')->limit(3)->get();
-       
- 
-;        return  view('home')->with(['courses'=>$courses,'slides'=>$slides,'degrees'=>$degrees,'responsables'=>$responsables,'evenements'=>$evenements]);
+        $blogs=DB::table('blogs')->limit(3)->get()->map(function($item,$key){
+            $item->description=substr($item->description,0,60);
+            return $item;
+       });
+
+
+        return  view('home')->with(['courses'=>$courses,'slides'=>$slides,'degrees'=>$degrees,'responsables'=>$responsables,'evenements'=>$evenements,'blogs'=>$blogs]);
     } 
 }

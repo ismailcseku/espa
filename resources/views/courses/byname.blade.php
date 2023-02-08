@@ -10,11 +10,11 @@
                 <div class="section-content">
                     <div class="row">
                         <div class="col-md-6">
-                            <h2 class="text-theme-colored2 font-36">Détails de formations</h2>
+                            <h2 class="text-theme-colored2 font-36">Détail de la formation</h2>
                             <ol class="breadcrumb text-left mt-10 white">
                                 <li><a href="/">Acceuil</a></li>
                                 <li><a href="{{ route('course.index') }}">formations</a></li>
-                                <li class="active">detail de formation</li>
+                                <li class="active">Détail de la formation</li>
                             </ol>
                         </div>
                     </div>
@@ -70,10 +70,10 @@
 
                                     <ul id="myTab" class="nav nav-tabs mt-30">
                                         <li class="active"><a href="#tab1" data-toggle="tab">Description</a></li>
-                                        <li><a href="#tab2" data-toggle="tab">Admissions</a></li>
-                                        <li><a href="#tab5" data-toggle="tab">Programmes</a></li>
-                                        <li><a href="#tab6" data-toggle="tab">Carrières</a></li>
-                                        <li><a href="#tab3" data-toggle="tab">Télécharger</a></li>
+                                        <li><a href="#tab2" data-toggle="tab">Admission</a></li>
+                                        <li><a href="#tab5" data-toggle="tab">Programme</a></li>
+                                        <li><a href="#tab6" data-toggle="tab">Carrière</a></li>
+                                        <li><a href="#tab3" data-toggle="tab">Documents</a></li>
                                         <li><a href="#tab4" data-toggle="tab">Témoignages</a></li>
 
                                     </ul>
@@ -83,35 +83,33 @@
 
                                             <p> {!! $course->description !!}</p>
                                             <ul>
-                                            @if ($course->duration)
-
-                                                <li> <i
-                                                        class="pe-7s-timer font-26 vertical-align-middle text-theme-colored2 mr-10 "></i>
-                                                    <span class="font-16">Durée</span> : <span> {{ $course->duration }}
-                                                        Mois</span>
-                                                </li>
-                                            @endif
-                                            @if ($course->locations_name)
-
-                                                <li><i
-                                                        class="pe-7s-global font-26 vertical-align-middle text-theme-colored2  mr-10"></i>
-                                                    <span class="font-16">Lieu </span>: {{ $course->locations_name}}
-                                                </li>
+                                                @if ($course->duration)
+                                                    <li> <i
+                                                            class="pe-7s-timer font-26 vertical-align-middle text-theme-colored2 mr-10 "></i>
+                                                        <span class="font-16">Durée</span> : <span> {{ $course->duration }}
+                                                            Mois</span>
+                                                    </li>
                                                 @endif
-                                            @if ($course->modalitiy_name)
-                                                <li> <i
-                                                        class="pe-7s-prev font-26 vertical-align-middle text-theme-colored2 mr-10"></i>
-                                                    <span class="font-16">Rythme
-                                                        :</span> {{ $course->modalitiy_name }}
-                                                </li>
+                                                @if ($course->locations_name)
+                                                    <li><i
+                                                            class="pe-7s-global font-26 vertical-align-middle text-theme-colored2  mr-10"></i>
+                                                        <span class="font-16">Lieu </span>: {{ $course->locations_name }}
+                                                    </li>
                                                 @endif
-                                                @if ($course->languages_name )
-                                                <li><i
-                                                        class="pe-7s-notebook  font-26 vertical-align-middle text-theme-colored2 mr-10 "></i>
-                                                    <span class="font-16">Langue
-                                                        : </span>{{ $course->languages_name }}
-                                                </li>
-                                            @endif
+                                                @if ($course->modalitiy_name)
+                                                    <li> <i
+                                                            class="pe-7s-prev font-26 vertical-align-middle text-theme-colored2 mr-10"></i>
+                                                        <span class="font-16">Rythme
+                                                            :</span> {{ $course->modalitiy_name }}
+                                                    </li>
+                                                @endif
+                                                @if ($course->languages_name)
+                                                    <li><i
+                                                            class="pe-7s-notebook  font-26 vertical-align-middle text-theme-colored2 mr-10 "></i>
+                                                        <span class="font-16">Langue
+                                                            : </span>{{ $course->languages_name }}
+                                                    </li>
+                                                @endif
 
                                             </ul>
 
@@ -257,35 +255,43 @@
                                         </div>
                                         <div class="tab-pane fade" id="tab5">
                                             <h4 class="line-bottom-theme-colored2 mb-0">programmes</h4>
-                                            <div class="container-block">
-
-                                                <div class="tab-wrapper">
-                                                    <div class="tab-header" full-width background>
-                                                        @foreach ($programs as $program)
-                                                            <button class="tab-btn">{{ $program->title }}</button>
-                                                        @endforeach
-                                                     
+                                            <div id="tab-contents" >
+                                                <ul class="tabs">
+                                                    @foreach ($programs as $program)
+                                                        @if ($loop->first)
+                                                            <li data-target="#id{{ $program->id }}" class="active">
+                                                                {{ $program->title }}
+                                                            </li>
+                                                        @else
+                                                            <li data-target="#id{{ $program->id }}">{{ $program->title }}
+                                                            </li>
+                                                        @endif
+                                                    @endforeach
     
     
-                                                        <div class="underline"></div>
+                                                </ul>
+                                                @foreach ($programs as $program)
+                                                    @if ($loop->first)
+                                                    <div class="panel active" id="id{{ $program->id }}">
+                                                        @if ($program->hours)
+                                                            <p><strong>Heure : {{ $program->hours }}</strong></p>
+                                                        @endif
+    
+                                                        <p>{!! $program->description !!}
+                                                        </p>
                                                     </div>
-                                                    <div class="tab-body">
-                                                        @foreach ($programs as $program)
-                                                        <div class="tab-content">
-                                                           @if ($program->hours)
-                                                           
-                                                          <h4>Heure : {{$program->hours}}</h4>
-                                                          @endif 
-                                                            <p>{!!$program->description!!}</p>
+                                                    @else
+                                                        <div class="panel" id="id{{ $program->id }}">
+                                                            @if ($program->hours)
+                                                                <p><strong>Heure : {{ $program->hours }}</strong></p>
+                                                            @endif
+    
+                                                            <p>{!! $program->description !!}
+                                                            </p>
                                                         </div>
-                                                        @endforeach
-    
-    
-                                                    </div>
-                                                </div>
-    
-    
-                                            </div>
+                                                    @endif
+                                                @endforeach
+                                            </div> 
                                         </div>
                                         <div class="tab-pane fade" id="tab3">
                                             <h4 class="line-bottom-theme-colored2 mb-20">Télécharger</h4>
@@ -309,82 +315,85 @@
                                                     <div class="col-md-12">
                                                         <div class="blog-posts single-post">
                                                             <div class="comments-area">
-                                                                
-                                                                @if ( $course->grade )
-                                                                <ul class="comment-list">
 
-                                                                    <li>
-                                                                        <div class="media comment-author"> <a
-                                                                                class="media-left pull-left flip"
-                                                                                href="#"><img class="img-thumbnail"
-                                                                                    src="images/blog/comment1.jpg"
-                                                                                    alt=""></a>
-                                                                            <div class="media-body">
-                                                                                <h5
-                                                                                    class="media-heading comment-heading font-16">
-                                                                                    Diplome </h5>
-                                                                                <div class="comment-date">
-                                                                                    {!! $course->grade !!}</div>
+                                                                @if ($course->grade)
+                                                                    <ul class="comment-list">
+
+                                                                        <li>
+                                                                            <div class="media comment-author"> <a
+                                                                                    class="media-left pull-left flip"
+                                                                                    href="#"><img
+                                                                                        class="img-thumbnail"
+                                                                                        src="images/blog/comment1.jpg"
+                                                                                        alt=""></a>
+                                                                                <div class="media-body">
+                                                                                    <h5
+                                                                                        class="media-heading comment-heading font-16">
+                                                                                        Diplome </h5>
+                                                                                    <div class="comment-date">
+                                                                                        {!! $course->grade !!}</div>
+                                                                                </div>
                                                                             </div>
-                                                                        </div>
-                                                                    </li>
+                                                                        </li>
 
 
 
-                                                                </ul>
+                                                                    </ul>
                                                                 @endif
 
                                                             </div>
                                                             <div class="comments-area">
-                                                                @if ( $course->profile )
-                                                                <ul class="comment-list">
+                                                                @if ($course->profile)
+                                                                    <ul class="comment-list">
 
 
-                                                                    <li>
-                                                                        <div class="media comment-author"> <a
-                                                                                class="media-left pull-left flip"
-                                                                                href="#"><img class="img-thumbnail"
-                                                                                    src="images/blog/comment1.jpg"
-                                                                                    alt=""></a>
-                                                                            <div class="media-body">
-                                                                                <h5
-                                                                                    class="media-heading comment-heading font-16">
-                                                                                    Profil / Compétences à acquérir </h5>
-                                                                                <div class="comment-date">
-                                                                                    {!! $course->profile !!}</div>
+                                                                        <li>
+                                                                            <div class="media comment-author"> <a
+                                                                                    class="media-left pull-left flip"
+                                                                                    href="#"><img
+                                                                                        class="img-thumbnail"
+                                                                                        src="images/blog/comment1.jpg"
+                                                                                        alt=""></a>
+                                                                                <div class="media-body">
+                                                                                    <h5
+                                                                                        class="media-heading comment-heading font-16">
+                                                                                        Profil / Compétences à acquérir
+                                                                                    </h5>
+                                                                                    <div class="comment-date">
+                                                                                        {!! $course->profile !!}</div>
+                                                                                </div>
                                                                             </div>
-                                                                        </div>
-                                                                    </li>
+                                                                        </li>
 
 
 
-                                                                </ul>
+                                                                    </ul>
                                                                 @endif
                                                             </div>
                                                             <div class="comments-area">
-                                                            @if ( $course->opportunity )
-
-                                                                <ul class="comment-list">
-                                                                    <li>
-                                                                        <div class="media comment-author"> <a
-                                                                                class="media-left pull-left flip"
-                                                                                href="#"><img class="img-thumbnail"
-                                                                                    src="images/blog/comment1.jpg"
-                                                                                    alt=""></a>
-                                                                            <div class="media-body">
-                                                                                <h5
-                                                                                    class="media-heading comment-heading font-16">
-                                                                                    Débouchés </h5>
-                                                                                <div class="comment-date">
-                                                                                    {!! $course->opportunity !!}</div>
+                                                                @if ($course->opportunity)
+                                                                    <ul class="comment-list">
+                                                                        <li>
+                                                                            <div class="media comment-author"> <a
+                                                                                    class="media-left pull-left flip"
+                                                                                    href="#"><img
+                                                                                        class="img-thumbnail"
+                                                                                        src="images/blog/comment1.jpg"
+                                                                                        alt=""></a>
+                                                                                <div class="media-body">
+                                                                                    <h5
+                                                                                        class="media-heading comment-heading font-16">
+                                                                                        Débouchés </h5>
+                                                                                    <div class="comment-date">
+                                                                                        {!! $course->opportunity !!}</div>
+                                                                                </div>
                                                                             </div>
-                                                                        </div>
-                                                                    </li>
+                                                                        </li>
 
 
 
-                                                                </ul>
-                                                            @endif
+                                                                    </ul>
+                                                                @endif
 
                                                             </div>
 
@@ -408,7 +417,7 @@
                                                     <div class="col-md-12 ">
                                                         <div class="border-1px p-10">
                                                             <h4 class="text-theme-colored text-uppercase m-0">Je suis
-                                                                interessé
+                                                                interessé(e)
                                                             </h4>
                                                             @if (session()->has('success'))
                                                                 <h6 class='alert alert-success' role="alert">
@@ -416,7 +425,7 @@
                                                                     reiussite , nous vous contacterons très bientôt .
                                                                 </h6>
                                                             @endif
-                                                            <div class="line-bottom mb-30"></div>
+                                                            <div class="line-bottom-theme-colored2 mb-30"></div>
                                                             <p>Remplir le formulaire.</p>
                                                             <form class="mt-30" method="post"
                                                                 action="{{ route('interested', $course->id) }}">
@@ -487,7 +496,7 @@
                                                                     </div>
                                                                     <div class="col-sm-6">
                                                                         <label for="E-mail" class="col-sm-2"
-                                                                            style=" width:100%"> Email</label>
+                                                                            style=" width:100%"> E-mail</label>
                                                                         <div class="form-group mb-10">
                                                                             <input name="email" required
                                                                                 class="form-control  email" type="email"
@@ -501,7 +510,7 @@
 
                                                                     <div class="col-sm-6">
                                                                         <label for="birth" class="col-sm-2"
-                                                                            style=" width:100%"> naissance</label>
+                                                                            style=" width:100%">date de naissance</label>
                                                                         <div class="form-group mb-10 ">
                                                                             <input name="birth" required
                                                                                 class="  form-control" type="date"
@@ -518,7 +527,7 @@
                                                                         <label for="country" class="col-sm-2">
                                                                             Pays</label>
                                                                         <div class="form-group mb-10">
-                                                                            <select name="country" required
+                                                                            <select name="country" id="countries" required
                                                                                 value="{{ old('country') }}"
                                                                                 class="form-control  ">
                                                                                 @foreach ($countries as $country)
@@ -533,15 +542,15 @@
                                                                         @endif
                                                                     </div>
 
-                                                                    <div class="col-sm-6 ">
+                                                                    <div class="col-sm-6 " id="provinces">
                                                                         <label for="province" class="col-sm-2"
-                                                                            style=" width:100%"> Provinces </label>
+                                                                            style=" width:100%"> Province </label>
 
                                                                         <div class="form-group mb-10">
-                                                                            <select name="province" required
-                                                                                class="form-control  "
+                                                                            <select name="province" id="province"
+                                                                                required class="form-control  "
                                                                                 value="{{ old('province') }}">
-                                                                            <option value="_" selected>_</option>
+                                                                                <option value="_" selected>_</option>
 
                                                                                 @foreach ($provinces as $province)
                                                                                     <option value="{{ $province }}">
@@ -558,10 +567,9 @@
                                                                     <div class="col-sm-8 ">
                                                                         <label for="phone" class="col-sm-12"
                                                                             style=" width:100%">Numéro de téléphone</label>
-
                                                                         <div class="form-group mb-10">
                                                                             <input name="phone" class="form-control"
-                                                                                type="text"
+                                                                                id="phone" type="tel"
                                                                                 value="{{ old('phone') }}" required>
                                                                         </div>
                                                                         @if ($errors->has('phone'))
@@ -569,21 +577,7 @@
                                                                                 class="text-danger">{{ $errors->first('phone') }}</span>
                                                                         @endif
                                                                     </div>
-                                                                    <div class="col-sm-4 ">
-                                                                        <label for="indicatif" class="col-sm-12"
-                                                                            style=" width:100%"> Indicatif </label>
 
-                                                                        <div class="form-group mb-10">
-                                                                            <input name="indicatif"
-                                                                                value="{{ old('indicatif') }}"
-                                                                                class="form-control" required
-                                                                                type="text">
-                                                                        </div>
-                                                                        @if ($errors->has('indicatif'))
-                                                                            <span
-                                                                                class="text-danger">{{ $errors->first('indicatif') }}</span>
-                                                                        @endif
-                                                                    </div>
                                                                 </div>
                                                                 <div class="col-sm-6 ">
                                                                     <label for="level" class="col-sm-12"
@@ -629,12 +623,13 @@
                                                                             class="text-danger">{{ $errors->first('accepted') }}</span>
                                                                     @endif
                                                                 </div>
-                                                                <p class="col-xs-10 col-span-10">
+                                                                <p class="col-xs-10 col-span-10 font-10">
                                                                     Conformément à la loi 09-08, vous disposez d&#39;un
                                                                     droit
                                                                     d&#39;accès, de rectification et d&#39;opposition au
                                                                     traitement de
-                                                                    vos données personnelles.*
+                                                                    vos données personnelles.<span
+                                                                        style="color:red;">*</span>
                                                                 </p>
 
 
@@ -643,7 +638,7 @@
                                                                     <input name="form_botcheck" class="form-control"
                                                                         type="hidden" value="">
                                                                     <button type="submit" class="btn btn-theme-colored2"
-                                                                        data-loading-text="Patientez...">Valider</button>
+                                                                        data-loading-text="Patientez...">Envoyer</button>
                                                                 </div>
                                                             </form>
 
@@ -683,203 +678,117 @@
     </div>
 
     <style>
-        @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
-
-        .container-block {
-            max-width: 100%;
-            margin: auto;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
-            margin-top: 4px;
-
+        #tab-contents {
+            margin: 0 auto;
+            width: 50vw;
+            margin-top: 14px;
         }
 
-        .tab-wrapper {
-            background-color: #fff;
-            /* border-radius: 10px; */
-            margin-bottom: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        .tabs {
+            display: flex;
+            padding: 0;
         }
 
-        .tab-header {
+        .tabs li {
             position: relative;
-            display: flex;
-            align-items: center;
-            width: 100%;
-            border-bottom: 1px solid #e5e5e5;
-        }
-
-        .tab-header .tab-btn {
-            padding: 15px 20px;
-            border: none;
+            list-style-type: none;
+            transition: all 0.3s ease;
+            margin-right: 10px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            background-color: #dfdfdf;
             cursor: pointer;
-            font-size: 12px;
-            font-weight: 600;
-            z-index: 1;
-            /* border: 1px solid #6a00fb; */
-            background-color: transparent;
-            transition: all 0.3s ease;
+            font-weight: 500;
         }
 
-        .tab-header .tab-btn:focus {
-            outline: none;
+        .tabs li:hover {
+            background-color: #e9e9e9;
+            color: #F88147;
         }
 
-        .tab-header .tab-btn i {
-            margin-right: 5px;
-            font-size: 10px;
+        .tabs li:hover::before {
+            visibility: visible;
+            width: 100%;
         }
 
-        .tab-header .tab-btn:hover,
-        .tab-header .tab-btn.active {
-            color: #F56962 ;
+        .tabs li.active {
+            background-color: #F88147;
+            color: #eee;
         }
 
-        .tab-header .underline {
-            position: absolute;
-            bottom: -1px;
-            left: 0;
-            height: 2px;
-            width: 0;
-            transform-origin: left;
-            background-color: #F56962 ;
-            transition: all 0.3s ease;
-        }
-
-        .tab-body {
-            display: flex;
-            overflow: hidden;
-        }
-
-        .tab-body .tab-content {
-            min-width: 100%;
-            padding: 20px;
-            font-size: 12px;
-            transition: all 0.3s;
-            text-align: justify;
-        }
-
-        .tab-wrapper[rounded] {
-            border-radius: 10px;
-        }
-
-        .tab-header[full-width] .tab-btn {
-            flex: 1;
-            text-align: center;
-        }
-
-        .tab-header[background] {
-            background-color: #F56962 ;
-        }
-
-        .tab-header[background] .tab-btn {
-            color: #fff;
-        }
-
-        .tab-header[background] .tab-btn.active {
-            color: #F56962 ;
-        }
-
-        .tab-header[background] .tab-btn.active:after {
+        .tabs li::before {
             content: "";
             position: absolute;
-            bottom: -1px;
-            left: 0;
-            height: 2px;
-            width: 100%;
-            background-color: #fff;
-        }
-
-        .tab-header[background] .underline {
-            background-color: #fff;
-            height: 100%;
+            visibility: hidden;
+            transform: translateX(-50%);
+            transition: all 0.3s ease;
             bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            border-radius: 0 0 5px 5px;
+            background-color: #F88147;
         }
 
-        .tab-header[border] .tab-btn {
-            border: 1px solid #e5e5e5;
+        .panel {
+            display: none;
+            transition: all 1s ease;
+            border: 1px solid #dfdfdf;
+            border-radius: 5px;
+            padding: 0 15px;
         }
 
-        .tab-header[border] .tab-btn.active {
-            border: 1px solid #F56962 ;
+        .panel.active {
+            display: block;
+            animation: fadeIn 1s;
         }
 
-        .tab-header[border] .tab-btn.active {
-            color: #fff;
-        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
 
-        .tab-header[border] .underline {
-            height: 100%;
-            bottom: 0;
-        }
-
-        /* Credits */
-
-        .credits {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            text-align: center;
-            padding: 10px;
-            font-size: 12px;
-            color: #fff;
-            background-color: #6a00fb;
-        }
-
-        .credits a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .credits a:hover {
-            text-decoration: underline;
+            to {
+                opacity: 1;
+            }
         }
     </style>
     <script>
-        function inittab(tabWrapper, activeTab = 1) {
-            const tabBtns = tabWrapper.querySelectorAll(".tab-btn");
-            const underline = tabWrapper.querySelector(".underline");
-            const tabContents = tabWrapper.querySelectorAll(".tab-content");
+        document.addEventListener("DOMContentLoaded", () => {
+            const tabs = document.querySelector(".tabs");
+            const lis = document.querySelectorAll(".tabs li");
+            const panels = document.querySelectorAll(".panel");
 
-            activeTab = activeTab - 1;
-            tabBtns[activeTab].classList.add("active");
-            underline.style.width = `${tabBtns[activeTab].offsetWidth}px`;
-            underline.style.left = `${tabBtns[activeTab].offsetLeft}px`;
-            tabContents.forEach((content) => {
-                content.style.transform = `translateX(-${activeTab * 100}%)`;
-            });
-
-            tabBtns.forEach((btn, index) => {
-                btn.addEventListener("click", () => {
-                    tabBtns.forEach((btn) => btn.classList.remove("active"));
-                    btn.classList.add("active");
-                    underline.style.width = `${btn.offsetWidth}px`;
-                    underline.style.left = `${btn.offsetLeft}px`;
-                    tabContents.forEach((content) => {
-                        content.style.transform = `translateX(-${index * 100}%)`;
+            tabs.addEventListener("click", (e) => {
+                if (e.target.tagName == "LI") {
+                    Array.from(lis).forEach((li) => {
+                        li == e.target ? li.classList.add("active") : li.classList.remove("active");
                     });
-                });
 
-                //same effect as on click when button in focus
-                btn.addEventListener("focus", () => {
-                    tabBtns.forEach((btn) => btn.classList.remove("active"));
-                    btn.classList.add("active");
-                    underline.style.width = `${btn.offsetWidth}px`;
-                    underline.style.left = `${btn.offsetLeft}px`;
-                    tabContents.forEach((content) => {
-                        content.style.transform = `translateX(-${index * 100}%)`;
+                    let targetPanel = document.querySelector(e.target.dataset.target);
+                    Array.from(panels).forEach((panel) => {
+                        panel == targetPanel ?
+                            panel.classList.add("active") :
+                            panel.classList.remove("active");
                     });
-                });
+                }
             });
-        }
-
-        const tabWrappers = document.querySelectorAll(".tab-wrapper");
-        tabWrappers.forEach((tabWrapper, index) => inittab(tabWrapper));
+        });
+        let getCountries = document.getElementById('countries');
+        let getProvinces = document.getElementById('provinces');
+        let getProvince = document.getElementById('province');
+        getCountries.addEventListener('change', () => {
+            if (getCountries.value !== 'Maroc') {
+                getProvinces.style.display = 'none'
+                getProvince.value = '_'
+            } else {
+                getProvinces.style.display = 'block'
+            }
+        })
+        const phoneInputField = document.querySelector("#phone");
+        const phoneInput = window.intlTelInput(phoneInputField, {
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        });
     </script>
 
 @endsection

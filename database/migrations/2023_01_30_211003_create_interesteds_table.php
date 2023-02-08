@@ -24,7 +24,6 @@ return new class extends Migration
             $table->string('province');
             $table->string('level');
             $table->string('phone');
-            $table->string('indicatif');
             $table->string('grade');
             $table->string('accepted');
             $table->foreignId("course_id");

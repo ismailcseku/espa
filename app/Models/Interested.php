@@ -20,7 +20,6 @@ class Interested extends Model
 'province',
 'level',
 'phone',
-'indicatif',
 'grade',
 'accepted',
 'course_id'
