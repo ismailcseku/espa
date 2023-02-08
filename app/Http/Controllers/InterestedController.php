@@ -20,6 +20,7 @@ class InterestedController extends Controller
      */
     public function __invoke(Request $request ,int $id)
     {
+    dd('dffdgh');
    $data=$request->validate([
             'gender'=>['required','string',Rule::in(['Mlle','Mme','Mr'])],
             'name'=>['required','string','max:50','min:2'],
@@ -33,7 +34,7 @@ class InterestedController extends Controller
            'grade'=>['required','string'],
            'accepted'=>['required','string'],
         ]);  
-        dd($data);
+        
         $data['course_id']=$id;
         
         Interested::create($data);
