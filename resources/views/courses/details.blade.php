@@ -56,7 +56,7 @@
                                             </div>
                                         </li>
                                     @endif
-
+                            
 
                                     @if ($course->modalitiy_name)
                                         <li>
@@ -191,11 +191,13 @@
                                                     </div>
                                                     <div class="comments-area">
                                                         <ul class="comment-list">
+
                                                             <li>
                                                                 <div class="media comment-author"> <a
                                                                         class="media-left pull-left flip"
                                                                         href="#"><img class="img-thumbnail"
                                                                             src="images/blog/comment1.jpg"
+                                                                            alt=""></a>
                                                                     <div class="media-body">
                                                                         <h5 class="media-heading comment-heading font-16">
                                                                             Date limite </h5>
@@ -274,7 +276,7 @@
                                     <div class="tab-pane fade" id="tab5">
                                         <h4 class="line-bottom-theme-colored2 mb-0">programmes</h4>
 
-                                        <div id="tab-contents">
+                                        <div id="tab-contents" >
                                             <ul class="tabs">
                                                 @foreach ($programs as $program)
                                                     @if ($loop->first)
@@ -291,14 +293,14 @@
                                             </ul>
                                             @foreach ($programs as $program)
                                                 @if ($loop->first)
-                                                    <div class="panel active" id="id{{ $program->id }}">
-                                                        @if ($program->hours)
-                                                            <p><strong>Heure : {{ $program->hours }}</strong></p>
-                                                        @endif
+                                                <div class="panel active" id="id{{ $program->id }}">
+                                                    @if ($program->hours)
+                                                        <p><strong>Heure : {{ $program->hours }}</strong></p>
+                                                    @endif
 
-                                                        <p>{!! $program->description !!}
-                                                        </p>
-                                                    </div>
+                                                    <p>{!! $program->description !!}
+                                                    </p>
+                                                </div>
                                                 @else
                                                     <div class="panel" id="id{{ $program->id }}">
                                                         @if ($program->hours)
