@@ -196,7 +196,6 @@
                                                                         class="media-left pull-left flip"
                                                                         href="#"><img class="img-thumbnail"
                                                                             src="images/blog/comment1.jpg"
-                                                                            alt=""></a>
                                                                     <div class="media-body">
                                                                         <h5 class="media-heading comment-heading font-16">
                                                                             Date limite </h5>

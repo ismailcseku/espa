@@ -23,7 +23,14 @@ class InterestedController extends Controller
     
    $data=$request->validate([
             'gender'=>['required','string',Rule::in(['Mlle','Mme','Mr'])],
-         
+            'name'=>['required','string','max:50','min:2'],
+            'surname'=>['required','string','max:100','min:2'],
+            'email'=>['required','email'],
+            'birth'=>['required','date','before:tomorrow'],
+           
+            'level'=>['required','string',Rule::in(Levels::getting())],
+           'grade'=>['required','string'],
+           'accepted'=>['required','string'],
         ]);  
         dd($data);
         
