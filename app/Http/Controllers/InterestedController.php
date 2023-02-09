@@ -34,7 +34,7 @@ class InterestedController extends Controller
             'grade'=>['required','string'],
             'accepted'=>['required','string'],
         ]);  
-        dd($data);
+       
         
         $data['course_id']=$id;
         
