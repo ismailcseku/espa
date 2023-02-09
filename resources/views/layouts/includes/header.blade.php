@@ -81,7 +81,7 @@
             <div class="header-top bg-theme-colored border-top-theme-colored2-2px sm-text-center">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="widget">
                                 <ul class="styled-icons icon-sm icon-white">
                                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -91,7 +91,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-8">
 
                             <div class="widget">
                                 <ul class="list-inline text-right flip sm-text-center">
@@ -131,7 +131,7 @@
                                     </li>
                                     <li>
                                         <a href="{{ route('course.index') }}"
-                                            class="btn btn-dark btn-circled btn-theme-colored2 btn-sm  pr-30 pl-30">Découvrir</a>
+                                            class="btn btn-dark btn-circled btn-theme-colored2 btn-sm  pr-30 pl-30">Je suis intéressé(e)</a>
                                     </li>
                                 </ul>
                             </div>

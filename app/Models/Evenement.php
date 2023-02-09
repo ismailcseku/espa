@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\EvenementInterested;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Evenement extends Model
 {
@@ -20,4 +21,9 @@ class Evenement extends Model
         'start_at'=>'datetime',
         'end_at'=>'datetime',
     ];
+
+    public function evenement_interesteds() {
+        return $this->hasMany(EvenementInterested::class);
+    }
+
 }

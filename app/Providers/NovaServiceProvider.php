@@ -22,6 +22,7 @@ use App\Nova\Responsable;
 use App\Nova\CategoryBlog;
 use App\Nova\TrainingType;
 use Laravel\Nova\Menu\MenuItem;
+use App\Nova\EvenementInterested;
 use Laravel\Nova\Dashboards\Main;
 use Laravel\Nova\Menu\MenuSection;
 use Illuminate\Support\Facades\Gate;
@@ -73,6 +74,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                     ])->icon('user')->collapsable(),
                     MenuSection::make('Interation', [
                         MenuItem::resource(Evenement::class),
+                        MenuItem::resource(EvenementInterested::class),
                     ])->collapsable(),
                     MenuSection::make('Blog', [
                         MenuItem::resource(CategoryBlog::class),

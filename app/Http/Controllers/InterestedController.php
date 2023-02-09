@@ -31,7 +31,7 @@ class InterestedController extends Controller
             'province'=>['string'],
             'phone'=>['required','string'],
             'level'=>['required','string'],
-            'grade'=>['required','string'],
+            'grade'=>['string'],
             'accepted'=>['required','string'],
         ]);  
        

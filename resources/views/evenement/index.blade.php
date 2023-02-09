@@ -69,7 +69,12 @@
                                                         echo $end_at;
                                                     @endphp</li>
                                             </ul>
-                                            <p class="mt-10">@php echo(substr($evenement->description,0,100)); @endphp</p>
+                                            <p class="mt-10">
+                                                @php echo(substr($evenement->description,0,100)); @endphp
+                                                <a href="{{route('evenement.show',$evenement->id)}}" class="text-theme-colored2">...Lire plus</a>
+ 
+                                            </p>
+                                            <a href="{{route('evenement.show',$evenement->id)}}" class="btn btn-default mt-5">Découvrir </a>
                                         </div>
                                     </div>
                                 </div>

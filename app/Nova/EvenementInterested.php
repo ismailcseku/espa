@@ -4,22 +4,18 @@ namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\File;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Image;
-use Laravel\Nova\Fields\HasMany;
-use Laravel\Nova\Fields\DateTime;
-use Laravel\Nova\Fields\Textarea;
+use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Evenement extends Resource
+class EvenementInterested extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\Evenement>
+     * @var class-string<\App\Models\EvenementInterested>
      */
-    public static $model = \App\Models\Evenement::class;
+    public static $model = \App\Models\EvenementInterested::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -47,17 +43,12 @@ class Evenement extends Resource
     {
         return [
             ID::make()->sortable(),
-            Text::make('Titre','title'),
-            Textarea::make('Description','description'),
-            DateTime::make('Date début ','start_at'),
-            DateTime::make('Date fin ','end_at'),
-            Text::make('Lieu','location'),
-            Image::make('Une image','photo')->disk('public')
-                    ->storeAs(function (Request $request) {
-                            return $request->photo->getClientOriginalName();
-            }),
-            HasMany::make('EvenementInterested'),
-
+            Text::make('Nom et prénom','name'),
+            Text::make('E-mail','email'),
+            Text::make('Organisme','organism'),
+            Text::make('Poste','poste'),
+            Text::make('Téléphone','phone'),
+            BelongsTo::make('Évènement','evenement','App\Nova\Evenement')
         ];
     }
 
@@ -104,8 +95,7 @@ class Evenement extends Resource
     {
         return [];
     }
-    public static function label()
-    {
-        return 'Évènements';
+    public static function label(){
+        return 'Participant';
     }
 }

@@ -255,43 +255,57 @@
                                         </div>
                                         <div class="tab-pane fade" id="tab5">
                                             <h4 class="line-bottom-theme-colored2 mb-0">programmes</h4>
-                                            <div id="tab-contents" >
-                                                <ul class="tabs">
+                                            <div class="container-block">
+                                                <div class="accordion">
                                                     @foreach ($programs as $program)
                                                         @if ($loop->first)
-                                                            <li data-target="#id{{ $program->id }}" class="active">
-                                                                {{ $program->title }}
-                                                            </li>
+                                                            <div class="accordion-item active">
+
+                                                                <div class="accordion-header "
+                                                                    style="display:flex; justify-content:space-between;">
+                                                                    @if ($program->title)
+                                                                        <p class="text-theme-colored2">
+                                                                            {{ $program->title }} </p>
+                                                                    @endif
+                                                                    @if ($program->hours)
+                                                                        <p style="margin-right:7%;"> Heure :
+                                                                            {{ $program->hours }}</p>
+                                                                    @endif
+                                                                </div>
+                                                                <div class="accordion-body">
+                                                                    <div class="accordion-body-content">
+                                                                        {!! $program->description !!}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         @else
-                                                            <li data-target="#id{{ $program->id }}">{{ $program->title }}
-                                                            </li>
+                                                            <div class="accordion-item ">
+
+                                                                <div class="accordion-header"
+                                                                    style="display:flex; justify-content:space-between;">
+                                                                    @if ($program->title)
+                                                                        <p class="text-theme-colored2">
+                                                                            {{ $program->title }} </p>
+                                                                    @endif
+                                                                    @if ($program->hours)
+                                                                        <p style="margin-right:7%;"> Heure :
+                                                                            {{ $program->hours }}</p>
+                                                                    @endif
+                                                                </div>
+                                                                <div class="accordion-body">
+                                                                    <div class="accordion-body-content">
+                                                                        {!! $program->description !!}
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         @endif
                                                     @endforeach
-    
-    
-                                                </ul>
-                                                @foreach ($programs as $program)
-                                                    @if ($loop->first)
-                                                    <div class="panel active" id="id{{ $program->id }}">
-                                                        @if ($program->hours)
-                                                            <p><strong>Heure : {{ $program->hours }}</strong></p>
-                                                        @endif
-    
-                                                        <p>{!! $program->description !!}
-                                                        </p>
-                                                    </div>
-                                                    @else
-                                                        <div class="panel" id="id{{ $program->id }}">
-                                                            @if ($program->hours)
-                                                                <p><strong>Heure : {{ $program->hours }}</strong></p>
-                                                            @endif
-    
-                                                            <p>{!! $program->description !!}
-                                                            </p>
-                                                        </div>
-                                                    @endif
-                                                @endforeach
-                                            </div> 
+
+
+                                                </div>
+                                            </div>
+
                                         </div>
                                         <div class="tab-pane fade" id="tab3">
                                             <h4 class="line-bottom-theme-colored2 mb-20">Télécharger</h4>
@@ -422,7 +436,7 @@
                                                             @if (session()->has('success'))
                                                                 <h6 class='alert alert-success' role="alert">
                                                                     Felicitation !! Vous avez postulé à cette formation avec
-                                                                    reiussite , nous vous contacterons très bientôt .
+                                                                    réussite , nous vous contacterons très bientôt .
                                                                 </h6>
                                                             @endif
                                                             <div class="line-bottom-theme-colored2 mb-30"></div>
@@ -605,7 +619,7 @@
 
                                                                     <div class="form-group mb-10">
                                                                         <input name="grade" value="{{ old('grade') }}"
-                                                                            class="form-control" type="text" required>
+                                                                            class="form-control" type="text">
                                                                     </div>
                                                                     @if ($errors->has('grade'))
                                                                         <span
@@ -663,6 +677,89 @@
                                             </ul>
                                         </div>
                                     </div>
+                                    <div class="col-lg-4" style="width:100%;">
+                                        <h3 class="font-28 mt-md-30 mt-0"><span class="text-theme-colored2">Pourquoi </span>Nous?
+                                        </h3>
+                                        <div class="line-bottom-theme-colored2"></div>
+                                        <div class="panel-group accordion-stylished-left-border accordion-icon-filled accordion-no-border accordion-icon-left accordion-icon-filled-theme-colored2 custom-style"
+                                            id="accordion6" role="tablist" aria-multiselectable="true">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading" role="tab" id="headin1">
+                                                    <h6 class="panel-title">
+                                                        <a role="button" data-toggle="collapse" data-parent="#accordion6"
+                                                            href="#collaps1" aria-expanded="true" aria-controls="collaps1">
+                                                            Why Imfundo University is Best?
+                                                        </a>
+                                                    </h6>
+                                                </div>
+                                                <div id="collaps1" class="panel-collapse collapse in" role="tabpanel"
+                                                    aria-labelledby="headin1">
+                                                    <div class="panel-body">
+                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                                        brunch.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading" role="tab" id="heading2">
+                                                    <h6 class="panel-title">
+                                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                                            data-parent="#accordion6" href="#collapse2" aria-expanded="false"
+                                                            aria-controls="collapse2">
+                                                            Why Imfundo University is Best?
+                                                        </a>
+                                                    </h6>
+                                                </div>
+                                                <div id="collapse2" class="panel-collapse collapse" role="tabpanel"
+                                                    aria-labelledby="heading2">
+                                                    <div class="panel-body">
+                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                                        brunch.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading" role="tab" id="heading3">
+                                                    <h6 class="panel-title">
+                                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                                            data-parent="#accordion6" href="#collapse3" aria-expanded="false"
+                                                            aria-controls="collapse3">
+                                                            Why Imfundo University is Best?
+                                                        </a>
+                                                    </h6>
+                                                </div>
+                                                <div id="collapse3" class="panel-collapse collapse" role="tabpanel"
+                                                    aria-labelledby="heading3">
+                                                    <div class="panel-body">
+                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                                        brunch.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading" role="tab" id="heading4">
+                                                    <h6 class="panel-title">
+                                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                                            data-parent="#accordion6" href="#collapse4" aria-expanded="false"
+                                                            aria-controls="collapse4">
+                                                            Why Imfundo University is Best?
+                                                        </a>
+                                                    </h6>
+                                                </div>
+                                                <div id="collapse4" class="panel-collapse collapse" role="tabpanel"
+                                                    aria-labelledby="heading4">
+                                                    <div class="panel-body">
+                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                                        brunch.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
 
                                 </div>
@@ -678,102 +775,100 @@
     </div>
 
     <style>
-        #tab-contents {
-            margin: 0 auto;
-            width: 50vw;
-            margin-top: 14px;
-        }
+        @charset "UTF-8";
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
 
-        .tabs {
-            display: flex;
+        body {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
             padding: 0;
         }
 
-        .tabs li {
-            position: relative;
-            list-style-type: none;
-            transition: all 0.3s ease;
-            margin-right: 10px;
-            padding: 10px 15px;
-            border-radius: 5px;
-            background-color: #dfdfdf;
-            cursor: pointer;
+        .container-block {
+            max-width: 1320px;
+            margin: 0 auto;
+        }
+
+        .accordion {
+            margin-top: 1.875rem;
+        }
+
+        .accordion .accordion-item {
+            background-color: white;
+            color: #1b1d21;
+            border-radius: 0.5rem;
+            border: 1px solid #f7f7f7;
+            margin-bottom: 1.875rem;
+        }
+
+        .accordion .accordion-item.active {
+            box-shadow: 0 0.0625rem 0.9375rem 0 rgba(27, 29, 33, 0.15);
+        }
+
+        .accordion .accordion-item.active .accordion-body {
+            max-height: max-content;
+        }
+
+        .accordion .accordion-item.active .accordion-header::after {
+            transform: rotate(90deg);
+        }
+
+        .accordion .accordion-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .accordion .accordion-item .accordion-header {
+            padding: 1.5625rem;
+            font-size: 1.125rem;
             font-weight: 500;
+            display: flex;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
         }
 
-        .tabs li:hover {
-            background-color: #e9e9e9;
-            color: #F88147;
-        }
-
-        .tabs li:hover::before {
-            visibility: visible;
-            width: 100%;
-        }
-
-        .tabs li.active {
-            background-color: #F88147;
-            color: #eee;
-        }
-
-        .tabs li::before {
-            content: "";
+        .accordion .accordion-item .accordion-header::after {
+            content: "";
+            font-size: 2rem;
+            font-family: "FontAwesome";
             position: absolute;
-            visibility: hidden;
-            transform: translateX(-50%);
-            transition: all 0.3s ease;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 3px;
-            border-radius: 0 0 5px 5px;
-            background-color: #F88147;
+            right: 1.5rem;
+            transition: all 0.2s ease-in-out;
+            transform: rotate(0deg);
         }
 
-        .panel {
-            display: none;
-            transition: all 1s ease;
-            border: 1px solid #dfdfdf;
-            border-radius: 5px;
-            padding: 0 15px;
+        .accordion .accordion-item .accordion-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
         }
 
-        .panel.active {
-            display: block;
-            animation: fadeIn 1s;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
+        .accordion .accordion-item .accordion-body .accordion-body-content {
+            padding: 0 1.5rem 1.5rem;
+            font-size: 0.875rem;
+            line-height: 2rem;
         }
     </style>
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const tabs = document.querySelector(".tabs");
-            const lis = document.querySelectorAll(".tabs li");
-            const panels = document.querySelectorAll(".panel");
+        const accSingleTriggers = document.querySelectorAll(".accordion-header");
 
-            tabs.addEventListener("click", (e) => {
-                if (e.target.tagName == "LI") {
-                    Array.from(lis).forEach((li) => {
-                        li == e.target ? li.classList.add("active") : li.classList.remove("active");
-                    });
+        accSingleTriggers.forEach((trigger) =>
+            trigger.addEventListener("click", toggleAccordion)
+        );
 
-                    let targetPanel = document.querySelector(e.target.dataset.target);
-                    Array.from(panels).forEach((panel) => {
-                        panel == targetPanel ?
-                            panel.classList.add("active") :
-                            panel.classList.remove("active");
-                    });
+        function toggleAccordion() {
+            const items = document.querySelectorAll(".accordion-item");
+            const thisItem = this.parentNode;
+
+            items.forEach((item) => {
+                if (thisItem == item) {
+                    thisItem.classList.toggle("active");
+                    return;
                 }
+                item.classList.remove("active");
             });
-        });
+        }
+
         let getCountries = document.getElementById('countries');
         let getProvinces = document.getElementById('provinces');
         let getProvince = document.getElementById('province');

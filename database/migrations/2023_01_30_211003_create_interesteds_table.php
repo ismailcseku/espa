@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('province');
             $table->string('level');
             $table->string('phone');
-            $table->string('grade');
+            $table->string('grade')->default(' ');
             $table->string('accepted');
             $table->foreignId("course_id");
             $table->foreign('course_id')->references('id')->on('courses')->onDelete('cascade');

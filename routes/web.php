@@ -35,11 +35,12 @@ Route::get('/contact', [ContactController::class, 'create'])->name('contact.crea
 Route::post('/contact/post', [ContactController::class, 'store'])->name('contact.store');
 Route::resource('/blog', BlogController::class);
 Route::get('/categories-blog/{id}', [CategoryBlogController::class, '__invoke'])->name('categoryblog.show');
-
+Route::get('/evenement', [EvenementController::class, 'index'])->name('evenement.index');
+Route::get('/evenement/{id}', [EvenementController::class, 'show'])->name('evenement.show');
+Route::post('/evenement/{id}', [EvenementController::class, 'signIn'])->name('evenement.signin');
 
 
 Route::get('/about', [AboutController::class, '__invoke'])->name('about.index');
-Route::get('/evenement', [EvenementController::class, '__invoke'])->name('evenement.index');
 Route::get('/responsable', [ResponsableController::class, '__invoke'])->name('responsable.index');
 Route::get('/responsable', [ResponsableController::class, '__invoke'])->name('responsable.index');
 Route::get('/media', [MediaController::class, '__invoke'])->name('media.index');

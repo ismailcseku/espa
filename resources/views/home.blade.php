@@ -480,7 +480,7 @@
                                         </div>
                                         <div class="event-content pt-5">
                                             <h5 class="media-heading font-16 mb-5"><a class="font-weight-600"
-                                                    href="{{ route('evenement.index') }}">{{ $evenement->title }}</a>
+                                                    href="{{ route('evenement.show',$evenement->id) }}">{{ $evenement->title }}</a>
                                             </h5>
                                             <span class="mr-10"><i class="fa fa-clock-o text-theme-colored2"></i>
                                                 @php
@@ -645,113 +645,58 @@
 
     <!-- Section: team -->
     <!--
-                                                                    <section id="team">
-                                                                        <div class="container">
-                                                                            <div class="section-title mb-40">
-                                                                                <div class="row">
-                                                                                    <div class="col-md-12">
-                                                                                        <h2 class="title text-uppercase mb-5">Nos <span
-                                                                                                class="text-theme-colored2">responsables</span>
-                                                                                        </h2>
-                                                                                        <h5 class="font-16 text-gray-darkgray mt-5">Discuter avec un responsable</h5>
+                                                                        <section id="team">
+                                                                            <div class="container">
+                                                                                <div class="section-title mb-40">
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-12">
+                                                                                            <h2 class="title text-uppercase mb-5">Nos <span
+                                                                                                    class="text-theme-colored2">responsables</span>
+                                                                                            </h2>
+                                                                                            <h5 class="font-16 text-gray-darkgray mt-5">Discuter avec un responsable</h5>
+                                                                                        </div>
                                                                                     </div>
                                                                                 </div>
-                                                                            </div>
-                                                                            <div class="section-content">
-                                                                                <div class="row">
-                                                                                    @foreach ($responsables as $responsable)
+                                                                                <div class="section-content">
+                                                                                    <div class="row">
+                                                                                        @foreach ($responsables as $responsable)
     <div class="col-xs-12 col-sm-6 col-md-6">
-                                                                                            <div class="team-members mb-40">
-                                                                                                <div class="team-thumb pull-left team-pull-none flip mr-sm-0 t-mr-0">
-                                                                                                    <img src="{{ url('storage') }}/{{ $responsable->photo }}" alt=""
-                                                                                                        class="img-fullwidth">
-                                                                                                </div>
-                                                                                                <div class="team-bottom-part border-1px p-15">
-                                                                                                    <h4 class="text-uppercase m-0 pb-5">{{ $responsable->name }}
-                                                                                                        {{ $responsable->surname }}</h4>
-                                                                                                    <h6 class="font-13 text-gray mt-0">{{ $responsable->poste }}</h6>
-                                                                                                    <ul class="list-inline mt-15">
-                                                                                                        <li class="m-0 pr-10"> <i class="fa fa-phone text-theme-colored2 mr-5"></i>
-                                                                                                            <span class="text-gray" href="#">{{ $responsable->phone }}</span>
-                                                                                                        </li>
-                                                                                                        <li class="m-0 pr-10"> <i
-                                                                                                                class="fa fa-envelope-o text-theme-colored2 mr-5"></i>
-                                                                                                            <a class="text-gray"
-                                                                                                                href="mailto:{{ $responsable->email }}">{{ $responsable->email }}</a>
-                                                                                                        </li>
+                                                                                                <div class="team-members mb-40">
+                                                                                                    <div class="team-thumb pull-left team-pull-none flip mr-sm-0 t-mr-0">
+                                                                                                        <img src="{{ url('storage') }}/{{ $responsable->photo }}" alt=""
+                                                                                                            class="img-fullwidth">
+                                                                                                    </div>
+                                                                                                    <div class="team-bottom-part border-1px p-15">
+                                                                                                        <h4 class="text-uppercase m-0 pb-5">{{ $responsable->name }}
+                                                                                                            {{ $responsable->surname }}</h4>
+                                                                                                        <h6 class="font-13 text-gray mt-0">{{ $responsable->poste }}</h6>
+                                                                                                        <ul class="list-inline mt-15">
+                                                                                                            <li class="m-0 pr-10"> <i class="fa fa-phone text-theme-colored2 mr-5"></i>
+                                                                                                                <span class="text-gray" href="#">{{ $responsable->phone }}</span>
+                                                                                                            </li>
+                                                                                                            <li class="m-0 pr-10"> <i
+                                                                                                                    class="fa fa-envelope-o text-theme-colored2 mr-5"></i>
+                                                                                                                <a class="text-gray"
+                                                                                                                    href="mailto:{{ $responsable->email }}">{{ $responsable->email }}</a>
+                                                                                                            </li>
 
-                                                                                                    </ul>
+                                                                                                        </ul>
 
+                                                                                                    </div>
                                                                                                 </div>
                                                                                             </div>
-                                                                                        </div>
     @endforeach
 
-                                                                                </div>
+                                                                                    </div>
 
-                                                                            </div>
-                                                                        </div>
-                                                                    </section>
-                                                                -->
-    <!--
-                                                                    
-                                                                    <section class="parallax divider layer-overlay overlay-dark-7"
-                                                                        data-bg-img="{{ asset('images/details_course.jpeg') }}" data-parallax-ratio="0.4">
-                                                                        <div class="container pt-80 pb-90">
-                                                                            <div class="row">
-                                                                                <div class="col-md-8 col-md-offset-2 text-center">
-                                                                                    <a href="https://www.youtube.com/watch?v=kt-4lJs_8fE" data-lightbox-gallery="youtube-video"><img
-                                                                                            src="images/play-button/s11.png" alt=""></a>
-                                                                                    <h3 class="text-white font-38 font-weight-700 mt-10 mb-0">Notre <span
-                                                                                            class="text-theme-colored2"> Newsletters</span> </h3>
-                                                                                    Mailchimp Subscription Form
-                                                                                    <form id="mailchimp-subscription-form2" class="newsletter-form max-width-535 mt-10">
-                                                                                        <label for="mce-EMAIL"></label>
-                                                                                        <div class="input-group">
-                                                                                            <input type="email" id="mce-EMAIL" data-height="45px" class="form-control input-lg"
-                                                                                                placeholder="Votre email" name="EMAIL" value="">
-                                                                                            <span class="input-group-btn">
-                                                                                                <button type="submit" class="btn btn-colored btn-theme-colored2 btn-lg m-0"
-                                                                                                    data-height="45px">Soumettre</button>
-                                                                                            </span>
-                                                                                        </div>
-                                                                                    </form>
-                                                                                    Mailchimp Subscription Form Validation
-                                                                                    <script>
-                                                                                        $('#mailchimp-subscription-form2').ajaxChimp({
-                                                                                            callback: mailChimpCallBack,
-                                                                                            url: '//thememascot.us9.list-manage.com/subscribe/post?u=a01f440178e35febc8cf4e51f&amp;id=49d6d30e1e'
-                                                                                        });
-
-
-
-                                                                                        function mailChimpCallBack(resp) {
-                                                                                            // Hide any previous response text
-                                                                                            var $mailchimpform = $('#mailchimp-subscription-form2'),
-                                                                                                $response = '';
-                                                                                            $mailchimpform.children(".alert").remove();
-                                                                                            if (resp.result === 'success') {
-                                                                                                $response =
-                                                                                                    '<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
-                                                                                                    resp.msg + '</div>';
-                                                                                            } else if (resp.result === 'error') {
-                                                                                                $response =
-                                                                                                    '<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
-                                                                                                    resp.msg + '</div>';
-                                                                                            }
-                                                                                            $mailchimpform.prepend($response);
-                                                                                        }
-                                                                                        $(document).ready(function() {
-                                                                                            setTimeout(() => {
-                                                                                                $('#first_element').click()
-                                                                                            }, 500);
-                                                                                        })
-                                                                                    </script>
                                                                                 </div>
                                                                             </div>
-                                                                        </div>
-                                                                    </section>
-                                                                -->
+                                                                        </section>
+                                                                    -->
+
+
+
+
 
 
 
@@ -778,23 +723,52 @@
                                         $getMonth = date('F', strtotime($evenement->start_at));
                                         $getDays = date('d', strtotime($evenement->start_at));
                                     @endphp
-                                    <div class="post-date"><span>{{$getDays}} </span><br> {{$getMonth}}</div>
+                                    <div class="post-date"><span>{{ $getDays }} </span><br> {{ $getMonth }}
+                                    </div>
 
                                 </div>
                                 <div class="post-description border-1px p-20">
                                     <a href="#">
-                                        <h3 class="post-title font-weight-600 mt-0 mb-15">{{$blog->title}}</h3>
+                                        <h3 class="post-title font-weight-600 mt-0 mb-15">{{ $blog->title }}</h3>
                                     </a>
-                                    <p>{{$blog->description}} [...]</p>
+                                    <p>{{ $blog->description }} [...]</p>
                                 </div>
                                 <div class="post-meta">
-                                    
-                                    <a href="{{route('blog.show',$blog->id)}}"
-                                        class="text-theme-colored2 font-14 text-gray-darkgray pull-right flip">Lire plus </a>
+
+                                    <a href="{{ route('blog.show', $blog->id) }}"
+                                        class="text-theme-colored2 font-14 text-gray-darkgray pull-right flip">Lire plus
+                                    </a>
                                 </div>
                             </article>
                         </div>
                     @endforeach
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="parallax divider layer-overlay overlay-dark-7"
+        data-bg-img="{{ asset('images/details_course.jpeg') }}" data-parallax-ratio="0.4">
+        <div class="container pt-80 pb-90">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <a href="https://www.youtube.com/watch?v=kt-4lJs_8fE" data-lightbox-gallery="youtube-video"><img
+                            src="images/play-button/s11.png" alt=""></a>
+                    <h3 class="text-white font-38 font-weight-700 mt-10 mb-0">Inscrivez-nous <span
+                            class="text-theme-colored2"> à notre newsletter</span> </h3>
+                    Rejoignez-nous
+                    <form id="mailchimp-subscription-form2" class="newsletter-form max-width-535 mt-10">
+                        <label for="mce-EMAIL"></label>
+                        <div class="input-group">
+                            <input type="email" id="mce-EMAIL" data-height="45px" class="form-control input-lg"
+                                placeholder="Votre email" name="EMAIL" value="">
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-colored btn-theme-colored2 btn-lg m-0"
+                                    data-height="45px">Soumettre</button>
+                            </span>
+                        </div>
+                    </form>
 
                 </div>
             </div>
