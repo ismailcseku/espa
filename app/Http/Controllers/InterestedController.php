@@ -27,8 +27,10 @@ class InterestedController extends Controller
             'surname'=>['required','string','max:100','min:2'],
             'email'=>['required','email'],
             'birth'=>['required','date','before:tomorrow'],
+            'country'=>['required','string'],
             'province'=>['string'],
             'phone'=>['required','string'],
+            'level'=>['required','string'],
             'grade'=>['required','string'],
             'accepted'=>['required','string'],
         ]);  
