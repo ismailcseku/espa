@@ -16,7 +16,7 @@ class InterestedController extends Controller
      * Handle the incoming request.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Response 
      */
     public function __invoke(Request $request ,int $id)
     {
@@ -27,7 +27,7 @@ class InterestedController extends Controller
             'surname'=>['required','string','max:100','min:2'],
             'email'=>['required','email'],
             'birth'=>['required','date','before:tomorrow'],
-          
+           
             'level'=>['required','string',Rule::in(Levels::getting())],
             'grade'=>['required','string'],
             'accepted'=>['required','string'],
