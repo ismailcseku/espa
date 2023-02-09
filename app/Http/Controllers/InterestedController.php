@@ -27,7 +27,9 @@ class InterestedController extends Controller
             'surname'=>['required','string','max:100','min:2'],
             'email'=>['required','email'],
             'birth'=>['required','date','before:tomorrow'],
-            
+            'province'=>['string'],
+            'phone'=>['required','string'],
+            'level'=>['required','string',Rule::in(Levels::getting())],
             'grade'=>['required','string'],
             'accepted'=>['required','string'],
         ]);  
