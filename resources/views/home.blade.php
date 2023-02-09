@@ -240,6 +240,8 @@
     <!-- Section Choose Course -->
 
 
+
+
     <!-- Section: Courses -->
 
 
@@ -261,7 +263,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <!-- Works Filter -->
-                                <div class="portfolio-filter font-alt align-center">
+                                <div class="portfolio-filter font-alt align-center" >
 
                                     <a class="active" id="first_element" href="#select0" data-filter=".select0">Tous</a>
                                     @foreach ($degrees as $degree)
@@ -274,88 +276,93 @@
                                 <div id="grid"
                                     class="gallery-isotope default-animation-effect grid-4 gutter clearfix">
 
-                                    <div class="gallery-item select0 section-content" style="width:100%;">
-                                        <div class="row ">
-                                            <div class="col-md-12 ">
-                                                <div class="owl-carousel-3col owl-nav-top" data-nav="tru">
-                                                    @foreach ($courses as $course)
-                                                        <a href="{{ route('course.details', $course->id) }}"
-                                                            class="item">
-                                                            <div class="course-single-item bg-white border-1px clearfix">
-                                                                <div class="course-thumb ">
-                                                                    <img class="img-fullwidth" alt=""
-                                                                        src="{{ url('storage') }}/{{ $course->photo }}">
-                                                                </div>
-                                                                <div class="course-details clearfix p-20 pt-15">
-                                                                    <div class="course-top-part">
-                                                                        <a
-                                                                            href="{{ route('course.details', $course->id) }}">
-                                                                            <h4 class="mt-5 mb-5">
-                                                                                {{ $course->name }}</h4>
-                                                                        </a>
+                                    <div class="gallery-item select0 section-content " style="width:100%;">
+                                                    <div class="row" style="margin-top:20%; ">
+                                                        <div  class=" col-md-12">
+                                                            <div class="owl-carousel-3col owl-nav-top" data-nav="tru">
+                                                                @foreach ($courses as $course)
+                                                                    <div class="item">
+                                                                        <div
+                                                                            class="course-single-item bg-white border-1px clearfix">
+                                                                            <a href="{{ route('course.details', $course->id) }}" class="course-thumb">
+                                                                                <img class="img-fullwidth" alt=""
+                                                                                    src="{{ url('storage') }}/{{ $course->photo }}">
 
-                                                                        <a
-                                                                            href="{{ route('course.details', $course->id) }}">
-                                                                            <h4 class="mt-5 mb-5">
-                                                                                {{ $course->degrees_name }}
-                                                                            </h4>
-                                                                        </a>
-                                                                    </div>
-                                                                    <a
-                                                                        href="{{ route('course.details', $course->id) }}"class="course-description mt-15 mb-0">
-                                                                        <span> {!! $course->description !!}</span><span
-                                                                            style="color:orange ; opacity:0.8; font-weight:bold;">
-                                                                            . . . Lire plus </span>
-                                                                    </a>
-                                                                    <div class="author-thumb">
-                                                                        <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
-                                                                            alt="" class="img-circle">
-                                                                    </div>
-                                                                </div>
-                                                                <a href="{{ route('course.details', $course->id) }}"
-                                                                    style="display: block" class="course-meta">
-                                                                    <ul class="list-inline">
-                                                                        <li><i class="ficon-clock font-18"></i>
-                                                                            {{ $course->duration }} Mois
+                                                                            </a>
+                                                                            <div
+                                                                                class="course-details clearfix p-20 pt-15">
+                                                                                <div class="course-top-part">
+                                                                                    <a
+                                                                                        href="{{ route('course.details', $course->id) }}">
+                                                                                        <h4 class="mt-5 mb-5">
+                                                                                            {{ $course->name }}</h4>
+                                                                                    </a>
 
-                                                                        </li>
-                                                                        <li>
-                                                                            <i class="pe-7s-notebook font-18"></i>
-                                                                            {{ $course->languages_name }}
-                                                                        </li>
-                                                                    </ul>
-                                                                    <div class="course-tag">
-
-                                                                        <h5>Détail</h5>
+                                                                                    <a
+                                                                                        href="{{ route('course.details', $course->id) }}">
+                                                                                        <h4 class="mt-5 mb-5">
+                                                                                            {{ $course->degrees_name }}
+                                                                                        </h4>
+                                                                                    </a>
+                                                                                </div>
+                                                                                <a
+                                                                                    href="{{ route('course.details', $course->id) }}"class="course-description mt-15 mb-0">
+                                                                                    <span>
+                                                                                        {!! $course->description !!}</span><span
+                                                                                        style="color:orange ; opacity:0.8; font-weight:bold;">
+                                                                                        . . . Lire plus </span>
+                                                                                </a>
+                                                                                <div class="author-thumb">
+                                                                                    <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
+                                                                                        alt="" class="img-circle">
+                                                                                </div>
+                                                                            </div>
+                                                                            <a href="{{ route('course.details', $course->id) }}"
+                                                                                style="display: block" class="course-meta">
+                                                                                <ul class="list-inline">
+                                                                                    <li><i class="ficon-clock font-18"></i>
+                                                                                        {{ $course->duration }} Mois
+                
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <i class="pe-7s-notebook font-18"></i>
+                                                                                        {{ $course->languages_name }}
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <div class="course-tag">
+                
+                                                                                    <h5>Détail</h5>
+                                                                                </div>
+                                                                            </a>
+                                                                        </div>
                                                                     </div>
-                                                                </a>
+                                                                @endforeach
+
+
                                                             </div>
-                                                        </a>
-                                                    @endforeach
-
-                                                </div>
-                                            </div>
-                                        </div>
+                                                        </div>
+                                                    </div>
                                     </div>
 
 
                                     @foreach ($degrees as $degree)
                                         <div class="gallery-item select{{ $degree->id }} section-content"
+                                            id="grid"
                                             style="width:100%;">
-                                            <div class="row">
+                                            <div class="row" style="margin-top:20%; ">
                                                 <div class="col-md-12">
                                                     <div class="owl-carousel-3col owl-nav-top" data-nav="tru">
                                                         @foreach ($courses as $course)
                                                             @if ($course->degrees_id == $degree->id)
-                                                                <a href="{{ route('course.details', $course->id) }}"
-                                                                    class="item">
+                                                                <div 
+                                                                    class="item" >
                                                                     <div
                                                                         class="course-single-item bg-white border-1px clearfix">
-                                                                        <div class="course-thumb ">
+                                                                        <a href="{{ route('course.details', $course->id) }}" class="course-thumb ">
                                                                             <img class="img-fullwidth" alt=""
                                                                                 src="{{ url('storage') }}/{{ $course->photo }}">
 
-                                                                        </div>
+                                                                        </a>
                                                                         <div class="course-details clearfix p-20 pt-15">
                                                                             <div class="course-top-part">
 
@@ -401,7 +408,7 @@
                                                                             </div>
                                                                         </a>
                                                                     </div>
-                                                                </a>
+                                                                </div>
                                                             @endif
                                                         @endforeach
 
@@ -424,6 +431,8 @@
 
         </div>
     </section>
+
+
 
 
 
@@ -480,7 +489,7 @@
                                         </div>
                                         <div class="event-content pt-5">
                                             <h5 class="media-heading font-16 mb-5"><a class="font-weight-600"
-                                                    href="{{ route('evenement.show',$evenement->id) }}">{{ $evenement->title }}</a>
+                                                    href="{{ route('evenement.show', $evenement->id) }}">{{ $evenement->title }}</a>
                                             </h5>
                                             <span class="mr-10"><i class="fa fa-clock-o text-theme-colored2"></i>
                                                 @php
@@ -645,54 +654,54 @@
 
     <!-- Section: team -->
     <!--
-                                                                        <section id="team">
-                                                                            <div class="container">
-                                                                                <div class="section-title mb-40">
-                                                                                    <div class="row">
-                                                                                        <div class="col-md-12">
-                                                                                            <h2 class="title text-uppercase mb-5">Nos <span
-                                                                                                    class="text-theme-colored2">responsables</span>
-                                                                                            </h2>
-                                                                                            <h5 class="font-16 text-gray-darkgray mt-5">Discuter avec un responsable</h5>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="section-content">
-                                                                                    <div class="row">
-                                                                                        @foreach ($responsables as $responsable)
+                                                                                                                        <section id="team">
+                                                                                                                            <div class="container">
+                                                                                                                                <div class="section-title mb-40">
+                                                                                                                                    <div class="row">
+                                                                                                                                        <div class="col-md-12">
+                                                                                                                                            <h2 class="title text-uppercase mb-5">Nos <span
+                                                                                                                                                    class="text-theme-colored2">responsables</span>
+                                                                                                                                            </h2>
+                                                                                                                                            <h5 class="font-16 text-gray-darkgray mt-5">Discuter avec un responsable</h5>
+                                                                                                                                        </div>
+                                                                                                                                    </div>
+                                                                                                                                </div>
+                                                                                                                                <div class="section-content">
+                                                                                                                                    <div class="row">
+                                                                                                                                        @foreach ($responsables as $responsable)
     <div class="col-xs-12 col-sm-6 col-md-6">
-                                                                                                <div class="team-members mb-40">
-                                                                                                    <div class="team-thumb pull-left team-pull-none flip mr-sm-0 t-mr-0">
-                                                                                                        <img src="{{ url('storage') }}/{{ $responsable->photo }}" alt=""
-                                                                                                            class="img-fullwidth">
-                                                                                                    </div>
-                                                                                                    <div class="team-bottom-part border-1px p-15">
-                                                                                                        <h4 class="text-uppercase m-0 pb-5">{{ $responsable->name }}
-                                                                                                            {{ $responsable->surname }}</h4>
-                                                                                                        <h6 class="font-13 text-gray mt-0">{{ $responsable->poste }}</h6>
-                                                                                                        <ul class="list-inline mt-15">
-                                                                                                            <li class="m-0 pr-10"> <i class="fa fa-phone text-theme-colored2 mr-5"></i>
-                                                                                                                <span class="text-gray" href="#">{{ $responsable->phone }}</span>
-                                                                                                            </li>
-                                                                                                            <li class="m-0 pr-10"> <i
-                                                                                                                    class="fa fa-envelope-o text-theme-colored2 mr-5"></i>
-                                                                                                                <a class="text-gray"
-                                                                                                                    href="mailto:{{ $responsable->email }}">{{ $responsable->email }}</a>
-                                                                                                            </li>
+                                                                                                                                                <div class="team-members mb-40">
+                                                                                                                                                    <div class="team-thumb pull-left team-pull-none flip mr-sm-0 t-mr-0">
+                                                                                                                                                        <img src="{{ url('storage') }}/{{ $responsable->photo }}" alt=""
+                                                                                                                                                            class="img-fullwidth">
+                                                                                                                                                    </div>
+                                                                                                                                                    <div class="team-bottom-part border-1px p-15">
+                                                                                                                                                        <h4 class="text-uppercase m-0 pb-5">{{ $responsable->name }}
+                                                                                                                                                            {{ $responsable->surname }}</h4>
+                                                                                                                                                        <h6 class="font-13 text-gray mt-0">{{ $responsable->poste }}</h6>
+                                                                                                                                                        <ul class="list-inline mt-15">
+                                                                                                                                                            <li class="m-0 pr-10"> <i class="fa fa-phone text-theme-colored2 mr-5"></i>
+                                                                                                                                                                <span class="text-gray" href="#">{{ $responsable->phone }}</span>
+                                                                                                                                                            </li>
+                                                                                                                                                            <li class="m-0 pr-10"> <i
+                                                                                                                                                                    class="fa fa-envelope-o text-theme-colored2 mr-5"></i>
+                                                                                                                                                                <a class="text-gray"
+                                                                                                                                                                    href="mailto:{{ $responsable->email }}">{{ $responsable->email }}</a>
+                                                                                                                                                            </li>
 
-                                                                                                        </ul>
+                                                                                                                                                        </ul>
 
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
+                                                                                                                                                    </div>
+                                                                                                                                                </div>
+                                                                                                                                            </div>
     @endforeach
 
-                                                                                    </div>
+                                                                                                                                    </div>
 
-                                                                                </div>
-                                                                            </div>
-                                                                        </section>
-                                                                    -->
+                                                                                                                                </div>
+                                                                                                                            </div>
+                                                                                                                        </section>
+                                                                                                                    -->
 
 
 
@@ -787,6 +796,24 @@
         setTimeout(() => {
             btn.click()
         }, 1000);
+        const tabs = document.querySelectorAll("[data-target]"),
+            tabContents = document.querySelectorAll("[data-content]");
+
+        tabs.forEach((tab) => {
+            tab.addEventListener("click", () => {
+                const target = document.querySelector(tab.dataset.target);
+
+                tabContents.forEach((tc) => {
+                    tc.classList.remove("is-active");
+                });
+                target.classList.add("is-active");
+
+                tabs.forEach((t) => {
+                    t.classList.remove("is-active");
+                });
+                tab.classList.add("is-active");
+            });
+        });
     </script>
 
 

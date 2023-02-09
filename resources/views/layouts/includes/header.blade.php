@@ -165,7 +165,7 @@
                                         style="padding: 10px 10px 10px 10px;">Formations</a>
                                     <ul class="dropdown">
                                         <li>
-                                            <a href="{{ route('degree.show', 'Ingénieur d’État en Agronomie') }}">Ingénieur
+                                            <a href="{{ route('degree.show', 'Ingénieur d’État') }}">Ingénieur
                                                 d’État en Agronomie</a>
                                             <ul class="dropdown">
                                                 <li><a
