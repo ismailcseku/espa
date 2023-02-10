@@ -738,7 +738,7 @@
                                 </div>
                                 <div class="post-description border-1px p-20">
                                     <a href="{{ route('blog.show', $blog->id) }}">
-                                        <h3 class="post-title font-weight-600 mt-0 mb-15">{{ $blog->title }}</h3>
+                                        <h3 class="post-title font-weight-600 mt-0 mb-15" style="word-break: break-word;">{{ $blog->title }}</h3>
                                     </a>
                                     <p>{{ $blog->description }} [...]</p>
                                 </div>
