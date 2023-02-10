@@ -10,6 +10,7 @@ use App\Http\Controllers\DegreeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EvenementController;
 use App\Http\Controllers\InterestedController;
+use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\ResponsableController;
 use App\Http\Controllers\CategoryBlogController;
 
@@ -38,6 +39,7 @@ Route::get('/categories-blog/{id}', [CategoryBlogController::class, '__invoke'])
 Route::get('/evenement', [EvenementController::class, 'index'])->name('evenement.index');
 Route::get('/evenement/{id}', [EvenementController::class, 'show'])->name('evenement.show');
 Route::post('/evenement/{id}', [EvenementController::class, 'signIn'])->name('evenement.signin');
+Route::post('/newsletter', [NewsletterController::class, 'store'])->name('newsletter.store');
 
 
 Route::get('/about', [AboutController::class, '__invoke'])->name('about.index');

@@ -18,9 +18,11 @@ use Laravel\Nova\Nova;
 use App\Nova\Evenement;
 use App\Nova\Curriculum;
 use App\Nova\Interested;
+use App\Nova\Newsletter;
 use App\Nova\Responsable;
 use App\Nova\CategoryBlog;
 use App\Nova\TrainingType;
+use App\Nova\MessageNewsletter;
 use Laravel\Nova\Menu\MenuItem;
 use App\Nova\EvenementInterested;
 use Laravel\Nova\Dashboards\Main;
@@ -80,6 +82,10 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                         MenuItem::resource(CategoryBlog::class),
                         MenuItem::resource(Blog::class),
                     ])->collapsable(),
+                    MenuSection::make('newsletter', [
+                        MenuItem::resource(Newsletter::class),
+                        MenuItem::resource(MessageNewsletter::class),
+                    ])->icon('mail')->collapsable(),
                     MenuItem::resource(User::class),
 
                   

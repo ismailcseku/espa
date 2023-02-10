@@ -263,7 +263,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <!-- Works Filter -->
-                                <div class="portfolio-filter font-alt align-center" >
+                                <div class="portfolio-filter font-alt align-center">
 
                                     <a class="active" id="first_element" href="#select0" data-filter=".select0">Tous</a>
                                     @foreach ($degrees as $degree)
@@ -277,88 +277,86 @@
                                     class="gallery-isotope default-animation-effect grid-4 gutter clearfix">
 
                                     <div class="gallery-item select0 section-content " style="width:100%;">
-                                                    <div class="row" style="margin-top:20%; ">
-                                                        <div  class=" col-md-12">
-                                                            <div class="owl-carousel-3col owl-nav-top" data-nav="tru">
-                                                                @foreach ($courses as $course)
-                                                                    <div class="item">
-                                                                        <div
-                                                                            class="course-single-item bg-white border-1px clearfix">
-                                                                            <a href="{{ route('course.details', $course->id) }}" class="course-thumb">
-                                                                                <img class="img-fullwidth" alt=""
-                                                                                    src="{{ url('storage') }}/{{ $course->photo }}">
+                                        <div class="row" style="margin-top:20%; ">
+                                            <div class=" col-md-12">
+                                                <div class="owl-carousel-3col owl-nav-top" data-nav="tru">
+                                                    @foreach ($courses as $course)
+                                                        <div class="item">
+                                                            <div class="course-single-item bg-white border-1px clearfix">
+                                                                <a href="{{ route('course.details', $course->id) }}"
+                                                                    class="course-thumb">
+                                                                    <img class="img-fullwidth" alt=""
+                                                                        src="{{ url('storage') }}/{{ $course->photo }}">
 
-                                                                            </a>
-                                                                            <div
-                                                                                class="course-details clearfix p-20 pt-15">
-                                                                                <div class="course-top-part">
-                                                                                    <a
-                                                                                        href="{{ route('course.details', $course->id) }}">
-                                                                                        <h4 class="mt-5 mb-5">
-                                                                                            {{ $course->name }}</h4>
-                                                                                    </a>
+                                                                </a>
+                                                                <div class="course-details clearfix p-20 pt-15">
+                                                                    <div class="course-top-part">
+                                                                        <a
+                                                                            href="{{ route('course.details', $course->id) }}">
+                                                                            <h4 class="mt-5 mb-5">
+                                                                                {{ $course->name }}</h4>
+                                                                        </a>
 
-                                                                                    <a
-                                                                                        href="{{ route('course.details', $course->id) }}">
-                                                                                        <h4 class="mt-5 mb-5">
-                                                                                            {{ $course->degrees_name }}
-                                                                                        </h4>
-                                                                                    </a>
-                                                                                </div>
-                                                                                <a
-                                                                                    href="{{ route('course.details', $course->id) }}"class="course-description mt-15 mb-0">
-                                                                                    <span>
-                                                                                        {!! $course->description !!}</span><span
-                                                                                        style="color:orange ; opacity:0.8; font-weight:bold;">
-                                                                                        . . . Lire plus </span>
-                                                                                </a>
-                                                                                <div class="author-thumb">
-                                                                                    <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
-                                                                                        alt="" class="img-circle">
-                                                                                </div>
-                                                                            </div>
-                                                                            <a href="{{ route('course.details', $course->id) }}"
-                                                                                style="display: block" class="course-meta">
-                                                                                <ul class="list-inline">
-                                                                                    <li><i class="ficon-clock font-18"></i>
-                                                                                        {{ $course->duration }} Mois
-                
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <i class="pe-7s-notebook font-18"></i>
-                                                                                        {{ $course->languages_name }}
-                                                                                    </li>
-                                                                                </ul>
-                                                                                <div class="course-tag">
-                
-                                                                                    <h5>Détail</h5>
-                                                                                </div>
-                                                                            </a>
-                                                                        </div>
+                                                                        <a
+                                                                            href="{{ route('course.details', $course->id) }}">
+                                                                            <h4 class="mt-5 mb-5">
+                                                                                {{ $course->degrees_name }}
+                                                                            </h4>
+                                                                        </a>
                                                                     </div>
-                                                                @endforeach
+                                                                    <a
+                                                                        href="{{ route('course.details', $course->id) }}"class="course-description mt-15 mb-0">
+                                                                        <span>
+                                                                            {!! $course->description !!}</span><span
+                                                                            style="color:orange ; opacity:0.8; font-weight:bold;">
+                                                                            . . . Lire plus </span>
+                                                                    </a>
+                                                                    <div class="author-thumb">
+                                                                        <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
+                                                                            alt="" class="img-circle">
+                                                                    </div>
+                                                                </div>
+                                                                <a href="{{ route('course.details', $course->id) }}"
+                                                                    style="display: block" class="course-meta">
+                                                                    <ul class="list-inline">
+                                                                        <li><i class="ficon-clock font-18"></i>
+                                                                            {{ $course->duration }} Mois
 
+                                                                        </li>
+                                                                        <li>
+                                                                            <i class="pe-7s-notebook font-18"></i>
+                                                                            {{ $course->languages_name }}
+                                                                        </li>
+                                                                    </ul>
+                                                                    <div class="course-tag">
 
+                                                                        <h5>Détail</h5>
+                                                                    </div>
+                                                                </a>
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                    @endforeach
+
+
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
 
 
                                     @foreach ($degrees as $degree)
                                         <div class="gallery-item select{{ $degree->id }} section-content"
-                                            id="grid"
-                                            style="width:100%;">
+                                            id="grid" style="width:100%;">
                                             <div class="row" style="margin-top:20%; ">
                                                 <div class="col-md-12">
                                                     <div class="owl-carousel-3col owl-nav-top" data-nav="tru">
                                                         @foreach ($courses as $course)
                                                             @if ($course->degrees_id == $degree->id)
-                                                                <div 
-                                                                    class="item" >
+                                                                <div class="item">
                                                                     <div
                                                                         class="course-single-item bg-white border-1px clearfix">
-                                                                        <a href="{{ route('course.details', $course->id) }}" class="course-thumb ">
+                                                                        <a href="{{ route('course.details', $course->id) }}"
+                                                                            class="course-thumb ">
                                                                             <img class="img-fullwidth" alt=""
                                                                                 src="{{ url('storage') }}/{{ $course->photo }}">
 
@@ -654,54 +652,54 @@
 
     <!-- Section: team -->
     <!--
-                                                                                                                        <section id="team">
-                                                                                                                            <div class="container">
-                                                                                                                                <div class="section-title mb-40">
-                                                                                                                                    <div class="row">
-                                                                                                                                        <div class="col-md-12">
-                                                                                                                                            <h2 class="title text-uppercase mb-5">Nos <span
-                                                                                                                                                    class="text-theme-colored2">responsables</span>
-                                                                                                                                            </h2>
-                                                                                                                                            <h5 class="font-16 text-gray-darkgray mt-5">Discuter avec un responsable</h5>
-                                                                                                                                        </div>
-                                                                                                                                    </div>
-                                                                                                                                </div>
-                                                                                                                                <div class="section-content">
-                                                                                                                                    <div class="row">
-                                                                                                                                        @foreach ($responsables as $responsable)
-    <div class="col-xs-12 col-sm-6 col-md-6">
-                                                                                                                                                <div class="team-members mb-40">
-                                                                                                                                                    <div class="team-thumb pull-left team-pull-none flip mr-sm-0 t-mr-0">
-                                                                                                                                                        <img src="{{ url('storage') }}/{{ $responsable->photo }}" alt=""
-                                                                                                                                                            class="img-fullwidth">
-                                                                                                                                                    </div>
-                                                                                                                                                    <div class="team-bottom-part border-1px p-15">
-                                                                                                                                                        <h4 class="text-uppercase m-0 pb-5">{{ $responsable->name }}
-                                                                                                                                                            {{ $responsable->surname }}</h4>
-                                                                                                                                                        <h6 class="font-13 text-gray mt-0">{{ $responsable->poste }}</h6>
-                                                                                                                                                        <ul class="list-inline mt-15">
-                                                                                                                                                            <li class="m-0 pr-10"> <i class="fa fa-phone text-theme-colored2 mr-5"></i>
-                                                                                                                                                                <span class="text-gray" href="#">{{ $responsable->phone }}</span>
-                                                                                                                                                            </li>
-                                                                                                                                                            <li class="m-0 pr-10"> <i
-                                                                                                                                                                    class="fa fa-envelope-o text-theme-colored2 mr-5"></i>
-                                                                                                                                                                <a class="text-gray"
-                                                                                                                                                                    href="mailto:{{ $responsable->email }}">{{ $responsable->email }}</a>
-                                                                                                                                                            </li>
-
-                                                                                                                                                        </ul>
-
-                                                                                                                                                    </div>
+                                                                                                                                <section id="team">
+                                                                                                                                    <div class="container">
+                                                                                                                                        <div class="section-title mb-40">
+                                                                                                                                            <div class="row">
+                                                                                                                                                <div class="col-md-12">
+                                                                                                                                                    <h2 class="title text-uppercase mb-5">Nos <span
+                                                                                                                                                            class="text-theme-colored2">responsables</span>
+                                                                                                                                                    </h2>
+                                                                                                                                                    <h5 class="font-16 text-gray-darkgray mt-5">Discuter avec un responsable</h5>
                                                                                                                                                 </div>
                                                                                                                                             </div>
+                                                                                                                                        </div>
+                                                                                                                                        <div class="section-content">
+                                                                                                                                            <div class="row">
+                                                                                                                                                @foreach ($responsables as $responsable)
+    <div class="col-xs-12 col-sm-6 col-md-6">
+                                                                                                                                                        <div class="team-members mb-40">
+                                                                                                                                                            <div class="team-thumb pull-left team-pull-none flip mr-sm-0 t-mr-0">
+                                                                                                                                                                <img src="{{ url('storage') }}/{{ $responsable->photo }}" alt=""
+                                                                                                                                                                    class="img-fullwidth">
+                                                                                                                                                            </div>
+                                                                                                                                                            <div class="team-bottom-part border-1px p-15">
+                                                                                                                                                                <h4 class="text-uppercase m-0 pb-5">{{ $responsable->name }}
+                                                                                                                                                                    {{ $responsable->surname }}</h4>
+                                                                                                                                                                <h6 class="font-13 text-gray mt-0">{{ $responsable->poste }}</h6>
+                                                                                                                                                                <ul class="list-inline mt-15">
+                                                                                                                                                                    <li class="m-0 pr-10"> <i class="fa fa-phone text-theme-colored2 mr-5"></i>
+                                                                                                                                                                        <span class="text-gray" href="#">{{ $responsable->phone }}</span>
+                                                                                                                                                                    </li>
+                                                                                                                                                                    <li class="m-0 pr-10"> <i
+                                                                                                                                                                            class="fa fa-envelope-o text-theme-colored2 mr-5"></i>
+                                                                                                                                                                        <a class="text-gray"
+                                                                                                                                                                            href="mailto:{{ $responsable->email }}">{{ $responsable->email }}</a>
+                                                                                                                                                                    </li>
+
+                                                                                                                                                                </ul>
+
+                                                                                                                                                            </div>
+                                                                                                                                                        </div>
+                                                                                                                                                    </div>
     @endforeach
 
-                                                                                                                                    </div>
+                                                                                                                                            </div>
 
-                                                                                                                                </div>
-                                                                                                                            </div>
-                                                                                                                        </section>
-                                                                                                                    -->
+                                                                                                                                        </div>
+                                                                                                                                    </div>
+                                                                                                                                </section>
+                                                                                                                            -->
 
 
 
@@ -738,7 +736,8 @@
                                 </div>
                                 <div class="post-description border-1px p-20">
                                     <a href="{{ route('blog.show', $blog->id) }}">
-                                        <h3 class="post-title font-weight-600 mt-0 mb-15" style="word-break: break-word;">{{ $blog->title }}</h3>
+                                        <h3 class="post-title font-weight-600 mt-0 mb-15" style="word-break: break-word;">
+                                            {{ $blog->title }}</h3>
                                     </a>
                                     <p>{{ $blog->description }} [...]</p>
                                 </div>
@@ -770,11 +769,20 @@
                     <h3 class="text-white font-38 font-weight-700 mt-10 mb-0">Inscrivez-nous <span
                             class="text-theme-colored2"> à notre newsletter</span> </h3>
                     Rejoignez-nous
-                    <form id="mailchimp-subscription-form2" class="newsletter-form max-width-535 mt-10">
+                    @if (session()->has('success'))
+                        <h6 class='alert alert-success' role="alert">
+                            Felicitation !! Vous avez êtes désormais abonnée.
+                        </h6>
+                    @endif
+                    <form id="mailchimp-subscription-form2" class="newsletter-form max-width-535 mt-10" action="{{route('newsletter.store')}}" method="post">
+                        @csrf
                         <label for="mce-EMAIL"></label>
                         <div class="input-group">
                             <input type="email" id="mce-EMAIL" data-height="45px" class="form-control input-lg"
-                                placeholder="Votre email" name="EMAIL" value="">
+                                placeholder="Votre email" name="email" value="{{ old('email') }}">
+                            @if ($errors->has('email'))
+                                <span class="text-danger">{{ $errors->first('email') }}</span>
+                            @endif
                             <span class="input-group-btn">
                                 <button type="submit" class="btn btn-colored btn-theme-colored2 btn-lg m-0"
                                     data-height="45px">Soumettre</button>

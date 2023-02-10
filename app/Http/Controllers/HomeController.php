@@ -21,6 +21,7 @@ class HomeController extends Controller
     public function __invoke(Request $request)
     {
 
+       
         
         $courses = DB::table('courses')->join('modalities','modalities.id','=','courses.modality_id')
         ->join('degrees','degrees.id','=','courses.degree_id')
