@@ -73,47 +73,7 @@
                                 </div>
 
                             </div>
-                            <div id="comments" class="comments-area pt-50">
-                                <h3 class="comments-title">Commentaire</h3>
-
-                                <!-- Disqus Comments plugin -->
-                                <div class="comment-box">
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <h5>Remplir les champs</h5>
-                                            <div class="row">
-                                                <form role="form" id="comment-form">
-                                                    @csrf
-                                                    <div class="col-sm-6 pt-0 pb-0">
-                                                        <div class="form-group">
-                                                            <input type="text" class="form-control" required
-                                                                name="name" id="contact_name" placeholder="Votre nom">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <input type="text" required class="form-control"
-                                                                name="email" id="contact_email2"
-                                                                placeholder="Votre E-mail">
-                                                        </div>
-
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <textarea class="form-control" required name="message" id="contact_message2" placeholder="Votre message" rows="7"></textarea>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <button type="submit"
-                                                                class="btn btn-dark btn-flat pull-right m-0"
-                                                                data-loading-text="Chargement">Publier</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                            </div>
+                      
                         </div>
                     </div>
                     <div class="col-md-3">
