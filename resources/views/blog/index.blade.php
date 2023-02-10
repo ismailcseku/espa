@@ -19,57 +19,50 @@
                 </div>
             </div>
         </section>
-
         <section>
-    
-            <div class="container pt-100 pb-100">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="vertical-masonry-timeline-wrapper">
-                            <ul class="vertical-masonry-timeline">
-                                @foreach ($blogs as $blog)
-                                    <li class="each-masonry-item wow fadeInUp" data-wow-duration="1.5s"
-                                        data-wow-offset="10">
-                                        <div class="timeline-block">
-                                            <span class="timeline-post-format"><i class="fa fa-user"></i></span>
-                                            <article class="post clearfix">
-                                                <div class="entry-header">
-                                                    <div class="post-thumb"> <img alt=""
-                                                            src="{{ url('storage') }}/{{ $blog->photo }}"
-                                                            class="img-fullwidth img-responsive"> </div>
-                                                    <h5 class="entry-title"><a href="{{route('blog.show',$blog->id)}}">{{ $blog->title }}</a></h5>
-                                                    <ul class="list-inline font-12 mb-20 mt-10">
-                                                        <li class="text-theme-colored2"> Publié  </li>
-                                                        <li><span class="text-theme-colored">{{ $blog->created_at }}</span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="entry-content">
-                                                    <p class="mb-30">
-                                                        @php
-                                                            $description = substr($blog->description,0,100);
-                                                            echo $description;
-                                                        @endphp
-                                                       <a href="#">[...]</a>
-                                                    </p>
-                                                    <ul class="list-inline like-comment pull-left font-12">
-                                                        <li><i class="pe-7s-comment"></i>36</li>
-                                                        <li><i class="pe-7s-like2"></i>125</li>
-                                                    </ul>
-                                                    <a class="pull-right text-gray font-13" href="{{route('blog.show',$blog->id)}}"><i
-                                                            class="fa fa-angle-double-right text-theme-colored"></i> Lire
-                                                        plus</a>
-                                                </div>
-                                            </article>
-                                        </div>
-                                    </li>
-                                @endforeach
+            <div class="container pt-70 pb-40">
+                <div class="section-content">
+                    <div class="row multi-row-clearfix">
+                        @foreach ($blogs as $blog)
+                            <div class="col-sm-6 col-md-4">
+                                <article class="post mb-30">
+                                    <div class="post-thumb">
+                                        <img src="{{ url('storage') }}/{{ $blog->photo }}" class="img-fullwidth"
+                                            alt="">
+                                        <div class="post-date"><span>26 </span><br> Oct</div>
 
-                            </ul>
-                        </div>
+                                    </div>
+                                    <div class="post-description border-1px p-20">
+                                        <a href="{{ route('blog.show', $blog->id) }}">
+                                            <h3 class="post-title font-weight-600 mt-0 mb-15">{{ $blog->title }}</h3>
+                                        </a>
+                                        <p>
+                                            @php
+                                                $description = substr($blog->description, 0, 100);
+                                                echo $description;
+                                            @endphp
+                                            <a href="{{ route('blog.show', $blog->id) }}">[...]</a>
+                                        </p>
+                                    </div>
+                                    <div class="post-meta">
+                                        <ul class="list-inline pull-left flip">
+                                            <li> {{ $blog->created_at }}</li>
+                                        </ul>
+                                        <a href="{{ route('blog.show', $blog->id) }}"
+                                            class="text-theme-colored2 font-14 text-gray-darkgray pull-right flip">Lire
+                                            plus</a>
+                                    </div>
+                                </article>
+                            </div>
+                        @endforeach
+
+
+
                     </div>
                 </div>
             </div>
         </section>
+
+       
     </div>
 @endsection

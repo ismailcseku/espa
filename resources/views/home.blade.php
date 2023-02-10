@@ -737,12 +737,15 @@
 
                                 </div>
                                 <div class="post-description border-1px p-20">
-                                    <a href="#">
+                                    <a href="{{ route('blog.show', $blog->id) }}">
                                         <h3 class="post-title font-weight-600 mt-0 mb-15">{{ $blog->title }}</h3>
                                     </a>
                                     <p>{{ $blog->description }} [...]</p>
                                 </div>
                                 <div class="post-meta">
+                                    <ul class="list-inline pull-left flip">
+                                        <li> {{ $blog->created_at }}</li>
+                                    </ul>
 
                                     <a href="{{ route('blog.show', $blog->id) }}"
                                         class="text-theme-colored2 font-14 text-gray-darkgray pull-right flip">Lire plus
