@@ -25,38 +25,47 @@
                 <div class="section-content">
                     <div class="row ">
                         @foreach ($courses as $course)
-                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                            <div class="course-single-item bg-white border-1px clearfix mb-md-40">
-                              <div class="course-thumb">
-                                <img class="img-fullwidth" alt="" src="http://placehold.it/360x250">
-                                <div class="course-top-meta">
-                                  <ul class="list-inline">
-                                    <li><i class="ficon-heart font-14"></i>224 Likes</li>
-                                    <li><i class="lnr lnr-bullhorn font-14"></i>84 Share</li>
-                                  </ul>
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 item" style="margin-top: 2px ; ">
+                                <div class="course-single-item bg-white border-1px clearfix mb-md-40">
+                                    <a href="{{ route('course.details', $course->id) }}" class="course-thumb">
+                                       
+
+                                    </a>
+
+                                    <div class="course-details clearfix p-20 pt-15">
+                                        <div class="course-top-part">
+                                            <a href="{{ route('course.details', $course->id) }}">
+                                                <h4 class="mt-5 mb-5">{{ $course->name }}</h4>
+                                            </a>
+                                            <a href="{{ route('course.details', $course->id) }}">
+                                                <h4 class=" mt-0">{{ $course->degrees_name }}</h4>
+                                            </a>
+
+                                        </div>
+                                        <a href="{{ route('course.details', $course->id) }}"
+                                            class="course-description mt-15 mb-0"> <span>{!! $course->description !!}</span><span
+                                                style="text-decoration:underline"> lire plus </span></a>
+                                        <div class="author-thumb">
+                                            <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
+                                                alt="" class="img-circle">
+                                        </div>
+
+                                    </div>
+                                    <a href="{{ route('course.details', $course->id) }}" class="course-meta"
+                                        style="display:block;">
+                                        <ul class="list-inline">
+                                            <li><i class="ficon-clock font-18"></i>
+                                                {{ $course->duration }} Mois
+                                            </li>
+                                            <li><i class="pe-7s-notebook   font-20"></i>{{ $course->languages_name }}
+                                            </li>
+                                        </ul>
+                                        <div class="course-tag">
+                                            <h5>Découvrir</h5>
+                                        </div>
+                                    </a>
                                 </div>
-                              </div>
-                              <div class="course-details clearfix p-20 pt-15">
-                                <div class="course-top-part">
-                                  <a href="page-course-details.html"><h4 class="mt-5 mb-5">Nural Networking Course</h4></a>
-                                  <h5 class="text-gray font-12 mt-0">26th JUNE</h5>
-                                </div>
-                                <p class="course-description mt-15 mb-0">Lorem ipsum dolor sit amet, consec sectet urad cing elit. Nobis commodi esse aliquam eligend reprehenderit, numquam a odio</p>
-                                <div class="author-thumb">
-                                  <img src="http://placehold.it/54x54" alt="" class="img-circle">
-                                </div>
-                              </div>
-                              <div class="course-meta">
-                                <ul class="list-inline">
-                                  <li><i class="lnr lnr-users font-20"></i>24 Seats</li>
-                                  <li><i class="ficon-clock font-18"></i>3 Hours</li>
-                                </ul>
-                                <div class="course-tag">
-                                  <h5>Free</h5>
-                                </div>
-                              </div>
                             </div>
-                          </div>
                         @endforeach
                         
 
