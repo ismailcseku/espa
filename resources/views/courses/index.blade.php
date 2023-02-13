@@ -25,7 +25,7 @@
                 <div class="section-content">
                     <div class="row ">
                         @foreach ($courses as $course)
-                            <div class="col-xs-12 col-sm-6 col-md-6 item" style="margin-top: 2px ; ">
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 item" style="margin-top: 2px ; ">
                                 <div class="course-single-item bg-white border-1px clearfix mb-md-40">
                                     <a href="{{ route('course.details', $course->id) }}" class="course-thumb">
                                         <img class="img-fullwidth" alt=""
