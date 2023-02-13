@@ -174,12 +174,11 @@
                     <div class="col-md-12">
                         <h4 class="mb-20">Médiathèques</h4>
                         <div class="owl-carousel-5col" data-nav="true">
-                            <div class="item"><img src="https://placehold.it/285x215" alt=""></div>
-                            <div class="item"><img src="https://placehold.it/285x215" alt=""></div>
-                            <div class="item"><img src="https://placehold.it/285x215" alt=""></div>
-                            <div class="item"><img src="https://placehold.it/285x215" alt=""></div>
-                            <div class="item"><img src="https://placehold.it/285x215" alt=""></div>
-                            <div class="item"><img src="https://placehold.it/285x215" alt=""></div>
+                            @foreach ($medias as $media)
+                                
+                            <div class="item"><img src="{{url('storage')}}/{{$media->photo}}" width="285" height="215" style="object-fit:cover;" alt="{{$media->title}}"></div>
+                            @endforeach
+                           
                         </div>
                     </div>
                 </div>

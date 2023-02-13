@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Media;
 use Illuminate\Http\Request;
+use App\Models\CategoryMedia;
+
 
 class MediaController extends Controller
 {
@@ -14,6 +17,11 @@ class MediaController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return view('media');
+        $medias=Media::all();
+        $categories=CategoryMedia::all();
+        return view('media')->with([
+            'medias'=>$medias,
+            'categories'=>$categories
+        ]);
     }
 }

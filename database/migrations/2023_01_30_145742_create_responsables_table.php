@@ -20,6 +20,11 @@ return new class extends Migration
             $table->string('poste')->nullable();
             $table->string('email')->nullable();
             $table->string('phone')->nullable();
+            $table->string('statut')->nullable();
+            $table->string('etablissement')->nullable();
+            $table->string('country')->nullable();
+            $table->string('departement')->nullable();
+            $table->text('competence')->nullable();
             $table->string('gsm')->nullable();
             $table->string('photo')->nullable();
             $table->timestamps();

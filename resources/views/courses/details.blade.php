@@ -88,7 +88,8 @@
                                             @if ($course->duration)
                                                 <li> <i
                                                         class="pe-7s-timer font-26 vertical-align-middle text-theme-colored2 mr-10 "></i>
-                                                    <span class="font-16">Durée :</span> {{ $course->duration }} Mois
+                                                    <span class=" font-16 ">
+                                                        Durée :</span> {{ $course->duration }} Mois
                                                 </li>
                                             @endif
 
@@ -131,7 +132,9 @@
                                                                             src="images/blog/comment1.jpg"
                                                                             alt=""></a>
                                                                     <div class="media-body">
-                                                                        <h5 class="media-heading comment-heading font-16">
+                                                                        <h5 
+                                                                            class=" @if (!isset($design->size))  media-heading comment-heading  font-16 @else media-heading comment-heading  @endif "
+                                                                            style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                             Préréquis et admission </h5>
                                                                         <div class="comment-date">
                                                                             {!! $course->admission !!}</div>
@@ -153,7 +156,8 @@
                                                                             src="images/blog/comment1.jpg"
                                                                             alt=""></a>
                                                                     <div class="media-body">
-                                                                        <h5 class="media-heading comment-heading font-16">
+                                                                        <h5  class=" @if (!isset($design->size))  media-heading comment-heading  font-16 @else media-heading comment-heading  @endif "
+                                                                            style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                             Dossier </h5>
                                                                         <div class="comment-date">
                                                                             {!! $course->dossier !!}</div>
@@ -177,7 +181,8 @@
                                                                             src="images/blog/comment1.jpg"
                                                                             alt=""></a>
                                                                     <div class="media-body">
-                                                                        <h5 class="media-heading comment-heading font-16">
+                                                                        <h5  class=" @if (!isset($design->size))  media-heading comment-heading  font-16 @else media-heading comment-heading  @endif "
+                                                                            style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                             Candidature </h5>
                                                                         <div class="comment-date">
                                                                             {!! $course->candidature !!}</div>
@@ -199,7 +204,8 @@
                                                                             src="images/blog/comment1.jpg"
                                                                             alt=""></a>
                                                                     <div class="media-body">
-                                                                        <h5 class="media-heading comment-heading font-16">
+                                                                        <h5  class=" @if (!isset($design->size))  media-heading comment-heading  font-16 @else media-heading comment-heading  @endif "
+                                                                            style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                             Date limite </h5>
                                                                         <div class="comment-date">
                                                                             {{ $course->datelimite }}</div>
@@ -221,7 +227,8 @@
                                                                             src="images/blog/comment1.jpg"
                                                                             alt=""></a>
                                                                     <div class="media-body">
-                                                                        <h5 class="media-heading comment-heading font-16">
+                                                                        <h5  class=" @if (!isset($design->size))  media-heading comment-heading  font-16 @else media-heading comment-heading  @endif "
+                                                                            style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                             Modalité de selection </h5>
                                                                         <div class="comment-date">
                                                                             {{ $course->modalitiy_name }}</div>
@@ -243,7 +250,8 @@
                                                                             src="images/blog/comment1.jpg"
                                                                             alt=""></a>
                                                                     <div class="media-body">
-                                                                        <h5 class="media-heading comment-heading font-16">
+                                                                        <h5  class=" @if (!isset($design->size))  media-heading comment-heading  font-16 @else media-heading comment-heading  @endif "
+                                                                            style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                             Prochaine rentrée </h5>
                                                                         <div class="comment-date">
                                                                             @php
@@ -365,7 +373,8 @@
 
 
                                                                                 <h5
-                                                                                    class="media-heading comment-heading font-16">
+                                                                                class=" @if (!isset($design->size))  media-heading comment-heading  font-16 @else media-heading comment-heading  @endif "
+                                                                                style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                                     Diplome </h5>
 
                                                                                 <div class="comment-date">
@@ -389,7 +398,8 @@
 
 
                                                                                 <h5
-                                                                                    class="media-heading comment-heading font-16">
+                                                                                class=" @if (!isset($design->size))  media-heading comment-heading  font-16 @else media-heading comment-heading  @endif "
+                                                                                style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                                     Profil / Compétences à acquérir </h5>
 
                                                                                 <div class="comment-date">
@@ -413,7 +423,8 @@
 
 
                                                                                 <h5
-                                                                                    class="media-heading comment-heading font-16">
+                                                                                class=" @if (!isset($design->size))  media-heading comment-heading  font-16 @else media-heading comment-heading  @endif "
+                                                                                style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                                     Débouchés </h5>
 
                                                                                 <div class="comment-date">

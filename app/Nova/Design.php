@@ -4,29 +4,25 @@ namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Select;
-use Laravel\Nova\Fields\Country;
-use Laravel\Nova\Fields\HasMany;
-use Laravel\Nova\Fields\Textarea;
+use Outl1ne\NovaColorField\Color;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Responsable extends Resource
+class Design extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\Responsable>
+     * @var class-string<\App\Models\Design>
      */
-    public static $model = \App\Models\Responsable::class;
+    public static $model = \App\Models\Design::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'name';
+    public static $title = 'id';
 
     /**
      * The columns that should be searched.
@@ -36,8 +32,6 @@ class Responsable extends Resource
     public static $search = [
         'id',
     ];
-    
-    
 
     /**
      * Get the fields displayed by the resource.
@@ -48,32 +42,28 @@ class Responsable extends Resource
     public function fields(NovaRequest $request)
     {
         return [
-            //ID::make()->sortable(),
-            Text::make('Nom','name'),
-            Text::make('Prénom','surname'),
-            Select::make('Statut','statut')->options([
-                'Professeur vacataire'=>'Professeur vacataire',
-                'Professeur permanent'=>'Professeur permanent'
-            ]),
-            Text::make('Établissement','etablissement'),
-            Country::make('Pays','country'),
-            Text::make('Spécialité','poste'),
-            Text::make('Département','departement'),
-            Text::make('E-mail','email'),
-            Text::make('Téléphone','phone'),
-            Text::make('Gsm','gsm'),
-            Textarea::make('Compétences','competence'),
-            Image::make('photo','photo')->disk('public')->storeAs(function(Request $request){
-                return $request->photo->getClientOriginalName();
-            }),
-            HasMany::make('Course'),
+            ID::make()->sortable(),
+            Color::make('Couleur','color'),
+            Select::make('Taille','size')->options([
+                '6px' => "6",
+                '8px' => "8",
+                '10px' => "10",
+                '12px' => "12",
+                '14px' => "14",
+                '16px' => "16",
+                '18px' => "18",
+                '20px' => "20",
+                '22px' => "22",
+                '24px' => "24",
+                '26px' => "26",
+                '28px' => "28",
+                '30px' => "30",
+                '32px' => "32",
+
+            ])
+     
             
-          
         ];
-    }
-    public static function label()
-    {
-        return 'Responsables';
     }
 
     /**
@@ -119,4 +109,10 @@ class Responsable extends Resource
     {
         return [];
     }
+    
+    public static function label(){
+        return 'Design';
+    }
+    
+    
 }

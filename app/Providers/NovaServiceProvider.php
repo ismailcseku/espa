@@ -5,9 +5,11 @@ namespace App\Providers;
 use App\Nova\Blog;
 use App\Nova\Mode;
 use App\Nova\User;
+use App\Nova\Media;
 use App\Nova\Slide;
 use App\Nova\Course;
 use App\Nova\Degree;
+use App\Nova\Design;
 use App\Nova\Contact;
 use App\Nova\Program;
 use App\Nova\Download;
@@ -22,6 +24,7 @@ use App\Nova\Newsletter;
 use App\Nova\Responsable;
 use App\Nova\CategoryBlog;
 use App\Nova\TrainingType;
+use App\Nova\CategoryMedia;
 use App\Nova\MessageNewsletter;
 use Laravel\Nova\Menu\MenuItem;
 use App\Nova\EvenementInterested;
@@ -68,7 +71,8 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                     MenuItem::resource(Modality::class),
                     MenuItem::resource(Mode::class),
                     MenuItem::resource(Slide::class),
-                    
+                    MenuItem::resource(Design::class),
+
                     MenuSection::make('Visiteurs', [
                         MenuItem::resource(Interested::class),
                         MenuItem::resource(Contact::class),
@@ -81,6 +85,10 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                     MenuSection::make('Blog', [
                         MenuItem::resource(CategoryBlog::class),
                         MenuItem::resource(Blog::class),
+                    ])->collapsable(),
+                    MenuSection::make('Mediathèques', [
+                        MenuItem::resource(CategoryMedia::class),
+                        MenuItem::resource(Media::class),
                     ])->collapsable(),
                     MenuSection::make('newsletter', [
                         MenuItem::resource(Newsletter::class),

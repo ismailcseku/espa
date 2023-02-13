@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Media;
 use App\Models\Evenement;
 use Illuminate\Http\Request;
 use App\Models\EvenementInterested;
@@ -26,7 +27,8 @@ class EvenementController extends Controller
     public function show($id)
     {
          $evenements=Evenement::findOrFail($id);
-        return view('evenement.show')->with(['evenements'=>$evenements]);;
+         $medias=Media::all();
+        return view('evenement.show')->with(['evenements'=>$evenements,'medias'=>$medias]);;
     }
 
  
@@ -41,6 +43,7 @@ class EvenementController extends Controller
         'poste'=>['required','string'],
       ]);
       $data['evenement_id']=$id;
+      
       
       EvenementInterested::create($data);
       return redirect()->back()->with('success','succès');

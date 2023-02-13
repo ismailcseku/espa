@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Carbon\Carbon;
 use App\Models\Course;
 use App\Models\Degree;
+use App\Models\Design;
 use App\Models\Timing;
 use App\Models\Program;
 use App\Models\Download;
@@ -87,6 +88,8 @@ class CourseController extends Controller
         $programs=Program::where('course_id',$course->id)->get();
         $downloads=Download::where('course_id',$course->id)->get();
         $degrees=Degree::all();
+        $design=Design::first();
+      
         
         $last_courses= $course->join('modalities','modalities.id','=','courses.modality_id')
         ->select('courses.name','courses.id','modalities.name as modalitiy_name')
@@ -602,9 +605,13 @@ class CourseController extends Controller
             'countries'=>$countries,
             'provinces'=>$provinces,
             'levels'=>$levels,
+          'design'=>$design
+
         ]);
+
         
     }
+    
     public function showByName(string $res)
     {
     
@@ -616,6 +623,8 @@ class CourseController extends Controller
       $levels=[];
       $provinces=[];
       $val=[];
+      $design=Design::first();
+
       
 
       $val=DB::table('courses')->where('courses.name',$res)->join('modalities','modalities.id','=','courses.modality_id')
@@ -1153,6 +1162,7 @@ class CourseController extends Controller
           'countries'=>$countries,
           'provinces'=>$provinces,
           'levels'=>$levels,
+          'design'=>$design
       ]);
     }
 

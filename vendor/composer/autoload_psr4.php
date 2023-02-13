@@ -57,6 +57,7 @@ return array(
     'Psr\\Cache\\' => array($vendorDir . '/psr/cache/src'),
     'PhpParser\\' => array($vendorDir . '/nikic/php-parser/lib/PhpParser'),
     'PhpOption\\' => array($vendorDir . '/phpoption/phpoption/src/PhpOption'),
+    'Outl1ne\\NovaColorField\\' => array($vendorDir . '/outl1ne/nova-color-field/src'),
     'OpenSpout\\' => array($vendorDir . '/openspout/openspout/src'),
     'NunoMaduro\\Collision\\' => array($vendorDir . '/nunomaduro/collision/src'),
     'NumaxLab\\NovaCKEditor5Classic\\' => array($vendorDir . '/numaxlab/nova-ckeditor5-classic/src'),

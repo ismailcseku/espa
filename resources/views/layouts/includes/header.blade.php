@@ -6,14 +6,15 @@
     <!-- Meta Tags -->
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <meta name="description" content="Imfundo - Education University School Kindergarten Learning HTML Template" />
+    <meta name="description" content="Cha agadir " />
+
     <meta name="keywords" content="education,school,university,educational,learn,learning,teaching,workshop" />
     <meta name="author" content="ThemeMascot" />
     <!-- Page Title -->
     <title>Cha Agadir</title>
 
     <!-- Favicon and Touch Icons -->
-    <link href="images/favicon.png" rel="shortcut icon" type="image/png">
+    <link href="{{asset('images/logo.svg')}}" rel="shortcut icon" type="image/svg">
     <link href="images/apple-touch-icon.png" rel="apple-touch-icon">
     <link href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
     <link href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">

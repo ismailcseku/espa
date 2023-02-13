@@ -6,27 +6,24 @@ use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Image;
-use Laravel\Nova\Fields\Select;
-use Laravel\Nova\Fields\Country;
-use Laravel\Nova\Fields\HasMany;
-use Laravel\Nova\Fields\Textarea;
+use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Responsable extends Resource
+class Media extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\Responsable>
+     * @var class-string<\App\Models\Media>
      */
-    public static $model = \App\Models\Responsable::class;
+    public static $model = \App\Models\Media::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'name';
+    public static $title = 'id';
 
     /**
      * The columns that should be searched.
@@ -36,8 +33,6 @@ class Responsable extends Resource
     public static $search = [
         'id',
     ];
-    
-    
 
     /**
      * Get the fields displayed by the resource.
@@ -48,32 +43,15 @@ class Responsable extends Resource
     public function fields(NovaRequest $request)
     {
         return [
-            //ID::make()->sortable(),
-            Text::make('Nom','name'),
-            Text::make('Prénom','surname'),
-            Select::make('Statut','statut')->options([
-                'Professeur vacataire'=>'Professeur vacataire',
-                'Professeur permanent'=>'Professeur permanent'
-            ]),
-            Text::make('Établissement','etablissement'),
-            Country::make('Pays','country'),
-            Text::make('Spécialité','poste'),
-            Text::make('Département','departement'),
-            Text::make('E-mail','email'),
-            Text::make('Téléphone','phone'),
-            Text::make('Gsm','gsm'),
-            Textarea::make('Compétences','competence'),
-            Image::make('photo','photo')->disk('public')->storeAs(function(Request $request){
-                return $request->photo->getClientOriginalName();
-            }),
-            HasMany::make('Course'),
-            
-          
+            ID::make()->sortable(),
+       
+            BelongsTo::make('Catégories','media','App\Nova\CategoryMedia'),
+            Text::make('Titre','title'),
+            Image::make('Une image','photo')->disk('public')
+            ->storeAs(function (Request $request) {
+                    return $request->photo->getClientOriginalName();
+                 }),
         ];
-    }
-    public static function label()
-    {
-        return 'Responsables';
     }
 
     /**
@@ -118,5 +96,9 @@ class Responsable extends Resource
     public function actions(NovaRequest $request)
     {
         return [];
+    }
+    public static function label()
+    {
+        return 'Les photos';
     }
 }

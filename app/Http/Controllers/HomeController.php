@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Carbon\Carbon;
 use App\Models\Slide;
 use App\Models\Course;
+
 use App\Models\Degree;
 use App\Models\Responsable;
 use Illuminate\Http\Request;
@@ -33,6 +34,7 @@ class HomeController extends Controller
         $slides=Slide::all();
     
         $degrees=Degree::all();
+        
         
         $responsables=DB::table('responsables')->limit(4)->get();
         foreach ($courses as $key => $course) {
