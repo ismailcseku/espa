@@ -112,34 +112,28 @@
                     </div>
                 </div>
                 <div class="row mt-60">
-                    <div class="col-sm-12 col-md-3">
+                    <div class="col-sm-12 col-md-4">
                         <div class="contact-info text-center bg-silver-light border-1px pt-60 pb-60">
                             <i class="fa fa-phone font-36 mb-10 text-theme-colored2"></i>
                             <h4>Téléphone</h4>
-                            <h6 class="text-gray">Phone: +262 695 2601</h6>
+                            <h6 class="text-gray">(+212) 0528-241-006 / 240-155</h6>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-3">
+                    <div class="col-sm-12 col-md-4">
                         <div class="contact-info text-center bg-silver-light border-1px pt-60 pb-60">
                             <i class="fa fa-map-marker font-36 mb-10 text-theme-colored2"></i>
                             <h4>Addresse</h4>
-                            <h6 class="text-gray">121 King Street, Australia</h6>
+                            <h6 class="text-gray">Complexe Horticole d’Agadir, km 2 route d’Azrou, B.P. 121 Ait Melloul 80150 - Agadir</h6>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-3">
+                    <div class="col-sm-12 col-md-4">
                         <div class="contact-info text-center bg-silver-light border-1px pt-60 pb-60">
                             <i class="fa fa-envelope font-36 mb-10 text-theme-colored2"></i>
                             <h4>E-mail</h4>
-                            <h6 class="text-gray">you@yourdomain.com</h6>
+                            <h6 class="text-gray"> contact@cha-agadir.ma</h6>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-3">
-                        <div class="contact-info text-center bg-silver-light border-1px pt-60 pb-60">
-                            <i class="fa fa-fax font-36 mb-10 text-theme-colored2"></i>
-                            <h4>Gsm</h4>
-                            <h6 class="text-gray">(020) 123 4567</h6>
-                        </div>
-                    </div>
+               
                 </div>
             </div>
         </section>
