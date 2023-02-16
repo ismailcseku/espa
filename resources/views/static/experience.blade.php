@@ -30,6 +30,14 @@ data-bg-img="{{ asset('images/details_course.jpeg') }}">
                 <div class="col-md-12">
                     <h2 class="text-uppercasetext-theme-colored mt-0 mb-0 mt-sm-30"><span
                             class="text-theme-colored2">Ferme exprérimentale</span></h2>
+                            <div class="mt-30 mb-0">
+                                <h5 class="pull-left mt-10 mr-20 text-theme-colored2">Partager:</h5>
+                                <ul class="styled-icons icon-circled m-0">
+                                    <li><a href=" {{ $shareFacebook }}" data-bg-color="#3A5795"><i
+                                                class="fa fa-facebook text-white"></i></a></li>
+                                
+                                </ul>
+                            </div>
                     <h4 class="mt-5 mb-15"></h4>
                     <p>{!!$data->content!!}</p>
                 </div>

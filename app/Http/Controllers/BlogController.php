@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Blog;
 use App\Models\CategoryBlog;
 use Illuminate\Http\Request;
+use Jorenvh\Share\ShareFacade;
 use Illuminate\Support\Facades\DB;
 
 class BlogController extends Controller
@@ -36,10 +37,12 @@ class BlogController extends Controller
              $item->description=substr($item->description,0,60);
              return $item;
         });
+        $shareFacebook=ShareFacade::currentPage()->facebook()->getRawLinks();
+        
      
         
         
-        return view('blog.show')->with(['blogs'=>$blogs,'categories'=>$categories,'latests'=>$latests]);
+        return view('blog.show')->with(['blogs'=>$blogs,'categories'=>$categories,'latests'=>$latests,'shareFacebook'=>$shareFacebook]);
     }
 
  

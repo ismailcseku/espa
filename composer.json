@@ -9,6 +9,7 @@
         "emilianotisato/nova-tinymce": "^2.0",
         "formfeed-uk/nova-logo-url": "^1.0",
         "guzzlehttp/guzzle": "^7.2",
+        "jorenvanhocht/laravel-share": "^4.2",
         "laravel/framework": "^9.19",
         "laravel/nova": "~4.0",
         "laravel/sanctum": "^3.0",

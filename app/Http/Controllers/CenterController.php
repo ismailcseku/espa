@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Media;
 use App\Models\Center;
 use Illuminate\Http\Request;
+use Jorenvh\Share\ShareFacade;
 
 class CenterController extends Controller
 {
@@ -18,6 +19,7 @@ class CenterController extends Controller
     {
         $datas=Center::latest('id')->limit(1)->get();
         $medias=Media::all();
-        return view('static.center')->with(['datas'=>$datas,'medias'=>$medias]);
+        $shareFacebook=ShareFacade::currentPage()->facebook()->getRawLinks();
+        return view('static.center')->with(['datas'=>$datas,'medias'=>$medias,'shareFacebook'=>$shareFacebook]);
     }
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Media;
 use App\Models\Impact;
 use Illuminate\Http\Request;
+use Jorenvh\Share\ShareFacade;
 
 class ImpactController extends Controller
 {
@@ -18,6 +19,8 @@ class ImpactController extends Controller
     {
         $datas=Impact::latest('id')->limit(1)->get();
         $medias=Media::all();
-        return view('static.impact')->with(['datas'=>$datas,'medias'=>$medias]);
+        $shareFacebook=ShareFacade::currentPage()->facebook()->getRawLinks();
+        
+        return view('static.impact')->with(['datas'=>$datas,'medias'=>$medias,'shareFacebook'=>$shareFacebook]);
     }
 }

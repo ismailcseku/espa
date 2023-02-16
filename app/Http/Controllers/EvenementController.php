@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Media;
 use App\Models\Evenement;
 use Illuminate\Http\Request;
+use Jorenvh\Share\ShareFacade;
 use App\Models\EvenementInterested;
 
 class EvenementController extends Controller
@@ -28,7 +29,9 @@ class EvenementController extends Controller
     {
          $evenements=Evenement::findOrFail($id);
          $medias=Media::all();
-        return view('evenement.show')->with(['evenements'=>$evenements,'medias'=>$medias]);;
+         $shareFacebook=ShareFacade::currentPage()->facebook()->getRawLinks();
+         
+        return view('evenement.show')->with(['evenements'=>$evenements,'medias'=>$medias,'shareFacebook'=>$shareFacebook]);
     }
 
  

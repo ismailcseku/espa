@@ -57,8 +57,7 @@
                             <li>
                                 <h5>Partager:</h5>
                                 <div class="styled-icons icon-sm icon-gray icon-circled">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="{{ $shareFacebook }}"><i class="fa fa-facebook"></i></a>
                                 </div>
                             </li>
                         </ul>

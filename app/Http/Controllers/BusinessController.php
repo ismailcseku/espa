@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Media;
 use App\Models\Business;
 use Illuminate\Http\Request;
+use Jorenvh\Share\ShareFacade;
 
 class BusinessController extends Controller
 {
@@ -18,6 +19,7 @@ class BusinessController extends Controller
     {
         $datas=Business::latest('id')->limit(1)->get();
         $medias=Media::all();
-        return view('static.business')->with(['datas'=>$datas,'medias'=>$medias]);
+        $shareFacebook=ShareFacade::currentPage()->facebook()->getRawLinks();
+        return view('static.business')->with(['datas'=>$datas,'medias'=>$medias,'shareFacebook'=>$shareFacebook]);
     }
 }
