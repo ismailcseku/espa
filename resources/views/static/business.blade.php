@@ -24,7 +24,7 @@ data-bg-img="{{ asset('images/details_course.jpeg') }}">
                 @foreach ($datas as $data )
                  
                 
-                <div class="col-md-10">
+                <div class="col-md-12">
                     <img class="img-fullwidth" src="{{url('storage')}}/{{$data->photo}}" alt="">
                 </div>
                 <div class="col-md-12">
@@ -32,7 +32,6 @@ data-bg-img="{{ asset('images/details_course.jpeg') }}">
                             class="text-theme-colored2">Agri-business</span></h2>
                     <h4 class="mt-5 mb-15"></h4>
                     <p>{!!$data->content!!}</p>
-                
                 </div>
                 @endforeach
               
