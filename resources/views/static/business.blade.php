@@ -34,7 +34,6 @@ data-bg-img="{{ asset('images/details_course.jpeg') }}">
                     <p>{!!$data->content!!}</p>
                 
                 </div>
-
                 @endforeach
               
             </div>
