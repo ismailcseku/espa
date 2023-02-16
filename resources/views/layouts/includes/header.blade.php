@@ -248,11 +248,10 @@
 
 
 
-                                <li><a href="#" style="padding: 10px 10px 10px 10px;">Recherche</a>
-                                <li><a href="#" style="padding: 10px 10px 10px 10px;">Centre d’Excellence</a>
-                                <li><a href="#" style="padding: 10px 10px 10px 10px;">Ferme Expérimentale</a>
-                                <li><a href="#" style="padding: 10px 10px 10px 10px;">Impact Cluster</a>
-                                <li><a href="#" style="padding: 10px 10px 10px 10px;">Agri-Business </a>
+                                <li><a href="{{route('search.index')}}" style="padding: 10px 10px 10px 10px;">Recherche</a>
+                                <li><a href="{{route('center.index')}}" style="padding: 10px 10px 10px 10px;">Centre d’Excellence</a>
+                                <li><a href="{{route('impact.index')}}" style="padding: 10px 10px 10px 10px;">Impact Cluster</a>
+                                <li><a href="{{route('business.index')}}" style="padding: 10px 10px 10px 10px;">Agri-Business </a>
 
 
 

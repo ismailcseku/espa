@@ -7,11 +7,15 @@ use App\Nova\Mode;
 use App\Nova\User;
 use App\Nova\Media;
 use App\Nova\Slide;
+use App\Nova\Center;
 use App\Nova\Course;
 use App\Nova\Degree;
 use App\Nova\Design;
+use App\Nova\Impact;
+use App\Nova\Search;
 use App\Nova\Contact;
 use App\Nova\Program;
+use App\Nova\Business;
 use App\Nova\Download;
 use App\Nova\Language;
 use App\Nova\Location;
@@ -19,6 +23,7 @@ use App\Nova\Modality;
 use Laravel\Nova\Nova;
 use App\Nova\Evenement;
 use App\Nova\Curriculum;
+use App\Nova\Experience;
 use App\Nova\Interested;
 use App\Nova\Newsletter;
 use App\Nova\Responsable;
@@ -89,6 +94,14 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                     MenuSection::make('Mediathèques', [
                         MenuItem::resource(CategoryMedia::class),
                         MenuItem::resource(Media::class),
+                    ])->collapsable(),
+                    MenuSection::make('Les pages statiques', [
+                        MenuItem::resource(Search::class),
+                        MenuItem::resource(Center::class),
+                        MenuItem::resource(Experience::class),
+                        MenuItem::resource(Impact::class),
+                        MenuItem::resource(Business::class),
+                        
                     ])->collapsable(),
                     MenuSection::make('newsletter', [
                         MenuItem::resource(Newsletter::class),
