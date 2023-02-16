@@ -122,6 +122,9 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="blog-posts single-post">
+                                                    @if (isset($course->admission))
+                                                        
+                                                   
                                                     <div class="comments-area">
                                                         <ul class="comment-list">
 
@@ -146,6 +149,8 @@
 
                                                         </ul>
                                                     </div>
+                                                    @endif
+                                                    @if (isset($course->dossier))
                                                     <div class="comments-area">
                                                         <ul class="comment-list">
 
@@ -171,6 +176,9 @@
 
                                                         </ul>
                                                     </div>
+                                                    @endif
+                                                    @if (isset($course->canditature))
+
                                                     <div class="comments-area">
                                                         <ul class="comment-list">
 
@@ -194,6 +202,9 @@
 
                                                         </ul>
                                                     </div>
+                                                    @endif
+                                                    @if (isset($course->datelimite))
+
                                                     <div class="comments-area">
                                                         <ul class="comment-list">
 
@@ -217,6 +228,9 @@
 
                                                         </ul>
                                                     </div>
+                                                    @endif
+                                                    @if (isset($course->selection))
+
                                                     <div class="comments-area">
                                                         <ul class="comment-list">
 
@@ -231,7 +245,7 @@
                                                                             style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                             Modalité de selection </h5>
                                                                         <div class="comment-date">
-                                                                            {{ $course->modalitiy_name }}</div>
+                                                                            {!! $course->selection !!}</div>
                                                                     </div>
                                                                 </div>
                                                             </li>
@@ -240,6 +254,9 @@
 
                                                         </ul>
                                                     </div>
+                                                    @endif
+                                                    @if (isset($course->daterentre))
+
                                                     <div class="comments-area">
                                                         <ul class="comment-list">
 
@@ -269,6 +286,7 @@
 
                                                         </ul>
                                                     </div>
+                                                    @endif
 
                                                 </div>
                                             </div>

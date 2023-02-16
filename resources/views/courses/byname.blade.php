@@ -119,158 +119,166 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="blog-posts single-post">
-                                                        <div class="comments-area">
-                                                            <ul class="comment-list">
+                                                        @if (isset($course->admission))
+                                                            <div class="comments-area">
+                                                                <ul class="comment-list">
 
-                                                                <li>
-                                                                    <div class="media comment-author"> <a
-                                                                            class="media-left pull-left flip"
-                                                                            href="#"><img class="img-thumbnail"
-                                                                                src="images/blog/comment1.jpg"
-                                                                                alt=""></a>
-                                                                        <div class="media-body">
-                                                                            <h5
-                                                                            class=" @if (!isset($design->size))  media-heading comment-heading  font-16 @else media-heading comment-heading  @endif "
-                                                                            style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
-                                                                                Préréquis et admission </h5>
-                                                                            <div class="comment-date">
-                                                                                {!! $course->admission !!}</div>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-
-
-
-                                                            </ul>
-                                                        </div>
-                                                        <div class="comments-area">
-                                                            <ul class="comment-list">
-
-                                                                <li>
-                                                                    <div class="media comment-author"> <a
-                                                                            class="media-left pull-left flip"
-                                                                            href="#"><img class="img-thumbnail"
-                                                                                src="images/blog/comment1.jpg"
-                                                                                alt=""></a>
-                                                                        <div class="media-body">
-                                                                            <h5
-                                                                            class=" @if (!isset($design->size))  media-heading comment-heading  font-16 @else media-heading comment-heading  @endif "
-                                                                            style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
-                                                                                Dossier </h5>
-                                                                            <div class="comment-date">
-                                                                                {!! $course->dossier !!}</div>
-
-
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-
-
-
-                                                            </ul>
-                                                        </div>
-                                                        <div class="comments-area">
-                                                            <ul class="comment-list">
-
-                                                                <li>
-                                                                    <div class="media comment-author"> <a
-                                                                            class="media-left pull-left flip"
-                                                                            href="#"><img class="img-thumbnail"
-                                                                                src="images/blog/comment1.jpg"
-                                                                                alt=""></a>
-                                                                        <div class="media-body">
-                                                                            <h5
-                                                                            class=" @if (!isset($design->size))  media-heading comment-heading  font-16 @else media-heading comment-heading  @endif "
-                                                                            style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
-                                                                                Candidature </h5>
-                                                                            <div class="comment-date">
-                                                                                {!! $course->candidature !!}</div>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-
-
-
-                                                            </ul>
-
-                                                        </div>
-                                                        <div class="comments-area">
-                                                            <ul class="comment-list">
-    
-                                                                <li>
-                                                                    <div class="media comment-author"> <a
-                                                                            class="media-left pull-left flip"
-                                                                            href="#"><img class="img-thumbnail"
-                                                                                src="images/blog/comment1.jpg"
-                                                                                alt=""></a>
-                                                                        <div class="media-body">
-                                                                            <h5  class=" @if (!isset($design->size))  media-heading comment-heading  font-16 @else media-heading comment-heading  @endif "
-                                                                                style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
-                                                                                Date limite </h5>
-                                                                            <div class="comment-date">
-                                                                                {{ $course->datelimite }}</div>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-    
-    
-    
-                                                            </ul>
-                                                        </div>
-                                                        <div class="comments-area">
-                                                            <ul class="comment-list">
-
-                                                                <li>
-                                                                    <div class="media comment-author"> <a
-                                                                            class="media-left pull-left flip"
-                                                                            href="#"><img class="img-thumbnail"
-                                                                                src="images/blog/comment1.jpg"
-                                                                                alt=""></a>
-                                                                        <div class="media-body">
-                                                                            <h5
-                                                                            class=" @if (!isset($design->size))  media-heading comment-heading  font-16 @else media-heading comment-heading  @endif "
-                                                                            style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
-                                                                                Modalité de selection </h5>
-                                                                            <div class="comment-date">
-                                                                                {{ $course->modalitiy_name }}</div>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-
-
-
-                                                            </ul>
-                                                        </div>
-                                                        <div class="comments-area">
-                                                            <ul class="comment-list">
-
-                                                                <li>
-                                                                    <div class="media comment-author"> <a
-                                                                            class="media-left pull-left flip"
-                                                                            href="#"><img class="img-thumbnail"
-                                                                                src="images/blog/comment1.jpg"
-                                                                                alt=""></a>
-                                                                        <div class="media-body">
-                                                                            <h5
-                                                                            class=" @if (!isset($design->size))  media-heading comment-heading  font-16 @else media-heading comment-heading  @endif "
-                                                                            style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
-                                                                                Prochaine rentrée </h5>
-                                                                            <div class="comment-date">
-                                                                                @php
-                                                                                    $getYears = date('m-Y', strtotime($course->daterentre));
-                                                                                    
-                                                                                    echo $getYears;
-                                                                                    
-                                                                                @endphp
+                                                                    <li>
+                                                                        <div class="media comment-author"> <a
+                                                                                class="media-left pull-left flip"
+                                                                                href="#"><img class="img-thumbnail"
+                                                                                    src="images/blog/comment1.jpg"
+                                                                                    alt=""></a>
+                                                                            <div class="media-body">
+                                                                                <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
+                                                                                    style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
+                                                                                    Préréquis et admission </h5>
+                                                                                <div class="comment-date">
+                                                                                    {!! $course->admission !!}</div>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
-                                                                </li>
+                                                                    </li>
 
 
 
-                                                            </ul>
-                                                        </div>
+                                                                </ul>
+                                                            </div>
+                                                        @endif
+                                                        @if (isset($course->dossier))
+                                                            <div class="comments-area">
+                                                                <ul class="comment-list">
+
+                                                                    <li>
+                                                                        <div class="media comment-author"> <a
+                                                                                class="media-left pull-left flip"
+                                                                                href="#"><img class="img-thumbnail"
+                                                                                    src="images/blog/comment1.jpg"
+                                                                                    alt=""></a>
+                                                                            <div class="media-body">
+                                                                                <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
+                                                                                    style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
+                                                                                    Dossier </h5>
+                                                                                <div class="comment-date">
+                                                                                    {!! $course->dossier !!}</div>
+
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+
+
+
+                                                                </ul>
+                                                            </div>
+                                                        @endif
+                                                        @if (isset($course->canditature))
+                                                            <div class="comments-area">
+                                                                <ul class="comment-list">
+
+                                                                    <li>
+                                                                        <div class="media comment-author"> <a
+                                                                                class="media-left pull-left flip"
+                                                                                href="#"><img class="img-thumbnail"
+                                                                                    src="images/blog/comment1.jpg"
+                                                                                    alt=""></a>
+                                                                            <div class="media-body">
+                                                                                <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
+                                                                                    style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
+                                                                                    Candidature </h5>
+                                                                                <div class="comment-date">
+                                                                                    {!! $course->candidature !!}</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+
+
+
+                                                                </ul>
+
+                                                            </div>
+                                                        @endif
+                                                        @if (isset($course->datelimite))
+                                                            <div class="comments-area">
+                                                                <ul class="comment-list">
+
+                                                                    <li>
+                                                                        <div class="media comment-author"> <a
+                                                                                class="media-left pull-left flip"
+                                                                                href="#"><img class="img-thumbnail"
+                                                                                    src="images/blog/comment1.jpg"
+                                                                                    alt=""></a>
+                                                                            <div class="media-body">
+                                                                                <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
+                                                                                    style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
+                                                                                    Date limite </h5>
+                                                                                <div class="comment-date">
+                                                                                    {{ $course->datelimite }}</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+
+
+
+                                                                </ul>
+                                                            </div>
+                                                        @endif
+                                                        @if (isset($course->selection))
+                                                            <div class="comments-area">
+                                                                <ul class="comment-list">
+
+                                                                    <li>
+                                                                        <div class="media comment-author"> <a
+                                                                                class="media-left pull-left flip"
+                                                                                href="#"><img class="img-thumbnail"
+                                                                                    src="images/blog/comment1.jpg"
+                                                                                    alt=""></a>
+                                                                            <div class="media-body">
+                                                                                <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
+                                                                                    style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
+                                                                                    Modalité de selection </h5>
+                                                                                <div class="comment-date">
+                                                                                    {!! $course->selection !!}</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+
+
+
+                                                                </ul>
+                                                            </div>
+                                                        @endif
+                                                        @if (isset($course->daterentre))
+                                                            <div class="comments-area">
+                                                                <ul class="comment-list">
+
+                                                                    <li>
+                                                                        <div class="media comment-author"> <a
+                                                                                class="media-left pull-left flip"
+                                                                                href="#"><img class="img-thumbnail"
+                                                                                    src="images/blog/comment1.jpg"
+                                                                                    alt=""></a>
+                                                                            <div class="media-body">
+                                                                                <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
+                                                                                    style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
+                                                                                    Prochaine rentrée </h5>
+                                                                                <div class="comment-date">
+                                                                                    @php
+                                                                                        $getYears = date('m-Y', strtotime($course->daterentre));
+                                                                                        
+                                                                                        echo $getYears;
+                                                                                        
+                                                                                    @endphp
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+
+
+
+                                                                </ul>
+                                                            </div>
+                                                        @endif
+
 
                                                     </div>
                                                 </div>
@@ -370,9 +378,8 @@
                                                                                         src="images/blog/comment1.jpg"
                                                                                         alt=""></a>
                                                                                 <div class="media-body">
-                                                                                    <h5
-                                                                                    class=" @if (!isset($design->size))  media-heading comment-heading  font-16 @else media-heading comment-heading  @endif "
-                                                                                    style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
+                                                                                    <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
+                                                                                        style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                                         Diplome </h5>
                                                                                     <div class="comment-date">
                                                                                         {!! $course->grade !!}</div>
@@ -399,9 +406,8 @@
                                                                                         src="images/blog/comment1.jpg"
                                                                                         alt=""></a>
                                                                                 <div class="media-body">
-                                                                                    <h5
-                                                                                    class=" @if (!isset($design->size))  media-heading comment-heading  font-16 @else media-heading comment-heading  @endif "
-                                                                                    style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
+                                                                                    <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
+                                                                                        style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                                         Profil / Compétences à acquérir
                                                                                     </h5>
                                                                                     <div class="comment-date">
@@ -426,9 +432,8 @@
                                                                                         src="images/blog/comment1.jpg"
                                                                                         alt=""></a>
                                                                                 <div class="media-body">
-                                                                                    <h5
-                                                                                    class=" @if (!isset($design->size))  media-heading comment-heading  font-16 @else media-heading comment-heading  @endif "
-                                                                                    style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
+                                                                                    <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
+                                                                                        style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                                         Débouchés </h5>
                                                                                     <div class="comment-date">
                                                                                         {!! $course->opportunity !!}</div>
@@ -710,7 +715,8 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-4" style="width:100%;">
-                                        <h3 class="font-28 mt-md-30 mt-0"><span class="text-theme-colored2">Pourquoi </span>Nous?
+                                        <h3 class="font-28 mt-md-30 mt-0"><span class="text-theme-colored2">Pourquoi
+                                            </span>Nous?
                                         </h3>
                                         <div class="line-bottom-theme-colored2"></div>
                                         <div class="panel-group accordion-stylished-left-border accordion-icon-filled accordion-no-border accordion-icon-left accordion-icon-filled-theme-colored2 custom-style"
@@ -718,8 +724,9 @@
                                             <div class="panel panel-default">
                                                 <div class="panel-heading" role="tab" id="headin1">
                                                     <h6 class="panel-title">
-                                                        <a role="button" data-toggle="collapse" data-parent="#accordion6"
-                                                            href="#collaps1" aria-expanded="true" aria-controls="collaps1">
+                                                        <a role="button" data-toggle="collapse"
+                                                            data-parent="#accordion6" href="#collaps1"
+                                                            aria-expanded="true" aria-controls="collaps1">
                                                             Why Imfundo University is Best?
                                                         </a>
                                                     </h6>
@@ -727,8 +734,10 @@
                                                 <div id="collaps1" class="panel-collapse collapse in" role="tabpanel"
                                                     aria-labelledby="headin1">
                                                     <div class="panel-body">
-                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                                                        terry
+                                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                                                        skateboard dolor
                                                         brunch.
                                                     </div>
                                                 </div>
@@ -737,8 +746,8 @@
                                                 <div class="panel-heading" role="tab" id="heading2">
                                                     <h6 class="panel-title">
                                                         <a class="collapsed" role="button" data-toggle="collapse"
-                                                            data-parent="#accordion6" href="#collapse2" aria-expanded="false"
-                                                            aria-controls="collapse2">
+                                                            data-parent="#accordion6" href="#collapse2"
+                                                            aria-expanded="false" aria-controls="collapse2">
                                                             Why Imfundo University is Best?
                                                         </a>
                                                     </h6>
@@ -746,8 +755,10 @@
                                                 <div id="collapse2" class="panel-collapse collapse" role="tabpanel"
                                                     aria-labelledby="heading2">
                                                     <div class="panel-body">
-                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                                                        terry
+                                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                                                        skateboard dolor
                                                         brunch.
                                                     </div>
                                                 </div>
@@ -756,8 +767,8 @@
                                                 <div class="panel-heading" role="tab" id="heading3">
                                                     <h6 class="panel-title">
                                                         <a class="collapsed" role="button" data-toggle="collapse"
-                                                            data-parent="#accordion6" href="#collapse3" aria-expanded="false"
-                                                            aria-controls="collapse3">
+                                                            data-parent="#accordion6" href="#collapse3"
+                                                            aria-expanded="false" aria-controls="collapse3">
                                                             Why Imfundo University is Best?
                                                         </a>
                                                     </h6>
@@ -765,8 +776,10 @@
                                                 <div id="collapse3" class="panel-collapse collapse" role="tabpanel"
                                                     aria-labelledby="heading3">
                                                     <div class="panel-body">
-                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                                                        terry
+                                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                                                        skateboard dolor
                                                         brunch.
                                                     </div>
                                                 </div>
@@ -775,8 +788,8 @@
                                                 <div class="panel-heading" role="tab" id="heading4">
                                                     <h6 class="panel-title">
                                                         <a class="collapsed" role="button" data-toggle="collapse"
-                                                            data-parent="#accordion6" href="#collapse4" aria-expanded="false"
-                                                            aria-controls="collapse4">
+                                                            data-parent="#accordion6" href="#collapse4"
+                                                            aria-expanded="false" aria-controls="collapse4">
                                                             Why Imfundo University is Best?
                                                         </a>
                                                     </h6>
@@ -784,8 +797,10 @@
                                                 <div id="collapse4" class="panel-collapse collapse" role="tabpanel"
                                                     aria-labelledby="heading4">
                                                     <div class="panel-body">
-                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                                                        terry
+                                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                                                        skateboard dolor
                                                         brunch.
                                                     </div>
                                                 </div>
