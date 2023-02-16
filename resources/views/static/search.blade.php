@@ -32,7 +32,6 @@ data-bg-img="{{ asset('images/details_course.jpeg') }}">
                             class="text-theme-colored2">Recherche</span></h2>
                     <h4 class="mt-5 mb-15"></h4>
                     <p>{!!$data->content!!}</p>
-                    <p class="hidden-md">{!!$data->content!!}</p>
                 </div>
 
                 @endforeach
