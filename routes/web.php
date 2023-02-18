@@ -5,6 +5,8 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\MediaController;
+use App\Http\Controllers\VideoController;
+use App\Http\Controllers\CampusController;
 use App\Http\Controllers\CenterController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\DegreeController;
@@ -50,7 +52,10 @@ Route::post('/newsletter', [NewsletterController::class, 'store'])->name('newsle
 Route::get('/about', [AboutController::class, '__invoke'])->name('about.index');
 Route::get('/responsable', [ResponsableController::class, '__invoke'])->name('responsable.index');
 Route::get('/responsable', [ResponsableController::class, '__invoke'])->name('responsable.index');
-Route::get('/media', [MediaController::class, '__invoke'])->name('media.index');
+Route::get('/galerie', [MediaController::class, '__invoke'])->name('media.index');
+Route::get('/video', [VideoController::class, '__invoke'])->name('video.index');
+Route::get('/vie-estudiantine', [CampusController::class, '__invoke'])->name('campus.index');
+
 
 // static 
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Media;
 use App\Models\Impact;
+use App\Models\Downloadpage;
 use Illuminate\Http\Request;
 use Jorenvh\Share\ShareFacade;
 
@@ -20,7 +21,8 @@ class ImpactController extends Controller
         $datas=Impact::latest('id')->limit(1)->get();
         $medias=Media::all();
         $shareFacebook=ShareFacade::currentPage()->facebook()->getRawLinks();
+        $downloads=Downloadpage::where('pagename','impact-cluster')->get();
         
-        return view('static.impact')->with(['datas'=>$datas,'medias'=>$medias,'shareFacebook'=>$shareFacebook]);
+        return view('static.impact')->with(['datas'=>$datas,'medias'=>$medias,'shareFacebook'=>$shareFacebook,'downloads'=>$downloads]);
     }
 }

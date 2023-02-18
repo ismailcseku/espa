@@ -7,6 +7,8 @@ use App\Nova\Mode;
 use App\Nova\User;
 use App\Nova\Media;
 use App\Nova\Slide;
+use App\Nova\Video;
+use App\Nova\Campus;
 use App\Nova\Center;
 use App\Nova\Course;
 use App\Nova\Degree;
@@ -28,6 +30,7 @@ use App\Nova\Interested;
 use App\Nova\Newsletter;
 use App\Nova\Responsable;
 use App\Nova\CategoryBlog;
+use App\Nova\Downloadpage;
 use App\Nova\TrainingType;
 use App\Nova\CategoryMedia;
 use App\Nova\MessageNewsletter;
@@ -91,11 +94,13 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                         MenuItem::resource(CategoryBlog::class),
                         MenuItem::resource(Blog::class),
                     ])->collapsable(),
-                    MenuSection::make('Mediathèques', [
+                    MenuSection::make('Media', [
                         MenuItem::resource(CategoryMedia::class),
                         MenuItem::resource(Media::class),
+                        MenuItem::resource(Video::class),
                     ])->collapsable(),
                     MenuSection::make('Les pages statiques', [
+                        MenuItem::resource(Campus::class),
                         MenuItem::resource(Search::class),
                         MenuItem::resource(Center::class),
                         MenuItem::resource(Experience::class),
@@ -103,6 +108,8 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                         MenuItem::resource(Business::class),
                         
                     ])->collapsable(),
+                    MenuItem::resource(Downloadpage::class),
+
                     MenuSection::make('newsletter', [
                         MenuItem::resource(Newsletter::class),
                         MenuItem::resource(MessageNewsletter::class),

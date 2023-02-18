@@ -4,25 +4,25 @@ namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\HasMany;
+use Laravel\Nova\Fields\Image;
+use Emilianotisato\NovaTinyMCE\NovaTinyMCE;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class CategoryMedia extends Resource
+class Campus extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\CategoryMedia>
+     * @var class-string<\App\Models\Campus>
      */
-    public static $model = \App\Models\CategoryMedia::class;
+    public static $model = \App\Models\Campus::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'name';
+    public static $title = 'id';
 
     /**
      * The columns that should be searched.
@@ -43,9 +43,12 @@ class CategoryMedia extends Resource
     {
         return [
             ID::make()->sortable(),
-            Text::make('Nom','name'),
-            HasMany::make('Catégories','Media','App\Nova\Media'),
-
+           
+            Image::make('Une image','photo')->disk('public')
+            ->storeAs(function (Request $request) {
+                    return $request->photo->getClientOriginalName();
+            }),
+            NovaTinyMCE::make('contenu','content'),
         ];
     }
 
@@ -94,6 +97,6 @@ class CategoryMedia extends Resource
     }
     public static function label()
     {
-        return 'Catégories photo';
+        return 'Vie estudiantine';
     }
 }

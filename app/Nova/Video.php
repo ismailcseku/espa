@@ -4,25 +4,25 @@ namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\File;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class CategoryMedia extends Resource
+class Video extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\CategoryMedia>
+     * @var class-string<\App\Models\Video>
      */
-    public static $model = \App\Models\CategoryMedia::class;
+    public static $model = \App\Models\Video::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'name';
+    public static $title = 'id';
 
     /**
      * The columns that should be searched.
@@ -43,9 +43,12 @@ class CategoryMedia extends Resource
     {
         return [
             ID::make()->sortable(),
-            Text::make('Nom','name'),
-            HasMany::make('Catégories','Media','App\Nova\Media'),
+            Text::make('Titre','title'),
 
+            File::make('Une Vidéo','video')->disk('public')
+            ->storeAs(function (Request $request) {
+                    return $request->video->getClientOriginalName();
+                 }),
         ];
     }
 
@@ -94,6 +97,6 @@ class CategoryMedia extends Resource
     }
     public static function label()
     {
-        return 'Catégories photo';
+        return 'Les vidéos';
     }
 }

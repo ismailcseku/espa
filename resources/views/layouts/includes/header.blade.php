@@ -155,10 +155,11 @@
                                         <li><a href="{{ route('about.index') }}">Mot du directeur</a></li>
                                         <li><a href="{{ route('about.index') }}">Qui sommes-nous ?</a></li>
                                         <li><a href="{{ route('responsable.index') }}">Corps Professoral</a></li>
-                                        <li><a href="page-course-details.html">Vie Estudiantine</a></li>
+                                        <li><a href="{{route('campus.index')}}">Vie Estudiantine</a></li>
                                         <li><a href="{{ route('evenement.index') }}">Évènements</a></li>
                                         <li><a href="{{ route('blog.index') }}">Blog/Actualités</a></li>
-                                        <li><a href="{{ route('media.index') }}">Médiathèque</a></li>
+                                        <li><a href="{{ route('media.index') }}">Galerie</a></li>
+                                        <li><a href="{{ route('video.index') }}">Vidéos</a></li>
                                     </ul>
                                 </li>
                                 <li @if (Route::current()->getName() == 'course.index') class="active" @endif><a
@@ -250,6 +251,7 @@
 
                                 <li><a href="{{route('search.index')}}" style="padding: 10px 10px 10px 10px;">Recherche</a>
                                 <li><a href="{{route('center.index')}}" style="padding: 10px 10px 10px 10px;">Centre d’Excellence</a>
+                                    <li><a href="{{route('experience.index')}}" style="padding: 10px 10px 10px 10px;">Ferme Expérimentale</a>
                                 <li><a href="{{route('impact.index')}}" style="padding: 10px 10px 10px 10px;">Impact Cluster</a>
                                 <li><a href="{{route('business.index')}}" style="padding: 10px 10px 10px 10px;">Agri-Business </a>
 
