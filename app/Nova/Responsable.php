@@ -51,10 +51,7 @@ class Responsable extends Resource
             //ID::make()->sortable(),
             Text::make('Nom','name'),
             Text::make('Prénom','surname'),
-            Select::make('Statut','statut')->options([
-                'Professeur vacataire'=>'Professeur vacataire',
-                'Professeur permanent'=>'Professeur permanent'
-            ]),
+            Text::make('Statut','statut'),
             Text::make('Établissement','etablissement'),
             Country::make('Pays','country'),
             Text::make('Spécialité','poste'),
@@ -66,9 +63,7 @@ class Responsable extends Resource
             Image::make('photo','photo')->disk('public')->storeAs(function(Request $request){
                 return $request->photo->getClientOriginalName();
             }),
-            HasMany::make('Course'),
-            
-          
+            HasMany::make('Course'),          
         ];
     }
     public static function label()
