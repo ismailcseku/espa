@@ -30,12 +30,12 @@ class EvenementController extends Controller
          $evenements=Evenement::findOrFail($id);
          $medias=Media::all();
          $shareFacebook=ShareFacade::currentPage()->facebook()->getRawLinks();
+         $shareWhatsapp=ShareFacade::currentPage()->whatsapp()->getRawLinks();
+         $shareLinkedin=ShareFacade::currentPage()->linkedin()->getRawLinks();
          
-        return view('evenement.show')->with(['evenements'=>$evenements,'medias'=>$medias,'shareFacebook'=>$shareFacebook]);
+        return view('evenement.show')->with(['evenements'=>$evenements,'medias'=>$medias,'shareFacebook'=>$shareFacebook,'shareWhatsapp'=>$shareWhatsapp,'shareLinkedin'=>$shareLinkedin]);
     }
 
- 
-   
     public function signIn($id,Request $request)
     {
       $data=$request->validate([

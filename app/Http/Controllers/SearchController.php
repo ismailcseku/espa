@@ -21,8 +21,10 @@ class SearchController extends Controller
     {
         $datas=Search::latest('id')->limit(1)->get();
         $shareFacebook=ShareFacade::currentPage()->facebook()->getRawLinks();
+        $shareWhatsapp=ShareFacade::currentPage()->whatsapp()->getRawLinks();
+        $shareLinkedin=ShareFacade::currentPage()->linkedin()->getRawLinks();
         $medias=Media::all();
         $downloads=Downloadpage::where('pagename','recherche')->get();
-        return view('static.search')->with(['datas'=>$datas,'medias'=>$medias,'shareFacebook'=>$shareFacebook,'downloads'=>$downloads]);
+        return view('static.search')->with(['datas'=>$datas,'medias'=>$medias,'shareFacebook'=>$shareFacebook,'shareWhatsapp'=>$shareWhatsapp,'shareLinkedin'=>$shareLinkedin,'downloads'=>$downloads]);
     }
 }

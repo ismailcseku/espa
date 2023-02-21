@@ -21,8 +21,11 @@ class CenterController extends Controller
         $datas=Center::latest('id')->limit(1)->get();
         $medias=Media::all();
         $shareFacebook=ShareFacade::currentPage()->facebook()->getRawLinks();
+        $shareWhatsapp=ShareFacade::currentPage()->whatsapp()->getRawLinks();
+        $shareLinkedin=ShareFacade::currentPage()->linkedin()->getRawLinks();
+
         $downloads=Downloadpage::where('pagename','centre-excellence')->get();
 
-        return view('static.center')->with(['datas'=>$datas,'medias'=>$medias,'shareFacebook'=>$shareFacebook,'downloads'=>$downloads]);
+        return view('static.center')->with(['datas'=>$datas,'medias'=>$medias,'shareFacebook'=>$shareFacebook,'shareWhatsapp'=>$shareWhatsapp,'shareLinkedin'=>$shareLinkedin,'downloads'=>$downloads]);
     }
 }

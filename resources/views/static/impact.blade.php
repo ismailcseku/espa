@@ -31,9 +31,16 @@
                             <div class="mt-30 mb-0">
                                 <h5 class="pull-left mt-10 mr-20 text-theme-colored2">Partager:</h5>
                                 <ul class="styled-icons icon-circled m-0">
-                                    <li><a href=" {{ $shareFacebook }}" data-bg-color="#3A5795"><i
-                                                class="fa fa-facebook text-white"></i></a></li>
+                                    <li><a href=" {{ $shareLinkedin['facebook'] }}" data-bg-color="#3A5795"><i
+                                                class="fa fa-facebook text-white"></i></a>
+                                    </li>
+                                    <li><a href="  {{ $shareLinkedin['whatsapp'] }}" data-bg-color="#3A5795"><i
+                                                class="fa fa-whatsapp text-white"></i></a>
+                                    </li>
 
+                                    <li><a href="  {{ $shareLinkedin['linkedin'] }}" data-bg-color="#3A5795"><i
+                                                class="fa fa-linkedin text-white"></i></a>
+                                    </li>
                                 </ul>
                             </div>
                             <h4 class="mt-5 mb-15"></h4>

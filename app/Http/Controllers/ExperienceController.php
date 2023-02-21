@@ -23,7 +23,12 @@ class ExperienceController extends Controller
         $shareFacebook=ShareFacade::currentPage()->facebook()->getRawLinks();
         $downloads=Downloadpage::where('pagename','ferme-experiementale')->get();
 
+       
 
-        return view('static.experience')->with(['datas'=>$datas,'medias'=>$medias,'shareFacebook'=>$shareFacebook,'downloads'=>$downloads]);
+        $shareWhatsapp=ShareFacade::currentPage()->whatsapp()->getRawLinks();
+        $shareLinkedin=ShareFacade::currentPage()->linkedin()->getRawLinks();
+        
+        
+        return view('static.experience')->with(['datas'=>$datas,'medias'=>$medias,'shareFacebook'=>$shareFacebook, 'shareWhatsapp'=>$shareWhatsapp,'shareLinkedin'=>$shareLinkedin,'downloads'=>$downloads]);
     }
 }

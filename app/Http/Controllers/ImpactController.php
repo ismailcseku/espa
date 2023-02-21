@@ -21,8 +21,14 @@ class ImpactController extends Controller
         $datas=Impact::latest('id')->limit(1)->get();
         $medias=Media::all();
         $shareFacebook=ShareFacade::currentPage()->facebook()->getRawLinks();
+        
+
+        $shareWhatsapp=ShareFacade::currentPage()->whatsapp()->getRawLinks();
+        $shareLinkedin=ShareFacade::currentPage()->linkedin()->getRawLinks();
+
+
         $downloads=Downloadpage::where('pagename','impact-cluster')->get();
         
-        return view('static.impact')->with(['datas'=>$datas,'medias'=>$medias,'shareFacebook'=>$shareFacebook,'downloads'=>$downloads]);
+        return view('static.impact')->with(['datas'=>$datas,'medias'=>$medias,'shareFacebook'=>$shareFacebook,'shareWhatsapp'=>$shareWhatsapp,'shareLinkedin'=>$shareLinkedin,'downloads'=>$downloads]);
     }
 }
