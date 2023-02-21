@@ -6,17 +6,13 @@
         <div class="row">
             <div class="col-md-12">
                 <!-- Section: Clients -->
+
                 <div class="owl-carousel-6col clients-logo transparent text-center">
-                    <div class="item"> <a href="#"><img src="{{ asset('images/partenaire1.jpeg') }}"
-                                alt=""></a></div>
-                    <div class="item"> <a href="#"><img src="{{ asset('images/partenaire2.jpeg') }}"
-                                alt=""></a></div>
-                    <div class="item"> <a href="#"><img src="{{ asset('images/partenaire3.png') }}"
-                                alt=""></a></div>
-                    <div class="item"> <a href="#"><img src="{{ asset('images/partenaire4.png') }}"
-                                alt=""></a></div>
-                    <div class="item"> <a href="#"><img src="{{ asset('images/partenaire5.jpeg') }}"
-                                alt=""></a></div>
+                    @foreach ($partners as $partner)
+                        <div class="item"> <a href="#"><img src="{{ url('storage') }}/{{ $partner->photo }}"
+                                    alt=""></a></div>
+                    @endforeach
+       
                 </div>
             </div>
         </div>
@@ -28,15 +24,16 @@
             <div class="widget dark">
                 <img alt="" src="{{ asset('images/logo_footer.png') }}">
                 <p class="mt-20">
-                  
+
                     <span>
 
                         Complexe Horticole d’Agadir, km 2 route d’Azrou,
                         B.P. 121 Ait Melloul 80150 - Agadir
                     </span>
-                    </p>
+                </p>
                 <ul class="list-inline">
-                    <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone mr-5"></i> <a href="#">(+212) 0528-241-006 / 240-155</a>
+                    <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone mr-5"></i> <a href="#">(+212) 0528-241-006
+                            / 240-155</a>
                     </li>
                     <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o mr-5"></i> <a
                             href="mail:contact@cha-agadir.ma">contact@cha-agadir.ma</a> </li>
@@ -65,11 +62,11 @@
                             <li><a href="{{ route('media.index') }}">Médiathèques</a></li>
                         </ul>
                     </div>
-               
+
                 </div>
             </div>
         </div>
-   
+
         <div class="col-sm-6 col-md-3">
             <div class="widget dark">
                 <h4 class="widget-title line-bottom-theme-colored2">Ouvert</h4>

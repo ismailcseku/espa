@@ -17,6 +17,7 @@ use App\Nova\Design;
 use App\Nova\Impact;
 use App\Nova\Search;
 use App\Nova\Contact;
+use App\Nova\Partner;
 use App\Nova\Program;
 use App\Nova\Business;
 use App\Nova\Director;
@@ -82,6 +83,9 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                     MenuItem::resource(Mode::class),
                     MenuItem::resource(Slide::class),
                     MenuItem::resource(Design::class),
+                    MenuItem::resource(Partner::class),
+
+                    
 
                     MenuSection::make('Visiteurs', [
                         MenuItem::resource(Interested::class),
@@ -101,7 +105,8 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                         MenuItem::resource(Media::class),
                         MenuItem::resource(Video::class),
                     ])->collapsable(),
-                    MenuSection::make('Les pages statiques', [
+                        MenuItem::resource(Campus::class),
+                        MenuSection::make('Les pages statiques', [
                         MenuItem::resource(About::class),
                         MenuItem::resource(Director::class),
                         MenuItem::resource(Campus::class),

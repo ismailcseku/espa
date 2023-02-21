@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('media', function (Blueprint $table) {
             $table->id();
-        
             $table->string('photo');
             $table->foreignId('category_media_id');
             $table->foreign('category_media_id')->references('id')->on('category_media')->onDelete('cascade');
