@@ -152,7 +152,7 @@
                                 </li>
                                 <li><a href="#home" style="padding: 10px 10px 10px 10px;">École</a>
                                     <ul class="dropdown">
-                                        <li><a href="{{ route('about.index') }}">Mot du directeur</a></li>
+                                        <li><a href="{{ route('director.index') }}">Mot du directeur</a></li>
                                         <li><a href="{{ route('about.index') }}">Qui sommes-nous ?</a></li>
                                         <li><a href="{{ route('responsable.index') }}">Corps Professoral</a></li>
                                         <li><a href="{{route('campus.index')}}">Vie Estudiantine</a></li>

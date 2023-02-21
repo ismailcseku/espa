@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\Nova\Blog;
 use App\Nova\Mode;
 use App\Nova\User;
+use App\Nova\About;
 use App\Nova\Media;
 use App\Nova\Slide;
 use App\Nova\Video;
@@ -18,6 +19,7 @@ use App\Nova\Search;
 use App\Nova\Contact;
 use App\Nova\Program;
 use App\Nova\Business;
+use App\Nova\Director;
 use App\Nova\Download;
 use App\Nova\Language;
 use App\Nova\Location;
@@ -100,6 +102,8 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                         MenuItem::resource(Video::class),
                     ])->collapsable(),
                     MenuSection::make('Les pages statiques', [
+                        MenuItem::resource(About::class),
+                        MenuItem::resource(Director::class),
                         MenuItem::resource(Campus::class),
                         MenuItem::resource(Search::class),
                         MenuItem::resource(Center::class),

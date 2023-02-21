@@ -14,6 +14,7 @@ use App\Http\Controllers\ImpactController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\BusinessController;
+use App\Http\Controllers\DirectorController;
 use App\Http\Controllers\EvenementController;
 use App\Http\Controllers\ExperienceController;
 use App\Http\Controllers\InterestedController;
@@ -50,6 +51,7 @@ Route::post('/newsletter', [NewsletterController::class, 'store'])->name('newsle
 
 
 Route::get('/about', [AboutController::class, '__invoke'])->name('about.index');
+Route::get('/mot-du-directeur', [DirectorController::class, '__invoke'])->name('director.index');
 Route::get('/responsable', [ResponsableController::class, '__invoke'])->name('responsable.index');
 Route::get('/responsable', [ResponsableController::class, '__invoke'])->name('responsable.index');
 Route::get('/galerie', [MediaController::class, '__invoke'])->name('media.index');
@@ -58,7 +60,6 @@ Route::get('/vie-estudiantine', [CampusController::class, '__invoke'])->name('ca
 
 
 // static 
-
 Route::get('/recherche', [SearchController::class, '__invoke'])->name('search.index');
 Route::get('/centre-excellence', [CenterController::class, '__invoke'])->name('center.index');
 Route::get('/ferme-experiementale', [ExperienceController::class, '__invoke'])->name('experience.index');

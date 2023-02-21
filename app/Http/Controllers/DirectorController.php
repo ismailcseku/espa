@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\About;
 use App\Models\Media;
+use App\Models\Director;
 use App\Models\Downloadpage;
 use Illuminate\Http\Request;
 use Jorenvh\Share\ShareFacade;
 
-class AboutController extends Controller
+class DirectorController extends Controller
 {
     /**
      * Handle the incoming request.
@@ -18,10 +18,10 @@ class AboutController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $datas=About::latest('id')->limit(1)->get();
+        $datas=Director::latest('id')->limit(1)->get();
         $shareFacebook=ShareFacade::currentPage()->facebook()->getRawLinks();
         $medias=Media::all();
-        $downloads=Downloadpage::where('pagename','about')->get();
-        return view('about')->with(['datas'=>$datas,'medias'=>$medias,'shareFacebook'=>$shareFacebook,'downloads'=>$downloads]);
+        $downloads=Downloadpage::where('pagename','mot-du-directeur')->get();
+        return view('director')->with(['datas'=>$datas,'medias'=>$medias,'shareFacebook'=>$shareFacebook,'downloads'=>$downloads]);
     }
 }

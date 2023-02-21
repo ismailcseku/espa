@@ -42,8 +42,7 @@
                     <button class="accordion">Télécharger</button>
                     <div class="panel">
                         @foreach ($downloads as $key => $download)
-                            <div><a href="{{ url('storage') }}/{{ $download->file }}" download="download">Fichier
-                                    {{ $key + 1 }}</a></div>
+                            <div><a href="{{ url('storage') }}/{{ $download->file }}" download="download">{{ $download->file }}</a></div>
                         @endforeach
                     </div>
 

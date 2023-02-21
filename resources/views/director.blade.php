@@ -7,7 +7,7 @@
             <div class="section-content">
                 <div class="row">
                     <div class="col-md-6">
-                        <h2 class="text-theme-colored2 font-36">À propos de nous</h2>
+                        <h2 class="text-theme-colored2 font-36">Mot du directeur</h2>
                         <ol class="breadcrumb text-left mt-10 white">
                             <li><a href="{{ route('home') }}">Acceuil</a></li>
 
@@ -27,7 +27,7 @@
                         </div>
                         <div class="col-md-12">
                             <h2 class="text-uppercasetext-theme-colored mt-0 mb-0 mt-sm-30"><span
-                                    class="text-theme-colored2">À propos de nous</span></h2>
+                                    class="text-theme-colored2">Mot du directeur</span></h2>
                             <div class="mt-30 mb-0">
                                 <h5 class="pull-left mt-10 mr-20 text-theme-colored2">Partager:</h5>
                                 <ul class="styled-icons icon-circled m-0">
