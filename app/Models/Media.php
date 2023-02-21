@@ -10,7 +10,6 @@ class Media extends Model
 {
     use HasFactory;
     protected $fillable=[
-        'title',
         'photo'
     ];
     public function media()

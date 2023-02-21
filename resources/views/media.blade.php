@@ -45,9 +45,6 @@
                                         <div class="thumb">
                                             <img class="img-fullwidth" src="{{url('storage')}}/{{$media->photo}}" alt="project">
                                             <div class="overlay-shade"></div>
-                                            <div class="text-holder">
-                                                <div class="title text-center">{{$media->title}}</div>
-                                            </div>
                                             <div class="icons-holder">
                                                 <div class="icons-holder-inner">
                                                     <div

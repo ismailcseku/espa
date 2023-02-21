@@ -5,7 +5,6 @@ namespace App\Nova;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\File;
-use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Video extends Resource
@@ -43,8 +42,6 @@ class Video extends Resource
     {
         return [
             ID::make()->sortable(),
-            Text::make('Titre','title'),
-
             File::make('Une Vidéo','video')->disk('public')
             ->storeAs(function (Request $request) {
                     return $request->video->getClientOriginalName();
