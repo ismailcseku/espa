@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Video;
+
+use App\Models\Mediavideo;
 use Illuminate\Http\Request;
 
 class VideoController extends Controller
@@ -15,7 +16,7 @@ class VideoController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $videos=Video::all();
+        $videos=Mediavideo::all();
 
         return view('video')->with([
             'videos'=>$videos,

@@ -4,17 +4,17 @@ namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\File;
+use Mostafaznv\NovaVideo\Video;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Video extends Resource
+class Mediavideo extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\Video>
+     * @var class-string<\App\Models\Mediavideo>
      */
-    public static $model = \App\Models\Video::class;
+    public static $model = \App\Models\Mediavideo::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -42,10 +42,12 @@ class Video extends Resource
     {
         return [
             ID::make()->sortable(),
-            File::make('Une Vidéo','video')->disk('public')
+            Video::make('Une Vidéo','video')->disk('public')
             ->storeAs(function (Request $request) {
-                    return $request->video->getClientOriginalName();
-                 }),
+                return $request->video->getClientOriginalName();
+             })->rules('file', 'max:600000', 'mimes:mp4,avi,mpeg,quicktime', 'mimetypes:video/mp4,video/avi,video/mpeg,video/quicktime')
+                ->creationRules('required')
+                ->updateRules('nullable'),
         ];
     }
 

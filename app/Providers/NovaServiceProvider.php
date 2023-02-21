@@ -8,7 +8,6 @@ use App\Nova\User;
 use App\Nova\About;
 use App\Nova\Media;
 use App\Nova\Slide;
-use App\Nova\Video;
 use App\Nova\Campus;
 use App\Nova\Center;
 use App\Nova\Course;
@@ -30,6 +29,7 @@ use App\Nova\Evenement;
 use App\Nova\Curriculum;
 use App\Nova\Experience;
 use App\Nova\Interested;
+use App\Nova\Mediavideo;
 use App\Nova\Newsletter;
 use App\Nova\Responsable;
 use App\Nova\CategoryBlog;
@@ -103,7 +103,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                     MenuSection::make('Media', [
                         MenuItem::resource(CategoryMedia::class),
                         MenuItem::resource(Media::class),
-                        MenuItem::resource(Video::class),
+                        MenuItem::resource(Mediavideo::class),
                     ])->collapsable(),
                         MenuItem::resource(Campus::class),
                         MenuSection::make('Les pages statiques', [
