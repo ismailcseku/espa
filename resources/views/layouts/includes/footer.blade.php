@@ -8,7 +8,7 @@
                 <!-- Section: Clients -->
 
                 <div class="owl-carousel-6col clients-logo transparent text-center">
-           
+              
        
                 </div>
             </div>

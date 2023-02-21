@@ -25,6 +25,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-       
+        $partners=Partner::all();
+        View::share('partners', $partners);
     }
 }
