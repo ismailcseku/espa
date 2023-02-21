@@ -8,10 +8,7 @@
                 <!-- Section: Clients -->
 
                 <div class="owl-carousel-6col clients-logo transparent text-center">
-                    @foreach ($partners as $partner)
-                        <div class="item"> <a href="#"><img src="{{ url('storage') }}/{{ $partner->photo }}"
-                                    alt=""></a></div>
-                    @endforeach
+           
        
                 </div>
             </div>
