@@ -454,12 +454,9 @@
                     <div class="col-lg-4">
                         <h3 class="font-28 mt-0"><span class="text-theme-colored2">À propos </span>de nous</h3>
                         <div class="line-bottom-theme-colored2"></div>
-
-                            <img src="{{ url('storage') }}/{{ $about[0]->photo }}" class="img-fullwidth" alt="">
-                            <p class="mt-15">{!! substr($about[0]->content, 0, 150) !!} [...]</p>
-                            <a href="{{ route('about.index') }}" class="btn btn-colored btn-sm btn-theme-colored2"> Lire
-                                plus</a>
-                   
+                        @foreach ($about as $item)
+                            {{$item}}
+                        @endforeach
                     </div>
                     @if (count($evenements) > 0)
                         <div class="col-lg-4">
