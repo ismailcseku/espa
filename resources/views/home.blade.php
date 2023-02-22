@@ -456,8 +456,8 @@
                         <div class="line-bottom-theme-colored2"></div>
                         @foreach ($about as $item)
                             <img src="{{ url('storage') }}/{{ $item->photo }}" class="img-fullwidth" alt="">
-                           
-                            <a href="{{ route('about.index') }}" class="btn btn-colored btn-sm btn-theme-colored2"> Lire
+                            <!--<p class="mt-15">{!! substr($item->content, 0, 150) !!} [...]</p>-->
+                            <a href="{{ route('about.index') }}" class="mt-15 btn btn-colored btn-sm btn-theme-colored2"> Lire
                                 plus</a>
                         @endforeach
                     </div>
