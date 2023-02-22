@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use Carbon\Carbon;
+use App\Models\About;
 use App\Models\Slide;
-use App\Models\Course;
 
+use App\Models\Course;
 use App\Models\Degree;
 use App\Models\Responsable;
 use Illuminate\Http\Request;
@@ -46,8 +47,10 @@ class HomeController extends Controller
             $item->description=substr($item->description,0,60);
             return $item;
        });
+       $about=About::latest('id')->limit(1)->get();
 
 
-        return  view('home')->with(['courses'=>$courses,'slides'=>$slides,'degrees'=>$degrees,'responsables'=>$responsables,'evenements'=>$evenements,'blogs'=>$blogs]);
+
+        return  view('home')->with(['courses'=>$courses,'slides'=>$slides,'degrees'=>$degrees,'responsables'=>$responsables,'evenements'=>$evenements,'blogs'=>$blogs,'about'=>$about]);
     } 
 }

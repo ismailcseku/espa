@@ -24,36 +24,39 @@
                 <div class="section-content">
                     <div class="row multi-row-clearfix">
                         @foreach ($blogs as $blog)
-                            <div class="col-sm-6 col-md-4">
-                                <article class="post mb-30">
-                                    <div class="post-thumb">
-                                        <img src="{{ url('storage') }}/{{ $blog->photo }}" class="img-fullwidth"
-                                            alt="">
-                                        <div class="post-date"><span>26 </span><br> Oct</div>
-
+                        <div class="col-sm-6 col-md-4">
+                            <article class="post mb-sm-30">
+                                <div class="post-thumb">
+                                    <img src="{{ url('storage') }}/{{ $blog->photo }}" class="img-fullwidth"
+                                        alt="">
+                                    @php
+                                        $getMonth = date('F', strtotime( $blog->created_at));
+                                        $getDays = date('d', strtotime( $blog->created_at));
+                                    @endphp
+                                    <div class="post-date"><span>{{ $getDays }} </span><br> {{ $getMonth }}
                                     </div>
-                                    <div class="post-description border-1px p-20">
-                                        <a href="{{ route('blog.show', $blog->id) }}">
-                                            <h3 class="post-title font-weight-600 mt-0 mb-15" style="word-break: break-word;">{{ $blog->title }}</h3>
-                                        </a>
-                                        <p>
-                                            @php
-                                                $description = substr($blog->description, 0, 100);
-                                                echo $description;
-                                            @endphp
-                                            <a href="{{ route('blog.show', $blog->id) }}">[...]</a>
-                                        </p>
-                                    </div>
-                                    <div class="post-meta">
+                                </div>
+                                <div class="post-description border-1px p-20">
+                                    <a href="{{ route('blog.show', $blog->id) }}">
+                                        <h3 class="post-title font-weight-600 mt-0 mb-15" style="word-break: break-word;">
+                                            {{ $blog->title }}</h3>
+                                    </a>
+                                    <p>{!! substr($blog->content , 0,150)!!} [...]</p>
+                                </div>
+                                <div class="post-meta">
+                                    <ul class="list-inline pull-left flip">
                                         <ul class="list-inline pull-left flip">
-                                            <li> {{ $blog->created_at }}</li>
-                                        </ul>
-                                        <a href="{{ route('blog.show', $blog->id) }}"
-                                            class="text-theme-colored2 font-14 text-gray-darkgray pull-right flip">Lire
-                                            plus</a>
-                                    </div>
-                                </article>
-                            </div>
+                                            <li><i class="lnr lnr-users text-theme-colored2 font-20"></i>Par  {{ $blog->description }}</li>
+                                          </ul>
+                                      
+                                    </ul>
+
+                                    <a href="{{ route('blog.show', $blog->id) }}"
+                                        class="text-theme-colored2 font-14 text-gray-darkgray pull-right flip">Lire plus
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
                         @endforeach
 
 

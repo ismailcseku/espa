@@ -16,7 +16,7 @@
                                 <img src="{{ url('storage') }}/{{ $slide->photo }}" alt=""
                                     data-bgposition="center 20%" data-bgfit="cover" data-bgrepeat="no-repeat"
                                     data-bgparallax="10" class="rev-slidebg" data-no-retina>
-                                <!-- LAYERS -->
+
                                 <!-- LAYER NR. 1 -->
                                 <div class="tp-caption tp-resizeme text-white rs-parallaxlevel-0" id="slide-1-layer-1"
                                     data-x="['left','left','left','left']" data-hoffset="['50','50','50','30']"
@@ -62,7 +62,7 @@
                                     style="z-index: 7; white-space: nowrap;">
 
 
-                                    {{ $slide->description }}
+                                    {!! $slide->description !!}
 
 
                                 </div>
@@ -270,16 +270,20 @@
                                         <a id="first_element" href="#select{{ $degree->id }}"
                                             data-filter=".select{{ $degree->id }}">{{ $degree->name }}</a>
                                     @endforeach
-
                                 </div>
 
                                 <div id="grid"
                                     class="gallery-isotope default-animation-effect grid-4 gutter clearfix">
 
                                     <div class="gallery-item select0 section-content " style="width:100%;">
-                                        <div class="row" style="margin-top:20%; ">
+                                        <div class="row">
+
                                             <div class=" col-md-12">
-                                                <div class="owl-carousel-3col owl-nav-top" data-nav="tru">
+
+
+                                                <div class="owl-carousel-3col owl-nav-top" data-nav="tru"
+                                                    style="margin-top:15%; ">
+
                                                     @foreach ($courses as $course)
                                                         <div class="item">
                                                             <div class="course-single-item bg-white border-1px clearfix">
@@ -347,7 +351,7 @@
                                     @foreach ($degrees as $degree)
                                         <div class="gallery-item select{{ $degree->id }} section-content"
                                             id="grid" style="width:100%;">
-                                            <div class="row" style="margin-top:20%; ">
+                                            <div class="row" style="margin-top:15%; ">
                                                 <div class="col-md-12">
                                                     <div class="owl-carousel-3col owl-nav-top" data-nav="tru">
                                                         @foreach ($courses as $course)
@@ -448,11 +452,12 @@
             <div class="section-title">
                 <div class="row">
                     <div class="col-lg-4">
-                        <h3 class="font-28 mt-0"><span class="text-theme-colored2">À propos </span>De nous</h3>
+                        <h3 class="font-28 mt-0"><span class="text-theme-colored2">À propos </span>de nous</h3>
                         <div class="line-bottom-theme-colored2"></div>
-                        <img src="{{ asset('images/about.jpg') }}" class="img-fullwidth" alt="">
-                        <p class="mt-15">Lorem ipsum dolor sit amet, conse ctetur adipis elit. Totam perferendis,
-                            assumenda vitae cum beatae Pariatur, ratione adipis elit. Totam perfereding.</p>
+                        @foreach ($about as $item)
+                        @endforeach
+                        <img src="{{ url('storage') }}/{{ $item->photo }}" class="img-fullwidth" alt="">
+                        <p class="mt-15">{!! substr($item->content, 0, 150) !!} [...]</p>
                         <a href="{{ route('about.index') }}" class="btn btn-colored btn-sm btn-theme-colored2"> Lire
                             plus</a>
                     </div>
@@ -512,7 +517,7 @@
                         </div>
                     @endif
                     <div class="col-lg-4">
-                        <h3 class="font-28 mt-md-30 mt-0"><span class="text-theme-colored2">Pourquoi </span>Nous?
+                        <h3 class="font-28 mt-md-30 mt-0"><span class="text-theme-colored2">Pourquoi </span>nous?
                         </h3>
                         <div class="line-bottom-theme-colored2"></div>
                         <div class="panel-group accordion-stylished-left-border accordion-icon-filled accordion-no-border accordion-icon-left accordion-icon-filled-theme-colored2 custom-style"
@@ -522,16 +527,17 @@
                                     <h6 class="panel-title">
                                         <a role="button" data-toggle="collapse" data-parent="#accordion6"
                                             href="#collaps1" aria-expanded="true" aria-controls="collaps1">
-                                            Why Imfundo University is Best?
+                                            Une vie estudiantine exceptionnelle
                                         </a>
                                     </h6>
                                 </div>
                                 <div id="collaps1" class="panel-collapse collapse in" role="tabpanel"
                                     aria-labelledby="headin1">
                                     <div class="panel-body">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
-                                        brunch.
+                                        Rejoignez-nous et bâtissez votre carrière dans une école qui offre de nombreux
+                                        services et activités vous feront découvrir un environnement unique de multiples
+                                        cultures. Nous mettons à votre disposition toutes les ressources nécessaires pour
+                                        vous permettre de vivre une expérience agréable et positive.
                                     </div>
                                 </div>
                             </div>
@@ -541,16 +547,17 @@
                                         <a class="collapsed" role="button" data-toggle="collapse"
                                             data-parent="#accordion6" href="#collapse2" aria-expanded="false"
                                             aria-controls="collapse2">
-                                            Why Imfundo University is Best?
+                                            Plus de 1000 étudiants à l’horizon 2030
                                         </a>
                                     </h6>
                                 </div>
                                 <div id="collapse2" class="panel-collapse collapse" role="tabpanel"
                                     aria-labelledby="heading2">
                                     <div class="panel-body">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
-                                        brunch.
+                                        Nouveau département de l'agro-alimentaire en partenariat avec l'ESCA et des
+                                        nouvelles filières de formation dans les domaines de l’intelligence artificielle,
+                                        aquaculture, sciences acridiennes, etc. 5 doctorats par an, sessions de formation
+                                        continue au profit des producteurs et 12 sessions farm-manager.
                                     </div>
                                 </div>
                             </div>
@@ -560,16 +567,17 @@
                                         <a class="collapsed" role="button" data-toggle="collapse"
                                             data-parent="#accordion6" href="#collapse3" aria-expanded="false"
                                             aria-controls="collapse3">
-                                            Why Imfundo University is Best?
+                                            Projets structuraux de niveau mondial
                                         </a>
                                     </h6>
                                 </div>
                                 <div id="collapse3" class="panel-collapse collapse" role="tabpanel"
                                     aria-labelledby="heading3">
                                     <div class="panel-body">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
-                                        brunch.
+                                        Centre d’excellence horticole, ferme expérimentale, consortium pour la recherche, le
+                                        développement et l’innovation agricole, impact cluster, agri-business incubateur,
+                                        centre de formation continue, centre de diagnostic et d’analyse, programme doctoral
+                                        et masters internationaux…
                                     </div>
                                 </div>
                             </div>
@@ -579,16 +587,17 @@
                                         <a class="collapsed" role="button" data-toggle="collapse"
                                             data-parent="#accordion6" href="#collapse4" aria-expanded="false"
                                             aria-controls="collapse4">
-                                            Why Imfundo University is Best?
+                                            Programme de recherche scientifique
                                         </a>
                                     </h6>
                                 </div>
                                 <div id="collapse4" class="panel-collapse collapse" role="tabpanel"
                                     aria-labelledby="heading4">
                                     <div class="panel-body">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
-                                        brunch.
+                                        Des équipes de recherche et d’experts nationaux et internationaux dans différents
+                                        domaines : Gestion rationnelle des ressources en eau, technologies de récolte et
+                                        post-récolte, protection des cultures et gestion intégrée des ravageurs, contrôle
+                                        climatique basé sur le pilotage des données, biotechnologie et sélection végétales…
                                     </div>
                                 </div>
                             </div>
@@ -652,54 +661,54 @@
 
     <!-- Section: team -->
     <!--
-                                                                                                                                <section id="team">
-                                                                                                                                    <div class="container">
-                                                                                                                                        <div class="section-title mb-40">
-                                                                                                                                            <div class="row">
-                                                                                                                                                <div class="col-md-12">
-                                                                                                                                                    <h2 class="title text-uppercase mb-5">Nos <span
-                                                                                                                                                            class="text-theme-colored2">responsables</span>
-                                                                                                                                                    </h2>
-                                                                                                                                                    <h5 class="font-16 text-gray-darkgray mt-5">Discuter avec un responsable</h5>
-                                                                                                                                                </div>
-                                                                                                                                            </div>
-                                                                                                                                        </div>
-                                                                                                                                        <div class="section-content">
-                                                                                                                                            <div class="row">
-                                                                                                                                                @foreach ($responsables as $responsable)
-    <div class="col-xs-12 col-sm-6 col-md-6">
-                                                                                                                                                        <div class="team-members mb-40">
-                                                                                                                                                            <div class="team-thumb pull-left team-pull-none flip mr-sm-0 t-mr-0">
-                                                                                                                                                                <img src="{{ url('storage') }}/{{ $responsable->photo }}" alt=""
-                                                                                                                                                                    class="img-fullwidth">
-                                                                                                                                                            </div>
-                                                                                                                                                            <div class="team-bottom-part border-1px p-15">
-                                                                                                                                                                <h4 class="text-uppercase m-0 pb-5">{{ $responsable->name }}
-                                                                                                                                                                    {{ $responsable->surname }}</h4>
-                                                                                                                                                                <h6 class="font-13 text-gray mt-0">{{ $responsable->poste }}</h6>
-                                                                                                                                                                <ul class="list-inline mt-15">
-                                                                                                                                                                    <li class="m-0 pr-10"> <i class="fa fa-phone text-theme-colored2 mr-5"></i>
-                                                                                                                                                                        <span class="text-gray" href="#">{{ $responsable->phone }}</span>
-                                                                                                                                                                    </li>
-                                                                                                                                                                    <li class="m-0 pr-10"> <i
-                                                                                                                                                                            class="fa fa-envelope-o text-theme-colored2 mr-5"></i>
-                                                                                                                                                                        <a class="text-gray"
-                                                                                                                                                                            href="mailto:{{ $responsable->email }}">{{ $responsable->email }}</a>
-                                                                                                                                                                    </li>
-
-                                                                                                                                                                </ul>
-
+                                                                                                                                                <section id="team">
+                                                                                                                                                    <div class="container">
+                                                                                                                                                        <div class="section-title mb-40">
+                                                                                                                                                            <div class="row">
+                                                                                                                                                                <div class="col-md-12">
+                                                                                                                                                                    <h2 class="title text-uppercase mb-5">Nos <span
+                                                                                                                                                                            class="text-theme-colored2">responsables</span>
+                                                                                                                                                                    </h2>
+                                                                                                                                                                    <h5 class="font-16 text-gray-darkgray mt-5">Discuter avec un responsable</h5>
+                                                                                                                                                                </div>
                                                                                                                                                             </div>
                                                                                                                                                         </div>
-                                                                                                                                                    </div>
+                                                                                                                                                        <div class="section-content">
+                                                                                                                                                            <div class="row">
+                                                                                                                                                                @foreach ($responsables as $responsable)
+    <div class="col-xs-12 col-sm-6 col-md-6">
+                                                                                                                                                                        <div class="team-members mb-40">
+                                                                                                                                                                            <div class="team-thumb pull-left team-pull-none flip mr-sm-0 t-mr-0">
+                                                                                                                                                                                <img src="{{ url('storage') }}/{{ $responsable->photo }}" alt=""
+                                                                                                                                                                                    class="img-fullwidth">
+                                                                                                                                                                            </div>
+                                                                                                                                                                            <div class="team-bottom-part border-1px p-15">
+                                                                                                                                                                                <h4 class="text-uppercase m-0 pb-5">{{ $responsable->name }}
+                                                                                                                                                                                    {{ $responsable->surname }}</h4>
+                                                                                                                                                                                <h6 class="font-13 text-gray mt-0">{{ $responsable->poste }}</h6>
+                                                                                                                                                                                <ul class="list-inline mt-15">
+                                                                                                                                                                                    <li class="m-0 pr-10"> <i class="fa fa-phone text-theme-colored2 mr-5"></i>
+                                                                                                                                                                                        <span class="text-gray" href="#">{{ $responsable->phone }}</span>
+                                                                                                                                                                                    </li>
+                                                                                                                                                                                    <li class="m-0 pr-10"> <i
+                                                                                                                                                                                            class="fa fa-envelope-o text-theme-colored2 mr-5"></i>
+                                                                                                                                                                                        <a class="text-gray"
+                                                                                                                                                                                            href="mailto:{{ $responsable->email }}">{{ $responsable->email }}</a>
+                                                                                                                                                                                    </li>
+
+                                                                                                                                                                                </ul>
+
+                                                                                                                                                                            </div>
+                                                                                                                                                                        </div>
+                                                                                                                                                                    </div>
     @endforeach
 
-                                                                                                                                            </div>
+                                                                                                                                                            </div>
 
-                                                                                                                                        </div>
-                                                                                                                                    </div>
-                                                                                                                                </section>
-                                                                                                                            -->
+                                                                                                                                                        </div>
+                                                                                                                                                    </div>
+                                                                                                                                                </section>
+                                                                                                                                            -->
 
 
 
@@ -714,12 +723,13 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h2 class="title text-uppercase mb-5">Notre <span class="text-theme-colored2">Blog</span></h2>
-                        <h5 class="font-16 text-gray-darkgray mt-5">Récenement</h5>
+                        <h5 class="font-16 text-gray-darkgray mt-5">Récemment</h5>
                     </div>
                 </div>
             </div>
             <div class="section-content">
                 <div class="row">
+
                     @foreach ($blogs as $blog)
                         <div class="col-sm-6 col-md-4">
                             <article class="post mb-sm-30">
@@ -727,8 +737,8 @@
                                     <img src="{{ url('storage') }}/{{ $blog->photo }}" class="img-fullwidth"
                                         alt="">
                                     @php
-                                        $getMonth = date('F', strtotime($evenement->start_at));
-                                        $getDays = date('d', strtotime($evenement->start_at));
+                                        $getMonth = date('F', strtotime($blog->created_at));
+                                        $getDays = date('d', strtotime($blog->created_at));
                                     @endphp
                                     <div class="post-date"><span>{{ $getDays }} </span><br> {{ $getMonth }}
                                     </div>
@@ -739,11 +749,15 @@
                                         <h3 class="post-title font-weight-600 mt-0 mb-15" style="word-break: break-word;">
                                             {{ $blog->title }}</h3>
                                     </a>
-                                    <p>{{ $blog->description }} [...]</p>
+                                    <p>{!! substr($blog->content, 0, 150) !!} [...]</p>
                                 </div>
                                 <div class="post-meta">
                                     <ul class="list-inline pull-left flip">
-                                        <li> {{ $blog->created_at }}</li>
+                                        <ul class="list-inline pull-left flip">
+                                            <li><i class="lnr lnr-users text-theme-colored2 font-20"></i>Par
+                                                {{ $blog->description }}</li>
+                                        </ul>
+
                                     </ul>
 
                                     <a href="{{ route('blog.show', $blog->id) }}"
@@ -766,7 +780,7 @@
                 <div class="col-md-8 col-md-offset-2 text-center">
                     <a href="https://www.youtube.com/watch?v=kt-4lJs_8fE" data-lightbox-gallery="youtube-video"><img
                             src="images/play-button/s11.png" alt=""></a>
-                    <h3 class="text-white font-38 font-weight-700 mt-10 mb-0">Inscrivez-nous <span
+                    <h3 class="text-white font-38 font-weight-700 mt-10 mb-0">Inscrivez-Vous <span
                             class="text-theme-colored2"> à notre newsletter</span> </h3>
                     Rejoignez-nous
                     @if (session()->has('success'))
@@ -774,7 +788,8 @@
                             Felicitation !! Vous avez êtes désormais abonnée.
                         </h6>
                     @endif
-                    <form id="mailchimp-subscription-form2" class="newsletter-form max-width-535 mt-10" action="{{route('newsletter.store')}}" method="post">
+                    <form id="mailchimp-subscription-form2" class="newsletter-form max-width-535 mt-10"
+                        action="{{ route('newsletter.store') }}" method="post">
                         @csrf
                         <label for="mce-EMAIL"></label>
                         <div class="input-group">
@@ -797,7 +812,7 @@
 
 
     </div>
-   
+
 
     <script lang="js">
         let btn = document.getElementById("first_element");

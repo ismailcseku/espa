@@ -38,11 +38,10 @@ class BlogController extends Controller
              return $item;
         });
         $shareFacebook=ShareFacade::currentPage()->facebook()->getRawLinks();
-        
-     
-        
-        
-        return view('blog.show')->with(['blogs'=>$blogs,'categories'=>$categories,'latests'=>$latests,'shareFacebook'=>$shareFacebook]);
+        $shareWhatsapp=ShareFacade::currentPage()->whatsapp()->getRawLinks();
+        $shareLinkedin=ShareFacade::currentPage()->linkedin()->getRawLinks();        
+
+        return view('blog.show')->with(['blogs'=>$blogs,'categories'=>$categories,'latests'=>$latests,'shareFacebook'=>$shareFacebook,'shareWhatsapp'=>$shareWhatsapp,'shareLinkedin'=>$shareLinkedin]);
     }
 
  

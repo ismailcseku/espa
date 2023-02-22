@@ -48,7 +48,7 @@ class Blog extends Resource
             ID::make()->sortable(),
             BelongsTo::make('Catégories','blog','App\Nova\CategoryBlog'),
             Text::make('Titre','title'),
-            Textarea::make('Description','description'),
+            Text::make('Auteur','description'),
             Image::make('Une image','photo')->disk('public')
             ->storeAs(function (Request $request) {
                     return $request->photo->getClientOriginalName();

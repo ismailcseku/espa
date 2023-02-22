@@ -60,13 +60,31 @@
                             <li><a href="{{ route('course.index') }}">Formations</a></li>
                             <li><a href="{{ route('evenement.index') }}">Évènements</a></li>
                             <li><a href="{{ route('blog.index') }}">Actualiés</a></li>
-                            <li><a href="{{ route('media.index') }}">Médiathèques</a></li>
+                            <li><a href="{{ route('media.index') }}">Galerie</a></li>
                         </ul>
                     </div>
 
                 </div>
             </div>
         </div>
+        <div class="col-sm-6 col-md-3">
+            <div class="widget dark">
+              <h4 class="widget-title line-bottom-theme-colored2">Derniers posts</h4>
+              <div class="latest-posts">
+                @foreach ($latest_blog as $item)
+                
+                <article class="post media-post clearfix pb-0 mb-10">
+                  <a class="post-thumb" href="{{ route('blog.show', $item->id) }}"><img src="{{ url('storage') }}/{{ $item->photo }}" width="80px" height="55px" style="object-fit:cover;" alt="{{ $item->title}}"></a>
+                  <div class="post-right">
+                    <h5 class="post-title mt-0 mb-5"><a href="{{ route('blog.show', $item->id) }}">{{ $item->title}}</a></h5>
+                    <p class="post-date mb-0 font-12"> {{ $item->created_at}}</p>
+                  </div>
+                </article>
+                @endforeach
+    
+              </div>
+            </div>
+          </div>
 
         <div class="col-sm-6 col-md-3">
             <div class="widget dark">

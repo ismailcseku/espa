@@ -34,6 +34,8 @@ class InterestedController extends Controller
             'grade'=>['string'],
             'accepted'=>['required','string'],
         ]);  
+
+        $data['phone']='+'.$request->indice . ' | ' . $data['phone'];
        
         
         $data['course_id']=$id;

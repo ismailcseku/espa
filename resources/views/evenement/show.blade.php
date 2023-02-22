@@ -9,7 +9,7 @@
                 <div class="section-content">
                     <div class="row">
                         <div class="col-md-6">
-                            <h2 class="text-theme-colored2 font-36">Evenement</h2>
+                            <h2 class="text-theme-colored2 font-36">Évènements</h2>
                             <ol class="breadcrumb text-left mt-10 white">
                                 <li><a href="/">Acceuil</a></li>
                         </div>
@@ -57,9 +57,9 @@
                             <li>
                                 <h5>Partager:</h5>
                                 <div class="styled-icons icon-sm icon-gray icon-circled">
-                                    <a href="{{ $shareLinkedin['facebook']}}"><i class="fa fa-facebook"></i></a>
-                                    <a href="{{ $shareLinkedin['whatsapp']}}"><i class="fa fa-whatsapp"></i></a>
-                                    <a href="{{ $shareLinkedin['linkedin']}}"><i class="fa fa-linkedin"></i></a>
+                                    <a href="{{ $shareLinkedin['facebook']}}" style="color:blue;"><i class="fa fa-facebook"></i></a>
+                                    <a href="{{ $shareLinkedin['whatsapp']}}" style="color:green;"><i class="fa fa-whatsapp"></i></a>
+                                    <a href="{{ $shareLinkedin['linkedin']}}" style="color:rgb(86, 86, 202);"><i class="fa fa-linkedin"></i></a>
 
                                 </div>
                             </li>
@@ -75,7 +75,7 @@
                 </div>
                 <div class="row mt-60">
                     <div class="col-md-6">
-                        <h4 class="mt-0"> Description</h4>
+                        <h4 class="mt-0">{{ $evenements->title}}</h4>
                         <p>{{ $evenements->description }}</p>
                     </div>
 

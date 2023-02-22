@@ -10,6 +10,10 @@
                     <div class="row">
                         <div class="col-md-6">
                             <h2 class="text-theme-colored2 font-36">{{ $blogs->title }}</h2>
+                            <ol class="breadcrumb text-left mt-10 white">
+                                <li><a href="{{ route('home') }}">Acceuil</a></li>
+
+                            </ol>
 
                         </div>
                     </div>
@@ -29,7 +33,12 @@
                                     <div class="post-thumb">
                                         <img src="{{ url('storage') }}/{{ $blogs->photo }}" class="img-fullwidth"
                                             alt="">
-                                        <div class="post-date"><span>26 </span><br> Oct</div>
+                                        @php
+                                            $getMonth = date('F', strtotime($blogs->created_at));
+                                            $getDays = date('d', strtotime($blogs->created_at));
+                                        @endphp
+                                        <div class="post-date"><span>{{ $getDays }} </span><br> {{ $getMonth }}
+                                        </div>
                                         <div class="post-description border-1px p-20">
                                             <span>
                                                 <h3 class="post-title font-weight-600 mt-0 mb-5">{{ $blogs->title }}</h3>
@@ -37,8 +46,8 @@
                                         </div>
                                         <div class="post-meta">
                                             <ul class="list-inline pull-left flip">
-                                                <li><i class="lnr lnr-users text-theme-colored2 font-20"></i>publié
-                                                    {{ $blogs->created_at }}</li>
+                                                <li><i class="lnr lnr-users text-theme-colored2 font-20"></i>Par
+                                                    {{ $blogs->description }}</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -52,25 +61,23 @@
                                     <div class="mt-30 mb-0">
                                         <h5 class="pull-left mt-10 mr-20 text-theme-colored2">Partager:</h5>
                                         <ul class="styled-icons icon-circled m-0">
-                                            <li><a href="{{ $shareFacebook }}" data-bg-color="#3A5795"><i
-                                                        class="fa fa-facebook text-white"></i></a></li>
-                                         
+                                            <li>
+                                                <a href="{{ $shareLinkedin['facebook'] }}" style="color:blue;"><i
+                                                        class="fa fa-facebook"></i></a>
+                                            </li>
+                                            <li><a href="{{ $shareLinkedin['whatsapp'] }}"  style="color:green;"><i
+                                                        class="fa fa-whatsapp"></i></a></li>
+                                            <li> <a href="{{ $shareLinkedin['linkedin'] }}"  style="color:rgb(86, 86, 202);" ><i
+                                                        class="fa fa-linkedin" ></i></a></li>
+
+
+
                                         </ul>
                                     </div>
                                 </div>
                             </article>
 
-                            <div class="">
-                                <div class="">
-                                    <h5 class="post-title mt-0 mb-0">
-                                        <p class="font-18">Description</p>
-                                    </h5>
-                                    <p>{{ $blogs->description }}</p>
 
-                                </div>
-
-                            </div>
-                      
                         </div>
                     </div>
                     <div class="col-md-3">

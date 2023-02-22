@@ -22,12 +22,13 @@
                 </div>
             </section>
             @if (count($responsables) > 0)
-                @foreach ($responsables as $responsable)
+               
                     <!-- Section: team -->
                     <section id="team">
                         <div class="container">
                             <div class="section-content">
                                 <div class="row mtli-row-clearfix">
+                                    @foreach ($responsables as $responsable)
                                     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
                                         <div class="team-members mb-40">
                                             <div class="team-thumb mr-0">
@@ -38,6 +39,8 @@
                                                 <h4 class="text-uppercase font-weight-600 m-0 pb-5">{{ $responsable->name }}
                                                     {{ $responsable->surname }}</h4>
                                                 <h6 class="font-13 text-gray mt-0">{{ $responsable->poste }}</h6>
+                                                <h6 class="font-13 text-gray mt-0">{{ $responsable->statut }}</h6>
+
                                                 <h6 class="font-13 text-gray mt-0">{{ $responsable->etablissement }}</h6>
                                                 <ul class="list-inline mt-15">
 
@@ -330,12 +333,13 @@
                                             </div>
                                         </div>
                                     </div>
+                                    @endforeach
                                 </div>
 
                             </div>
                         </div>
                     </section>
-                @endforeach
+               
             @else
                 <h2 class="text-theme-colored2 font-36">Il n'y a pas de responsable </h2>
             @endif

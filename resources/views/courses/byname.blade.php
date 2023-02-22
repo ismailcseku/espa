@@ -69,12 +69,13 @@
 
 
                                     <ul id="myTab" class="nav nav-tabs mt-30">
-                                        <li class="active"><a href="#tab1" data-toggle="tab">Description</a></li>
-                                        <li><a href="#tab2" data-toggle="tab">Admission</a></li>
-                                        <li><a href="#tab5" data-toggle="tab">Programme</a></li>
-                                        <li><a href="#tab6" data-toggle="tab">Carrière</a></li>
-                                        <li><a href="#tab3" data-toggle="tab">Documents</a></li>
-                                        <li><a href="#tab4" data-toggle="tab">Témoignages</a></li>
+                                        <li class="active"><a href="#tab1" data-toggle="tab"
+                                                style="font-size:16px;">Description</a></li>
+                                        <li><a href="#tab2" data-toggle="tab" style="font-size:16px;">Admission</a></li>
+                                        <li><a href="#tab5" data-toggle="tab" style="font-size:16px;">Programme</a></li>
+                                        <li><a href="#tab6" data-toggle="tab" style="font-size:16px;">Carrière</a></li>
+                                        <li><a href="#tab3" data-toggle="tab" style="font-size:16px;">Documents</a></li>
+                                        <li><a href="#tab4" data-toggle="tab" style="font-size:16px;">Témoignages</a></li>
 
                                     </ul>
                                     <div id="myTabContent" class="tab-content">
@@ -115,7 +116,7 @@
 
                                         </div>
                                         <div class="tab-pane fade" id="tab2">
-                                            <h4 class="line-bottom-theme-colored2 mb-15">Information cours</h4>
+                                            <h4 class="line-bottom-theme-colored2 mb-15">Admission</h4>
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="blog-posts single-post">
@@ -291,7 +292,7 @@
                                             {!! $courses[0]->review !!}
                                         </div>
                                         <div class="tab-pane fade" id="tab5">
-                                            <h4 class="line-bottom-theme-colored2 mb-0">programmes</h4>
+                                            <h4 class="line-bottom-theme-colored2 mb-0">Programme</h4>
                                             <div class="container-block">
                                                 <div class="accordion">
                                                     @foreach ($programs as $program)
@@ -305,7 +306,7 @@
                                                                             {{ $program->title }} </p>
                                                                     @endif
                                                                     @if ($program->hours)
-                                                                        <p style="margin-right:7%;"> Heure :
+                                                                        <p style="margin-right:7%;"> heures :
                                                                             {{ $program->hours }}</p>
                                                                     @endif
                                                                 </div>
@@ -325,7 +326,7 @@
                                                                             {{ $program->title }} </p>
                                                                     @endif
                                                                     @if ($program->hours)
-                                                                        <p style="margin-right:7%;"> Heure :
+                                                                        <p style="margin-right:7%;"> heures :
                                                                             {{ $program->hours }}</p>
                                                                     @endif
                                                                 </div>
@@ -380,7 +381,7 @@
                                                                                 <div class="media-body">
                                                                                     <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
                                                                                         style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
-                                                                                        Diplome </h5>
+                                                                                        Diplôme </h5>
                                                                                     <div class="comment-date">
                                                                                         {!! $course->grade !!}</div>
                                                                                 </div>
@@ -472,8 +473,10 @@
                                                             </h4>
                                                             @if (session()->has('success'))
                                                                 <h6 class='alert alert-success' role="alert">
-                                                                    Felicitation !! Vous avez postulé à cette formation avec
-                                                                    réussite , nous vous contacterons très bientôt .
+                                                                    Votre réponse a été bien enregistrée . Nous vous
+                                                                    remercions pour votre intérêt et n'hésitez pas à nous
+                                                                    contacter .
+
                                                                 </h6>
                                                             @endif
                                                             <div class="line-bottom-theme-colored2 mb-30"></div>
@@ -621,12 +624,11 @@
                                                                         <div class="form-group mb-10">
                                                                             <input name="phone" class="form-control"
                                                                                 id="phone" type="tel"
-                                                                                value="{{ old('phone') }}" required>
+                                                                                value="+212" required>
+                                                                            <input name="indice" class="form-control"
+                                                                                id="indice" type="hidden"
+                                                                                value="212">
                                                                         </div>
-                                                                        @if ($errors->has('phone'))
-                                                                            <span
-                                                                                class="text-danger">{{ $errors->first('phone') }}</span>
-                                                                        @endif
                                                                     </div>
 
                                                                 </div>
@@ -727,18 +729,20 @@
                                                         <a role="button" data-toggle="collapse"
                                                             data-parent="#accordion6" href="#collaps1"
                                                             aria-expanded="true" aria-controls="collaps1">
-                                                            Why Imfundo University is Best?
+                                                            Une vie estudiantine exceptionnelle
                                                         </a>
                                                     </h6>
                                                 </div>
                                                 <div id="collaps1" class="panel-collapse collapse in" role="tabpanel"
                                                     aria-labelledby="headin1">
                                                     <div class="panel-body">
-                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-                                                        terry
-                                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat
-                                                        skateboard dolor
-                                                        brunch.
+                                                        Rejoignez-nous et bâtissez votre carrière dans une école qui offre
+                                                        de nombreux
+                                                        services et activités vous feront découvrir un environnement unique
+                                                        de multiples
+                                                        cultures. Nous mettons à votre disposition toutes les ressources
+                                                        nécessaires pour
+                                                        vous permettre de vivre une expérience agréable et positive.
                                                     </div>
                                                 </div>
                                             </div>
@@ -748,18 +752,20 @@
                                                         <a class="collapsed" role="button" data-toggle="collapse"
                                                             data-parent="#accordion6" href="#collapse2"
                                                             aria-expanded="false" aria-controls="collapse2">
-                                                            Why Imfundo University is Best?
+                                                            Plus de 1000 étudiants à l’horizon 2030
                                                         </a>
                                                     </h6>
                                                 </div>
                                                 <div id="collapse2" class="panel-collapse collapse" role="tabpanel"
                                                     aria-labelledby="heading2">
                                                     <div class="panel-body">
-                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-                                                        terry
-                                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat
-                                                        skateboard dolor
-                                                        brunch.
+                                                        Nouveau département de l'agro-alimentaire en partenariat avec l'ESCA
+                                                        et des
+                                                        nouvelles filières de formation dans les domaines de l’intelligence
+                                                        artificielle,
+                                                        aquaculture, sciences acridiennes, etc. 5 doctorats par an, sessions
+                                                        de formation
+                                                        continue au profit des producteurs et 12 sessions farm-manager.
                                                     </div>
                                                 </div>
                                             </div>
@@ -769,18 +775,20 @@
                                                         <a class="collapsed" role="button" data-toggle="collapse"
                                                             data-parent="#accordion6" href="#collapse3"
                                                             aria-expanded="false" aria-controls="collapse3">
-                                                            Why Imfundo University is Best?
+                                                            Projets structuraux de niveau mondial
                                                         </a>
                                                     </h6>
                                                 </div>
                                                 <div id="collapse3" class="panel-collapse collapse" role="tabpanel"
                                                     aria-labelledby="heading3">
                                                     <div class="panel-body">
-                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-                                                        terry
-                                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat
-                                                        skateboard dolor
-                                                        brunch.
+                                                        Centre d’excellence horticole, ferme expérimentale, consortium pour
+                                                        la recherche, le
+                                                        développement et l’innovation agricole, impact cluster,
+                                                        agri-business incubateur,
+                                                        centre de formation continue, centre de diagnostic et d’analyse,
+                                                        programme doctoral
+                                                        et masters internationaux…
                                                     </div>
                                                 </div>
                                             </div>
@@ -790,18 +798,21 @@
                                                         <a class="collapsed" role="button" data-toggle="collapse"
                                                             data-parent="#accordion6" href="#collapse4"
                                                             aria-expanded="false" aria-controls="collapse4">
-                                                            Why Imfundo University is Best?
+                                                            Programme de recherche scientifique
                                                         </a>
                                                     </h6>
                                                 </div>
                                                 <div id="collapse4" class="panel-collapse collapse" role="tabpanel"
                                                     aria-labelledby="heading4">
                                                     <div class="panel-body">
-                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-                                                        terry
-                                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat
-                                                        skateboard dolor
-                                                        brunch.
+                                                        Des équipes de recherche et d’experts nationaux et internationaux
+                                                        dans différents
+                                                        domaines : Gestion rationnelle des ressources en eau, technologies
+                                                        de récolte et
+                                                        post-récolte, protection des cultures et gestion intégrée des
+                                                        ravageurs, contrôle
+                                                        climatique basé sur le pilotage des données, biotechnologie et
+                                                        sélection végétales…
                                                     </div>
                                                 </div>
                                             </div>
@@ -845,7 +856,7 @@
             color: #1b1d21;
             border-radius: 0.5rem;
             border: 1px solid #f7f7f7;
-            margin-bottom: 1.875rem;
+            margin-bottom: 1rem;
         }
 
         .accordion .accordion-item.active {
@@ -876,7 +887,7 @@
 
         .accordion .accordion-item .accordion-header::after {
             content: "";
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-family: "FontAwesome";
             position: absolute;
             right: 1.5rem;
@@ -891,9 +902,9 @@
         }
 
         .accordion .accordion-item .accordion-body .accordion-body-content {
-            padding: 0 1.5rem 1.5rem;
+            padding: 0 1.5rem;
             font-size: 0.875rem;
-            line-height: 2rem;
+            line-height: 1rem;
         }
     </style>
     <script>
@@ -928,8 +939,17 @@
             }
         })
         const phoneInputField = document.querySelector("#phone");
-        const phoneInput = window.intlTelInput(phoneInputField, {
-            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        let indice = document.querySelector("#indice");
+
+        const phoneInput = window.intlTelInput(phoneInputField, {});
+
+        var country = phoneInput.getSelectedCountryData();
+
+
+        phoneInputField.addEventListener("countrychange", function() {
+            country = phoneInput.getSelectedCountryData();
+            indice.value = country.dialCode
+
         });
     </script>
 

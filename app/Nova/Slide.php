@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Laravel\Nova\Fields\File;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Image;
-use Laravel\Nova\Fields\Textarea;
+use Emilianotisato\NovaTinyMCE\NovaTinyMCE;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Slide extends Resource
@@ -50,7 +50,7 @@ class Slide extends Resource
             ID::make()->sortable(),
             Text::make('Sujet','subject'),
             Text::make('Titre','title'),
-            Textarea::make('Decription','description'),
+            NovaTinyMCE::make('Decription','description'),
             Image::make('Une image','photo')->disk('public')
             ->storeAs(function (Request $request) {
                     return $request->photo->getClientOriginalName();

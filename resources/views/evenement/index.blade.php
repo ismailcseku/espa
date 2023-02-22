@@ -74,7 +74,7 @@
                                                 <a href="{{route('evenement.show',$evenement->id)}}" class="text-theme-colored2">...Lire plus</a>
  
                                             </p>
-                                            <a href="{{route('evenement.show',$evenement->id)}}" class="btn btn-default mt-5">Découvrir </a>
+                                            <a href="{{route('evenement.show',$evenement->id)}}" class="btn btn-theme-colored2 mt-5">Découvrir </a>
                                         </div>
                                     </div>
                                 </div>
