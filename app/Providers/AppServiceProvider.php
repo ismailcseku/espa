@@ -31,7 +31,7 @@ class AppServiceProvider extends ServiceProvider
         
         View::share('partners', $partners);
         $latest_blog=DB::table('blogs')->orderBy('created_at','Desc')->limit(3)->get();
-       View::share('latest_blog', $latest_blog);
+        View::share('latest_blog', $latest_blog);
       
 
     }
