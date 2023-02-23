@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Nova\Blog;
+use App\Nova\Logo;
 use App\Nova\Mode;
 use App\Nova\User;
 use App\Nova\About;
@@ -105,7 +106,6 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                         MenuItem::resource(Media::class),
                         MenuItem::resource(Mediavideo::class),
                     ])->collapsable(),
-                        MenuItem::resource(Campus::class),
                         MenuSection::make('Les pages statiques', [
                         MenuItem::resource(About::class),
                         MenuItem::resource(Director::class),
@@ -123,6 +123,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                         MenuItem::resource(Newsletter::class),
                         MenuItem::resource(MessageNewsletter::class),
                     ])->icon('mail')->collapsable(),
+                    MenuItem::resource(Logo::class),
                     MenuItem::resource(User::class),
 
                   

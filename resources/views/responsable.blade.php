@@ -38,8 +38,8 @@
                                             <div class="team-bottom-part border-1px p-15">
                                                 <h4 class="text-uppercase font-weight-600 m-0 pb-5">{{ $responsable->name }}
                                                     {{ $responsable->surname }}</h4>
+                                                    <h6 class="font-13 text-gray mt-0">{{ $responsable->statut }}</h6>
                                                 <h6 class="font-13 text-gray mt-0">{{ $responsable->poste }}</h6>
-                                                <h6 class="font-13 text-gray mt-0">{{ $responsable->statut }}</h6>
 
                                                 <h6 class="font-13 text-gray mt-0">{{ $responsable->etablissement }}</h6>
                                                 <ul class="list-inline mt-15">

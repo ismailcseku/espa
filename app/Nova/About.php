@@ -5,6 +5,7 @@ namespace App\Nova;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Image;
+use Laravel\Nova\Fields\Textarea;
 use Emilianotisato\NovaTinyMCE\NovaTinyMCE;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
@@ -43,6 +44,7 @@ class About extends Resource
     {
         return [
             ID::make()->sortable(),
+            Textarea::make('Description','description'),
             Image::make('Une image','photo')->disk('public')
             ->storeAs(function (Request $request) {
                     return $request->photo->getClientOriginalName();

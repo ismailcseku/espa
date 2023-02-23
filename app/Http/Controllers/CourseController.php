@@ -25,6 +25,7 @@ class CourseController extends Controller
     public function index()
     {
 
+      $degrees=Degree::all();
         $courses=DB::table('courses')->join('modalities','modalities.id','=','courses.modality_id')
         ->join('degrees','degrees.id','=','courses.degree_id')
         ->join('languages','languages.id','=','courses.language_id')
@@ -38,10 +39,12 @@ class CourseController extends Controller
             $item->datelimite=Carbon::parse($item->datelimite)->toObject();
             $item->description=substr($item->description,0,200);    
         } 
+        
         return view('courses.index')->with([
             'courses'=>$courses,
-            
+            'degrees'=>$degrees,
         ]);
+        
 
     }
     /**

@@ -23,7 +23,7 @@
     <div class="container pt-60 pb-20">
         <div class="col-sm-6 col-md-3">
             <div class="widget dark">
-                <p class="mt-20">
+               
                     <h4 class="widget-title line-bottom-theme-colored2">Coordonnées</h4>
 
                     <span>
@@ -31,7 +31,7 @@
                         Complexe Horticole d’Agadir, km 2 route d’Azrou,
                         B.P. 121 Ait Melloul 80150 - Agadir
                     </span>
-                </p>
+              
                 <ul class="list-inline">
                     <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone mr-5"></i> <a href="#">(+212) 0528-241-006
                             / 240-155</a>

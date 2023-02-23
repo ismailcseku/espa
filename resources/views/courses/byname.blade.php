@@ -30,9 +30,9 @@
                 <section>
                     <div class=" mt-30 mb-30 pt-30 pb-30 ml-30 mr-30">
                         <div class="row">
+                            <h3 class="text-uppercase mt-0 mb-30">{{ $course->name }}</h3>
                             <div class="col-sm-12 col-md-6 col-lg-7">
                                 <div class="single-service">
-                                    <h3 class="text-uppercase mt-0 mb-30">{{ $course->name }}</h3>
                                     <img src="{{ url('storage') }}/{{ $course->photo }}" style="width:100%;" alt="">
                                     <ul class="list-inline mt-20 mb-15">
                                         @if ($course->responsables_name)
@@ -133,7 +133,7 @@
                                                                             <div class="media-body">
                                                                                 <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
                                                                                     style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
-                                                                                    Préréquis et admission </h5>
+                                                                                    Prérequis et admission </h5>
                                                                                 <div class="comment-date">
                                                                                     {!! $course->admission !!}</div>
                                                                             </div>
@@ -306,8 +306,8 @@
                                                                             {{ $program->title }} </p>
                                                                     @endif
                                                                     @if ($program->hours)
-                                                                        <p style="margin-right:7%;"> heures :
-                                                                            {{ $program->hours }}</p>
+                                                                        <p style="margin-right:7%;"> 
+                                                                            {{ $program->hours }} heures </p>
                                                                     @endif
                                                                 </div>
                                                                 <div class="accordion-body">
@@ -326,8 +326,8 @@
                                                                             {{ $program->title }} </p>
                                                                     @endif
                                                                     @if ($program->hours)
-                                                                        <p style="margin-right:7%;"> heures :
-                                                                            {{ $program->hours }}</p>
+                                                                        <p style="margin-right:7%;"> 
+                                                                            {{ $program->hours }} heures</p>
                                                                     @endif
                                                                 </div>
                                                                 <div class="accordion-body">
@@ -740,9 +740,7 @@
                                                         de nombreux
                                                         services et activités vous feront découvrir un environnement unique
                                                         de multiples
-                                                        cultures. Nous mettons à votre disposition toutes les ressources
-                                                        nécessaires pour
-                                                        vous permettre de vivre une expérience agréable et positive.
+                                                        cultures.
                                                     </div>
                                                 </div>
                                             </div>
@@ -763,9 +761,7 @@
                                                         et des
                                                         nouvelles filières de formation dans les domaines de l’intelligence
                                                         artificielle,
-                                                        aquaculture, sciences acridiennes, etc. 5 doctorats par an, sessions
-                                                        de formation
-                                                        continue au profit des producteurs et 12 sessions farm-manager.
+                                                        aquaculture, sciences acridiennes, etc.
                                                     </div>
                                                 </div>
                                             </div>

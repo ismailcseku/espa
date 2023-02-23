@@ -42,8 +42,8 @@ class HomeController extends Controller
             $course->datelimite=Carbon::parse($course->datelimite)->toObject();
             $course->description=substr($course->description,0,200);
         }
-        $evenements=DB::table('evenements')->limit(3)->get();
-        $blogs=DB::table('blogs')->limit(3)->get()->map(function($item,$key){
+        $evenements=DB::table('evenements')->orderBy('created_at','Desc')->limit(3)->get();
+        $blogs=DB::table('blogs')->orderBy('created_at','Desc')->limit(3)->get()->map(function($item,$key){
             $item->description=substr($item->description,0,60);
             return $item;
        });

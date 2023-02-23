@@ -4,19 +4,17 @@ namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\File;
-use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Select;
+use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Downloadpage extends Resource
+class Logo extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\Downloadpage>
+     * @var class-string<\App\Models\Logo>
      */
-    public static $model = \App\Models\Downloadpage::class;
+    public static $model = \App\Models\Logo::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -44,19 +42,9 @@ class Downloadpage extends Resource
     {
         return [
             ID::make()->sortable(),
-            Select::make('Choisir la page','pagename')->options([
-                'centre-excellence' => 'centre-excellence',
-                'recherche' => 'recherche',
-                'ferme-experiementale' => 'ferme-experiementale',
-                'impact-cluster' => 'impact-cluster',
-                'agri-business' => 'agri-business',
-                'about' => 'À propos',
-                'mot-du-directeur'=>'Mot du directeur'
-            ]) ,  
-            Text::make('Nom du document','filename'),          
-            File::make('Un fichier','file')->disk('public')
+            Image::make('Le logo','logo')->disk('public')
             ->storeAs(function (Request $request) {
-                    return $request->file->getClientOriginalName();
+                    return $request->logo->getClientOriginalName();
                  }),
         ];
     }
@@ -106,6 +94,6 @@ class Downloadpage extends Resource
     }
     public static function label()
     {
-        return 'Fichier de pages ';
+        return 'Votre logo';
     }
 }

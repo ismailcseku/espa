@@ -243,203 +243,81 @@
 
 
     <!-- Section: Courses -->
-
-
     <section id="courses" class="bg-silver-light">
         <div class="container">
-            <section id="gallery">
-                <div class="container ">
-                    <div class="section-title " style="margin-top:-10%;">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <h2 class="text-uppercase title">Nos <span class="text-theme-colored2">Formations</span>
-                                </h2>
-                                <p class="text-uppercase mb-0">Choisir un cycle</p>
-                                <div class="double-line-bottom-theme-colored-2"></div>
-                            </div>
-                        </div>
+            <div class="section-title mb-40">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="text-uppercase title">Nos <span class="text-theme-colored2">Formations</span>
+                        </h2>
+                        <div class="double-line-bottom-theme-colored-2"></div>
                     </div>
-                    <div class="section-content">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <!-- Works Filter -->
-                                <div class="portfolio-filter font-alt align-center">
+                </div>
+            </div>
+            <div class="section-content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="owl-carousel-3col owl-nav-top" data-nav="tru">
+                            @foreach ($courses as $course)
+                                <div class="item">
+                                    <div class="course-single-item bg-white border-1px clearfix">
+                                        <a href="{{ route('course.details', $course->id) }}" class="course-thumb">
+                                            <img class="img-fullwidth" alt=""
+                                                src="{{ url('storage') }}/{{ $course->photo }}">
 
-                                    <a class="active" id="first_element" href="#select0" data-filter=".select0">Tous</a>
-                                    @foreach ($degrees as $degree)
-                                        <a id="first_element" href="#select{{ $degree->id }}"
-                                            data-filter=".select{{ $degree->id }}">{{ $degree->name }}</a>
-                                    @endforeach
-                                </div>
+                                        </a>
+                                        <div class="course-details clearfix p-20 pt-15">
+                                            <div class="course-top-part">
+                                                <a href="{{ route('course.details', $course->id) }}">
+                                                    <h4 class="mt-5 mb-5">
+                                                        {{ $course->name }}</h4>
+                                                </a>
 
-                                <div id="grid"
-                                    class="gallery-isotope default-animation-effect grid-4 gutter clearfix">
-
-                                    <div class="gallery-item select0 section-content " style="width:100%;">
-                                        <div class="row">
-
-                                            <div class=" col-md-12">
-
-
-                                                <div class="owl-carousel-3col owl-nav-top" data-nav="tru"
-                                                    style="margin-top:15%; ">
-
-                                                    @foreach ($courses as $course)
-                                                        <div class="item">
-                                                            <div class="course-single-item bg-white border-1px clearfix">
-                                                                <a href="{{ route('course.details', $course->id) }}"
-                                                                    class="course-thumb">
-                                                                    <img class="img-fullwidth" alt=""
-                                                                        src="{{ url('storage') }}/{{ $course->photo }}">
-
-                                                                </a>
-                                                                <div class="course-details clearfix p-20 pt-15">
-                                                                    <div class="course-top-part">
-                                                                        <a
-                                                                            href="{{ route('course.details', $course->id) }}">
-                                                                            <h4 class="mt-5 mb-5">
-                                                                                {{ $course->name }}</h4>
-                                                                        </a>
-
-                                                                        <a
-                                                                            href="{{ route('course.details', $course->id) }}">
-                                                                            <h4 class="mt-5 mb-5">
-                                                                                {{ $course->degrees_name }}
-                                                                            </h4>
-                                                                        </a>
-                                                                    </div>
-                                                                    <a
-                                                                        href="{{ route('course.details', $course->id) }}"class="course-description mt-15 mb-0">
-                                                                        <span>
-                                                                            {!! $course->description !!}</span><span
-                                                                            style="color:orange ; opacity:0.8; font-weight:bold;">
-                                                                            . . . Lire plus </span>
-                                                                    </a>
-                                                                    <div class="author-thumb">
-                                                                        <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
-                                                                            alt="" class="img-circle">
-                                                                    </div>
-                                                                </div>
-                                                                <a href="{{ route('course.details', $course->id) }}"
-                                                                    style="display: block" class="course-meta">
-                                                                    <ul class="list-inline">
-                                                                        <li><i class="ficon-clock font-18"></i>
-                                                                            {{ $course->duration }} Mois
-
-                                                                        </li>
-                                                                        <li>
-                                                                            <i class="pe-7s-notebook font-18"></i>
-                                                                            {{ $course->languages_name }}
-                                                                        </li>
-                                                                    </ul>
-                                                                    <div class="course-tag">
-
-                                                                        <h5>Détail</h5>
-                                                                    </div>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    @endforeach
-
-
-                                                </div>
+                                                <a href="{{ route('course.details', $course->id) }}">
+                                                    <h4 class="mt-5 mb-5">
+                                                        {{ $course->degrees_name }}
+                                                    </h4>
+                                                </a>
+                                            </div>
+                                            <a
+                                                href="{{ route('course.details', $course->id) }}"class="course-description mt-15 mb-0">
+                                                <span>
+                                                    {!! $course->description !!}</span><span
+                                                    style="color:orange ; opacity:0.8; font-weight:bold;">
+                                                    . . . Lire plus </span>
+                                            </a>
+                                            <div class="author-thumb">
+                                                <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
+                                                    alt="" class="img-circle">
                                             </div>
                                         </div>
+                                        <a href="{{ route('course.details', $course->id) }}" style="display: block"
+                                            class="course-meta">
+                                            <ul class="list-inline">
+                                                <li><i class="ficon-clock font-18"></i>
+                                                    {{ $course->duration }} Mois
+
+                                                </li>
+                                                <li>
+                                                    <i class="pe-7s-notebook font-18"></i>
+                                                    {{ $course->languages_name }}
+                                                </li>
+                                            </ul>
+                                            <div class="course-tag">
+
+                                                <h5>Détail</h5>
+                                            </div>
+                                        </a>
                                     </div>
-
-
-                                    @foreach ($degrees as $degree)
-                                        <div class="gallery-item select{{ $degree->id }} section-content"
-                                            id="grid" style="width:100%;">
-                                            <div class="row" style="margin-top:15%; ">
-                                                <div class="col-md-12">
-                                                    <div class="owl-carousel-3col owl-nav-top" data-nav="tru">
-                                                        @foreach ($courses as $course)
-                                                            @if ($course->degrees_id == $degree->id)
-                                                                <div class="item">
-                                                                    <div
-                                                                        class="course-single-item bg-white border-1px clearfix">
-                                                                        <a href="{{ route('course.details', $course->id) }}"
-                                                                            class="course-thumb ">
-                                                                            <img class="img-fullwidth" alt=""
-                                                                                src="{{ url('storage') }}/{{ $course->photo }}">
-
-                                                                        </a>
-                                                                        <div class="course-details clearfix p-20 pt-15">
-                                                                            <div class="course-top-part">
-
-                                                                                <a
-                                                                                    href="{{ route('course.details', $course->id) }}">
-                                                                                    <h4 class="mt-5 mb-5">
-                                                                                        {{ $course->name }}</h4>
-                                                                                </a>
-
-                                                                                <a
-                                                                                    href="{{ route('course.details', $course->id) }}">
-                                                                                    <h4 class="mt-5 mb-5">
-                                                                                        {{ $course->degrees_name }}
-                                                                                    </h4>
-                                                                                </a>
-                                                                            </div>
-                                                                            <a
-                                                                                href="{{ route('course.details', $course->id) }}"class="course-description mt-15 mb-0">
-                                                                                <span> {!! $course->description !!}</span><span
-                                                                                    style="text-decoration: underline">
-                                                                                    lire plus </span>
-                                                                            </a>
-                                                                            <div class="author-thumb">
-                                                                                <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
-                                                                                    alt="" class="img-circle">
-                                                                            </div>
-                                                                        </div>
-                                                                        <a href="{{ route('course.details', $course->id) }}"
-                                                                            style="display: block" class="course-meta">
-                                                                            <ul class="list-inline">
-                                                                                <li><i class="ficon-clock font-18"></i>
-                                                                                    {{ $course->duration }} Mois
-
-                                                                                </li>
-                                                                                <li>
-                                                                                    <i class="pe-7s-notebook font-18"></i>
-                                                                                    {{ $course->languages_name }}
-                                                                                </li>
-                                                                            </ul>
-                                                                            <div class="course-tag">
-
-                                                                                <h5>Découvrir</h5>
-                                                                            </div>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            @endif
-                                                        @endforeach
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    @endforeach
                                 </div>
+                            @endforeach
 
-                                <!-- End Portfolio Gallery Grid -->
-                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
-
-
-
-
+            </div>
         </div>
     </section>
-
-
-
-
-
-
-
 
 
 
@@ -456,8 +334,9 @@
                         <div class="line-bottom-theme-colored2"></div>
                         @foreach ($about as $item)
                             <img src="{{ url('storage') }}/{{ $item->photo }}" class="img-fullwidth" alt="">
-                            <p class="mt-15">Le Complexe Horticole d'Agadir (CHA): Hub de formation, de recherche, de développement et d'innovation agricole, pour une agriculture plus performante et plus résiliente. Grâce à son dynamisme et son implication avec l’ensemble des acteurs du secteur de fruits et légumes, le CHA développe en continu une offre de formation adaptée aux besoins et attentes des professionnels...</p>
-                            <a href="{{ route('about.index') }}" class="mt-15 btn btn-colored btn-sm btn-theme-colored2"> Lire
+                            <p class="mt-15">{{ $item->description }}</p>
+                            <a href="{{ route('about.index') }}" class="mt-15 btn btn-colored btn-sm btn-theme-colored2">
+                                Lire
                                 plus</a>
                         @endforeach
                     </div>
@@ -536,68 +415,73 @@
                                     <div class="panel-body">
                                         Rejoignez-nous et bâtissez votre carrière dans une école qui offre de nombreux
                                         services et activités vous feront découvrir un environnement unique de multiples
-                                        cultures. Nous mettons à votre disposition toutes les ressources nécessaires pour
-                                        vous permettre de vivre une expérience agréable et positive.
+                                        cultures.
                                     </div>
                                 </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="heading2">
-                                    <h6 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse"
-                                            data-parent="#accordion6" href="#collapse2" aria-expanded="false"
-                                            aria-controls="collapse2">
-                                            Plus de 1000 étudiants à l’horizon 2030
-                                        </a>
-                                    </h6>
-                                </div>
-                                <div id="collapse2" class="panel-collapse collapse" role="tabpanel"
-                                    aria-labelledby="heading2">
-                                    <div class="panel-body">
-                                        Nouveau département de l'agro-alimentaire en partenariat avec l'ESCA et des
-                                        nouvelles filières de formation dans les domaines de l’intelligence artificielle,
-                                        aquaculture, sciences acridiennes, etc. 5 doctorats par an, sessions de formation
-                                        continue au profit des producteurs et 12 sessions farm-manager.
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="heading2">
+                                        <h6 class="panel-title">
+                                            <a class="collapsed" role="button" data-toggle="collapse"
+                                                data-parent="#accordion6" href="#collapse2" aria-expanded="false"
+                                                aria-controls="collapse2">
+                                                Plus de 1000 étudiants à l’horizon 2030
+                                            </a>
+                                        </h6>
+                                    </div>
+                                    <div id="collapse2" class="panel-collapse collapse" role="tabpanel"
+                                        aria-labelledby="heading2">
+                                        <div class="panel-body">
+                                            Nouveau département de l'agro-alimentaire en partenariat avec l'ESCA et des
+                                            nouvelles filières de formation dans les domaines de l’intelligence
+                                            artificielle,
+                                            aquaculture, sciences acridiennes, etc.
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="heading3">
-                                    <h6 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse"
-                                            data-parent="#accordion6" href="#collapse3" aria-expanded="false"
-                                            aria-controls="collapse3">
-                                            Projets structuraux de niveau mondial
-                                        </a>
-                                    </h6>
-                                </div>
-                                <div id="collapse3" class="panel-collapse collapse" role="tabpanel"
-                                    aria-labelledby="heading3">
-                                    <div class="panel-body">
-                                        Centre d’excellence horticole, ferme expérimentale, consortium pour la recherche, le
-                                        développement et l’innovation agricole, impact cluster, agri-business incubateur,
-                                        centre de formation continue, centre de diagnostic et d’analyse, programme doctoral
-                                        et masters internationaux…
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="heading3">
+                                        <h6 class="panel-title">
+                                            <a class="collapsed" role="button" data-toggle="collapse"
+                                                data-parent="#accordion6" href="#collapse3" aria-expanded="false"
+                                                aria-controls="collapse3">
+                                                Projets structuraux de niveau mondial
+                                            </a>
+                                        </h6>
+                                    </div>
+                                    <div id="collapse3" class="panel-collapse collapse" role="tabpanel"
+                                        aria-labelledby="heading3">
+                                        <div class="panel-body">
+                                            Centre d’excellence horticole, ferme expérimentale, consortium pour la
+                                            recherche, le
+                                            développement et l’innovation agricole, impact cluster, agri-business
+                                            incubateur,
+                                            centre de formation continue, centre de diagnostic et d’analyse, programme
+                                            doctoral
+                                            et masters internationaux…
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="heading4">
-                                    <h6 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse"
-                                            data-parent="#accordion6" href="#collapse4" aria-expanded="false"
-                                            aria-controls="collapse4">
-                                            Programme de recherche scientifique
-                                        </a>
-                                    </h6>
-                                </div>
-                                <div id="collapse4" class="panel-collapse collapse" role="tabpanel"
-                                    aria-labelledby="heading4">
-                                    <div class="panel-body">
-                                        Des équipes de recherche et d’experts nationaux et internationaux dans différents
-                                        domaines : Gestion rationnelle des ressources en eau, technologies de récolte et
-                                        post-récolte, protection des cultures et gestion intégrée des ravageurs, contrôle
-                                        climatique basé sur le pilotage des données, biotechnologie et sélection végétales…
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="heading4">
+                                        <h6 class="panel-title">
+                                            <a class="collapsed" role="button" data-toggle="collapse"
+                                                data-parent="#accordion6" href="#collapse4" aria-expanded="false"
+                                                aria-controls="collapse4">
+                                                Programme de recherche scientifique
+                                            </a>
+                                        </h6>
+                                    </div>
+                                    <div id="collapse4" class="panel-collapse collapse" role="tabpanel"
+                                        aria-labelledby="heading4">
+                                        <div class="panel-body">
+                                            Des équipes de recherche et d’experts nationaux et internationaux dans
+                                            différents
+                                            domaines : Gestion rationnelle des ressources en eau, technologies de récolte et
+                                            post-récolte, protection des cultures et gestion intégrée des ravageurs,
+                                            contrôle
+                                            climatique basé sur le pilotage des données, biotechnologie et sélection
+                                            végétales…
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -605,7 +489,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- Divider: Funfact -->
@@ -661,54 +544,54 @@
 
     <!-- Section: team -->
     <!--
-                                                                                                                                                    <section id="team">
-                                                                                                                                                        <div class="container">
-                                                                                                                                                            <div class="section-title mb-40">
-                                                                                                                                                                <div class="row">
-                                                                                                                                                                    <div class="col-md-12">
-                                                                                                                                                                        <h2 class="title text-uppercase mb-5">Nos <span
-                                                                                                                                                                                class="text-theme-colored2">responsables</span>
-                                                                                                                                                                        </h2>
-                                                                                                                                                                        <h5 class="font-16 text-gray-darkgray mt-5">Discuter avec un responsable</h5>
-                                                                                                                                                                    </div>
-                                                                                                                                                                </div>
-                                                                                                                                                            </div>
-                                                                                                                                                            <div class="section-content">
-                                                                                                                                                                <div class="row">
-                                                                                                                                                                    @foreach ($responsables as $responsable)
-    <div class="col-xs-12 col-sm-6 col-md-6">
-                                                                                                                                                                            <div class="team-members mb-40">
-                                                                                                                                                                                <div class="team-thumb pull-left team-pull-none flip mr-sm-0 t-mr-0">
-                                                                                                                                                                                    <img src="{{ url('storage') }}/{{ $responsable->photo }}" alt=""
-                                                                                                                                                                                        class="img-fullwidth">
-                                                                                                                                                                                </div>
-                                                                                                                                                                                <div class="team-bottom-part border-1px p-15">
-                                                                                                                                                                                    <h4 class="text-uppercase m-0 pb-5">{{ $responsable->name }}
-                                                                                                                                                                                        {{ $responsable->surname }}</h4>
-                                                                                                                                                                                    <h6 class="font-13 text-gray mt-0">{{ $responsable->poste }}</h6>
-                                                                                                                                                                                    <ul class="list-inline mt-15">
-                                                                                                                                                                                        <li class="m-0 pr-10"> <i class="fa fa-phone text-theme-colored2 mr-5"></i>
-                                                                                                                                                                                            <span class="text-gray" href="#">{{ $responsable->phone }}</span>
-                                                                                                                                                                                        </li>
-                                                                                                                                                                                        <li class="m-0 pr-10"> <i
-                                                                                                                                                                                                class="fa fa-envelope-o text-theme-colored2 mr-5"></i>
-                                                                                                                                                                                            <a class="text-gray"
-                                                                                                                                                                                                href="mailto:{{ $responsable->email }}">{{ $responsable->email }}</a>
-                                                                                                                                                                                        </li>
-
-                                                                                                                                                                                    </ul>
-
-                                                                                                                                                                                </div>
+                                                                                                                                                            <section id="team">
+                                                                                                                                                                <div class="container">
+                                                                                                                                                                    <div class="section-title mb-40">
+                                                                                                                                                                        <div class="row">
+                                                                                                                                                                            <div class="col-md-12">
+                                                                                                                                                                                <h2 class="title text-uppercase mb-5">Nos <span
+                                                                                                                                                                                        class="text-theme-colored2">responsables</span>
+                                                                                                                                                                                </h2>
+                                                                                                                                                                                <h5 class="font-16 text-gray-darkgray mt-5">Discuter avec un responsable</h5>
                                                                                                                                                                             </div>
                                                                                                                                                                         </div>
+                                                                                                                                                                    </div>
+                                                                                                                                                                    <div class="section-content">
+                                                                                                                                                                        <div class="row">
+                                                                                                                                                                            @foreach ($responsables as $responsable)
+    <div class="col-xs-12 col-sm-6 col-md-6">
+                                                                                                                                                                                    <div class="team-members mb-40">
+                                                                                                                                                                                        <div class="team-thumb pull-left team-pull-none flip mr-sm-0 t-mr-0">
+                                                                                                                                                                                            <img src="{{ url('storage') }}/{{ $responsable->photo }}" alt=""
+                                                                                                                                                                                                class="img-fullwidth">
+                                                                                                                                                                                        </div>
+                                                                                                                                                                                        <div class="team-bottom-part border-1px p-15">
+                                                                                                                                                                                            <h4 class="text-uppercase m-0 pb-5">{{ $responsable->name }}
+                                                                                                                                                                                                {{ $responsable->surname }}</h4>
+                                                                                                                                                                                            <h6 class="font-13 text-gray mt-0">{{ $responsable->poste }}</h6>
+                                                                                                                                                                                            <ul class="list-inline mt-15">
+                                                                                                                                                                                                <li class="m-0 pr-10"> <i class="fa fa-phone text-theme-colored2 mr-5"></i>
+                                                                                                                                                                                                    <span class="text-gray" href="#">{{ $responsable->phone }}</span>
+                                                                                                                                                                                                </li>
+                                                                                                                                                                                                <li class="m-0 pr-10"> <i
+                                                                                                                                                                                                        class="fa fa-envelope-o text-theme-colored2 mr-5"></i>
+                                                                                                                                                                                                    <a class="text-gray"
+                                                                                                                                                                                                        href="mailto:{{ $responsable->email }}">{{ $responsable->email }}</a>
+                                                                                                                                                                                                </li>
+
+                                                                                                                                                                                            </ul>
+
+                                                                                                                                                                                        </div>
+                                                                                                                                                                                    </div>
+                                                                                                                                                                                </div>
     @endforeach
 
-                                                                                                                                                                </div>
+                                                                                                                                                                        </div>
 
-                                                                                                                                                            </div>
-                                                                                                                                                        </div>
-                                                                                                                                                    </section>
-                                                                                                                                                -->
+                                                                                                                                                                    </div>
+                                                                                                                                                                </div>
+                                                                                                                                                            </section>
+                                                                                                                                                        -->
 
 
 

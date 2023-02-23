@@ -20,56 +20,85 @@
                 </div>
             </div>
         </section>
-        <section id="courses" class="bg-silver-light">
+        <section>
             <div class="container">
                 <div class="section-content">
-                    <div class="row ">
-                        @foreach ($courses as $course)
-                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 item" style="margin-top: 2px ; ">
-                                <div class="course-single-item bg-white border-1px clearfix mb-md-40">
-                                    <a href="{{ route('course.details', $course->id) }}" class="course-thumb">
-                                        <img class="img-fullwidth" alt=""
-                                            src="{{ url('storage') }}/{{ $course->photo }}">
-
-                                    </a>
-
-                                    <div class="course-details clearfix p-20 pt-15">
-                                        <div class="course-top-part">
-                                            <a href="{{ route('course.details', $course->id) }}">
-                                                <h4 class="mt-5 mb-5">{{ $course->name }}</h4>
-                                            </a>
-                                            <a href="{{ route('course.details', $course->id) }}">
-                                                <h4 class=" mt-0">{{ $course->degrees_name }}</h4>
-                                            </a>
-
-                                        </div>
-                                        <a href="{{ route('course.details', $course->id) }}"
-                                            class="course-description mt-15 mb-0"> <span>{!! $course->description !!}</span><span
-                                                style="text-decoration:underline"> lire plus </span></a>
-                                        <div class="author-thumb">
-                                            <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
-                                                alt="" class="img-circle">
-                                        </div>
-
-                                    </div>
-                                    <a href="{{ route('course.details', $course->id) }}" class="course-meta"
-                                        style="display:block;">
-                                        <ul class="list-inline">
-                                            <li><i class="ficon-clock font-18"></i>
-                                                {{ $course->duration }} Mois
-                                            </li>
-                                            <li><i class="pe-7s-notebook   font-20"></i>{{ $course->languages_name }}
-                                            </li>
-                                        </ul>
-                                        <div class="course-tag">
-                                            <h5>Détails</h5>
-                                        </div>
-                                    </a>
-                                </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- Portfolio Filter -->
+                            <div class="portfolio-filter">
+                                <a href="#" class="active" data-filter="*">Tous</a>
+                                @foreach ($degrees as $degree)
+                                    <a href="#a{{ $degree->id }}" class=""
+                                        data-filter=".a{{ $degree->id }}">{{ $degree->name }}</a>
+                                @endforeach
                             </div>
-                        @endforeach
-                        
+                            <!-- End Portfolio Filter -->
+                            <div class="gallery-isotope default-animation-effect grid-3 gutter-small clearfix"
+                                data-lightbox="gallery">
+                                <!-- Portfolio Item Start -->
+                               
+                                @foreach ($courses as $course)
+                                    
+                                    <div class="item gallery-item  a{{$course->degree_id}}">
+                                        <div class="course-single-item bg-white border-1px clearfix">
+                                            <a href="{{ route('course.details', $course->id) }}" class="course-thumb">
+                                                <img class="img-fullwidth" alt=""
+                                                    src="{{ url('storage') }}/{{ $course->photo }}">
 
+                                            </a>
+                                            <div class="course-details clearfix p-20 pt-15">
+                                                <div class="course-top-part">
+                                                    <a href="{{ route('course.details', $course->id) }}">
+                                                        <h4 class="mt-5 mb-5">
+                                                            {{ $course->name }}</h4>
+                                                    </a>
+
+                                                    <a href="{{ route('course.details', $course->id) }}">
+                                                        <h4 class="mt-5 mb-5">
+                                                            {{ $course->degrees_name }}
+                                                        </h4>
+                                                    </a>
+                                                </div>
+                                                <a
+                                                    href="{{ route('course.details', $course->id) }}"class="course-description mt-15 mb-0">
+                                                    <span>
+                                                        {!! $course->description !!}</span><span
+                                                        style="color:orange ; opacity:0.8; font-weight:bold;">
+                                                        . . . Lire plus </span>
+                                                </a>
+                                                <div class="author-thumb">
+                                                    <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
+                                                        alt="" class="img-circle">
+                                                </div>
+                                            </div>
+                                            <a href="{{ route('course.details', $course->id) }}" style="display: block"
+                                                class="course-meta">
+                                                <ul class="list-inline">
+                                                    <li><i class="ficon-clock font-18"></i>
+                                                        {{ $course->duration }} Mois
+
+                                                    </li>
+                                                    <li>
+                                                        <i class="pe-7s-notebook font-18"></i>
+                                                        {{ $course->languages_name }}
+                                                    </li>
+                                                </ul>
+                                                <div class="course-tag">
+
+                                                    <h5>Détail</h5>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                @endforeach
+                                
+                               
+                            </div>
+
+                            <!-- End Portfolio Gallery Grid -->
+
+                        </div>
                     </div>
                 </div>
             </div>

@@ -76,15 +76,19 @@
 <body class="has-side-panel side-panel-right fullwidth-page">
 
     <div id="wrapper" class="clearfix">
+    
 
         <!-- Header -->
         <header id="header" class="header">
             <div class="header-top bg-theme-colored border-top-theme-colored2-2px sm-text-center">
                 <div class="container">
                     <div class="row">
+                   
                         <div class="col-md-4">
                             <div class="widget">
+                               
                                 <ul class="styled-icons icon-sm icon-white">
+                                    
                                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                     <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                                     <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
@@ -132,7 +136,7 @@
                                     </li>
                                     <li>
                                         <a href="{{ route('course.index') }}"
-                                            class="btn btn-dark btn-circled btn-theme-colored2 btn-sm  pr-30 pl-30">Je suis intéressé(e)</a>
+                                            class="btn btn-dark btn-circled btn-theme-colored2 btn-sm  pr-30 pl-30">Nos formations</a>
                                     </li>
                                 </ul>
                             </div>
@@ -146,7 +150,12 @@
                 <div class="header-nav-wrapper navbar-scrolltofixed bg-white">
                     <div class="container">
                         <nav id="menuzord-right" class="menuzord default theme-colored">
+                            @if (isset($logo_url))
+                            
+                            <a class="menuzord-brand pull-left flip mt-20 mt-sm-10 mb-sm-20 pt-5" href="/"><img src="{{$logo_url}}" alt=""></a>
+                            @endif
                             <ul class="menuzord-menu">
+                                
                                 <li @if (Route::current()->getName() == 'home') class='active' @endif>
                                     <a href="{{ route('home') }}" style="padding: 10px 10px 10px 10px;">Acceuil</a>
                                 </li>
@@ -242,10 +251,7 @@
 
                                     </ul>
                                 </li>
-                                <li><a href="{{ route('course.byname', 'Farm Manager') }}"
-                                        style="padding: 10px 10px 10px 10px;"> <span class="label label-danger " style="margin-right: 2px;">New</span>Farm Manager</a>
-
-                                </li>
+        
 
 
 
@@ -254,7 +260,7 @@
                                 <li><a href="{{route('center.index')}}" style="padding: 10px 10px 10px 10px;">Centre d’Excellence</a>
                                     <li><a href="{{route('experience.index')}}" style="padding: 10px 10px 10px 10px;">Ferme Expérimentale</a>
                                 <li><a href="{{route('impact.index')}}" style="padding: 10px 10px 10px 10px;">Impact Cluster</a>
-                                <li><a href="{{route('business.index')}}" style="padding: 10px 10px 10px 10px;">Agri-Business </a>
+                                    <li><a href="{{route('business.index')}}" style="padding: 10px 10px 10px 10px;">Agri-Business </a>
 
 
 

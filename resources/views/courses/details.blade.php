@@ -136,7 +136,7 @@
                                                                         <div class="media-body">
                                                                             <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
                                                                                 style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
-                                                                                Préréquis et admission </h5>
+                                                                                Prérequis et admission </h5>
                                                                             <div class="comment-date">
                                                                                 {!! $course->admission !!}</div>
                                                                         </div>
@@ -311,8 +311,8 @@
                                                                     </p>
                                                                 @endif
                                                                 @if ($program->hours)
-                                                                    <p style="margin-right:7%;"> heures :
-                                                                        {{ $program->hours }}</p>
+                                                                    <p style="margin-right:7%;"> 
+                                                                        {{ $program->hours }} heures</p>
                                                                 @endif
                                                             </div>
                                                             <div class="accordion-body">
@@ -331,8 +331,8 @@
                                                                     </p>
                                                                 @endif
                                                                 @if ($program->hours)
-                                                                    <p style="margin-right:7%;"> heures :
-                                                                        {{ $program->hours }}</p>
+                                                                    <p style="margin-right:7%;"> 
+                                                                        {{ $program->hours }} heures</p>
                                                                 @endif
                                                             </div>
                                                             <div class="accordion-body">
@@ -751,9 +751,7 @@
                                                     nombreux
                                                     services et activités vous feront découvrir un environnement unique de
                                                     multiples
-                                                    cultures. Nous mettons à votre disposition toutes les ressources
-                                                    nécessaires pour
-                                                    vous permettre de vivre une expérience agréable et positive.
+                                                    cultures.
                                                 </div>
                                             </div>
                                         </div>
@@ -774,9 +772,7 @@
                                                     des
                                                     nouvelles filières de formation dans les domaines de l’intelligence
                                                     artificielle,
-                                                    aquaculture, sciences acridiennes, etc. 5 doctorats par an, sessions de
-                                                    formation
-                                                    continue au profit des producteurs et 12 sessions farm-manager.
+                                                    aquaculture, sciences acridiennes, etc. 
                                                 </div>
                                             </div>
                                         </div>
