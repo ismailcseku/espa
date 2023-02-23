@@ -173,9 +173,9 @@ return [
     // ],
 
      'brand' => [
-         'logo' => ('https://prestavert.com/images/logo_admin.png'),
-         'logo_url' =>('https://prestavert.com/images/logo_admin.png'),
-         'logo_link' => 'https://prestavert.com/',
+         'logo' => ('http://prestavert.com/images/logo_admin.png'),
+         'logo_url' =>('http://prestavert.com/images/logo_admin.png'),
+         'logo_link' => 'http://prestavert.com/',
          'logo_class' => 'h-10',
 
          'colors' => [
