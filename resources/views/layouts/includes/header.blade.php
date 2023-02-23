@@ -150,7 +150,10 @@
                 <div class="header-nav-wrapper navbar-scrolltofixed bg-white">
                     <div class="container">
                         <nav id="menuzord-right" class="menuzord default theme-colored">
-                          
+                            @if (isset($logo_url))
+                            
+                            <a class="menuzord-brand pull-left flip mt-20 mt-sm-10 mb-sm-20 pt-5" href="/"><img src="{{$logo_url}}" alt=""></a>
+                            @endif
                             <ul class="menuzord-menu">
                                 
                                 <li @if (Route::current()->getName() == 'home') class='active' @endif>
