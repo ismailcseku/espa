@@ -456,7 +456,7 @@
                         <div class="line-bottom-theme-colored2"></div>
                         @foreach ($about as $item)
                             <img src="{{ url('storage') }}/{{ $item->photo }}" class="img-fullwidth" alt="">
-                            <!--<p class="mt-15">{!! substr($item->content, 0, 150) !!} [...]</p>-->
+                            <p class="mt-15">Le Complexe Horticole d'Agadir (CHA): Hub de formation, de recherche, de développement et d'innovation agricole, pour une agriculture plus performante et plus résiliente. Grâce à son dynamisme et son implication avec l’ensemble des acteurs du secteur de fruits et légumes, le CHA développe en continu une offre de formation adaptée aux besoins et attentes des professionnels...</p>
                             <a href="{{ route('about.index') }}" class="mt-15 btn btn-colored btn-sm btn-theme-colored2"> Lire
                                 plus</a>
                         @endforeach
@@ -780,7 +780,7 @@
                 <div class="col-md-8 col-md-offset-2 text-center">
                     <a href="https://www.youtube.com/watch?v=kt-4lJs_8fE" data-lightbox-gallery="youtube-video"><img
                             src="images/play-button/s11.png" alt=""></a>
-                    <h3 class="text-white font-38 font-weight-700 mt-10 mb-0">Inscrivez-Vous <span
+                    <h3 class="text-white font-38 font-weight-700 mt-10 mb-0">Inscrivez-vous <span
                             class="text-theme-colored2"> à notre newsletter</span> </h3>
                     Rejoignez-nous
                     @if (session()->has('success'))

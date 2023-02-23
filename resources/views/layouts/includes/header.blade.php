@@ -232,7 +232,8 @@
                                         <li><a href="{{ route('degree.show', 'Formation Exécutive') }}">Formation
                                                 Exécutive<span class="label label-danger">New</span></a>
                                             <ul class="dropdown">
-                                                <li><a href="{{ route('course.byname', 'Farm Manager') }}">Farm
+                                                <li><a href="{{ route('course.byname', 'Farm Manager') }}">
+                                                   Farm
                                                         Manager</a>
                                                 </li>
                                             </ul>
@@ -242,7 +243,7 @@
                                     </ul>
                                 </li>
                                 <li><a href="{{ route('course.byname', 'Farm Manager') }}"
-                                        style="padding: 10px 10px 10px 10px;">Farm Manager</a>
+                                        style="padding: 10px 10px 10px 10px;"> <span class="label label-danger " style="margin-right: 2px;">New</span>Farm Manager</a>
 
                                 </li>
 

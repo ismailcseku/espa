@@ -173,9 +173,9 @@ return [
     // ],
 
      'brand' => [
-         'logo' => ('https://espa.cha-agadir.ma/storage/images/logo.svg'),
-         'logo_url' =>('https://espa.cha-agadir.ma/storage/images/logo.svg'),
-         'logo_link' => 'https://google.com',
+         'logo' => ('https://prestavert.com/storage/images/logo_admin.png'),
+         'logo_url' =>('https://prestavert.com/storage/images/logo_admin.s'),
+         'logo_link' => 'https://prestavert.com/',
          'logo_class' => 'h-10',
 
          'colors' => [

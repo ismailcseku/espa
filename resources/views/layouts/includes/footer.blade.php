@@ -23,8 +23,8 @@
     <div class="container pt-60 pb-20">
         <div class="col-sm-6 col-md-3">
             <div class="widget dark">
-                <img alt="" src="{{ asset('images/logo_footer.png') }}">
                 <p class="mt-20">
+                    <h4 class="widget-title line-bottom-theme-colored2">Coordonnées</h4>
 
                     <span>
 
@@ -59,7 +59,7 @@
                             <li><a href="{{ route('home') }}">Acceuil</a></li>
                             <li><a href="{{ route('course.index') }}">Formations</a></li>
                             <li><a href="{{ route('evenement.index') }}">Évènements</a></li>
-                            <li><a href="{{ route('blog.index') }}">Actualiés</a></li>
+                            <li><a href="{{ route('blog.index') }}">Actualié</a></li>
                             <li><a href="{{ route('media.index') }}">Galerie</a></li>
                         </ul>
                     </div>
