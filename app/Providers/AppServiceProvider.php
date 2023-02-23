@@ -32,11 +32,8 @@ class AppServiceProvider extends ServiceProvider
         View::share('partners', $partners);
         $latest_blog=DB::table('blogs')->orderBy('created_at','Desc')->limit(3)->get();
         View::share('latest_blog', $latest_blog);
-        $get_logo_url=Logo::latest('id')->limit(1)->get();
-        if (count($get_logo_url)>0) {
-            $logo_url=url('storage/'.$get_logo_url[0]->logo);
-            View::share('logo_url',  $logo_url);
-        }
-
+        $logo_url=Logo::latest('id')->limit(1)->get();
+        
+        View::share('logo_url',  $logo_url);
     }
 }
