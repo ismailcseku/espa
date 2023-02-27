@@ -28,7 +28,7 @@
     <!-- CSS | menuzord megamenu skins -->
     <link href="{{ asset('app-assets/css/menuzord-megamenu.css') }}" rel="stylesheet" />
     <link id="menuzord-menu-skins"
-        href="{{ asset('app-assets/css/menuzord-skins/menuzord-boxed.css') }} rel="stylesheet" />
+        href="{{ asset('app-assets/css/menuzord-skins/menuzord-boxed.css') }}" rel="stylesheet" />
     <!-- CSS | Main style file -->
     <link href="{{ asset('app-assets/css/style-main.css') }}" rel="stylesheet" type="text/css">
     <!-- CSS | Preloader Styles -->
