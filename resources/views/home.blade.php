@@ -269,7 +269,7 @@
                                         <div class="course-details clearfix p-20 pt-15">
                                             <div class="course-top-part">
                                                 <a href="{{ route('course.details', $course->id) }}">
-                                                    <h4 class="mt-5 mb-5">
+                                                    <h4 class="mt-5 mb-5" style="font-size:16px;" >
                                                         {{ $course->name }}</h4>
                                                 </a>
 
