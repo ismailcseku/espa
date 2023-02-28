@@ -882,7 +882,8 @@
         }
 
         .accordion .accordion-item .accordion-header {
-            padding: 1.5625rem;
+            padding-left: 1.5625rem;
+       
             font-size: 1.125rem;
             font-weight: 500;
             display: flex;
