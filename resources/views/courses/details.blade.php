@@ -23,7 +23,6 @@
         </section>
 
 
-
         <!-- Section: Services Details -->
         @foreach ($courses as $course)
             <section style="background-color:#1f3344; ">
