@@ -13,7 +13,8 @@
                             <ol class="breadcrumb text-left mt-10 white">
                                 <li><a href="/">Acceuil</a></li>
                                 <li><a href="{{ route('course.index') }}">formations</a></li>
-                                <li class="active">Détail de la formation</li>
+                                
+                                <li  class="active"> @foreach ($courses as $course) {{ $course->name }} @endforeach</li>
                             </ol>
                         </div>
                     </div>
