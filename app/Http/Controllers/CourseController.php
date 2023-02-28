@@ -90,8 +90,9 @@ class CourseController extends Controller
             Carbon::parse($item->datelimite)->locale('FR_fr')->diffForHumans();
         }
         
-        dd('ghfgh');
+        
         $programs=Program::where('course_id',$course->id)->get();
+        dd($programs);
         $downloads=Download::where('course_id',$course->id)->get();
         $degrees=Degree::all();
         $design=Design::first();
