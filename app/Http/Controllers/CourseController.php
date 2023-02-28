@@ -582,7 +582,8 @@ class CourseController extends Controller
            "Autre"
            
        ];
-        $levels=[
+       
+       $levels=[
             "Bac",
             "Bac+1",
             "Technicien",
@@ -598,7 +599,8 @@ class CourseController extends Controller
          ];
         
       
-       
+       dd('ghfgh');
+      
          return view('courses.details')->with([
             'courses'=>$val,
             'programs'=> $programs, 
