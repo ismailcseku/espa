@@ -20,8 +20,7 @@ return new class extends Migration
             $table->string('organism');
             $table->string('poste');
             $table->string('phone');
-            $table->foreignId('evenement_id');
-            $table->foreign('evenement_id')->references('id')->on('evenements')->onDelete('cascade');
+           
             $table->timestamps();
         });
     }
