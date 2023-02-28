@@ -62,8 +62,8 @@
                                                 </div>
                                                 <a
                                                     href="{{ route('course.details', $course->id) }}"class="course-description mt-15 mb-0">
-                                                    <span>
-                                                        {!! $course->description !!}</span><span
+                                                    <p style="font-weight:normal;">
+                                                        {{ $course->accroche }}</p><span
                                                         style="color:orange ; opacity:0.8; font-weight:bold;">
                                                         . . . Lire plus </span>
                                                 </a>

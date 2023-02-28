@@ -154,7 +154,7 @@
                             @if (count($logo_url)>0)
                             @foreach ($logo_url as $item)
                                 
-                            <a class="menuzord-brand pull-left flip mt-20 mt-sm-10 mb-sm-20 pt-5" href="/"><img src="{{url('storage')}}/{{$item->logo}}" alt=""></a>
+                            <a class="menuzord-brand pull-left flip mt-20 mt-sm-10 mb-sm-20 pt-5" href="/" ><img src="{{url('storage')}}/{{$item->logo}}"  alt=""></a>
                             @endforeach
                             @endif
                             <ul class="menuzord-menu">

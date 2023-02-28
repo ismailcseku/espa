@@ -279,8 +279,8 @@
                                                 </a>
                                             </div>
                                             <a
-                                                href="{{ route('course.details', $course->id) }}"class="mt-15 mb-0">
-                                                <p>
+                                                href="{{ route('course.details', $course->id) }}" class="mt-15 mb-0">
+                                                <p style="font-weight:normal;">
                                                     {{$course->accroche}}</p><span
                                                     style="color:orange ; opacity:0.8; font-weight:bold;">
                                                     . . . Lire plus </span>
@@ -307,8 +307,11 @@
                                                 <h5>Détail</h5>
                                             </div>
                                         </a>
+                                        
                                     </div>
+                                    
                                 </div>
+                                
                             @endforeach
 
                         </div>
