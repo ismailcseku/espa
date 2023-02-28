@@ -1,22 +1,21 @@
 @extends('layouts.app')
 @section('content')
-    <section class="inner-header divider layer-overlay overlay-theme-colored-7"
-        data-bg-img="{{ asset('images/details_course.jpeg') }}">
-        <div class="container pt-120 pb-60">
-            <!-- Section Content -->
-            <div class="section-content">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h2 class="text-theme-colored2 font-36">Mot du directeur</h2>
-                        <ol class="breadcrumb text-left mt-10 white">
-                            <li><a href="{{ route('home') }}">Acceuil</a></li>
-
-                        </ol>
-                    </div>
+<section class="inner-header divider layer-overlay overlay-theme-colored-7" style="background-color:#1f3344;">
+    <div class="container pt-40 pb-20">
+        <!-- Section Content -->
+        <div class="section-content">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="text-theme-colored2 font-36">Mot du directeur   </h2>
+                    <ol class="breadcrumb text-left mt-10 white">
+                        <li><a href="/">Acceuil</a></li>
+                        <li  class="active"> Mot du directeur  </li>
+                    </ol>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
     <section>
         <div class="container">
             <div class="section-content">

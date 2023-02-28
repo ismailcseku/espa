@@ -4,17 +4,16 @@
 
         <div class="main-content">
             <!-- Section: inner-header -->
-            <section class="inner-header divider layer-overlay overlay-dark-4"
-                data-bg-img="{{ asset('images/details_course.jpeg') }}">
-                <div class="container pt-120 pb-60">
+            <section class="inner-header divider layer-overlay overlay-theme-colored-7" style="background-color:#1f3344;">
+                <div class="container pt-40 pb-20">
                     <!-- Section Content -->
                     <div class="section-content">
                         <div class="row">
                             <div class="col-md-6">
-                                <h2 class="text-theme-colored2 font-36">Corps professoral</h2>
+                                <h2 class="text-theme-colored2 font-36">Corps professoral et staff   </h2>
                                 <ol class="breadcrumb text-left mt-10 white">
-                                    <li><a href="{{ route('home') }}">Acceuil</a></li>
-                                    <li class="active">Corps professoral</li>
+                                    <li><a href="/">Acceuil</a></li>
+                                    <li  class="active"> Corps professoral et staff  </li>
                                 </ol>
                             </div>
                         </div>
