@@ -91,10 +91,10 @@ class CourseController extends Controller
         }
         
         
-      
+       
         $degrees=Degree::all();
         $design=Design::first();
-        dd($programs);
+        dd($degrees);
         
         
         $last_courses= $course->join('modalities','modalities.id','=','courses.modality_id')
