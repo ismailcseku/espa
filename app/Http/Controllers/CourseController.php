@@ -76,7 +76,7 @@ class CourseController extends Controller
      */
     public function show(Course $course)
     {
-      dd('ghfgh');
+    
         $val=$course->where('courses.id',$course->id)->join('modalities','modalities.id','=','courses.modality_id')
         ->join('degrees','degrees.id','=','courses.degree_id')
         ->join('languages','languages.id','=','courses.language_id')
@@ -84,6 +84,7 @@ class CourseController extends Controller
         ->leftjoin('responsables','responsables.id','=','courses.responsable_id')
         ->select('courses.*','modalities.name as modalitiy_name','degrees.name as degrees_name','responsables.surname as responsables_surname','languages.name as languages_name','modes.name as modes_name','responsables.name as responsables_name')
         ->get();
+        dd('ghfgh');
 
         foreach ($val as $key => $item) {
             Carbon::parse($item->datelimite)->locale('FR_fr')->diffForHumans();
