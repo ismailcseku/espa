@@ -76,7 +76,7 @@ class CourseController extends Controller
      */
     public function show(Course $course)
     {
-      
+      dd('ghfgh');
         $val=$course->where('courses.id',$course->id)->join('modalities','modalities.id','=','courses.modality_id')
         ->join('degrees','degrees.id','=','courses.degree_id')
         ->join('languages','languages.id','=','courses.language_id')
@@ -599,7 +599,7 @@ class CourseController extends Controller
          ];
         
       
-       dd('ghfgh');
+      
       
          return view('courses.details')->with([
             'courses'=>$val,
