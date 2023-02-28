@@ -49,6 +49,7 @@ class Blog extends Resource
             BelongsTo::make('Catégories','blog','App\Nova\CategoryBlog'),
             Text::make('Titre','title'),
             Text::make('Auteur','description'),
+            Textarea::make('Accroche','accroche'),
             Image::make('Une image','photo')->disk('public')
             ->storeAs(function (Request $request) {
                     return $request->photo->getClientOriginalName();

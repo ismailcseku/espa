@@ -60,6 +60,8 @@ class Course extends Resource
             Image::make('Photo'),
             //CKEditor5Classic::make('description'),
             NovaTinyMCE::make('description'),
+            Textarea::make('Accroche','accroche'),
+            
             //Trix::make('Description','description'),
             //Textarea::make('Description','description'),
 

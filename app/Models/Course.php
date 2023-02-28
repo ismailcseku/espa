@@ -35,6 +35,7 @@ class Course extends Model
         'profile',
         'opportunity',
         'reviews',
+        'accroche',
     ];
 
     public function degree() {

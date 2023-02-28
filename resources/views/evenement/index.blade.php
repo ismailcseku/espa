@@ -70,7 +70,7 @@
                                                     @endphp</li>
                                             </ul>
                                             <p class="mt-10">
-                                                @php echo(substr($evenement->description,0,100)); @endphp
+                                               <p>{{$evenement->accroche}}</p> 
                                                 <a href="{{route('evenement.show',$evenement->id)}}" class="text-theme-colored2">...Lire plus</a>
  
                                             </p>

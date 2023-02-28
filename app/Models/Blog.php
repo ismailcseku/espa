@@ -16,7 +16,9 @@ class Blog extends Model
         'title',
         'description',
         'content',
-        'photo'
+        'photo',
+        'accroche',
+
     ];
     /**
      * Get the category_blogs that owns the Blog

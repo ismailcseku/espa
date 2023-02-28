@@ -49,6 +49,7 @@ class Evenement extends Resource
             ID::make()->sortable(),
             Text::make('Titre','title'),
             Textarea::make('Description','description'),
+            Textarea::make('Accroche','accroche'),
             DateTime::make('Date début ','start_at'),
             DateTime::make('Date fin ','end_at'),
             Text::make('Lieu','location'),

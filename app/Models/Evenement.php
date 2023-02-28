@@ -16,6 +16,7 @@ class Evenement extends Model
         'end_at',
         'location',
         'photo',
+        'accroche',
     ];
     protected $casts=[
         'start_at'=>'datetime',

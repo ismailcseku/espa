@@ -27,6 +27,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        /*
         $partners=Partner::all();
         
         View::share('partners', $partners);
@@ -35,5 +36,6 @@ class AppServiceProvider extends ServiceProvider
         $logo_url=Logo::latest('id')->limit(1)->get();
         
         View::share('logo_url',  $logo_url);
+        */
     }
 }

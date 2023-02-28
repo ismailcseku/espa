@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('title', 100)->nullable();
             $table->text('description')->nullable();
+            $table->text('accroche');
             $table->dateTime('start_at')->nullable();
             $table->dateTime('end_at')->nullable();
             $table->string('location', 100)->nullable();

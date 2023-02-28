@@ -279,9 +279,9 @@
                                                 </a>
                                             </div>
                                             <a
-                                                href="{{ route('course.details', $course->id) }}"class="course-description mt-15 mb-0">
-                                                <span>
-                                                    {!! $course->description !!}</span><span
+                                                href="{{ route('course.details', $course->id) }}"class="mt-15 mb-0">
+                                                <p>
+                                                    {{$course->accroche}}</p><span
                                                     style="color:orange ; opacity:0.8; font-weight:bold;">
                                                     . . . Lire plus </span>
                                             </a>
@@ -631,7 +631,7 @@
                                         <h3 class="post-title font-weight-600 mt-0 mb-15" style="word-break: break-word;">
                                             {{ $blog->title }}</h3>
                                     </a>
-                                    <p>{!! substr($blog->content, 0, 150) !!} [...]</p>
+                                    <p>  {{$course->accroche}} [...]</p>
                                 </div>
                                 <div class="post-meta">
                                     <ul class="list-inline pull-left flip">

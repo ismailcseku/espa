@@ -21,6 +21,7 @@ return new class extends Migration
             $table->foreignId('modality_id')->onDelete('cascade');
             $table->foreignId('training_type_id')->onDelete('cascade');
             $table->text('description');
+            $table->text('accroche');
             $table->integer('duration')->nullable();
             $table->foreignId('location_id')->onDelete('cascade');
             //$table->foreignId('language_id')->onDelete('cascade');
