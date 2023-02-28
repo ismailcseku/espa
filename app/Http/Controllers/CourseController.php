@@ -91,11 +91,10 @@ class CourseController extends Controller
         }
         
         
-        $programs=Program::where('course_id',$course->id)->get();
-        dd($programs);
-        $downloads=Download::where('course_id',$course->id)->get();
+      
         $degrees=Degree::all();
         $design=Design::first();
+        dd($programs);
         
         
         $last_courses= $course->join('modalities','modalities.id','=','courses.modality_id')
