@@ -91,7 +91,7 @@ class CourseController extends Controller
         }
         
         
-        dd($course->id);
+        dd(Program::all());
         $programs=Program::where('course_id',$course->id)->get();
         $downloads=Download::where('course_id',$course->id)->get();
         $degrees=Degree::all();
