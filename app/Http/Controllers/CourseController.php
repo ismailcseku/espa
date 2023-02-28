@@ -89,11 +89,12 @@ class CourseController extends Controller
         foreach ($val as $key => $item) {
             Carbon::parse($item->datelimite)->locale('FR_fr')->diffForHumans();
         }
+        dd('ghfgh');
         $programs=Program::where('course_id',$course->id)->get();
         $downloads=Download::where('course_id',$course->id)->get();
         $degrees=Degree::all();
         $design=Design::first();
-        dd('ghfgh');
+        
         
         $last_courses= $course->join('modalities','modalities.id','=','courses.modality_id')
         ->select('courses.name','courses.id','modalities.name as modalitiy_name')
