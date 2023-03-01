@@ -807,10 +807,12 @@
 
 
 
-                                                            <div class="form-group mb-0 mt-20">
-                                                                <input name="form_botcheck" class="form-control"
+                                                            <div class="form-group mb-0 mt-20 ">
+                                                                <input name="form_botcheck" class="form-control "
+                                                                
                                                                     type="hidden" value="">
-                                                                <button type="submit" class="btn btn-theme-colored2"
+                                                                <button type="submit" class="btn btn-theme-colored2 font-18"
+                                                                style="width:100%;font-weight:bold;"
                                                                     
                                                                     data-loading-text="Patientez...">ENVOYER</button>
                                                             </div>
