@@ -9,12 +9,11 @@
                 <div class="section-content">
                     <div class="row">
                         <div class="col-md-6">
-                            <h2 class="text-theme-colored2 font-36">Détail de la formation</h2>
                             <ol class="breadcrumb text-left mt-10 white">
                                 <li><a href="/">Acceuil</a></li>
                                 <li><a href="{{ route('course.index') }}">formations</a></li>
                                 
-                                <li  class="active"> @foreach ($courses as $course) {{ $course->name }} @endforeach</li>
+                                <li class='text-white'> @foreach ($courses as $course) {{ $course->name }} @endforeach</li>
                             </ol>
                         </div>
                     </div>
@@ -561,7 +560,7 @@
                     
                         </div>
                         
-                        <div class="col-sm-12 col-md-6 col-lg-5" style="background-color:  #f98146;">
+                        <div class="col-sm-12 col-md-6 col-lg-5" style="background-color:  rgb(45, 69, 88);">
                             <div class="sidebar sidebar-left mt-sm-30 ml-30 ml-sm-0">
                                 <div class="main-content">
                                     <section>
@@ -648,7 +647,7 @@
                                                                             class="text-white">{{ $errors->first('surname') }}</span>
                                                                     @endif
                                                                 </div>
-                                                                <div class="col-sm-6">
+                                                                <div class="col-sm-12">
 
                                                                     <div class="form-group mb-12">
                                                                         <input name="email" required
@@ -663,7 +662,7 @@
                                                                     @endif
                                                                 </div>
 
-                                                                <div class="col-sm-6">
+                                                                <div class="col-sm-12">
                                                                     <div class="form-group mb-12 ">
                                                                         <input name="birth" required
                                                                             style="background-color:rgba(255,255,255,0.7);color: #1f3344;"
@@ -677,7 +676,7 @@
                                                                     @endif
                                                                 </div>
 
-                                                                <div class="col-sm-6">
+                                                                <div class="col-sm-12">
 
                                                                     <div class="form-group mb-12">
                                                                         <select name="country" id="countries" required
@@ -696,7 +695,7 @@
                                                                     @endif
                                                                 </div>
 
-                                                                <div class="col-sm-6 " id="provinces">
+                                                                <div class="col-sm-12 " id="provinces">
 
 
                                                                     <div class="form-group mb-10">
@@ -719,10 +718,10 @@
                                                                             class="text-white">{{ $errors->first('province') }}</span>
                                                                     @endif
                                                                 </div>
-                                                                <div class="col-sm-12">
+                                                                <div class="col-sm-6">
                                                                     <div class="form-group mb-10">
                                                                         <input name="phone" class="form-control"
-                                                                            style="background-color:rgba(255,255,255,0.7);color: #1f3344;"
+                                                                            style="background-color:rgba(255,255,255,0.7);color: #1f3344; "
                                                                             id="phone" type="tel" value="+212"
                                                                             required>
                                                                         <input name="indice" class="form-control"
@@ -737,7 +736,7 @@
                                                             </div>
                                                             <div class="row">
 
-                                                                <div class="col-sm-6 ">
+                                                                <div class="col-sm-12 ">
 
                                                                     <div class="form-group mb-10">
                                                                         <select name="level"
@@ -756,7 +755,7 @@
                                                                             class="text-white">{{ $errors->first('level') }}</span>
                                                                     @endif
                                                                 </div>
-                                                                <div class="col-sm-6">
+                                                                <div class="col-sm-12">
                                                                     <div class="form-group mb-10">
                                                                         <input name="grade" value="{{ old('grade') }}"
                                                                             style="background-color:rgba(255,255,255,0.7);color: #1f3344;"
@@ -889,7 +888,6 @@
             position: relative;
             cursor: pointer;
         }
-
         .accordion .accordion-item .accordion-header::after {
             content: "";
             font-size: 1.5rem;
