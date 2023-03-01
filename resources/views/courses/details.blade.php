@@ -33,8 +33,7 @@
                     <div class="row">
                         <h3 class="text-uppercase mt-0 mb-30 " style="color:white;">{{ $course->name }} -
                             {{ $course->degree->name }}</h3>
-                        <div class="col-sm-12 col-md-8"
-                            style="background-color:rgb(249, 249, 249); border-radius:5px;">
+                        <div class="col-sm-12 col-md-9" style="background-color:rgb(249, 249, 249); border-radius:5px;">
                             <div class="single-service">
 
                                 <!--<img src="{{ url('storage') }}/{{ $course->photo }}" style="width:100%;" alt="">-->
@@ -75,13 +74,18 @@
                                 </ul>
 
                                 <ul id="myTab" class="nav nav-tabs mt-30">
-                                    <li class="active" ><a href="#tab1" data-toggle="tab"
+                                    <li class="active"><a href="#tab1" data-toggle="tab"
                                             style="font-size:18px; font-weight:bold;">Description</a></li>
-                                    <li><a href="#tab2" data-toggle="tab" style="font-size:18px; font-weight:bold;">Admission</a></li>
-                                    <li><a href="#tab5" data-toggle="tab" style="font-size:18px; font-weight:bold;">Programme</a></li>
-                                    <li><a href="#tab6" data-toggle="tab" style="font-size:18px; font-weight:bold;">Carrière</a></li>
-                                    <li><a href="#tab3" data-toggle="tab" style="font-size:18px; font-weight:bold;">Documents</a></li>
-                                    <li><a href="#tab4" data-toggle="tab" style="font-size:18px; font-weight:bold;">Témoignages</a></li>
+                                    <li><a href="#tab2" data-toggle="tab"
+                                            style="font-size:18px; font-weight:bold;">Admission</a></li>
+                                    <li><a href="#tab5" data-toggle="tab"
+                                            style="font-size:18px; font-weight:bold;">Programme</a></li>
+                                    <li><a href="#tab6" data-toggle="tab"
+                                            style="font-size:18px; font-weight:bold;">Carrière</a></li>
+                                    <li><a href="#tab3" data-toggle="tab"
+                                            style="font-size:18px; font-weight:bold;">Documents</a></li>
+                                    <li><a href="#tab4" data-toggle="tab"
+                                            style="font-size:18px; font-weight:bold;">Témoignages</a></li>
 
                                 </ul>
                                 <div id="myTabContent" class="tab-content">
@@ -463,109 +467,109 @@
 
                             </div>
                             <!--
-                                <div class="col-sm-12 " style="background-color:white;">
-                                    <h3 class="font-28 mt-md-30 mt-0"><span style="color:#1f3344;">Pourquoi
-                                        </span>Nous?
-                                    </h3>
-                                    <div class="line-bottom-theme-colored2" ></div>
-                                    <div  class="panel-group accordion-stylished-left-border accordion-icon-filled accordion-no-border accordion-icon-left accordion-icon-filled-theme-colored2 custom-style"
-                                        id="accordion6" role="tablist" aria-multiselectable="true">
-                                        <div class="panel panel-default" >
-                                            <div class="panel-heading"  role="tab" id="headin1">
-                                                <h6 class="panel-title">
-                                                    <a role="button" data-toggle="collapse" data-parent="#accordion6"
-                                                        href="#collaps1" aria-expanded="true" aria-controls="collaps1">
-                                                        Une vie estudiantine exceptionnelle
-                                                    </a>
-                                                </h6>
-                                            </div>
-                                            <div id="collaps1" class="panel-collapse collapse in" role="tabpanel"
-                                                aria-labelledby="headin1">
-                                                <div class="panel-body">
-                                                    Rejoignez-nous et bâtissez votre carrière dans une école qui offre de
-                                                    nombreux
-                                                    services et activités vous feront découvrir un environnement unique de
-                                                    multiples
-                                                    cultures.
+                                    <div class="col-sm-12 " style="background-color:white;">
+                                        <h3 class="font-28 mt-md-30 mt-0"><span style="color:#1f3344;">Pourquoi
+                                            </span>Nous?
+                                        </h3>
+                                        <div class="line-bottom-theme-colored2" ></div>
+                                        <div  class="panel-group accordion-stylished-left-border accordion-icon-filled accordion-no-border accordion-icon-left accordion-icon-filled-theme-colored2 custom-style"
+                                            id="accordion6" role="tablist" aria-multiselectable="true">
+                                            <div class="panel panel-default" >
+                                                <div class="panel-heading"  role="tab" id="headin1">
+                                                    <h6 class="panel-title">
+                                                        <a role="button" data-toggle="collapse" data-parent="#accordion6"
+                                                            href="#collaps1" aria-expanded="true" aria-controls="collaps1">
+                                                            Une vie estudiantine exceptionnelle
+                                                        </a>
+                                                    </h6>
+                                                </div>
+                                                <div id="collaps1" class="panel-collapse collapse in" role="tabpanel"
+                                                    aria-labelledby="headin1">
+                                                    <div class="panel-body">
+                                                        Rejoignez-nous et bâtissez votre carrière dans une école qui offre de
+                                                        nombreux
+                                                        services et activités vous feront découvrir un environnement unique de
+                                                        multiples
+                                                        cultures.
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="heading2">
-                                                <h6 class="panel-title">
-                                                    <a class="collapsed" role="button" data-toggle="collapse"
-                                                        data-parent="#accordion6" href="#collapse2" aria-expanded="false"
-                                                        aria-controls="collapse2">
-                                                        Plus de 1000 étudiants à l’horizon 2030
-                                                    </a>
-                                                </h6>
-                                            </div>
-                                            <div id="collapse2" class="panel-collapse collapse" role="tabpanel"
-                                                aria-labelledby="heading2">
-                                                <div class="panel-body">
-                                                    Nouveau département de l'agro-alimentaire en partenariat avec l'ESCA et
-                                                    des
-                                                    nouvelles filières de formation dans les domaines de l’intelligence
-                                                    artificielle,
-                                                    aquaculture, sciences acridiennes, etc.
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading" role="tab" id="heading2">
+                                                    <h6 class="panel-title">
+                                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                                            data-parent="#accordion6" href="#collapse2" aria-expanded="false"
+                                                            aria-controls="collapse2">
+                                                            Plus de 1000 étudiants à l’horizon 2030
+                                                        </a>
+                                                    </h6>
+                                                </div>
+                                                <div id="collapse2" class="panel-collapse collapse" role="tabpanel"
+                                                    aria-labelledby="heading2">
+                                                    <div class="panel-body">
+                                                        Nouveau département de l'agro-alimentaire en partenariat avec l'ESCA et
+                                                        des
+                                                        nouvelles filières de formation dans les domaines de l’intelligence
+                                                        artificielle,
+                                                        aquaculture, sciences acridiennes, etc.
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="heading3">
-                                                <h6 class="panel-title">
-                                                    <a class="collapsed" role="button" data-toggle="collapse"
-                                                        data-parent="#accordion6" href="#collapse3" aria-expanded="false"
-                                                        aria-controls="collapse3">
-                                                        Projets structuraux de niveau mondial
-                                                    </a>
-                                                </h6>
-                                            </div>
-                                            <div id="collapse3" class="panel-collapse collapse" role="tabpanel"
-                                                aria-labelledby="heading3">
-                                                <div class="panel-body">
-                                                    Centre d’excellence horticole, ferme expérimentale, consortium pour la
-                                                    recherche, le
-                                                    développement et l’innovation agricole, impact cluster, agri-business
-                                                    incubateur,
-                                                    centre de formation continue, centre de diagnostic et d’analyse,
-                                                    programme doctoral
-                                                    et masters internationaux…
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading" role="tab" id="heading3">
+                                                    <h6 class="panel-title">
+                                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                                            data-parent="#accordion6" href="#collapse3" aria-expanded="false"
+                                                            aria-controls="collapse3">
+                                                            Projets structuraux de niveau mondial
+                                                        </a>
+                                                    </h6>
+                                                </div>
+                                                <div id="collapse3" class="panel-collapse collapse" role="tabpanel"
+                                                    aria-labelledby="heading3">
+                                                    <div class="panel-body">
+                                                        Centre d’excellence horticole, ferme expérimentale, consortium pour la
+                                                        recherche, le
+                                                        développement et l’innovation agricole, impact cluster, agri-business
+                                                        incubateur,
+                                                        centre de formation continue, centre de diagnostic et d’analyse,
+                                                        programme doctoral
+                                                        et masters internationaux…
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="heading4">
-                                                <h6 class="panel-title">
-                                                    <a class="collapsed" role="button" data-toggle="collapse"
-                                                        data-parent="#accordion6" href="#collapse4" aria-expanded="false"
-                                                        aria-controls="collapse4">
-                                                        Programme de recherche scientifique
-                                                    </a>
-                                                </h6>
-                                            </div>
-                                            <div id="collapse4" class="panel-collapse collapse" role="tabpanel"
-                                                aria-labelledby="heading4">
-                                                <div class="panel-body">
-                                                    Des équipes de recherche et d’experts nationaux et internationaux dans
-                                                    différents
-                                                    domaines : Gestion rationnelle des ressources en eau, technologies de
-                                                    récolte et
-                                                    post-récolte, protection des cultures et gestion intégrée des ravageurs,
-                                                    contrôle
-                                                    climatique basé sur le pilotage des données, biotechnologie et sélection
-                                                    végétales…
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading" role="tab" id="heading4">
+                                                    <h6 class="panel-title">
+                                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                                            data-parent="#accordion6" href="#collapse4" aria-expanded="false"
+                                                            aria-controls="collapse4">
+                                                            Programme de recherche scientifique
+                                                        </a>
+                                                    </h6>
+                                                </div>
+                                                <div id="collapse4" class="panel-collapse collapse" role="tabpanel"
+                                                    aria-labelledby="heading4">
+                                                    <div class="panel-body">
+                                                        Des équipes de recherche et d’experts nationaux et internationaux dans
+                                                        différents
+                                                        domaines : Gestion rationnelle des ressources en eau, technologies de
+                                                        récolte et
+                                                        post-récolte, protection des cultures et gestion intégrée des ravageurs,
+                                                        contrôle
+                                                        climatique basé sur le pilotage des données, biotechnologie et sélection
+                                                        végétales…
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            -->
+                                -->
 
 
                         </div>
 
-                        <div class="col-sm-12 col-md-4 " style="background-color:  #1f3344;">
+                        <div class="col-sm-12 col-md-3 " style="background-color:  #1f3344;">
                             <div class="sidebar sidebar-left mt-sm-30 ml-30 ml-sm-0">
                                 <div class="main-content">
                                     <section>
@@ -590,26 +594,26 @@
                                                             @csrf
                                                             <div class="row">
                                                                 <div class="col-sm-12 ">
-                                                                    <div class="row ">
+                                                                    <div class="row">
                                                                         <label for="gender"
-                                                                            class="col-xs-2 col-sm-1">Mlle</label>
+                                                                            class="col-xs-2 col-sm-2">Mlle</label>
                                                                         <div
-                                                                            class="col-xs-2 col-col-sm-3 form-group mb-10">
+                                                                            class="col-xs-2 col-col-sm-2 form-group mb-10">
 
                                                                             <input name="gender" value='Mlle'
                                                                                 class="" type="radio" checked>
                                                                         </div>
                                                                         <label for=""
-                                                                            class="col-xs-2 col-sm-1">Mme</label>
+                                                                            class="col-xs-2 col-sm-2">Mme</label>
 
-                                                                        <div class="col-xs-2 col-sm-3 form-group mb-10">
+                                                                        <div class="col-xs-2 col-sm-2 form-group mb-10">
                                                                             <input name="gender" value='Mme'
                                                                                 class="" type="radio">
                                                                         </div>
                                                                         <label for=""
-                                                                            class="col-xs-2 col-sm-1">M</label>
+                                                                            class="col-xs-2 col-sm-2">M</label>
 
-                                                                        <div class="col-xs-2 col-sm-3 form-group mb-10">
+                                                                        <div class="col-xs-2 col-sm-2 form-group mb-10">
                                                                             <input name="gender" value='Mr'
                                                                                 type="radio" aria-="true">
                                                                         </div>
@@ -652,7 +656,6 @@
                                                                     @endif
                                                                 </div>
                                                                 <div class="col-sm-12">
-
                                                                     <div class="form-group mb-12">
                                                                         <input name="email" required
                                                                             placeholder="E-mail"
@@ -665,23 +668,9 @@
                                                                             class="text-white">{{ $errors->first('email') }}</span>
                                                                     @endif
                                                                 </div>
-                                                                <div class="col-sm-5">
-                                                                    <label for="birth">Date de naissance</label>
-                                                                </div>
+                                                          
 
-                                                                <div class="col-sm-7">
-                                                                    <div class="form-group mb-12 ">
-                                                                        <input name="birth" required
-                                                                            style="background-color:white;color: #1f3344;"
-                                                                            class="  form-control" type="date"
-                                                                            placeholder="Date de naissance"
-                                                                            value="{{ old('birth') }}">
-                                                                    </div>
-                                                                    @if ($errors->has('birth'))
-                                                                        <span
-                                                                            class="text-white">{{ $errors->first('birth') }}</span>
-                                                                    @endif
-                                                                </div>
+                                                         
 
                                                                 <div class="col-sm-12">
 
@@ -710,7 +699,8 @@
                                                                             class="form-control  "
                                                                             style="background-color:white;color: #1f3344;"
                                                                             value="{{ old('province') }}">
-                                                                            <option value="Provinces" selected>Provinces</option>
+                                                                            <option value="Provinces" selected>Provinces
+                                                                            </option>
 
                                                                             @foreach ($provinces as $province)
                                                                                 <option value="{{ $province }}">
@@ -725,10 +715,11 @@
                                                                             class="text-white">{{ $errors->first('province') }}</span>
                                                                     @endif
                                                                 </div>
-                                                                <div class="col-sm-4">
-                                                                    <label for="birth">Téléphone</label>
-                                                                </div>
-                                                                <div class="col-sm-8">
+
+                                                              
+                                                                <div class="col-sm-6">
+                                                                    <label for="province" class="col-sm-2"
+                                                                            style=" width:100%"> Numéro de <br> téléphone</label>
                                                                     <div class="form-group mb-10">
                                                                         <input name="phone" class="form-control"
                                                                             style="background-color:white;color: #1f3344; width:100%;"
@@ -742,7 +733,22 @@
                                                                             class="text-white">{{ $errors->first('phone') }}</span>
                                                                     @endif
                                                                 </div>
-                                                                
+                                                                <div class="col-sm-6">
+                                                                    <label for="province" class="col-sm-2"
+                                                                            style=" width:100%;"> date de <br> naissance </label>
+                                                                    <div class="form-group mb-12 ">
+                                                                        <input name="birth" required
+                                                                            style="background-color:white;color: #1f3344;"
+                                                                            class="  form-control" type="date"
+                                                                            placeholder="Date de naissance"
+                                                                            value="{{ old('birth') }}">
+                                                                    </div>
+                                                                    @if ($errors->has('birth'))
+                                                                        <span
+                                                                            class="text-white">{{ $errors->first('birth') }}</span>
+                                                                    @endif
+                                                                </div>
+
 
                                                             </div>
                                                             <div class="row">
@@ -754,7 +760,8 @@
                                                                             value="{{ old('level') }}"
                                                                             style="background-color:white;color: #1f3344;"
                                                                             class="form-control  " required>
-                                                                            <option value="Niveau d'études" selected>Niveau d'études</option>
+                                                                            <option value="Niveau d'études" selected>Niveau
+                                                                                d'études</option>
                                                                             @foreach ($levels as $level)
                                                                                 <option value="{{ $level }}">
                                                                                     {{ $level }}</option>
@@ -803,9 +810,9 @@
                                                             <div class="form-group mb-0 mt-20">
                                                                 <input name="form_botcheck" class="form-control"
                                                                     type="hidden" value="">
-                                                                <button type="submit" class="btn "
-                                                                    style="background-color:#1f3344; color:white;"
-                                                                    data-loading-text="Patientez...">Envoyer</button>
+                                                                <button type="submit" class="btn btn-theme-colored2"
+                                                                    
+                                                                    data-loading-text="Patientez...">ENVOYER</button>
                                                             </div>
                                                         </form>
 
@@ -922,7 +929,6 @@
             font-size: 0.875rem;
             line-height: 1rem;
         }
-
     </style>
     <script>
         const accSingleTriggers = document.querySelectorAll(".accordion-header");
