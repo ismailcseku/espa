@@ -77,9 +77,9 @@
                                     <li class="active"><a href="#tab1" data-toggle="tab"
                                             style="font-size:18px; font-weight:bold;">DESCRIPTION</a></li>
                                     <li><a href="#tab2" data-toggle="tab"
-                                            style="font-size:18px; font-weight:bold;">AdMISSION</a></li>
+                                            style="font-size:18px; font-weight:bold;">ADMISSION</a></li>
                                     <li><a href="#tab5" data-toggle="tab"
-                                            style="font-size:18px; font-weight:bold;">PrOGRAMME</a></li>
+                                            style="font-size:18px; font-weight:bold;">PROGRAMME</a></li>
                                     <li><a href="#tab6" data-toggle="tab"
                                             style="font-size:18px; font-weight:bold;">CARRIÈRE</a></li>
                                     <li><a href="#tab3" data-toggle="tab"
