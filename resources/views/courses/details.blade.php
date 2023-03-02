@@ -75,17 +75,17 @@
 
                                 <ul id="myTab" class="nav nav-tabs mt-30">
                                     <li class="active"><a href="#tab1" data-toggle="tab"
-                                            style="font-size:18px; font-weight:bold;">Description</a></li>
+                                            style="font-size:18px; font-weight:bold;">DESCRIPTION</a></li>
                                     <li><a href="#tab2" data-toggle="tab"
-                                            style="font-size:18px; font-weight:bold;">Admission</a></li>
+                                            style="font-size:18px; font-weight:bold;">AdMISSION</a></li>
                                     <li><a href="#tab5" data-toggle="tab"
-                                            style="font-size:18px; font-weight:bold;">Programme</a></li>
+                                            style="font-size:18px; font-weight:bold;">PrOGRAMME</a></li>
                                     <li><a href="#tab6" data-toggle="tab"
-                                            style="font-size:18px; font-weight:bold;">Carrière</a></li>
+                                            style="font-size:18px; font-weight:bold;">CARRIÈRE</a></li>
                                     <li><a href="#tab3" data-toggle="tab"
-                                            style="font-size:18px; font-weight:bold;">Documents</a></li>
+                                            style="font-size:18px; font-weight:bold;">DOCUMENTS</a></li>
                                     <li><a href="#tab4" data-toggle="tab"
-                                            style="font-size:18px; font-weight:bold;">Témoignages</a></li>
+                                            style="font-size:18px; font-weight:bold;">TÉMOIGNAGES</a></li>
 
                                 </ul>
                                 <div id="myTabContent" class="tab-content">
