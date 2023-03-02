@@ -716,10 +716,12 @@
                                                                     @endif
                                                                 </div>
 
-                                                              
-                                                                <div class="col-sm-6">
-                                                                    <label for="province" class="col-sm-2"
-                                                                            style=" width:100%"> Numéro de <br> téléphone</label>
+                                                              <div class="col-sm-12">
+                                                                <label for="phone" class="col-sm-2 font-12"
+                                                                            style=" width:100%"> Numéro de téléphone</label>
+                                                              </div>
+                                                                <div class="col-sm-12">
+                                                                    
                                                                     <div class="form-group mb-10">
                                                                         <input name="phone" class="form-control"
                                                                             style="background-color:white;color: #1f3344; width:100%;"
@@ -733,21 +735,7 @@
                                                                             class="text-white">{{ $errors->first('phone') }}</span>
                                                                     @endif
                                                                 </div>
-                                                                <div class="col-sm-6">
-                                                                    <label for="province" class="col-sm-2"
-                                                                            style=" width:100%;"> date de <br> naissance </label>
-                                                                    <div class="form-group mb-12 ">
-                                                                        <input name="birth" required
-                                                                            style="background-color:white;color: #1f3344;"
-                                                                            class="  form-control" type="date"
-                                                                            placeholder="Date de naissance"
-                                                                            value="{{ old('birth') }}">
-                                                                    </div>
-                                                                    @if ($errors->has('birth'))
-                                                                        <span
-                                                                            class="text-white">{{ $errors->first('birth') }}</span>
-                                                                    @endif
-                                                                </div>
+                                                          
 
 
                                                             </div>
