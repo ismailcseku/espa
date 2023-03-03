@@ -71,7 +71,6 @@
 </head>
 
 <body class="has-side-panel side-panel-right fullwidth-page">
-
     <div id="wrapper" class="clearfix">
 
 
