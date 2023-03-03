@@ -613,7 +613,7 @@
                                                                 <div class="accordion-header "
                                                                     style="display:flex; justify-content:space-between;">
                                                                     @if ($program->title)
-                                                                        <p class="text-theme-colored2">
+                                                                        <p class="">
                                                                             {{ $program->title }}
                                                                         </p>
                                                                     @endif
@@ -634,7 +634,7 @@
                                                                 <div class="accordion-header"
                                                                     style="display:flex; justify-content:space-between;">
                                                                     @if ($program->title)
-                                                                        <p class="text-theme-colored2">
+                                                                        <p class="">
                                                                             {{ $program->title }}
                                                                         </p>
                                                                     @endif
@@ -1353,8 +1353,8 @@
     }
 
     .accordion .accordion-item {
-        background-color: white;
-        color: #1b1d21;
+        background-color: #1f3344;
+        color: white;
         border-radius: 0.5rem;
         border: 1px solid #f7f7f7;
         margin-bottom: 1rem;
