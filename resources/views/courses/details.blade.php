@@ -285,7 +285,7 @@
             <section class="inner-header divider " style="background-color:rgb(45, 69, 88);">
                 <div class=" pt-10 pb-10 ">
                     <!-- Section Content -->
-                    <div class="section-content ml-90 mr-100">
+                    <div class="section-content ml-90 ">
                         <div class="row">
                             <div class="col-md-6">
                                 <ol class="breadcrumb text-left mt-10 white">
@@ -307,8 +307,8 @@
 
             <!-- Section: Services Details -->
             @foreach ($courses as $course)
-                <section style="background-color:rgb(45, 69, 88); ">
-                    <div class="  ml-100 mr-100">
+                <section style="background-color:rgb(45, 69, 88); margin-top:-34px;">
+                    <div class="ml-100 mr-100 ">
                         <div class="row">
                             <h3 class="text-uppercase mt-0 mb-30 " style="color:white;">{{ $course->name }} -
                                 {{ $course->degree->name }}</h3>
@@ -341,15 +341,25 @@
                                         @endif
 
 
+                                     
                                         @if ($course->modalitiy_name)
-                                            <li>
-                                                <i class="pe-7s-refresh-2 text-theme-colored2 font-48"></i>
-                                                <div class="pull-right ml-10">
-                                                    <span>Rythme</span>
-                                                    <h5 class="mt-0">{{ $course->modalitiy_name }}</h5>
-                                                </div>
-                                            </li>
-                                        @endif
+                                        <li>
+                                            <i class="pe-7s-refresh-2 text-theme-colored2 font-48"></i>
+                                            <div class="pull-right ml-10">
+                                                <span>Rythme</span>
+                                                <h5 class="mt-0">{{ $course->modalitiy_name }}</h5>
+                                            </div>
+                                        </li>
+                                    @endif
+                                    @if ($course->duration)
+                                    <li>
+                                        <i class="pe-7s-timer text-theme-colored2 font-48"></i>
+                                        <div class="pull-right ml-10">
+                                            <span>Durée</span>
+                                            <h5 class="mt-0">{{ $course->duration}} Mois</h5>
+                                        </div>
+                                    </li>
+                                @endif
 
                                     </ul>
 
@@ -931,7 +941,7 @@
 
                                                                         <div class="form-group mb-12">
                                                                             <input name="name" class="form-control"
-                                                                                style="background-color:white;color: #1f3344;"
+                                                                                style="background-color:white;color: gray;"
                                                                                 required type="text"
                                                                                 placeholder="Nom"
                                                                                 value="{{ old('name') }}">
@@ -947,7 +957,7 @@
                                                                         <div class="form-group mb-12">
                                                                             <input name="surname" class="form-control"
                                                                                 placeholder="Prénom"
-                                                                                style="background-color:white;color: #1f3344;"
+                                                                                style="background-color:white;color: gray;"
                                                                                 required type="text"
                                                                                 value="{{ old('surname') }}">
                                                                         </div>
@@ -960,7 +970,7 @@
                                                                         <div class="form-group mb-12">
                                                                             <input name="email" required
                                                                                 placeholder="E-mail"
-                                                                                style="background-color:white;color: #1f3344;"
+                                                                                style="background-color:white;color: gray;"
                                                                                 class="form-control  email"
                                                                                 type="email"
                                                                                 value="{{ old('email') }}">
@@ -979,7 +989,7 @@
                                                                         <div class="form-group mb-12">
                                                                             <select name="country" id="countries"
                                                                                 required
-                                                                                style="background-color:white;color: #1f3344;"
+                                                                                style="background-color:white;color: gray;"
                                                                                 value="{{ old('country') }}"
                                                                                 class="form-control  ">
                                                                                 @foreach ($countries as $country)
@@ -1001,10 +1011,10 @@
                                                                         <div class="form-group mb-10">
                                                                             <select name="province" required
                                                                                 id="province" class="form-control  "
-                                                                                style="background-color:white;color: #1f3344;"
+                                                                                style="background-color:white;color: gray;"
                                                                                 value="{{ old('province') }}">
-                                                                                <option value="Provinces" selected>
-                                                                                    Provinces
+                                                                                <option value="Province" selected>
+                                                                                    Province
                                                                                 </option>
 
                                                                                 @foreach ($provinces as $province)
@@ -1022,16 +1032,17 @@
                                                                         @endif
                                                                     </div>
 
-                                                                    <div class="col-sm-12">
-                                                                        <label for="phone" class="col-sm-2 font-12"
-                                                                            style=" width:100%"> Numéro de
-                                                                            téléphone</label>
-                                                                    </div>
+                                                                    
                                                                     <div class="col-sm-12">
 
                                                                         <div class="form-group mb-10">
+                                                                            <div >
+                                                                                <label for="phone" class=" font-12"
+                                                                                    style=" width:100%;"> Numéro de
+                                                                                    téléphone</label>
+                                                                            </div>
                                                                             <input name="phone" class="form-control"
-                                                                                style="background-color:white;color: #1f3344; width:100%;"
+                                                                                style="background-color:white;color: gray; width:100%;"
                                                                                 id="phone" type="tel"
                                                                                 value="+212" required>
                                                                             <input name="indice" class="form-control"
@@ -1054,7 +1065,7 @@
                                                                         <div class="form-group mb-10">
                                                                             <select name="level"
                                                                                 value="{{ old('level') }}"
-                                                                                style="background-color:white;color: #1f3344;"
+                                                                                style="background-color:white;color: gray;"
                                                                                 class="form-control  " required>
                                                                                 <option value="Niveau d'études"
                                                                                     selected>Niveau
@@ -1076,7 +1087,7 @@
                                                                         <div class="form-group mb-10">
                                                                             <input name="grade"
                                                                                 value="{{ old('grade') }}"
-                                                                                style="background-color:white;color: #1f3344;"
+                                                                                style="background-color:white;color: gray;"
                                                                                 placeholder="Diplôme et spécialité"
                                                                                 class="form-control" type="text">
                                                                         </div>
@@ -1127,11 +1138,11 @@
                                     </div>
 
                                     <div class="widget border-1px bg-silver-deep p-15">
-                                        <h4 class="widget-title line-bottom-theme-colored2 mb-10 ">Cycles</h4>
+                                        <h4 class="widget-title line-bottom-theme-colored2 mb-10 font-18">Cycles</h4>
                                         <div class="categories">
                                             <ul class="list-border">
                                                 @foreach ($degrees as $degree)
-                                                    <li><a style="color:white;"
+                                                    <li class="font-16"><a style="color:white;"
                                                             href="{{ route('degree.show', $degree->name) }}">{{ $degree->name }}</a>
                                                     </li>
                                                 @endforeach

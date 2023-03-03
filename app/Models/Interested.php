@@ -15,7 +15,6 @@ class Interested extends Model
 'name',
 'surname', 
 'email',
-'birth',
 'country',
 'province',
 'level',

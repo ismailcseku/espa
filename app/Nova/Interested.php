@@ -53,7 +53,6 @@ class Interested extends Resource
             Text::make('name'),
             Text::make('surname'),
             Email::make('email'),
-            Date::make('birth'),
             Text::make('country'),
             Text::make('province'),
             Text::make('level'),

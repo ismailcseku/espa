@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('name', 50);
             $table->string('surname', 100);
             $table->string('email');
-            $table->date('birth');
             $table->string('country');
             $table->string('province');
             $table->string('level');
