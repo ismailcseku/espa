@@ -4,6 +4,7 @@ namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Text;
 use Mostafaznv\NovaVideo\Video;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
@@ -42,6 +43,7 @@ class Mediavideo extends Resource
     {
         return [
             ID::make()->sortable(),
+            Text::make('Titre','title'),
             Video::make('Une Vidéo','video')->disk('public')
             ->storeAs(function (Request $request) {
                 return $request->video->getClientOriginalName();

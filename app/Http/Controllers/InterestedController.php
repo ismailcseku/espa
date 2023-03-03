@@ -26,7 +26,6 @@ class InterestedController extends Controller
             'name'=>['required','string','max:50','min:2'],
             'surname'=>['required','string','max:100','min:2'],
             'email'=>['required','email'],
-            'birth'=>['required','date','before:tomorrow'],
             'country'=>['required','string'],
             'province'=>['string'],
             'phone'=>['required','string'],

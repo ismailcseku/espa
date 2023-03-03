@@ -79,12 +79,9 @@
             <div class="header-top bg-theme-colored border-top-theme-colored2-2px sm-text-center">
                 <div class="container">
                     <div class="row">
-
                         <div class="col-md-4">
                             <div class="widget">
-
                                 <ul class="styled-icons icon-sm icon-white">
-
                                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                     <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                                     <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
@@ -934,6 +931,7 @@
                                                                         @endif
 
 
+
                                                                     </div>
                                                                     <div class="col-sm-6">
 
@@ -981,8 +979,6 @@
                                                                     </div>
 
 
-
-
                                                                     <div class="col-sm-12">
 
                                                                         <div class="form-group mb-12">
@@ -1009,10 +1005,10 @@
 
                                                                         <div class="form-group mb-10">
                                                                             <select name="province" required
-                                                                                id="province" class="form-control  "
+                                                                                id="province" class="form-control"
                                                                                 style="background-color:white;color: gray;"
                                                                                 value="{{ old('province') }}">
-                                                                                <option value="Province" selected>
+                                                                                <option value="_" selected>
                                                                                     Province
                                                                                 </option>
 
@@ -1030,8 +1026,6 @@
                                                                                 class="text-white">{{ $errors->first('province') }}</span>
                                                                         @endif
                                                                     </div>
-
-
                                                                     <div class="col-sm-12">
 
                                                                         <div class="form-group mb-10">
@@ -1054,8 +1048,6 @@
                                                                         @endif
                                                                     </div>
 
-
-
                                                                 </div>
                                                                 <div class="row">
 
@@ -1066,8 +1058,7 @@
                                                                                 value="{{ old('level') }}"
                                                                                 style="background-color:white;color: gray;"
                                                                                 class="form-control  " required>
-                                                                                <option value="Niveau d'études"
-                                                                                    selected>Niveau
+                                                                                <option value="_" selected>Niveau
                                                                                     d'études</option>
                                                                                 @foreach ($levels as $level)
                                                                                     <option
@@ -1096,6 +1087,7 @@
                                                                         @endif
                                                                     </div>
                                                                 </div>
+
                                                                 <div class="col-xs-2 col-sm-1">
 
                                                                     <div class=" mb-10">
@@ -1104,7 +1096,7 @@
                                                                     </div>
                                                                     @if ($errors->has('accepted'))
                                                                         <span
-                                                                            class="text-white">{{ $errors->first('accepted') }}</span>
+                                                                            class="text-danger">{{ $errors->first('accepted') }}</span>
                                                                     @endif
                                                                 </div>
                                                                 <p class="col-xs-10 col-span-10 font-10">
@@ -1112,7 +1104,7 @@
                                                                     droit
                                                                     d&#39;accès, de rectification et d&#39;opposition au
                                                                     traitement de
-                                                                    vos données personnelles. <span
+                                                                    vos données personnelles.<span
                                                                         style="color:red;">*</span>
                                                                 </p>
 
@@ -1407,9 +1399,10 @@
         line-height: 1rem;
     }
 
-    .nav-tabs > li > a{
-        color:#1f3344;
+    .nav-tabs>li>a {
+        color: #1f3344;
     }
+
     .nav-tabs>li.active a,
     .nav-tabs>li.active a:hover,
     .nav-tabs>li.active a:focus {

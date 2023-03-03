@@ -9,7 +9,7 @@ class Mediavideo extends Model
 {
     use HasFactory;
     protected $fillable=[
-
+        'title',
         'video'
     ];
 }
