@@ -619,7 +619,7 @@
                                                                     @endif
                                                                 </div>
                                                                 <div class="accordion-body">
-                                                                    <div class="accordion-body-content">
+                                                                    <div class="accordion-body-content text-white" >
                                                                         {!! $program->description !!}
                                                                     </div>
                                                                 </div>
@@ -640,7 +640,7 @@
                                                                     @endif
                                                                 </div>
                                                                 <div class="accordion-body">
-                                                                    <div class="accordion-body-content">
+                                                                    <div class="accordion-body-content text-white">
                                                                         {!! $program->description !!}
 
                                                                     </div>
@@ -1398,6 +1398,7 @@
         font-size: 0.875rem;
         line-height: 1rem;
     }
+  
 
     .nav-tabs>li>a {
         color: #1f3344;
