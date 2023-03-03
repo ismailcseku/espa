@@ -2,23 +2,22 @@
 @section('content')
     <div class="main-content">
         <!-- Section: inner-header -->
-        <section class="inner-header divider layer-overlay overlay-dark-4"
-            data-bg-img="{{ asset('images/details_course.jpeg') }}">
-            <div class="container pt-120 pb-60">
-                <!-- Section Content -->
-                <div class="section-content">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h2 class="text-theme-colored2 font-36">Évènements</h2>
-                            <ol class="breadcrumb text-left mt-10 white">
-                                <li><a href="{{ route('home') }}">Acceuil</a></li>
-                                <li class="active">Évènements</li>
-                            </ol>
+            <!-- Section: inner-header -->
+            <section class="inner-header divider " style="background-color:rgb(45, 69, 88);">
+                <div class=" pt-10 pb-10 ">
+                    <!-- Section Content -->
+                    <div class="section-content ml-90 ">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ol class="breadcrumb text-left mt-10 white">
+                                    <li><a href="/">Acceuil</a></li>
+                                    <li class="text-white">Évènements</li>
+                                </ol>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
         <!-- Section: Events Grid -->
         <section>
