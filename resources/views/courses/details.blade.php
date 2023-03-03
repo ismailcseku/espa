@@ -341,25 +341,25 @@
                                         @endif
 
 
-                                     
+
                                         @if ($course->modalitiy_name)
-                                        <li>
-                                            <i class="pe-7s-refresh-2 text-theme-colored2 font-48"></i>
-                                            <div class="pull-right ml-10">
-                                                <span>Rythme</span>
-                                                <h5 class="mt-0">{{ $course->modalitiy_name }}</h5>
-                                            </div>
-                                        </li>
-                                    @endif
-                                    @if ($course->duration)
-                                    <li>
-                                        <i class="pe-7s-timer text-theme-colored2 font-48"></i>
-                                        <div class="pull-right ml-10">
-                                            <span>Durée</span>
-                                            <h5 class="mt-0">{{ $course->duration}} Mois</h5>
-                                        </div>
-                                    </li>
-                                @endif
+                                            <li>
+                                                <i class="pe-7s-refresh-2 text-theme-colored2 font-48"></i>
+                                                <div class="pull-right ml-10">
+                                                    <span>Rythme</span>
+                                                    <h5 class="mt-0">{{ $course->modalitiy_name }}</h5>
+                                                </div>
+                                            </li>
+                                        @endif
+                                        @if ($course->duration)
+                                            <li>
+                                                <i class="pe-7s-timer text-theme-colored2 font-48"></i>
+                                                <div class="pull-right ml-10">
+                                                    <span>Durée</span>
+                                                    <h5 class="mt-0">{{ $course->duration }} Mois</h5>
+                                                </div>
+                                            </li>
+                                        @endif
 
                                     </ul>
 
@@ -1032,11 +1032,11 @@
                                                                         @endif
                                                                     </div>
 
-                                                                    
+
                                                                     <div class="col-sm-12">
 
                                                                         <div class="form-group mb-10">
-                                                                            <div >
+                                                                            <div>
                                                                                 <label for="phone" class=" font-12"
                                                                                     style=" width:100%;"> Numéro de
                                                                                     téléphone</label>
@@ -1406,6 +1406,16 @@
         padding: 0 1.5rem;
         font-size: 0.875rem;
         line-height: 1rem;
+    }
+
+    .nav-tabs > li > a{
+        color:#1f3344;
+    }
+    .nav-tabs>li.active a,
+    .nav-tabs>li.active a:hover,
+    .nav-tabs>li.active a:focus {
+        color: white;
+        background-color: #F88147;
     }
 </style>
 <script>
