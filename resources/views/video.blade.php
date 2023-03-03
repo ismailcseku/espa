@@ -36,6 +36,7 @@
                                         <div class="thumb">
                                             <video class="img-fullwidth"  src="{{url('storage')}}/{{$video->video}}"></video>
                                             <div class="overlay-shade"></div>
+                                            <div class="title text-center">{{$video->title}}</div>
                                           
                                             <div class="icons-holder">
                                                 <div class="icons-holder-inner">
