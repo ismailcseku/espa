@@ -63,7 +63,7 @@
                                     </div>
 
                                     <div class="mt-30 mb-0">
-                                        <h5 class="pull-left mt-10 mr-20 text-theme-colored2">Partager:</h5>
+                                        <h5 class="pull-left mt-30 mr-20 text-theme-colored2">Partager:</h5>
                                         <ul class="styled-icons m-0">
 
                                             <li>

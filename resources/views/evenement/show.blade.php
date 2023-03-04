@@ -22,6 +22,23 @@
                 </div>
             </div>
         </section>
+        <section class="bg-theme-colored2">
+            <div class="container pt-40 pb-40">
+              <div class="row text-center">
+                <div class="col-md-12">
+                  <h2 id="basic-coupon-clock" class="text-white"></h2>
+                  <!-- Final Countdown Timer Script -->
+                  <script type="text/javascript">
+                    $(document).ready(function() {
+                      $('#basic-coupon-clock').countdown('2020/10/10', function(event) {
+                        $(this).html(event.strftime('%D jours %H:%M:%S'));
+                      });
+                    });
+                  </script>
+                </div>
+              </div>
+            </div>
+          </section>
 
 
 

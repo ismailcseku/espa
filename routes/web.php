@@ -34,9 +34,9 @@ use App\Http\Controllers\CategoryBlogController;
 */
 
 Route::get('/', [HomeController::class, '__invoke'])->name('home');
-Route::get('/courses/{course}', [CourseController::class, 'show'])->name('course.details');
-Route::get('/course/{res}', [CourseController::class, 'showByName'])->name('course.byname');
-Route::get('/courses', [CourseController::class, 'index'])->name('course.index');
+Route::get('/nos-formations/{course}', [CourseController::class, 'show'])->name('course.details');
+Route::get('/formation/{res}', [CourseController::class, 'showByName'])->name('course.byname');
+Route::get('/formation', [CourseController::class, 'index'])->name('course.index');
 Route::get('/cycle', [DegreeController::class, 'index'])->name('degree.index');
 Route::get('/cycle/{res}', [DegreeController::class, 'show'])->name('degree.show');
 Route::post('/interested/{id}', [InterestedController::class, '__invoke'])->name('interested');
@@ -50,7 +50,7 @@ Route::post('/evenement/{id}', [EvenementController::class, 'signIn'])->name('ev
 Route::post('/newsletter', [NewsletterController::class, 'store'])->name('newsletter.store');
 
 
-Route::get('/about', [AboutController::class, '__invoke'])->name('about.index');
+Route::get('/à-propos-de-nous', [AboutController::class, '__invoke'])->name('about.index');
 Route::get('/mot-du-directeur', [DirectorController::class, '__invoke'])->name('director.index');
 Route::get('/responsable', [ResponsableController::class, '__invoke'])->name('responsable.index');
 Route::get('/responsable', [ResponsableController::class, '__invoke'])->name('responsable.index');
