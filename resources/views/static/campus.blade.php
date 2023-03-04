@@ -1,15 +1,14 @@
 @extends('layouts.app')
 @section('content')
-<section class="inner-header divider layer-overlay overlay-theme-colored-7" style="background-color:#1f3344;">
-    <div class="container pt-40 pb-20">
+<section class="inner-header divider " style="background-color:rgb(45, 69, 88);">
+    <div class=" pt-10 pb-10 ">
         <!-- Section Content -->
-        <div class="section-content">
+        <div class="section-content ml-90 ">
             <div class="row">
                 <div class="col-md-6">
-                    <h2 class="text-theme-colored2 font-36">Vie estudiantine</h2>
                     <ol class="breadcrumb text-left mt-10 white">
                         <li><a href="/">Acceuil</a></li>
-                        <li  class="active">Vie estudiantine</li>
+                        <li class="text-white">Vie estudiantine</li>
                     </ol>
                 </div>
             </div>
@@ -40,7 +39,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h4 class="mb-20">Médiathèques</h4>
+                    <a href="{{ url('media.index') }}" class="mb-20 font-20" style="font-weight: bold;color:#1f3344;">Galerie</a>
+
                     <div class="owl-carousel-5col" data-nav="true">
                         @foreach ($medias as $media)
                             <div class="item"><img src="{{ url('storage') }}/{{ $media->photo }}" width="285"

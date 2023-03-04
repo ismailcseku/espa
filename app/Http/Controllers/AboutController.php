@@ -20,8 +20,10 @@ class AboutController extends Controller
     {
         $datas=About::latest('id')->limit(1)->get();
         $shareFacebook=ShareFacade::currentPage()->facebook()->getRawLinks();
+        $shareWhatsapp=ShareFacade::currentPage()->whatsapp()->getRawLinks();
+        $shareLinkedin=ShareFacade::currentPage()->linkedin()->getRawLinks();
         $medias=Media::all();
         $downloads=Downloadpage::where('pagename','about')->get();
-        return view('about')->with(['datas'=>$datas,'medias'=>$medias,'shareFacebook'=>$shareFacebook,'downloads'=>$downloads]);
+        return view('about')->with(['datas'=>$datas,'medias'=>$medias,'shareFacebook'=>$shareFacebook,'shareWhatsapp'=>$shareWhatsapp,'shareLinkedin'=>$shareLinkedin,'downloads'=>$downloads]);
     }
 }

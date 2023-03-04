@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use Carbon\Carbon;
 use App\Models\About;
-use App\Models\Slide;
+use App\Models\Barre;
 
+use App\Models\Slide;
+use App\Models\Whyus;
 use App\Models\Course;
 use App\Models\Degree;
 use App\Models\Responsable;
@@ -48,9 +50,11 @@ class HomeController extends Controller
             return $item;
        });
        $about=About::latest('id')->limit(1)->get();
+       $whyus=Whyus::all();
+       $barres=Barre::all();
 
 
 
-        return  view('home')->with(['courses'=>$courses,'slides'=>$slides,'degrees'=>$degrees,'responsables'=>$responsables,'evenements'=>$evenements,'blogs'=>$blogs,'about'=>$about]);
+        return  view('home')->with(['courses'=>$courses,'slides'=>$slides,'degrees'=>$degrees,'responsables'=>$responsables,'evenements'=>$evenements,'blogs'=>$blogs,'about'=>$about,'whyus'=> $whyus,'barres'=>$barres]);
     } 
 }

@@ -26,7 +26,7 @@
                     <div class="row multi-row-clearfix">
                         @if (count($evenements) > 0)
                             @foreach ($evenements as $evenement)
-                                <div class="col-sm-6 col-md-4 col-lg-3">
+                                <div class="col-sm-6 col-md-4 col-lg-4">
                                     <div class="event-grid bg-silver-light maxwidth500 mb-30">
                                         <div class="thumb">
                                             <img src="{{ url('storage') . '/' . $evenement->photo }}" alt=""
@@ -86,5 +86,6 @@
                 </div>
             </div>
         </section>
+        
     </div>
 @endsection

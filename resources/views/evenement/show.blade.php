@@ -106,7 +106,7 @@
                     </div>
                 </div>
                 <div class="row mt-60">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <h4 class="mt-0">{{ $evenements->title }}</h4>
                         <p>{{ $evenements->description }}</p>
                     </div>

@@ -59,8 +59,9 @@
                             <li><a href="{{ route('home') }}">Acceuil</a></li>
                             <li><a href="{{ route('course.index') }}">Formations</a></li>
                             <li><a href="{{ route('evenement.index') }}">Évènements</a></li>
-                            <li><a href="{{ route('blog.index') }}">Actualié</a></li>
+                            <li><a href="{{ route('blog.index') }}">Actualités</a></li>
                             <li><a href="{{ route('media.index') }}">Galerie</a></li>
+                            <li><a href="{{ route('video.index') }}">Vidéo</a></li>
                         </ul>
                     </div>
 
@@ -92,7 +93,7 @@
                 <div class="opening-hours">
                     <ul class="list-border">
                         <li class="clearfix"> <span> Lun - vendredi : </span>
-                            <div class="value pull-right"> 8.00 am - 6.00 pm </div>
+                            <div class="value pull-right"> 8.30 am – 4h30 pm</div>
                         </li>
 
                         <li class="clearfix"> <span> Sam : </span>

@@ -237,21 +237,17 @@
             </div>
         </div>
     </section>
-    <!-- Section Choose Course -->
-
-
-
 
     <!-- Section: Courses -->
     <section id="courses" class="bg-silver-light">
         <div class="container">
             <div class="section-title mb-40">
                 <div class="row">
-                    <div class="col-md-12">
+                    <a href="{{ route('course.index') }}" class="col-md-12">
                         <h2 class="text-uppercase title">Nos <span class="text-theme-colored2">Formations</span>
                         </h2>
                         <div class="double-line-bottom-theme-colored-2"></div>
-                    </div>
+                    </a>
                 </div>
             </div>
             <div class="section-content">
@@ -269,7 +265,7 @@
                                         <div class="course-details clearfix p-20 pt-15">
                                             <div class="course-top-part">
                                                 <a href="{{ route('course.details', $course->id) }}">
-                                                    <h4 class="mt-5 mb-5"  >
+                                                    <h4 class="mt-5 mb-5">
                                                         {{ $course->name }}</h4>
                                                 </a>
                                                 <a href="{{ route('course.details', $course->id) }}">
@@ -278,10 +274,9 @@
                                                     </h4>
                                                 </a>
                                             </div>
-                                            <a
-                                                href="{{ route('course.details', $course->id) }}" class="mt-15 mb-0">
+                                            <a href="{{ route('course.details', $course->id) }}" class="mt-15 mb-0">
                                                 <p style="font-weight:normal;">
-                                                    {{$course->accroche}}</p>
+                                                    {{ $course->accroche }}</p>
                                             </a>
                                             <div class="author-thumb">
                                                 <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
@@ -305,11 +300,10 @@
                                                 <h5>Détail</h5>
                                             </div>
                                         </a>
-                                        
+
                                     </div>
-                                    
+
                                 </div>
-                                
                             @endforeach
 
                         </div>
@@ -402,88 +396,45 @@
                         <div class="panel-group accordion-stylished-left-border accordion-icon-filled accordion-no-border accordion-icon-left accordion-icon-filled-theme-colored2 custom-style"
                             id="accordion6" role="tablist" aria-multiselectable="true">
                             <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headin1">
-                                    <h6 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion6"
-                                            href="#collaps1" aria-expanded="true" aria-controls="collaps1">
-                                            Une vie estudiantine exceptionnelle
-                                        </a>
-                                    </h6>
-                                </div>
-                                <div id="collaps1" class="panel-collapse collapse in" role="tabpanel"
-                                    aria-labelledby="headin1">
-                                    <div class="panel-body">
-                                        Rejoignez-nous et bâtissez votre carrière dans une école qui offre de nombreux
-                                        services et activités vous feront découvrir un environnement unique de multiples
-                                        cultures.
-                                    </div>
-                                </div>
-                                <div class="panel panel-default">
-                                    <div class="panel-heading" role="tab" id="heading2">
-                                        <h6 class="panel-title">
-                                            <a class="collapsed" role="button" data-toggle="collapse"
-                                                data-parent="#accordion6" href="#collapse2" aria-expanded="false"
-                                                aria-controls="collapse2">
-                                                Plus de 1000 étudiants à l’horizon 2030
-                                            </a>
-                                        </h6>
-                                    </div>
-                                    <div id="collapse2" class="panel-collapse collapse" role="tabpanel"
-                                        aria-labelledby="heading2">
-                                        <div class="panel-body">
-                                            Nouveau département de l'agro-alimentaire en partenariat avec l'ESCA et des
-                                            nouvelles filières de formation dans les domaines de l’intelligence
-                                            artificielle,
-                                            aquaculture, sciences acridiennes, etc.
+                                @foreach ($whyus as $item)
+                                    @if ($loop->first)
+                                        <div class="panel-heading" role="tab" id="headin1">
+                                            <h6 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion6"
+                                                    href="#collaps1" aria-expanded="true" aria-controls="collaps1">
+                                                    {{ $item->title }}
+                                                </a>
+                                            </h6>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="panel panel-default">
-                                    <div class="panel-heading" role="tab" id="heading3">
-                                        <h6 class="panel-title">
-                                            <a class="collapsed" role="button" data-toggle="collapse"
-                                                data-parent="#accordion6" href="#collapse3" aria-expanded="false"
-                                                aria-controls="collapse3">
-                                                Projets structuraux de niveau mondial
-                                            </a>
-                                        </h6>
-                                    </div>
-                                    <div id="collapse3" class="panel-collapse collapse" role="tabpanel"
-                                        aria-labelledby="heading3">
-                                        <div class="panel-body">
-                                            Centre d’excellence horticole, ferme expérimentale, consortium pour la
-                                            recherche, le
-                                            développement et l’innovation agricole, impact cluster, agri-business
-                                            incubateur,
-                                            centre de formation continue, centre de diagnostic et d’analyse, programme
-                                            doctoral
-                                            et masters internationaux…
+                                        <div id="collaps1" class="panel-collapse collapse in" role="tabpanel"
+                                            aria-labelledby="headin1">
+                                            <div class="panel-body">
+                                                {{ $item->description }}
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="panel panel-default">
-                                    <div class="panel-heading" role="tab" id="heading4">
-                                        <h6 class="panel-title">
-                                            <a class="collapsed" role="button" data-toggle="collapse"
-                                                data-parent="#accordion6" href="#collapse4" aria-expanded="false"
-                                                aria-controls="collapse4">
-                                                Programme de recherche scientifique
-                                            </a>
-                                        </h6>
-                                    </div>
-                                    <div id="collapse4" class="panel-collapse collapse" role="tabpanel"
-                                        aria-labelledby="heading4">
-                                        <div class="panel-body">
-                                            Des équipes de recherche et d’experts nationaux et internationaux dans
-                                            différents
-                                            domaines : Gestion rationnelle des ressources en eau, technologies de récolte et
-                                            post-récolte, protection des cultures et gestion intégrée des ravageurs,
-                                            contrôle
-                                            climatique basé sur le pilotage des données, biotechnologie et sélection
-                                            végétales…
+                                    @else
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="heading2">
+                                                <h6 class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse"
+                                                        data-parent="#accordion6" href="#collapse2" aria-expanded="false"
+                                                        aria-controls="collapse2">
+                                                        {{ $item->title }}
+
+                                                    </a>
+                                                </h6>
+                                            </div>
+                                            <div id="collapse2" class="panel-collapse collapse" role="tabpanel"
+                                                aria-labelledby="heading2">
+                                                <div class="panel-body">
+                                                    {{ $item->description }}
+
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
+                                    @endif
+                                @endforeach
+                   
                             </div>
                         </div>
                     </div>
@@ -495,103 +446,74 @@
     <section class="layer-overlay overlay-dark-7 parallax" data-bg-img="{{ asset('images/details_course.jpeg') }}">
         <div class="container pt-80 pb-90 pt-md-70 pb-md-50 pb-sm-50">
             <div class="row mt-30 text-center">
+                @foreach ($barres as $barre)
                 <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
                     <div class="funfact">
-                        <i class="pe-7s-smile mb-20 text-white"></i>
-                        <h2 data-animation-duration="2000" data-value="1000"
+                        <i class="mb-20 text-white">{!!$barre->icon!!}</i>
+                        <h2 data-animation-duration="2000" data-value="{{$barre->valeur}}"
                             class="animate-number text-theme-colored2 font-42 font-weight-600 mt-0 mb-15">0</h2>
                         <h5 class="text-white text-uppercase">
-                            ÉTUDIANTS (2023-2030)
+                            {{$barre->title}}
 
                         </h5>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
-                    <div class="funfact">
-                        <i class="pe-7s-notebook mb-20 text-white"></i>
-                        <h2 data-animation-duration="2000" data-value="42"
-                            class="animate-number text-theme-colored2 font-42 font-weight-600 mt-0 mb-15">0</h2>
-                        <h5 class="text-white text-uppercase">
-                            ANNÉES D’EXPERIENCE
-                        </h5>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
-                    <div class="funfact">
-                        <i class="pe-7s-users mb-20 text-white"></i>
-                        <h2 data-animation-duration="2000" data-value="100"
-                            class="animate-number text-theme-colored2 font-42 font-weight-600 mt-0 mb-15">0</h2>
-                        <h5 class="text-white text-uppercase">
-                            STARTUPS (2028)
+                @endforeach
 
-                        </h5>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
-                    <div class="funfact">
-                        <i class="pe-7s-study mb-20 text-white"></i>
-                        <h2 data-animation-duration="2000" data-value="50"
-                            class="animate-number text-theme-colored2 font-42 font-weight-600 mt-0 mb-15">0</h2>
-                        <h5 class="text-white text-uppercase">
-                            PHD (2033)
-
-                        </h5>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
     <!-- Section: team -->
     <!--
-                                                                                                                                                            <section id="team">
-                                                                                                                                                                <div class="container">
-                                                                                                                                                                    <div class="section-title mb-40">
-                                                                                                                                                                        <div class="row">
-                                                                                                                                                                            <div class="col-md-12">
-                                                                                                                                                                                <h2 class="title text-uppercase mb-5">Nos <span
-                                                                                                                                                                                        class="text-theme-colored2">responsables</span>
-                                                                                                                                                                                </h2>
-                                                                                                                                                                                <h5 class="font-16 text-gray-darkgray mt-5">Discuter avec un responsable</h5>
+                                                                                                                                                                <section id="team">
+                                                                                                                                                                    <div class="container">
+                                                                                                                                                                        <div class="section-title mb-40">
+                                                                                                                                                                            <div class="row">
+                                                                                                                                                                                <div class="col-md-12">
+                                                                                                                                                                                    <h2 class="title text-uppercase mb-5">Nos <span
+                                                                                                                                                                                            class="text-theme-colored2">responsables</span>
+                                                                                                                                                                                    </h2>
+                                                                                                                                                                                    <h5 class="font-16 text-gray-darkgray mt-5">Discuter avec un responsable</h5>
+                                                                                                                                                                                </div>
                                                                                                                                                                             </div>
                                                                                                                                                                         </div>
-                                                                                                                                                                    </div>
-                                                                                                                                                                    <div class="section-content">
-                                                                                                                                                                        <div class="row">
-                                                                                                                                                                            @foreach ($responsables as $responsable)
+                                                                                                                                                                        <div class="section-content">
+                                                                                                                                                                            <div class="row">
+                                                                                                                                                                                @foreach ($responsables as $responsable)
     <div class="col-xs-12 col-sm-6 col-md-6">
-                                                                                                                                                                                    <div class="team-members mb-40">
-                                                                                                                                                                                        <div class="team-thumb pull-left team-pull-none flip mr-sm-0 t-mr-0">
-                                                                                                                                                                                            <img src="{{ url('storage') }}/{{ $responsable->photo }}" alt=""
-                                                                                                                                                                                                class="img-fullwidth">
-                                                                                                                                                                                        </div>
-                                                                                                                                                                                        <div class="team-bottom-part border-1px p-15">
-                                                                                                                                                                                            <h4 class="text-uppercase m-0 pb-5">{{ $responsable->name }}
-                                                                                                                                                                                                {{ $responsable->surname }}</h4>
-                                                                                                                                                                                            <h6 class="font-13 text-gray mt-0">{{ $responsable->poste }}</h6>
-                                                                                                                                                                                            <ul class="list-inline mt-15">
-                                                                                                                                                                                                <li class="m-0 pr-10"> <i class="fa fa-phone text-theme-colored2 mr-5"></i>
-                                                                                                                                                                                                    <span class="text-gray" href="#">{{ $responsable->phone }}</span>
-                                                                                                                                                                                                </li>
-                                                                                                                                                                                                <li class="m-0 pr-10"> <i
-                                                                                                                                                                                                        class="fa fa-envelope-o text-theme-colored2 mr-5"></i>
-                                                                                                                                                                                                    <a class="text-gray"
-                                                                                                                                                                                                        href="mailto:{{ $responsable->email }}">{{ $responsable->email }}</a>
-                                                                                                                                                                                                </li>
+                                                                                                                                                                                        <div class="team-members mb-40">
+                                                                                                                                                                                            <div class="team-thumb pull-left team-pull-none flip mr-sm-0 t-mr-0">
+                                                                                                                                                                                                <img src="{{ url('storage') }}/{{ $responsable->photo }}" alt=""
+                                                                                                                                                                                                    class="img-fullwidth">
+                                                                                                                                                                                            </div>
+                                                                                                                                                                                            <div class="team-bottom-part border-1px p-15">
+                                                                                                                                                                                                <h4 class="text-uppercase m-0 pb-5">{{ $responsable->name }}
+                                                                                                                                                                                                    {{ $responsable->surname }}</h4>
+                                                                                                                                                                                                <h6 class="font-13 text-gray mt-0">{{ $responsable->poste }}</h6>
+                                                                                                                                                                                                <ul class="list-inline mt-15">
+                                                                                                                                                                                                    <li class="m-0 pr-10"> <i class="fa fa-phone text-theme-colored2 mr-5"></i>
+                                                                                                                                                                                                        <span class="text-gray" href="#">{{ $responsable->phone }}</span>
+                                                                                                                                                                                                    </li>
+                                                                                                                                                                                                    <li class="m-0 pr-10"> <i
+                                                                                                                                                                                                            class="fa fa-envelope-o text-theme-colored2 mr-5"></i>
+                                                                                                                                                                                                        <a class="text-gray"
+                                                                                                                                                                                                            href="mailto:{{ $responsable->email }}">{{ $responsable->email }}</a>
+                                                                                                                                                                                                    </li>
 
-                                                                                                                                                                                            </ul>
+                                                                                                                                                                                                </ul>
 
+                                                                                                                                                                                            </div>
                                                                                                                                                                                         </div>
                                                                                                                                                                                     </div>
-                                                                                                                                                                                </div>
     @endforeach
 
-                                                                                                                                                                        </div>
+                                                                                                                                                                            </div>
 
+                                                                                                                                                                        </div>
                                                                                                                                                                     </div>
-                                                                                                                                                                </div>
-                                                                                                                                                            </section>
-                                                                                                                                                        -->
+                                                                                                                                                                </section>
+                                                                                                                                                            -->
 
 
 
@@ -632,7 +554,7 @@
                                         <h3 class="post-title font-weight-600 mt-0 mb-15" style="word-break: break-word;">
                                             {{ $blog->title }}</h3>
                                     </a>
-                                    <p>  {{$course->accroche}} [...]</p>
+                                    <p> {{ $course->accroche }} [...]</p>
                                 </div>
                                 <div class="post-meta">
                                     <ul class="list-inline pull-left flip">

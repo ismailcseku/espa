@@ -33,6 +33,7 @@ class EvenementController extends Controller
          $shareWhatsapp=ShareFacade::currentPage()->whatsapp()->getRawLinks();
          $shareLinkedin=ShareFacade::currentPage()->linkedin()->getRawLinks();
          
+         
         return view('evenement.show')->with(['evenements'=>$evenements,'medias'=>$medias,'shareFacebook'=>$shareFacebook,'shareWhatsapp'=>$shareWhatsapp,'shareLinkedin'=>$shareLinkedin]);
     }
 

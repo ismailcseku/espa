@@ -7,8 +7,10 @@ use App\Nova\Logo;
 use App\Nova\Mode;
 use App\Nova\User;
 use App\Nova\About;
+use App\Nova\Barre;
 use App\Nova\Media;
 use App\Nova\Slide;
+use App\Nova\Whyus;
 use App\Nova\Campus;
 use App\Nova\Center;
 use App\Nova\Course;
@@ -85,6 +87,8 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                     MenuItem::resource(Slide::class),
                     MenuItem::resource(Design::class),
                     MenuItem::resource(Partner::class),
+                    MenuItem::resource(Whyus::class),
+                    MenuItem::resource(Barre::class),
 
                     
 

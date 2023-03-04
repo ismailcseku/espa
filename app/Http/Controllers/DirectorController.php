@@ -20,8 +20,11 @@ class DirectorController extends Controller
     {
         $datas=Director::latest('id')->limit(1)->get();
         $shareFacebook=ShareFacade::currentPage()->facebook()->getRawLinks();
+     
+         $shareWhatsapp=ShareFacade::currentPage()->whatsapp()->getRawLinks();
+         $shareLinkedin=ShareFacade::currentPage()->linkedin()->getRawLinks();
         $medias=Media::all();
         $downloads=Downloadpage::where('pagename','mot-du-directeur')->get();
-        return view('director')->with(['datas'=>$datas,'medias'=>$medias,'shareFacebook'=>$shareFacebook,'downloads'=>$downloads]);
+        return view('director')->with(['datas'=>$datas,'medias'=>$medias,'shareFacebook'=>$shareFacebook,'shareWhatsapp'=>$shareWhatsapp,'shareLinkedin'=>$shareLinkedin,'downloads'=>$downloads]);
     }
 }
