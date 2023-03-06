@@ -8,6 +8,14 @@
 
 
         }
+        .pt-70 {
+            padding-top: 0px !important;
+
+        }
+
+        .pb-40 {
+            padding-bottom: 0px !important;
+        }
     </style>
     <div class="main-content">
         <!-- Section: inner-header -->

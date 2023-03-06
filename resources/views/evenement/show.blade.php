@@ -8,6 +8,22 @@
 
 
         }
+ 
+        .pb-30 {
+            padding-bottom: 0px !important;
+        }
+
+        .pt-30 {
+            padding-top: 0px !important;
+        }
+
+        .mb-30 {
+            margin-bottom: 0px !important;
+        }
+
+        .mt-30 {
+            margin-top: 0px !important;
+        }
     </style>
     <div class="main-content">
         <!-- Section: inner-header -->

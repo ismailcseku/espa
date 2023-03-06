@@ -8,6 +8,22 @@
 
 
         }
+
+        .pb-30 {
+            padding-bottom: 0px !important;
+        }
+
+        .pt-30 {
+            padding-top: 0px !important;
+        }
+
+        .mb-30 {
+            margin-bottom: 0px !important;
+        }
+
+        .mt-30 {
+            margin-top: 0px !important;
+        }
     </style>
     <div class="main-content">
         <!-- Section: inner-header -->
@@ -46,7 +62,7 @@
                                     <div class="post-thumb">
                                         <img src="{{ url('storage') }}/{{ $blogs->photo }}" class="img-fullwidth"
                                             alt="">
-                                        
+
                                         @php
                                             $getMonth = date('F', strtotime($blogs->created_at));
                                             $getDays = date('d', strtotime($blogs->created_at));
@@ -71,10 +87,11 @@
                                         {!! $blogs->content !!}
 
                                     </div>
-                                    <h5 class="pull-left mt-10 mb-4  font-16" style="text-decoration:underline; color:gray;" >Partager:</h5> <br>
+                                    <h5 class="pull-left mt-10 mb-4  font-16"
+                                        style="text-decoration:underline; color:gray;">Partager:</h5> <br>
 
                                     <div class="mt-30 mb-0">
-                                       
+
                                         <ul class="styled-icons m-0">
 
                                             <li>

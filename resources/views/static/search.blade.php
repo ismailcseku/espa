@@ -5,8 +5,6 @@
         section>.container-fluid {
             padding-top: 0px;
             padding-bottom: 0px;
-
-
         }
     </style>
     <section class="inner-header divider " style="background-color:white;border-top:solid 2px rgb(45, 69, 88) ;">

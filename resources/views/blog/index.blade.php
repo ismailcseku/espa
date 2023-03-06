@@ -5,8 +5,15 @@
         section>.container-fluid {
             padding-top: 0px;
             padding-bottom: 0px;
+        }
 
+        .pt-70 {
+            padding-top: 0px !important;
 
+        }
+
+        .pb-40 {
+            padding-bottom: 0px !important;
         }
     </style>
     <div class="main-content">
