@@ -19,7 +19,7 @@
                         <div class="col-md-6">
                             <ol class="breadcrumb text-left mt-10" style="color:rgb(45, 69, 88);font-weight:bold;">
                                 <li><a href="/">Acceuil</a></li>
-                                <li>Vidéo</li>
+                                <li>Vidéos</li>
                             </ol>
                         </div>
                     </div>

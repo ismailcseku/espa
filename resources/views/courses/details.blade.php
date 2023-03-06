@@ -663,7 +663,7 @@
                                                     <div class="col-md-3">
 
                                                         <h5 class="mb-0 font-16">{{ $download->name }}</h5>
-                                                        <a href="{{ url('storage') }}/{{ $download->file }}">Cliquer
+                                                        <a href="{{ url('storage') }}/{{ $download->file }}" target="_blank">Cliquer
                                                             ici</a>
                                                     </div>
                                                 @endforeach
