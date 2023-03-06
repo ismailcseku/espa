@@ -78,7 +78,6 @@
                                                     @endphp</li>
                                             </ul>
                                             <p class="mt-10">
-                                            <p>{{ $evenement->accroche }} [...]</p>
                                          
 
                                             </p>

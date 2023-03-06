@@ -131,7 +131,7 @@
                                 </div>
                             </div>
                             <div class="widget">
-                                <h5 class="widget-title">Derniers postes</h5>
+                                <h5 class="widget-title">Derniers posts</h5>
                                 <div class="latest-posts">
 
                                     @foreach ($latests as $latest)
