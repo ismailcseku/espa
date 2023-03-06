@@ -30,11 +30,5 @@ class Blog extends Model
         return $this->belongsTo(CategoryBlog::class, 'category_blog_id');
     }
 
-    public function createdAt(): Attribute
-    {
-        return new Attribute(
-            get: fn ($value) => Carbon::parse($value)->locale('FR_fr')->diffForHumans(),
-            
-        );
-    }
+
 }

@@ -414,18 +414,18 @@
                                         </div>
                                     @else
                                         <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="heading2">
+                                            <div class="panel-heading" role="tab" id="heading{{$item->id}}">
                                                 <h6 class="panel-title">
                                                     <a class="collapsed" role="button" data-toggle="collapse"
-                                                        data-parent="#accordion6" href="#collapse2" aria-expanded="false"
+                                                        data-parent="#accordion6" href="#collapse{{$item->id}}" aria-expanded="false"
                                                         aria-controls="collapse2">
                                                         {{ $item->title }}
 
                                                     </a>
                                                 </h6>
                                             </div>
-                                            <div id="collapse2" class="panel-collapse collapse" role="tabpanel"
-                                                aria-labelledby="heading2">
+                                            <div id="collapse{{$item->id}}" class="panel-collapse collapse" role="tabpanel"
+                                                aria-labelledby="heading{{$item->id}}">
                                                 <div class="panel-body">
                                                     {{ $item->description }}
 

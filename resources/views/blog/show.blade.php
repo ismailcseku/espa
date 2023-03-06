@@ -46,6 +46,7 @@
                                     <div class="post-thumb">
                                         <img src="{{ url('storage') }}/{{ $blogs->photo }}" class="img-fullwidth"
                                             alt="">
+                                        
                                         @php
                                             $getMonth = date('F', strtotime($blogs->created_at));
                                             $getDays = date('d', strtotime($blogs->created_at));

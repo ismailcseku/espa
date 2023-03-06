@@ -78,7 +78,7 @@
                                                     @endphp</li>
                                             </ul>
                                             <p class="mt-10">
-                                                <p>{{ $evenement->accroche }} [...]</p>
+                                                <p>{{ $evenement->accroche }} [...] </p>
                                             </p>
                                             <a href="{{ route('evenement.show', $evenement->id) }}"
                                                 class="btn btn-theme-colored2 mt-5">Découvrir </a>
