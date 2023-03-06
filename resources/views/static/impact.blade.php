@@ -1,21 +1,29 @@
 @extends('layouts.app')
 @section('content')
+    <style>
+        section>.container,
+        section>.container-fluid {
+            padding-top: 0px;
+            padding-bottom: 0px;
 
-<section class="inner-header divider " style="background-color:rgb(45, 69, 88);">
-    <div class=" pt-10 pb-10 ">
-        <!-- Section Content -->
-        <div class="section-content ml-90 ">
-            <div class="row">
-                <div class="col-md-6">
-                    <ol class="breadcrumb text-left mt-10 white">
-                        <li><a href="/">Acceuil</a></li>
-                        <li class="text-white">Impact cluster</li>
-                    </ol>
+
+        }
+    </style>
+    <section class="inner-header divider " style="background-color:white;border-top:solid 2px rgb(45, 69, 88) ;">
+        <div class=" pt-10 pb-10 ">
+            <!-- Section Content -->
+            <div class="section-content ml-90 ">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ol class="breadcrumb text-left mt-10 " style="color:rgb(45, 69, 88);font-weight:bold;">
+                            <li><a href="/">Acceuil</a></li>
+                            <li>Impact cluster</li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
     <section>
         <div class="container">
             <div class="section-content">
@@ -70,8 +78,8 @@
                     <button class="accordion">Télécharger</button>
                     <div class="panel">
                         @foreach ($downloads as $key => $download)
-                        <div><a href="{{ url('storage') }}/{{ $download->filename }}" target='_blank' download="download">{{ $download->file }}</a></div>
-
+                            <div><a href="{{ url('storage') }}/{{ $download->filename }}" target='_blank'
+                                    download="download">{{ $download->file }}</a></div>
                         @endforeach
                     </div>
 
@@ -83,7 +91,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <a href="{{ url('media.index') }}" class="mb-20 font-20" style="font-weight: bold;color:#1f3344;">Galerie</a>
+                    <a href="{{ route('media.index') }}" class="text-white font-38 font-weight-700 mt-10 mb-20"><span
+                            class="text-theme-colored2">Galerie</span></a>
+
 
                     <div class="owl-carousel-5col" data-nav="true">
                         @foreach ($medias as $media)

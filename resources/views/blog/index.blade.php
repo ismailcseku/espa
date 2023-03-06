@@ -1,18 +1,27 @@
 @extends('layouts.app')
 @section('content')
+    <style>
+        section>.container,
+        section>.container-fluid {
+            padding-top: 0px;
+            padding-bottom: 0px;
+
+
+        }
+    </style>
     <div class="main-content">
         <!-- Section: inner-header -->
-        <section class="inner-header divider " style="background-color:rgb(45, 69, 88);">
+        <section class="inner-header divider " style="background-color:white;border-top:solid 2px rgb(45, 69, 88) ;">
             <div class=" pt-10 pb-10 ">
                 <!-- Section Content -->
                 <div class="section-content ml-90 ">
                     <div class="row">
                         <div class="col-md-6">
-                            <ol class="breadcrumb text-left mt-10 white">
+                            <ol class="breadcrumb text-left mt-10" style="color:rgb(45, 69, 88);font-weight:bold;">
                                 <li><a href="/">Acceuil</a></li>
 
-                                <li class='text-white'>
-                                  Blog
+                                <li>
+                                    Blog
                                 </li>
                             </ol>
                         </div>
@@ -68,7 +77,7 @@
                 </div>
             </div>
         </section>
-        
+
 
 
     </div>

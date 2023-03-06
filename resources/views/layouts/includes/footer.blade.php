@@ -61,7 +61,7 @@
                             <li><a href="{{ route('evenement.index') }}">Évènements</a></li>
                             <li><a href="{{ route('blog.index') }}">Actualités</a></li>
                             <li><a href="{{ route('media.index') }}">Galerie</a></li>
-                            <li><a href="{{ route('video.index') }}">Vidéo</a></li>
+                            <li><a href="{{ route('video.index') }}">Vidéos</a></li>
                         </ul>
                     </div>
 

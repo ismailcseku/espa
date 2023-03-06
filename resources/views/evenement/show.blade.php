@@ -1,17 +1,26 @@
 @extends('layouts.app')
 @section('content')
+    <style>
+        section>.container,
+        section>.container-fluid {
+            padding-top: 0px;
+            padding-bottom: 0px;
+
+
+        }
+    </style>
     <div class="main-content">
         <!-- Section: inner-header -->
-        <section class="inner-header divider " style="background-color:rgb(45, 69, 88);">
+        <section class="inner-header divider " style="background-color:white;border-top:solid 2px rgb(45, 69, 88) ;">
             <div class=" pt-10 pb-10 ">
                 <!-- Section Content -->
                 <div class="section-content ml-90 ">
                     <div class="row">
                         <div class="col-md-6">
-                            <ol class="breadcrumb text-left mt-10 white">
+                            <ol class="breadcrumb text-left mt-10" style="color:rgb(45, 69, 88);font-weight:bold;">
                                 <li><a href="/">Acceuil</a></li>
                                 <li><a href="{{ route('course.index') }}">Évènements</a></li>
-                                <li class='text-white'>
+                                <li>
                                     @if ($evenements->title)
                                         {{ $evenements->title }}
                                     @endif
@@ -24,21 +33,21 @@
         </section>
         <section class="bg-theme-colored2">
             <div class="container pt-40 pb-40">
-              <div class="row text-center">
-                <div class="col-md-12">
-                  <h2 id="basic-coupon-clock" class="text-white"></h2>
-                  <!-- Final Countdown Timer Script -->
-                  <script type="text/javascript">
-                    $(document).ready(function() {
-                      $('#basic-coupon-clock').countdown('2020/10/10', function(event) {
-                        $(this).html(event.strftime('%D jours %H:%M:%S'));
-                      });
-                    });
-                  </script>
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <h2 id="basic-coupon-clock" class="text-white"></h2>
+                        <!-- Final Countdown Timer Script -->
+                        <script type="text/javascript">
+                            $(document).ready(function() {
+                                $('#basic-coupon-clock').countdown('2020/10/10', function(event) {
+                                    $(this).html(event.strftime('%D jours %H:%M:%S'));
+                                });
+                            });
+                        </script>
+                    </div>
                 </div>
-              </div>
             </div>
-          </section>
+        </section>
 
 
 
@@ -186,8 +195,8 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input type="text" placeholder="Organisme " name="organism" class="form-control"
-                                            required value="{{ old('organism') }}">
+                                        <input type="text" placeholder="Organisme " name="organism"
+                                            class="form-control" required value="{{ old('organism') }}">
                                         @if ($errors->has('organism'))
                                             <span class="text-danger">{{ $errors->first('organism') }}</span>
                                         @endif
@@ -222,7 +231,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h4 class="mb-20">Médiathèques</h4>
+
+                        <a href="{{ route('media.index') }}" class="text-white font-38 font-weight-700 mt-10 mb-20"><span
+                                class="text-theme-colored2">Galerie</span></a>
+
                         <div class="owl-carousel-5col" data-nav="true">
                             @foreach ($medias as $media)
                                 <div class="item"><img src="{{ url('storage') }}/{{ $media->photo }}" width="285"
@@ -250,7 +262,7 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-          
+
             padding: 28px 28px 28px 28px;
 
         }

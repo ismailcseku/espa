@@ -1,20 +1,21 @@
 @extends('layouts.app')
 @section('content')
     <!-- Start main-content -->
+    <style>
+        section > .container, section > .container-fluid{
+            padding-top:0px;
+        }
+      </style>
     <div class="main-content">
-        <!-- Section: inner-header -->
-        <section class="inner-header divider layer-overlay overlay-theme-colored-7"
-            data-bg-img="{{ asset('images/details_course.jpeg') }}">
-            <div class="container pt-120 pb-60">
+        <section class="inner-header divider " style="background-color:white;border-top:solid 2px rgb(45, 69, 88) ;">
+            <div class="  ">
                 <!-- Section Content -->
-                <div class="section-content">
+                <div class="section-content ml-90 ">
                     <div class="row">
                         <div class="col-md-6">
-                            <h2 class="text-theme-colored2 font-36">Nous joindre</h2>
-                            <ol class="breadcrumb text-left mt-10 white">
-                                <li><a href="{{ route('home') }}">Accceuil</a></li>
-
-                                <li class="active">Contact</li>
+                            <ol class="breadcrumb text-left" style="color:rgb(45, 69, 88);font-weight:bold;">
+                                <li><a href="/">Acceuil</a></li>
+                                <li>Contact</li>
                             </ol>
                         </div>
                     </div>

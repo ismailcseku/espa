@@ -1,23 +1,32 @@
 @extends('layouts.app')
 @section('content')
+    <style>
+        section>.container,
+        section>.container-fluid {
+            padding-top: 0px;
+            padding-bottom: 0px;
+
+
+        }
+    </style>
     <div class="main-content">
         <!-- Section: inner-header -->
-            <!-- Section: inner-header -->
-            <section class="inner-header divider " style="background-color:rgb(45, 69, 88);">
-                <div class=" pt-10 pb-10 ">
-                    <!-- Section Content -->
-                    <div class="section-content ml-90 ">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <ol class="breadcrumb text-left mt-10 white">
-                                    <li><a href="/">Acceuil</a></li>
-                                    <li class="text-white">Évènements</li>
-                                </ol>
-                            </div>
+        <!-- Section: inner-header -->
+        <section class="inner-header divider " style="background-color:white;border-top:solid 2px rgb(45, 69, 88) ;">
+            <div class=" pt-10 pb-10 ">
+                <!-- Section Content -->
+                <div class="section-content ml-90 ">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ol class="breadcrumb text-left mt-10" style="color:rgb(45, 69, 88);font-weight:bold;">
+                                <li><a href="/">Acceuil</a></li>
+                                <li>Évènements</li>
+                            </ol>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
         <!-- Section: Events Grid -->
         <section>
@@ -69,11 +78,13 @@
                                                     @endphp</li>
                                             </ul>
                                             <p class="mt-10">
-                                               <p>{{$evenement->accroche}}</p> 
-                                                <a href="{{route('evenement.show',$evenement->id)}}" class="text-theme-colored2">...Lire plus</a>
- 
+                                            <p>{{ $evenement->accroche }}</p>
+                                            <a href="{{ route('evenement.show', $evenement->id) }}"
+                                                class="text-theme-colored2">...Lire plus</a>
+
                                             </p>
-                                            <a href="{{route('evenement.show',$evenement->id)}}" class="btn btn-theme-colored2 mt-5">Découvrir </a>
+                                            <a href="{{ route('evenement.show', $evenement->id) }}"
+                                                class="btn btn-theme-colored2 mt-5">Découvrir </a>
                                         </div>
                                     </div>
                                 </div>
@@ -86,6 +97,6 @@
                 </div>
             </div>
         </section>
-        
+
     </div>
 @endsection

@@ -1,16 +1,25 @@
 @extends('layouts.app')
 @section('content')
+    <style>
+        section>.container,
+        section>.container-fluid {
+            padding-top: 0px;
+            padding-bottom: 0px;
+
+
+        }
+    </style>
     <div class="main-content">
 
-        <section class="inner-header divider " style="background-color:rgb(45, 69, 88);">
+        <section class="inner-header divider " style="background-color:white;border-top:solid 2px rgb(45, 69, 88) ;">
             <div class=" pt-10 pb-10 ">
                 <!-- Section Content -->
                 <div class="section-content ml-90 ">
                     <div class="row">
                         <div class="col-md-6">
-                            <ol class="breadcrumb text-left mt-10 white">
+                            <ol class="breadcrumb text-left mt-10" style="color:rgb(45, 69, 88);font-weight:bold;">
                                 <li><a href="/">Acceuil</a></li>
-                                <li class="text-white">Vidéo</li>
+                                <li>Vidéo</li>
                             </ol>
                         </div>
                     </div>
@@ -24,25 +33,26 @@
                 <div class="section-content">
                     <div class="row">
                         <div class="col-md-12">
-                  
-                    
-                        
+
+
+
                             <div class="gallery-isotope default-animation-effect grid-3 gutter-small clearfix"
                                 data-lightbox="gallery">
                                 <!-- Portfolio Item Start -->
                                 @foreach ($videos as $video)
                                     <div class="gallery-item ">
                                         <div class="thumb">
-                                            <video class="img-fullwidth"  src="{{url('storage')}}/{{$video->video}}"></video>
+                                            <video class="img-fullwidth"
+                                                src="{{ url('storage') }}/{{ $video->video }}"></video>
                                             <div class="overlay-shade"></div>
-                                            <div class="title text-center">{{$video->title}}</div>
-                                          
+                                            <div class="title text-center">{{ $video->title }}</div>
+
                                             <div class="icons-holder">
                                                 <div class="icons-holder-inner">
                                                     <div
                                                         class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
-                                                        <a href="{{url('storage')}}/{{$video->video}}"
-                                                            data-lightbox-gallery="gallery" title="{{$video->title}}"><i
+                                                        <a href="{{ url('storage') }}/{{ $video->video }}"
+                                                            data-lightbox-gallery="gallery" title="{{ $video->title }}"><i
                                                                 class="fa fa-picture-o"></i></a>
                                                     </div>
                                                 </div>

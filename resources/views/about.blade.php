@@ -1,20 +1,30 @@
 @extends('layouts.app')
 @section('content')
-<section class="inner-header divider " style="background-color:rgb(45, 69, 88);">
-    <div class=" pt-10 pb-10 ">
-        <!-- Section Content -->
-        <div class="section-content ml-90 ">
-            <div class="row">
-                <div class="col-md-6">
-                    <ol class="breadcrumb text-left mt-10 white">
-                        <li><a href="/">Acceuil</a></li>
-                        <li class="text-white">Qui sommes-nous?</li>
-                    </ol>
+    <style>
+        section>.container,
+        section>.container-fluid {
+            padding-top: 0px;
+            padding-bottom: 0px;
+
+
+
+        }
+    </style>
+    <section class="inner-header divider " style="background-color:white;border-top:solid 2px rgb(45, 69, 88) ;">
+        <div class=" ">
+            <!-- Section Content -->
+            <div class="section-content ml-90 ">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ol class="breadcrumb text-left mt-10 font-14" style="color:rgb(45, 69, 88);font-weight:bold;">
+                            <li><a href="/">Acceuil</a></li>
+                            <li>Qui sommes-nous?</li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
     <section>
         <div class="container">
             <div class="section-content">
@@ -24,10 +34,10 @@
                             <img class="img-fullwidth" src="{{ url('storage') }}/{{ $data->photo }}" alt="">
                         </div>
                         <div class="col-md-12">
-                            <h2 class="text-uppercasetext-theme-colored mt-0 mb-0 mt-sm-30"><span
+                            <h2 class="text-uppercase text-theme-colored mt-0 mb-0 mt-sm-30"><span
                                     class="text-theme-colored2">À propos de nous</span></h2>
+                            <h5 class="pull-left mt-10 mb-4  font-16" style="text-decoration:underline; color:gray;" >Partager:</h5> <br>
                             <div class="mt-30 mb-0">
-                                <h5 class="pull-left mt-10 mr-20 text-theme-colored2">Partager:</h5>
                                 <ul class="styled-icons m-0">
 
                                     <li>
@@ -69,7 +79,8 @@
                     <button class="accordion">Télécharger</button>
                     <div class="panel">
                         @foreach ($downloads as $key => $download)
-                            <div><a href="{{ url('storage') }}/{{ $download->file }}" download="download">{{ $download->file }}</a></div>
+                            <div><a href="{{ url('storage') }}/{{ $download->file }}"
+                                    download="download">{{ $download->file }}</a></div>
                         @endforeach
                     </div>
 
@@ -81,7 +92,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <a href="{{ url('media.index') }}" class="mb-20 font-20" style="font-weight: bold;color:#1f3344;">Galerie</a>
+
+                    <a href="{{ route('media.index') }}" class="text-white font-38 font-weight-700 mt-10 mb-20"><span
+                            class="text-theme-colored2">Galerie</span></a>
+
 
                     <div class="owl-carousel-5col" data-nav="true">
                         @foreach ($medias as $media)
@@ -118,7 +132,7 @@
             transition: max-height 0.2s ease-out;
         }
     </style>
-      <style>
+    <style>
         .share {
             width: 90px;
             height: 90px;
@@ -133,7 +147,7 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-          
+
             padding: 28px 28px 28px 28px;
 
         }

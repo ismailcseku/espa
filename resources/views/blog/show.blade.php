@@ -1,17 +1,26 @@
 @extends('layouts.app')
 @section('content')
+    <style>
+        section>.container,
+        section>.container-fluid {
+            padding-top: 0px;
+            padding-bottom: 0px;
+
+
+        }
+    </style>
     <div class="main-content">
         <!-- Section: inner-header -->
-        <section class="inner-header divider " style="background-color:rgb(45, 69, 88);">
+        <section class="inner-header divider " style="background-color:white;border-top:solid 2px rgb(45, 69, 88) ;">
             <div class=" pt-10 pb-10 ">
                 <!-- Section Content -->
                 <div class="section-content ml-90 ">
                     <div class="row">
                         <div class="col-md-6">
-                            <ol class="breadcrumb text-left mt-10 white">
+                            <ol class="breadcrumb text-left mt-10" style="color:rgb(45, 69, 88);font-weight:bold;">
                                 <li><a href="/">Acceuil</a></li>
                                 <li><a href="{{ route('blog.index') }}">Blog</a></li>
-                                <li class='text-white'>
+                                <li>
 
                                     @if ($blogs->title)
                                         {{ $blogs->title }}
@@ -61,13 +70,14 @@
                                         {!! $blogs->content !!}
 
                                     </div>
+                                    <h5 class="pull-left mt-10 mb-4  font-16" style="text-decoration:underline; color:gray;" >Partager:</h5> <br>
 
                                     <div class="mt-30 mb-0">
-                                        <h5 class="pull-left mt-30 mr-20 text-theme-colored2">Partager:</h5>
+                                       
                                         <ul class="styled-icons m-0">
 
                                             <li>
-        
+
                                                 <a href="{{ $shareLinkedin['facebook'] }}" class="share fb">
                                                     <i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                                             viewBox="0 0 16 16">
@@ -76,7 +86,7 @@
                                                         </svg></i>
                                                 </a>
                                             </li>
-        
+
                                             <li><a href="{{ $shareLinkedin['whatsapp'] }}" class="share wa">
                                                     <i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                                             viewBox="0 0 16 16">
@@ -93,9 +103,9 @@
                                                                 d="M237.485 1000V325.301H13.229V1000h224.256zM125.386 233.127c78.202 0 126.879-51.809 126.879-116.553C250.808 50.37 203.591-.001 126.87-.001C50.161-.001-.002 50.371-.002 116.574c0 64.747 48.665 116.553 123.924 116.553h1.457zM361.61 1000h224.256V623.215c0-20.165 1.457-40.309 7.379-54.724c16.212-40.289 53.111-82.017 115.06-82.017c81.149 0 113.613 61.872 113.613 152.572v360.949h224.242V613.129c0-207.241-110.636-303.668-258.183-303.668c-120.977 0-174.094 67.622-203.603 113.679h1.497v-97.853H361.615c2.943 63.31 0 674.699 0 674.699z" />
                                                         </svg></i>
                                                 </a></li>
-        
-        
-        
+
+
+
                                         </ul>
                                     </div>
                                 </div>
@@ -162,7 +172,7 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-          
+
             padding: 28px 28px 28px 28px;
 
         }
