@@ -69,7 +69,7 @@
                                                     
                                                     $start_at = date('H:i', strtotime($evenement->start_at));
                                                     echo $start_at;
-                                                @endphp
+                                                   @endphp
                                                     -
                                                     @php
                                                         
@@ -79,8 +79,6 @@
                                             </ul>
                                             <p class="mt-10">
                                                 <p>{{ $evenement->accroche }} [...]</p>
-                                         
-
                                             </p>
                                             <a href="{{ route('evenement.show', $evenement->id) }}"
                                                 class="btn btn-theme-colored2 mt-5">Découvrir </a>
