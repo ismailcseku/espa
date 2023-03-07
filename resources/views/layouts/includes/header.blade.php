@@ -169,7 +169,7 @@
                                         <li><a href="{{ route('responsable.index') }}">Corps Professoral / Staff</a></li>
                                         <li><a href="{{route('campus.index')}}">Vie Estudiantine</a></li>
                                         <li><a href="{{ route('evenement.index') }}">Évènements</a></li>
-                                        <li><a href="{{ route('blog.index') }}">Blog/Actualités</a></li>
+                                        <li><a href="{{ route('blog-actualités.index') }}">Blog/Actualités</a></li>
                                         <li><a href="{{ route('media.index') }}">Galerie</a></li>
                                         <li><a href="{{ route('video.index') }}">Vidéos</a></li>
                                     </ul>

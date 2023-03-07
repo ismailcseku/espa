@@ -9,16 +9,20 @@
 
         }
     </style>
-    <section class="inner-header divider " style="background-color:white;border-top:solid 2px rgb(45, 69, 88) ;">
-        <div class="  ">
-            <!-- Section Content -->
-            <div class="section-content ml-90 ">
-                <div class="row">
-                    <div class="col-md-6">
-                        <ol class="breadcrumb text-left" style="color:rgb(45, 69, 88);font-weight:bold;">
-                            <li><a href="/">Acceuil</a></li>
-                            <li>Mot du directeur</li>
-                        </ol>
+    <div style="background-color:white;border-top:solid 2px rgb(45, 69, 88) ; padding-bottom:14px;"></div>
+    <section class="container" >
+
+        <div class="inner-header divider " >
+            <div class="  ">
+                <!-- Section Content -->
+                <div class="section-content ">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ol class="breadcrumb text-left" style="color:rgb(45, 69, 88);font-weight:bold;">
+                                <li><a href="/">Acceuil</a></li>
+                                <li>Mot du directeur</li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -35,10 +39,10 @@
                         <div class="col-md-12">
                             <h2 class="text-uppercasetext-theme-colored mt-0 mb-0 mt-sm-30"><span
                                     class="text-theme-colored2">Mot du directeur</span></h2>
-                            <h5 class="pull-left mt-10 mb-4  font-16" style="text-decoration:underline; color:gray;" >Partager:</h5> <br>
+                            
 
                             <div class="mt-30 mb-0">
-                             
+
                                 <ul class="styled-icons m-0">
 
                                     <li>
@@ -81,7 +85,7 @@
                     <div class="panel">
                         @foreach ($downloads as $key => $download)
                             <div><a href="{{ url('storage') }}/{{ $download->file }}"
-                                target='_blank'>{{ $download->filename }}</a></div>
+                                    target='_blank'>{{ $download->filename }}</a></div>
                         @endforeach
                     </div>
 

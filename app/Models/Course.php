@@ -37,7 +37,10 @@ class Course extends Model
         'reviews',
         'accroche',
     ];
-
+    public function getRouteKeyName()
+    {
+        return 'name';
+    }
     public function degree() {
         return $this->BelongsTo(Degree::class);
     }

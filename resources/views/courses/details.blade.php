@@ -165,7 +165,7 @@
                                         </li>
                                         <li><a href="{{ route('campus.index') }}">Vie Estudiantine</a></li>
                                         <li><a href="{{ route('evenement.index') }}">Évènements</a></li>
-                                        <li><a href="{{ route('blog.index') }}">Blog/Actualités</a></li>
+                                        <li><a href="{{ route('blog-actualités.index') }}">Blog/Actualités</a></li>
                                         <li><a href="{{ route('media.index') }}">Galerie</a></li>
                                         <li><a href="{{ route('video.index') }}">Vidéos</a></li>
                                     </ul>
@@ -875,7 +875,7 @@
                                     <div class="main-content">
                                         <section>
                                             <div style="width:100%;">
-                                                <div class="row" style="color:white">
+                                                <div class="row">
                                                     <div class="col-md-12 ">
                                                         <div>
                                                             <h4 class="text-uppercase m-0" style="color:white">
@@ -891,12 +891,12 @@
                                                                 </h6>
                                                             @endif
                                                             <div class="line-bottom-theme-colored2 mb-30  "></div>
-                                                            <p>Remplir le formulaire.</p>
+                                                            <p class="text-white">Remplir le formulaire.</p>
                                                             <form class="mt-30" method="post"
                                                                 action="{{ route('interested', $course->id) }}">
                                                                 @csrf
                                                                 <div class="row">
-                                                                    <div class="col-sm-12 ">
+                                                                    <div class="col-sm-12 text-white">
                                                                         <div class="row">
                                                                             <label for="gender"
                                                                                 class="col-xs-2 col-sm-2">Mlle</label>
@@ -1030,12 +1030,12 @@
 
                                                                         <div class="form-group mb-10">
                                                                             <div>
-                                                                                <label for="phone" class=" font-12"
+                                                                                <label for="phone" class=" font-12 text-white"
                                                                                     style=" width:100%;"> Numéro de
                                                                                     téléphone</label>
                                                                             </div>
                                                                             <input name="phone" class="form-control"
-                                                                                style="background-color:white;color: gray; width:100%;"
+                                                                                style="width:100%; "
                                                                                 id="phone" type="tel"
                                                                                 value="+212" required>
                                                                             <input name="indice" class="form-control"
@@ -1099,7 +1099,7 @@
                                                                             class="text-danger">{{ $errors->first('accepted') }}</span>
                                                                     @endif
                                                                 </div>
-                                                                <p class="col-xs-10 col-span-10 font-10">
+                                                                <p class="col-xs-10 col-span-10 font-10 text-white">
                                                                     Conformément à la loi 09-08, vous disposez d&#39;un
                                                                     droit
                                                                     d&#39;accès, de rectification et d&#39;opposition au
@@ -1197,7 +1197,7 @@
                                     <li><a href="{{ route('home') }}">Acceuil</a></li>
                                     <li><a href="{{ route('course.index') }}">Formations</a></li>
                                     <li><a href="{{ route('evenement.index') }}">Évènements</a></li>
-                                    <li><a href="{{ route('blog.index') }}">Actualié</a></li>
+                                    <li><a href="{{ route('blog-actualités.index') }}">Actualié</a></li>
                                     <li><a href="{{ route('media.index') }}">Galerie</a></li>
                                 </ul>
                             </div>
@@ -1211,12 +1211,12 @@
                         <div class="latest-posts">
                             @foreach ($latest_blog as $item)
                                 <article class="post media-post clearfix pb-0 mb-10">
-                                    <a class="post-thumb" href="{{ route('blog.show', $item->id) }}"><img
+                                    <a class="post-thumb" href="{{ route('blog-actualités.show', $item->id) }}"><img
                                             src="{{ url('storage') }}/{{ $item->photo }}" width="80px"
                                             height="55px" style="object-fit:cover;" alt="{{ $item->title }}"></a>
                                     <div class="post-right">
                                         <h5 class="post-title mt-0 mb-5"><a
-                                                href="{{ route('blog.show', $item->id) }}">{{ $item->title }}</a>
+                                                href="{{ route('blog-actualités.show', $item->id) }}">{{ $item->title }}</a>
                                         </h5>
                                         <p class="post-date mb-0 font-12"> {{ $item->created_at }}</p>
                                     </div>

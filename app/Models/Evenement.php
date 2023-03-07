@@ -18,6 +18,10 @@ class Evenement extends Model
         'photo',
         'accroche',
     ];
+    public function getRouteKeyName()
+    {
+        return 'title';
+    }
     protected $casts=[
         'start_at'=>'datetime',
         'end_at'=>'datetime',

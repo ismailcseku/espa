@@ -25,30 +25,36 @@
             margin-top: 0px !important;
         }
     </style>
+    <div style="background-color:white;border-top:solid 2px rgb(45, 69, 88) ; padding-bottom:14px;"></div>
+
     <div class="main-content">
         <!-- Section: inner-header -->
-        <section class="inner-header divider " style="background-color:white;border-top:solid 2px rgb(45, 69, 88) ;">
-            <div class=" pt-10 pb-10 ">
-                <!-- Section Content -->
-                <div class="section-content ml-90 ">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <ol class="breadcrumb text-left mt-10" style="color:rgb(45, 69, 88);font-weight:bold;">
-                                <li><a href="/">Acceuil</a></li>
-                                <li><a href="{{ route('blog.index') }}">Blog</a></li>
-                                <li>
+        <section class="container">
 
-                                    @if ($blogs->title)
-                                        {{ $blogs->title }}
-                                    @endif
+            <div class="inner-header divider ">
+                <div class=" pt-10 pb-10 ">
+                    <!-- Section Content -->
+                    <div class="section-content">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ol class="breadcrumb text-left mt-10" style="color:rgb(45, 69, 88);font-weight:bold;">
+                                    <li><a href="/">Acceuil</a></li>
+                                    <li><a href="{{ route('blog-actualités.index') }}">Blog</a></li>
+                                    <li>
 
-                                </li>
-                            </ol>
+                                        @if ($blogs->title)
+                                            {{ $blogs->title }}
+                                        @endif
+
+                                    </li>
+                                </ol>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
 
         <!-- Section: Blog -->
         <section>
@@ -87,8 +93,7 @@
                                         {!! $blogs->content !!}
 
                                     </div>
-                                    <h5 class="pull-left mt-10 mb-4  font-16"
-                                        style="text-decoration:underline; color:gray;">Partager:</h5> <br>
+                                  
 
                                     <div class="mt-30 mb-0">
 
@@ -154,12 +159,12 @@
 
                                     @foreach ($latests as $latest)
                                         <article class="post media-post clearfix pb-0 mb-10">
-                                            <a class="post-thumb" href="{{ route('blog.show', $latest->id) }}"><img
+                                            <a class="post-thumb" href="{{ route('blog-actualités.show', $latest->id) }}"><img
                                                     src="{{ url('storage') }}/{{ $latest->photo }}"
                                                     style="width:75px; height:75px; object-fit:cover;" alt=""></a>
                                             <div class="post-right">
                                                 <h5 class="post-title mt-0"><a
-                                                        href="{{ route('blog.show', $latest->id) }}">{{ $latest->title }}</a>
+                                                        href="{{ route('blog-actualités.show', $latest->id) }}">{{ $latest->title }}</a>
                                                 </h5>
                                                 <p>{{ $latest->description }}...</p>
                                             </div>

@@ -16,26 +16,32 @@
             padding-bottom: 0px !important;
         }
     </style>
+    <div style="background-color:white;border-top:solid 2px rgb(45, 69, 88) ; padding-bottom:14px;"></div>
+
     <div class="main-content">
         <!-- Section: inner-header -->
-        <section class="inner-header divider " style="background-color:white;border-top:solid 2px rgb(45, 69, 88) ;">
-            <div class=" pt-10 pb-10 ">
-                <!-- Section Content -->
-                <div class="section-content ml-90 ">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <ol class="breadcrumb text-left mt-10" style="color:rgb(45, 69, 88);font-weight:bold;">
-                                <li><a href="/">Acceuil</a></li>
+        <section class="container">
 
-                                <li>
-                                    Blog
-                                </li>
-                            </ol>
+            <div class="inner-header divider ">
+                <div class=" pt-10 pb-10 ">
+                    <!-- Section Content -->
+                    <div class="section-content">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ol class="breadcrumb text-left mt-10" style="color:rgb(45, 69, 88);font-weight:bold;">
+                                    <li><a href="/">Acceuil</a></li>
+
+                                    <li>
+                                        Blog
+                                    </li>
+                                </ol>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
         <section>
             <div class="container pt-70 pb-40">
                 <div class="section-content">
@@ -54,7 +60,7 @@
                                         </div>
                                     </div>
                                     <div class="post-description border-1px p-20">
-                                        <a href="{{ route('blog.show', $blog->id) }}">
+                                        <a href="{{ route('blog-actualités.show', $blog->id) }}">
                                             <h3 class="post-title font-weight-600 mt-0 mb-15"
                                                 style="word-break: break-word;">
                                                 {{ $blog->title }}</h3>
@@ -70,7 +76,7 @@
 
                                         </ul>
 
-                                        <a href="{{ route('blog.show', $blog->id) }}"
+                                        <a href="{{ route('blog-actualités.show', $blog->id) }}"
                                             class="text-theme-colored2 font-14 text-gray-darkgray pull-right flip">Lire plus
                                         </a>
                                     </div>

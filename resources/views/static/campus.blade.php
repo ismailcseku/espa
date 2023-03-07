@@ -9,21 +9,27 @@
 
         }
     </style>
-    <section class="inner-header divider " style="background-color:white;border-top:solid 2px rgb(45, 69, 88) ;">
-        <div class=" pt-10 pb-10 ">
-            <!-- Section Content -->
-            <div class="section-content ml-90 ">
-                <div class="row">
-                    <div class="col-md-6">
-                        <ol class="breadcrumb text-left mt-10 " style="color:rgb(45, 69, 88);font-weight:bold;">
-                            <li><a href="/">Acceuil</a></li>
-                            <li>Vie estudiantine</li>
-                        </ol>
+    <div style="background-color:white;border-top:solid 2px rgb(45, 69, 88) ; padding-bottom:14px;"></div>
+    <section class="container">
+
+        <div class="inner-header divider ">
+            <div class=" pt-10 pb-10 ">
+                <!-- Section Content -->
+                <div class="section-content  ">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ol class="breadcrumb text-left mt-10 " style="color:rgb(45, 69, 88);font-weight:bold;">
+                                <li><a href="/">Acceuil</a></li>
+                                <li>Vie estudiantine</li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+
     <section>
         <div class="container">
             <div class="section-content">

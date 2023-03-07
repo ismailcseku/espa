@@ -42,20 +42,20 @@ Route::get('/cycle/{res}', [DegreeController::class, 'show'])->name('degree.show
 Route::post('/interested/{id}', [InterestedController::class, '__invoke'])->name('interested');
 Route::get('/contact', [ContactController::class, 'create'])->name('contact.create');
 Route::post('/contact/post', [ContactController::class, 'store'])->name('contact.store');
-Route::resource('/blog', BlogController::class);
+Route::resource('/blog-actualités', BlogController::class);
 Route::get('/categories-blog/{id}', [CategoryBlogController::class, '__invoke'])->name('categoryblog.show');
 Route::get('/evenement', [EvenementController::class, 'index'])->name('evenement.index');
-Route::get('/evenement/{id}', [EvenementController::class, 'show'])->name('evenement.show');
+Route::get('/evenement/{evenement}', [EvenementController::class, 'show'])->name('evenement.show');
 Route::post('/evenement/{id}', [EvenementController::class, 'signIn'])->name('evenement.signin');
 Route::post('/newsletter', [NewsletterController::class, 'store'])->name('newsletter.store');
 
 
-Route::get('/à-propos-de-nous', [AboutController::class, '__invoke'])->name('about.index');
+Route::get('/qui-sommes-nous', [AboutController::class, '__invoke'])->name('about.index');
 Route::get('/mot-du-directeur', [DirectorController::class, '__invoke'])->name('director.index');
-Route::get('/responsable', [ResponsableController::class, '__invoke'])->name('responsable.index');
+Route::get('/corps-professoral-staff', [ResponsableController::class, '__invoke'])->name('responsable.index');
 Route::get('/responsable', [ResponsableController::class, '__invoke'])->name('responsable.index');
 Route::get('/galerie', [MediaController::class, '__invoke'])->name('media.index');
-Route::get('/video', [VideoController::class, '__invoke'])->name('video.index');
+Route::get('/videos', [VideoController::class, '__invoke'])->name('video.index');
 Route::get('/vie-estudiantine', [CampusController::class, '__invoke'])->name('campus.index');
 
 

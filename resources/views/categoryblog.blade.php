@@ -50,7 +50,7 @@
                                                     <div class="media-body pl-15">
                                                         <div class="event-content pull-left flip">
                                                             <h4 class="entry-title text-white text-uppercase m-0 mt-5"><a
-                                                                    href="{{ route('blog.show', $blog->id) }}">{{ $blog->title }}</a>
+                                                                    href="{{ route('blog-actualités.show', $blog->id) }}">{{ $blog->title }}</a>
                                                             </h4>
                                                             <span class="mb-10 text-gray-darkgray mr-10 font-13"> Publié
                                                                 {{ $blog->created_at }}</span>
@@ -59,7 +59,7 @@
                                                     </div>
                                                 </div>
                                                 <p class="mt-10">{!! $blog->description !!} [...]</p>
-                                                <a href="{{ route('blog.show', $blog->id) }}" class="btn-read-more">Lire
+                                                <a href="{{ route('blog-actualités.show', $blog->id) }}" class="btn-read-more">Lire
                                                     plus</a>
                                                 <div class="clearfix"></div>
                                             </div>

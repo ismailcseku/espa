@@ -20,6 +20,7 @@ class Blog extends Model
         'accroche',
 
     ];
+
     /**
      * Get the category_blogs that owns the Blog
      *

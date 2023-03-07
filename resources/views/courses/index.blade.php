@@ -42,26 +42,26 @@
                                     
                                     <div class="item gallery-item  a{{$course->degree_id}}">
                                         <div class="course-single-item bg-white border-1px clearfix">
-                                            <a href="{{ route('course.details', $course->id) }}" class="course-thumb">
+                                            <a href="{{ route('course.details', $course->name) }}" class="course-thumb">
                                                 <img class="img-fullwidth" alt=""
                                                     src="{{ url('storage') }}/{{ $course->photo }}">
 
                                             </a>
                                             <div class="course-details clearfix p-20 pt-15">
                                                 <div class="course-top-part">
-                                                    <a href="{{ route('course.details', $course->id) }}">
+                                                    <a href="{{ route('course.details', $course->name) }}">
                                                         <h4 class="mt-5 mb-5">
                                                             {{ $course->name }}</h4>
                                                     </a>
 
-                                                    <a href="{{ route('course.details', $course->id) }}">
+                                                    <a href="{{ route('course.details', $course->name) }}">
                                                         <h4 class="mt-5 mb-5">
                                                             {{ $course->degrees_name }}
                                                         </h4>
                                                     </a>
                                                 </div>
                                                 <a
-                                                    href="{{ route('course.details', $course->id) }}"class="course-description mt-15 mb-0">
+                                                    href="{{ route('course.details', $course->name) }}"class="course-description mt-15 mb-0">
                                                     <p style="font-weight:normal;">
                                                         {{ $course->accroche }}</p>
                                                 </a>
@@ -70,7 +70,7 @@
                                                         alt="" class="img-circle">
                                                 </div>
                                             </div>
-                                            <a href="{{ route('course.details', $course->id) }}" style="display: block"
+                                            <a href="{{ route('course.details', $course->name) }}" style="display: block"
                                                 class="course-meta">
                                                 <ul class="list-inline">
                                                     <li><i class="ficon-clock font-18"></i>

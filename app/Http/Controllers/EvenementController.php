@@ -25,9 +25,9 @@ class EvenementController extends Controller
 
 
 
-    public function show($id)
+    public function show(Evenement $evenement)
     {
-         $evenements=Evenement::findOrFail($id);
+         $evenements=$evenement;
          $medias=Media::all();
          $shareFacebook=ShareFacade::currentPage()->facebook()->getRawLinks();
          $shareWhatsapp=ShareFacade::currentPage()->whatsapp()->getRawLinks();

@@ -9,24 +9,30 @@
 
         }
     </style>
+    <div style="background-color:white;border-top:solid 2px rgb(45, 69, 88) ; padding-bottom:14px;"></div>
+
     <div class="main-content">
 
-        <!-- Section: inner-header -->
-        <section class="inner-header divider " style="background-color:white;border-top:solid 2px rgb(45, 69, 88) ;">
-            <div class="pt-10 pb-10">
-                <!-- Section Content -->
-                <div class="section-content ml-90 ">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <ol class="breadcrumb text-left mt-10" style="color:rgb(45, 69, 88);font-weight:bold;">
-                                <li><a href="/">Acceuil</a></li>
-                                <li>Galerie</li>
-                            </ol>
+        <section class="container">
+
+            <!-- Section: inner-header -->
+            <div class="inner-header divider ">
+                <div class="pt-10 pb-10">
+                    <!-- Section Content -->
+                    <div class="section-content  ">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ol class="breadcrumb text-left mt-10" style="color:rgb(45, 69, 88);font-weight:bold;">
+                                    <li><a href="/">Acceuil</a></li>
+                                    <li>Galerie</li>
+                                </ol>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
 
         <!-- Gallery Grid 3 -->
         <section>
@@ -51,7 +57,7 @@
                                     <div class="gallery-item  a{{ $media->category_media_id }}">
                                         <div class="thumb">
                                             <img class="img-fullwidth" src="{{ url('storage') }}/{{ $media->photo }}"
-                                                alt="project">
+                                                alt="{{$media->title}}">
                                             <div class="overlay-shade"></div>
                                             <div class="text-holder">
                                                 <div class="title text-center">{{ $media->title }}</div>

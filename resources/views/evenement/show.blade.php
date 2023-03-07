@@ -102,7 +102,6 @@
 
 
                             <li>
-                                <h5>Partager:</h5>
                                 <ul class="styled-icons m-0">
 
                                     <li>

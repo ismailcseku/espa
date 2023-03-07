@@ -59,7 +59,7 @@
                             <li><a href="{{ route('home') }}">Acceuil</a></li>
                             <li><a href="{{ route('course.index') }}">Formations</a></li>
                             <li><a href="{{ route('evenement.index') }}">Évènements</a></li>
-                            <li><a href="{{ route('blog.index') }}">Actualités</a></li>
+                            <li><a href="{{ route('blog-actualités.index') }}">Actualités</a></li>
                             <li><a href="{{ route('media.index') }}">Galerie</a></li>
                             <li><a href="{{ route('video.index') }}">Vidéos</a></li>
                         </ul>
@@ -75,9 +75,9 @@
                 @foreach ($latest_blog as $item)
                 
                 <article class="post media-post clearfix pb-0 mb-10">
-                  <a class="post-thumb" href="{{ route('blog.show', $item->id) }}"><img src="{{ url('storage') }}/{{ $item->photo }}" width="80px" height="55px" style="object-fit:cover;" alt="{{ $item->title}}"></a>
+                  <a class="post-thumb" href="{{ route('blog-actualités.show', $item->id) }}"><img src="{{ url('storage') }}/{{ $item->photo }}" width="80px" height="55px" style="object-fit:cover;" alt="{{ $item->title}}"></a>
                   <div class="post-right">
-                    <h5 class="post-title mt-0 mb-5"><a href="{{ route('blog.show', $item->id) }}">{{ $item->title}}</a></h5>
+                    <h5 class="post-title mt-0 mb-5"><a href="{{ route('blog-actualités.show', $item->id) }}">{{ $item->title}}</a></h5>
                     <p class="post-date mb-0 font-12"> {{ $item->created_at}}</p>
                   </div>
                 </article>

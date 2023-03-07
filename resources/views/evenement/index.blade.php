@@ -17,13 +17,16 @@
             padding-bottom: 0px !important;
         }
     </style>
+    <div style="background-color:white;border-top:solid 2px rgb(45, 69, 88) ; padding-bottom:14px;"></div>
+
     <div class="main-content">
         <!-- Section: inner-header -->
-        <!-- Section: inner-header -->
-        <section class="inner-header divider " style="background-color:white;border-top:solid 2px rgb(45, 69, 88) ;">
+        <section class="container">
+
+        <div class="inner-header divider " >
             <div class=" pt-10 pb-10 ">
                 <!-- Section Content -->
-                <div class="section-content ml-90 ">
+                <div class="section-content ">
                     <div class="row">
                         <div class="col-md-6">
                             <ol class="breadcrumb text-left mt-10" style="color:rgb(45, 69, 88);font-weight:bold;">
@@ -34,7 +37,9 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+
 
         <!-- Section: Events Grid -->
         <section>
@@ -88,7 +93,7 @@
                                             <p class="mt-10">
                                                 <p>{{ $evenement->accroche }} [...] </p>
                                             </p>
-                                            <a href="{{ route('evenement.show', $evenement->id) }}"
+                                            <a href="{{ route('evenement.show', $evenement->title) }}"
                                                 class="btn btn-theme-colored2 mt-5">Découvrir </a>
                                         </div>
                                     </div>
