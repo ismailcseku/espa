@@ -195,44 +195,17 @@
     <section id="features" class="bg-silver-deep">
         <div class="container pb-50">
             <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-4 mb-sm-10">
-                    <div class="feature-box text-center bg-silver-light p-30 pb-20">
-                        <div class="feature-icon flex justify-center">
-                            <img src="{{ asset('images/Formation.svg') }}" alt="">
-                        </div>
-                        <div class="feature-title">
-                            <h3>Formation</h3>
-                            <p>Des structures d’apprentissage
-                                pratique et des solutions
-                                technologiques de pointe</p>
-                        </div>
-                    </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 mb-sm-30" >
+                    <img style="display:flex;justify-content:center;width:100%;" src='https://9474692.fs1.hubspotusercontent-na1.net/hubfs/9474692/hub_generated/resized/3aa24f5f-531f-4c88-b98d-4ca1a9388eec.jpeg' class="   p-30 pb-20" />
+                        
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 mb-sm-30">
-                    <div class="feature-box text-center bg-silver-light p-30 pb-20 ">
-                        <div class="feature-icon flex justify-center">
-                            <img src="{{ asset('images/Partenariat.svg') }}" alt="">
-                        </div>
-                        <div class="feature-title">
-                            <h3>Partenariat</h3>
-                            <p>Les leaders de l’agro-technologie et
-                                les acteurs clés de l’innovation en
-                                agriculture</p>
-                        </div>
-                    </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 mb-sm-30" >
+                    <img style="display:flex;justify-content:center;width:100%;" src='https://f.hubspotusercontent40.net/hubfs/9474692/hub_generated/resized/3c356ddf-f8be-49f9-8957-f28da6f145be.jpeg  ' class="   p-30 pb-20" />
+                        
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                    <div class="feature-box text-center bg-silver-light p-30 pb-20">
-                        <div class="feature-icon flex justify-center">
-                            <img src="{{ asset('images/Performance.svg') }}" alt="">
-                        </div>
-                        <div class="feature-title">
-                            <h3>Performance</h3>
-                            <p>Créer une agriculture durable,
-                                efficiente et résiliente : Solutions
-                                innovantes </p>
-                        </div>
-                    </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 mb-sm-30" >
+                    <img style="display:flex;justify-content:center;width:100%;" src='https://9474692.fs1.hubspotusercontent-na1.net/hubfs/9474692/hub_generated/resized/3aa24f5f-531f-4c88-b98d-4ca1a9388eec.jpeg' class=" p-30 pb-20" />
+                        
                 </div>
             </div>
         </div>
@@ -243,11 +216,12 @@
         <div class="container">
             <div class="section-title mb-40">
                 <div class="row">
-                    <a href="{{ route('course.index') }}" class="col-md-12">
-                        <h2 class="text-uppercase title">Nos <span class="text-theme-colored2">Formations</span>
-                        </h2>
+                    <div class="col-md-12">
+                        
+                        <a  href="{{ route('course.index') }}" class="text-uppercase title"><h2> Nos <span class="text-theme-colored2">Formations</span></h2>
+                        </a>
                         <div class="double-line-bottom-theme-colored-2"></div>
-                    </a>
+                    </div>
                 </div>
             </div>
             <div class="section-content">

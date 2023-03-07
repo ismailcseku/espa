@@ -10,6 +10,7 @@ use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\Textarea;
+use Emilianotisato\NovaTinyMCE\NovaTinyMCE;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Evenement extends Resource
@@ -48,7 +49,7 @@ class Evenement extends Resource
         return [
             ID::make()->sortable(),
             Text::make('Titre','title'),
-            Textarea::make('Description','description'),
+            NovaTinyMCE::make('Description','description'),
             Textarea::make('Accroche','accroche'),
             DateTime::make('Date début ','start_at'),
             DateTime::make('Date fin ','end_at'),
