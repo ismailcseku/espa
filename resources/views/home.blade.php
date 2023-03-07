@@ -555,7 +555,7 @@
                                         <h3 class="post-title font-weight-600 mt-0 mb-15" style="word-break: break-word;">
                                             {{ $blog->title }}</h3>
                                     </a>
-                                    <p> {{ $course->accroche }} [...]</p>
+                                    <p> {{ $blog->accroche }} [...]</p>
                                 </div>
                                 <div class="post-meta">
                                     <ul class="list-inline pull-left flip">
