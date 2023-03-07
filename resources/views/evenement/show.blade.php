@@ -8,7 +8,7 @@
 
 
         }
- 
+
         .pb-30 {
             padding-bottom: 0px !important;
         }
@@ -51,15 +51,11 @@
             <div class="container pt-40 pb-40">
                 <div class="row text-center">
                     <div class="col-md-12">
-                        <h2 id="basic-coupon-clock" class="text-white"></h2>
+                        <h2 id="basic-coupon-clock" class="text-white">
+                            {{$evenements->start_at}}
+                        </h2>
                         <!-- Final Countdown Timer Script -->
-                        <script type="text/javascript">
-                            $(document).ready(function() {
-                                $('#basic-coupon-clock').countdown('2020/10/10', function(event) {
-                                    $(this).html(event.strftime('%D jours %H:%M:%S'));
-                                });
-                            });
-                        </script>
+                        
                     </div>
                 </div>
             </div>
@@ -172,8 +168,9 @@
                     <div class="col-md-6 col-md-offset-3">
                         @if (session()->has('success'))
                             <h6 class='alert alert-success' role="alert">
-                                Felicitation !! Vous avez postulé à cette formation avec
-                                reiussite , nous vous contacterons très bientôt .
+                                Votre formulaire a été envoyé avec succès et nous vous remercions pour votre intérêt. En cas
+                                de besoin, contactez l’administration pour plus d’informations sur les modalités et les
+                                conditions de participation.
                             </h6>
                         @endif
                         <form id="booking-form" name="booking-form" method="post"

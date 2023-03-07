@@ -44,7 +44,8 @@
                         <h4 class="mt-0 mb-30 line-bottom-theme-colored2">Vous voulez nous joindre ?</h4>
                         @if (session()->has('success'))
                             <h6 class='alert alert-success' role="alert">
-                                Votre formulaire a été envoyer avec succès . Nous vous remercions pour votre intérêt, merci .
+                                Votre formulaire a été envoyé avec succès et nous vous remercions pour votre intérêt.
+                                N’hésitez pas à prendre contact avec nous. Merci.
                             </h6>
                         @endif
                         <!-- Contact Form -->
