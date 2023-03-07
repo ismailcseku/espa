@@ -93,7 +93,7 @@
                                         {!! $blogs->content !!}
 
                                     </div>
-                                  
+
 
                                     <div class="mt-30 mb-0">
 
@@ -159,7 +159,8 @@
 
                                     @foreach ($latests as $latest)
                                         <article class="post media-post clearfix pb-0 mb-10">
-                                            <a class="post-thumb" href="{{ route('blog-actualités.show', $latest->id) }}"><img
+                                            <a class="post-thumb"
+                                                href="{{ route('blog-actualités.show', $latest->id) }}"><img
                                                     src="{{ url('storage') }}/{{ $latest->photo }}"
                                                     style="width:75px; height:75px; object-fit:cover;" alt=""></a>
                                             <div class="post-right">
@@ -170,6 +171,89 @@
                                             </div>
                                         </article>
                                     @endforeach
+
+                                </div>
+                            </div>
+                            <div class="widget">
+                                <h5 class="widget-title">Évènements à venir</h5>
+                                <div class="latest-posts">
+
+                                    @foreach ($evenements as $evenement)
+                                        <article class="post media-post clearfix pb-0 mb-10">
+                                            <a class="post-thumb"
+                                                href="{{ route('blog-actualités.show', $evenement->title) }}"><img
+                                                    src="{{ url('storage') }}/{{ $evenement->photo }}"
+                                                    style="width:75px; height:75px; object-fit:cover;" alt=""></a>
+                                            <div class="post-right">
+                                                <h5 class="post-title mt-0"><a
+                                                        href="{{ route('evenement.show', $evenement->title) }}">{{ $evenement->title }}</a>
+                                                </h5>
+                                                <p>
+                                                    {{ $evenement->location }} à
+                                                    @php
+                                                        
+                                                        $start_at = date('H:i', strtotime($evenement->start_at));
+                                                        echo $start_at;
+                                                    @endphp
+
+                                                </p>
+                                            </div>
+                                        </article>
+                                    @endforeach
+
+                                </div>
+                            </div>
+                            <div class="widget">
+                                <h5 class="widget-title">Pourquoi nous</h5>
+                                <div class="latest-posts">
+
+                                    <h3 class="font-28 mt-md-30 mt-0"><span class="text-theme-colored2">Pourquoi </span>nous?
+                                    </h3>
+                                    <div class="line-bottom-theme-colored2"></div>
+                                    <div class="panel-group accordion-stylished-left-border accordion-icon-filled accordion-no-border accordion-icon-left accordion-icon-filled-theme-colored2 custom-style"
+                                        id="accordion6" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-default">
+                                            @foreach ($whyus as $item)
+                                                @if ($loop->first)
+                                                    <div class="panel-heading" role="tab" id="headin1">
+                                                        <h6 class="panel-title">
+                                                            <a role="button" data-toggle="collapse" data-parent="#accordion6"
+                                                                href="#collaps1" aria-expanded="true" aria-controls="collaps1">
+                                                                {{ $item->title }}
+                                                            </a>
+                                                        </h6>
+                                                    </div>
+                                                    <div id="collaps1" class="panel-collapse collapse in" role="tabpanel"
+                                                        aria-labelledby="headin1">
+                                                        <div class="panel-body">
+                                                            {{ $item->description }}
+                                                        </div>
+                                                    </div>
+                                                @else
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-heading" role="tab" id="heading{{ $item->id }}">
+                                                            <h6 class="panel-title">
+                                                                <a class="collapsed" role="button" data-toggle="collapse"
+                                                                    data-parent="#accordion6" href="#collapse{{ $item->id }}"
+                                                                    aria-expanded="false" aria-controls="collapse2">
+                                                                    {{ $item->title }}
+            
+                                                                </a>
+                                                            </h6>
+                                                        </div>
+                                                        <div id="collapse{{ $item->id }}" class="panel-collapse collapse"
+                                                            role="tabpanel" aria-labelledby="heading{{ $item->id }}">
+                                                            <div class="panel-body">
+                                                                {{ $item->description }}
+            
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                @endif
+                                            @endforeach
+            
+                                        </div>
+                                    </div>
 
                                 </div>
                             </div>

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\About;
+use App\Models\Whyus;
 use App\Models\CategoryBlog;
 use Illuminate\Http\Request;
 use Jorenvh\Share\ShareFacade;
@@ -37,11 +39,17 @@ class BlogController extends Controller
              $item->description=substr($item->description,0,60);
              return $item;
         });
+        
         $shareFacebook=ShareFacade::currentPage()->facebook()->getRawLinks();
         $shareWhatsapp=ShareFacade::currentPage()->whatsapp()->getRawLinks();
-        $shareLinkedin=ShareFacade::currentPage()->linkedin()->getRawLinks();        
+        $shareLinkedin=ShareFacade::currentPage()->linkedin()->getRawLinks();   
+             
+        $evenements=DB::table('evenements')->orderBy('created_at','Desc')->limit(3)->get();
+        $whyus=Whyus::all();
+    
 
-        return view('blog.show')->with(['blogs'=>$blogs,'categories'=>$categories,'latests'=>$latests,'shareFacebook'=>$shareFacebook,'shareWhatsapp'=>$shareWhatsapp,'shareLinkedin'=>$shareLinkedin]);
+
+        return view('blog.show')->with(['blogs'=>$blogs,'categories'=>$categories,'latests'=>$latests,'shareFacebook'=>$shareFacebook,'shareWhatsapp'=>$shareWhatsapp,'shareLinkedin'=>$shareLinkedin,'evenements'=>$evenements,'whyus'=> $whyus]);
     }
 
  
