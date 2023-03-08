@@ -154,7 +154,7 @@
                         </div>
                         <nav id="menuzord-right" class="menuzord default theme-colored">
 
-                           
+
                             <ul class="menuzord-menu">
 
                                 <li @if (Route::current()->getName() == 'home') class='active' @endif>
@@ -284,7 +284,7 @@
             <section class="inner-header divider " style="background-color:rgb(45, 69, 88);">
                 <div class=" pt-10 pb-10 ">
                     <!-- Section Content -->
-                    <div class="section-content ml-90 ">
+                    <div class="section-content  ">
                         <div class="row">
                             <div class="col-md-6">
                                 <ol class="breadcrumb text-left mt-10 white">
@@ -307,8 +307,8 @@
             <!-- Section: Services Details -->
             @foreach ($courses as $course)
                 <section style="background-color:rgb(45, 69, 88); margin-top:-34px;">
-                    <div class="ml-100 mr-100 ">
-                        <div class="row">
+                    <div class="">
+                        <div class="row head_course ">
                             <h3 class="text-uppercase mt-0 mb-30 " style="color:white;">{{ $course->name }} -
                                 {{ $course->degree->name }}</h3>
                             <div class="col-sm-12 col-md-9"
@@ -362,7 +362,17 @@
 
                                     </ul>
 
-                                    <ul id="myTab" class="nav nav-tabs mt-30">
+
+                                    <style>
+                                        @media screen and (max-width: 600px) {
+
+                                            #myTab,
+                                            #myTabContent {
+                                                display: none;
+                                            }
+                                        }
+                                    </style>
+                                    <ul id="myTab" class=" nav nav-tabs mt-30">
                                         <li class="active"><a href="#tab1" data-toggle="tab"
                                                 style="font-size:18px; font-weight:bold;">DESCRIPTION</a></li>
                                         <li><a href="#tab2" data-toggle="tab"
@@ -377,7 +387,11 @@
                                                 style="font-size:18px; font-weight:bold;">TÉMOIGNAGES</a></li>
 
                                     </ul>
-                                    <div id="myTabContent" class="tab-content">
+
+
+
+
+                                    <div id="myTabContent" class=" tab-content">
                                         <div class="tab-pane fade in active" id="tab1">
                                             <h4 class="line-bottom-theme-colored2 mb-15">Description de la formation
                                             </h4>
@@ -598,8 +612,6 @@
                                             {!! $courses[0]->review !!}
                                         </div>
 
-
-
                                         <div class="tab-pane fade" id="tab5">
                                             <h4 class="line-bottom-theme-colored2 mb-0">Programme</h4>
 
@@ -622,7 +634,7 @@
                                                                     @endif
                                                                 </div>
                                                                 <div class="accordion-body">
-                                                                    <div class="accordion-body-content text-white" >
+                                                                    <div class="accordion-body-content text-white">
                                                                         {!! $program->description !!}
                                                                     </div>
                                                                 </div>
@@ -666,7 +678,8 @@
                                                     <div class="col-md-3">
 
                                                         <h5 class="mb-0 font-16">{{ $download->name }}</h5>
-                                                        <a href="{{ url('storage') }}/{{ $download->file }}" target="_blank">Cliquer
+                                                        <a href="{{ url('storage') }}/{{ $download->file }}"
+                                                            target="_blank">Cliquer
                                                             ici</a>
                                                     </div>
                                                 @endforeach
@@ -769,111 +782,12 @@
                                         </div>
                                     </div>
 
+
+
                                 </div>
-                                <!--
-                                        <div class="col-sm-12 " style="background-color:white;">
-                                            <h3 class="font-28 mt-md-30 mt-0"><span style="color:#1f3344;">Pourquoi
-                                                </span>Nous?
-                                            </h3>
-                                            <div class="line-bottom-theme-colored2" ></div>
-                                            <div  class="panel-group accordion-stylished-left-border accordion-icon-filled accordion-no-border accordion-icon-left accordion-icon-filled-theme-colored2 custom-style"
-                                                id="accordion6" role="tablist" aria-multiselectable="true">
-                                                <div class="panel panel-default" >
-                                                    <div class="panel-heading"  role="tab" id="headin1">
-                                                        <h6 class="panel-title">
-                                                            <a role="button" data-toggle="collapse" data-parent="#accordion6"
-                                                                href="#collaps1" aria-expanded="true" aria-controls="collaps1">
-                                                                Une vie estudiantine exceptionnelle
-                                                            </a>
-                                                        </h6>
-                                                    </div>
-                                                    <div id="collaps1" class="panel-collapse collapse in" role="tabpanel"
-                                                        aria-labelledby="headin1">
-                                                        <div class="panel-body">
-                                                            Rejoignez-nous et bâtissez votre carrière dans une école qui offre de
-                                                            nombreux
-                                                            services et activités vous feront découvrir un environnement unique de
-                                                            multiples
-                                                            cultures.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="panel panel-default">
-                                                    <div class="panel-heading" role="tab" id="heading2">
-                                                        <h6 class="panel-title">
-                                                            <a class="collapsed" role="button" data-toggle="collapse"
-                                                                data-parent="#accordion6" href="#collapse2" aria-expanded="false"
-                                                                aria-controls="collapse2">
-                                                                Plus de 1000 étudiants à l’horizon 2030
-                                                            </a>
-                                                        </h6>
-                                                    </div>
-                                                    <div id="collapse2" class="panel-collapse collapse" role="tabpanel"
-                                                        aria-labelledby="heading2">
-                                                        <div class="panel-body">
-                                                            Nouveau département de l'agro-alimentaire en partenariat avec l'ESCA et
-                                                            des
-                                                            nouvelles filières de formation dans les domaines de l’intelligence
-                                                            artificielle,
-                                                            aquaculture, sciences acridiennes, etc.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="panel panel-default">
-                                                    <div class="panel-heading" role="tab" id="heading3">
-                                                        <h6 class="panel-title">
-                                                            <a class="collapsed" role="button" data-toggle="collapse"
-                                                                data-parent="#accordion6" href="#collapse3" aria-expanded="false"
-                                                                aria-controls="collapse3">
-                                                                Projets structuraux de niveau mondial
-                                                            </a>
-                                                        </h6>
-                                                    </div>
-                                                    <div id="collapse3" class="panel-collapse collapse" role="tabpanel"
-                                                        aria-labelledby="heading3">
-                                                        <div class="panel-body">
-                                                            Centre d’excellence horticole, ferme expérimentale, consortium pour la
-                                                            recherche, le
-                                                            développement et l’innovation agricole, impact cluster, agri-business
-                                                            incubateur,
-                                                            centre de formation continue, centre de diagnostic et d’analyse,
-                                                            programme doctoral
-                                                            et masters internationaux…
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="panel panel-default">
-                                                    <div class="panel-heading" role="tab" id="heading4">
-                                                        <h6 class="panel-title">
-                                                            <a class="collapsed" role="button" data-toggle="collapse"
-                                                                data-parent="#accordion6" href="#collapse4" aria-expanded="false"
-                                                                aria-controls="collapse4">
-                                                                Programme de recherche scientifique
-                                                            </a>
-                                                        </h6>
-                                                    </div>
-                                                    <div id="collapse4" class="panel-collapse collapse" role="tabpanel"
-                                                        aria-labelledby="heading4">
-                                                        <div class="panel-body">
-                                                            Des équipes de recherche et d’experts nationaux et internationaux dans
-                                                            différents
-                                                            domaines : Gestion rationnelle des ressources en eau, technologies de
-                                                            récolte et
-                                                            post-récolte, protection des cultures et gestion intégrée des ravageurs,
-                                                            contrôle
-                                                            climatique basé sur le pilotage des données, biotechnologie et sélection
-                                                            végétales…
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    -->
-
-
                             </div>
 
-                            <div class="col-sm-12 col-md-3 " style="background-color:  #1f3344;">
+                            <div class="col-sm-12 col-md-3 form" style="background-color:  #1f3344;">
                                 <div class="sidebar sidebar-left mt-sm-30 ml-30 ml-sm-0">
                                     <div class="main-content">
                                         <section>
@@ -1033,14 +947,15 @@
 
                                                                         <div class="form-group mb-10">
                                                                             <div>
-                                                                                <label for="phone" class=" font-12 text-white"
+                                                                                <label for="phone"
+                                                                                    class=" font-12 text-white"
                                                                                     style=" width:100%;"> Numéro de
                                                                                     téléphone</label>
                                                                             </div>
                                                                             <input name="phone" class="form-control"
-                                                                                style="width:100%; "
-                                                                                id="phone" type="tel"
-                                                                                value="+212" required>
+                                                                                style="width:100%; " id="phone"
+                                                                                type="tel" value="+212"
+                                                                                required>
                                                                             <input name="indice" class="form-control"
                                                                                 id="indice" type="hidden"
                                                                                 value="212">
@@ -1149,7 +1064,862 @@
 
                                 </div>
                             </div>
+                        </div>
+                        <style>
+                            @media screen and (min-width: 600px) {
+                                #mobile_pade {
 
+                                    display: none;
+
+
+                                }
+
+                                .form1 {
+                                    display: none;
+                                }
+
+                                .form {
+                                    display: block;
+                                }
+
+                                .head_course {
+                                    margin-left: 100px;
+                                    margin-right: 100px;
+                                }
+                                .section-content{
+                                    margin-left: 100px;
+                                }
+                            }
+
+                            @media screen and (max-width: 600px) {
+                                .form1 {
+                                    display: block;
+                                }
+
+                                .form {
+                                    display: none;
+                                }
+
+                                .head_course {
+                                    margin-left: 10px;
+                                    margin-right: 10px;
+                                }
+
+                                .widget {
+                                    margin-bottom: 
+                                    0px;
+                                }
+                                .section-content{
+                                    margin-left: 10px;
+                                }
+                            }
+
+
+
+
+                            .accordion1 {
+                                max-width: 700px;
+                                margin: 100px auto;
+
+                                display: flex;
+                                flex-direction: column;
+                                gap: 24px;
+                            }
+
+                            .accordion1 .item {
+                                box-shadow: 0 0 32px #F8814710;
+                                padding: 24px;
+                                cursor: pointer;
+                                display: grid;
+                                grid-template-columns: auto 1fr auto;
+                                column-gap: 24px;
+                                row-gap: 32px;
+                                border-top: 4px solid transparent;
+                                align-items: center;
+                                transition: border-top 0.3s;
+                            }
+
+                            .accordion1 .item.open {
+                                border-top: 4px solid #F88147;
+                            }
+
+                            .accordion1 .item.open .hidden-box {
+                                display: block;
+                            }
+
+                            .accordion1 .item.open .text {
+                                color: #F88147;
+                            }
+
+
+                            .accordion1 .number {
+                                color: #F88147;
+                            }
+
+                            .accordion1 .number,
+                            .accordion1 .text {
+                                font-size: 24px;
+                                font-weight: 500;
+                                color: white;
+                            }
+
+                            .accordion1 .item.open .text {
+                                transition: color 0.3s;
+                            }
+
+                            .accordion1 .icon {
+                                width: 24px;
+                                height: 24px;
+                                stroke: #F88147;
+                                transition: transform 0.5s ease-in;
+                            }
+
+                            .accordion1 .item.open .icon {
+                                transform: rotate(180deg);
+                            }
+
+                            .accordion1 .hidden-box {
+                                grid-column: 2;
+                                display: none;
+                                transition: display 0.5 ease-in;
+                            }
+
+                            .accordion1 .hidden-box p {
+                                line-height: 1.6;
+                                margin-bottom: 24px;
+                                color: white;
+                            }
+
+                            .accordion1 .hidden-box h5 {
+                                color: white;
+                            }
+
+                            .accordion1 .hidden-box ul {
+                                color: white;
+                                margin-left: 18px;
+
+                                display: flex;
+                                flex-direction: column;
+                                gap: 12px;
+                            }
+                        </style>
+                        <div class="accordion1 mr-10 ml-10" id="mobile_pade">
+                            <div class="item open">
+                                <p class="number">01</p>
+                                <p class="text">DESCRIPTION</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                                <div class="hidden-box">
+                                    <p> {!! $course->description !!}</p>
+                                    <ul>
+                                        @if ($course->duration)
+                                            <li> <i
+                                                    class="pe-7s-timer font-26 vertical-align-middle text-theme-colored2 mr-10 "></i>
+                                                <span class=" font-16 ">
+                                                    Durée :</span> {{ $course->duration }} Mois
+                                            </li>
+                                        @endif
+
+                                        @if ($course->location->name)
+                                            <li><i
+                                                    class="pe-7s-global font-26 vertical-align-middle text-theme-colored2  mr-10"></i>
+                                                <span class="font-16"> Lieu : </span>
+                                                {{ $course->location->name }}
+                                            </li>
+                                        @endif
+                                        @if ($course->modalitiy_name)
+                                            <li> <i
+                                                    class="pe-7s-prev font-26 vertical-align-middle text-theme-colored2 mr-10"></i>
+                                                <span class="font-16"> Rythme
+                                                    : </span>{{ $course->modalitiy_name }}
+                                            </li>
+                                        @endif
+                                        @if ($course->languages_name)
+                                            <li><i
+                                                    class="pe-7s-notebook  font-26 vertical-align-middle text-theme-colored2 mr-10 "></i>
+                                                <span class="font-16">Langue
+                                                    :</span> {{ $course->languages_name }}
+                                            </li>
+                                        @endif
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <p class="number">02</p>
+                                <p class="text">ADMISSION</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                                <div class="hidden-box">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="blog-posts single-post">
+                                                @if (isset($course->admission))
+                                                    <div class="comments-area">
+                                                        <ul class="comment-list">
+
+                                                            <li>
+                                                                <div class="media comment-author"> <a
+                                                                        class="media-left pull-left flip"
+                                                                        href="#"><img class="img-thumbnail"
+                                                                            src="images/blog/comment1.jpg"
+                                                                            alt=""></a>
+                                                                    <div class="media-body">
+                                                                        <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
+                                                                            style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
+                                                                            Prérequis et admission </h5>
+                                                                        <div class="comment-date">
+                                                                            {!! $course->admission !!}</div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                @endif
+                                                @if (isset($course->dossier))
+                                                    <div class="comments-area">
+                                                        <ul class="comment-list">
+
+                                                            <li>
+                                                                <div class="media comment-author"> <a
+                                                                        class="media-left pull-left flip"
+                                                                        href="#"><img class="img-thumbnail"
+                                                                            src="images/blog/comment1.jpg"
+                                                                            alt=""></a>
+                                                                    <div class="media-body">
+                                                                        <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
+                                                                            style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
+                                                                            Dossier </h5>
+                                                                        <div class="comment-date">
+                                                                            {!! $course->dossier !!}</div>
+
+
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+
+
+
+                                                        </ul>
+                                                    </div>
+                                                @endif
+                                                @if (isset($course->canditature))
+                                                    <div class="comments-area">
+                                                        <ul class="comment-list">
+
+                                                            <li>
+                                                                <div class="media comment-author"> <a
+                                                                        class="media-left pull-left flip"
+                                                                        href="#"><img class="img-thumbnail"
+                                                                            src="images/blog/comment1.jpg"
+                                                                            alt=""></a>
+                                                                    <div class="media-body">
+                                                                        <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
+                                                                            style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
+                                                                            Candidature </h5>
+                                                                        <div class="comment-date">
+                                                                            {!! $course->candidature !!}</div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+
+
+
+                                                        </ul>
+                                                    </div>
+                                                @endif
+                                                @if (isset($course->datelimite))
+                                                    <div class="comments-area">
+                                                        <ul class="comment-list">
+
+                                                            <li>
+                                                                <div class="media comment-author"> <a
+                                                                        class="media-left pull-left flip"
+                                                                        href="#"><img class="img-thumbnail"
+                                                                            src="images/blog/comment1.jpg"
+                                                                            alt=""></a>
+                                                                    <div class="media-body">
+                                                                        <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
+                                                                            style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
+                                                                            Date limite </h5>
+                                                                        <div class="comment-date">
+                                                                            {{ $course->datelimite }}</div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+
+
+
+                                                        </ul>
+                                                    </div>
+                                                @endif
+                                                @if (isset($course->selection))
+                                                    <div class="comments-area">
+                                                        <ul class="comment-list">
+
+                                                            <li>
+                                                                <div class="media comment-author"> <a
+                                                                        class="media-left pull-left flip"
+                                                                        href="#"><img class="img-thumbnail"
+                                                                            src="images/blog/comment1.jpg"
+                                                                            alt=""></a>
+                                                                    <div class="media-body">
+                                                                        <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
+                                                                            style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
+                                                                            Modalité de selection </h5>
+                                                                        <div class="comment-date">
+                                                                            {!! $course->selection !!}</div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+
+
+
+                                                        </ul>
+                                                    </div>
+                                                @endif
+                                                @if (isset($course->daterentre))
+                                                    <div class="comments-area">
+                                                        <ul class="comment-list">
+
+                                                            <li>
+                                                                <div class="media comment-author"> <a
+                                                                        class="media-left pull-left flip"
+                                                                        href="#"><img class="img-thumbnail"
+                                                                            src="images/blog/comment1.jpg"
+                                                                            alt=""></a>
+                                                                    <div class="media-body">
+                                                                        <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
+                                                                            style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
+                                                                            Prochaine rentrée </h5>
+                                                                        <div class="comment-date">
+                                                                            @php
+                                                                                $getYears = date('m-Y', strtotime($course->daterentre));
+                                                                                
+                                                                                echo $getYears;
+                                                                                
+                                                                            @endphp
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+
+
+
+                                                        </ul>
+                                                    </div>
+                                                @endif
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <p class="number">03</p>
+                                <p class="text">PROGRAMME</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                                <div class="hidden-box">
+
+                                    <div class="row">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="blog-posts single-post">
+                                                    @foreach ($programs as $program)
+                                                        <div class="comments-area">
+
+                                                            <ul class="comment-list">
+                                                                <li>
+                                                                    <div class="media comment-author"> <a
+                                                                            class="media-left pull-left flip"
+                                                                            href="#"><img class="img-thumbnail"
+                                                                                src="images/blog/comment1.jpg"
+                                                                                alt=""></a>
+                                                                        <div class="media-body">
+
+                                                                            <div class="media-heading comment-heading"
+                                                                                style="display:flex; justify-content:space-between;">
+                                                                                @if ($program->title)
+                                                                                    <p class="">
+                                                                                        {{ $program->title }}
+                                                                                    </p>
+                                                                                @endif
+                                                                                @if ($program->hours)
+                                                                                    <p style="margin-right:7%;">
+                                                                                        {{ $program->hours }} heures
+                                                                                    </p>
+                                                                                @endif
+                                                                            </div>
+
+
+                                                                            <div class="comment-date">
+                                                                                {!! $program->description !!}</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+
+                                                        </div>
+                                                    @endforeach
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <p class="number">04</p>
+                                <p class="text">CARRIÈRE</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                                <div class="hidden-box">
+                                    <div class="row">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="blog-posts single-post">
+                                                    <div class="comments-area">
+                                                        @if ($course->grade)
+                                                            <ul class="comment-list">
+                                                                <li>
+                                                                    <div class="media comment-author"> <a
+                                                                            class="media-left pull-left flip"
+                                                                            href="#"><img class="img-thumbnail"
+                                                                                src="images/blog/comment1.jpg"
+                                                                                alt=""></a>
+                                                                        <div class="media-body">
+
+
+                                                                            <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
+                                                                                style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
+                                                                                Diplôme </h5>
+
+                                                                            <div class="comment-date">
+                                                                                {!! $course->grade !!}</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        @endif
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="blog-posts single-post">
+                                                    <div class="comments-area">
+                                                        @if ($course->grade)
+                                                            <ul class="comment-list">
+                                                                <li>
+                                                                    <div class="media comment-author"> <a
+                                                                            class="media-left pull-left flip"
+                                                                            href="#"><img class="img-thumbnail"
+                                                                                src="images/blog/comment1.jpg"
+                                                                                alt=""></a>
+                                                                        <div class="media-body">
+
+
+                                                                            <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
+                                                                                style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
+                                                                                Diplôme </h5>
+
+                                                                            <div class="comment-date">
+                                                                                {!! $course->grade !!}</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        @endif
+                                                    </div>
+                                                    <div class="comments-area">
+                                                        @if ($course->profile)
+                                                            <ul class="comment-list">
+                                                                <li>
+                                                                    <div class="media comment-author"> <a
+                                                                            class="media-left pull-left flip"
+                                                                            href="#"><img class="img-thumbnail"
+                                                                                src="images/blog/comment1.jpg"
+                                                                                alt=""></a>
+                                                                        <div class="media-body">
+
+
+                                                                            <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
+                                                                                style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
+                                                                                Profil / Compétences à acquérir
+                                                                            </h5>
+
+                                                                            <div class="comment-date">
+                                                                                {!! $course->profile !!}</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                        @endif
+                                                        </ul>
+                                                    </div>
+                                                    <div class="comments-area">
+                                                        @if ($course->opportunity)
+                                                            <ul class="comment-list">
+                                                                <li>
+                                                                    <div class="media comment-author"> <a
+                                                                            class="media-left pull-left flip"
+                                                                            href="#"><img class="img-thumbnail"
+                                                                                src="images/blog/comment1.jpg"
+                                                                                alt=""></a>
+                                                                        <div class="media-body">
+
+
+                                                                            <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
+                                                                                style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
+                                                                                Débouchés </h5>
+
+                                                                            <div class="comment-date">
+                                                                                {!! $course->opportunity !!}</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+
+
+
+                                                            </ul>
+                                                        @endif
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="item">
+                                <p class="number">05</p>
+                                <p class="text">DOCUMENTS</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                                <div class="hidden-box">
+                                    <div class="row">
+                                        @foreach ($downloads as $download)
+                                            <div class="col-md-3">
+
+                                                <h5 class="mb-0 font-16">{{ $download->name }}</h5>
+                                                <a href="{{ url('storage') }}/{{ $download->file }}"
+                                                    target="_blank">Cliquer
+                                                    ici</a>
+                                            </div>
+                                        @endforeach
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <p class="number">06</p>
+                                <p class="text">TÉMOIGNAGES</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                                <div class="hidden-box">
+                                    {!! $courses[0]->review !!}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-3 form1 mr-10 ml-10" style="background-color:  #1f3344;">
+                            <div class="sidebar sidebar-left mt-sm-30 ml-30 ml-sm-0">
+                                <div class="main-content">
+                                    <section>
+                                        <div style="width:100%;">
+                                            <div class="row">
+                                                <div class="col-md-12 ">
+                                                    <div>
+                                                        <h4 class="text-uppercase m-0" style="color:white">
+
+                                                            Je suis interessé(e)
+                                                        </h4>
+                                                        @if (session()->has('success'))
+                                                            <h6 class='alert alert-success' role="alert">
+                                                                Votre réponse a été bien enregistrée . Nous vous
+                                                                remercions
+                                                                pour votre intérêt et n'hésitez pas à nous contacter
+                                                                .
+                                                            </h6>
+                                                        @endif
+                                                        <div class="line-bottom-theme-colored2 mb-30  "></div>
+                                                        <p class="text-white">Remplir le formulaire.</p>
+                                                        <form class="mt-30" method="post"
+                                                            action="{{ route('interested', $course->id) }}">
+                                                            @csrf
+                                                            <div class="row">
+                                                                <div class="col-sm-12 text-white">
+                                                                    <div class="row">
+                                                                        <label for="gender"
+                                                                            class="col-xs-2 col-sm-2">Mlle</label>
+                                                                        <div
+                                                                            class="col-xs-2 col-col-sm-2 form-group mb-10">
+
+                                                                            <input name="gender" value='Mlle'
+                                                                                class="" type="radio" checked>
+                                                                        </div>
+                                                                        <label for=""
+                                                                            class="col-xs-2 col-sm-2">Mme</label>
+
+                                                                        <div
+                                                                            class="col-xs-2 col-sm-2 form-group mb-10">
+                                                                            <input name="gender" value='Mme'
+                                                                                class="" type="radio">
+                                                                        </div>
+                                                                        <label for=""
+                                                                            class="col-xs-2 col-sm-2">M</label>
+
+                                                                        <div
+                                                                            class="col-xs-2 col-sm-2 form-group mb-10">
+                                                                            <input name="gender" value='Mr'
+                                                                                type="radio" aria-="true">
+                                                                        </div>
+                                                                    </div>
+
+                                                                    @if ($errors->has('gender'))
+                                                                        <span
+                                                                            class="text-white">{{ $errors->first('gender') }}</span>
+                                                                    @endif
+
+
+
+                                                                </div>
+                                                                <div class="col-sm-6">
+
+
+                                                                    <div class="form-group mb-12">
+                                                                        <input name="name" class="form-control"
+                                                                            style="background-color:white;color: gray;"
+                                                                            required type="text" placeholder="Nom"
+                                                                            value="{{ old('name') }}">
+                                                                    </div>
+                                                                    @if ($errors->has('name'))
+                                                                        <span
+                                                                            class="text-white">{{ $errors->first('name') }}</span>
+                                                                    @endif
+                                                                </div>
+                                                                <div class="col-sm-6">
+
+
+                                                                    <div class="form-group mb-12">
+                                                                        <input name="surname" class="form-control"
+                                                                            placeholder="Prénom"
+                                                                            style="background-color:white;color: gray;"
+                                                                            required type="text"
+                                                                            value="{{ old('surname') }}">
+                                                                    </div>
+                                                                    @if ($errors->has('surname'))
+                                                                        <span
+                                                                            class="text-white">{{ $errors->first('surname') }}</span>
+                                                                    @endif
+                                                                </div>
+                                                                <div class="col-sm-12">
+                                                                    <div class="form-group mb-12">
+                                                                        <input name="email" required
+                                                                            placeholder="E-mail"
+                                                                            style="background-color:white;color: gray;"
+                                                                            class="form-control  email" type="email"
+                                                                            value="{{ old('email') }}">
+                                                                    </div>
+                                                                    @if ($errors->has('email'))
+                                                                        <span
+                                                                            class="text-white">{{ $errors->first('email') }}</span>
+                                                                    @endif
+                                                                </div>
+
+
+                                                                <div class="col-sm-12">
+
+                                                                    <div class="form-group mb-12">
+                                                                        <select name="country" id="countries" required
+                                                                            style="background-color:white;color: gray;"
+                                                                            value="{{ old('country') }}"
+                                                                            class="form-control  ">
+                                                                            @foreach ($countries as $country)
+                                                                                <option value="{{ $country }}">
+                                                                                    {{ $country }}</option>
+                                                                            @endforeach
+                                                                        </select>
+                                                                    </div>
+                                                                    @if ($errors->has('country'))
+                                                                        <span
+                                                                            class="text-white">{{ $errors->first('country') }}</span>
+                                                                    @endif
+                                                                </div>
+
+                                                                <div class="col-sm-12 " id="provinces">
+
+
+                                                                    <div class="form-group mb-10">
+                                                                        <select name="province" required
+                                                                            id="province" class="form-control"
+                                                                            style="background-color:white;color: gray;"
+                                                                            value="{{ old('province') }}">
+                                                                            <option value="_" selected>
+                                                                                Province
+                                                                            </option>
+
+                                                                            @foreach ($provinces as $province)
+                                                                                <option value="{{ $province }}">
+                                                                                    {{ $province }}</option>
+                                                                            @endforeach
+
+                                                                        </select>
+
+                                                                    </div>
+                                                                    @if ($errors->has('province'))
+                                                                        <span
+                                                                            class="text-white">{{ $errors->first('province') }}</span>
+                                                                    @endif
+                                                                </div>
+                                                                <div class="col-sm-12">
+
+                                                                    <div class="form-group mb-10">
+                                                                        <div>
+                                                                            <label for="phone"
+                                                                                class=" font-12 text-white"
+                                                                                style=" width:100%;"> Numéro de
+                                                                                téléphone</label>
+                                                                        </div>
+                                                                        <input name="phone" class="form-control"
+                                                                            style="width:100%; " id="phone"
+                                                                            type="tel" value="+212" required>
+                                                                        <input name="indice" class="form-control"
+                                                                            id="indice" type="hidden"
+                                                                            value="212">
+                                                                    </div>
+                                                                    @if ($errors->has('phone'))
+                                                                        <span
+                                                                            class="text-white">{{ $errors->first('phone') }}</span>
+                                                                    @endif
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="row">
+
+                                                                <div class="col-sm-12 ">
+
+                                                                    <div class="form-group mb-10">
+                                                                        <select name="level"
+                                                                            value="{{ old('level') }}"
+                                                                            style="background-color:white;color: gray;"
+                                                                            class="form-control  " required>
+                                                                            <option value="_" selected>Niveau
+                                                                                d'études</option>
+                                                                            @foreach ($levels as $level)
+                                                                                <option value="{{ $level }}">
+                                                                                    {{ $level }}</option>
+                                                                            @endforeach
+                                                                        </select>
+
+                                                                    </div>
+                                                                    @if ($errors->has('level'))
+                                                                        <span
+                                                                            class="text-white">{{ $errors->first('level') }}</span>
+                                                                    @endif
+                                                                </div>
+                                                                <div class="col-sm-12">
+                                                                    <div class="form-group mb-10">
+                                                                        <input name="grade"
+                                                                            value="{{ old('grade') }}"
+                                                                            style="background-color:white;color: gray;"
+                                                                            placeholder="Diplôme et spécialité"
+                                                                            class="form-control" type="text">
+                                                                    </div>
+                                                                    @if ($errors->has('grade'))
+                                                                        <span
+                                                                            class="text-white">{{ $errors->first('grade') }}</span>
+                                                                    @endif
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-xs-2 col-sm-1">
+
+                                                                <div class=" mb-10">
+                                                                    <input name="accepted" value='accepted'
+                                                                        type="checkbox" checked required>
+                                                                </div>
+                                                                @if ($errors->has('accepted'))
+                                                                    <span
+                                                                        class="text-danger">{{ $errors->first('accepted') }}</span>
+                                                                @endif
+                                                            </div>
+                                                            <p class="col-xs-10 col-span-10 font-10 text-white">
+                                                                Conformément à la loi 09-08, vous disposez d&#39;un
+                                                                droit
+                                                                d&#39;accès, de rectification et d&#39;opposition au
+                                                                traitement de
+                                                                vos données personnelles.<span
+                                                                    style="color:red;">*</span>
+                                                            </p>
+
+
+
+                                                            <div class="form-group mb-0 mt-20 ">
+                                                                <input name="form_botcheck" class="form-control "
+                                                                    type="hidden" value="">
+                                                                <button type="submit"
+                                                                    class="btn btn-theme-colored2 font-18"
+                                                                    style="width:100%;font-weight:bold;"
+                                                                    data-loading-text="Patientez...">ENVOYER</button>
+                                                            </div>
+                                                        </form>
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+
+                                <div class="widget border-1px bg-silver-deep p-15">
+                                    <h4 class="widget-title line-bottom-theme-colored2 mb-10 font-18">Cycles</h4>
+                                    <div class="categories">
+                                        <ul class="list-border">
+                                            @foreach ($degrees as $degree)
+                                                <li class="font-16"><a style="color:white;"
+                                                        href="{{ route('degree.show', $degree->name) }}">{{ $degree->name }}</a>
+                                                </li>
+                                            @endforeach
+
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -1401,7 +2171,7 @@
         font-size: 0.875rem;
         line-height: 1rem;
     }
-  
+
 
     .nav-tabs>li>a {
         color: #1f3344;
@@ -1457,5 +2227,13 @@
         country = phoneInput.getSelectedCountryData();
         indice.value = country.dialCode
 
+    });
+
+    const items = document.querySelectorAll(".item");
+
+    items.forEach((item) => {
+        item.addEventListener("click", () => {
+            item.classList.toggle("open");
+        });
     });
 </script>
