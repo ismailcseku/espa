@@ -14,7 +14,7 @@
     <title>Cha Agadir</title>
 
     <!-- Favicon and Touch Icons -->
-    <link href="{{asset('images/logo.svg')}}" rel="shortcut icon" type="image/svg">
+    <link href="{{ asset('images/logo.svg') }}" rel="shortcut icon" type="image/svg">
     <link href="images/apple-touch-icon.png" rel="apple-touch-icon">
     <link href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
     <link href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
@@ -27,8 +27,8 @@
     <link href="{{ asset('app-assets/css/css-plugin-collections.css') }}" rel="stylesheet" />
     <!-- CSS | menuzord megamenu skins -->
     <link href="{{ asset('app-assets/css/menuzord-megamenu.css') }}" rel="stylesheet" />
-    <link id="menuzord-menu-skins"
-        href="{{ asset('app-assets/css/menuzord-skins/menuzord-boxed.css') }}" rel="stylesheet" />
+    <link id="menuzord-menu-skins" href="{{ asset('app-assets/css/menuzord-skins/menuzord-boxed.css') }}"
+        rel="stylesheet" />
     <!-- CSS | Main style file -->
     <link href="{{ asset('app-assets/css/style-main.css') }}" rel="stylesheet" type="text/css">
     <!-- CSS | Preloader Styles -->
@@ -57,16 +57,13 @@
     <!-- Revolution Slider 5.x SCRIPTS -->
     <script src="{{ asset('app-assets/js/revolution-slider/js/jquery.themepunch.tools.min.js') }}"></script>
     <script src="{{ asset('app-assets/js/revolution-slider/js/jquery.themepunch.revolution.min.js') }}"></script>
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
-  />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 </head>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')}}></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js')}}></script>
 <![endif]-->
@@ -76,19 +73,19 @@
 <body class="has-side-panel side-panel-right fullwidth-page">
 
     <div id="wrapper" class="clearfix">
-    
+
 
         <!-- Header -->
         <header id="header" class="header">
             <div class="header-top bg-theme-colored border-top-theme-colored2-2px sm-text-center">
                 <div class="container">
                     <div class="row">
-                   
+
                         <div class="col-md-4">
                             <div class="widget">
-                               
+
                                 <ul class="styled-icons icon-sm icon-white">
-                                    
+
                                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                     <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                                     <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
@@ -136,7 +133,8 @@
                                     </li>
                                     <li>
                                         <a href="{{ route('course.index') }}"
-                                            class="btn btn-dark btn-circled btn-theme-colored2 btn-sm  pr-30 pl-30">Nos formations</a>
+                                            class="btn btn-dark btn-circled btn-theme-colored2 btn-sm  pr-30 pl-30">Nos
+                                            formations</a>
                                     </li>
                                 </ul>
                             </div>
@@ -151,37 +149,40 @@
                     <div class="container">
                         <div style="display:flex;justify-content:center;width:100%;">
 
-                        @if (count($logo_url)>0)
-                        @foreach ($logo_url as $item)
-                        <a class="menuzord-brand  flip mt-20 mt-sm-10 mb-sm-20 pt-5" href="/" ><img src="{{url('storage')}}/{{$item->logo}}"  alt=""></a>
-                            
-                        @endforeach
-                        @endif
-                    </div>
+                            @if (count($logo_url) > 0)
+                                @foreach ($logo_url as $item)
+                                    <a class="menuzord-brand  flip mt-20 mt-sm-10 mb-sm-20 pt-5" href="/"><img
+                                            src="{{ url('storage') }}/{{ $item->logo }}" alt=""></a>
+                                @endforeach
+                            @endif
+                        </div>
 
                         <nav id="menuzord-right" class="menuzord default theme-colored">
-                            
-                        
+
+
                             <ul class="menuzord-menu">
-                                
+
                                 <li @if (Route::current()->getName() == 'home') class='active' @endif>
-                                    <a href="{{ route('home') }}" class="font-14 text-uppercase" style="padding: 10px 10px 10px 10px; ">Acceuil</a>
+                                    <a href="{{ route('home') }}" class="font-14 text-uppercase"
+                                        style="padding: 10px 10px 10px 10px; ">Acceuil</a>
                                 </li>
-                                <li><a href="#home" class="font-14 text-uppercase" style="padding: 10px 10px 10px 10px;">École</a>
+                                <li><a href="#home" class="font-14 text-uppercase"
+                                        style="padding: 10px 10px 10px 10px;">École</a>
                                     <ul class="dropdown">
                                         <li><a href="{{ route('director.index') }}">Mot du directeur</a></li>
                                         <li><a href="{{ route('about.index') }}">Qui sommes-nous ?</a></li>
-                                        <li><a href="{{ route('responsable.index') }}">Corps Professoral / Staff</a></li>
-                                        <li><a href="{{route('campus.index')}}">Vie Estudiantine</a></li>
+                                        <li><a href="{{ route('responsable.index') }}">Corps Professoral / Staff</a>
+                                        </li>
+                                        <li><a href="{{ route('campus.index') }}">Vie Estudiantine</a></li>
                                         <li><a href="{{ route('evenement.index') }}">Évènements</a></li>
                                         <li><a href="{{ route('blog-actualités.index') }}">Blog/Actualités</a></li>
                                         <li><a href="{{ route('media.index') }}">Galerie</a></li>
                                         <li><a href="{{ route('video.index') }}">Vidéos</a></li>
                                     </ul>
                                 </li>
-                                <li @if (Route::current()->getName() == 'course.index') class="active"   @endif><a
-                                        href="{{ route('course.index') }}"
-                                        style="padding: 10px 10px 10px 10px;" class="font-14 text-uppercase" >Formations</a>
+                                <li @if (Route::current()->getName() == 'course.index') class="active" @endif><a
+                                        href="{{ route('course.index') }}" style="padding: 10px 10px 10px 10px;"
+                                        class="font-14 text-uppercase">Formations</a>
                                     <ul class="dropdown">
                                         <li>
                                             <a href="{{ route('degree.show', 'Ingénieur d’État') }}">Ingénieur
@@ -250,7 +251,7 @@
                                                 Exécutive<span class="label label-danger">New</span></a>
                                             <ul class="dropdown">
                                                 <li><a href="{{ route('course.byname', 'Farm Manager') }}">
-                                                   Farm
+                                                        Farm
                                                         Manager</a>
                                                 </li>
                                             </ul>
@@ -259,16 +260,21 @@
 
                                     </ul>
                                 </li>
-        
 
 
 
 
-                                <li><a href="{{route('search.index')}}" style="padding: 10px 10px 10px 10px;" class="font-14 text-uppercase" >Recherche</a>
-                                <li><a href="{{route('center.index')}}" style="padding: 10px 10px 10px 10px;" class="font-14 text-uppercase" >Centre d’Excellence</a>
-                                    <li><a href="{{route('experience.index')}}" style="padding: 10px 10px 10px 10px;" class="font-14 text-uppercase" >Ferme Expérimentale</a>
-                                <li><a href="{{route('impact.index')}}" style="padding: 10px 10px 10px 10px;" class="font-14 text-uppercase" >Impact Cluster</a>
-                                    <li><a href="{{route('business.index')}}" style="padding: 10px 10px 10px 10px;" class="font-14 text-uppercase" >Agri-Business </a>
+
+                                <li><a href="{{ route('search.index') }}" style="padding: 10px 10px 10px 10px;"
+                                        class="font-14 text-uppercase">Recherche</a>
+                                <li><a href="{{ route('center.index') }}" style="padding: 10px 10px 10px 10px;"
+                                        class="font-14 text-uppercase">Centre d’Excellence</a>
+                                <li><a href="{{ route('experience.index') }}" style="padding: 10px 10px 10px 10px;"
+                                        class="font-14 text-uppercase">Ferme Expérimentale</a>
+                                <li><a href="{{ route('impact.index') }}" style="padding: 10px 10px 10px 10px;"
+                                        class="font-14 text-uppercase">Impact Cluster</a>
+                                <li><a href="{{ route('business.index') }}" style="padding: 10px 10px 10px 10px;"
+                                        class="font-14 text-uppercase">Agri-Business </a>
 
 
 
@@ -280,4 +286,3 @@
                 </div>
             </div>
         </header>
-        

@@ -191,25 +191,7 @@
         </section>
     </div>
 
-    <!-- Section Features -->
-    <section id="features" class="bg-silver-deep">
-        <div class="container pb-50">
-            <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-4 mb-sm-30" >
-                    <img style="display:flex;justify-content:center;width:100%;" src='https://9474692.fs1.hubspotusercontent-na1.net/hubfs/9474692/hub_generated/resized/3aa24f5f-531f-4c88-b98d-4ca1a9388eec.jpeg' class="   p-30 pb-20" />
-                        
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 mb-sm-30" >
-                    <img style="display:flex;justify-content:center;width:100%;" src='https://f.hubspotusercontent40.net/hubfs/9474692/hub_generated/resized/3c356ddf-f8be-49f9-8957-f28da6f145be.jpeg  ' class="   p-30 pb-20" />
-                        
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 mb-sm-30" >
-                    <img style="display:flex;justify-content:center;width:100%;" src='https://9474692.fs1.hubspotusercontent-na1.net/hubfs/9474692/hub_generated/resized/3aa24f5f-531f-4c88-b98d-4ca1a9388eec.jpeg' class=" p-30 pb-20" />
-                        
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- Section: Courses -->
     <section id="courses" class="bg-silver-light">

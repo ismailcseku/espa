@@ -53,7 +53,7 @@ Route::post('/newsletter', [NewsletterController::class, 'store'])->name('newsle
 Route::get('/qui-sommes-nous', [AboutController::class, '__invoke'])->name('about.index');
 Route::get('/mot-du-directeur', [DirectorController::class, '__invoke'])->name('director.index');
 Route::get('/corps-professoral-staff', [ResponsableController::class, '__invoke'])->name('responsable.index');
-Route::get('/responsable', [ResponsableController::class, '__invoke'])->name('responsable.index');
+Route::get('/corps-professoral-staff', [ResponsableController::class, '__invoke'])->name('responsable.index');
 Route::get('/galerie', [MediaController::class, '__invoke'])->name('media.index');
 Route::get('/videos', [VideoController::class, '__invoke'])->name('video.index');
 Route::get('/vie-estudiantine', [CampusController::class, '__invoke'])->name('campus.index');

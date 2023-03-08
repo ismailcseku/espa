@@ -143,15 +143,18 @@
             <div class="header-nav">
                 <div class="header-nav-wrapper navbar-scrolltofixed bg-white">
                     <div class="container">
-                        <nav id="menuzord-right" class="menuzord default theme-colored">
+                        <div style="display:flex;justify-content:center;width:100%;">
 
                             @if (count($logo_url) > 0)
                                 @foreach ($logo_url as $item)
-                                    <a class="menuzord-brand pull-left flip mt-20 mt-sm-10 mb-sm-20 pt-5"
-                                        href="/"><img src="{{ url('storage') }}/{{ $item->logo }}"
-                                            alt=""></a>
+                                    <a class="menuzord-brand  flip mt-20 mt-sm-10 mb-sm-20 pt-5" href="/"><img
+                                            src="{{ url('storage') }}/{{ $item->logo }}" alt=""></a>
                                 @endforeach
                             @endif
+                        </div>
+                        <nav id="menuzord-right" class="menuzord default theme-colored">
+
+                           
                             <ul class="menuzord-menu">
 
                                 <li @if (Route::current()->getName() == 'home') class='active' @endif>

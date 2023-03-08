@@ -51,11 +51,33 @@
             <div class="container pt-40 pb-40">
                 <div class="row text-center">
                     <div class="col-md-12">
-                        <h2 id="basic-coupon-clock" class="text-white">
-                            {{$evenements->start_at}}
-                        </h2>
+                        @php
+
+                        $year= date('Y', strtotime($evenements->start_at));
+                        $month= date('m', strtotime($evenements->start_at));
+                        $day= date('d', strtotime($evenements->start_at));
+                        $hour= date('H', strtotime($evenements->start_at));
+                        $minute= date('i', strtotime($evenements->start_at));
+                        $second= date('s', strtotime($evenements->start_at));
+                        @endphp
+                        <input type="hidden" name="year" value='{{$year}}' id="year">
+                        <input type="hidden" name="month" value='{{$month}}' id="month">
+                        <input type="hidden" name="day" value='{{$day}}' id="day">
+                        <input type="hidden" name="hour" value='{{$hour}}' id="hour">
+                        <input type="hidden" name="minute" value='{{$minute}}' id="minute">
+                        <input type="hidden" name="second" value='{{$second}}' id="second">
+                        <h2 id="basic-coupon-clock" class="text-white"></h2>
+
                         <!-- Final Countdown Timer Script -->
-                        
+                        <script language="javascript" type="text/javascript">
+                             let year= document.getElementById('year').value;
+                             console.log(year)
+                         
+                             
+                        </script>
+
+ 
+                    
                     </div>
                 </div>
             </div>

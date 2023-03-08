@@ -49,36 +49,14 @@
                                     <div class="gallery-item ">
                                         <div class="thumb">
                                             <video class="img-fullwidth" style="postion:relative;"
-                                                src="{{ url('storage') }}/{{ $video->video }}"></video>
-                                            <span style="position:absolute;top:45%;left:45%;">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                                                style="color:#F88147;"
-                                                    viewBox="0 0 24 24">
-                                                    <path fill="currentColor"
-                                                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2zm-2 13.5v-7a.5.5 0 0 1 .8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5a.5.5 0 0 1-.8-.4z" />
-                                                </svg></span>
-                                            <div class="overlay-shade">
-                                            </div>
-                                            <div class="text-holder">
-                                                <div class="title text-center">{{ $video->title }}</div>
-                                            </div>
-                                            <div class="icons-holder">
-                                                <div class="icons-holder-inner">
-                                                    <div
-                                                        class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
-                                                        <a href="{{ url('storage') }}/{{ $video->video }}"
-                                                            data-lightbox-gallery="gallery" title="{{ $video->title }}"> <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                                                            style="color:white;"
-                                                                viewBox="0 0 24 24">
-                                                                <path fill="currentColor"
-                                                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2zm-2 13.5v-7a.5.5 0 0 1 .8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5a.5.5 0 0 1-.8-.4z" />
-                                                            </svg></a>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                                src="{{ url('storage') }}/{{ $video->video }}" controls></video>
+                                            <p class="font-16 " style="color:rgb(45, 69, 88);font-weight:bold;">{{ $video->title }}</p>
+                                           
                                         </div>
                                     </div>
                                 @endforeach
+
+
 
 
                             </div>
