@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('phone');
             $table->string('grade')->default('');
             $table->string('accepted');
-            /*$table->foreignId("course_id");
+            /*$table->foreignId("course_id"); 
             $table->foreign('course_id')->references('id')->on('courses')->onDelete('cascade');*/
             $table->timestamps();
         });
