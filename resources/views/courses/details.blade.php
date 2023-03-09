@@ -786,7 +786,6 @@
 
                                 </div>
                             </div>
-
                             <div class="col-sm-12 col-md-3 form" style="background-color:  #1f3344;">
                                 <div class="sidebar sidebar-left mt-sm-30 ml-30 ml-sm-0">
                                     <div class="main-content">
@@ -1086,7 +1085,8 @@
                                     margin-left: 100px;
                                     margin-right: 100px;
                                 }
-                                .section-content{
+
+                                .section-content {
                                     margin-left: 100px;
                                 }
                             }
@@ -1106,10 +1106,11 @@
                                 }
 
                                 .widget {
-                                    margin-bottom: 
-                                    0px;
+                                    margin-bottom:
+                                        0px;
                                 }
-                                .section-content{
+
+                                .section-content {
                                     margin-left: 10px;
                                 }
                             }

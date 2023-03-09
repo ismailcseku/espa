@@ -65,10 +65,10 @@
                                                     <p style="font-weight:normal;">
                                                         {{ $course->accroche }}</p>
                                                 </a>
-                                                <div class="author-thumb">
+                                              <!--  <div class="author-thumb">
                                                     <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
                                                         alt="" class="img-circle">
-                                                </div>
+                                                </div>-->
                                             </div>
                                             <a href="{{ route('course.details', $course->name) }}" style="display: block"
                                                 class="course-meta">

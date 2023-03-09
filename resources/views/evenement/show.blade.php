@@ -52,32 +52,62 @@
                 <div class="row text-center">
                     <div class="col-md-12">
                         @php
-
-                        $year= date('Y', strtotime($evenements->start_at));
-                        $month= date('m', strtotime($evenements->start_at));
-                        $day= date('d', strtotime($evenements->start_at));
-                        $hour= date('H', strtotime($evenements->start_at));
-                        $minute= date('i', strtotime($evenements->start_at));
-                        $second= date('s', strtotime($evenements->start_at));
+                            $year = date('Y', strtotime($evenements->start_at));
+                            $month = date('M', strtotime($evenements->start_at));
+                            $day = date('d', strtotime($evenements->start_at));
+                            $hour = date('H', strtotime($evenements->start_at));
+                            $minute = date('i', strtotime($evenements->start_at));
+                            $second = date('s', strtotime($evenements->start_at));
                         @endphp
-                        <input type="hidden" name="year" value='{{$year}}' id="year">
-                        <input type="hidden" name="month" value='{{$month}}' id="month">
-                        <input type="hidden" name="day" value='{{$day}}' id="day">
-                        <input type="hidden" name="hour" value='{{$hour}}' id="hour">
-                        <input type="hidden" name="minute" value='{{$minute}}' id="minute">
-                        <input type="hidden" name="second" value='{{$second}}' id="second">
-                        <h2 id="basic-coupon-clock" class="text-white"></h2>
+                        <input type="hidden" name="year" value='{{ $year }}' id="year">
+                        <input type="hidden" name="month" value='{{ $month }}' id="month">
+                        <input type="hidden" name="day" value='{{ $day }}' id="day">
+                        <input type="hidden" name="hour" value='{{ $hour }}' id="hour">
+                        <input type="hidden" name="minute" value='{{ $minute }}' id="minute">
+                        <input type="hidden" name="second" value='{{ $second }}' id="second">
+                        <h2 id="count_down_date" class="text-white basic-coupon-clock"></h2>
 
                         <!-- Final Countdown Timer Script -->
                         <script language="javascript" type="text/javascript">
-                             let year= document.getElementById('year').value;
-                             console.log(year)
-                         
-                             
+                            //get start date 
+                            let year = document.getElementById('year').value;
+                            let month = document.getElementById('month').value;
+                            let day = document.getElementById('day').value;
+                            let hour = document.getElementById('hour').value;
+                            let minute = document.getElementById('minute').value;
+                            let second = document.getElementById('second').value;
+                            //get end date 
+                            var countDownDate = new Date(`${month} ${day}, ${year} ${hour}:${day}:${second}`).getTime();
+                            // Update the count down every 1 second
+                            var x = setInterval(function() {
+
+                                // Get today's date and time
+                                var now = new Date().getTime();
+
+                                // Find the distance between now and the count down date
+                                var distance = countDownDate - now;
+
+                                // Time calculations for days, hours, minutes and seconds
+                                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                                // Display the result in the element with id"
+                                document.getElementById("count_down_date").innerHTML = days + " Jours  " + hours + "H:" +
+                                    minutes + "M:" + seconds + "S";
+                              
+                                // If the count down is finished, write some text
+                                if (distance < 0) {
+                                    clearInterval(x);
+                                    document.getElementById("count_down_date").innerHTML = "Expiré";
+                                }
+                            }, 1000);
+                            
+                               
                         </script>
 
- 
-                    
+
+
                     </div>
                 </div>
             </div>
@@ -211,8 +241,8 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input type="text" placeholder="Votre E-mail" name="email" class="form-control"
-                                            required="" value="{{ old('email') }}">
+                                        <input type="text" placeholder="Votre E-mail" name="email"
+                                            class="form-control" required="" value="{{ old('email') }}">
                                         @if ($errors->has('email'))
                                             <span class="text-danger">{{ $errors->first('email') }}</span>
                                         @endif
@@ -220,8 +250,8 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input type="text" placeholder="Téléphone " name="phone" class="form-control"
-                                            required value="{{ old('phone') }}">
+                                        <input type="text" placeholder="Téléphone " name="phone"
+                                            class="form-control" required value="{{ old('phone') }}">
                                         @if ($errors->has('phone'))
                                             <span class="text-danger">{{ $errors->first('phone') }}</span>
                                         @endif

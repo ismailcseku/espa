@@ -56,6 +56,7 @@ class Course extends Resource
             //ID::make()->sortable(),
             BelongsTo::make('Cycle','degree','App\Nova\Degree'),
             BelongsTo::make('Responsable','responsable','App\Nova\Responsable')->nullable(),
+            Number::make("Rang",'position'),
             Text::make('Intitulé de la formation','name'),
             Image::make('Photo'),
             //CKEditor5Classic::make('description'),
