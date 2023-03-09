@@ -1129,7 +1129,9 @@
 
                             .accordion1 .item {
                                 box-shadow: 0 0 32px #F8814710;
-                                padding: 24px;
+                                background-color: white;
+                                padding-top: 24px;
+                                padding-bottom: 24px;
                                 cursor: pointer;
                                 display: grid;
                                 grid-template-columns: auto 1fr auto;
@@ -1161,7 +1163,11 @@
                             .accordion1 .text {
                                 font-size: 24px;
                                 font-weight: 500;
-                                color: white;
+                                color:#1f3344;
+                                
+                            }
+                            .comments-area{
+                                color:#1f3344;
                             }
 
                             .accordion1 .item.open .text {
@@ -1188,25 +1194,24 @@
                             .accordion1 .hidden-box p {
                                 line-height: 1.6;
                                 margin-bottom: 24px;
-                                color: white;
+                                
                             }
 
                             .accordion1 .hidden-box h5 {
-                                color: white;
+                                
                             }
 
-                            .accordion1 .hidden-box ul {
-                                color: white;
+                            .accordion1 .hidden-box ul {                               
                                 margin-left: 18px;
-
                                 display: flex;
                                 flex-direction: column;
                                 gap: 12px;
                             }
                         </style>
+                        <!-- initial open : add open class to item -->
                         <div class="accordion1 mr-10 ml-10" id="mobile_pade">
-                            <div class="item open">
-                                <p class="number">01</p>
+                            <div class="item">
+                                <p class="number"></p>
                                 <p class="text">DESCRIPTION</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
                                     viewBox="0 0 24 24" stroke="currentColor">
@@ -1250,7 +1255,8 @@
                                 </div>
                             </div>
                             <div class="item">
-                                <p class="number">02</p>
+                                <p class="number"></p>
+
                                 <p class="text">ADMISSION</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
                                     viewBox="0 0 24 24" stroke="currentColor">
@@ -1423,7 +1429,7 @@
                                 </div>
                             </div>
                             <div class="item">
-                                <p class="number">03</p>
+                                <p class="number"></p>
                                 <p class="text">PROGRAMME</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
                                     viewBox="0 0 24 24" stroke="currentColor">
@@ -1482,7 +1488,7 @@
                                 </div>
                             </div>
                             <div class="item">
-                                <p class="number">04</p>
+                                <p class="number"></p>
                                 <p class="text">CARRIÈRE</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
                                     viewBox="0 0 24 24" stroke="currentColor">
@@ -1617,7 +1623,7 @@
                                 </div>
                             </div>
                             <div class="item">
-                                <p class="number">05</p>
+                                <p class="number"></p>
                                 <p class="text">DOCUMENTS</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
                                     viewBox="0 0 24 24" stroke="currentColor">
@@ -1641,7 +1647,7 @@
                                 </div>
                             </div>
                             <div class="item">
-                                <p class="number">06</p>
+                                <p class="number"></p>
                                 <p class="text">TÉMOIGNAGES</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
                                     viewBox="0 0 24 24" stroke="currentColor">
