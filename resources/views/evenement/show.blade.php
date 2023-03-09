@@ -95,15 +95,13 @@
                                 // Display the result in the element with id"
                                 document.getElementById("count_down_date").innerHTML = days + " Jours  " + hours + "H:" +
                                     minutes + "M:" + seconds + "S";
-                              
+
                                 // If the count down is finished, write some text
                                 if (distance < 0) {
                                     clearInterval(x);
                                     document.getElementById("count_down_date").innerHTML = "Expiré";
                                 }
                             }, 1000);
-                            
-                               
                         </script>
 
 
@@ -144,6 +142,16 @@
                                 @if ($evenements->end_at)
                                     <h5>Date fin:</h5>
                                     <p>{{ $evenements->end_at }}</p>
+                                @endif
+
+                            </li>
+                            <li>
+                                @if (count($evenementPages) > 0)
+                                    <h5>Téléchargement :</h5>
+                                    @foreach ($evenementPages as $item)
+                                        <p><a style="text-decoration:underline;font-weight:normal;" href="{{ url('storage') }}/{{ $item->file }}"
+                                                target='_blank'>{{ $item->filename }}</a></p>
+                                    @endforeach
                                 @endif
 
                             </li>

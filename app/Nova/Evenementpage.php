@@ -6,19 +6,17 @@ use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\File;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Image;
-use Laravel\Nova\Fields\Number;
-use Emilianotisato\NovaTinyMCE\NovaTinyMCE;
+use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Slide extends Resource
+class Evenementpage extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\Slide>
+     * @var class-string<\App\Models\Evenementpage>
      */
-    public static $model = \App\Models\Slide::class;
+    public static $model = \App\Models\Evenementpage::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -35,8 +33,6 @@ class Slide extends Resource
     public static $search = [
         'id',
     ];
-    
-
 
     /**
      * Get the fields displayed by the resource.
@@ -46,16 +42,15 @@ class Slide extends Resource
      */
     public function fields(NovaRequest $request)
     {
-        
         return [
             ID::make()->sortable(),
-            Text::make('Sujet','subject'),
-            Text::make('Titre','title'),
-            NovaTinyMCE::make('Decription','description'),
-            Image::make('Une image','photo')->disk('public')
+            Text::make('Nom du document','filename'),          
+            File::make('Un fichier','file')->disk('public')
             ->storeAs(function (Request $request) {
-                    return $request->photo->getClientOriginalName();
-                 }),
+                    return $request->file->getClientOriginalName();
+            }),
+            BelongsTo::make('Évènement','evenement','App\Nova\Evenement'),
+
         ];
     }
 
@@ -101,5 +96,8 @@ class Slide extends Resource
     public function actions(NovaRequest $request)
     {
         return [];
+    }
+    public static function label(){
+        return 'Fichier page évènement';
     }
 }

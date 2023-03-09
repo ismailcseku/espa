@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Media;
 use App\Models\Evenement;
 use Illuminate\Http\Request;
+use App\Models\Evenementpage;
 use Jorenvh\Share\ShareFacade;
 use App\Models\EvenementInterested;
 
@@ -27,14 +28,15 @@ class EvenementController extends Controller
 
     public function show(Evenement $evenement)
     {
-         $evenements=$evenement;
+         
          $medias=Media::all();
          $shareFacebook=ShareFacade::currentPage()->facebook()->getRawLinks();
          $shareWhatsapp=ShareFacade::currentPage()->whatsapp()->getRawLinks();
          $shareLinkedin=ShareFacade::currentPage()->linkedin()->getRawLinks();
+         $evenementPages=Evenementpage::where('evenement_id',$evenement->id)->get();
          
          
-        return view('evenement.show')->with(['evenements'=>$evenements,'medias'=>$medias,'shareFacebook'=>$shareFacebook,'shareWhatsapp'=>$shareWhatsapp,'shareLinkedin'=>$shareLinkedin]);
+        return view('evenement.show')->with(['evenements'=>$evenement,'evenementPages'=>$evenementPages,'medias'=>$medias,'shareFacebook'=>$shareFacebook,'shareWhatsapp'=>$shareWhatsapp,'shareLinkedin'=>$shareLinkedin]);
     }
 
     public function signIn($id,Request $request)

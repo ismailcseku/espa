@@ -27,7 +27,7 @@ class Evenement extends Resource
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'title';
 
     /**
      * The columns that should be searched.
@@ -59,6 +59,7 @@ class Evenement extends Resource
                             return $request->photo->getClientOriginalName();
             }),
             HasMany::make('EvenementInterested'),
+            HasMany::make('Evenementpage'),
 
         ];
     }

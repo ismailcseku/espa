@@ -39,6 +39,7 @@ use App\Nova\CategoryBlog;
 use App\Nova\Downloadpage;
 use App\Nova\TrainingType;
 use App\Nova\CategoryMedia;
+use App\Nova\Evenementpage;
 use App\Nova\MessageNewsletter;
 use Laravel\Nova\Menu\MenuItem;
 use App\Nova\EvenementInterested;
@@ -99,6 +100,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                     ])->icon('user')->collapsable(),
                     MenuSection::make('Interation', [
                         MenuItem::resource(Evenement::class),
+                        MenuItem::resource(Evenementpage::class),
                         MenuItem::resource(EvenementInterested::class),
                     ])->collapsable(),
                     MenuSection::make('Blog', [

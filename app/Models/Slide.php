@@ -13,7 +13,7 @@ class Slide extends Model
         'subject',
         'title',
         'description',
-        'photo'
+        'photo',
     ];
 
 

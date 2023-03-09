@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Evenementpage;
 use App\Models\EvenementInterested;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -30,5 +31,9 @@ class Evenement extends Model
     public function evenement_interesteds() {
         return $this->hasMany(EvenementInterested::class);
     }
+    public function evenementpages() {
+        return $this->hasMany(Evenementpage::class);
+    }
+
 
 }
