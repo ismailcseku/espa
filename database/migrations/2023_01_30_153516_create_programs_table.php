@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->integer('hours')->nullable();
-           /* $table->text('description')->nullable();
-            $table->foreignId('course_id')->onDelete('cascade')->onUpdate('cascade')->onUpdate('cascade');*/
+            $table->text('description')->nullable();
+            $table->foreignId('course_id')->onDelete('cascade')->onUpdate('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }
