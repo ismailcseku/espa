@@ -1294,7 +1294,7 @@
                                 </div>
                             </div>
                             <div class="item">
-                                <div class="text" style="display: flex;justify-content:space-between;">
+                                <div class="text" style="display: flex;justify-content:space-between;padding-left:4px;padding-right:4px;">
                                     <p> ADMISSION</p>
                                     <span> <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
                                             viewBox="0 0 24 24" stroke="currentColor">
@@ -1468,7 +1468,7 @@
                                 </div>
                             </div>
                             <div class="item">
-                                <div class="text" style="display: flex;justify-content:space-between;">
+                                <div class="text" style="display: flex;justify-content:space-between;padding-left:4px;padding-right:4px;">
                                     <p> PROGRAMME</p>
                                     <span> <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
                                             viewBox="0 0 24 24" stroke="currentColor">
@@ -1530,7 +1530,7 @@
                                 </div>
                             </div>
                             <div class="item">
-                                <div class="text" style="display: flex;justify-content:space-between;">
+                                <div class="text" style="display: flex;justify-content:space-between;padding-left:4px;padding-right:4px;">
                                     <p>CARRIÈRE</p>
                                     <span> <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
                                             viewBox="0 0 24 24" stroke="currentColor">
@@ -1616,7 +1616,7 @@
                             </div>
                       
                             <div class="item">
-                                <div class="text" style="display: flex;justify-content:space-between;">
+                                <div class="text" style="display: flex;justify-content:space-between;padding-left:4px;padding-right:4px;">
                                     <p> DOCUMENTS</p>
                                     <span> <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
                                             viewBox="0 0 24 24" stroke="currentColor">
@@ -1641,7 +1641,7 @@
                                 </div>
                             </div>
                             <div class="item">
-                                <div class="text" style="display: flex;justify-content:space-between;">
+                                <div class="text" style="display: flex;justify-content:space-between;padding-left:4px;padding-right:4px;">
                                     <p> TÉMOIGNAGES</p>
                                     <span> <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
                                             viewBox="0 0 24 24" stroke="currentColor">
