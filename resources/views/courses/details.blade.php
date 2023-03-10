@@ -1252,7 +1252,7 @@
                                         d="M19 9l-7 7-7-7" />
                                 </svg>
                                 <div class="hidden-box">
-                                    <p> {!! $course->description !!}</p>
+                                    <div style="text-align:justify;"> {!! $course->description !!}</div>
                                     <ul>
                                         @if ($course->duration)
                                             <li> <i
