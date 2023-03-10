@@ -1093,13 +1093,14 @@
                         <style>
                             @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
 
-                            .accordion1 .item ,  .comment-date {
+                            .accordion1 .item,
+                            .comment-date {
                                 font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
                                 color: #1f3344;
                                 font-size: 16px;
-                                
+
                             }
-                            
+
 
                             @media screen and (min-width: 600px) {
                                 #mobile_pade {
@@ -1166,7 +1167,7 @@
                                 background-color: white;
                                 cursor: pointer;
                                 display: grid;
-                                grid-template-columns: auto 1fr auto;
+
                                 column-gap: 24px;
                                 row-gap: 32px;
                                 border-top: 4px solid transparent;
@@ -1184,7 +1185,7 @@
 
                             .accordion1 .item.open .text {
                                 color: #F88147;
-                                
+
                             }
 
 
@@ -1220,11 +1221,11 @@
                             }
 
                             .accordion1 .hidden-box {
-                                grid-column: 2;
+                                grid-column: 1;
                                 width: 100%;
                                 display: none;
                                 transition: display 0.5 ease-in;
-                               
+
                             }
 
                             .accordion1 .hidden-box p {
@@ -1242,15 +1243,18 @@
                             }
                         </style>
                         <!-- initial open : add open class to item -->
-                        <div class="accordion1 mr-10 ml-10" id="mobile_pade" >
+                        <div class="accordion1 mr-10 ml-10" id="mobile_pade">
                             <div class="item">
-                                <p class="number"></p>
-                                <p class="text">DESCRIPTION</p>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
-                                </svg>
+                                <div class="text" style="display: flex;justify-content:space-between;">
+                                    <p> DESCRIPTION</p>
+                                    <span> <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7" />
+                                        </svg></span>
+                                </div>
+                               
+
                                 <div class="hidden-box" style="margin-top:-30px;">
                                     <div> {!! $course->description !!}</div>
                                     <ul>
@@ -1265,7 +1269,8 @@
                                         @if ($course->location->name)
                                             <li><i
                                                     class="pe-7s-global font-26 vertical-align-middle text-theme-colored2  mr-10"></i>
-                                                <span class="font-16" style="font-weight:bold;color:#1f3344;"> Lieu : </span>
+                                                <span class="font-16" style="font-weight:bold;color:#1f3344;"> Lieu :
+                                                </span>
                                                 {{ $course->location->name }}
                                             </li>
                                         @endif
@@ -1288,14 +1293,14 @@
                                 </div>
                             </div>
                             <div class="item">
-                                <p class="number"></p>
-
-                                <p class="text">ADMISSION</p>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
-                                </svg>
+                                <div class="text" style="display: flex;justify-content:space-between;">
+                                    <p> ADMISSION</p>
+                                    <span> <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7" />
+                                        </svg></span>
+                                </div>
                                 <div class="hidden-box">
                                     <div class="row" style="margin-top:-50px;">
                                         <div class="col-md-12">
@@ -1462,13 +1467,14 @@
                                 </div>
                             </div>
                             <div class="item">
-                                <p class="number"></p>
-                                <p class="text">PROGRAMME</p>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
-                                </svg>
+                                <div class="text" style="display: flex;justify-content:space-between;">
+                                    <p> PROGRAMME</p>
+                                    <span> <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7" />
+                                        </svg></span>
+                                </div>
                                 <div class="hidden-box">
 
                                     <div class="row" style="margin-top:-50px;">
@@ -1490,12 +1496,14 @@
                                                                             <div class="media-heading comment-heading"
                                                                                 style="display:flex; justify-content:space-between;">
                                                                                 @if ($program->title)
-                                                                                    <p class="" style="font-weight:bold;text-decoration:underline; font-size:16px;">
+                                                                                    <p class=""
+                                                                                        style="font-weight:bold;text-decoration:underline; font-size:16px;">
                                                                                         {{ $program->title }}
                                                                                     </p>
                                                                                 @endif
                                                                                 @if ($program->hours)
-                                                                                    <p style="margin-right:7%;font-weight:bold;text-decoration:underline; font-size:16px;">
+                                                                                    <p
+                                                                                        style="margin-right:7%;font-weight:bold;text-decoration:underline; font-size:16px;">
                                                                                         {{ $program->hours }} heures
                                                                                     </p>
                                                                                 @endif
@@ -1521,15 +1529,16 @@
                                 </div>
                             </div>
                             <div class="item">
-                                <p class="number"></p>
-                                <p class="text">CARRIÈRE</p>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
-                                </svg>
+                                <div class="text" style="display: flex;justify-content:space-between;">
+                                    <p> CARRIÈRE</p>
+                                    <span> <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7" />
+                                        </svg></span>
+                                </div>
                                 <div class="hidden-box">
-                                   
+
                                     <div class="row" style="margin-top:-50px;">
                                         <div class="row">
                                             <div class="col-md-12">
@@ -1550,7 +1559,7 @@
                                                                                 style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                                 Diplôme </h5>
 
-                                                                            <div class="comment-date font-16" >
+                                                                            <div class="comment-date font-16">
                                                                                 {!! $course->grade !!}</div>
                                                                         </div>
                                                                     </div>
@@ -1575,7 +1584,7 @@
                                                                                 Profil / Compétences à acquérir
                                                                             </h5>
 
-                                                                            <div class="comment-date font-16" >
+                                                                            <div class="comment-date font-16">
                                                                                 {!! $course->profile !!}</div>
                                                                         </div>
                                                                     </div>
@@ -1599,7 +1608,7 @@
                                                                                 style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                                 Débouchés </h5>
 
-                                                                            <div class="comment-date font-16" >
+                                                                            <div class="comment-date font-16">
                                                                                 {!! $course->opportunity !!}</div>
                                                                         </div>
                                                                     </div>
@@ -1622,13 +1631,14 @@
                                 </div>
                             </div>
                             <div class="item">
-                                <p class="number"></p>
-                                <p class="text">DOCUMENTS</p>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
-                                </svg>
+                                <div class="text" style="display: flex;justify-content:space-between;">
+                                    <p> DOCUMENTS</p>
+                                    <span> <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7" />
+                                        </svg></span>
+                                </div>
                                 <div class="hidden-box">
                                     <div class="row" style="margin-top:-50px;">
                                         @foreach ($downloads as $download)
@@ -1646,13 +1656,14 @@
                                 </div>
                             </div>
                             <div class="item">
-                                <p class="number"></p>
-                                <p class="text">TÉMOIGNAGES</p>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
-                                </svg>
+                                <div class="text" style="display: flex;justify-content:space-between;">
+                                    <p> TÉMOIGNAGES</p>
+                                    <span> <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7" />
+                                        </svg></span>
+                                </div>
                                 <div class="hidden-box font-size" style="margin-top:-30px;">
                                     {!! $courses[0]->review !!}
                                 </div>
@@ -1990,8 +2001,7 @@
                         <div class="latest-posts">
                             @foreach ($latest_blog as $item)
                                 <article class="post media-post clearfix pb-0 mb-10">
-                                    <a class="post-thumb"
-                                        href="{{ route('blog-actualités.show', $item->id) }}"><img
+                                    <a class="post-thumb" href="{{ route('blog-actualités.show', $item->id) }}"><img
                                             src="{{ url('storage') }}/{{ $item->photo }}" width="80px"
                                             height="55px" style="object-fit:cover;"
                                             alt="{{ $item->title }}"></a>
