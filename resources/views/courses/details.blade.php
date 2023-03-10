@@ -634,12 +634,12 @@
                                                                 <div class="accordion-header "
                                                                     style="display:flex; justify-content:space-between;font-weight:bold;">
                                                                     @if ($program->title)
-                                                                        <p class="">
+                                                                        <p class="" style="text-decoration:underline;">
                                                                             {{ $program->title }}
                                                                         </p>
                                                                     @endif
                                                                     @if ($program->hours)
-                                                                        <p style="margin-right:7%;">
+                                                                        <p style="margin-right:7%; text-decoration:underline;">
                                                                             {{ $program->hours }} heures</p>
                                                                     @endif
                                                                 </div>
