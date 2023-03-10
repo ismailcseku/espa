@@ -702,7 +702,7 @@
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="blog-posts single-post">
-                                                            <div class="comments-area">
+                                                            <div class="comments-area" style="font-size:16px;">
                                                                 @if ($course->grade)
                                                                     <ul class="comment-list">
                                                                         <li>
@@ -727,7 +727,7 @@
                                                                     </ul>
                                                                 @endif
                                                             </div>
-                                                            <div class="comments-area">
+                                                            <div class="comments-area" style="font-size:16px;">
                                                                 @if ($course->profile)
                                                                     <ul class="comment-list">
                                                                         <li>
@@ -753,7 +753,7 @@
                                                                 @endif
                                                                 </ul>
                                                             </div>
-                                                            <div class="comments-area">
+                                                            <div class="comments-area" style="font-size:16px;">
                                                                 @if ($course->opportunity)
                                                                     <ul class="comment-list">
                                                                         <li>
@@ -1449,7 +1449,7 @@
                                             <div class="col-md-12">
                                                 <div class="blog-posts single-post">
                                                     @foreach ($programs as $program)
-                                                        <div class="comments-area">
+                                                        <div class="comments-area" style="font-size:16px;">
 
                                                             <ul class="comment-list">
                                                                 <li>
