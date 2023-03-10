@@ -460,7 +460,7 @@
                                                                                 <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
                                                                                     style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                                     Prérequis et admission </h5>
-                                                                                <div class="comment-date">
+                                                                                <div class="comment-date" style="font-size:16px;">
                                                                                     {!! $course->admission !!}</div>
                                                                             </div>
                                                                         </div>
@@ -486,7 +486,7 @@
                                                                                 <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
                                                                                     style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                                     Dossier </h5>
-                                                                                <div class="comment-date">
+                                                                                <div class="comment-date" style="font-size:16px;">
                                                                                     {!! $course->dossier !!}</div>
 
 
@@ -514,7 +514,7 @@
                                                                                 <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
                                                                                     style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                                     Candidature </h5>
-                                                                                <div class="comment-date">
+                                                                                <div class="comment-date" style="font-size:16px;">
                                                                                     {!! $course->candidature !!}</div>
                                                                             </div>
                                                                         </div>
@@ -540,7 +540,7 @@
                                                                                 <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
                                                                                     style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                                     Date limite </h5>
-                                                                                <div class="comment-date">
+                                                                                <div class="comment-date" style="font-size:16px;">
                                                                                     {{ $course->datelimite }}</div>
                                                                             </div>
                                                                         </div>
@@ -566,7 +566,7 @@
                                                                                 <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
                                                                                     style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                                     Modalité de selection </h5>
-                                                                                <div class="comment-date">
+                                                                                <div class="comment-date" style="font-size:16px;">
                                                                                     {!! $course->selection !!}</div>
                                                                             </div>
                                                                         </div>
@@ -592,7 +592,7 @@
                                                                                 <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
                                                                                     style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                                     Prochaine rentrée </h5>
-                                                                                <div class="comment-date">
+                                                                                <div class="comment-date" style="font-size:16px;">
                                                                                     @php
                                                                                         $getYears = date('m-Y', strtotime($course->daterentre));
                                                                                         
