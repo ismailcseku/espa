@@ -1256,7 +1256,7 @@
                                 </div>
                                
 
-                                <div class="hidden-box" style="margin-top:-30px;">
+                                <div class="hidden-box" style="margin-top:-30px;padding-left:10px;padding-right:10px;">
                                     <div> {!! $course->description !!}</div>
                                     <ul>
                                         @if ($course->duration)
