@@ -410,7 +410,7 @@
                                                 @if ($course->duration)
                                                     <li> <i
                                                             class="pe-7s-timer font-26 vertical-align-middle text-theme-colored2 mr-10 "></i>
-                                                        <span class=" font-16 ">
+                                                        <span class=" font-16 "  style="color:#1f3344;font-weight:bold;">
                                                             Durée :</span> {{ $course->duration }} Mois
                                                     </li>
                                                 @endif
@@ -418,21 +418,21 @@
                                                 @if ($course->location->name)
                                                     <li><i
                                                             class="pe-7s-global font-26 vertical-align-middle text-theme-colored2  mr-10"></i>
-                                                        <span class="font-16"> Lieu : </span>
+                                                        <span class="font-16"  style="color:#1f3344;font-weight:bold;"> Lieu : </span>
                                                         {{ $course->location->name }}
                                                     </li>
                                                 @endif
                                                 @if ($course->modalitiy_name)
                                                     <li> <i
                                                             class="pe-7s-prev font-26 vertical-align-middle text-theme-colored2 mr-10"></i>
-                                                        <span class="font-16"> Rythme
+                                                        <span class="font-16"  style="color:#1f3344;font-weight:bold;"> Rythme
                                                             : </span>{{ $course->modalitiy_name }}
                                                     </li>
                                                 @endif
                                                 @if ($course->languages_name)
                                                     <li><i
                                                             class="pe-7s-notebook  font-26 vertical-align-middle text-theme-colored2 mr-10 "></i>
-                                                        <span class="font-16">Langue
+                                                        <span class="font-16"  style="color:#1f3344;font-weight:bold;">Langue
                                                             :</span> {{ $course->languages_name }}
                                                     </li>
                                                 @endif
