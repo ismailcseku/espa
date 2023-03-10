@@ -396,6 +396,7 @@
                                         .tab-content {
                                             font-family: Raleway,"Helvetica Neue",Helvetica,Arial,sans-serif;
                                             color:#1f3344;
+                                            font-size:16px;
                                         }
                                     </style>
 
