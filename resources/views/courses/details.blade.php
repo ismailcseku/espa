@@ -702,7 +702,7 @@
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="blog-posts single-post">
-                                                            <div class="comments-area" style="font-size:16px;">
+                                                            <div class="comments-area" >
                                                                 @if ($course->grade)
                                                                     <ul class="comment-list">
                                                                         <li>
@@ -719,7 +719,7 @@
                                                                                         style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                                         Diplôme </h5>
 
-                                                                                    <div class="comment-date">
+                                                                                    <div class="comment-date" style="font-size:16px;">
                                                                                         {!! $course->grade !!}</div>
                                                                                 </div>
                                                                             </div>
@@ -727,7 +727,7 @@
                                                                     </ul>
                                                                 @endif
                                                             </div>
-                                                            <div class="comments-area" style="font-size:16px;">
+                                                            <div class="comments-area" >
                                                                 @if ($course->profile)
                                                                     <ul class="comment-list">
                                                                         <li>
@@ -745,7 +745,7 @@
                                                                                         Profil / Compétences à acquérir
                                                                                     </h5>
 
-                                                                                    <div class="comment-date">
+                                                                                    <div class="comment-date" style="font-size:16px;">
                                                                                         {!! $course->profile !!}</div>
                                                                                 </div>
                                                                             </div>
@@ -753,7 +753,7 @@
                                                                 @endif
                                                                 </ul>
                                                             </div>
-                                                            <div class="comments-area" style="font-size:16px;">
+                                                            <div class="comments-area" >
                                                                 @if ($course->opportunity)
                                                                     <ul class="comment-list">
                                                                         <li>
@@ -770,7 +770,7 @@
                                                                                         style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                                         Débouchés </h5>
 
-                                                                                    <div class="comment-date">
+                                                                                    <div class="comment-date" style="font-size:16px;">
                                                                                         {!! $course->opportunity !!}</div>
                                                                                 </div>
                                                                             </div>
