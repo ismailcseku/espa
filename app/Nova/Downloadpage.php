@@ -52,6 +52,7 @@ class Downloadpage extends Resource
                 'agri-business' => 'agri-business',
                 'about' => 'À propos',
                 'mot-du-directeur'=>'Mot du directeur',
+                'campus'=>'vie estudiantine',
               
             ]) ,  
             Text::make('Nom du document','filename'),          

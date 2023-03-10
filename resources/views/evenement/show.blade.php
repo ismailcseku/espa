@@ -149,7 +149,7 @@
                                 @if (count($evenementPages) > 0)
                                     <h5>Téléchargement :</h5>
                                     @foreach ($evenementPages as $item)
-                                        <p><a style="text-decoration:underline;font-weight:normal;" href="{{ url('storage') }}/{{ $item->file }}"
+                                        <p><a style="text-decoration:underline;font-weight:bold;color:#1f3344;" href="{{ url('storage') }}/{{ $item->file }}"
                                                 target='_blank'>{{ $item->filename }}</a></p>
                                     @endforeach
                                 @endif
@@ -205,7 +205,7 @@
                 <div class="row mt-60">
                     <div class="col-md-12">
                         <h4 class="mt-0">{{ $evenements->title }}</h4>
-                        <p>{{ $evenements->description }}</p>
+                        <p>{!! $evenements->description !!}</p>
                     </div>
 
                 </div>

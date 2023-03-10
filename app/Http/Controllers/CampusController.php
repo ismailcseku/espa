@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Media;
 use App\Models\Campus;
+use App\Models\Downloadpage;
 use Illuminate\Http\Request;
 
 class CampusController extends Controller
@@ -18,6 +19,7 @@ class CampusController extends Controller
     {
         $datas=Campus::latest('id')->limit(1)->get();
         $medias=Media::all();
-        return view('static.campus')->with(['datas'=>$datas,'medias'=>$medias]);
+        $downloads=Downloadpage::where('pagename','campus')->get();
+        return view('static.campus')->with(['datas'=>$datas,'medias'=>$medias,'downloads'=>$downloads]);
     }
 }

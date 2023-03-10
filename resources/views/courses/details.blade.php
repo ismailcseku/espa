@@ -390,8 +390,16 @@
 
 
 
+                                    <style>
+                                        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
 
-                                    <div id="myTabContent" class=" tab-content">
+                                        .tab-content {
+                                            font-family: Raleway,"Helvetica Neue",Helvetica,Arial,sans-serif;
+                                            color:#1f3344;
+                                        }
+                                    </style>
+
+                                    <div id="myTabContent" class="tab-content">
                                         <div class="tab-pane fade in active" id="tab1">
                                             <h4 class="line-bottom-theme-colored2 mb-15">Description de la formation
                                             </h4>
@@ -1120,7 +1128,6 @@
 
                             .accordion1 {
                                 max-width: 700px;
-                                margin: 100px auto;
 
                                 display: flex;
                                 flex-direction: column;
@@ -1130,8 +1137,7 @@
                             .accordion1 .item {
                                 box-shadow: 0 0 32px #F8814710;
                                 background-color: white;
-                                padding-top: 24px;
-                                padding-bottom: 24px;
+
                                 cursor: pointer;
                                 display: grid;
                                 grid-template-columns: auto 1fr auto;
@@ -1163,11 +1169,12 @@
                             .accordion1 .text {
                                 font-size: 24px;
                                 font-weight: 500;
-                                color:#1f3344;
-                                
+                                color: #1f3344;
+
                             }
-                            .comments-area{
-                                color:#1f3344;
+
+                            .comments-area {
+                                color: #1f3344;
                             }
 
                             .accordion1 .item.open .text {
@@ -1194,14 +1201,12 @@
                             .accordion1 .hidden-box p {
                                 line-height: 1.6;
                                 margin-bottom: 24px;
-                                
+
                             }
 
-                            .accordion1 .hidden-box h5 {
-                                
-                            }
+                            .accordion1 .hidden-box h5 {}
 
-                            .accordion1 .hidden-box ul {                               
+                            .accordion1 .hidden-box ul {
                                 margin-left: 18px;
                                 display: flex;
                                 flex-direction: column;
