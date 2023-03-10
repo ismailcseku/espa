@@ -147,9 +147,9 @@
                             </li>
                             <li>
                                 @if (count($evenementPages) > 0)
-                                    <h5>Téléchargement :</h5>
+                                    <h5 style="font-weight:bold;color:#F88147;font-size:18px;" >Téléchargement :</h5>
                                     @foreach ($evenementPages as $item)
-                                        <p><a style="text-decoration:underline;font-weight:bold;color:#1f3344;" href="{{ url('storage') }}/{{ $item->file }}"
+                                        <p><a style="text-decoration:underline;color:#1f3344;" href="{{ url('storage') }}/{{ $item->file }}"
                                                 target='_blank'>{{ $item->filename }}</a></p>
                                     @endforeach
                                 @endif
