@@ -1225,7 +1225,7 @@
                                 width: 100%;
                                 display: none;
                                 transition: display 0.5 ease-in;
-                                padding-left:1.8px;
+                                padding-left:5px;
 
                             }
 
