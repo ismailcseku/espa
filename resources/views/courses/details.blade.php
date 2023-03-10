@@ -1246,7 +1246,7 @@
                         <!-- initial open : add open class to item -->
                         <div class="accordion1 mr-10 ml-10" id="mobile_pade">
                             <div class="item">
-                                <div class="text" style="display: flex;justify-content:space-between; padding-left:20px;padding-right:20px;">
+                                <div class="text" style="display: flex;justify-content:space-between; padding-left:14px;padding-right:14px;">
                                     <p> DESCRIPTION</p>
                                     <span> <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
                                             viewBox="0 0 24 24" stroke="currentColor">
