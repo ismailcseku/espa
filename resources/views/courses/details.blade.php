@@ -618,7 +618,8 @@
 
                                         <div class="tab-pane fade" id="tab4">
                                             <h4 class="line-bottom-theme-colored2 mb-20">Témoignages</h4>
-                                            {!! $courses[0]->review !!}
+                                            <div style="font-size:16px;">
+                                                {!! $courses[0]->review !!} </div>
                                         </div>
 
                                         <div class="tab-pane fade" id="tab5">
@@ -631,7 +632,7 @@
                                                             <div class="accordion-item active">
 
                                                                 <div class="accordion-header "
-                                                                    style="display:flex; justify-content:space-between;">
+                                                                    style="display:flex; justify-content:space-between;font-weight:bold;">
                                                                     @if ($program->title)
                                                                         <p class="">
                                                                             {{ $program->title }}
@@ -643,7 +644,7 @@
                                                                     @endif
                                                                 </div>
                                                                 <div class="accordion-body">
-                                                                    <div class="accordion-body-content text-white">
+                                                                    <div class="accordion-body-content text-white" style="font-size:16px;">
                                                                         {!! $program->description !!}
                                                                     </div>
                                                                 </div>
