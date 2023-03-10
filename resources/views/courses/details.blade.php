@@ -1156,7 +1156,6 @@
 
                             .accordion1 {
                                 max-width: 700px;
-
                                 display: flex;
                                 flex-direction: column;
                                 gap: 24px;
@@ -1165,7 +1164,6 @@
                             .accordion1 .item {
                                 box-shadow: 0 0 32px #F8814710;
                                 background-color: white;
-
                                 cursor: pointer;
                                 display: grid;
                                 grid-template-columns: auto 1fr auto;
@@ -1186,6 +1184,7 @@
 
                             .accordion1 .item.open .text {
                                 color: #F88147;
+                                
                             }
 
 
@@ -1222,14 +1221,15 @@
 
                             .accordion1 .hidden-box {
                                 grid-column: 2;
+                                width: 100%;
                                 display: none;
                                 transition: display 0.5 ease-in;
+                               
                             }
 
                             .accordion1 .hidden-box p {
                                 line-height: 1.6;
                                 margin-bottom: 24px;
-
                             }
 
                             .accordion1 .hidden-box h5 {}
@@ -1242,7 +1242,7 @@
                             }
                         </style>
                         <!-- initial open : add open class to item -->
-                        <div class="accordion1 mr-10 ml-10" id="mobile_pade">
+                        <div class="accordion1 mr-10 ml-10" id="mobile_pade" >
                             <div class="item">
                                 <p class="number"></p>
                                 <p class="text">DESCRIPTION</p>
@@ -1251,8 +1251,8 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M19 9l-7 7-7-7" />
                                 </svg>
-                                <div class="hidden-box">
-                                    <div style="text-align:justify;"> {!! $course->description !!}</div>
+                                <div class="hidden-box" style="margin-top:-30px;">
+                                    <div> {!! $course->description !!}</div>
                                     <ul>
                                         @if ($course->duration)
                                             <li> <i
@@ -1297,7 +1297,7 @@
                                         d="M19 9l-7 7-7-7" />
                                 </svg>
                                 <div class="hidden-box">
-                                    <div class="row">
+                                    <div class="row" style="margin-top:-50px;">
                                         <div class="col-md-12">
                                             <div class="blog-posts single-post">
                                                 @if (isset($course->admission))
@@ -1471,7 +1471,7 @@
                                 </svg>
                                 <div class="hidden-box">
 
-                                    <div class="row">
+                                    <div class="row" style="margin-top:-50px;">
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="blog-posts single-post">
@@ -1530,7 +1530,7 @@
                                 </svg>
                                 <div class="hidden-box">
                                    
-                                    <div class="row">
+                                    <div class="row" style="margin-top:-50px;">
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="blog-posts single-post">
@@ -1630,7 +1630,7 @@
                                         d="M19 9l-7 7-7-7" />
                                 </svg>
                                 <div class="hidden-box">
-                                    <div class="row">
+                                    <div class="row" style="margin-top:-50px;">
                                         @foreach ($downloads as $download)
                                             <div class="col-md-3">
 
@@ -1653,7 +1653,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M19 9l-7 7-7-7" />
                                 </svg>
-                                <div class="hidden-box font-size">
+                                <div class="hidden-box font-size" style="margin-top:-30px;">
                                     {!! $courses[0]->review !!}
                                 </div>
                             </div>
