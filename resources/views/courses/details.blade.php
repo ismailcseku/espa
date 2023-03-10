@@ -1302,7 +1302,7 @@
                                                 d="M19 9l-7 7-7-7" />
                                         </svg></span>
                                 </div>
-                                <div class="hidden-box">
+                                <div class="hidden-box" style="margin-left:-12px;">
                                     <div class="row" style="margin-top:-50px;">
                                         <div class="col-md-12">
                                             <div class="blog-posts single-post">
