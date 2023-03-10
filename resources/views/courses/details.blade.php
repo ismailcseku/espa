@@ -1531,106 +1531,90 @@
                             </div>
                             <div class="item">
                                 <div class="text" style="display: flex;justify-content:space-between;">
-                                    <p> CARRIÈRE</p>
+                                    <p>CARRIÈRE</p>
                                     <span> <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
                                             viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M19 9l-7 7-7-7" />
                                         </svg></span>
                                 </div>
-                                <div class="hidden-box">
-
+                                <div class="hidden-box" style="margin-left:-12px;">
                                     <div class="row" style="margin-top:-50px;">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="blog-posts single-post">
+                                        <div class="col-md-12">
+                                            <div class="blog-posts single-post">
+                                                @if ($course->grade)
                                                     <div class="comments-area">
-                                                        @if ($course->grade)
-                                                            <ul class="comment-list">
-                                                                <li>
-                                                                    <div class="media comment-author"> <a
-                                                                            class="media-left pull-left flip"
-                                                                            href="#"><img class="img-thumbnail"
-                                                                                src="images/blog/comment1.jpg"
-                                                                                alt=""></a>
-                                                                        <div class="media-body">
+                                                        <ul class="comment-list">
 
-
-                                                                            <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
-                                                                                style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
-                                                                                Diplôme </h5>
-
-                                                                            <div class="comment-date font-16">
-                                                                                {!! $course->grade !!}</div>
-                                                                        </div>
+                                                            <li>
+                                                                <div class="media comment-author"> <a
+                                                                        class="media-left pull-left flip"
+                                                                        href="#"><img class="img-thumbnail"
+                                                                            src="images/blog/comment1.jpg"
+                                                                            alt=""></a>
+                                                                    <div class="media-body">
+                                                                        <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
+                                                                            style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
+                                                                            Diplôme</h5>
+                                                                        <div class="comment-date font-16">
+                                                                            {!! $course->grade !!}</div>
                                                                     </div>
-                                                                </li>
-                                                            </ul>
-                                                        @endif
-                                                    </div>
-                                                    <div class="comments-area">
-                                                        @if ($course->profile)
-                                                            <ul class="comment-list">
-                                                                <li>
-                                                                    <div class="media comment-author"> <a
-                                                                            class="media-left pull-left flip"
-                                                                            href="#"><img class="img-thumbnail"
-                                                                                src="images/blog/comment1.jpg"
-                                                                                alt=""></a>
-                                                                        <div class="media-body">
-
-
-                                                                            <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
-                                                                                style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
-                                                                                Profil / Compétences à acquérir
-                                                                            </h5>
-
-                                                                            <div class="comment-date font-16">
-                                                                                {!! $course->profile !!}</div>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-                                                        @endif
+                                                                </div>
+                                                            </li>
                                                         </ul>
                                                     </div>
-                                                    <div class="comments-area">
-                                                        @if ($course->opportunity)
-                                                            <ul class="comment-list">
-                                                                <li>
-                                                                    <div class="media comment-author"> <a
-                                                                            class="media-left pull-left flip"
-                                                                            href="#"><img class="img-thumbnail"
-                                                                                src="images/blog/comment1.jpg"
-                                                                                alt=""></a>
-                                                                        <div class="media-body">
+                                                @endif
+                                                @if ($course->profile)
+                                                <div class="comments-area">
+                                                    <ul class="comment-list">
 
-
-                                                                            <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
-                                                                                style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
-                                                                                Débouchés </h5>
-
-                                                                            <div class="comment-date font-16">
-                                                                                {!! $course->opportunity !!}</div>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-
-
-
-                                                            </ul>
-                                                        @endif
-                                                    </div>
-
+                                                        <li>
+                                                            <div class="media comment-author"> <a
+                                                                    class="media-left pull-left flip"
+                                                                    href="#"><img class="img-thumbnail"
+                                                                        src="images/blog/comment1.jpg"
+                                                                        alt=""></a>
+                                                                <div class="media-body">
+                                                                    <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
+                                                                        style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
+                                                                        Profil / Compétences à acquérir</h5>
+                                                                    <div class="comment-date font-16">
+                                                                        {!! $course->profile !!}</div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
                                                 </div>
+                                            @endif
+                                            @if ($course->opportunity)
+                                            <div class="comments-area">
+                                                <ul class="comment-list">
+
+                                                    <li>
+                                                        <div class="media comment-author"> <a
+                                                                class="media-left pull-left flip"
+                                                                href="#"><img class="img-thumbnail"
+                                                                    src="images/blog/comment1.jpg"
+                                                                    alt=""></a>
+                                                            <div class="media-body">
+                                                                <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
+                                                                    style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
+                                                                    Débouchés </h5>
+                                                                <div class="comment-date font-16">
+                                                                    {!! $course->opportunity !!}</div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        @endif
+                                        
                                             </div>
                                         </div>
-
-
                                     </div>
-
-
                                 </div>
                             </div>
+                      
                             <div class="item">
                                 <div class="text" style="display: flex;justify-content:space-between;">
                                     <p> DOCUMENTS</p>
