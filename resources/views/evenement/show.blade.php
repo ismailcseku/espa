@@ -219,7 +219,7 @@
                 <div class="section-title">
                     <div class="row">
                         <div class="col-md-6 col-md-offset-3 text-center">
-                            <h3 class="title text-white">Je suis interessé(e)</h3>
+                            <h3 class="title text-white pt-10" style="margin-bottom:-6px;">Je suis interessé(e)</h3>
                         </div>
                     </div>
                 </div>
