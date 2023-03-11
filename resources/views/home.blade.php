@@ -19,7 +19,7 @@
                 </button>
             </div>
 
-            <ul data-slides>
+            <ul  data-slides>
                 @foreach ($slides as $slide)
                     @if ($loop->first)
                         <li class="slide" data-active>

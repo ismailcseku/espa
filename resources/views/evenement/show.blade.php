@@ -48,7 +48,7 @@
             </div>
         </section>
         <section class="mb-40">
-            <div class="container " style="background-color:rgb(187, 187, 187);">
+            <div class="container " style="background-color:#F88147;">
                 <div class="row text-center">
                     <div class="col-md-12">
                         @php
@@ -65,7 +65,7 @@
                         <input type="hidden" name="hour" value='{{ $hour }}' id="hour">
                         <input type="hidden" name="minute" value='{{ $minute }}' id="minute">
                         <input type="hidden" name="second" value='{{ $second }}' id="second">
-                        <h2 id="count_down_date" class=" basic-coupon-clock" style="color:#1f3344;"></h2>
+                        <h2 id="count_down_date" class=" basic-coupon-clock" style="color:white; font-family:'Courier New', Courier, monospace;font-weight:bold;"></h2>
 
                         <!-- Final Countdown Timer Script -->
                         <script language="javascript" type="text/javascript">
@@ -219,7 +219,7 @@
                 <div class="section-title">
                     <div class="row">
                         <div class="col-md-6 col-md-offset-3 text-center">
-                            <h3 class="title text-white">Inscription</h3>
+                            <h3 class="title text-white">Je suis interessé(e)</h3>
                         </div>
                     </div>
                 </div>
@@ -286,7 +286,7 @@
                                     <div class="form-group text-center">
 
                                         <button class="btn btn-white btn-theme-colored2 btn-sm btn-block mt-20 pt-10 pb-10"
-                                            type="submit">Envoyer</button>
+                                            type="submit">ENVOYER</button>
                                     </div>
                                 </div>
 
