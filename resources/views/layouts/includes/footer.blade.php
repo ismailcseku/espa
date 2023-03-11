@@ -87,7 +87,42 @@
             </div>
         </div>
     </div>
-    <div class="footer-bottom" data-bg-color="#1f3344">
+    <section data-bg-color="#1f3344" >
+        <div class="container pt-80 pb-90">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <a href="https://www.youtube.com/watch?v=kt-4lJs_8fE" data-lightbox-gallery="youtube-video"><img
+                            src="images/play-button/s11.png" alt=""></a>
+                    <h3 class="text-white font-38 font-weight-700 mt-10 mb-0">Inscrivez-vous <span
+                            class="text-theme-colored2"> à notre newsletter</span> </h3>
+                    Rejoignez-nous
+                    @if (session()->has('success'))
+                        <h6 class='alert alert-success' role="alert">
+                            Felicitation !! Vous avez êtes désormais abonnée.
+                        </h6>
+                    @endif
+                    <form  id="mailchimp-subscription-form2" class="newsletter-form max-width-535 mt-10"
+                        action="{{ route('newsletter.store') }}" method="post">
+                        @csrf
+                        <label for="mce-EMAIL"></label>
+                        <div class="input-group">
+                            <input type="email" id="mce-EMAIL" data-height="45px" class="form-control input-lg"
+                                placeholder="Votre email" name="email" value="{{ old('email') }}">
+                            @if ($errors->has('email'))
+                                <span class="text-danger">{{ $errors->first('email') }}</span>
+                            @endif
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-colored btn-theme-colored2 btn-lg m-0"
+                                    data-height="45px">Soumettre</button>
+                            </span>
+                        </div>
+                    </form>
+    
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="footer-bottom">
         <div class="container pt-20 pb-20">
             <div class="row">
 
@@ -123,6 +158,7 @@
         </div>
     </div>
 </footer>
+
 <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
 
 <style>

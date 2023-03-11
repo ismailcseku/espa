@@ -432,9 +432,9 @@
     </section>
 
     <!-- Divider: Funfact -->
-    <section  style="background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(31,51,68,1) 58%, rgba(40,40,46,1) 100%);">
+    <section  >
         <div class="container pt-80 pb-90 pt-md-70 pb-md-50 pb-sm-50">
-            <div class="row mt-30 text-center">
+            <div class="row mt-30 text-center" style="background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(31,51,68,1) 58%, rgba(40,40,46,1) 100%);">
                 @foreach ($barres as $barre)
                     <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
                         <div class="funfact">
