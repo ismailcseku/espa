@@ -1662,6 +1662,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-sm-12 col-md-3 form1 mr-10 ml-10" style="background-color:  #1f3344;">
                             <div class="sidebar sidebar-left mt-sm-30 ml-30 ml-sm-0">
                                 <div class="main-content">
@@ -2262,7 +2263,7 @@
 
     });
 
-    const items = document.querySelectorAll('.item');
+    const items = document.querySelectorAll(".item");
 
       items.forEach((item) => {
         item.addEventListener('click', () => {
