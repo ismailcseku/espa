@@ -37,11 +37,11 @@
                 <div class="row clearfix">
                     <div class="col-xs-12 col-sm-6 col-md-6">
                         <ul>
-                           
+
                             <li><a href="{{ route('course.index') }}"
                                     style="color:#1f3344;font-weight:normal;">Formations</a></li>
-                            
-                            
+
+
                             <li><a href="{{ route('media.index') }}"
                                     style="color:#1f3344;font-weight:normal;">Galerie</a></li>
                             <li><a href="{{ route('video.index') }}"
@@ -62,14 +62,14 @@
                         </h6>
                     @endif
                     <div class="input-group">
-                        <input type="email" id="mce-EMAIL" data-height="45px" class="form-control input-lg"
+                        <input type="email" id="mce-EMAIL" data-height="45px" class="form-control input-xs"
                             placeholder="Votre email" name="email" value="{{ old('email') }}">
                         @if ($errors->has('email'))
                             <span class="text-danger">{{ $errors->first('email') }}</span>
                         @endif
                         <span class="input-group-btn">
                             <button type="submit" class="btn btn-colored btn-theme-colored2 btn-sm m-0"
-                                data-height="45px">Soumettre</button>
+                                data-height="45px">OK</button>
                         </span>
                     </div>
                 </form>
@@ -115,10 +115,18 @@
                         <li class="clearfix" style="color:#1f3344;"> <span> Dim : </span>
                             <div class="value pull-right bg-theme-colored2 text-white closed">Fermé</div>
                         </li>
+
+                        @if (count($logo_url) > 0)
+                            @foreach ($logo_url as $item)
+                                <a class="menuzord-brand  flip mt-20 mt-sm-10 mb-sm-20 pt-5" href="/"><img
+                                        src="{{ url('storage') }}/{{ $item->logo }}" alt=""></a>
+                            @endforeach
+                        @endif
+
                     </ul>
                 </div>
             </div>
-   
+
         </div>
 
     </div>
