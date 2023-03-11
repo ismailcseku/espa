@@ -1,26 +1,26 @@
-
 <footer id="footer" class="footer" data-bg-color="white">
-<div id="separator"></div>
+    <div id="separator"></div>
     <div class="container pt-60 pb-20">
         <div class="col-sm-6 col-md-3">
-            <div class="widget dark" >
-               
-                    <h4 class="widget-title line-bottom-theme-colored2" style="color:#1f3344;">Coordonnées</h4>
+            <div class="widget dark">
 
-                    <span style="color:#1f3344;">
+                <h4 class="widget-title line-bottom-theme-colored2" style="color:#1f3344;">Coordonnées</h4>
 
-                        Complexe Horticole d’Agadir, km 2 route d’Azrou,
-                        B.P. 121 Ait Melloul 80150 - Agadir
-                    </span>
-              
+                <span style="color:#1f3344;">
+
+                    Complexe Horticole d’Agadir, km 2 route d’Azrou,
+                    B.P. 121 Ait Melloul 80150 - Agadir
+                </span>
+
                 <ul class="list-inline">
-                    <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone mr-5"></i> <a href="#" style="color:#1f3344;">(+212) 0528-241-006
+                    <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone mr-5"></i> <a href="#"
+                            style="color:#1f3344;">(+212) 0528-241-006
                             / 240-155</a>
                     </li>
                     <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o mr-5"></i> <a
                             href="mail:contact@cha-agadir.ma" style="color:#1f3344;">contact@cha-agadir.ma</a> </li>
-                    <li class="m-0 pl-10 pr-10"> <i class="fa fa-globe mr-5"></i> <a
-                            href="https://cha-agadir.ma" style="color:#1f3344;">www.cha-agadir.ma</a> </li>
+                    <li class="m-0 pl-10 pr-10"> <i class="fa fa-globe mr-5"></i> <a href="https://cha-agadir.ma"
+                            style="color:#1f3344;">www.cha-agadir.ma</a> </li>
                 </ul>
                 <ul class="styled-icons icon-sm icon-dark icon-theme-colored2 icon-circled clearfix mt-10">
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -36,13 +36,18 @@
                 <h4 class="widget-title line-bottom-theme-colored2" style="color:#1f3344;">Liens rapides</h4>
                 <div class="row clearfix">
                     <div class="col-xs-12 col-sm-6 col-md-6">
-                        <ul >
+                        <ul>
                             <li><a href="{{ route('home') }}" style="color:#1f3344;font-weight:normal;">Acceuil</a></li>
-                            <li><a href="{{ route('course.index') }}" style="color:#1f3344;font-weight:normal;">Formations</a></li>
-                            <li><a href="{{ route('evenement.index') }}" style="color:#1f3344;font-weight:normal;">Évènements</a></li>
-                            <li><a href="{{ route('blog-actualités.index') }}" style="color:#1f3344;font-weight:normal;">Actualités</a></li>
-                            <li><a href="{{ route('media.index') }}" style="color:#1f3344;font-weight:normal;">Galerie</a></li>
-                            <li><a href="{{ route('video.index') }}" style="color:#1f3344;font-weight:normal;">Vidéos</a></li>
+                            <li><a href="{{ route('course.index') }}"
+                                    style="color:#1f3344;font-weight:normal;">Formations</a></li>
+                            <li><a href="{{ route('evenement.index') }}"
+                                    style="color:#1f3344;font-weight:normal;">Évènements</a></li>
+                            <li><a href="{{ route('blog-actualités.index') }}"
+                                    style="color:#1f3344;font-weight:normal;">Actualités</a></li>
+                            <li><a href="{{ route('media.index') }}"
+                                    style="color:#1f3344;font-weight:normal;">Galerie</a></li>
+                            <li><a href="{{ route('video.index') }}"
+                                    style="color:#1f3344;font-weight:normal;">Vidéos</a></li>
                         </ul>
                     </div>
                 </div>
@@ -50,22 +55,25 @@
         </div>
         <div class="col-sm-6 col-md-3">
             <div class="widget dark">
-              <h4 class="widget-title line-bottom-theme-colored2" style="color:#1f3344;">Derniers posts</h4>
-              <div class="latest-posts">
-                @foreach ($latest_blog as $item)
-                
-                <article class="post media-post clearfix pb-0 mb-10">
-                  <a class="post-thumb" href="{{ route('blog-actualités.show', $item->id) }}"><img src="{{ url('storage') }}/{{ $item->photo }}" width="80px" height="55px" style="object-fit:cover;" alt="{{ $item->title}}"></a>
-                  <div class="post-right">
-                    <h5 class="post-title mt-0 mb-5" ><a href="{{ route('blog-actualités.show', $item->id) }}" style="color:#1f3344;">{{ $item->title}}</a></h5>
-                    <p class="post-date mb-0 font-12" style="color:#1f3344;"> {{ $item->created_at}}</p>
-                  </div>
-                </article>
-                @endforeach
-    
-              </div>
+                <h4 class="widget-title line-bottom-theme-colored2" style="color:#1f3344;">Derniers posts</h4>
+                <div class="latest-posts">
+                    @foreach ($latest_blog as $item)
+                        <article class="post media-post clearfix pb-0 mb-10">
+                            <a class="post-thumb" href="{{ route('blog-actualités.show', $item->id) }}"><img
+                                    src="{{ url('storage') }}/{{ $item->photo }}" width="80px" height="55px"
+                                    style="object-fit:cover;" alt="{{ $item->title }}"></a>
+                            <div class="post-right">
+                                <h5 class="post-title mt-0 mb-5"><a
+                                        href="{{ route('blog-actualités.show', $item->id) }}"
+                                        style="color:#1f3344;">{{ $item->title }}</a></h5>
+                                <p class="post-date mb-0 font-12" style="color:#1f3344;"> {{ $item->created_at }}</p>
+                            </div>
+                        </article>
+                    @endforeach
+
+                </div>
             </div>
-          </div>
+        </div>
 
         <div class="col-sm-6 col-md-3">
             <div class="widget dark">
@@ -73,7 +81,7 @@
                 <div class="opening-hours">
                     <ul class="list-border">
                         <li class="clearfix" style="color:#1f3344;"> <span> Lun - vendredi : </span>
-                            <div class="value pull-right" > 8.30 am – 4h30 pm</div>
+                            <div class="value pull-right"> 8.30 am – 4h30 pm</div>
                         </li>
 
                         <li class="clearfix" style="color:#1f3344;"> <span> Sam : </span>
@@ -85,43 +93,37 @@
                     </ul>
                 </div>
             </div>
-        </div>
-    </div>
-    <section data-bg-color="#1f3344" >
-        <div class="container pt-80 pb-90">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2 text-center">
-                    <a href="https://www.youtube.com/watch?v=kt-4lJs_8fE" data-lightbox-gallery="youtube-video"><img
-                            src="images/play-button/s11.png" alt=""></a>
-                    <h3 class="text-white font-38 font-weight-700 mt-10 mb-0">Inscrivez-vous <span
-                            class="text-theme-colored2"> à notre newsletter</span> </h3>
-                    Rejoignez-nous
+            <div class="widget dark">
+                <h5 class="widget-title line-bottom-theme-colored2" style="color:#1f3344;">Newsletters</h5>
+                <!-- Mailchimp Subscription Form Starts Here -->
+                <form id="mailchimp-subscription-form-footer" class="newsletter-form"
+                    action="{{ route('newsletter.store') }}" method="post">
+                    @csrf
                     @if (session()->has('success'))
                         <h6 class='alert alert-success' role="alert">
                             Felicitation !! Vous avez êtes désormais abonnée.
                         </h6>
                     @endif
-                    <form  id="mailchimp-subscription-form2" class="newsletter-form max-width-535 mt-10"
-                        action="{{ route('newsletter.store') }}" method="post">
-                        @csrf
-                        <label for="mce-EMAIL"></label>
-                        <div class="input-group">
-                            <input type="email" id="mce-EMAIL" data-height="45px" class="form-control input-lg"
-                                placeholder="Votre email" name="email" value="{{ old('email') }}">
-                            @if ($errors->has('email'))
-                                <span class="text-danger">{{ $errors->first('email') }}</span>
-                            @endif
-                            <span class="input-group-btn">
-                                <button type="submit" class="btn btn-colored btn-theme-colored2 btn-lg m-0"
-                                    data-height="45px">Soumettre</button>
-                            </span>
-                        </div>
-                    </form>
-    
-                </div>
+                    <div class="input-group">
+                        <input type="email" id="mce-EMAIL" data-height="45px" class="form-control input-lg"
+                            placeholder="Votre email" name="email" value="{{ old('email') }}">
+                        @if ($errors->has('email'))
+                            <span class="text-danger">{{ $errors->first('email') }}</span>
+                        @endif
+                        <span class="input-group-btn">
+                            <button type="submit" class="btn btn-colored btn-theme-colored2 btn-sm m-0"
+                                data-height="45px">Soumettre</button>
+                        </span>
+                    </div>
+                </form>
+                <!-- Mailchimp Subscription Form Validation-->
+                
+                <!-- Mailchimp Subscription Form Ends Here -->
             </div>
         </div>
-    </section>
+
+    </div>
+
     <div class="footer-bottom">
         <div class="container pt-20 pb-20">
             <div class="row">
@@ -162,15 +164,15 @@
 <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
 
 <style>
-
-    footer a:hover{
-        text-decoration:underline;
-        text-underline-offset:2px;
+    footer a:hover {
+        text-decoration: underline;
+        text-underline-offset: 2px;
 
     }
-    #separator{
+
+    #separator {
         padding-top: 1px;
-        background-color:#1f3344;
+        background-color: #1f3344;
     }
 </style>
 

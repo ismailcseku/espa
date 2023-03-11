@@ -47,8 +47,8 @@
                 </div>
             </div>
         </section>
-        <section class="bg-theme-colored2">
-            <div class="container pt-40 pb-40">
+        <section class="mb-40">
+            <div class="container " style="background-color:rgb(187, 187, 187);">
                 <div class="row text-center">
                     <div class="col-md-12">
                         @php
@@ -65,7 +65,7 @@
                         <input type="hidden" name="hour" value='{{ $hour }}' id="hour">
                         <input type="hidden" name="minute" value='{{ $minute }}' id="minute">
                         <input type="hidden" name="second" value='{{ $second }}' id="second">
-                        <h2 id="count_down_date" class="text-white basic-coupon-clock"></h2>
+                        <h2 id="count_down_date" class=" basic-coupon-clock" style="color:#1f3344;"></h2>
 
                         <!-- Final Countdown Timer Script -->
                         <script language="javascript" type="text/javascript">
@@ -214,13 +214,12 @@
         </section>
 
         <!-- Section: Registration Form -->
-        <section class="divider parallax layer-overlay overlay-white-8"
-            data-bg-img="{{ asset('images/details_course.jpeg') }}">
+        <section style="background-color:#1f3344;">
             <div class="container-fluid">
                 <div class="section-title">
                     <div class="row">
                         <div class="col-md-6 col-md-offset-3 text-center">
-                            <h3 class="title text-theme-colored">Inscription</h3>
+                            <h3 class="title text-white">Inscription</h3>
                         </div>
                     </div>
                 </div>
@@ -286,7 +285,7 @@
                                 <div class="col-sm-12">
                                     <div class="form-group text-center">
 
-                                        <button class="btn btn-dark btn-theme-colored btn-sm btn-block mt-20 pt-10 pb-10"
+                                        <button class="btn btn-white btn-theme-colored2 btn-sm btn-block mt-20 pt-10 pb-10"
                                             type="submit">Envoyer</button>
                                     </div>
                                 </div>

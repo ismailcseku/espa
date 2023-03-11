@@ -103,7 +103,6 @@
 
         .slide div {
             position: absolute;
-           
             word-break: break-all;
             left: 10%;
             color: white;
@@ -115,17 +114,14 @@
         @media only screen and (min-width: 600px) {
             .slide div {
                 top: 45%;
-               
             }
         }
 
         @media only screen and (max-width: 600px) {
-            .slide div {
-              
+            .slide div { 
                 top: 60%;
             }
         }
-
 
         .prev,
         .next {
@@ -136,7 +132,7 @@
             border: none;
             display: flex;
             justify-content: center;
-            padding: 8px;
+            padding: 2px;
             color: white;
         }
 
@@ -229,7 +225,7 @@
 
 
     <!-- Section: Courses -->
-    <section id="courses" class="hidden_load">
+    <section id="courses" class="hidden_load" style="padding-top:40px;">
         <div class="container">
             <div class="section-title mb-40">
                 <div class="row">
@@ -434,13 +430,13 @@
     <!-- Divider: Funfact -->
     <style>
         section > .container, section > .container-fluid{
-            padding-top:0px;
-            padding-bottom:10px;
+            padding-top:10px;
+            padding-bottom: 40px;
         }
     </style>
-    <section  >
+    <section>
         <div class="container">
-            <div class="row  text-center" style="background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(31,51,68,1) 58%, rgba(40,40,46,1) 100%);">
+            <div class="row  text-center" style="background-color:#1f3344;">
                 @foreach ($barres as $barre)
                     <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
                         <div class="funfact">
@@ -467,7 +463,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h2 class="title text-uppercase mb-5">Notre <span class="text-theme-colored2">Blog</span></h2>
-                        <h5 class="font-16 text-gray-darkgray mt-5">Récemment</h5>
+                        <h5 class="font-16  mt-5" style="color:#1f3344;">Récemment</h5>
                     </div>
                 </div>
             </div>

@@ -79,9 +79,12 @@
             <div class="header-top bg-theme-colored border-top-theme-colored2-2px sm-text-center">
                 <div class="container">
                     <div class="row">
+
                         <div class="col-md-4">
                             <div class="widget">
+
                                 <ul class="styled-icons icon-sm icon-white">
+
                                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                     <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                                     <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
@@ -152,15 +155,18 @@
                                 @endforeach
                             @endif
                         </div>
+
                         <nav id="menuzord-right" class="menuzord default theme-colored">
 
 
                             <ul class="menuzord-menu">
 
                                 <li @if (Route::current()->getName() == 'home') class='active' @endif>
-                                    <a href="{{ route('home') }}" style="padding: 10px 10px 10px 10px;">Acceuil</a>
+                                    <a href="{{ route('home') }}" class="font-14 text-uppercase"
+                                        style="padding: 10px 10px 10px 10px; ">Acceuil</a>
                                 </li>
-                                <li><a href="#home" style="padding: 10px 10px 10px 10px;">École</a>
+                                <li><a href="#home" class="font-14 text-uppercase"
+                                        style="padding: 10px 10px 10px 10px;">École</a>
                                     <ul class="dropdown">
                                         <li><a href="{{ route('director.index') }}">Mot du directeur</a></li>
                                         <li><a href="{{ route('about.index') }}">Qui sommes-nous ?</a></li>
@@ -174,8 +180,8 @@
                                     </ul>
                                 </li>
                                 <li @if (Route::current()->getName() == 'course.index') class="active" @endif><a
-                                        href="{{ route('course.index') }}"
-                                        style="padding: 10px 10px 10px 10px;">Formations</a>
+                                        href="{{ route('course.index') }}" style="padding: 10px 10px 10px 10px;"
+                                        class="font-14 text-uppercase">Formations</a>
                                     <ul class="dropdown">
                                         <li>
                                             <a href="{{ route('degree.show', 'Ingénieur d’État') }}">Ingénieur
@@ -258,16 +264,16 @@
 
 
 
-                                <li><a href="{{ route('search.index') }}"
-                                        style="padding: 10px 10px 10px 10px;">Recherche</a>
-                                <li><a href="{{ route('center.index') }}"
-                                        style="padding: 10px 10px 10px 10px;">Centre d’Excellence</a>
-                                <li><a href="{{ route('experience.index') }}"
-                                        style="padding: 10px 10px 10px 10px;">Ferme Expérimentale</a>
-                                <li><a href="{{ route('impact.index') }}"
-                                        style="padding: 10px 10px 10px 10px;">Impact Cluster</a>
-                                <li><a href="{{ route('business.index') }}"
-                                        style="padding: 10px 10px 10px 10px;">Agri-Business </a>
+                                <li><a href="{{ route('search.index') }}" style="padding: 10px 10px 10px 10px;"
+                                        class="font-14 text-uppercase">Recherche</a>
+                                <li><a href="{{ route('center.index') }}" style="padding: 10px 10px 10px 10px;"
+                                        class="font-14 text-uppercase">Centre d’Excellence</a>
+                                <li><a href="{{ route('experience.index') }}" style="padding: 10px 10px 10px 10px;"
+                                        class="font-14 text-uppercase">Ferme Expérimentale</a>
+                                <li><a href="{{ route('impact.index') }}" style="padding: 10px 10px 10px 10px;"
+                                        class="font-14 text-uppercase">Impact Cluster</a>
+                                <li><a href="{{ route('business.index') }}" style="padding: 10px 10px 10px 10px;"
+                                        class="font-14 text-uppercase">Agri-Business </a>
 
 
 
