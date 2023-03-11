@@ -59,6 +59,20 @@
     <script src="{{ asset('app-assets/js/revolution-slider/js/jquery.themepunch.revolution.min.js') }}"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+    <style>
+        @keyframes blink {
+            0% {
+            opacity: 1;
+            }
+            50% {
+            opacity: 0.5;
+            }
+            100% {
+            opacity: 1;
+            }
+        }
+    </style>
 </head>
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -138,8 +152,8 @@
                                     </li>
                                     <li>
                                         <a href="{{ route('course.index') }}"
-                                            class="btn btn-dark btn-circled btn-theme-colored2 btn-sm  pr-30 pl-30">Nos
-                                            formations</a>
+                                            class="btn btn-dark btn-circled btn-theme-colored2 btn-sm  pr-30 pl-30 " style="font-weight: bold; animation: blink 1s ease-in-out infinite;">NOS
+                                            FORMATIONS</a>
                                     </li>
                                 </ul>
                             </div>
@@ -165,7 +179,7 @@
                         <nav id="menuzord-right" class="menuzord default theme-colored">
 
 
-                            <ul class="menuzord-menu">
+                            <ul class="menuzord-menu list-unstyled">
 
                                 <li @if (Route::current()->getName() == 'home') class='active' @endif>
                                     <a href="{{ route('home') }}" class="font-14 text-uppercase"
@@ -187,14 +201,14 @@
                                 </li>
                                 <li @if (Route::current()->getName() == 'course.index') class="active" @endif><a
                                         href="{{ route('course.index') }}" style="padding: 10px 10px 10px 10px;"
-                                        class="font-14 text-uppercase">Formations</a>
-                                    <ul class="dropdown">
-                                        <li>
-                                            <a href="{{ route('degree.show', 'Ingénieur d’État') }}">Ingénieur
+                                        class="font-14 text-uppercase d-inline">Formations</a>
+                                    <ul class="dropdown" style="padding-left: -50px;">
+                                        <li style="padding-left: -50px;">
+                                            <a href="{{ route('degree.show', 'Ingénieur d’État') }}" style="padding-left: -50px">Ingénieur
                                                 d’État en Agronomie</a>
-                                            <ul class="dropdown">
+                                            <ul class="dropdown" >
                                                 <li><a
-                                                        href="{{ route('course.byname', 'Horticulture') }}">Horticulture</a>
+                                                        href="{{ route('course.byname', 'Horticulture') }}" >Horticulture</a>
                                                 </li>
                                                 <li><a href="{{ route('course.byname', 'Protection des Plantes') }}">Protection
                                                         des Plantes</a></li>
