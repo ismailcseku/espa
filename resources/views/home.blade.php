@@ -230,7 +230,6 @@
             <div class="section-title mb-40">
                 <div class="row">
                     <div class="col-md-12">
-
                         <a href="{{ route('course.index') }}" class="text-uppercase title">
                             <h2> Nos <span class="text-theme-colored2">Formations</span></h2>
                         </a>
@@ -248,7 +247,6 @@
                                         <a href="{{ route('course.details', $course->name) }}" class="course-thumb">
                                             <img class="img-fullwidth" alt=""
                                                 src="{{ url('storage') }}/{{ $course->photo }}">
-
                                         </a>
                                         <div class="course-details clearfix p-20 pt-15">
                                             <div class="course-top-part">

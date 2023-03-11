@@ -73,7 +73,12 @@
 <body class="has-side-panel side-panel-right fullwidth-page">
 
     <div id="wrapper" class="clearfix">
-
+        <div id="preloader">
+            <div id="spinner">
+              <img alt="" src="https://www.perodua.com.my/assets/gif/loading4.gif">
+            </div>
+            <div id="disable-preloader" class="btn btn-default btn-sm">Désactiver</div>
+          </div>
 
         <!-- Header -->
         <header id="header" class="header">

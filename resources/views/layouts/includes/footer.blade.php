@@ -117,7 +117,7 @@
                     </div>
                 </form>
                 <!-- Mailchimp Subscription Form Validation-->
-                
+
                 <!-- Mailchimp Subscription Form Ends Here -->
             </div>
         </div>
@@ -173,6 +173,14 @@
     #separator {
         padding-top: 1px;
         background-color: #1f3344;
+    }
+
+    .widget {
+        margin-bottom: 0px;
+    }
+
+    .footer .widget .widget-title {
+        margin-top: 0px;
     }
 </style>
 
