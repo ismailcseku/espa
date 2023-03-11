@@ -115,13 +115,13 @@
         @media only screen and (min-width: 600px) {
             .slide div {
                 top: 45%;
-                width: 60%;
+               
             }
         }
 
         @media only screen and (max-width: 600px) {
             .slide div {
-                width: 90%;
+              
                 top: 60%;
             }
         }
@@ -242,7 +242,7 @@
                     </div>
                 </div>
             </div>
-            <div class="section-content">
+            <div class="section-content" >
                 <div class="row">
                     <div class="col-md-12">
                         <div class="owl-carousel-3col owl-nav-top" data-nav="tru">
@@ -597,6 +597,6 @@
         setTimeout(() => {
 
             document.getElementById("courses").className = 'bg-silver-light show_load'
-        }, 1000);
+        }, 3000);
     </script>
 @endsection

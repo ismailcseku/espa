@@ -37,12 +37,12 @@
                 <div class="row clearfix">
                     <div class="col-xs-12 col-sm-6 col-md-6">
                         <ul >
-                            <li><a href="{{ route('home') }}" style="color:#1f3344;">Acceuil</a></li>
-                            <li><a href="{{ route('course.index') }}" style="color:#1f3344;">Formations</a></li>
-                            <li><a href="{{ route('evenement.index') }}" style="color:#1f3344;">Évènements</a></li>
-                            <li><a href="{{ route('blog-actualités.index') }}" style="color:#1f3344;">Actualités</a></li>
-                            <li><a href="{{ route('media.index') }}" style="color:#1f3344;">Galerie</a></li>
-                            <li><a href="{{ route('video.index') }}" style="color:#1f3344;">Vidéos</a></li>
+                            <li><a href="{{ route('home') }}" style="color:#1f3344;font-weight:normal;">Acceuil</a></li>
+                            <li><a href="{{ route('course.index') }}" style="color:#1f3344;font-weight:normal;">Formations</a></li>
+                            <li><a href="{{ route('evenement.index') }}" style="color:#1f3344;font-weight:normal;">Évènements</a></li>
+                            <li><a href="{{ route('blog-actualités.index') }}" style="color:#1f3344;font-weight:normal;">Actualités</a></li>
+                            <li><a href="{{ route('media.index') }}" style="color:#1f3344;font-weight:normal;">Galerie</a></li>
+                            <li><a href="{{ route('video.index') }}" style="color:#1f3344;font-weight:normal;">Vidéos</a></li>
                         </ul>
                     </div>
                 </div>
