@@ -432,9 +432,15 @@
     </section>
 
     <!-- Divider: Funfact -->
+    <style>
+        section > .container, section > .container-fluid{
+            padding-top:0px;
+            padding-bottom:10px;
+        }
+    </style>
     <section  >
-        <div class="container pt-80 pb-90 pt-md-70 pb-md-50 pb-sm-50">
-            <div class="row mt-30 text-center" style="background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(31,51,68,1) 58%, rgba(40,40,46,1) 100%);">
+        <div class="container">
+            <div class="row  text-center" style="background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(31,51,68,1) 58%, rgba(40,40,46,1) 100%);">
                 @foreach ($barres as $barre)
                     <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
                         <div class="funfact">
