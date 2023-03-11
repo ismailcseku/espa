@@ -108,7 +108,6 @@
                         <li class="clearfix" style="color:#1f3344;"> <span> Lun - vendredi : </span>
                             <div class="value pull-right"> 8.30 am – 4h30 pm</div>
                         </li>
-
                         <li class="clearfix" style="color:#1f3344;"> <span> Sam : </span>
                             <div class="value pull-right bg-theme-colored2 text-white closed">Fermé</div>
                         </li>

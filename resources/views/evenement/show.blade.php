@@ -8,6 +8,10 @@
 
 
         }
+        .divider .container {
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
 
         .pb-30 {
             padding-bottom: 0px !important;
@@ -26,26 +30,29 @@
         }
     </style>
     <div class="main-content">
-        <!-- Section: inner-header -->
-        <section class="inner-header divider " style="background-color:white;border-top:solid 2px rgb(45, 69, 88) ;">
-            <div class=" pt-10 pb-10 ">
-                <!-- Section Content -->
-                <div class="section-content ml-90 ">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <ol class="breadcrumb text-left mt-10" style="color:rgb(45, 69, 88);font-weight:bold;">
-                                <li><a href="/">Acceuil</a></li>
-                                <li><a href="{{ route('course.index') }}">Évènements</a></li>
-                                <li>
-                                    @if ($evenements->title)
-                                        {{ $evenements->title }}
-                                    @endif
-                                </li>
-                            </ol>
+        <div class="inner-header divider" style="border-top:solid 2px rgb(45, 69, 88) ;">
+            <!-- Section: inner-header -->
+            <section class="container">
+                <div class=" pt-10 pb-10 ">
+                    <!-- Section Content -->
+                    <div class="section-content  ">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ol class="breadcrumb text-left mt-10" style="color:rgb(45, 69, 88);font-weight:bold;">
+                                    <li><a href="/">Acceuil</a></li>
+                                    <li><a href="{{ route('course.index') }}">Évènements</a></li>
+                                    <li>
+                                        @if ($evenements->title)
+                                            {{ $evenements->title }}
+                                        @endif
+                                    </li>
+                                </ol>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
+        </div>
         </section>
         <section class="mb-40">
             <div class="container " style="background-color:#F88147;">
@@ -65,7 +72,8 @@
                         <input type="hidden" name="hour" value='{{ $hour }}' id="hour">
                         <input type="hidden" name="minute" value='{{ $minute }}' id="minute">
                         <input type="hidden" name="second" value='{{ $second }}' id="second">
-                        <h2 id="count_down_date" class=" basic-coupon-clock" style="color:white; font-family:'Courier New', Courier, monospace;font-weight:bold;"></h2>
+                        <h2 id="count_down_date" class=" basic-coupon-clock"
+                            style="color:white; font-family:'Courier New', Courier, monospace;font-weight:bold;"></h2>
 
                         <!-- Final Countdown Timer Script -->
                         <script language="javascript" type="text/javascript">
@@ -147,9 +155,10 @@
                             </li>
                             <li>
                                 @if (count($evenementPages) > 0)
-                                    <h5 style="font-weight:bold;color:#F88147;font-size:18px;" >Téléchargement :</h5>
+                                    <h5 style="font-weight:bold;color:#F88147;font-size:18px;">Téléchargement :</h5>
                                     @foreach ($evenementPages as $item)
-                                        <p><a style="text-decoration:underline;color:#1f3344;" href="{{ url('storage') }}/{{ $item->file }}"
+                                        <p><a style="text-decoration:underline;color:#1f3344;"
+                                                href="{{ url('storage') }}/{{ $item->file }}"
                                                 target='_blank'>{{ $item->filename }}</a></p>
                                     @endforeach
                                 @endif
@@ -195,7 +204,7 @@
                         </ul>
                     </div>
                     <div class="col-md-8">
-                        <div >
+                        <div>
                             <div class="item"><img src="{{ url('storage') }}/{{ $evenements->photo }}" alt="">
                             </div>
 

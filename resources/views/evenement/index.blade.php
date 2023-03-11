@@ -8,6 +8,9 @@
 
 
         }
+
+   
+
         .pt-70 {
             padding-top: 0px !important;
 
@@ -22,23 +25,22 @@
     <div class="main-content">
         <!-- Section: inner-header -->
         <section class="container">
-
-        <div class="inner-header divider " >
-            <div class=" pt-10 pb-10 ">
-                <!-- Section Content -->
-                <div class="section-content ">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <ol class="breadcrumb text-left mt-10" style="color:rgb(45, 69, 88);font-weight:bold;">
-                                <li><a href="/">Acceuil</a></li>
-                                <li>Évènements</li>
-                            </ol>
+            <div class="inner-header divider ">
+                <div class=" pt-10 pb-10 ">
+                    <!-- Section Content -->
+                    <div class="section-content ">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ol class="breadcrumb text-left mt-10" style="color:rgb(45, 69, 88);font-weight:bold;">
+                                    <li><a href="/">Acceuil</a></li>
+                                    <li>Évènements</li>
+                                </ol>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
 
         <!-- Section: Events Grid -->
@@ -82,7 +84,7 @@
                                                     
                                                     $start_at = date('H:i', strtotime($evenement->start_at));
                                                     echo $start_at;
-                                                   @endphp
+                                                @endphp
                                                     -
                                                     @php
                                                         
@@ -91,7 +93,7 @@
                                                     @endphp</li>
                                             </ul>
                                             <p class="mt-10">
-                                                <p>{{ $evenement->accroche }} [...] </p>
+                                            <p>{{ $evenement->accroche }} [...] </p>
                                             </p>
                                             <a href="{{ route('evenement.show', $evenement->title) }}"
                                                 class="btn btn-theme-colored2 mt-5">Découvrir </a>
