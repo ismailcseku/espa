@@ -505,7 +505,7 @@
                                                                 </ul>
                                                             </div>
                                                         @endif
-                                                        @if (isset($course->canditature))
+                                                        @if (isset($course->candidature))
                                                             <div class="comments-area">
                                                                 <ul class="comment-list">
 
@@ -1225,7 +1225,7 @@
                                 width: 100%;
                                 display: none;
                                 transition: display 0.5 ease-in;
-                                padding-left:5px;
+                                padding-left: 5px;
 
                             }
 
@@ -1246,7 +1246,8 @@
                         <!-- initial open : add open class to item -->
                         <div class="accordion1 mr-10 ml-10" id="mobile_pade">
                             <div class="item">
-                                <div class="text" style="display: flex;justify-content:space-between; padding-left:4px;padding-right:4px;">
+                                <div class="text"
+                                    style="display: flex;justify-content:space-between; padding-left:4px;padding-right:4px;">
                                     <p> DESCRIPTION</p>
                                     <span> <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
                                             viewBox="0 0 24 24" stroke="currentColor">
@@ -1254,9 +1255,10 @@
                                                 d="M19 9l-7 7-7-7" />
                                         </svg></span>
                                 </div>
-                               
 
-                                <div class="hidden-box" style="margin-top:-30px;padding-left:10px;padding-right:10px;">
+
+                                <div class="hidden-box"
+                                    style="margin-top:-30px;padding-left:10px;padding-right:10px;">
                                     <div> {!! $course->description !!}</div>
                                     <ul>
                                         @if ($course->duration)
@@ -1294,7 +1296,8 @@
                                 </div>
                             </div>
                             <div class="item">
-                                <div class="text" style="display: flex;justify-content:space-between;padding-left:4px;padding-right:4px;">
+                                <div class="text"
+                                    style="display: flex;justify-content:space-between;padding-left:4px;padding-right:4px;">
                                     <p> ADMISSION</p>
                                     <span> <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
                                             viewBox="0 0 24 24" stroke="currentColor">
@@ -1331,7 +1334,6 @@
                                                 @if (isset($course->dossier))
                                                     <div class="comments-area">
                                                         <ul class="comment-list">
-
                                                             <li>
                                                                 <div class="media comment-author"> <a
                                                                         class="media-left pull-left flip"
@@ -1345,17 +1347,16 @@
                                                                         <div class="comment-date font-16">
                                                                             {!! $course->dossier !!}</div>
 
-
                                                                     </div>
                                                                 </div>
                                                             </li>
 
 
-
                                                         </ul>
                                                     </div>
                                                 @endif
-                                                @if (isset($course->canditature))
+
+                                                @if (isset($course->candidature))
                                                     <div class="comments-area">
                                                         <ul class="comment-list">
 
@@ -1374,9 +1375,6 @@
                                                                     </div>
                                                                 </div>
                                                             </li>
-
-
-
                                                         </ul>
                                                     </div>
                                                 @endif
@@ -1468,7 +1466,8 @@
                                 </div>
                             </div>
                             <div class="item">
-                                <div class="text" style="display: flex;justify-content:space-between;padding-left:4px;padding-right:4px;">
+                                <div class="text"
+                                    style="display: flex;justify-content:space-between;padding-left:4px;padding-right:4px;">
                                     <p> PROGRAMME</p>
                                     <span> <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
                                             viewBox="0 0 24 24" stroke="currentColor">
@@ -1530,7 +1529,8 @@
                                 </div>
                             </div>
                             <div class="item">
-                                <div class="text" style="display: flex;justify-content:space-between;padding-left:4px;padding-right:4px;">
+                                <div class="text"
+                                    style="display: flex;justify-content:space-between;padding-left:4px;padding-right:4px;">
                                     <p>CARRIÈRE</p>
                                     <span> <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
                                             viewBox="0 0 24 24" stroke="currentColor">
@@ -1565,58 +1565,59 @@
                                                     </div>
                                                 @endif
                                                 @if ($course->profile)
-                                                <div class="comments-area">
-                                                    <ul class="comment-list">
+                                                    <div class="comments-area">
+                                                        <ul class="comment-list">
 
-                                                        <li>
-                                                            <div class="media comment-author"> <a
-                                                                    class="media-left pull-left flip"
-                                                                    href="#"><img class="img-thumbnail"
-                                                                        src="images/blog/comment1.jpg"
-                                                                        alt=""></a>
-                                                                <div class="media-body">
-                                                                    <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
-                                                                        style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
-                                                                        Profil / Compétences à acquérir</h5>
-                                                                    <div class="comment-date font-16">
-                                                                        {!! $course->profile !!}</div>
+                                                            <li>
+                                                                <div class="media comment-author"> <a
+                                                                        class="media-left pull-left flip"
+                                                                        href="#"><img class="img-thumbnail"
+                                                                            src="images/blog/comment1.jpg"
+                                                                            alt=""></a>
+                                                                    <div class="media-body">
+                                                                        <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
+                                                                            style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
+                                                                            Profil / Compétences à acquérir</h5>
+                                                                        <div class="comment-date font-16">
+                                                                            {!! $course->profile !!}</div>
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            @endif
-                                            @if ($course->opportunity)
-                                            <div class="comments-area">
-                                                <ul class="comment-list">
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                @endif
+                                                @if ($course->opportunity)
+                                                    <div class="comments-area">
+                                                        <ul class="comment-list">
 
-                                                    <li>
-                                                        <div class="media comment-author"> <a
-                                                                class="media-left pull-left flip"
-                                                                href="#"><img class="img-thumbnail"
-                                                                    src="images/blog/comment1.jpg"
-                                                                    alt=""></a>
-                                                            <div class="media-body">
-                                                                <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
-                                                                    style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
-                                                                    Débouchés </h5>
-                                                                <div class="comment-date font-16">
-                                                                    {!! $course->opportunity !!}</div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        @endif
-                                        
+                                                            <li>
+                                                                <div class="media comment-author"> <a
+                                                                        class="media-left pull-left flip"
+                                                                        href="#"><img class="img-thumbnail"
+                                                                            src="images/blog/comment1.jpg"
+                                                                            alt=""></a>
+                                                                    <div class="media-body">
+                                                                        <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
+                                                                            style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
+                                                                            Débouchés </h5>
+                                                                        <div class="comment-date font-16">
+                                                                            {!! $course->opportunity !!}</div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                @endif
+
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                      
+
                             <div class="item">
-                                <div class="text" style="display: flex;justify-content:space-between;padding-left:4px;padding-right:4px;">
+                                <div class="text"
+                                    style="display: flex;justify-content:space-between;padding-left:4px;padding-right:4px;">
                                     <p> DOCUMENTS</p>
                                     <span> <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
                                             viewBox="0 0 24 24" stroke="currentColor">
@@ -1641,7 +1642,8 @@
                                 </div>
                             </div>
                             <div class="item">
-                                <div class="text" style="display: flex;justify-content:space-between;padding-left:4px;padding-right:4px;">
+                                <div class="text"
+                                    style="display: flex;justify-content:space-between;padding-left:4px;padding-right:4px;">
                                     <p> TÉMOIGNAGES</p>
                                     <span> <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none"
                                             viewBox="0 0 24 24" stroke="currentColor">
@@ -1931,28 +1933,30 @@
 
         </div>
 
-        <footer id="footer" class="footer" data-bg-color="#20232E">
+        <footer id="footer" class="footer" data-bg-color="white">
+            <div id="separator"></div>
             <div class="container pt-60 pb-20">
                 <div class="col-sm-6 col-md-3">
                     <div class="widget dark">
 
-                        <h4 class="widget-title line-bottom-theme-colored2">Coordonnées</h4>
+                        <h4 class="widget-title line-bottom-theme-colored2" style="color:#1f3344;">Coordonnées</h4>
 
-                        <span>
+                        <span style="color:#1f3344;">
 
                             Complexe Horticole d’Agadir, km 2 route d’Azrou,
                             B.P. 121 Ait Melloul 80150 - Agadir
                         </span>
 
                         <ul class="list-inline">
-                            <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone mr-5"></i> <a href="#">(+212)
-                                    0528-241-006
+                            <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone mr-5"></i> <a href="#"
+                                    style="color:#1f3344;">(+212) 0528-241-006
                                     / 240-155</a>
                             </li>
                             <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o mr-5"></i> <a
-                                    href="mail:contact@cha-agadir.ma">contact@cha-agadir.ma</a> </li>
+                                    href="mail:contact@cha-agadir.ma" style="color:#1f3344;">contact@cha-agadir.ma</a>
+                            </li>
                             <li class="m-0 pl-10 pr-10"> <i class="fa fa-globe mr-5"></i> <a
-                                    href="https://cha-agadir.ma">www.cha-agadir.ma</a> </li>
+                                    href="https://cha-agadir.ma" style="color:#1f3344;">www.cha-agadir.ma</a> </li>
                         </ul>
                         <ul class="styled-icons icon-sm icon-dark icon-theme-colored2 icon-circled clearfix mt-10">
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -1965,36 +1969,44 @@
                 </div>
                 <div class="col-sm-6 col-md-3">
                     <div class="widget dark">
-                        <h4 class="widget-title line-bottom-theme-colored2">Liens rapides</h4>
+                        <h4 class="widget-title line-bottom-theme-colored2" style="color:#1f3344;">Liens rapides</h4>
                         <div class="row clearfix">
                             <div class="col-xs-12 col-sm-6 col-md-6">
-                                <ul class="footer-link">
-                                    <li><a href="{{ route('home') }}">Acceuil</a></li>
-                                    <li><a href="{{ route('course.index') }}">Formations</a></li>
-                                    <li><a href="{{ route('evenement.index') }}">Évènements</a></li>
-                                    <li><a href="{{ route('blog-actualités.index') }}">Actualié</a></li>
-                                    <li><a href="{{ route('media.index') }}">Galerie</a></li>
+                                <ul>
+                                    <li><a href="{{ route('home') }}" style="color:#1f3344;">Acceuil</a></li>
+                                    <li><a href="{{ route('course.index') }}" style="color:#1f3344;">Formations</a>
+                                    </li>
+                                    <li><a href="{{ route('evenement.index') }}"
+                                            style="color:#1f3344;">Évènements</a></li>
+                                    <li><a href="{{ route('blog-actualités.index') }}"
+                                            style="color:#1f3344;">Actualités</a></li>
+                                    <li><a href="{{ route('media.index') }}" style="color:#1f3344;">Galerie</a>
+                                    </li>
+                                    <li><a href="{{ route('video.index') }}" style="color:#1f3344;">Vidéos</a>
+                                    </li>
                                 </ul>
                             </div>
-
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-3">
                     <div class="widget dark">
-                        <h4 class="widget-title line-bottom-theme-colored2">Derniers posts</h4>
+                        <h4 class="widget-title line-bottom-theme-colored2" style="color:#1f3344;">Derniers posts
+                        </h4>
                         <div class="latest-posts">
                             @foreach ($latest_blog as $item)
                                 <article class="post media-post clearfix pb-0 mb-10">
-                                    <a class="post-thumb" href="{{ route('blog-actualités.show', $item->id) }}"><img
+                                    <a class="post-thumb"
+                                        href="{{ route('blog-actualités.show', $item->id) }}"><img
                                             src="{{ url('storage') }}/{{ $item->photo }}" width="80px"
                                             height="55px" style="object-fit:cover;"
                                             alt="{{ $item->title }}"></a>
                                     <div class="post-right">
                                         <h5 class="post-title mt-0 mb-5"><a
-                                                href="{{ route('blog-actualités.show', $item->id) }}">{{ $item->title }}</a>
-                                        </h5>
-                                        <p class="post-date mb-0 font-12"> {{ $item->created_at }}</p>
+                                                href="{{ route('blog-actualités.show', $item->id) }}"
+                                                style="color:#1f3344;">{{ $item->title }}</a></h5>
+                                        <p class="post-date mb-0 font-12" style="color:#1f3344;">
+                                            {{ $item->created_at }}</p>
                                     </div>
                                 </article>
                             @endforeach
@@ -2005,17 +2017,17 @@
 
                 <div class="col-sm-6 col-md-3">
                     <div class="widget dark">
-                        <h4 class="widget-title line-bottom-theme-colored2">Ouvert</h4>
+                        <h4 class="widget-title line-bottom-theme-colored2" style="color:#1f3344;">Ouvert</h4>
                         <div class="opening-hours">
                             <ul class="list-border">
-                                <li class="clearfix"> <span> Lun - vendredi : </span>
-                                    <div class="value pull-right"> 8.00 am - 6.00 pm </div>
+                                <li class="clearfix" style="color:#1f3344;"> <span> Lun - vendredi : </span>
+                                    <div class="value pull-right"> 8.30 am – 4h30 pm</div>
                                 </li>
 
-                                <li class="clearfix"> <span> Sam : </span>
+                                <li class="clearfix" style="color:#1f3344;"> <span> Sam : </span>
                                     <div class="value pull-right bg-theme-colored2 text-white closed">Fermé</div>
                                 </li>
-                                <li class="clearfix"> <span> Dim : </span>
+                                <li class="clearfix" style="color:#1f3344;"> <span> Dim : </span>
                                     <div class="value pull-right bg-theme-colored2 text-white closed">Fermé</div>
                                 </li>
                             </ul>
@@ -2023,7 +2035,7 @@
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom" data-bg-color="#1B1D26">
+            <div class="footer-bottom" data-bg-color="#1f3344">
                 <div class="container pt-20 pb-20">
                     <div class="row">
 
@@ -2061,6 +2073,18 @@
             </div>
         </footer>
         <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+        <style>
+
+            footer a:hover{
+                text-decoration:underline;
+                text-underline-offset:2px;
+        
+            }
+            #separator{
+                padding-top: 1px;
+                background-color:#1f3344;
+            }
+        </style>
     </div>
     <!-- end wrapper -->
 

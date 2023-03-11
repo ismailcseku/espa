@@ -2,23 +2,45 @@
 @section('content')
     <section aria-label="Newest Photos">
         <div class="carousel" data-carousel>
-            <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
-            <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+
+            <div class="list_btn">
+
+                <button class="carousel-button prev" data-carousel-button="prev"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="32" height="32" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="M14.71 15.88L10.83 12l3.88-3.88a.996.996 0 1 0-1.41-1.41L8.71 11.3a.996.996 0 0 0 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0c.38-.39.39-1.03 0-1.42z" />
+                    </svg>
+                </button>
+                <button class="carousel-button next" data-carousel-button="next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="M8.7 17.3q-.275-.275-.275-.7q0-.425.275-.7l3.9-3.9l-3.9-3.9q-.275-.275-.275-.7q0-.425.275-.7q.275-.275.7-.275q.425 0 .7.275l4.6 4.6q.15.15.213.325q.062.175.062.375t-.062.375q-.063.175-.213.325l-4.6 4.6q-.275.275-.7.275q-.425 0-.7-.275Z" />
+                    </svg>
+                </button>
+            </div>
+
             <ul data-slides>
                 @foreach ($slides as $slide)
+                    @if ($loop->first)
+                        <li class="slide" data-active>
+                            <img src="{{ url('storage') }}/{{ $slide->photo }}" alt="Nature Image #1">
+                            <h3>{{ $slide->subject }}</h2>
+                                <h1>{{ $slide->title }}
+                            </h3>
+                            <div> {!! $slide->description !!}</div>
 
-                @if ($loop->first)
-                    
-                <li class="slide" data-active>
-                    <img src="{{ url('storage') }}/{{ $slide->photo }}" alt="Nature Image #1">
-                </li>
-                @else
-                <li class="slide">
-                    <img src="{{ url('storage') }}/{{ $slide->photo }}" alt="Nature Image #2">
-                </li>
-                @endif
+                        </li>
+                    @else
+                        <li class="slide">
+                            <img src="{{ url('storage') }}/{{ $slide->photo }}" alt="Nature Image #2">
+                            <h3>{{ $slide->subject }}</h2>
+                                <h1>{{ $slide->title }}</h1>
+                            </h3>
+                            <div> {!! $slide->description !!}</div>
+                        </li>
+                    @endif
                 @endforeach
-            
+
             </ul>
         </div>
     </section>
@@ -29,7 +51,7 @@
             box-sizing: border-box;
         }
 
-     
+
         .carousel {
             width: 100vw;
             height: 60vh;
@@ -64,37 +86,105 @@
             transition-delay: 0ms;
         }
 
-        .carousel-button {
+        .slide h1 {
             position: absolute;
-            z-index: 2;
-            background: none;
-            border: none;
-            font-size: 4rem;
-            top: 50%;
-            transform: translateY(-50%);
-            color: rgba(255, 255, 255, .5);
-            cursor: pointer;
-            border-radius: .25rem;
-            padding: 0 .5rem;
-            background-color: rgba(0, 0, 0, .1);
+            top: 26%;
+            left: 10%;
+            color: white;
         }
+
+        .slide h3 {
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            color: white;
+
+        }
+
+        .slide div {
+            position: absolute;
+            top: 45%;
+            word-break: break-all;
+            left: 10%;
+            color: white;
+            font-size: 16px;
+            font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+   
+        }
+
+        @media only screen and (min-width: 600px) {
+            .slide div {
+                width: 60%;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .slide div {
+                width: 90%;
+            }
+        }
+
+
+        .prev,
+        .next {
+            transform: translateY(-15px);
+            background-color: #1f3344;
+            padding: 0 .5rem;
+            z-index: 2;
+            border: none;
+            display: flex;
+            justify-content: center;
+            padding: 8px;
+            color: white;
+        }
+
+
+        .list_btn {
+            position: absolute;
+            top: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 4px;
+
+
+        }
+
+        /*
+
+                                  .prev {
+                                    left: 40%;
+                                }
+
+                                .next {
+                                    left: 60%;
+                                }*/
+
+        /*
+                                                .carousel-button {
+                                                    position: absolute;
+                                                    z-index: 2;
+                                                    background: none;
+                                                    border: none;
+                                                    font-size: 4rem;
+                                                    top: 50%;
+                                                    transform: translateY(-50%);
+                                                    color: white;
+                                                    cursor: pointer;
+                                                    border-radius: .25rem;
+                                                    padding: 0 .5rem;
+                                                    background-color:#1f3344;
+                                                }
+                                                */
 
         .carousel-button:hover,
         .carousel-button:focus {
             color: white;
-            background-color: rgba(0, 0, 0, .2);
+            background-color: #1f334499;
         }
 
         .carousel-button:focus {
             outline: 1px solid black;
-        }
-
-        .carousel-button.prev {
-            left: 1rem;
-        }
-
-        .carousel-button.next {
-            right: 1rem;
         }
     </style>
     <script>
@@ -115,6 +205,12 @@
                 slides.children[newIndex].dataset.active = true
                 delete activeSlide.dataset.active
             })
+
+            const getBtn=document.querySelector('.next');
+            setInterval(() => {
+                getBtn.click()
+            }, 4000);
+     
         })
     </script>
 
@@ -170,14 +266,14 @@
                                             </div>
                                             <a href="{{ route('course.details', $course->name) }}" class="mt-15 mb-0">
                                                 <p style="font-weight:normal;">
-                                                    {{ $course->accroche }}</p>
+                                                    {{ $course->accroche }} [...]</p>
                                             </a>
                                             <!--
-                                                                            <div class="author-thumb">
-                                                                                <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
-                                                                                    alt="" class="img-circle">
-                                                                            </div>
-                                                                        -->
+                                                                                                                    <div class="author-thumb">
+                                                                                                                        <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
+                                                                                                                            alt="" class="img-circle">
+                                                                                                                    </div>
+                                                                                                                -->
                                         </div>
                                         <a href="{{ route('course.details', $course->name) }}" style="display: block"
                                             class="course-meta">

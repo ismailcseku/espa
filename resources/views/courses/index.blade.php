@@ -63,7 +63,7 @@
                                                 <a
                                                     href="{{ route('course.details', $course->name) }}"class="course-description mt-15 mb-0">
                                                     <p style="font-weight:normal;">
-                                                        {{ $course->accroche }}</p>
+                                                        {{ $course->accroche }} [...]</p>
                                                 </a>
                                               <!--  <div class="author-thumb">
                                                     <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"

@@ -122,6 +122,7 @@ body {
   font-size: 14px;
   font-weight: 500;
   font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
   background-color: #fff;
 }
 a {
@@ -173,6 +174,7 @@ h2,
 .h1,
 .h2 {
   font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
   font-weight: 800;
   line-height: 1.42857143;
   color: #555555;
@@ -204,6 +206,7 @@ h6,
 .h5,
 .h6 {
   font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
   font-weight: 700;
   line-height: 1.42857143;
   color: #555555;
@@ -255,10 +258,12 @@ form {
 /* -------- Custom Font Family ---------- */
 .font-opensans {
   font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
 }
 .font-montserrat {
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
+
 /* breadcrumb */
 .breadcrumb {
   background-color: transparent;
@@ -266,7 +271,7 @@ form {
 }
 .breadcrumb > li + li::before {
   content: "\f22d";
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: fontawesome;
   font-size: 9px;
   margin-right: 5px;
 }
@@ -515,7 +520,7 @@ ul.list li:before {
   color: #a9a9a9;
   content: "\f111";
   display: inline-block;
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: fontawesome;
   font-size: 9px;
   margin-right: 10px;
   padding: 0;
@@ -655,24 +660,21 @@ ul.list-border-bottom.no-padding li:last-child {
 }
 ul.list.check li:before {
   content: "\f00c";
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: fontawesome;
   font-size: 12px;
 }
 ul.list.angle-double-right li:before {
   content: "\f101";
-    font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: fontawesome;
   font-size: 12px;
 }
 ul.list.angle-right li:before {
   content: "\f105";
-    font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: fontawesome;
 }
 ul.list.check-circle li:before {
   content: "\f058";
-    font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: fontawesome;
   font-size: 14px;
 }
 /* -------- Call To Actions ---------- */
@@ -1525,7 +1527,7 @@ section > .container-fluid {
 }
 .menuzord-menu > li > .megamenu .megamenu-row ul.list-icon li:before {
   content: "\f101";
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: fontawesome;
   font-size: 12px;
   left: 0;
   position: absolute;
@@ -2086,16 +2088,17 @@ body.vertical-nav .rev_slider_wrapper {
   padding: 10px 0;
   position: relative;
 }
-.menu-full-page #fullpage-nav ul li a {
+.menu-full-page #fullpage-nav ul li a  {
   color: #111;
   font-size: 18px;
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   text-decoration: none;
   font-weight: 400;
   text-transform: uppercase;
   padding: 0;
   position: relative;
 }
+
 .menu-full-page #fullpage-nav ul li a:hover {
   color: #888;
   -webkit-transition: color 2s time;
@@ -3085,8 +3088,7 @@ form select {
 .box-hover-effect.effect-siberia .info-box .info-title:before {
   color: #fff;
   content: "\f054";
-font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: "fontAwesome";
   position: absolute;
   text-align: center;
   line-height: 50px;
@@ -3166,8 +3168,7 @@ font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
 .box-hover-effect.effect-florida .info-box .info-title:before {
   color: #fff;
   content: "\f054";
-font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: "fontAwesome";
   position: absolute;
   text-align: center;
   line-height: 50px;
@@ -3998,8 +3999,7 @@ textarea {
   background: none repeat scroll 0 0 transparent;
   border: 1px solid #ccc;
   border-radius: 3px;
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: 'Open Sans', sans-serif;
   height: 18px;
   left: 3em;
   line-height: 1;
@@ -4042,8 +4042,7 @@ textarea {
   color: #a9a9a9;
   content: "\f005\f005\f005\f005\f005";
   float: left;
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: fontawesome;
   left: 0;
   letter-spacing: 2px;
   position: absolute;
@@ -4072,8 +4071,7 @@ textarea {
   color: #a9a9a9;
   content: "\f005\f005\f005\f005\f005";
   float: left;
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: fontawesome;
   left: 0;
   letter-spacing: 2px;
   position: absolute;
@@ -4404,8 +4402,7 @@ table.no-border td {
   padding-bottom: 30px;
 }
 .single-post article .entry-title {
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: "Open Sans", sans-serif;
   padding: 15px 0 0;
   text-transform: capitalize;
 }
@@ -4446,9 +4443,8 @@ table.no-border td {
 .single-post .comment-list {
   padding-left: 0;
 }
-.single-post .comment-list h6 {
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+.single-post .comment-list h6  {
+  font-family: helvetica;
 }
 .single-post .comment-list li {
   list-style: none;
@@ -4819,7 +4815,7 @@ blockquote.dark footer {
   color: #d3d3d3;
 }
 blockquote p {
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Playfair Display", serif;
   font-size: 16px;
   font-style: italic;
 }
@@ -5713,8 +5709,7 @@ blockquote p {
 }
 .toggle-map span:after {
   content: "\f107";
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: fontawesome;
   margin-left: 10px;
 }
 .toggle-map.open span:after {
@@ -6113,8 +6108,7 @@ blockquote p {
 .nav-tabs > li > a {
   background-color: transparent;
   border-radius: 0;
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: 'Open Sans', sans-serif;
   font-size: 13px;
   color: #555555;
   font-weight: 600;
@@ -6309,13 +6303,11 @@ blockquote p {
 }
 .services-tab .tab-content .service-content .sub-title {
   color: #c8c8c8;
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: 'Playfair Display', sans-serif;
 }
 .services-tab .tab-content .service-content .title {
   color: #555555;
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: 'Playfair Display', sans-serif;
 }
 @media only screen and (max-width: 1199px) {
   .services-tab .service-content {
@@ -6357,8 +6349,7 @@ blockquote p {
 }
 .panel-group.accordion-icon-right .panel-heading .panel-title a:after {
   content: "\f068";
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: fontawesome;
   font-size: 10px;
   right: 0;
   padding: 4px 10px;
@@ -6372,8 +6363,7 @@ blockquote p {
 }
 .panel-group.accordion-icon-left .panel-heading .panel-title a:before {
   content: "\f068";
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: fontawesome;
   font-size: 10px;
   left: 0;
   padding: 3px 10px;
@@ -6503,8 +6493,7 @@ blockquote p {
   background: #eee;
   content: "\f068";
   color: #333;
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: fontawesome;
   font-size: 10px;
   left: 0;
   padding: 12px 14px;
@@ -6538,8 +6527,7 @@ blockquote p {
 }
 .fc-timetable-wrapper .fc-toolbar h2 {
   color: #7f7f7f;
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: 'Lato', sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 38px;
@@ -6587,8 +6575,7 @@ blockquote p {
 .fc-timetable-wrapper .fc-day-header {
   background: #ffffff;
   color: #7f7f7f;
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: 'Lato', sans-serif;
   font-size: 14px;
   font-weight: 300;
   line-height: 52px;
@@ -6646,8 +6633,7 @@ blockquote p {
   border: 0;
   border: 2px solid #5fc7ae;
   color: #ffffff;
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: 'Lato', sans-serif;
   font-size: 16px;
   font-weight: 300;
   transition: all 0.3s ease;
@@ -6688,8 +6674,7 @@ blockquote p {
 }
 .fc-timetable-wrapper td.fc-time {
   color: #7f7f7f;
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: 'Lato', sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 70px;
@@ -7027,8 +7012,7 @@ blockquote p {
   color: #555555;
   cursor: pointer;
   content: "\f002";
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: fontawesome;
   font-size: 16px;
   position: absolute;
   right: 13px;
@@ -7078,8 +7062,7 @@ blockquote p {
 .widget .widget-title {
   margin-top: 0;
   margin-bottom: 20px;
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: 'Open Sans', sans-serif;
   font-size: 18px;
   font-weight: 700;
 }
@@ -7130,8 +7113,7 @@ blockquote p {
 .widget .twitter-feed-carousel li::after {
   content: "\f099";
   font-size: 24px;
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: fontawesome;
   left: 0;
   position: absolute;
   top: 0;
@@ -7177,8 +7159,7 @@ blockquote p {
 }
 .widget .post-title a {
   letter-spacing: 0;
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-weight: 700;
 }
@@ -7273,8 +7254,7 @@ blockquote p {
 }
 .horizontal-contact-widget .each-widget::before {
   content: "\f111";
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: FontAwesome;
   left: 0;
   position: absolute;
   right: 0;
@@ -7312,8 +7292,7 @@ blockquote p {
 .testimonial .comment::after {
   bottom: 48px;
   content: "\f10d";
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: fontawesome;
   font-size: 112px;
   opacity: 0.1;
   position: absolute;
@@ -7377,8 +7356,7 @@ blockquote p {
 }
 .testimonial.style1 .comment::before {
   content: "\f10d";
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: fontawesome;
   font-size: 30px;
   left: 20px;
   position: absolute;
@@ -7403,8 +7381,7 @@ blockquote p {
 }
 .testimonial-content::after {
   content: "\f10d";
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: fontawesome;
   font-size: 61px;
   right: 50px;
   opacity: 0.1;
@@ -7413,8 +7390,7 @@ blockquote p {
 }
 .testimonial-content::after {
   content: "\f10d";
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: fontawesome;
   font-size: 92px;
   right: 30px;
   opacity: 0.07;
@@ -7903,8 +7879,7 @@ blockquote p {
 .testimonial-carousel.fullwidth .content p::after,
 .testimonial-carousel-style2.fullwidth .content p::after {
   content: "\f10e";
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: fontawesome;
   font-size: 100px;
   left: 42%;
   opacity: 0.1;
@@ -7936,8 +7911,7 @@ blockquote p {
 .testimonial-carousel-style2.boxed .content::after {
   bottom: 12px;
   content: "\f10e";
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: fontawesome;
   font-size: 55px;
   opacity: 0.2;
   position: absolute;
@@ -8494,8 +8468,7 @@ blockquote p {
 .services-list li.active::after {
   color: #fff;
   content: "\f061";
-font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: "FontAwesome";
   font-size: 22px;
   right: 18px;
   position: absolute;
@@ -9113,8 +9086,7 @@ font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .sidebar .widget .widget-title {
   background: #f7f7f7 none repeat scroll 0 0;
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: "Roboto", sans-serif;
   font-size: 17px;
   font-weight: 500;
   margin-bottom: 20px;
@@ -9188,8 +9160,7 @@ font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .read-more::after {
   content: "\f054";
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: fontawesome;
   font-size: 11px;
   margin-left: 5px;
   vertical-align: middle;
@@ -9205,8 +9176,7 @@ font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .blog-read-more::after {
   content: "\f178";
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: fontawesome;
   position: absolute;
   right: -22px;
   top: -2px;
@@ -9220,8 +9190,7 @@ font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
 .footer-link li::before {
   position: absolute;
   content: "\f0da";
-  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: fontawesome;
   margin-right: 10px;
   display: inline-block;
   left: 0;
