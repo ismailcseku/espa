@@ -95,8 +95,6 @@
             <div id="disable-preloader" class="btn btn-default btn-sm">Désactiver</div>
         </div>
     -->
-       
-
         <!-- Header -->
         <header id="header" class="header">
             <div class="header-top bg-theme-colored border-top-theme-colored2-2px sm-text-center">
