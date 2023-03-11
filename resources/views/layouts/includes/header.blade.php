@@ -75,10 +75,10 @@
     <div id="wrapper" class="clearfix">
         <div id="preloader">
             <div id="spinner">
-              <img alt="" src="https://www.perodua.com.my/assets/gif/loading4.gif">
+                <img alt="" src="https://www.perodua.com.my/assets/gif/loading4.gif">
             </div>
             <div id="disable-preloader" class="btn btn-default btn-sm">Désactiver</div>
-          </div>
+        </div>
 
         <!-- Header -->
         <header id="header" class="header">
@@ -226,7 +226,7 @@
                                             <ul class="dropdown">
                                                 <li><a
                                                         href="{{ route('course.byname', 'Horticulture Ornementale et Espaces verts') }}">Horticulture
-                                                        Ornementale et Espaces verts</a></li>
+                                                        Ornementale et <br class="break"> Espaces verts</a></li>
                                                 <li><a href="{{ route('course.byname', 'Aménagement du Paysage') }}">Aménagement
                                                         du Paysage</a>
                                                 </li>
@@ -237,13 +237,15 @@
                                             <ul class="dropdown">
                                                 <li><a
                                                         href="{{ route('course.byname', 'Technico-Commercial en Productions Horticoles') }}">Technico-Commercial
-                                                        en Productions Horticoles</a></li>
+                                                        en Productions <br class="break"> Horticoles</a></li>
                                                 <li><a
                                                         href="{{ route('course.byname', 'Conditionnement et Valorisation des Produits Agricoles') }}">Conditionnement
-                                                        et Valorisation des Produits Agricoles</a></li>
+                                                        et Valorisation <br class="break"> des Produits Agricoles</a>
+                                                </li>
                                                 <li><a
                                                         href="{{ route('course.byname', 'Cultures Ornementales et Aménagement des Espaces Verts') }}">Cultures
-                                                        Ornementales et Aménagement des Espaces Verts</a></li>
+                                                        Ornementales et <br class="break"> Aménagement des Espaces
+                                                        Verts</a></li>
                                                 <li><a href="Aquaculture">Aquaculture</a>
                                                 </li>
                                             </ul>
@@ -292,6 +294,19 @@
             </div>
         </header>
 
-    
+        <style>
+            @media only screen and (min-width:500px) {
+                .break {
+                    display: none;
+                }
+            
 
-   
+            }
+            @media only screen and (max-width:500px) {
+                .break {
+                    display: block;
+                }
+            
+
+            }
+        </style>
