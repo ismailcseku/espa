@@ -18,6 +18,6 @@ class CampusController extends Controller
     {
         $datas=Campus::latest('id')->limit(1)->get();
         $downloads=Downloadpage::where('pagename','campus')->get();
-        return view('static.campus')->with(['datas'=>$datas,'medias'=>$medias,'downloads'=>$downloads]);
+        return view('static.campus')->with(['datas'=>$datas,'downloads'=>$downloads]);
     }
 }
