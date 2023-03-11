@@ -1,25 +1,26 @@
 
-<footer id="footer" class="footer" data-bg-color="#20232E">
+<footer id="footer" class="footer" data-bg-color="white">
+<div id="separator"></div>
     <div class="container pt-60 pb-20">
         <div class="col-sm-6 col-md-3">
-            <div class="widget dark">
+            <div class="widget dark" >
                
-                    <h4 class="widget-title line-bottom-theme-colored2">Coordonnées</h4>
+                    <h4 class="widget-title line-bottom-theme-colored2" style="color:#1f3344;">Coordonnées</h4>
 
-                    <span>
+                    <span style="color:#1f3344;">
 
                         Complexe Horticole d’Agadir, km 2 route d’Azrou,
                         B.P. 121 Ait Melloul 80150 - Agadir
                     </span>
               
                 <ul class="list-inline">
-                    <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone mr-5"></i> <a href="#">(+212) 0528-241-006
+                    <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone mr-5"></i> <a href="#" style="color:#1f3344;">(+212) 0528-241-006
                             / 240-155</a>
                     </li>
                     <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o mr-5"></i> <a
-                            href="mail:contact@cha-agadir.ma">contact@cha-agadir.ma</a> </li>
+                            href="mail:contact@cha-agadir.ma" style="color:#1f3344;">contact@cha-agadir.ma</a> </li>
                     <li class="m-0 pl-10 pr-10"> <i class="fa fa-globe mr-5"></i> <a
-                            href="https://cha-agadir.ma">www.cha-agadir.ma</a> </li>
+                            href="https://cha-agadir.ma" style="color:#1f3344;">www.cha-agadir.ma</a> </li>
                 </ul>
                 <ul class="styled-icons icon-sm icon-dark icon-theme-colored2 icon-circled clearfix mt-10">
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -32,33 +33,32 @@
         </div>
         <div class="col-sm-6 col-md-3">
             <div class="widget dark">
-                <h4 class="widget-title line-bottom-theme-colored2">Liens rapides</h4>
+                <h4 class="widget-title line-bottom-theme-colored2" style="color:#1f3344;">Liens rapides</h4>
                 <div class="row clearfix">
                     <div class="col-xs-12 col-sm-6 col-md-6">
-                        <ul class="footer-link">
-                            <li><a href="{{ route('home') }}">Acceuil</a></li>
-                            <li><a href="{{ route('course.index') }}">Formations</a></li>
-                            <li><a href="{{ route('evenement.index') }}">Évènements</a></li>
-                            <li><a href="{{ route('blog-actualités.index') }}">Actualités</a></li>
-                            <li><a href="{{ route('media.index') }}">Galerie</a></li>
-                            <li><a href="{{ route('video.index') }}">Vidéos</a></li>
+                        <ul >
+                            <li><a href="{{ route('home') }}" style="color:#1f3344;">Acceuil</a></li>
+                            <li><a href="{{ route('course.index') }}" style="color:#1f3344;">Formations</a></li>
+                            <li><a href="{{ route('evenement.index') }}" style="color:#1f3344;">Évènements</a></li>
+                            <li><a href="{{ route('blog-actualités.index') }}" style="color:#1f3344;">Actualités</a></li>
+                            <li><a href="{{ route('media.index') }}" style="color:#1f3344;">Galerie</a></li>
+                            <li><a href="{{ route('video.index') }}" style="color:#1f3344;">Vidéos</a></li>
                         </ul>
                     </div>
-
                 </div>
             </div>
         </div>
         <div class="col-sm-6 col-md-3">
             <div class="widget dark">
-              <h4 class="widget-title line-bottom-theme-colored2">Derniers posts</h4>
+              <h4 class="widget-title line-bottom-theme-colored2" style="color:#1f3344;">Derniers posts</h4>
               <div class="latest-posts">
                 @foreach ($latest_blog as $item)
                 
                 <article class="post media-post clearfix pb-0 mb-10">
                   <a class="post-thumb" href="{{ route('blog-actualités.show', $item->id) }}"><img src="{{ url('storage') }}/{{ $item->photo }}" width="80px" height="55px" style="object-fit:cover;" alt="{{ $item->title}}"></a>
                   <div class="post-right">
-                    <h5 class="post-title mt-0 mb-5"><a href="{{ route('blog-actualités.show', $item->id) }}">{{ $item->title}}</a></h5>
-                    <p class="post-date mb-0 font-12"> {{ $item->created_at}}</p>
+                    <h5 class="post-title mt-0 mb-5" ><a href="{{ route('blog-actualités.show', $item->id) }}" style="color:#1f3344;">{{ $item->title}}</a></h5>
+                    <p class="post-date mb-0 font-12" style="color:#1f3344;"> {{ $item->created_at}}</p>
                   </div>
                 </article>
                 @endforeach
@@ -69,17 +69,17 @@
 
         <div class="col-sm-6 col-md-3">
             <div class="widget dark">
-                <h4 class="widget-title line-bottom-theme-colored2">Ouvert</h4>
+                <h4 class="widget-title line-bottom-theme-colored2" style="color:#1f3344;">Ouvert</h4>
                 <div class="opening-hours">
                     <ul class="list-border">
-                        <li class="clearfix"> <span> Lun - vendredi : </span>
-                            <div class="value pull-right"> 8.30 am – 4h30 pm</div>
+                        <li class="clearfix" style="color:#1f3344;"> <span> Lun - vendredi : </span>
+                            <div class="value pull-right" > 8.30 am – 4h30 pm</div>
                         </li>
 
-                        <li class="clearfix"> <span> Sam : </span>
+                        <li class="clearfix" style="color:#1f3344;"> <span> Sam : </span>
                             <div class="value pull-right bg-theme-colored2 text-white closed">Fermé</div>
                         </li>
-                        <li class="clearfix"> <span> Dim : </span>
+                        <li class="clearfix" style="color:#1f3344;"> <span> Dim : </span>
                             <div class="value pull-right bg-theme-colored2 text-white closed">Fermé</div>
                         </li>
                     </ul>
@@ -87,7 +87,7 @@
             </div>
         </div>
     </div>
-    <div class="footer-bottom" data-bg-color="#1B1D26">
+    <div class="footer-bottom" data-bg-color="#1f3344">
         <div class="container pt-20 pb-20">
             <div class="row">
 
@@ -124,7 +124,20 @@
     </div>
 </footer>
 <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
-</div>
+
+<style>
+
+    footer a:hover{
+        text-decoration:underline;
+        text-underline-offset:2px;
+
+    }
+    #separator{
+        padding-top: 1px;
+        background-color:#1f3344;
+    }
+</style>
+
 <!-- end wrapper -->
 
 <!-- Footer Scripts -->

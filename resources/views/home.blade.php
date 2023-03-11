@@ -1,201 +1,127 @@
 @extends('layouts.app')
 @section('content')
-    <div class="main-content">
-        <!-- Section: home -->
-        <section id="home" class="divider">
-            <!-- START REVOLUTION SLIDER 5.0.7 -->
-            <div id="rev_slider_home_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="news-gallery34"
-                style="margin:0px auto;background-color:#ffffff;padding:0px;margin-top:0px;margin-bottom:0px;">
-                <!-- START REVOLUTION SLIDER 5.0.7 fullwidth mode -->
-                <div id="rev_slider_home" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.0.7">
-                    <ul>
-                        <!-- SLIDE 1 -->
-                        @foreach ($slides as $slide)
-                            <li>
-                                <!-- MAIN IMAGE -->
-                                <img src="{{ url('storage') }}/{{ $slide->photo }}" alt=""
-                                    data-bgposition="center 20%" data-bgfit="cover" data-bgrepeat="no-repeat"
-                                    data-bgparallax="10" class="rev-slidebg" data-no-retina>
+    <section aria-label="Newest Photos">
+        <div class="carousel" data-carousel>
+            <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
+            <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+            <ul data-slides>
+                @foreach ($slides as $slide)
 
-                                <!-- LAYER NR. 1 -->
-                                <div class="tp-caption tp-resizeme text-white rs-parallaxlevel-0" id="slide-1-layer-1"
-                                    data-x="['left','left','left','left']" data-hoffset="['50','50','50','30']"
-                                    data-y="['top','top','top','top']" data-voffset="['215','130','110','120']"
-                                    data-fontsize="['20','18','16','13']" data-lineheight="['30','30','28','25']"
-                                    data-fontweight="['700','700','700','700']" data-width="['700','650','600','420']"
-                                    data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;"
-                                    data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
-                                    data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
-                                    data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
-                                    data-mask_out="x:0;y:0;s:inherit;e:inherit;" data-start="1000" data-splitin="none"
-                                    data-splitout="none" data-responsive_offset="on"
-                                    style="z-index: 7; white-space: nowrap;">{{ $slide->subject }}
-                                </div>
-                                <!-- LAYER NR. 2 -->
-                                <div class="tp-caption tp-resizeme text-white text-uppercase font-montserrat rs-parallaxlevel-0"
-                                    id="slide-1-layer-2" data-x="['left','left','left','left']"
-                                    data-hoffset="['50','50','50','30']" data-y="['top','top','top','top']"
-                                    data-voffset="['250','160','140','150']" data-fontsize="['52','46','40','28']"
-                                    data-lineheight="['68','60','54','42']" data-fontweight="['800','800','800','800']"
-                                    data-width="['700','650','600','420']" data-height="none" data-whitespace="normal"
-                                    data-transform_idle="o:1;"
-                                    data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
-                                    data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
-                                    data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
-                                    data-mask_out="x:0;y:0;s:inherit;e:inherit;" data-start="1000" data-splitin="none"
-                                    data-splitout="none" data-responsive_offset="on"
-                                    style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal;">
-                                    {{ $slide->title }}
-                                </div>
-                                <!-- LAYER NR. 3 -->
-                                <div class="tp-caption tp-resizeme text-white rs-parallaxlevel-0" id="slide-1-layer-3"
-                                    data-x="['left','left','left','left']" data-hoffset="['50','50','50','30']"
-                                    data-y="['top','top','top','top']" data-voffset="['325','220','195','195']"
-                                    data-fontsize="['16','16','14','13']" data-lineheight="['30','26','24','20']"
-                                    data-fontweight="['400','400','400','400']" data-width="['700','650','600','420']"
-                                    data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;"
-                                    data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
-                                    data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
-                                    data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
-                                    data-mask_out="x:0;y:0;s:inherit;e:inherit;" data-start="1000" data-splitin="none"
-                                    data-splitout="none" data-responsive_offset="on"
-                                    style="z-index: 7; white-space: nowrap;">
+                @if ($loop->first)
+                    
+                <li class="slide" data-active>
+                    <img src="{{ url('storage') }}/{{ $slide->photo }}" alt="Nature Image #1">
+                </li>
+                @else
+                <li class="slide">
+                    <img src="{{ url('storage') }}/{{ $slide->photo }}" alt="Nature Image #2">
+                </li>
+                @endif
+                @endforeach
+            
+            </ul>
+        </div>
+    </section>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
 
+     
+        .carousel {
+            width: 100vw;
+            height: 60vh;
+            position: relative;
+        }
 
-                                    {!! $slide->description !!}
+        .carousel>ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
 
+        .slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: 200ms opacity ease-in-out;
+            transition-delay: 200ms;
+        }
 
-                                </div>
-                                <!-- LAYER NR. 4 -->
-                                <div class="tp-caption tp-resizeme text-white rs-parallaxlevel-0" id="slide-1-layer-4"
-                                    data-x="['left','left','left','left']" data-hoffset="['53','53','53','30']"
-                                    data-y="['top','top','top','top']" data-voffset="['410','290','260','250']"
-                                    data-fontsize="['18','18','16','16']" data-lineheight="['30','30','30','30']"
-                                    data-fontweight="['600','600','600','600']" data-width="['700','650','600','420']"
-                                    data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;"
-                                    data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
-                                    data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
-                                    data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
-                                    data-mask_out="x:0;y:0;s:inherit;e:inherit;" data-start="1000" data-splitin="none"
-                                    data-splitout="none" data-responsive_offset="on"
-                                    style="z-index: 7; white-space: nowrap;"><a href="{{ route('course.index') }}"
-                                        class="btn btn-dark btn-circled btn-theme-colored2 btn-xl mr-10 pr-30 pl-30">Découvrir</a>
-                                    <a href="{{ route('contact.create') }}"
-                                        class="btn btn-transparent btn-border btn-circled btn-xl pr-30 pl-30">Contact</a>
-                                </div>
-                            </li>
-                        @endforeach
+        .slide>img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
 
+        .slide[data-active] {
+            opacity: 1;
+            z-index: 1;
+            transition-delay: 0ms;
+        }
 
-                    </ul>
-                    <div class="tp-bannertimer tp-bottom"
-                        style="height: 5px; background-color: rgba(255, 255, 255, 0.4);"></div>
-                </div>
-            </div>
-            <!-- END REVOLUTION SLIDER -->
-            <script>
-                var tpj = jQuery;
-                var revapi34;
-                tpj(document).ready(function() {
-                    if (tpj("#rev_slider_home").revolution == undefined) {
-                        revslider_showDoubleJqueryError("#rev_slider_home");
-                    } else {
-                        revapi34 = tpj("#rev_slider_home").show().revolution({
-                            sliderType: "standard",
-                            jsFileLocation: "js/revolution-slider/js/",
-                            sliderLayout: "fullwidth",
-                            dottedOverlay: "none",
-                            delay: 3000,
-                            navigation: {
-                                keyboardNavigation: "on",
-                                keyboard_direction: "horizontal",
-                                mouseScrollNavigation: "off",
-                                onHoverStop: "on",
-                                touch: {
-                                    touchenabled: "on",
-                                    swipe_threshold: 75,
-                                    swipe_min_touches: 1,
-                                    swipe_direction: "horizontal",
-                                    drag_block_vertical: false
-                                },
-                                arrows: {
-                                    enable: true,
-                                    style: 'gyges',
-                                    left: {
-                                        h_align: "left",
-                                        v_align: "center",
-                                        h_offset: 0,
-                                        v_offset: 0
-                                    },
-                                    right: {
-                                        h_align: "right",
-                                        v_align: "center",
-                                        h_offset: 0,
-                                        v_offset: 0
-                                    }
-                                },
-                                bullets: {
-                                    enable: true,
-                                    style: 'hebe',
-                                    tmp: '<span class="tp-bullet-image"></span>',
-                                    hide_onmobile: true,
-                                    hide_under: 600,
-                                    hide_onleave: true,
-                                    hide_delay: 200,
-                                    hide_delay_mobile: 1200,
-                                    direction: "horizontal",
-                                    h_align: "center",
-                                    v_align: "bottom",
-                                    h_offset: 0,
-                                    v_offset: 30,
-                                    space: 5
-                                }
-                            },
-                            viewPort: {
-                                enable: true,
-                                outof: "pause",
-                                visible_area: "80%"
-                            },
-                            responsiveLevels: [1240, 1024, 778, 480],
-                            gridwidth: [1240, 1024, 778, 480],
-                            gridheight: [660, 550, 500, 450],
-                            lazyType: "none",
-                            parallax: {
-                                type: "scroll",
-                                origo: "enterpoint",
-                                speed: 400,
-                                levels: [5, 10, 15, 20, 25, 30, 35, 40, 45, 50],
-                            },
-                            shadow: 0,
-                            spinner: "off",
-                            stopLoop: "off",
-                            stopAfterLoops: -1,
-                            stopAtSlide: 1,
-                            shuffle: "off",
-                            autoHeight: "off",
-                            hideThumbsOnMobile: "off",
-                            hideSliderAtLimit: 0,
-                            hideCaptionAtLimit: 0,
-                            hideAllCaptionAtLilmit: 0,
-                            debugMode: false,
-                            fallbacks: {
-                                simplifyAll: "off",
-                                nextSlideOnWindowFocus: "off",
-                                disableFocusListener: false,
-                            }
-                        });
-                    }
-                }); /*ready*/
-            </script>
-            <!-- END REVOLUTION SLIDER -->
-        </section>
-    </div>
+        .carousel-button {
+            position: absolute;
+            z-index: 2;
+            background: none;
+            border: none;
+            font-size: 4rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255, 255, 255, .5);
+            cursor: pointer;
+            border-radius: .25rem;
+            padding: 0 .5rem;
+            background-color: rgba(0, 0, 0, .1);
+        }
 
+        .carousel-button:hover,
+        .carousel-button:focus {
+            color: white;
+            background-color: rgba(0, 0, 0, .2);
+        }
+
+        .carousel-button:focus {
+            outline: 1px solid black;
+        }
+
+        .carousel-button.prev {
+            left: 1rem;
+        }
+
+        .carousel-button.next {
+            right: 1rem;
+        }
+    </style>
+    <script>
+        const buttons = document.querySelectorAll("[data-carousel-button]")
+
+        buttons.forEach(button => {
+            button.addEventListener("click", () => {
+                const offset = button.dataset.carouselButton === "next" ? 1 : -1
+                const slides = button
+                    .closest("[data-carousel]")
+                    .querySelector("[data-slides]")
+
+                const activeSlide = slides.querySelector("[data-active]")
+                let newIndex = [...slides.children].indexOf(activeSlide) + offset
+                if (newIndex < 0) newIndex = slides.children.length - 1
+                if (newIndex >= slides.children.length) newIndex = 0
+
+                slides.children[newIndex].dataset.active = true
+                delete activeSlide.dataset.active
+            })
+        })
+    </script>
 
 
     <style>
         .hidden_load {
-            display:none;
+            display: none;
         }
 
         .show_load {
@@ -247,11 +173,11 @@
                                                     {{ $course->accroche }}</p>
                                             </a>
                                             <!--
-                                                <div class="author-thumb">
-                                                    <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
-                                                        alt="" class="img-circle">
-                                                </div>
-                                            -->
+                                                                            <div class="author-thumb">
+                                                                                <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
+                                                                                    alt="" class="img-circle">
+                                                                            </div>
+                                                                        -->
                                         </div>
                                         <a href="{{ route('course.details', $course->name) }}" style="display: block"
                                             class="course-meta">
@@ -477,7 +403,8 @@
                                     </ul>
 
                                     <a href="{{ route('blog-actualités.show', $blog->id) }}"
-                                        class="text-theme-colored2 font-14 text-gray-darkgray pull-right flip">Lire plus
+                                        class="text-theme-colored2 font-14 text-gray-darkgray pull-right flip">Lire
+                                        plus
                                     </a>
                                 </div>
                             </article>
@@ -530,17 +457,18 @@
     <section class="clients ">
 
         <div class="container pt-40 pb-40 ">
-            <h3 class="text-white font-38 font-weight-700 mt-10 mb-0"><span class="text-theme-colored2">Partenaires</span>
+            <h3 class=" font-38 font-weight-700 mt-10 mb-0" style="color:#1f3344;"><span>Partenaires</span>
             </h3>
             <div class="row">
                 <div class="col-md-12">
                     <!-- Section: Clients -->
-    
+
                     <div class="owl-carousel-6col clients-logo transparent text-center">
                         @if (count($partners) > 0)
                             @foreach ($partners as $partner)
-                                <div class="item"> <a href="#"><img src="{{ url('storage') }}/{{ $partner->photo }}"
-                                            alt=""></a></div>
+                                <div class="item"> <a href="#"><img
+                                            src="{{ url('storage') }}/{{ $partner->photo }}" alt=""></a>
+                                </div>
                             @endforeach
                         @endif
                     </div>
@@ -548,10 +476,11 @@
             </div>
         </div>
     </section>
+
     <script lang="js">
         let btn = document.getElementById("first_element");
 
-    
+
         const tabs = document.querySelectorAll("[data-target]"),
             tabContents = document.querySelectorAll("[data-content]");
 
@@ -570,14 +499,9 @@
                 tab.classList.add("is-active");
             });
         });
-       setTimeout(() => {
-        
-           document.getElementById("courses").className='bg-silver-light show_load'
-       }, 1000);
-       
+        setTimeout(() => {
+
+            document.getElementById("courses").className = 'bg-silver-light show_load'
+        }, 1000);
     </script>
-
-
-
-
 @endsection

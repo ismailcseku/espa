@@ -195,7 +195,7 @@
                         </ul>
                     </div>
                     <div class="col-md-8">
-                        <div class="owl-carousel-1col" data-nav="true">
+                        <div >
                             <div class="item"><img src="{{ url('storage') }}/{{ $evenements->photo }}" alt="">
                             </div>
 
@@ -299,25 +299,7 @@
             </div>
         </section>
 
-        <section>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
 
-                        <a href="{{ route('media.index') }}" class="text-white font-38 font-weight-700 mt-10 mb-20"><span
-                                class="text-theme-colored2">Galerie</span></a>
-
-                        <div class="owl-carousel-5col" data-nav="true">
-                            @foreach ($medias as $media)
-                                <div class="item"><img src="{{ url('storage') }}/{{ $media->photo }}" width="285"
-                                        height="215" style="object-fit:cover;" alt="{{ $media->title }}"></div>
-                            @endforeach
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </div>
     <style>
         .share {
