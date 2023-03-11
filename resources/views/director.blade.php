@@ -39,7 +39,7 @@
                         <div class="col-md-12">
                             <h2 class="text-uppercasetext-theme-colored mt-0 mb-0 mt-sm-30"><span
                                     class="text-theme-colored2">Mot du directeur</span></h2>
-                            
+
 
                             <div class="mt-30 mb-0">
 
@@ -93,25 +93,7 @@
             </div>
         </div>
     </section>
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
 
-                    <a href="{{ route('media.index') }}" class="text-white font-38 font-weight-700 mt-10 mb-20"><span
-                            class="text-theme-colored2">Galerie</span></a>
-
-                    <div class="owl-carousel-5col" data-nav="true">
-                        @foreach ($medias as $media)
-                            <div class="item"><img src="{{ url('storage') }}/{{ $media->photo }}" width="285"
-                                    height="215" style="object-fit:cover;" alt="{{ $media->title }}"></div>
-                        @endforeach
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <style>
         .accordion {
             background-color: #eee;

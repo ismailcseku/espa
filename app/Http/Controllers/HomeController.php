@@ -10,6 +10,7 @@ use App\Models\Slide;
 use App\Models\Whyus;
 use App\Models\Course;
 use App\Models\Degree;
+use App\Models\Partner;
 use App\Models\Responsable;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -52,9 +53,7 @@ class HomeController extends Controller
        $about=About::latest('id')->limit(1)->get();
        $whyus=Whyus::all();
        $barres=Barre::all();
-
-
-
-        return  view('home')->with(['courses'=>$courses,'slides'=>$slides,'degrees'=>$degrees,'responsables'=>$responsables,'evenements'=>$evenements,'blogs'=>$blogs,'about'=>$about,'whyus'=> $whyus,'barres'=>$barres]);
+       $partners=Partner::all();
+        return  view('home')->with(['courses'=>$courses,'slides'=>$slides,'degrees'=>$degrees,'responsables'=>$responsables,'evenements'=>$evenements,'blogs'=>$blogs,'about'=>$about,'whyus'=> $whyus,'barres'=>$barres,'partners'=> $partners]);
     } 
 }

@@ -1,24 +1,4 @@
-<section class="clients ">
 
-    <div class="container pt-40 pb-40 ">
-        <h3 class="text-white font-38 font-weight-700 mt-10 mb-0"><span class="text-theme-colored2">Partenaires</span>
-        </h3>
-        <div class="row">
-            <div class="col-md-12">
-                <!-- Section: Clients -->
-
-                <div class="owl-carousel-6col clients-logo transparent text-center">
-                    @if (count($partners) > 0)
-                        @foreach ($partners as $partner)
-                            <div class="item"> <a href="#"><img src="{{ url('storage') }}/{{ $partner->photo }}"
-                                        alt=""></a></div>
-                        @endforeach
-                    @endif
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <footer id="footer" class="footer" data-bg-color="#20232E">
     <div class="container pt-60 pb-20">
         <div class="col-sm-6 col-md-3">

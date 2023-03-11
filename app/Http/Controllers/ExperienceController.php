@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Media;
 use App\Models\Experience;
 use App\Models\Downloadpage;
 use Illuminate\Http\Request;
@@ -19,7 +18,6 @@ class ExperienceController extends Controller
     public function __invoke(Request $request)
     {
         $datas=Experience::latest('id')->limit(1)->get();
-        $medias=Media::all();
         $shareFacebook=ShareFacade::currentPage()->facebook()->getRawLinks();
         $downloads=Downloadpage::where('pagename','ferme-experiementale')->get();
 
@@ -29,6 +27,6 @@ class ExperienceController extends Controller
         $shareLinkedin=ShareFacade::currentPage()->linkedin()->getRawLinks();
         
         
-        return view('static.experience')->with(['datas'=>$datas,'medias'=>$medias,'shareFacebook'=>$shareFacebook, 'shareWhatsapp'=>$shareWhatsapp,'shareLinkedin'=>$shareLinkedin,'downloads'=>$downloads]);
+        return view('static.experience')->with(['datas'=>$datas,'shareFacebook'=>$shareFacebook, 'shareWhatsapp'=>$shareWhatsapp,'shareLinkedin'=>$shareLinkedin,'downloads'=>$downloads]);
     }
 }

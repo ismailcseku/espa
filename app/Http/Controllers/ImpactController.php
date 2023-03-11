@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Media;
 use App\Models\Impact;
 use App\Models\Downloadpage;
 use Illuminate\Http\Request;
@@ -19,7 +18,6 @@ class ImpactController extends Controller
     public function __invoke(Request $request)
     {
         $datas=Impact::latest('id')->limit(1)->get();
-        $medias=Media::all();
         $shareFacebook=ShareFacade::currentPage()->facebook()->getRawLinks();
         
 
@@ -29,6 +27,6 @@ class ImpactController extends Controller
 
         $downloads=Downloadpage::where('pagename','impact-cluster')->get();
         
-        return view('static.impact')->with(['datas'=>$datas,'medias'=>$medias,'shareFacebook'=>$shareFacebook,'shareWhatsapp'=>$shareWhatsapp,'shareLinkedin'=>$shareLinkedin,'downloads'=>$downloads]);
+        return view('static.impact')->with(['datas'=>$datas,'shareFacebook'=>$shareFacebook,'shareWhatsapp'=>$shareWhatsapp,'shareLinkedin'=>$shareLinkedin,'downloads'=>$downloads]);
     }
 }

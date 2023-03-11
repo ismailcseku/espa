@@ -23,8 +23,8 @@ class DirectorController extends Controller
      
          $shareWhatsapp=ShareFacade::currentPage()->whatsapp()->getRawLinks();
          $shareLinkedin=ShareFacade::currentPage()->linkedin()->getRawLinks();
-        $medias=Media::all();
+ 
         $downloads=Downloadpage::where('pagename','mot-du-directeur')->get();
-        return view('director')->with(['datas'=>$datas,'medias'=>$medias,'shareFacebook'=>$shareFacebook,'shareWhatsapp'=>$shareWhatsapp,'shareLinkedin'=>$shareLinkedin,'downloads'=>$downloads]);
+        return view('director')->with(['datas'=>$datas,'shareFacebook'=>$shareFacebook,'shareWhatsapp'=>$shareWhatsapp,'shareLinkedin'=>$shareLinkedin,'downloads'=>$downloads]);
     }
 }

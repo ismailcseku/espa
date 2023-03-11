@@ -193,8 +193,19 @@
 
 
 
+    <style>
+        .hidden_load {
+            display:none;
+        }
+
+        .show_load {
+            display: block;
+        }
+    </style>
+
+
     <!-- Section: Courses -->
-    <section id="courses" class="bg-silver-light">
+    <section id="courses" class="hidden_load">
         <div class="container">
             <div class="section-title mb-40">
                 <div class="row">
@@ -236,11 +247,11 @@
                                                     {{ $course->accroche }}</p>
                                             </a>
                                             <!--
-                                            <div class="author-thumb">
-                                                <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
-                                                    alt="" class="img-circle">
-                                            </div>
-                                        -->
+                                                <div class="author-thumb">
+                                                    <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
+                                                        alt="" class="img-circle">
+                                                </div>
+                                            -->
                                         </div>
                                         <a href="{{ route('course.details', $course->name) }}" style="display: block"
                                             class="course-meta">
@@ -272,10 +283,6 @@
             </div>
         </div>
     </section>
-
-
-
-
 
     <!-- Section About -->
 
@@ -424,29 +431,6 @@
         </div>
     </section>
 
-    <!-- Section: team -->
-    <!--
-                                                                                                                                                                        <section id="team">
-                                                                                                                                                                            <div class="container">
-                                                                                                                                                                                <div class="section-title mb-40">
-                                                                                                                                                                                    <div class="row">
-                                                                                                                                                                                        <div class="col-md-12">
-                                                                                                                                                                                            <h2 class="title text-uppercase mb-5">Nos <span
-                                                                                                                                                                                                    class="text-theme-colored2">responsables</span>
-                                                                                                                                                                                            </h2>
-                                                                                                                                                                                            <h5 class="font-16 text-gray-darkgray mt-5">Discuter avec un responsable</h5>
-                                                                                                                                                                                        </div>
-                                                                                                                                                                                    </div>
-                                                                                                                                                                                </div>
-                                                                                                                                                                                <div class="section-content">
-                                                                                                                                                                                    <div class="row">
-                                                                                                                                                                                        @foreach ($responsables as $responsable)
-    <div class="col-xs-12 col-sm-6 col-md-6">
-                                                                                                                                                                                                   <h4 class="text-uppercase m-0 pb-5">{{ $responsable->name }}
-                                                                                                                                                                                                            {{ $responsable->surname }}</h4>
-                                                                                                                                                                                    </div>
-    @endforeach
-
 
     <!-- Section: blog -->
     <section id="blog">
@@ -543,18 +527,31 @@
     </section>
 
 
-    </div>
+    <section class="clients ">
 
-
+        <div class="container pt-40 pb-40 ">
+            <h3 class="text-white font-38 font-weight-700 mt-10 mb-0"><span class="text-theme-colored2">Partenaires</span>
+            </h3>
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Section: Clients -->
+    
+                    <div class="owl-carousel-6col clients-logo transparent text-center">
+                        @if (count($partners) > 0)
+                            @foreach ($partners as $partner)
+                                <div class="item"> <a href="#"><img src="{{ url('storage') }}/{{ $partner->photo }}"
+                                            alt=""></a></div>
+                            @endforeach
+                        @endif
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <script lang="js">
         let btn = document.getElementById("first_element");
-        btn.addEventListener("click", () => {
 
-        })
-
-        setTimeout(() => {
-            btn.click()
-        }, 1000);
+    
         const tabs = document.querySelectorAll("[data-target]"),
             tabContents = document.querySelectorAll("[data-content]");
 
@@ -573,6 +570,11 @@
                 tab.classList.add("is-active");
             });
         });
+       setTimeout(() => {
+        
+           document.getElementById("courses").className='bg-silver-light show_load'
+       }, 1000);
+       
     </script>
 
 
