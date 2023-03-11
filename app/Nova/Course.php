@@ -80,18 +80,66 @@ class Course extends Resource
             BelongsTo::make('Type de formation','trainingType', 'App\Nova\TrainingType'),
             BelongsTo::make('Rythme', 'modality','App\Nova\Modality'),
             BelongsTo::make('Langue','language','App\Nova\Language'),
-            NovaTinyMCE::make('Prérequis et admission','admission'),
-            NovaTinyMCE::make('Dossier','dossier'),
-            NovaTinyMCE::make('Candidature','candidature'),
+            NovaTinyMCE::make('Prérequis et admission','admission')->options([
+                'plugins' => [
+                    'lists','preview','anchor','pagebreak','image','wordcount','fullscreen','directionality'
+                ],
+                'toolbar' => 'undo redo | styles | bold italic forecolor backcolor | alignleft aligncenter alignright alignjustify | image | bullist numlist outdent indent | link',
+                'use_lfm' => true
+            ]),
+            NovaTinyMCE::make('Dossier','dossier')->options([
+                'plugins' => [
+                    'lists','preview','anchor','pagebreak','image','wordcount','fullscreen','directionality'
+                ],
+                'toolbar' => 'undo redo | styles | bold italic forecolor backcolor | alignleft aligncenter alignright alignjustify | image | bullist numlist outdent indent | link',
+                'use_lfm' => true
+            ]),
+            NovaTinyMCE::make('Candidature','candidature')->options([
+                'plugins' => [
+                    'lists','preview','anchor','pagebreak','image','wordcount','fullscreen','directionality'
+                ],
+                'toolbar' => 'undo redo | styles | bold italic forecolor backcolor | alignleft aligncenter alignright alignjustify | image | bullist numlist outdent indent | link',
+                'use_lfm' => true
+            ]),
             DateTime::make('Date limite','datelimite'),
-            NovaTinyMCE::make('Modaliés de selection','selection'),
+            NovaTinyMCE::make('Modaliés de selection','selection')->options([
+                'plugins' => [
+                    'lists','preview','anchor','pagebreak','image','wordcount','fullscreen','directionality'
+                ],
+                'toolbar' => 'undo redo | styles | bold italic forecolor backcolor | alignleft aligncenter alignright alignjustify | image | bullist numlist outdent indent | link',
+                'use_lfm' => true
+            ]),
             Date::make('Date rentrée','daterentre'),
 
-            NovaTinyMCE::make('Diplôme','grade'),
+            NovaTinyMCE::make('Diplôme','grade')->options([
+                'plugins' => [
+                    'lists','preview','anchor','pagebreak','image','wordcount','fullscreen','directionality'
+                ],
+                'toolbar' => 'undo redo | styles | bold italic forecolor backcolor | alignleft aligncenter alignright alignjustify | image | bullist numlist outdent indent | link',
+                'use_lfm' => true
+            ]),
 
-            NovaTinyMCE::make('Profile - Compétences','profile'),
-            NovaTinyMCE::make('Débouchés','opportunity'),
-            NovaTinyMCE::make('Témoignage','review'),
+            NovaTinyMCE::make('Profile - Compétences','profile')->options([
+                'plugins' => [
+                    'lists','preview','anchor','pagebreak','image','wordcount','fullscreen','directionality'
+                ],
+                'toolbar' => 'undo redo | styles | bold italic forecolor backcolor | alignleft aligncenter alignright alignjustify | image | bullist numlist outdent indent | link',
+                'use_lfm' => true
+            ]),
+            NovaTinyMCE::make('Débouchés','opportunity')->options([
+                'plugins' => [
+                    'lists','preview','anchor','pagebreak','image','wordcount','fullscreen','directionality'
+                ],
+                'toolbar' => 'undo redo | styles | bold italic forecolor backcolor | alignleft aligncenter alignright alignjustify | image | bullist numlist outdent indent | link',
+                'use_lfm' => true
+            ]),
+            NovaTinyMCE::make('Témoignage','review')->options([
+                'plugins' => [
+                    'lists','preview','anchor','pagebreak','image','wordcount','fullscreen','directionality'
+                ],
+                'toolbar' => 'undo redo | styles | bold italic forecolor backcolor | alignleft aligncenter alignright alignjustify | image | bullist numlist outdent indent | link',
+                'use_lfm' => true
+            ]),
 
 
             HasMany::make('programs'),

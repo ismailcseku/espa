@@ -47,7 +47,13 @@ class Search extends Resource
             ->storeAs(function (Request $request) {
                     return $request->photo->getClientOriginalName();
             }),
-            NovaTinyMCE::make('contenu','content'),
+            NovaTinyMCE::make('contenu','content')->options([
+                'plugins' => [
+                    'lists','preview','anchor','pagebreak','image','wordcount','fullscreen','directionality'
+                ],
+                'toolbar' => 'undo redo | styles | bold italic forecolor backcolor | alignleft aligncenter alignright alignjustify | image | bullist numlist outdent indent | link',
+                'use_lfm' => true
+            ]),
             
         ];
     }
