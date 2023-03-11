@@ -47,10 +47,10 @@
                                 <!-- Portfolio Item Start -->
                                 @foreach ($videos as $video)
                                     <div class="gallery-item ">
-                                        <div class="thumb">
+                                        <div class="thumb" style="text-align: center;">
                                             <video class="img-fullwidth" style="postion:relative;"
                                                 src="{{ url('storage') }}/{{ $video->video }}" controls></video>
-                                            <p class="font-16 " style="color:rgb(45, 69, 88);font-weight:bold;">{{ $video->title }}</p>
+                                            <p class="font-16 " style="color:rgb(45, 69, 88);">{{ $video->title }}</p>
                                            
                                         </div>
                                     </div>
@@ -69,4 +69,19 @@
         </section>
 
     </div>
+
+    <style>
+        .thumb {
+            padding: 10px;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 768px) {
+        .thumb {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        }
+    </style>
 @endsection

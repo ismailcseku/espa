@@ -78,7 +78,7 @@
                             <p>{!! $data->content !!}</p>
                         </div>
                     @endforeach
-                    <button class="accordion">Télécharger</button>
+                    <button class="accordion">TELECHARGER</button>
                     <div class="panel">
                         @foreach ($downloads as $key => $download)
                             <div><a href="{{ url('storage') }}/{{ $download->file }}"
@@ -96,14 +96,15 @@
 
     <style>
         .accordion {
-            background-color: #eee;
-            color: #444;
             cursor: pointer;
             padding: 18px;
             width: 100%;
             border: none;
             text-align: left;
             outline: none;
+            color: #fff;
+            background-color: #1F3345;
+            font-weight: bold;
             font-size: 15px;
             transition: 0.4s;
         }
