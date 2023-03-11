@@ -103,7 +103,7 @@
 
         .slide div {
             position: absolute;
-            top: 45%;
+           
             word-break: break-all;
             left: 10%;
             color: white;
@@ -114,6 +114,7 @@
 
         @media only screen and (min-width: 600px) {
             .slide div {
+                top: 45%;
                 width: 60%;
             }
         }
@@ -121,6 +122,7 @@
         @media only screen and (max-width: 600px) {
             .slide div {
                 width: 90%;
+                top: 60%;
             }
         }
 
@@ -441,7 +443,7 @@
                                 class="animate-number text-theme-colored2 font-42 font-weight-600 mt-0 mb-15">0</h2>
                             <h5 class="text-white text-uppercase">
                                 {{ $barre->title }}
-
+                               
                             </h5>
                         </div>
                     </div>
@@ -524,7 +526,7 @@
                             Felicitation !! Vous avez êtes désormais abonnée.
                         </h6>
                     @endif
-                    <form id="mailchimp-subscription-form2" class="newsletter-form max-width-535 mt-10"
+                    <form  id="mailchimp-subscription-form2" class="newsletter-form max-width-535 mt-10"
                         action="{{ route('newsletter.store') }}" method="post">
                         @csrf
                         <label for="mce-EMAIL"></label>
