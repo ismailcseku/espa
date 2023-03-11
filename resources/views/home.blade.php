@@ -329,8 +329,6 @@
                                 venir
                             </h3>
                             <div class="line-bottom-theme-colored2"></div>
-
-
                             @foreach ($evenements as $evenement)
                                 <article>
                                     <div
@@ -432,7 +430,7 @@
     </section>
 
     <!-- Divider: Funfact -->
-    <section class="layer-overlay overlay-dark-7 parallax" data-bg-img="{{ asset('images/details_course.jpeg') }}">
+    <section  style="background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(31,51,68,1) 58%, rgba(40,40,46,1) 100%);">
         <div class="container pt-80 pb-90 pt-md-70 pb-md-50 pb-sm-50">
             <div class="row mt-30 text-center">
                 @foreach ($barres as $barre)
@@ -512,8 +510,7 @@
         </div>
     </section>
 
-    <section class="parallax divider layer-overlay overlay-dark-7"
-        data-bg-img="{{ asset('images/details_course.jpeg') }}" data-parallax-ratio="0.4">
+    <section style="background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(31,51,68,1) 58%, rgba(40,40,46,1) 100%);" >
         <div class="container pt-80 pb-90">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center">
