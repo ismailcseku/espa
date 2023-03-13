@@ -145,7 +145,7 @@
         @media only screen and (min-width: 600px) {
             .slide div {
                 top: 45%;
-                width: 45%;
+                width: 40%;
                 text-align: justify;
             }
 
