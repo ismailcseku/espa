@@ -1939,7 +1939,6 @@
 
 
         </div>
-
         <footer id="footer" class="footer" data-bg-color="white">
             <div id="separator"></div>
             <div class="container pt-60 pb-20">
@@ -2050,7 +2049,6 @@
                                 <li class="clearfix" style="color:#1f3344;"> <span> Lun - vendredi : </span>
                                     <div class="value pull-right"> 8.30 am – 4h30 pm</div>
                                 </li>
-        
                                 <li class="clearfix" style="color:#1f3344;"> <span> Sam : </span>
                                     <div class="value pull-right bg-theme-colored2 text-white closed">Fermé</div>
                                 </li>
@@ -2060,7 +2058,7 @@
         
                                 @if (count($logo_url) > 0)
                                     @foreach ($logo_url as $item)
-                                        <a class="menuzord-brand  flip mt-20 mt-sm-10 mb-sm-20 pt-20" href="/"><img
+                                        <a class="menuzord-brand  flip mt-20 mt-sm-10 mb-sm-20 pt-20 " href="/"><img
                                                 src="{{ url('storage') }}/{{ $item->logo }}" alt=""></a>
                                     @endforeach
                                 @endif
@@ -2111,15 +2109,23 @@
         </footer>
         <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
         <style>
+            footer a:hover {
+                text-decoration: underline;
+                text-underline-offset: 2px;
 
-            footer a:hover{
-                text-decoration:underline;
-                text-underline-offset:2px;
-        
             }
-            #separator{
+
+            #separator {
                 padding-top: 1px;
-                background-color:#1f3344;
+                background-color: #1f3344;
+            }
+
+            .widget {
+                margin-bottom: 0px;
+            }
+
+            .footer .widget .widget-title {
+                margin-top: 0px;
             }
         </style>
     </div>
@@ -2295,14 +2301,14 @@
 
     const items = document.querySelectorAll(".item");
 
-      items.forEach((item) => {
+    items.forEach((item) => {
         item.addEventListener('click', () => {
-          items.forEach((otherItem) => {
-            if (otherItem !== item && otherItem.classList.contains('open')) {
-              otherItem.classList.remove('open');
-            }
-          });
-          item.classList.toggle('open');
+            items.forEach((otherItem) => {
+                if (otherItem !== item && otherItem.classList.contains('open')) {
+                    otherItem.classList.remove('open');
+                }
+            });
+            item.classList.toggle('open');
         });
-      });
+    });
 </script>

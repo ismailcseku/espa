@@ -32,7 +32,7 @@ class CourseController extends Controller
         ->join('modes','modes.id','=','courses.mode_id')
         ->leftjoin('responsables','responsables.id','=','courses.responsable_id')
         ->select('courses.*','modalities.name as modalitiy_name','degrees.name as degrees_name','responsables.surname as responsables_surname','languages.name as languages_name','modes.name as modes_name','responsables.photo as responsables_photo')
-      ->orderBy('courses.position','Asc')
+        ->orderBy('courses.position','Asc')
         ->get();
         
         

@@ -149,7 +149,7 @@
                 text-align: justify;
             }
 
-            
+
         }
 
         @media only screen and (max-width: 900px) {
@@ -158,14 +158,15 @@
                 width: 60%;
                 text-align: justify;
             }
-          
+
         }
+
         @media only screen and (min-width: 600px) {
 
             .slide a {
-                    top: 68%;
-                    z-index: 3;
-                }
+                top: 68%;
+                z-index: 3;
+            }
         }
 
         @media only screen and (max-width: 600px) {
@@ -225,30 +226,30 @@
 
         /*
 
-                                                                                                                                                  .prev {
-                                                                                                                                                    left: 40%;
-                                                                                                                                                }
+                                                                                                                                                      .prev {
+                                                                                                                                                        left: 40%;
+                                                                                                                                                    }
 
-                                                                                                                                                .next {
-                                                                                                                                                    left: 60%;
-                                                                                                                                                }*/
+                                                                                                                                                    .next {
+                                                                                                                                                        left: 60%;
+                                                                                                                                                    }*/
 
         /*
-                                                                                                                                                                .carousel-button {
-                                                                                                                                                                    position: absolute;
-                                                                                                                                                                    z-index: 2;
-                                                                                                                                                                    background: none;
-                                                                                                                                                                    border: none;
-                                                                                                                                                                    font-size: 4rem;
-                                                                                                                                                                    top: 50%;
-                                                                                                                                                                    transform: translateY(-50%);
-                                                                                                                                                                    color: white;
-                                                                                                                                                                    cursor: pointer;
-                                                                                                                                                                    border-radius: .25rem;
-                                                                                                                                                                    padding: 0 .5rem;
-                                                                                                                                                                    background-color:#1f3344;
-                                                                                                                                                                }
-                                                                                                                                                                */
+                                                                                                                                                                    .carousel-button {
+                                                                                                                                                                        position: absolute;
+                                                                                                                                                                        z-index: 2;
+                                                                                                                                                                        background: none;
+                                                                                                                                                                        border: none;
+                                                                                                                                                                        font-size: 4rem;
+                                                                                                                                                                        top: 50%;
+                                                                                                                                                                        transform: translateY(-50%);
+                                                                                                                                                                        color: white;
+                                                                                                                                                                        cursor: pointer;
+                                                                                                                                                                        border-radius: .25rem;
+                                                                                                                                                                        padding: 0 .5rem;
+                                                                                                                                                                        background-color:#1f3344;
+                                                                                                                                                                    }
+                                                                                                                                                                    */
 
         .carousel-button:hover,
         .carousel-button:focus {
@@ -420,9 +421,9 @@
                                                     {{ $course->accroche }} [...]</p>
                                             </a>
                                             <!--  <div class="author-thumb">
-                                                                    <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
-                                                                        alt="" class="img-circle">
-                                                                </div>-->
+                                                                        <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
+                                                                            alt="" class="img-circle">
+                                                                    </div>-->
                                         </div>
                                         <a href="{{ route('course.details', $course->name) }}" style="display: block"
                                             class="course-meta">
