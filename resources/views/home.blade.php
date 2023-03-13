@@ -378,9 +378,8 @@
                         </a>
                         <a href="{{ route('course.index') }}"
                             class="btn_course1 font-16" style="font-style:normal; color:#1f3344;transform:translateY(30px)">
-                            Découvrir plus
+                            Voir plus
                         </a>
-
 
                     </div>
 
@@ -458,7 +457,7 @@
 
             <a href="{{ route('course.index') }}"
                 class=" btn btn-dark btn-circled btn-theme-colored2 btn-xl mr-10 pr-30 pl-30">
-                Découvrir plus
+                Voir plus
             </a>
         </div>
     </section>
