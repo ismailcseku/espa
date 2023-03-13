@@ -125,12 +125,12 @@
 
         .slide div {
             position: absolute;
-          
+
             left: 10%;
             color: white;
             font-size: 16px;
             font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-           
+
 
         }
 
@@ -154,6 +154,7 @@
                 z-index: 3;
             }
         }
+
         @media only screen and (min-width: 900px) {
             .slide div {
                 top: 45%;
@@ -161,6 +162,7 @@
                 text-align: justify;
             }
         }
+
         @media only screen and (max-width: 600px) {
             .slide div {
                 top: 50%;
@@ -218,30 +220,30 @@
 
         /*
 
-                                                                                                                          .prev {
-                                                                                                                            left: 40%;
-                                                                                                                        }
+                                                                                                                                                  .prev {
+                                                                                                                                                    left: 40%;
+                                                                                                                                                }
 
-                                                                                                                        .next {
-                                                                                                                            left: 60%;
-                                                                                                                        }*/
+                                                                                                                                                .next {
+                                                                                                                                                    left: 60%;
+                                                                                                                                                }*/
 
         /*
-                                                                                                                                        .carousel-button {
-                                                                                                                                            position: absolute;
-                                                                                                                                            z-index: 2;
-                                                                                                                                            background: none;
-                                                                                                                                            border: none;
-                                                                                                                                            font-size: 4rem;
-                                                                                                                                            top: 50%;
-                                                                                                                                            transform: translateY(-50%);
-                                                                                                                                            color: white;
-                                                                                                                                            cursor: pointer;
-                                                                                                                                            border-radius: .25rem;
-                                                                                                                                            padding: 0 .5rem;
-                                                                                                                                            background-color:#1f3344;
-                                                                                                                                        }
-                                                                                                                                        */
+                                                                                                                                                                .carousel-button {
+                                                                                                                                                                    position: absolute;
+                                                                                                                                                                    z-index: 2;
+                                                                                                                                                                    background: none;
+                                                                                                                                                                    border: none;
+                                                                                                                                                                    font-size: 4rem;
+                                                                                                                                                                    top: 50%;
+                                                                                                                                                                    transform: translateY(-50%);
+                                                                                                                                                                    color: white;
+                                                                                                                                                                    cursor: pointer;
+                                                                                                                                                                    border-radius: .25rem;
+                                                                                                                                                                    padding: 0 .5rem;
+                                                                                                                                                                    background-color:#1f3344;
+                                                                                                                                                                }
+                                                                                                                                                                */
 
         .carousel-button:hover,
         .carousel-button:focus {
@@ -258,7 +260,7 @@
 
         buttons.forEach(button => {
             button.addEventListener("click", () => {
-            
+
                 clearInterval(timer)
                 const offset = button.dataset.carouselButton === "next" ? 1 : -1
                 const slides = button
@@ -281,9 +283,9 @@
         let timer;
 
         function autoClick_btn() {
-           
+
             getBtn.click()
-            
+
         }
 
 
@@ -333,40 +335,66 @@
     </script>
 
 
-    <style>
-        .hidden_load {
-            display: none;
-        }
 
-        .show_load {
-            display: block;
-        }
-    </style>
 
 
     <!-- Section: Courses -->
-    <section id="courses" class="hidden_load" style="padding-top:40px;">
+    <section id="courses" style="padding-top:40px;">
+        <style>
+            @media only screen and (max-width: 600px) {
+                .btn_course1 {
+                    display: none;
+                }
+
+                .btn_course2 {
+                    display: inline;
+
+                }
+            }
+
+            @media only screen and (min-width: 600px) {
+                .btn_course1 {
+                    display: inline;
+                }
+
+                .btn_course2 {
+                    display: none;
+
+                }
+            }
+        </style>
         <div class="container">
             <div class="section-title mb-40">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12" style="display:flex; justify-content:space-between; align-items: center;">
                         <a href="{{ route('course.index') }}" class="text-uppercase title">
                             <h2> Nos <span class="text-theme-colored2">Formations</span></h2>
                         </a>
-                        <div class="double-line-bottom-theme-colored-2"></div>
+                        <a href="{{ route('course.index') }}"
+                            class="btn_course1 btn btn-dark btn-circled btn-theme-colored2 btn-xl mr-10 pr-30 pl-30">
+                            Découvrir plus
+                        </a>
+
+
                     </div>
+
                 </div>
             </div>
             <div class="section-content">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="owl-carousel-3col owl-nav-top" data-nav="tru">
+
+                        <div class="gallery-isotope default-animation-effect grid-3 gutter-small clearfix"
+                            data-lightbox="gallery">
+                            <!-- Portfolio Item Start -->
+
                             @foreach ($courses as $course)
-                                <div class="item">
+                                <div class="item gallery-item  a{{ $course->degree_id }}">
                                     <div class="course-single-item bg-white border-1px clearfix">
                                         <a href="{{ route('course.details', $course->name) }}" class="course-thumb">
                                             <img class="img-fullwidth" alt=""
                                                 src="{{ url('storage') }}/{{ $course->photo }}">
+
                                         </a>
                                         <div class="course-details clearfix p-20 pt-15">
                                             <div class="course-top-part">
@@ -374,22 +402,22 @@
                                                     <h4 class="mt-5 mb-5">
                                                         {{ $course->name }}</h4>
                                                 </a>
+
                                                 <a href="{{ route('course.details', $course->name) }}">
                                                     <h4 class="mt-5 mb-5">
                                                         {{ $course->degrees_name }}
                                                     </h4>
                                                 </a>
                                             </div>
-                                            <a href="{{ route('course.details', $course->name) }}" class="mt-15 mb-0">
+                                            <a
+                                                href="{{ route('course.details', $course->name) }}"class="course-description mt-15 mb-0">
                                                 <p style="font-weight:normal;">
                                                     {{ $course->accroche }} [...]</p>
                                             </a>
-                                            <!--
-                                                                                                                                                                                                            <div class="author-thumb">
-                                                                                                                                                                                                                <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
-                                                                                                                                                                                                                    alt="" class="img-circle">
-                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                        -->
+                                            <!--  <div class="author-thumb">
+                                                                    <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
+                                                                        alt="" class="img-circle">
+                                                                </div>-->
                                         </div>
                                         <a href="{{ route('course.details', $course->name) }}" style="display: block"
                                             class="course-meta">
@@ -408,17 +436,24 @@
                                                 <h5>Détail</h5>
                                             </div>
                                         </a>
-
                                     </div>
-
                                 </div>
                             @endforeach
 
 
                         </div>
+
                     </div>
                 </div>
+
             </div>
+        </div>
+        <div class="container">
+
+            <a href="{{ route('course.index') }}"
+                class="btn_course2 btn btn-dark btn-circled btn-theme-colored2 btn-xl mr-10 pr-30 pl-30">
+                Découvrir plus
+            </a>
         </div>
     </section>
 
@@ -681,9 +716,5 @@
                 tab.classList.add("is-active");
             });
         });
-        setTimeout(() => {
-
-            document.getElementById("courses").className = 'bg-silver-light show_load'
-        }, 100);
     </script>
 @endsection
