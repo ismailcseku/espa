@@ -87,14 +87,14 @@
 <body class="has-side-panel side-panel-right fullwidth-page">
 
     <div id="wrapper" class="clearfix">
-        <!--
+        
         <div id="preloader">
             <div id="spinner">
                 <img alt="" src="https://www.perodua.com.my/assets/gif/loading4.gif">
             </div>
             <div id="disable-preloader" class="btn btn-default btn-sm">Désactiver</div>
         </div>
-    -->
+    
         <!-- Header -->
         <header id="header" class="header">
             <div class="header-top bg-theme-colored border-top-theme-colored2-2px sm-text-center">
@@ -301,6 +301,7 @@
                 </div>
             </div>
         </header>
+        
 
         <style>
             @media only screen and (min-width:500px) {
