@@ -448,10 +448,10 @@
 
             </div>
         </div>
-        <div class="container">
+        <div class="container btn_course2">
 
             <a href="{{ route('course.index') }}"
-                class="btn_course2 btn btn-dark btn-circled btn-theme-colored2 btn-xl mr-10 pr-30 pl-30">
+                class=" btn btn-dark btn-circled btn-theme-colored2 btn-xl mr-10 pr-30 pl-30">
                 Découvrir plus
             </a>
         </div>
@@ -460,7 +460,7 @@
     <!-- Section About -->
 
     <section id="about">
-        <div class="container pt-50 pb-40">
+        <div class="container pt-10 pb-40">
             <div class="section-title">
                 <div class="row">
                     <div class="col-lg-4">
