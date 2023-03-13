@@ -6,6 +6,7 @@ use Carbon\Carbon;
 use App\Models\About;
 use App\Models\Barre;
 
+use App\Models\Popup;
 use App\Models\Slide;
 use App\Models\Whyus;
 use App\Models\Course;
@@ -51,10 +52,11 @@ class HomeController extends Controller
             $item->description=substr($item->description,0,60);
             return $item;
        });
+       $popup=Popup::where('active',true)->limit(1)->get();
        $about=About::latest('id')->limit(1)->get();
        $whyus=Whyus::all();
        $barres=Barre::all();
        $partners=Partner::all();
-        return  view('home')->with(['courses'=>$courses,'slides'=>$slides,'degrees'=>$degrees,'responsables'=>$responsables,'evenements'=>$evenements,'blogs'=>$blogs,'about'=>$about,'whyus'=> $whyus,'barres'=>$barres,'partners'=> $partners]);
+        return  view('home')->with(['courses'=>$courses,'slides'=>$slides,'degrees'=>$degrees,'responsables'=>$responsables,'evenements'=>$evenements,'blogs'=>$blogs,'about'=>$about,'whyus'=> $whyus,'barres'=>$barres,'partners'=> $partners,'popup'=>$popup]);
     } 
 }

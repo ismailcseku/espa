@@ -9,6 +9,7 @@ use App\Nova\User;
 use App\Nova\About;
 use App\Nova\Barre;
 use App\Nova\Media;
+use App\Nova\Popup;
 use App\Nova\Slide;
 use App\Nova\Whyus;
 use App\Nova\Campus;
@@ -90,8 +91,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                     MenuItem::resource(Partner::class),
                     MenuItem::resource(Whyus::class),
                     MenuItem::resource(Barre::class),
-
-                    
+                    MenuItem::resource(Popup::class),
 
                     MenuSection::make('Visiteurs', [
                         MenuItem::resource(Interested::class),

@@ -224,33 +224,6 @@
 
         }
 
-        /*
-
-                                                                                                                                                      .prev {
-                                                                                                                                                        left: 40%;
-                                                                                                                                                    }
-
-                                                                                                                                                    .next {
-                                                                                                                                                        left: 60%;
-                                                                                                                                                    }*/
-
-        /*
-                                                                                                                                                                    .carousel-button {
-                                                                                                                                                                        position: absolute;
-                                                                                                                                                                        z-index: 2;
-                                                                                                                                                                        background: none;
-                                                                                                                                                                        border: none;
-                                                                                                                                                                        font-size: 4rem;
-                                                                                                                                                                        top: 50%;
-                                                                                                                                                                        transform: translateY(-50%);
-                                                                                                                                                                        color: white;
-                                                                                                                                                                        cursor: pointer;
-                                                                                                                                                                        border-radius: .25rem;
-                                                                                                                                                                        padding: 0 .5rem;
-                                                                                                                                                                        background-color:#1f3344;
-                                                                                                                                                                    }
-                                                                                                                                                                    */
-
         .carousel-button:hover,
         .carousel-button:focus {
             color: white;
@@ -293,9 +266,6 @@
             getBtn.click()
 
         }
-
-
-
         getSlide.forEach(slide => {
             slide.addEventListener('mouseenter', () => {
                 isEnter = true;
@@ -321,29 +291,56 @@
         }, {
             once: true
         })
-
-
-
-
-
-
-
-
-
-
-        /*
-        setInterval(() => {
-            if (!isEnter) {
-                console.log("dehors")
-            }
-        }, 4000);
-        */
     </script>
 
+    <!-- pop up -->
+    <div class="main-content">
+
+        <!-- Section:  -->
+        <section>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <!-- popup modal click trigger -->
+                        <!-- <a href="#promoModal1" data-lightbox="inline" class="btn btn-default">Trigger Modal</a>-->
+                        <!-- popup modal -->
+                        <div id="promoModal1" class="modal-promo-box mfp-hide bg-img-cover"
+                            data-bg-img="{{ asset('images/popup.jpg') }}">
+
+                            @foreach ($popup as $item)
+                                @if (isset($item->title))
+                                    <h3 class="text-white mt-0">{{$item->title}}</h3>
+                                @endif
+                                @if (isset($item->description))
+                                    <h5 class="text-white mb-0">{{$item->description}}</h5>
+                                @endif
 
 
+                                <div style="display:flex;justify-content:flex-end;gap:4px;margin-top:20px;">
+                                    @if (isset($item->url))
+                                        <a href="{{$item->url}}" class="btn btn-colored btn-theme-colored2 btn-md m-0"
+                                            data-height="40px" target="_blank">Découvrir</a>
+                                    @endif
+                                    @if (isset($item->file))
+                                        <a href="{{url('storage')}}/{{$item->file}}"  class="btn btn-colored btn-theme-colored2 btn-md m-0"
+                                            data-height="40px"  target="_blank">Télécharger</a>
+                                    @endif
 
+                                </div>
+                            @endforeach
 
+                        </div>
+
+                        <!-- popup modal onLoad trigger -->
+                        <div class="on-pageload-popup-promobox" data-target="#promoModal1"></div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
     <!-- Section: Courses -->
     <section id="courses" style="padding-top:40px;">
         <style>
@@ -376,8 +373,8 @@
                         <a href="{{ route('course.index') }}" class="text-uppercase title">
                             <h2> Nos <span class="text-theme-colored2">Formations</span></h2>
                         </a>
-                        <a href="{{ route('course.index') }}"
-                            class="btn_course1 font-16" style="font-style:normal; color:#1f3344;transform:translateY(30px)">
+                        <a href="{{ route('course.index') }}" class="btn_course1 font-16"
+                            style="font-style:normal; color:#1f3344;transform:translateY(30px)">
                             Voir plus
                         </a>
                     </div>
@@ -419,9 +416,9 @@
                                                     {{ $course->accroche }} [...]</p>
                                             </a>
                                             <!--  <div class="author-thumb">
-                                                                        <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
-                                                                            alt="" class="img-circle">
-                                                                    </div>-->
+                                                                                                    <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
+                                                                                                        alt="" class="img-circle">
+                                                                                                </div>-->
                                         </div>
                                         <a href="{{ route('course.details', $course->name) }}" style="display: block"
                                             class="course-meta">
