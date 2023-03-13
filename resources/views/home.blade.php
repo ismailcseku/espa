@@ -380,7 +380,6 @@
                             class="btn_course1 font-16" style="font-style:normal; color:#1f3344;transform:translateY(30px)">
                             Voir plus
                         </a>
-
                     </div>
 
                 </div>
