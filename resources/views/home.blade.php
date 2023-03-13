@@ -147,7 +147,7 @@
             }
 
             .slide a {
-                top:68%;
+                top: 68%;
                 z-index: 3;
             }
         }
@@ -157,11 +157,12 @@
                 top: 50%;
                 font-size: 11px;
             }
+
             .slide a {
-                top:75%;
+                top: 75%;
                 z-index: 3;
                 padding: 8px 8px 8px 8px;
-                font-size:14px;
+                font-size: 14px;
             }
 
             .slide h1 {
@@ -206,30 +207,30 @@
 
         /*
 
-                                                                                                                      .prev {
-                                                                                                                        left: 40%;
-                                                                                                                    }
+                                                                                                                          .prev {
+                                                                                                                            left: 40%;
+                                                                                                                        }
 
-                                                                                                                    .next {
-                                                                                                                        left: 60%;
-                                                                                                                    }*/
+                                                                                                                        .next {
+                                                                                                                            left: 60%;
+                                                                                                                        }*/
 
         /*
-                                                                                                                                    .carousel-button {
-                                                                                                                                        position: absolute;
-                                                                                                                                        z-index: 2;
-                                                                                                                                        background: none;
-                                                                                                                                        border: none;
-                                                                                                                                        font-size: 4rem;
-                                                                                                                                        top: 50%;
-                                                                                                                                        transform: translateY(-50%);
-                                                                                                                                        color: white;
-                                                                                                                                        cursor: pointer;
-                                                                                                                                        border-radius: .25rem;
-                                                                                                                                        padding: 0 .5rem;
-                                                                                                                                        background-color:#1f3344;
-                                                                                                                                    }
-                                                                                                                                    */
+                                                                                                                                        .carousel-button {
+                                                                                                                                            position: absolute;
+                                                                                                                                            z-index: 2;
+                                                                                                                                            background: none;
+                                                                                                                                            border: none;
+                                                                                                                                            font-size: 4rem;
+                                                                                                                                            top: 50%;
+                                                                                                                                            transform: translateY(-50%);
+                                                                                                                                            color: white;
+                                                                                                                                            cursor: pointer;
+                                                                                                                                            border-radius: .25rem;
+                                                                                                                                            padding: 0 .5rem;
+                                                                                                                                            background-color:#1f3344;
+                                                                                                                                        }
+                                                                                                                                        */
 
         .carousel-button:hover,
         .carousel-button:focus {
@@ -246,6 +247,8 @@
 
         buttons.forEach(button => {
             button.addEventListener("click", () => {
+            
+                clearInterval(timer)
                 const offset = button.dataset.carouselButton === "next" ? 1 : -1
                 const slides = button
                     .closest("[data-carousel]")
@@ -259,10 +262,6 @@
                 slides.children[newIndex].dataset.active = true
                 delete activeSlide.dataset.active
             })
-
-
-
-
         })
 
         let getBtn = document.querySelector('.next');
@@ -271,8 +270,12 @@
         let timer;
 
         function autoClick_btn() {
+           
             getBtn.click()
+            
         }
+
+
 
         getSlide.forEach(slide => {
             slide.addEventListener('mouseenter', () => {
@@ -281,16 +284,17 @@
             })
             slide.addEventListener('mouseout', () => {
                 isEnter = false;
-                
-                if (!isEnter) {
-                    timer = setInterval(() => {
-                        autoClick_btn();
-                        isEnter = true
-                    }, 3000);
-                }
+                autoClick_btn();
+                timer = setInterval(() => {
+                    autoClick_btn();
+                    isEnter = true
+                }, 3000);
+
             })
         })
-        const iniTimer = setInterval(() => {
+
+
+        let iniTimer = setInterval(() => {
             autoClick_btn()
         }, 3000);
         document.addEventListener('mousemove', () => {
@@ -370,11 +374,11 @@
                                                     {{ $course->accroche }} [...]</p>
                                             </a>
                                             <!--
-                                                                                                                                                                                                        <div class="author-thumb">
-                                                                                                                                                                                                            <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
-                                                                                                                                                                                                                alt="" class="img-circle">
-                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                    -->
+                                                                                                                                                                                                            <div class="author-thumb">
+                                                                                                                                                                                                                <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
+                                                                                                                                                                                                                    alt="" class="img-circle">
+                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                        -->
                                         </div>
                                         <a href="{{ route('course.details', $course->name) }}" style="display: block"
                                             class="course-meta">
