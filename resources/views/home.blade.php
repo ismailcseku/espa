@@ -145,13 +145,20 @@
         @media only screen and (min-width: 600px) {
             .slide div {
                 top: 45%;
-                width: 36%;
+                width: 80%;
                 text-align: justify;
             }
 
             .slide a {
                 top: 68%;
                 z-index: 3;
+            }
+        }
+        @media only screen and (min-width: 900px) {
+            .slide div {
+                top: 45%;
+                width: 70%;
+                text-align: justify;
             }
         }
         @media only screen and (max-width: 600px) {
