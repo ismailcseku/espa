@@ -125,7 +125,7 @@
 
         .slide div {
             position: absolute;
-            word-break: break-all;
+          
             left: 10%;
             color: white;
             font-size: 16px;
