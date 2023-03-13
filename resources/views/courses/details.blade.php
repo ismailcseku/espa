@@ -2308,14 +2308,23 @@
     const items = document.querySelectorAll(".item");
 
     items.forEach((item) => {
-        item.addEventListener('click', () => {
+        item.addEventListener('click', (e) => {
             items.forEach((otherItem) => {
                 if (otherItem !== item && otherItem.classList.contains('open')) {
                     otherItem.classList.remove('open');
                 }
             });
             item.classList.toggle('open');
-          
+            let top = e.target.offsetTop;
+
+            if (item.classList.contains('open')) {
+                window.scroll({
+                    top: top, 
+                    behavior: 'smooth'
+                });
+            }
+
+
         });
     });
 </script>
