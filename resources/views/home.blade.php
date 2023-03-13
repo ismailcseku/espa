@@ -19,19 +19,22 @@
                 </button>
             </div>
 
-            <ul  data-slides>
+            <ul data-slides>
+
                 @foreach ($slides as $slide)
                     @if ($loop->first)
                         <li class="slide" data-active>
+                            <span class="slidepot"></span>
                             <img src="{{ url('storage') }}/{{ $slide->photo }}" alt="Nature Image #1">
                             <h3>{{ $slide->subject }}</h2>
-                                <h1>{{ $slide->title }}
+                                <h1>{{ $slide->title }}</h1>
                             </h3>
                             <div> {!! $slide->description !!}</div>
 
                         </li>
                     @else
                         <li class="slide">
+                            <span class="slidepot"></span>
                             <img src="{{ url('storage') }}/{{ $slide->photo }}" alt="Nature Image #2">
                             <h3>{{ $slide->subject }}</h2>
                                 <h1>{{ $slide->title }}</h1>
@@ -80,11 +83,25 @@
             object-position: center;
         }
 
+        .slidepot {
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            color: white;
+            width: 100%;
+            height: 100%;
+            ;
+            background-color: transparent;
+            display: block;
+            z-index: 2;
+        }
+
         .slide[data-active] {
             opacity: 1;
             z-index: 1;
             transition-delay: 0ms;
         }
+
 
         .slide h1 {
             position: absolute;
@@ -92,6 +109,7 @@
             left: 10%;
             color: white;
         }
+
 
         .slide h3 {
             position: absolute;
@@ -108,7 +126,7 @@
             color: white;
             font-size: 16px;
             font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-   
+
         }
 
         @media only screen and (min-width: 600px) {
@@ -118,7 +136,7 @@
         }
 
         @media only screen and (max-width: 600px) {
-            .slide div { 
+            .slide div {
                 top: 60%;
             }
         }
@@ -150,30 +168,30 @@
 
         /*
 
-                                  .prev {
-                                    left: 40%;
-                                }
+                                                                                                                  .prev {
+                                                                                                                    left: 40%;
+                                                                                                                }
 
-                                .next {
-                                    left: 60%;
-                                }*/
+                                                                                                                .next {
+                                                                                                                    left: 60%;
+                                                                                                                }*/
 
         /*
-                                                .carousel-button {
-                                                    position: absolute;
-                                                    z-index: 2;
-                                                    background: none;
-                                                    border: none;
-                                                    font-size: 4rem;
-                                                    top: 50%;
-                                                    transform: translateY(-50%);
-                                                    color: white;
-                                                    cursor: pointer;
-                                                    border-radius: .25rem;
-                                                    padding: 0 .5rem;
-                                                    background-color:#1f3344;
-                                                }
-                                                */
+                                                                                                                                .carousel-button {
+                                                                                                                                    position: absolute;
+                                                                                                                                    z-index: 2;
+                                                                                                                                    background: none;
+                                                                                                                                    border: none;
+                                                                                                                                    font-size: 4rem;
+                                                                                                                                    top: 50%;
+                                                                                                                                    transform: translateY(-50%);
+                                                                                                                                    color: white;
+                                                                                                                                    cursor: pointer;
+                                                                                                                                    border-radius: .25rem;
+                                                                                                                                    padding: 0 .5rem;
+                                                                                                                                    background-color:#1f3344;
+                                                                                                                                }
+                                                                                                                                */
 
         .carousel-button:hover,
         .carousel-button:focus {
@@ -204,12 +222,61 @@
                 delete activeSlide.dataset.active
             })
 
-            const getBtn=document.querySelector('.next');
-            setInterval(() => {
-                getBtn.click()
-            }, 4000);
-     
+
+
+
         })
+
+        let getBtn = document.querySelector('.next');
+        let getSlide = document.querySelectorAll('.slidepot');
+        let isEnter = true;
+        let timer;
+
+        function autoClick_btn() {
+            getBtn.click()
+        }
+
+        getSlide.forEach(slide => {
+            slide.addEventListener('mouseenter', () => {
+                isEnter = true;
+                clearInterval(timer)
+            })
+            slide.addEventListener('mouseout', () => {
+                isEnter = false;
+                autoClick_btn();
+                if (!isEnter) {
+                    timer = setInterval(() => {
+                        autoClick_btn();
+                        isEnter = true
+                    }, 3000);
+                }
+            })
+        })
+        const iniTimer = setInterval(() => {
+            autoClick_btn()
+        }, 3000);
+        document.addEventListener('mousemove', () => {
+            clearInterval(iniTimer);
+        }, {
+            once: true
+        })
+
+
+
+
+
+
+
+
+
+
+        /*
+        setInterval(() => {
+            if (!isEnter) {
+                console.log("dehors")
+            }
+        }, 4000);
+        */
     </script>
 
 
@@ -237,7 +304,7 @@
                     </div>
                 </div>
             </div>
-            <div class="section-content" >
+            <div class="section-content">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="owl-carousel-3col owl-nav-top" data-nav="tru">
@@ -265,11 +332,11 @@
                                                     {{ $course->accroche }} [...]</p>
                                             </a>
                                             <!--
-                                                                                                                    <div class="author-thumb">
-                                                                                                                        <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
-                                                                                                                            alt="" class="img-circle">
-                                                                                                                    </div>
-                                                                                                                -->
+                                                                                                                                                                                                    <div class="author-thumb">
+                                                                                                                                                                                                        <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
+                                                                                                                                                                                                            alt="" class="img-circle">
+                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                -->
                                         </div>
                                         <a href="{{ route('course.details', $course->name) }}" style="display: block"
                                             class="course-meta">
@@ -427,8 +494,9 @@
 
     <!-- Divider: Funfact -->
     <style>
-        section > .container, section > .container-fluid{
-            padding-top:10px;
+        section>.container,
+        section>.container-fluid {
+            padding-top: 10px;
             padding-bottom: 40px;
         }
     </style>
@@ -443,7 +511,7 @@
                                 class="animate-number text-theme-colored2 font-42 font-weight-600 mt-0 mb-15">0</h2>
                             <h5 class="text-white text-uppercase">
                                 {{ $barre->title }}
-                               
+
                             </h5>
                         </div>
                     </div>
