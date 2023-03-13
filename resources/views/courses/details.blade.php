@@ -379,24 +379,18 @@
                                         }
                                     </style>
                                     <ul id="myTab" class=" nav nav-tabs mt-30">
-                                        <li class="active">
-                                            <a href="#tab1" data-toggle="tab" style="font-size:18px; font-weight:bold;">DESCRIPTION</a>
-                                        </li>
-                                        <li class="active">
-                                            <a href="#tab2" data-toggle="tab" style="font-size:18px; font-weight:bold;">ADMISSION</a>
-                                        </li>
-                                        <li class="active">
-                                            <a href="#tab5" data-toggle="tab" style="font-size:18px; font-weight:bold;">PROGRAMME</a>
-                                        </li>
-                                        <li class="active">
-                                            <a href="#tab6" data-toggle="tab" style="font-size:18px; font-weight:bold;">CARRIÈRE</a>
-                                        </li>
-                                        <li class="active">
-                                            <a href="#tab3" data-toggle="tab" style="font-size:18px; font-weight:bold;">DOCUMENTS</a>
-                                        </li>
-                                        <li class="active">
-                                            <a href="#tab4" data-toggle="tab" style="font-size:18px; font-weight:bold;">TÉMOIGNAGES</a>
-                                        </li>
+                                        <li class="active"><a href="#tab1" data-toggle="tab"
+                                                style="font-size:18px; font-weight:bold;">DESCRIPTION</a></li>
+                                        <li><a href="#tab2" data-toggle="tab"
+                                                style="font-size:18px; font-weight:bold;">ADMISSION</a></li>
+                                        <li><a href="#tab5" data-toggle="tab"
+                                                style="font-size:18px; font-weight:bold;">PROGRAMME</a></li>
+                                        <li><a href="#tab6" data-toggle="tab"
+                                                style="font-size:18px; font-weight:bold;">CARRIÈRE</a></li>
+                                        <li><a href="#tab3" data-toggle="tab"
+                                                style="font-size:18px; font-weight:bold;">DOCUMENTS</a></li>
+                                        <li><a href="#tab4" data-toggle="tab"
+                                                style="font-size:18px; font-weight:bold;">TÉMOIGNAGES</a></li>
 
                                     </ul>
 
@@ -1934,9 +1928,6 @@
                                         </ul>
                                     </div>
                                 </div>
-
-
-
                             </div>
                         </div>
                     </div>
@@ -1951,31 +1942,32 @@
             <div class="container pt-60 pb-20">
                 <div class="col-sm-6 col-md-3">
                     <div class="widget dark">
-        
+
                         <h4 class="widget-title line-bottom-theme-colored2" style="color:#1f3344;">Coordonnées</h4>
-        
+
                         <span style="color:#1f3344;">
-        
+
                             Complexe Horticole d’Agadir, km 2 route d’Azrou,
                             B.P. 121 Ait Melloul 80150 - Agadir
                         </span>
-        
+
                         <ul class="list-inline">
                             <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone mr-5"></i> <a href="#"
                                     style="color:#1f3344;">(+212) 0528-241-006
                                     / 240-155</a>
                             </li>
                             <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o mr-5"></i> <a
-                                    href="mail:contact@cha-agadir.ma" style="color:#1f3344;">contact@cha-agadir.ma</a> </li>
-                            <li class="m-0 pl-10 pr-10"> <i class="fa fa-globe mr-5"></i> <a href="https://cha-agadir.ma"
-                                    style="color:#1f3344;">www.cha-agadir.ma</a> </li>
+                                    href="mail:contact@cha-agadir.ma" style="color:#1f3344;">contact@cha-agadir.ma</a>
+                            </li>
+                            <li class="m-0 pl-10 pr-10"> <i class="fa fa-globe mr-5"></i> <a
+                                    href="https://cha-agadir.ma" style="color:#1f3344;">www.cha-agadir.ma</a> </li>
                         </ul>
                         <ul class="styled-icons icon-sm icon-dark icon-theme-colored2 icon-circled clearfix mt-10">
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                             <li><a href="#"><i class="fa fa-youtube"></i></a></li>
                             <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-        
+
                         </ul>
                     </div>
                 </div>
@@ -1985,11 +1977,11 @@
                         <div class="row clearfix">
                             <div class="col-xs-12 col-sm-6 col-md-6">
                                 <ul>
-        
+
                                     <li><a href="{{ route('course.index') }}"
                                             style="color:#1f3344;font-weight:normal;">Formations</a></li>
-        
-        
+
+
                                     <li><a href="{{ route('media.index') }}"
                                             style="color:#1f3344;font-weight:normal;">Galerie</a></li>
                                     <li><a href="{{ route('video.index') }}"
@@ -2010,8 +2002,9 @@
                                 </h6>
                             @endif
                             <div class="input-group">
-                                <input type="email" id="mce-EMAIL" data-height="45px" class="form-control input-xs"
-                                    placeholder="Votre email" name="email" value="{{ old('email') }}">
+                                <input type="email" id="mce-EMAIL" data-height="45px"
+                                    class="form-control input-xs" placeholder="Votre email" name="email"
+                                    value="{{ old('email') }}">
                                 @if ($errors->has('email'))
                                     <span class="text-danger">{{ $errors->first('email') }}</span>
                                 @endif
@@ -2022,32 +2015,36 @@
                             </div>
                         </form>
                         <!-- Mailchimp Subscription Form Validation-->
-        
+
                         <!-- Mailchimp Subscription Form Ends Here -->
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-3">
                     <div class="widget dark">
-                        <h4 class="widget-title line-bottom-theme-colored2" style="color:#1f3344;">Derniers posts</h4>
+                        <h4 class="widget-title line-bottom-theme-colored2" style="color:#1f3344;">Derniers posts
+                        </h4>
                         <div class="latest-posts">
                             @foreach ($latest_blog as $item)
                                 <article class="post media-post clearfix pb-0 mb-10">
-                                    <a class="post-thumb" href="{{ route('blog-actualités.show', $item->id) }}"><img
-                                            src="{{ url('storage') }}/{{ $item->photo }}" width="80px" height="55px"
-                                            style="object-fit:cover;" alt="{{ $item->title }}"></a>
+                                    <a class="post-thumb"
+                                        href="{{ route('blog-actualités.show', $item->id) }}"><img
+                                            src="{{ url('storage') }}/{{ $item->photo }}" width="80px"
+                                            height="55px" style="object-fit:cover;"
+                                            alt="{{ $item->title }}"></a>
                                     <div class="post-right">
                                         <h5 class="post-title mt-0 mb-5"><a
                                                 href="{{ route('blog-actualités.show', $item->id) }}"
                                                 style="color:#1f3344;">{{ $item->title }}</a></h5>
-                                        <p class="post-date mb-0 font-12" style="color:#1f3344;"> {{ $item->created_at }}</p>
+                                        <p class="post-date mb-0 font-12" style="color:#1f3344;">
+                                            {{ $item->created_at }}</p>
                                     </div>
                                 </article>
                             @endforeach
-        
+
                         </div>
                     </div>
                 </div>
-        
+
                 <div class="col-sm-6 col-md-3">
                     <div class="widget dark">
                         <h4 class="widget-title line-bottom-theme-colored2" style="color:#1f3344;">Ouvert</h4>
@@ -2062,28 +2059,30 @@
                                 <li class="clearfix" style="color:#1f3344;"> <span> Dim : </span>
                                     <div class="value pull-right bg-theme-colored2 text-white closed">Fermé</div>
                                 </li>
-        
+
                                 @if (count($logo_url) > 0)
                                     @foreach ($logo_url as $item)
-                                        <a class="menuzord-brand  flip mt-20 mt-sm-10 mb-sm-20 pt-20 " href="/"><img
-                                                src="{{ url('storage') }}/{{ $item->logo }}" alt=""></a>
+                                        <a class="menuzord-brand  flip mt-20 mt-sm-10 mb-sm-20 pt-20 "
+                                            href="/"><img src="{{ url('storage') }}/{{ $item->logo }}"
+                                                alt=""></a>
                                     @endforeach
                                 @endif
-        
+
                             </ul>
                         </div>
                     </div>
-        
+
                 </div>
-        
+
             </div>
-        
+
             <div class="footer-bottom">
                 <div class="container pt-20 pb-20">
                     <div class="row">
-        
+
                         <div class="col-md-6">
-                            <p class="font-14 sm-text-center m-0">Copyright &copy;2023 <span class="text-theme-colored2">CHA
+                            <p class="font-14 sm-text-center m-0">Copyright &copy;2023 <span
+                                    class="text-theme-colored2">CHA
                                     Agadir</span>. Tous droits réservés </p>
                         </div>
                         <div class="col-md-6 text-right">
@@ -2306,19 +2305,17 @@
 
     });
 
-   const items = document.querySelectorAll(".item");
+    const items = document.querySelectorAll(".item");
 
     items.forEach((item) => {
-    item.addEventListener('click', () => {
-        items.forEach((otherItem) => {
-        if (otherItem !== item && otherItem.classList.contains('open')) {
-            otherItem.classList.remove('open');
-        }
+        item.addEventListener('click', () => {
+            items.forEach((otherItem) => {
+                if (otherItem !== item && otherItem.classList.contains('open')) {
+                    otherItem.classList.remove('open');
+                }
+            });
+            item.classList.toggle('open');
+          
         });
-        item.classList.toggle('open');
-        if (item.classList.contains('open')) {
-        item.focus();
-        }
-    });
     });
 </script>
