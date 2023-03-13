@@ -377,7 +377,7 @@
                             <h2> Nos <span class="text-theme-colored2">Formations</span></h2>
                         </a>
                         <a href="{{ route('course.index') }}"
-                            class="btn_course1 btn btn-dark btn-circled btn-theme-colored2 btn-xl mr-10 pr-30 pl-30">
+                            class="btn_course1 font-16" style="font-style:normal; color:#1f3344;transform:translateY(30px)">
                             Découvrir plus
                         </a>
 
