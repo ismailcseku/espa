@@ -379,18 +379,24 @@
                                         }
                                     </style>
                                     <ul id="myTab" class=" nav nav-tabs mt-30">
-                                        <li class="active"><a href="#tab1" data-toggle="tab"
-                                                style="font-size:18px; font-weight:bold;">DESCRIPTION</a></li>
-                                        <li><a href="#tab2" data-toggle="tab"
-                                                style="font-size:18px; font-weight:bold;">ADMISSION</a></li>
-                                        <li><a href="#tab5" data-toggle="tab"
-                                                style="font-size:18px; font-weight:bold;">PROGRAMME</a></li>
-                                        <li><a href="#tab6" data-toggle="tab"
-                                                style="font-size:18px; font-weight:bold;">CARRIÈRE</a></li>
-                                        <li><a href="#tab3" data-toggle="tab"
-                                                style="font-size:18px; font-weight:bold;">DOCUMENTS</a></li>
-                                        <li><a href="#tab4" data-toggle="tab"
-                                                style="font-size:18px; font-weight:bold;">TÉMOIGNAGES</a></li>
+                                        <li class="active">
+                                            <a href="#tab1" data-toggle="tab" style="font-size:18px; font-weight:bold;">DESCRIPTION</a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="#tab2" data-toggle="tab" style="font-size:18px; font-weight:bold;">ADMISSION</a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="#tab5" data-toggle="tab" style="font-size:18px; font-weight:bold;">PROGRAMME</a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="#tab6" data-toggle="tab" style="font-size:18px; font-weight:bold;">CARRIÈRE</a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="#tab3" data-toggle="tab" style="font-size:18px; font-weight:bold;">DOCUMENTS</a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="#tab4" data-toggle="tab" style="font-size:18px; font-weight:bold;">TÉMOIGNAGES</a>
+                                        </li>
 
                                     </ul>
 
@@ -639,7 +645,7 @@
                                         </div>
 
                                         <div class="tab-pane fade" id="tab5">
-                                            <h4 class="line-bottom-theme-colored2 mb-0">Programme</h4>
+                                            <h4 class="line-bottom-theme-colored2 mb-20">Programme</h4>
 
                                             <div class="container-block">
                                                 <div class="accordion">
@@ -1481,8 +1487,8 @@
                                                 d="M19 9l-7 7-7-7" />
                                         </svg></span>
                                 </div>
-                                <div class="hidden-box">
 
+                                <div class="hidden-box">
                                     <div class="row" style="margin-top:-50px;">
                                         <div class="row">
                                             <div class="col-md-12">
@@ -1544,7 +1550,8 @@
                                                 d="M19 9l-7 7-7-7" />
                                         </svg></span>
                                 </div>
-                                <div class="hidden-box" style="margin-left:-12px;">
+
+                                <div class="hidden-box">
                                     <div class="row" style="margin-top:-50px;">
                                         <div class="col-md-12">
                                             <div class="blog-posts single-post">
@@ -2299,16 +2306,19 @@
 
     });
 
-    const items = document.querySelectorAll(".item");
+   const items = document.querySelectorAll(".item");
 
     items.forEach((item) => {
-        item.addEventListener('click', () => {
-            items.forEach((otherItem) => {
-                if (otherItem !== item && otherItem.classList.contains('open')) {
-                    otherItem.classList.remove('open');
-                }
-            });
-            item.classList.toggle('open');
+    item.addEventListener('click', () => {
+        items.forEach((otherItem) => {
+        if (otherItem !== item && otherItem.classList.contains('open')) {
+            otherItem.classList.remove('open');
+        }
         });
+        item.classList.toggle('open');
+        if (item.classList.contains('open')) {
+        item.focus();
+        }
+    });
     });
 </script>
