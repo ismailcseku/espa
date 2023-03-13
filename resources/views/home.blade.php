@@ -41,7 +41,7 @@
                             <h3>{{ $slide->subject }}</h2>
                                 <h1>{{ $slide->title }}</h1>
                             </h3>
-                            <div> {!! $slide->description !!}</div>
+                            <div> {{ $slide->description }}</div>
                             <a href="#"
                                 class="btn btn-dark btn-circled btn-theme-colored2 btn-xl mr-10 pr-30 pl-30">Découvrir</a>
                         </li>
@@ -130,6 +130,7 @@
             color: white;
             font-size: 16px;
             font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+           
 
         }
 
@@ -144,6 +145,8 @@
         @media only screen and (min-width: 600px) {
             .slide div {
                 top: 45%;
+                width: 60%;
+                text-align: justify;
             }
 
             .slide a {
@@ -156,6 +159,8 @@
             .slide div {
                 top: 50%;
                 font-size: 11px;
+                width: 85%;
+
             }
 
             .slide a {
