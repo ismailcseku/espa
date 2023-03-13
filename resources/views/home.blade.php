@@ -673,6 +673,6 @@
         setTimeout(() => {
 
             document.getElementById("courses").className = 'bg-silver-light show_load'
-        }, 3000);
+        }, 100);
     </script>
 @endsection
