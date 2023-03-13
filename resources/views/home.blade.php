@@ -145,23 +145,27 @@
         @media only screen and (min-width: 900px) {
             .slide div {
                 top: 45%;
-                width: 60%;
+                width: 45%;
                 text-align: justify;
             }
 
             
         }
 
-        @media only screen and (min-width: 600px) {
+        @media only screen and (max-width: 900px) {
             .slide div {
                 top: 45%;
                 width: 60%;
                 text-align: justify;
             }
+          
+        }
+        @media only screen and (min-width: 600px) {
+
             .slide a {
-                top: 68%;
-                z-index: 3;
-            }
+                    top: 68%;
+                    z-index: 3;
+                }
         }
 
         @media only screen and (max-width: 600px) {
