@@ -63,7 +63,7 @@
                 <div class="row">
                     <div class="col-md-9">
                         <div class="blog-posts single-post">
-                            <article class="post clearfix mb-0">
+                            <article class="post clearfix mb-0" style="font-size:16px;">
                                 <div class="entry-header">
                                     <div class="post-thumb">
                                         <img src="{{ url('storage') }}/{{ $blogs->photo }}" class="img-fullwidth"

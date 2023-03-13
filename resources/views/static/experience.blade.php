@@ -33,9 +33,9 @@
     <section>
         <div class="container">
             <div class="section-content">
-                <div class="row">
+                <div class="row" style="font-size:16px;">
                     @foreach ($datas as $data)
-                        <div class="col-md-12">
+                        <div class="col-md-12" >
                             <img class="img-fullwidth" src="{{ url('storage') }}/{{ $data->photo }}" alt="">
                         </div>
                         <div class="col-md-12">

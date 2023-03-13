@@ -123,7 +123,7 @@
 
         <section>
             <div class="container">
-                <div class="row">
+                <div class="row" style="font-size:16px;">
                     <div class="col-md-4">
                         <ul>
                             <li>

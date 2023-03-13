@@ -283,10 +283,6 @@
                                     </ul>
                                 </li>
 
-
-
-
-
                                 <li><a href="{{ route('search.index') }}" style="padding: 10px 10px 10px 10px;"
                                         class="font-14 text-uppercase">Recherche</a>
                                 <li><a href="{{ route('center.index') }}" style="padding: 10px 10px 10px 10px;"
@@ -297,9 +293,6 @@
                                         class="font-14 text-uppercase">Impact Cluster</a>
                                 <li><a href="{{ route('business.index') }}" style="padding: 10px 10px 10px 10px;"
                                         class="font-14 text-uppercase">Agri-Business </a>
-
-
-
 
                             </ul>
 

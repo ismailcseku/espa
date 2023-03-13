@@ -33,12 +33,12 @@
     <section>
         <div class="container">
             <div class="section-content">
-                <div class="row">
+                <div class="row" style="font-size:16px;">
                     @foreach ($datas as $data)
                         <div class="col-md-12">
                             <img class="img-fullwidth" src="{{ url('storage') }}/{{ $data->photo }}" alt="">
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-md-12" style="font-size:16px;">
                             <h2 class="text-uppercasetext-theme-colored mt-0 mb-0 mt-sm-30"><span
                                     class="text-theme-colored2">Impact Cluster</span></h2>
                             <div class="mt-30 mb-0">

@@ -38,7 +38,7 @@
         <section>
             <div class="container">
                 <div class="section-content">
-                    <div class="row">
+                    <div class="row" style="font-size:16px;">
                         <div class="col-md-12">
                             <!-- Portfolio Filter -->
                             <div class="portfolio-filter">
