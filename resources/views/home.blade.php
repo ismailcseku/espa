@@ -281,7 +281,7 @@
             })
             slide.addEventListener('mouseout', () => {
                 isEnter = false;
-                autoClick_btn();
+                
                 if (!isEnter) {
                     timer = setInterval(() => {
                         autoClick_btn();
