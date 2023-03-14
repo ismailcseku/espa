@@ -75,7 +75,7 @@
                                 </ul>
                             </div>
                             <h4 class="mt-5 mb-15"></h4>
-                            <p >{!! $data->content !!}</p>
+                            <div style="text-align:justify;hyphens:auto;">{!! $data->content !!}</div>
                         </div>
                     @endforeach
                     <button class="accordion">TELECHARGER</button>

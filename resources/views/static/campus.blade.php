@@ -42,7 +42,7 @@
                             <h2 class="text-uppercasetext-theme-colored mt-0 mb-0 mt-sm-30"><span
                                     class="text-theme-colored2">Vie estudiantine</span></h2>
                             <h4 class="mt-5 mb-15"></h4>
-                            <p>{!! $data->content !!}</p>
+                          <div style="text-align:justify;hyphens:auto;">{!! $data->content !!}</div>
                         </div>
                     @endforeach
                     <button class="accordion">TELECHARGER</button>

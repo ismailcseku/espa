@@ -210,11 +210,11 @@
                                                 d’État en Agronomie</a>
                                             <ul class="dropdown" >
                                                 <li><a
-                                                        href="{{ route('course.byname', 'Horticulture') }}" >Horticulture</a>
+                                                        href="{{ route('course.details', 'Horticulture') }}" >Horticulture</a>
                                                 </li>
-                                                <li><a href="{{ route('course.byname', 'Protection des Plantes') }}">Protection
+                                                <li><a href="{{ route('course.details', 'Protection des Plantes') }}">Protection
                                                         des Plantes</a></li>
-                                                <li><a href="{{ route('course.byname', 'Architecture du Paysage') }}">
+                                                <li><a href="{{ route('course.details', 'Architecture du Paysage') }}">
                                                         Architecture du Paysage</a></li>
 
                                             </ul>
@@ -224,15 +224,15 @@
                                                 Master</a>
                                             <ul class="dropdown">
                                                 <li><a
-                                                        href="{{ route('course.byname', 'Water & Sustainaible Horticulture (ang)') }}">Water
+                                                        href="{{ route('course.details', 'Water & Sustainaible Horticulture (ang)') }}">Water
                                                         & Sustainaible Horticulture (ang)</a></li>
                                                 <li><a
-                                                        href="{{ route('course.byname', 'Architecture du Paysage (fr)') }}">
+                                                        href="{{ route('course.details', 'Architecture du Paysage (fr)') }}">
                                                         Architecture du Paysage (fr)</a>
                                                 </li>
-                                                <li><a href="{{ route('course.byname', 'Locust Science (ang)') }}">
+                                                <li><a href="{{ route('course.details', 'Locust Science (ang)') }}">
                                                         Locust Science (ang)</a></li>
-                                                <li><a href="{{ route('course.byname', ' Locust Science (fr)') }}">
+                                                <li><a href="{{ route('course.details', ' Locust Science (fr)') }}">
                                                         Locust Science (fr)</a></li>
                                             </ul>
                                         </li>
@@ -241,9 +241,9 @@
                                                 professionnelle</a>
                                             <ul class="dropdown">
                                                 <li><a
-                                                        href="{{ route('course.byname', 'Horticulture Ornementale et Espaces verts') }}">Horticulture
+                                                        href="{{ route('course.details', 'Horticulture Ornementale et Espaces verts') }}">Horticulture
                                                         Ornementale et <br class="break"> Espaces verts</a></li>
-                                                <li><a href="{{ route('course.byname', 'Aménagement du Paysage') }}">Aménagement
+                                                <li><a href="{{ route('course.details', 'Aménagement du Paysage') }}">Aménagement
                                                         du Paysage</a>
                                                 </li>
                                             </ul>
@@ -252,14 +252,14 @@
                                                 Spécialisé</a>
                                             <ul class="dropdown">
                                                 <li><a
-                                                        href="{{ route('course.byname', 'Technico-Commercial en Productions Horticoles') }}">Technico-Commercial
+                                                        href="{{ route('course.details', 'Technico-Commercial en Productions Horticoles') }}">Technico-Commercial
                                                         en Productions <br class="break"> Horticoles</a></li>
                                                 <li><a
-                                                        href="{{ route('course.byname', 'Conditionnement et Valorisation des Produits Agricoles') }}">Conditionnement
+                                                        href="{{ route('course.details', 'Conditionnement et Valorisation des Produits Agricoles') }}">Conditionnement
                                                         et Valorisation <br class="break"> des Produits Agricoles</a>
                                                 </li>
                                                 <li><a
-                                                        href="{{ route('course.byname', 'Cultures Ornementales et Aménagement des Espaces Verts') }}">Cultures
+                                                        href="{{ route('course.details', 'Cultures Ornementales et Aménagement des Espaces Verts') }}">Cultures
                                                         Ornementales et <br class="break"> Aménagement des Espaces
                                                         Verts</a></li>
                                                 <li><a href="Aquaculture">Aquaculture</a>
@@ -273,7 +273,7 @@
                                         <li><a href="{{ route('degree.show', 'Formation Exécutive') }}">Formation
                                                 Exécutive<span class="label label-danger">New</span></a>
                                             <ul class="dropdown">
-                                                <li><a href="{{ route('course.byname', 'Farm Manager') }}">
+                                                <li><a href="{{ route('course.details', 'Farm Manager') }}">
                                                         Farm
                                                         Manager</a>
                                                 </li>

@@ -89,7 +89,7 @@
                                     </div>
                                 </div>
                                 <div class="entry-content">
-                                    <div class="mt-20 mb-15">
+                                    <div class="mt-20 mb-15" style="text-align:justify;hyphens:auto;">
                                         {!! $blogs->content !!}
 
                                     </div>

@@ -62,7 +62,7 @@
                                                 </div>
                                                 <a
                                                     href="{{ route('course.details', $course->name) }}"class="course-description mt-15 mb-0">
-                                                    <p style="font-weight:normal;">
+                                                    <p style="font-weight:normal; text-align:justify;hyphens:auto;">
                                                         {{ $course->accroche }} [...]</p>
                                                 </a>
                                               <!--  <div class="author-thumb">

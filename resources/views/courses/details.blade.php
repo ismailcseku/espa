@@ -411,7 +411,7 @@
                                             <h4 class="line-bottom-theme-colored2 mb-15">Description de la formation
                                             </h4>
 
-                                            <p> {!! $course->description !!}</p>
+                                            <div  style="hyphens:auto;"> {!! $course->description !!}</div>
                                             <ul>
                                                 @if ($course->duration)
                                                     <li> <i
@@ -471,7 +471,7 @@
                                                                                     style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                                     Prérequis et admission </h5>
                                                                                 <div class="comment-date"
-                                                                                    style="font-size:16px;">
+                                                                                    style="font-size:16px;text-align:justify;hyphens:auto;" >
                                                                                     {!! $course->admission !!}</div>
                                                                             </div>
                                                                         </div>
@@ -498,7 +498,7 @@
                                                                                     style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                                     Dossier </h5>
                                                                                 <div class="comment-date"
-                                                                                    style="font-size:16px;">
+                                                                                    style="font-size:16px;text-align:justify;hyphens:auto;">
                                                                                     {!! $course->dossier !!}</div>
 
 
@@ -527,7 +527,7 @@
                                                                                     style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                                     Candidature </h5>
                                                                                 <div class="comment-date"
-                                                                                    style="font-size:16px;">
+                                                                                style="font-size:16px;text-align:justify;hyphens:auto;">
                                                                                     {!! $course->candidature !!}</div>
                                                                             </div>
                                                                         </div>
@@ -581,7 +581,7 @@
                                                                                     style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                                     Modalité de selection </h5>
                                                                                 <div class="comment-date"
-                                                                                    style="font-size:16px;">
+                                                                                style="font-size:16px;text-align:justify;hyphens:auto;">
                                                                                     {!! $course->selection !!}</div>
                                                                             </div>
                                                                         </div>
@@ -663,7 +663,7 @@
                                                                 </div>
                                                                 <div class="accordion-body">
                                                                     <div class="accordion-body-content text-white"
-                                                                        style="font-size:16px;">
+                                                                    style="font-size:16px;text-align:justify;hyphens:auto;">
                                                                         {!! $program->description !!}
                                                                     </div>
                                                                 </div>
@@ -684,7 +684,7 @@
                                                                     @endif
                                                                 </div>
                                                                 <div class="accordion-body">
-                                                                    <div class="accordion-body-content text-white">
+                                                                    <div class="accordion-body-content text-white"  style="text-align:justify;hyphens:auto;">
                                                                         {!! $program->description !!}
 
                                                                     </div>
@@ -740,7 +740,7 @@
                                                                                         Diplôme </h5>
 
                                                                                     <div class="comment-date"
-                                                                                        style="font-size:16px;">
+                                                                                    style="font-size:16px;text-align:justify;hyphens:auto;">
                                                                                         {!! $course->grade !!}</div>
                                                                                 </div>
                                                                             </div>
@@ -767,7 +767,7 @@
                                                                                     </h5>
 
                                                                                     <div class="comment-date"
-                                                                                        style="font-size:16px;">
+                                                                                    style="font-size:16px;text-align:justify;hyphens:auto;">
                                                                                         {!! $course->profile !!}</div>
                                                                                 </div>
                                                                             </div>
@@ -793,7 +793,7 @@
                                                                                         Débouchés </h5>
 
                                                                                     <div class="comment-date"
-                                                                                        style="font-size:16px;">
+                                                                                    style="font-size:16px;text-align:justify;hyphens:auto;">
                                                                                         {!! $course->opportunity !!}</div>
                                                                                 </div>
                                                                             </div>
@@ -1265,7 +1265,7 @@
 
                                 <div class="hidden-box"
                                     style="margin-top:-30px;padding-left:10px;padding-right:10px;">
-                                    <div> {!! $course->description !!}</div>
+                                    <div style="text-align:justify;hyphens:auto;"> {!! $course->description !!}</div>
                                     <ul>
                                         @if ($course->duration)
                                             <li> <i
@@ -1329,7 +1329,7 @@
                                                                         <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
                                                                             style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                             Prérequis et admission </h5>
-                                                                        <div class="comment-date font-16">
+                                                                        <div class="comment-date font-16" style="text-align:justify;hyphens:auto;">
                                                                             {!! $course->admission !!}</div>
                                                                     </div>
                                                                 </div>
@@ -1350,7 +1350,7 @@
                                                                         <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
                                                                             style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                             Dossier </h5>
-                                                                        <div class="comment-date font-16">
+                                                                        <div class="comment-date font-16" style="text-align:justify;hyphens:auto;">
                                                                             {!! $course->dossier !!}</div>
 
                                                                     </div>
@@ -1376,7 +1376,7 @@
                                                                         <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
                                                                             style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                             Candidature </h5>
-                                                                        <div class="comment-date font-16">
+                                                                        <div class="comment-date font-16" style="text-align:justify;hyphens:auto;">
                                                                             {!! $course->candidature !!}</div>
                                                                     </div>
                                                                 </div>
@@ -1423,7 +1423,7 @@
                                                                         <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
                                                                             style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                             Modalité de selection </h5>
-                                                                        <div class="comment-date font-16">
+                                                                        <div class="comment-date font-16" style="text-align:justify;hyphens:auto;">
                                                                             {!! $course->selection !!}</div>
                                                                     </div>
                                                                 </div>
@@ -1516,7 +1516,7 @@
                                                                             </div>
 
 
-                                                                            <div class="comment-date">
+                                                                            <div class="comment-date" style="text-align:justify;hyphens:auto;">
                                                                                 {!! $program->description !!}</div>
                                                                         </div>
                                                                     </div>
@@ -1563,7 +1563,7 @@
                                                                         <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
                                                                             style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                             Diplôme</h5>
-                                                                        <div class="comment-date font-16">
+                                                                        <div class="comment-date font-16" style="text-align:justify;hyphens:auto;">
                                                                             {!! $course->grade !!}</div>
                                                                     </div>
                                                                 </div>
@@ -1585,7 +1585,7 @@
                                                                         <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
                                                                             style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                             Profil / Compétences à acquérir</h5>
-                                                                        <div class="comment-date font-16">
+                                                                        <div class="comment-date font-16" style="text-align:justify;hyphens:auto;">
                                                                             {!! $course->profile !!}</div>
                                                                     </div>
                                                                 </div>
@@ -1607,7 +1607,7 @@
                                                                         <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
                                                                             style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                             Débouchés </h5>
-                                                                        <div class="comment-date font-16">
+                                                                        <div class="comment-date font-16" style="text-align:justify;hyphens:auto;">
                                                                             {!! $course->opportunity !!}</div>
                                                                     </div>
                                                                 </div>
@@ -1658,11 +1658,12 @@
                                                 d="M19 9l-7 7-7-7" />
                                         </svg></span>
                                 </div>
-                                <div class="hidden-box font-size" style="margin-top:-30px;">
+                                <div class="hidden-box font-size" style="margin-top:-30px;text-align:justify;hyphens:auto;">
                                     {!! $courses[0]->review !!}
                                 </div>
                             </div>
                         </div>
+                       
 
                         <div class="col-sm-12 col-md-3 form1 mr-10 ml-10" style="background-color:  #1f3344;">
                             <div class="sidebar sidebar-left mt-sm-30 ml-30 ml-sm-0">
