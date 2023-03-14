@@ -42,7 +42,7 @@
                                 <h1>{{ $slide->title }}</h1>
                             </h3>
                             <div> {{ $slide->description }}</div>
-                            <a href="{{route('course.index')}}"
+                            <a href="{{ route('course.index') }}"
                                 class="btn btn-dark btn-circled btn-theme-colored2 btn-xl mr-10 pr-30 pl-30">Découvrir</a>
                         </li>
                     @endif
@@ -303,30 +303,37 @@
                 <div class="row">
                     <div class="col-md-12">
 
+
                         <!-- popup modal click trigger -->
                         <!-- <a href="#promoModal1" data-lightbox="inline" class="btn btn-default">Trigger Modal</a>-->
                         <!-- popup modal -->
                         <div id="promoModal1" class="modal-promo-box mfp-hide bg-img-cover"
                             data-bg-img="{{ asset('images/popup.jpg') }}">
 
+
+
                             @foreach ($popup as $item)
                                 @if (isset($item->title))
-                                    <h3 class="text-white mt-0">{{$item->title}}</h3>
+                                    <h3 class="text-white mt-0">{{ $item->title }}</h3>
                                 @endif
                                 @if (isset($item->description))
-                                    <h5 class="text-white mb-0">{{$item->description}}</h5>
+                                    <h5 class="text-white mb-0">{{ $item->description }}</h5>
                                 @endif
 
 
                                 <div style="display:flex;justify-content:flex-end;gap:4px;margin-top:20px;">
                                     @if (isset($item->url))
-                                        <a href="{{$item->url}}" class="btn btn-colored btn-theme-colored2 btn-md m-0"
+                                        <a href="{{ $item->url }}" class="btn btn-colored btn-theme-colored2 btn-md m-0"
                                             data-height="40px" target="_blank">Découvrir</a>
                                     @endif
                                     @if (isset($item->file))
-                                        <a href="{{url('storage')}}/{{$item->file}}"  class="btn btn-colored btn-theme-colored2 btn-md m-0"
-                                            data-height="40px"  target="_blank">Télécharger</a>
+                                        <a href="{{ url('storage') }}/{{ $item->file }}"
+                                            class="btn btn-colored btn-theme-colored2 btn-md m-0" data-height="40px"
+                                            target="_blank">Télécharger</a>
                                     @endif
+                                    <button id="hide_popup" class="btn btn-colored btn-theme-colored btn-md m-0"
+                                        data-height="40px"> Ne plus afficher</button>
+
 
                                 </div>
                             @endforeach
@@ -334,7 +341,23 @@
                         </div>
 
                         <!-- popup modal onLoad trigger -->
-                        <div class="on-pageload-popup-promobox" data-target="#promoModal1"></div>
+                        <div data-target="#promoModal1" id='oncePopup'></div>
+                        <script>
+                            const oncePopup = document.getElementById('oncePopup');
+                            const hide_popup = document.getElementById('hide_popup')
+
+                            $(document).ready(function() {
+                                let getLocal = localStorage.getItem('cha-popup');
+                                if (getLocal == null) {
+                                    oncePopup.classList.add('on-pageload-popup-promobox')
+                                }
+                                hide_popup.addEventListener('click', () => {
+                                    localStorage.setItem('cha-popup', 'on-pageload-popup-promobox');
+                                    hide_popup.style.display = 'none'
+                                })
+                            });
+                        </script>
+
 
                     </div>
                 </div>
@@ -416,9 +439,9 @@
                                                     {{ $course->accroche }} [...]</p>
                                             </a>
                                             <!--  <div class="author-thumb">
-                                                                                                    <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
-                                                                                                        alt="" class="img-circle">
-                                                                                                </div>-->
+                                                                                                                    <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
+                                                                                                                        alt="" class="img-circle">
+                                                                                                                </div>-->
                                         </div>
                                         <a href="{{ route('course.details', $course->name) }}" style="display: block"
                                             class="course-meta">
