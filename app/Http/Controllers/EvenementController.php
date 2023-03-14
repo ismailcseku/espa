@@ -6,7 +6,9 @@ use App\Models\Evenement;
 use Illuminate\Http\Request;
 use App\Models\Evenementpage;
 use Jorenvh\Share\ShareFacade;
+use App\Mail\SendMessageEvenement;
 use App\Models\EvenementInterested;
+use Illuminate\Support\Facades\Mail;
 
 class EvenementController extends Controller
 {
@@ -50,6 +52,7 @@ class EvenementController extends Controller
       
       
       EvenementInterested::create($data);
+      Mail::to($request->email)->send(new SendMessageEvenement());
       return redirect()->back()->with('success','succès');
     }
 }

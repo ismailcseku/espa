@@ -5,6 +5,7 @@ namespace App\Nova;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
@@ -48,7 +49,9 @@ class EvenementInterested extends Resource
             Text::make('Organisme','organism'),
             Text::make('Poste','poste'),
             Text::make('Téléphone','phone'),
-            BelongsTo::make('Évènement','evenement','App\Nova\Evenement')
+            BelongsTo::make('Évènement','evenement','App\Nova\Evenement'),
+            DateTime::make('Crée le','Created At'),
+
         ];
     }
 

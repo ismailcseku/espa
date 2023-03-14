@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Contact;
 use Illuminate\Http\Request;
+use App\Mail\SendContactMessage;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
@@ -34,6 +36,7 @@ class ContactController extends Controller
         'message'=>['required','min:10','string'],
        ]);
        Contact::create($data);
+       Mail::to($request->email)->send(new SendContactMessage($request->name));
        return redirect()->back()->with('success','succès');
     }
 

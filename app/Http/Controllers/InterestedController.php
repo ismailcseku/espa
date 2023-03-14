@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use App\Http\Utils\Countries;
 use App\Http\Utils\Provinces;
 use Illuminate\Validation\Rule;
+use App\Mail\SendMessageInterested;
+use Illuminate\Support\Facades\Mail;
 
 
 class InterestedController extends Controller
@@ -40,6 +42,7 @@ class InterestedController extends Controller
         $data['course_id']=$id;
         
         Interested::create($data);
+        Mail::to($request->email)->send(new SendMessageInterested());
         return redirect()->back()->with('success','succès');
     }
 }

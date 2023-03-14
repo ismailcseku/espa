@@ -370,7 +370,7 @@
 
 
                                     <style>
-                                        @media screen and (max-width: 600px) {
+                                        @media screen and (max-width: 768px) {
 
                                             #myTab,
                                             #myTabContent {
@@ -1108,7 +1108,7 @@
                             }
 
 
-                            @media screen and (min-width: 600px) {
+                            @media screen and (min-width: 768px) {
                                 #mobile_pade {
 
                                     display: none;
@@ -1134,7 +1134,7 @@
                                 }
                             }
 
-                            @media screen and (max-width: 600px) {
+                            @media screen and (max-width: 768px) {
                                 .form1 {
                                     display: block;
                                 }

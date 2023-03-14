@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Email;
+use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
@@ -59,8 +60,9 @@ class Interested extends Resource
             Text::make('phone'),
             Text::make('grade'),
             Text::make('accepted'),
+   
             BelongsTo::make('Formations','course','App\Nova\Course'),
-
+            DateTime::make('Crée le','Created At'),
             
         ];
     }

@@ -39,7 +39,6 @@ class SendNewsletter implements ShouldQueue
     {
         $getSusbriber=Newsletter::all();
         foreach($getSusbriber as $item){
-            
             Mail::to($item->email)->send(new SendMessageNewsletter($this->subject,$this->message));
         }
     }

@@ -310,7 +310,8 @@
                         <div id="promoModal1" class="modal-promo-box mfp-hide bg-img-cover"
                             data-bg-img="{{ asset('images/popup.jpg') }}">
 
-
+                            <button id="hide_popup" class="btn btn-colored btn-theme-colored btn-md m-0" data-height="40px">
+                                Ne plus afficher</button>
 
                             @foreach ($popup as $item)
                                 @if (isset($item->title))
@@ -331,8 +332,7 @@
                                             class="btn btn-colored btn-theme-colored2 btn-md m-0" data-height="40px"
                                             target="_blank">Télécharger</a>
                                     @endif
-                                    <button id="hide_popup" class="btn btn-colored btn-theme-colored btn-md m-0"
-                                        data-height="40px"> Ne plus afficher</button>
+
 
 
                                 </div>
@@ -439,9 +439,9 @@
                                                     {{ $course->accroche }} [...]</p>
                                             </a>
                                             <!--  <div class="author-thumb">
-                                                                                                                    <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
-                                                                                                                        alt="" class="img-circle">
-                                                                                                                </div>-->
+                                                                                                                        <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
+                                                                                                                            alt="" class="img-circle">
+                                                                                                                    </div>-->
                                         </div>
                                         <a href="{{ route('course.details', $course->name) }}" style="display: block"
                                             class="course-meta">
