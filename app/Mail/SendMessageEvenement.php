@@ -2,12 +2,14 @@
 
 namespace App\Mail;
 
+use App\Models\Evenementpage;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
+use Illuminate\Mail\Attachment;
 use Illuminate\Mail\Mailables\Content;
-use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Mail\Mailables\Envelope;
+use Illuminate\Contracts\Queue\ShouldQueue;
 
 class SendMessageEvenement extends Mailable
 {
@@ -18,9 +20,20 @@ class SendMessageEvenement extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public $title ;
+    public $name ;
+    public $location ;
+    public $start_at ;
+    public $end_at;
+    public $id;
+    public function __construct(string $title,string $name,string $location , string $start_at,string $end_at,int $id)
     {
-        //
+        $this->title=$title;
+        $this->name=$name;
+        $this->location=$location;
+        $this->start_at=$start_at;
+        $this->end_at=$end_at;
+        $this->id=$id;
     }
 
     /**
@@ -45,7 +58,11 @@ class SendMessageEvenement extends Mailable
         return new Content(
             view: 'mail.messageEvenement',
             with:[
-                
+                'title'=> $this->title,
+                'name'=>$this->name,
+                'location'=> $this->location,
+                'start_at'=>$this->start_at,
+                'end_at'=>$this->end_at,
             ]
         );
     }
@@ -57,6 +74,20 @@ class SendMessageEvenement extends Mailable
      */
     public function attachments()
     {
-        return [];
+        $getFile=Evenementpage::where('evenement_id',$this->id)->get();
+        $data=[];
+        foreach ($getFile as $key => $item) {
+            $x=Attachment::fromStorage(public_path('storage/1.jpg'));
+           array_push($data,$x);
+        }
+        /*$data= [
+            Attachment::fromStorage('/path/to/file'),
+        ];*/
+        /*return [
+            Attachment::fromPath(public_path('storage/1.jpg')),
+        ];
+        */
+        return $data;
+       
     }
 }

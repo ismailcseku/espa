@@ -20,10 +20,12 @@ class SendContactMessage extends Mailable
      * @return void
      */
     public $name;
+    public $subject;
 
-    public function __construct(string $name)
+    public function __construct(string $name , string $subject)
     {
         $this->name=$name;
+        $this->subject=$subject;
     }
 
     /**
@@ -48,7 +50,8 @@ class SendContactMessage extends Mailable
         return new Content(
             view: 'mail.contactMessage',
             with:[
-                'name'=>$this->name
+                'name'=>$this->name,
+                'subject'=>$this->subject
             ]
         );
     }

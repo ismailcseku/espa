@@ -192,7 +192,8 @@
                                                 </li>
                                                 <li><a href="{{ route('course.details', 'Protection des Plantes') }}">Protection
                                                         des Plantes</a></li>
-                                                <li><a href="{{ route('course.details', 'Architecture du Paysage') }}">
+                                                <li><a
+                                                        href="{{ route('course.details', 'Architecture du Paysage') }}">
                                                         Architecture du Paysage</a></li>
 
                                             </ul>
@@ -411,7 +412,7 @@
                                             <h4 class="line-bottom-theme-colored2 mb-15">Description de la formation
                                             </h4>
 
-                                            <div  style="hyphens:auto;"> {!! $course->description !!}</div>
+                                            <div style="hyphens:auto;"> {!! $course->description !!}</div>
                                             <ul>
                                                 @if ($course->duration)
                                                     <li> <i
@@ -471,7 +472,7 @@
                                                                                     style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                                     Prérequis et admission </h5>
                                                                                 <div class="comment-date"
-                                                                                    style="font-size:16px;text-align:justify;hyphens:auto;" >
+                                                                                    style="font-size:16px;text-align:justify;hyphens:auto;">
                                                                                     {!! $course->admission !!}</div>
                                                                             </div>
                                                                         </div>
@@ -527,7 +528,7 @@
                                                                                     style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                                     Candidature </h5>
                                                                                 <div class="comment-date"
-                                                                                style="font-size:16px;text-align:justify;hyphens:auto;">
+                                                                                    style="font-size:16px;text-align:justify;hyphens:auto;">
                                                                                     {!! $course->candidature !!}</div>
                                                                             </div>
                                                                         </div>
@@ -581,7 +582,7 @@
                                                                                     style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
                                                                                     Modalité de selection </h5>
                                                                                 <div class="comment-date"
-                                                                                style="font-size:16px;text-align:justify;hyphens:auto;">
+                                                                                    style="font-size:16px;text-align:justify;hyphens:auto;">
                                                                                     {!! $course->selection !!}</div>
                                                                             </div>
                                                                         </div>
@@ -646,12 +647,10 @@
                                                     @foreach ($programs as $program)
                                                         @if ($loop->first)
                                                             <div class="accordion-item active">
-
                                                                 <div class="accordion-header "
                                                                     style="display:flex; justify-content:space-between;font-weight:bold;">
                                                                     @if ($program->title)
-                                                                        <p class=""
-                                                                            style="text-decoration:underline;">
+                                                                        <p>
                                                                             {{ $program->title }}
                                                                         </p>
                                                                     @endif
@@ -663,7 +662,7 @@
                                                                 </div>
                                                                 <div class="accordion-body">
                                                                     <div class="accordion-body-content text-white"
-                                                                    style="font-size:16px;text-align:justify;hyphens:auto;">
+                                                                        style="font-size:16px;text-align:justify;hyphens:auto;">
                                                                         {!! $program->description !!}
                                                                     </div>
                                                                 </div>
@@ -672,9 +671,9 @@
                                                             <div class="accordion-item ">
 
                                                                 <div class="accordion-header"
-                                                                    style="display:flex; justify-content:space-between;">
+                                                                    style="display:flex; justify-content:space-between;font-weight:bold;">
                                                                     @if ($program->title)
-                                                                        <p class="">
+                                                                        <p>
                                                                             {{ $program->title }}
                                                                         </p>
                                                                     @endif
@@ -684,9 +683,9 @@
                                                                     @endif
                                                                 </div>
                                                                 <div class="accordion-body">
-                                                                    <div class="accordion-body-content text-white"  style="text-align:justify;hyphens:auto;">
+                                                                    <div class="accordion-body-content text-white"
+                                                                        style="font-size:16px;text-align:justify;hyphens:auto;">
                                                                         {!! $program->description !!}
-
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -740,7 +739,7 @@
                                                                                         Diplôme </h5>
 
                                                                                     <div class="comment-date"
-                                                                                    style="font-size:16px;text-align:justify;hyphens:auto;">
+                                                                                        style="font-size:16px;text-align:justify;hyphens:auto;">
                                                                                         {!! $course->grade !!}</div>
                                                                                 </div>
                                                                             </div>
@@ -767,7 +766,7 @@
                                                                                     </h5>
 
                                                                                     <div class="comment-date"
-                                                                                    style="font-size:16px;text-align:justify;hyphens:auto;">
+                                                                                        style="font-size:16px;text-align:justify;hyphens:auto;">
                                                                                         {!! $course->profile !!}</div>
                                                                                 </div>
                                                                             </div>
@@ -793,7 +792,7 @@
                                                                                         Débouchés </h5>
 
                                                                                     <div class="comment-date"
-                                                                                    style="font-size:16px;text-align:justify;hyphens:auto;">
+                                                                                        style="font-size:16px;text-align:justify;hyphens:auto;">
                                                                                         {!! $course->opportunity !!}</div>
                                                                                 </div>
                                                                             </div>
@@ -1311,163 +1310,78 @@
                                                 d="M19 9l-7 7-7-7" />
                                         </svg></span>
                                 </div>
-                                <div class="hidden-box" style="margin-left:-12px;">
-                                    <div class="row" style="margin-top:-50px;">
-                                        <div class="col-md-12">
-                                            <div class="blog-posts single-post">
-                                                @if (isset($course->admission))
-                                                    <div class="comments-area">
-                                                        <ul class="comment-list">
+                                <div class="hidden-box">
+                                    <div class="container" style="margin-top:-30px;">
+                                        <div class="row">
 
-                                                            <li>
-                                                                <div class="media comment-author"> <a
-                                                                        class="media-left pull-left flip"
-                                                                        href="#"><img class="img-thumbnail"
-                                                                            src="images/blog/comment1.jpg"
-                                                                            alt=""></a>
-                                                                    <div class="media-body">
-                                                                        <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
-                                                                            style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
-                                                                            Prérequis et admission </h5>
-                                                                        <div class="comment-date font-16" style="text-align:justify;hyphens:auto;">
-                                                                            {!! $course->admission !!}</div>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                @endif
-                                                @if (isset($course->dossier))
-                                                    <div class="comments-area">
-                                                        <ul class="comment-list">
-                                                            <li>
-                                                                <div class="media comment-author"> <a
-                                                                        class="media-left pull-left flip"
-                                                                        href="#"><img class="img-thumbnail"
-                                                                            src="images/blog/comment1.jpg"
-                                                                            alt=""></a>
-                                                                    <div class="media-body">
-                                                                        <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
-                                                                            style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
-                                                                            Dossier </h5>
-                                                                        <div class="comment-date font-16" style="text-align:justify;hyphens:auto;">
-                                                                            {!! $course->dossier !!}</div>
+                                            @if (isset($course->admission))
+                                                <div>
+                                                    <h5 class=" @if (!isset($design->size)) font-20 @endif "
+                                                        style="  @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
+                                                        Prérequis et admission </h5>
+                                                    <div class="font-16"
+                                                        style="text-align:justify;hyphens:auto;font-size:16px;padding-right:10px;padding-left:10px;">
+                                                        {!! $course->admission !!}</div>
+                                                </div>
+                                            @endif
+                                            @if (isset($course->dossier))
+                                                <div>
+                                                    <h5 class=" @if (!isset($design->size)) font-20 @endif "
+                                                        style="  @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
+                                                        Dossier </h5>
+                                                    <div class="font-16"
+                                                        style="text-align:justify;hyphens:auto;font-size:16px;padding-right:10px;padding-left:10px;">
+                                                        {!! $course->dossier !!}</div>
+                                                </div>
+                                            @endif
+                                            @if (isset($course->candidature))
+                                                <div>
+                                                    <h5 class=" @if (!isset($design->size)) font-20 @endif "
+                                                        style="  @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
+                                                        Candidature</h5>
+                                                    <div class="font-16"
+                                                        style="text-align:justify;hyphens:auto;font-size:16px;padding-right:10px;padding-left:10px;">
+                                                        {!! $course->candidature !!}</div>
+                                                </div>
+                                            @endif
+                                            @if (isset($course->datelimite))
+                                                <div>
+                                                    <h5 class=" @if (!isset($design->size)) font-20 @endif "
+                                                        style="  @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
+                                                        Date limite</h5>
+                                                    <div class="font-16"
+                                                        style="text-align:justify;hyphens:auto;font-size:16px;padding-right:10px;padding-left:10px;">
+                                                        {!! $course->datelimite !!}</div>
+                                                </div>
+                                            @endif
+                                            @if (isset($course->selection))
+                                                <div>
+                                                    <h5 class=" @if (!isset($design->size)) font-20 @endif "
+                                                        style="  @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
+                                                        Modalité de selection</h5>
+                                                    <div class="font-16"
+                                                        style="text-align:justify;hyphens:auto;font-size:16px;padding-right:10px;padding-left:10px;">
+                                                        {!! $course->selection !!}</div>
+                                                </div>
+                                            @endif
+                                            @if (isset($course->daterentre))
+                                                <div>
+                                                    <h5 class=" @if (!isset($design->size)) font-20 @endif "
+                                                        style="  @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
+                                                        Prochaine rentrée</h5>
+                                                    <div class="font-16"
+                                                        style="text-align:justify;hyphens:auto;font-size:16px;padding-right:10px;padding-left:10px;">
+                                                        @php
+                                                            $getYears = date('m-Y', strtotime($course->daterentre));
+                                                            
+                                                            echo $getYears;
+                                                            
+                                                        @endphp</div>
+                                                </div>
+                                            @endif
 
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-
-
-                                                        </ul>
-                                                    </div>
-                                                @endif
-
-                                                @if (isset($course->candidature))
-                                                    <div class="comments-area">
-                                                        <ul class="comment-list">
-
-                                                            <li>
-                                                                <div class="media comment-author"> <a
-                                                                        class="media-left pull-left flip"
-                                                                        href="#"><img class="img-thumbnail"
-                                                                            src="images/blog/comment1.jpg"
-                                                                            alt=""></a>
-                                                                    <div class="media-body">
-                                                                        <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
-                                                                            style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
-                                                                            Candidature </h5>
-                                                                        <div class="comment-date font-16" style="text-align:justify;hyphens:auto;">
-                                                                            {!! $course->candidature !!}</div>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                @endif
-                                                @if (isset($course->datelimite))
-                                                    <div class="comments-area">
-                                                        <ul class="comment-list">
-
-                                                            <li>
-                                                                <div class="media comment-author"> <a
-                                                                        class="media-left pull-left flip"
-                                                                        href="#"><img class="img-thumbnail"
-                                                                            src="images/blog/comment1.jpg"
-                                                                            alt=""></a>
-                                                                    <div class="media-body">
-                                                                        <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
-                                                                            style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
-                                                                            Date limite </h5>
-                                                                        <div class="comment-date font-16">
-                                                                            {{ $course->datelimite }}</div>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-
-
-
-                                                        </ul>
-                                                    </div>
-                                                @endif
-                                                @if (isset($course->selection))
-                                                    <div class="comments-area">
-                                                        <ul class="comment-list">
-
-                                                            <li>
-                                                                <div class="media comment-author"> <a
-                                                                        class="media-left pull-left flip"
-                                                                        href="#"><img class="img-thumbnail"
-                                                                            src="images/blog/comment1.jpg"
-                                                                            alt=""></a>
-                                                                    <div class="media-body">
-                                                                        <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
-                                                                            style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
-                                                                            Modalité de selection </h5>
-                                                                        <div class="comment-date font-16" style="text-align:justify;hyphens:auto;">
-                                                                            {!! $course->selection !!}</div>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-
-
-
-                                                        </ul>
-                                                    </div>
-                                                @endif
-                                                @if (isset($course->daterentre))
-                                                    <div class="comments-area">
-                                                        <ul class="comment-list">
-
-                                                            <li>
-                                                                <div class="media comment-author"> <a
-                                                                        class="media-left pull-left flip"
-                                                                        href="#"><img class="img-thumbnail"
-                                                                            src="images/blog/comment1.jpg"
-                                                                            alt=""></a>
-                                                                    <div class="media-body">
-                                                                        <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
-                                                                            style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
-                                                                            Prochaine rentrée </h5>
-                                                                        <div class="comment-date font-16">
-                                                                            @php
-                                                                                $getYears = date('m-Y', strtotime($course->daterentre));
-                                                                                
-                                                                                echo $getYears;
-                                                                                
-                                                                            @endphp
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-
-
-
-                                                        </ul>
-                                                    </div>
-                                                @endif
-
-                                            </div>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -1483,55 +1397,33 @@
                                 </div>
 
                                 <div class="hidden-box">
-                                    <div class="row" style="margin-top:-50px;">
+                                    <div class="container" style="margin-top:-30px;">
+
+
                                         <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="blog-posts single-post">
-                                                    @foreach ($programs as $program)
-                                                        <div class="comments-area" style="font-size:16px;">
-
-                                                            <ul class="comment-list">
-                                                                <li>
-                                                                    <div class="media comment-author"> <a
-                                                                            class="media-left pull-left flip"
-                                                                            href="#"><img class="img-thumbnail"
-                                                                                src="images/blog/comment1.jpg"
-                                                                                alt=""></a>
-                                                                        <div class="media-body">
-
-                                                                            <div class="media-heading comment-heading"
-                                                                                style="display:flex; justify-content:space-between;">
-                                                                                @if ($program->title)
-                                                                                    <p class=""
-                                                                                        style="font-weight:bold;text-decoration:underline; font-size:16px;">
-                                                                                        {{ $program->title }}
-                                                                                    </p>
-                                                                                @endif
-                                                                                @if ($program->hours)
-                                                                                    <p
-                                                                                        style="margin-right:7%;font-weight:bold;text-decoration:underline; font-size:16px;">
-                                                                                        {{ $program->hours }} heures
-                                                                                    </p>
-                                                                                @endif
-                                                                            </div>
-
-
-                                                                            <div class="comment-date" style="text-align:justify;hyphens:auto;">
-                                                                                {!! $program->description !!}</div>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-
-                                                        </div>
-                                                    @endforeach
-
+                                            @foreach ($programs as $program)
+                                                <div style="display:flex;justify-content:space-between;">
+                                                    @if ($program->title)
+                                                        <p
+                                                            style="font-weight:bold;text-decoration:underline; font-size:16px;padding-left:10px;">
+                                                            {{ $program->title }}
+                                                        </p>
+                                                    @endif
+                                                    @if ($program->hours)
+                                                        <p
+                                                            style="font-weight:bold;text-decoration:underline; font-size:16px;padding-right:10px;">
+                                                            {{ $program->hours }} heures
+                                                        </p>
+                                                    @endif
                                                 </div>
-                                            </div>
+                                                <div
+                                                    style=" text-align:justify;hyphens:auto;font-size:16px;padding-right:10px;padding-left:10px;">
+                                                    {!! $program->description !!}</div>
+                                            @endforeach
+
                                         </div>
-
-
                                     </div>
+
                                 </div>
                             </div>
                             <div class="item">
@@ -1546,77 +1438,39 @@
                                 </div>
 
                                 <div class="hidden-box">
-                                    <div class="row" style="margin-top:-50px;">
-                                        <div class="col-md-12">
-                                            <div class="blog-posts single-post">
-                                                @if ($course->grade)
-                                                    <div class="comments-area">
-                                                        <ul class="comment-list">
+                                    <div class="container" style="margin-top:-30px;">
 
-                                                            <li>
-                                                                <div class="media comment-author"> <a
-                                                                        class="media-left pull-left flip"
-                                                                        href="#"><img class="img-thumbnail"
-                                                                            src="images/blog/comment1.jpg"
-                                                                            alt=""></a>
-                                                                    <div class="media-body">
-                                                                        <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
-                                                                            style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
-                                                                            Diplôme</h5>
-                                                                        <div class="comment-date font-16" style="text-align:justify;hyphens:auto;">
-                                                                            {!! $course->grade !!}</div>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                @endif
-                                                @if ($course->profile)
-                                                    <div class="comments-area">
-                                                        <ul class="comment-list">
-
-                                                            <li>
-                                                                <div class="media comment-author"> <a
-                                                                        class="media-left pull-left flip"
-                                                                        href="#"><img class="img-thumbnail"
-                                                                            src="images/blog/comment1.jpg"
-                                                                            alt=""></a>
-                                                                    <div class="media-body">
-                                                                        <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
-                                                                            style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
-                                                                            Profil / Compétences à acquérir</h5>
-                                                                        <div class="comment-date font-16" style="text-align:justify;hyphens:auto;">
-                                                                            {!! $course->profile !!}</div>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                @endif
-                                                @if ($course->opportunity)
-                                                    <div class="comments-area">
-                                                        <ul class="comment-list">
-
-                                                            <li>
-                                                                <div class="media comment-author"> <a
-                                                                        class="media-left pull-left flip"
-                                                                        href="#"><img class="img-thumbnail"
-                                                                            src="images/blog/comment1.jpg"
-                                                                            alt=""></a>
-                                                                    <div class="media-body">
-                                                                        <h5 class=" @if (!isset($design->size)) media-heading comment-heading  font-16 @else media-heading comment-heading @endif "
-                                                                            style=" @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
-                                                                            Débouchés </h5>
-                                                                        <div class="comment-date font-16" style="text-align:justify;hyphens:auto;">
-                                                                            {!! $course->opportunity !!}</div>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                @endif
-
-                                            </div>
+                                        <div class="row">
+                                            @if (isset($course->grade))
+                                                <div>
+                                                    <h5 class=" @if (!isset($design->size)) font-20 @endif "
+                                                        style="  @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
+                                                        Diplôme</h5>
+                                                    <div class="font-16"
+                                                        style=" text-align:justify;hyphens:auto;font-size:16px;padding-right:10px;padding-left:10px;">
+                                                        {!! $course->grade !!}</div>
+                                                </div>
+                                            @endif
+                                            @if (isset($course->profile))
+                                                <div>
+                                                    <h5 class=" @if (!isset($design->size)) font-20 @endif "
+                                                        style="  @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
+                                                        Profil / Compétences à acquérir</h5>
+                                                    <div class="font-16"
+                                                        style=" text-align:justify;hyphens:auto;font-size:16px;padding-right:10px;padding-left:10px;">
+                                                        {!! $course->profile !!}</div>
+                                                </div>
+                                            @endif
+                                            @if (isset($course->opportunity))
+                                                <div>
+                                                    <h5 class=" @if (!isset($design->size)) font-20 @endif "
+                                                        style="  @if (isset($design->color)) color:{{ $design->color }}; @endif  @if (isset($design->size)) font-size:{{ $design->size }}; @endif">
+                                                        Débouchés</h5>
+                                                    <div class="font-16"
+                                                        style="text-align:justify;hyphens:auto;font-size:16px;padding-right:10px;padding-left:10px;">
+                                                        {!! $course->opportunity !!}</div>
+                                                </div>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
@@ -1658,12 +1512,13 @@
                                                 d="M19 9l-7 7-7-7" />
                                         </svg></span>
                                 </div>
-                                <div class="hidden-box font-size" style="margin-top:-30px;text-align:justify;hyphens:auto;">
+                                <div class="hidden-box font-size"
+                                    style="margin-top:-30px;text-align:justify;hyphens:auto;">
                                     {!! $courses[0]->review !!}
                                 </div>
                             </div>
                         </div>
-                       
+
 
                         <div class="col-sm-12 col-md-3 form1 mr-10 ml-10" style="background-color:  #1f3344;">
                             <div class="sidebar sidebar-left mt-sm-30 ml-30 ml-sm-0">
@@ -2027,11 +1882,9 @@
                         <div class="latest-posts">
                             @foreach ($latest_blog as $item)
                                 <article class="post media-post clearfix pb-0 mb-10">
-                                    <a class="post-thumb"
-                                        href="{{ route('blog-actualités.show', $item->id) }}"><img
+                                    <a class="post-thumb" href="{{ route('blog-actualités.show', $item->id) }}"><img
                                             src="{{ url('storage') }}/{{ $item->photo }}" width="80px"
-                                            height="55px" style="object-fit:cover;"
-                                            alt="{{ $item->title }}"></a>
+                                            height="55px" style="object-fit:cover;" alt="{{ $item->title }}"></a>
                                     <div class="post-right">
                                         <h5 class="post-title mt-0 mb-5"><a
                                                 href="{{ route('blog-actualités.show', $item->id) }}"
@@ -2320,7 +2173,7 @@
 
             if (item.classList.contains('open')) {
                 window.scroll({
-                    top: top, 
+                    top: top,
                     behavior: 'auto'
                 });
             }

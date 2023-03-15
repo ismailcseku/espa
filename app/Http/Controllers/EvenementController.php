@@ -35,7 +35,6 @@ class EvenementController extends Controller
          $shareLinkedin=ShareFacade::currentPage()->linkedin()->getRawLinks();
          $evenementPages=Evenementpage::where('evenement_id',$evenement->id)->get();
          
-         
         return view('evenement.show')->with(['evenements'=>$evenement,'evenementPages'=>$evenementPages,'shareFacebook'=>$shareFacebook,'shareWhatsapp'=>$shareWhatsapp,'shareLinkedin'=>$shareLinkedin]);
     }
 
@@ -49,10 +48,9 @@ class EvenementController extends Controller
         'poste'=>['required','string'],
       ]);
       $data['evenement_id']=$id;
-      
-      
+      $evenement=Evenement::find($id);
       EvenementInterested::create($data);
-      Mail::to($request->email)->send(new SendMessageEvenement());
+      //Mail::to($request->email)->send(new SendMessageEvenement($evenement->title,$request->name,$evenement->location,$evenement->start_at,$evenement->end_at,$id));
       return redirect()->back()->with('success','succès');
     }
 }

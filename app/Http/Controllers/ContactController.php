@@ -36,7 +36,7 @@ class ContactController extends Controller
         'message'=>['required','min:10','string'],
        ]);
        Contact::create($data);
-       Mail::to($request->email)->send(new SendContactMessage($request->name));
+       Mail::to($request->email)->send(new SendContactMessage($request->name,$request->subject));
        return redirect()->back()->with('success','succès');
     }
 
