@@ -33,6 +33,7 @@
                 <section id="team">
                     <div class="container">
                         <div class="section-content">
+
                             <div class="row mtli-row-clearfix">
                                 @foreach ($responsables as $responsable)
                                     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 ">
@@ -42,12 +43,14 @@
                                                     class="img-fullwidth">
                                             </div>
                                             <div class="team-bottom-part border-1px p-15">
-                                                <h4 class="text-uppercase font-weight-600 m-0 pb-5 font-14">{{ $responsable->name }}
+                                                <h4 class="text-uppercase font-weight-600 m-0 pb-5 font-14">
+                                                    {{ $responsable->name }}
                                                     {{ $responsable->surname }}</h4>
                                                 <h6 class="font-13 text-gray mt-0 font-10">{{ $responsable->statut }}</h6>
                                                 <h6 class="font-13 text-gray mt-0 font-10">{{ $responsable->poste }}</h6>
 
-                                                <h6 class="font-13 text-gray mt-0 font-10">{{ $responsable->etablissement }}</h6>
+                                                <h6 class="font-13 text-gray mt-0 font-10">{{ $responsable->etablissement }}
+                                                </h6>
                                                 <ul class="list-inline mt-15">
 
                                                     @if (isset($responsable->country))
@@ -313,6 +316,7 @@
                                                             </a>
                                                         </li>
                                                     @endif
+                                                    <br>
                                                     @if (isset($responsable->phone))
                                                         <li class="m-0 pr-10"> <i
                                                                 class="fa fa-phone text-theme-colored2 mr-5"></i>
@@ -320,6 +324,7 @@
                                                                 href="#">{{ $responsable->phone }}</a>
                                                         </li>
                                                     @endif
+                                                    <br>
                                                     @if (isset($responsable->email))
                                                         <li class="m-0 pr-10"> <i
                                                                 class="fa fa-envelope-o text-theme-colored2 mr-5"></i>
@@ -339,6 +344,7 @@
                                             </div>
                                         </div>
                                     </div>
+
                                 @endforeach
                             </div>
 
