@@ -11,7 +11,7 @@
                         <div class="col-md-8">
                             <h2 class="text-theme-colored2 font-36">{{ $degrees_name }}</h2>
                             <ol class="breadcrumb text-left mt-10 white">
-                                <li><a href="{{ route('home') }}">Acceuil</a></li>
+                                <li><a href="{{ route('home') }}">accueil</a></li>
                                 <li><a href="{{ route('course.index') }}">Formation</a></li>
 
                             </ol>

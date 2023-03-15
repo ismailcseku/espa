@@ -185,7 +185,7 @@
 
                                 <li @if (Route::current()->getName() == 'home') class='active' @endif>
                                     <a href="{{ route('home') }}" class="font-14 text-uppercase"
-                                        style="padding: 10px 10px 10px 10px; ">Acceuil</a>
+                                        style="padding: 10px 10px 10px 10px; ">Accueil</a>
                                 </li>
                                 <li><a href="#home" class="font-14 text-uppercase"
                                         style="padding: 10px 10px 10px 10px;">École</a>

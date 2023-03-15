@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Course;
+use App\Models\Degree;
 use App\Http\Utils\Levels;
 use App\Models\Interested;
 use Illuminate\Http\Request;
 use App\Http\Utils\Countries;
 use App\Http\Utils\Provinces;
 use Illuminate\Validation\Rule;
+use App\Jobs\JobMessageInterested;
 use App\Mail\SendMessageInterested;
 use Illuminate\Support\Facades\Mail;
 
@@ -41,8 +44,11 @@ class InterestedController extends Controller
         
         $data['course_id']=$id;
         
-        Interested::create($data);
-        Mail::to($request->email)->send(new SendMessageInterested());
+        
+       $getCourse=Course::find($id);
+       $getDegree=Degree::find($getCourse->degree_id);
+       Interested::create($data);
+       JobMessageInterested::dispatch($request->email, $getCourse->name,$getDegree->name,$request->name,$id);
         return redirect()->back()->with('success','succès');
     }
 }

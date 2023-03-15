@@ -294,6 +294,7 @@
     </script>
 
     <!-- pop up -->
+    @if (count($popup)>0)
     <div class="main-content">
 
         <!-- Section:  -->
@@ -341,6 +342,7 @@
                         </div>
 
                         <!-- popup modal onLoad trigger -->
+                        
                         <div data-target="#promoModal1" id='oncePopup'></div>
                         <script>
                             const oncePopup = document.getElementById('oncePopup');
@@ -364,6 +366,7 @@
             </div>
         </section>
     </div>
+    @endif
     <!-- Section: Courses -->
     <section id="courses" style="padding-top:40px;">
         <style>

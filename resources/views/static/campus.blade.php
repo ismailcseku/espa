@@ -19,7 +19,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <ol class="breadcrumb text-left mt-10 " style="color:rgb(45, 69, 88);font-weight:bold;">
-                                <li><a href="/">Acceuil</a></li>
+                                <li><a href="/">accueil</a></li>
                                 <li>Vie estudiantine</li>
                             </ol>
                         </div>
@@ -35,14 +35,14 @@
             <div class="section-content">
                 <div class="row" style="font-size:16px;">
                     @foreach ($datas as $data)
-                        <div class="col-md-12" >
+                        <div class="col-md-12">
                             <img class="img-fullwidth" src="{{ url('storage') }}/{{ $data->photo }}" alt="">
                         </div>
                         <div class="col-md-12">
                             <h2 class="text-uppercasetext-theme-colored mt-0 mb-0 mt-sm-30"><span
                                     class="text-theme-colored2">Vie estudiantine</span></h2>
                             <h4 class="mt-5 mb-15"></h4>
-                          <div style="text-align:justify;hyphens:auto;">{!! $data->content !!}</div>
+                            <div style="text-align:justify;hyphens:auto;">{!! $data->content !!}</div>
                         </div>
                     @endforeach
                     <button class="accordion">TELECHARGER</button>
@@ -83,20 +83,20 @@
             transition: max-height 0.2s ease-out;
         }
     </style>
-        <script>
-            var acc = document.getElementsByClassName("accordion");
-            var i;
-    
-            for (i = 0; i < acc.length; i++) {
-                acc[i].addEventListener("click", function() {
-                    this.classList.toggle("active");
-                    var panel = this.nextElementSibling;
-                    if (panel.style.maxHeight) {
-                        panel.style.maxHeight = null;
-                    } else {
-                        panel.style.maxHeight = panel.scrollHeight + "px";
-                    }
-                });
-            }
-        </script>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
 @endsection

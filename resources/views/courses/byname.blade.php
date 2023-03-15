@@ -12,7 +12,7 @@
                         <div class="col-md-6">
                             <h2 class="text-theme-colored2 font-36">Détail de la formation</h2>
                             <ol class="breadcrumb text-left mt-10 white">
-                                <li><a href="/">Acceuil</a></li>
+                                <li><a href="/">accueil</a></li>
                                 <li><a href="{{ route('course.index') }}">formations</a></li>
                                 <li class="active">Détail de la formation</li>
                             </ol>
@@ -306,7 +306,7 @@
                                                                             {{ $program->title }} </p>
                                                                     @endif
                                                                     @if ($program->hours)
-                                                                        <p style="margin-right:7%;"> 
+                                                                        <p style="margin-right:7%;">
                                                                             {{ $program->hours }} heures </p>
                                                                     @endif
                                                                 </div>
@@ -326,7 +326,7 @@
                                                                             {{ $program->title }} </p>
                                                                     @endif
                                                                     @if ($program->hours)
-                                                                        <p style="margin-right:7%;"> 
+                                                                        <p style="margin-right:7%;">
                                                                             {{ $program->hours }} heures</p>
                                                                     @endif
                                                                 </div>

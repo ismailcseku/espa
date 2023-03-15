@@ -163,7 +163,7 @@
 
                                 <li @if (Route::current()->getName() == 'home') class='active' @endif>
                                     <a href="{{ route('home') }}" class="font-14 text-uppercase"
-                                        style="padding: 10px 10px 10px 10px; ">Acceuil</a>
+                                        style="padding: 10px 10px 10px 10px; ">Accueil</a>
                                 </li>
                                 <li><a href="#home" class="font-14 text-uppercase"
                                         style="padding: 10px 10px 10px 10px;">École</a>
@@ -295,7 +295,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <ol class="breadcrumb text-left mt-10 white">
-                                    <li><a href="/">Acceuil</a></li>
+                                    <li><a href="/">Accueil</a></li>
                                     <li><a href="{{ route('course.index') }}">formations</a></li>
 
                                     <li class='text-white'>

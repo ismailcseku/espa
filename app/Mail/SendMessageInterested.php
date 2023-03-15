@@ -2,12 +2,14 @@
 
 namespace App\Mail;
 
+use App\Models\Download;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
+use Illuminate\Mail\Attachment;
 use Illuminate\Mail\Mailables\Content;
-use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Mail\Mailables\Envelope;
+use Illuminate\Contracts\Queue\ShouldQueue;
 
 class SendMessageInterested extends Mailable
 {
@@ -18,9 +20,17 @@ class SendMessageInterested extends Mailable
      *
      * @return void
      */
-    public function __construct()
+     
+     public $course_name;
+     public $degree;
+     public $name;
+     public $download_id;
+    public function __construct(string $course_name,string $degree,string $name,int $download_id)
     {
-        //
+        $this->course_name=$course_name;
+        $this->degree=$degree;
+        $this->name=$name;
+        $this->download_id=$download_id;
     }
 
     /**
@@ -44,7 +54,11 @@ class SendMessageInterested extends Mailable
     {
         return new Content(
             view: 'mail.messageInterested',
-            with:[]
+            with:[
+                'name'=>$this->name,
+                'course_name'=>$this->course_name,
+                'degree'=>$this->degree,
+            ]
         );
     }
 
@@ -53,8 +67,14 @@ class SendMessageInterested extends Mailable
      *
      * @return array
      */
-    public function attachments()
+    public function attachments():array
     {
-        return [];
+        
+        $array_file= array();
+        $getFile=Download::where('course_id',$this->download_id)->get();
+        foreach ($getFile as $key => $item) {
+            $array_file[]=Attachment::fromPath(public_path('storage/'.$item->file));
+        }
+        return $array_file;
     }
 }

@@ -20,7 +20,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <ol class="breadcrumb text-left mt-10 " style="color:rgb(45, 69, 88);font-weight:bold;">
-                                <li><a href="/">Acceuil</a></li>
+                                <li><a href="/">accueil</a></li>
                                 <li>Ferme exprérimentale</li>
                             </ol>
                         </div>
@@ -35,7 +35,7 @@
             <div class="section-content">
                 <div class="row" style="font-size:16px;">
                     @foreach ($datas as $data)
-                        <div class="col-md-12" >
+                        <div class="col-md-12">
                             <img class="img-fullwidth" src="{{ url('storage') }}/{{ $data->photo }}" alt="">
                         </div>
                         <div class="col-md-12">
@@ -77,7 +77,7 @@
                                 </ul>
                             </div>
                             <h4 class="mt-5 mb-15"></h4>
-                          <div style="text-align:justify;hyphens:auto;">{!! $data->content !!}</div>
+                            <div style="text-align:justify;hyphens:auto;">{!! $data->content !!}</div>
                         </div>
                     @endforeach
                     <button class="accordion">TELECHARGER</button>

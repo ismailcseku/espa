@@ -6,6 +6,7 @@ use App\Models\Evenement;
 use Illuminate\Http\Request;
 use App\Models\Evenementpage;
 use Jorenvh\Share\ShareFacade;
+use App\Jobs\JobMessageEvenement;
 use App\Mail\SendMessageEvenement;
 use App\Models\EvenementInterested;
 use Illuminate\Support\Facades\Mail;
@@ -50,7 +51,7 @@ class EvenementController extends Controller
       $data['evenement_id']=$id;
       $evenement=Evenement::find($id);
       EvenementInterested::create($data);
-      //Mail::to($request->email)->send(new SendMessageEvenement($evenement->title,$request->name,$evenement->location,$evenement->start_at,$evenement->end_at,$id));
+      JobMessageEvenement::dispatch($request->email,$evenement->title,$request->name,$evenement->location,$evenement->start_at,$evenement->end_at,$id);
       return redirect()->back()->with('success','succès');
     }
 }

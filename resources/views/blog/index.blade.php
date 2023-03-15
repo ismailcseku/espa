@@ -6,10 +6,12 @@
             padding-top: 0px;
             padding-bottom: 0px;
         }
+
         .pt-70 {
             padding-top: 0px !important;
 
         }
+
         .pb-40 {
             padding-bottom: 0px !important;
         }
@@ -27,7 +29,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <ol class="breadcrumb text-left mt-10" style="color:rgb(45, 69, 88);font-weight:bold;">
-                                    <li><a href="/">Acceuil</a></li>
+                                    <li><a href="/">accueil</a></li>
 
                                     <li>
                                         Blog

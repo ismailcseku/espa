@@ -22,7 +22,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <ol class="breadcrumb text-left mt-10" style="color:rgb(45, 69, 88);font-weight:bold;">
-                                    <li><a href="/">Acceuil</a></li>
+                                    <li><a href="/">accueil</a></li>
                                     <li>Vidéos</li>
                                 </ol>
                             </div>
@@ -51,7 +51,7 @@
                                             <video class="img-fullwidth" style="postion:relative;"
                                                 src="{{ url('storage') }}/{{ $video->video }}" controls></video>
                                             <p class="font-16 " style="color:rgb(45, 69, 88);">{{ $video->title }}</p>
-                                           
+
                                         </div>
                                     </div>
                                 @endforeach
@@ -77,11 +77,11 @@
         }
 
         @media screen and (max-width: 768px) {
-        .thumb {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+            .thumb {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 @endsection

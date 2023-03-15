@@ -38,7 +38,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <ol class="breadcrumb text-left mt-10" style="color:rgb(45, 69, 88);font-weight:bold;">
-                                    <li><a href="/">Acceuil</a></li>
+                                    <li><a href="/">accueil</a></li>
                                     <li><a href="{{ route('blog-actualités.index') }}">Blog</a></li>
                                     <li>
 
@@ -207,7 +207,8 @@
                                 <h5 class="widget-title">Pourquoi nous</h5>
                                 <div class="latest-posts">
 
-                                    <h3 class="font-28 mt-md-30 mt-0"><span class="text-theme-colored2">Pourquoi </span>nous?
+                                    <h3 class="font-28 mt-md-30 mt-0"><span class="text-theme-colored2">Pourquoi
+                                        </span>nous?
                                     </h3>
                                     <div class="line-bottom-theme-colored2"></div>
                                     <div class="panel-group accordion-stylished-left-border accordion-icon-filled accordion-no-border accordion-icon-left accordion-icon-filled-theme-colored2 custom-style"
@@ -217,41 +218,45 @@
                                                 @if ($loop->first)
                                                     <div class="panel-heading" role="tab" id="headin1">
                                                         <h6 class="panel-title">
-                                                            <a role="button" data-toggle="collapse" data-parent="#accordion6"
-                                                                href="#collaps1" aria-expanded="true" aria-controls="collaps1">
+                                                            <a role="button" data-toggle="collapse"
+                                                                data-parent="#accordion6" href="#collaps1"
+                                                                aria-expanded="true" aria-controls="collaps1">
                                                                 {{ $item->title }}
                                                             </a>
                                                         </h6>
                                                     </div>
-                                                    <div id="collaps1" class="panel-collapse collapse in" role="tabpanel"
-                                                        aria-labelledby="headin1">
+                                                    <div id="collaps1" class="panel-collapse collapse in"
+                                                        role="tabpanel" aria-labelledby="headin1">
                                                         <div class="panel-body">
                                                             {{ $item->description }}
                                                         </div>
                                                     </div>
                                                 @else
                                                     <div class="panel panel-default">
-                                                        <div class="panel-heading" role="tab" id="heading{{ $item->id }}">
+                                                        <div class="panel-heading" role="tab"
+                                                            id="heading{{ $item->id }}">
                                                             <h6 class="panel-title">
-                                                                <a class="collapsed" role="button" data-toggle="collapse"
-                                                                    data-parent="#accordion6" href="#collapse{{ $item->id }}"
+                                                                <a class="collapsed" role="button"
+                                                                    data-toggle="collapse" data-parent="#accordion6"
+                                                                    href="#collapse{{ $item->id }}"
                                                                     aria-expanded="false" aria-controls="collapse2">
                                                                     {{ $item->title }}
-            
+
                                                                 </a>
                                                             </h6>
                                                         </div>
-                                                        <div id="collapse{{ $item->id }}" class="panel-collapse collapse"
-                                                            role="tabpanel" aria-labelledby="heading{{ $item->id }}">
+                                                        <div id="collapse{{ $item->id }}"
+                                                            class="panel-collapse collapse" role="tabpanel"
+                                                            aria-labelledby="heading{{ $item->id }}">
                                                             <div class="panel-body">
                                                                 {{ $item->description }}
-            
+
                                                             </div>
                                                         </div>
                                                     </div>
                                                 @endif
                                             @endforeach
-            
+
                                         </div>
                                     </div>
 

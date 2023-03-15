@@ -11,7 +11,7 @@
                         <div class="col-md-6">
                             <h2 class="text-theme-colored2 font-36">Nos formations</h2>
                             <ol class="breadcrumb text-left mt-10 white">
-                                <li><a href="/">Acceuil</a></li>
+                                <li><a href="/">accueil</a></li>
 
                                 <li class="active">Formations</li>
                             </ol>
@@ -37,10 +37,9 @@
                             <div class="gallery-isotope default-animation-effect grid-3 gutter-small clearfix"
                                 data-lightbox="gallery">
                                 <!-- Portfolio Item Start -->
-                               
+
                                 @foreach ($courses as $course)
-                                    
-                                    <div class="item gallery-item  a{{$course->degree_id}}">
+                                    <div class="item gallery-item  a{{ $course->degree_id }}">
                                         <div class="course-single-item bg-white border-1px clearfix">
                                             <a href="{{ route('course.details', $course->name) }}" class="course-thumb">
                                                 <img class="img-fullwidth" alt=""
@@ -65,10 +64,10 @@
                                                     <p style="font-weight:normal; text-align:justify;hyphens:auto;">
                                                         {{ $course->accroche }} [...]</p>
                                                 </a>
-                                              <!--  <div class="author-thumb">
-                                                    <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
-                                                        alt="" class="img-circle">
-                                                </div>-->
+                                                <!--  <div class="author-thumb">
+                                                        <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
+                                                            alt="" class="img-circle">
+                                                    </div>-->
                                             </div>
                                             <a href="{{ route('course.details', $course->name) }}" style="display: block"
                                                 class="course-meta">
@@ -90,8 +89,8 @@
                                         </div>
                                     </div>
                                 @endforeach
-                                
-                               
+
+
                             </div>
 
                             <!-- End Portfolio Gallery Grid -->

@@ -28,6 +28,7 @@ class SendMessageEvenement extends Mailable
     public $id;
     public function __construct(string $title,string $name,string $location , string $start_at,string $end_at,int $id)
     {
+
         $this->title=$title;
         $this->name=$name;
         $this->location=$location;
@@ -72,22 +73,15 @@ class SendMessageEvenement extends Mailable
      *
      * @return array
      */
-    public function attachments()
+    public function attachments(): array
     {
+        $array_file= array();
+
         $getFile=Evenementpage::where('evenement_id',$this->id)->get();
-        $data=[];
+     
         foreach ($getFile as $key => $item) {
-            $x=Attachment::fromStorage(public_path('storage/1.jpg'));
-           array_push($data,$x);
+            $array_file[]=Attachment::fromPath(public_path('storage/'.$item->file));
         }
-        /*$data= [
-            Attachment::fromStorage('/path/to/file'),
-        ];*/
-        /*return [
-            Attachment::fromPath(public_path('storage/1.jpg')),
-        ];
-        */
-        return $data;
-       
+        return $array_file;
     }
 }
