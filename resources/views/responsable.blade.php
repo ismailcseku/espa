@@ -48,7 +48,6 @@
                                                     {{ $responsable->surname }}</h4>
                                                 <h6 class="font-13 text-gray mt-0 font-10">{{ $responsable->statut }}</h6>
                                                 <h6 class="font-13 text-gray mt-0 font-10">{{ $responsable->poste }}</h6>
-
                                                 <h6 class="font-13 text-gray mt-0 font-10">{{ $responsable->etablissement }}
                                                 </h6>
                                                 <ul class="list-inline mt-15">
