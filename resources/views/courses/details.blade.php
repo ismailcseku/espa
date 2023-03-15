@@ -412,7 +412,8 @@
                                             <h4 class="line-bottom-theme-colored2 mb-15">Description de la formation
                                             </h4>
 
-                                            <div style="text-align:justify;hyphens:auto;"> {!! $course->description !!}</div>
+                                            <div style="text-align:justify;hyphens:auto;"> {!! $course->description !!}
+                                            </div>
                                             <ul>
                                                 @if ($course->duration)
                                                     <li> <i

@@ -20,7 +20,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <ol class="breadcrumb text-left mt-10" style="color:rgb(45, 69, 88);font-weight:bold;">
-                                    <li><a href="/">accueil</a></li>
+                                    <li><a href="/">Accueil</a></li>
                                     <li>Corps professoral et staff </li>
                                 </ol>
                             </div>
@@ -43,7 +43,7 @@
                                                     class="img-fullwidth">
                                             </div>
                                             <div class="team-bottom-part border-1px p-15">
-                                                <h4 class="text-uppercase font-weight-600 m-0 pb-5 font-14">
+                                                <h4 class="text-uppercase font-weight-600 m-0 pb-5 font-16">
                                                     {{ $responsable->name }}
                                                     {{ $responsable->surname }}</h4>
                                                 <h6 class="font-13 text-gray mt-0 font-10">{{ $responsable->statut }}</h6>
@@ -344,7 +344,6 @@
                                             </div>
                                         </div>
                                     </div>
-
                                 @endforeach
                             </div>
 

@@ -11,7 +11,7 @@
                         <div class="col-md-6">
                             <h2 class="text-theme-colored2 font-36">Nos formations</h2>
                             <ol class="breadcrumb text-left mt-10 white">
-                                <li><a href="/">accueil</a></li>
+                                <li><a href="/">Accueil</a></li>
 
                                 <li class="active">Formations</li>
                             </ol>
@@ -65,9 +65,9 @@
                                                         {{ $course->accroche }} [...]</p>
                                                 </a>
                                                 <!--  <div class="author-thumb">
-                                                        <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
-                                                            alt="" class="img-circle">
-                                                    </div>-->
+                                                            <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
+                                                                alt="" class="img-circle">
+                                                        </div>-->
                                             </div>
                                             <a href="{{ route('course.details', $course->name) }}" style="display: block"
                                                 class="course-meta">

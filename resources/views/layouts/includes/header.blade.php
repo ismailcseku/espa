@@ -63,13 +63,15 @@
     <style>
         @keyframes blink {
             0% {
-            opacity: 1;
+                opacity: 1;
             }
+
             50% {
-            opacity: 0.5;
+                opacity: 0.5;
             }
+
             100% {
-            opacity: 1;
+                opacity: 1;
             }
         }
     </style>
@@ -95,7 +97,7 @@
             <div id="disable-preloader" class="btn btn-default btn-sm">Désactiver</div>
         </div>
     -->
-    
+
         <!-- Header -->
         <header id="header" class="header">
             <div class="header-top bg-theme-colored border-top-theme-colored2-2px sm-text-center">
@@ -154,7 +156,8 @@
                                     </li>
                                     <li>
                                         <a href="{{ route('course.index') }}"
-                                            class="btn btn-dark btn-circled btn-theme-colored2 btn-sm  pr-30 pl-30 " style="font-weight: bold; animation: blink 1s ease-in-out infinite;">NOS
+                                            class="btn btn-dark btn-circled btn-theme-colored2 btn-sm  pr-30 pl-30 "
+                                            style="font-weight: bold; animation: blink 1s ease-in-out infinite;">NOS
                                             FORMATIONS</a>
                                     </li>
                                 </ul>
@@ -206,15 +209,17 @@
                                         class="font-14 text-uppercase d-inline">Formations</a>
                                     <ul class="dropdown" style="padding-left: -50px;">
                                         <li style="padding-left: -50px;">
-                                            <a href="{{ route('degree.show', 'Ingénieur d’État') }}" style="padding-left: -50px">Ingénieur
+                                            <a href="{{ route('degree.show', 'Ingénieur d’État') }}"
+                                                style="padding-left: -50px">Ingénieur
                                                 d’État en Agronomie</a>
-                                            <ul class="dropdown" >
+                                            <ul class="dropdown">
                                                 <li><a
-                                                        href="{{ route('course.details', 'Horticulture') }}" >Horticulture</a>
+                                                        href="{{ route('course.details', 'Horticulture') }}">Horticulture</a>
                                                 </li>
                                                 <li><a href="{{ route('course.details', 'Protection des Plantes') }}">Protection
                                                         des Plantes</a></li>
-                                                <li><a href="{{ route('course.details', 'Architecture du Paysage') }}">
+                                                <li><a
+                                                        href="{{ route('course.details', 'Architecture du Paysage') }}">
                                                         Architecture du Paysage</a></li>
 
                                             </ul>
@@ -302,21 +307,22 @@
                 </div>
             </div>
         </header>
-        
+
 
         <style>
             @media only screen and (min-width:500px) {
                 .break {
                     display: none;
                 }
-            
+
 
             }
+
             @media only screen and (max-width:500px) {
                 .break {
                     display: block;
                 }
-            
+
 
             }
         </style>

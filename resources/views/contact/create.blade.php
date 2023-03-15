@@ -15,7 +15,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <ol class="breadcrumb text-left" style="color:rgb(45, 69, 88);font-weight:bold;">
-                                <li><a href="/">accueil</a></li>
+                                <li><a href="/">Accueil</a></li>
                                 <li>Contact</li>
                             </ol>
                         </div>
