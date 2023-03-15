@@ -1415,7 +1415,7 @@
                                                         </p>
                                                     @endif
                                                 </div>
-                                                <div style=" text-align:justify;word-break:break-all;font-size:16px;padding-right:10px;padding-left:10px;">
+                                                <div style=" text-align:justify;hyphens:auto;word-break:break-all;font-size:16px;padding-right:10px;padding-left:10px;">
                                                     {!!$program->description!!}
                                                 </div>
                                             @endforeach
