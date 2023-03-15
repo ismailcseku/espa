@@ -10,6 +10,7 @@ use Laravel\Nova\Fields\Email;
 use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Maatwebsite\LaravelNovaExcel\Actions\DownloadExcel;
 
 
 class Interested extends Resource
@@ -108,7 +109,9 @@ class Interested extends Resource
      */
     public function actions(NovaRequest $request)
     {
-        return [];
+        return [
+            new DownloadExcel,
+        ];
     }
     public static function label()
     {

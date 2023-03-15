@@ -14,6 +14,7 @@
         "laravel/nova": "~4.0",
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
+        "maatwebsite/laravel-nova-excel": "^1.3",
         "mostafaznv/nova-video": "^4.0",
         "numaxlab/nova-ckeditor5-classic": "^1.1",
         "outl1ne/nova-color-field": "^2.0",

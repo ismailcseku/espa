@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Maatwebsite\LaravelNovaExcel\Actions\DownloadExcel;
 
 class Contact extends Resource
 {
@@ -94,7 +95,10 @@ class Contact extends Resource
      */
     public function actions(NovaRequest $request)
     {
-        return [];
+        return [
+            new DownloadExcel,
+
+        ];
     }
     public static function label()
     {
