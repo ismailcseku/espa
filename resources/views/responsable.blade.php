@@ -35,7 +35,7 @@
                         <div class="section-content">
                             <div class="row mtli-row-clearfix">
                                 @foreach ($responsables as $responsable)
-                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 ">
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 ">
                                         <div class="team-members mb-40">
                                             <div class="team-thumb mr-0">
                                                 <img src="{{ asset('storage') }}/{{ $responsable->photo }}" alt=""
