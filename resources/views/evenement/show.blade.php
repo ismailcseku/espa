@@ -214,7 +214,7 @@
                 <div class="row mt-60">
                     <div class="col-md-12">
                         <h4 class="mt-0">{{ $evenements->title }}</h4>
-                        <div style="text-align:justify;hyphens:auto;font-size:16px;">{!! $evenements->description !!}</div> 
+                        <div style="text-align:justify;hyphens:auto;font-size:16px; color:#1f3344;">{!! $evenements->description !!}</div> 
                     </div>
 
                 </div>

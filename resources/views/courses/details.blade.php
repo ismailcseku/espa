@@ -412,7 +412,8 @@
                                             <h4 class="line-bottom-theme-colored2 mb-15">Description de la formation
                                             </h4>
 
-                                            <div style="text-align:justify;hyphens:auto;"> {!! $course->description !!}</div>
+                                            <div style="text-align:justify;hyphens:auto;"> {!! $course->description !!}
+                                            </div>
                                             <ul>
                                                 @if ($course->duration)
                                                     <li> <i
@@ -1415,9 +1416,10 @@
                                                         </p>
                                                     @endif
                                                 </div>
-                                                <div style=" text-align:justify;hyphens:auto;font-size:16px;padding-right:10px;padding-left:10px;">
-                                                    {!!$program->description!!} 
-                                                </div>
+
+                                                <div
+                                                    style="hyphens:auto;font-size:16px;padding-right:10px;padding-left:10px;">
+                                                    {!! $program->description !!} </div>
                                             @endforeach
 
                                         </div>
