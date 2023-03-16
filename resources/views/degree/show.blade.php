@@ -28,7 +28,7 @@
                             @foreach ($courses as $course)
                                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 item" style="margin-top: 2px ; ">
                                     <div class="course-single-item bg-white border-1px clearfix mb-md-40">
-                                        <a href="{{ route('course.details', $course->id) }}" class="course-thumb">
+                                        <a href="{{ route('course.details', $course->name) }}" class="course-thumb">
                                             <img class="img-fullwidth" alt=""
                                                 src="{{ url('storage') }}/{{ $course->photo }}">
 
@@ -36,15 +36,15 @@
 
                                         <div class="course-details clearfix p-20 pt-15">
                                             <div class="course-top-part">
-                                                <a href="{{ route('course.details', $course->id) }}">
+                                                <a href="{{ route('course.details', $course->name) }}">
                                                     <h4 class="mt-5 mb-5">{{ $course->name }}</h4>
                                                 </a>
-                                                <a href="{{ route('course.details', $course->id) }}">
+                                                <a href="{{ route('course.details', $course->name) }}">
                                                     <h4 class=" mt-0">{{ $course->degrees_name }}</h4>
                                                 </a>
 
                                             </div>
-                                            <a href="{{ route('course.details', $course->id) }}"
+                                            <a href="{{ route('course.details', $course->name) }}"
                                                 class="course-description mt-15 mb-0"> {!! $course->description !!}...</a>
                                             <div class="author-thumb">
                                                 <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
@@ -52,7 +52,7 @@
                                             </div>
 
                                         </div>
-                                        <a href="{{ route('course.details', $course->id) }}" class="course-meta"
+                                        <a href="{{ route('course.details', $course->name) }}" class="course-meta"
                                             style="display:block;">
                                             <ul class="list-inline">
                                                 <li><i class="ficon-clock font-18"></i>
