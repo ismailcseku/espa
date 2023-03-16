@@ -1834,13 +1834,13 @@
 
                         <ul class="list-inline">
                             <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone mr-5"></i> <a href="#"
-                                    style="color:#1f3344;">(+212)0528241006/240155</a>
+                                    style="color:#1f3344; font-weight:normal;">(+212)0528241006/240155</a>
                             </li>
                             <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o mr-5"></i> <a
                                     href="mail:contact@cha-agadir.ma" style="color:#1f3344;">contact@cha-agadir.ma</a>
                             </li>
                             <li class="m-0 pl-10 pr-10"> <i class="fa fa-globe mr-5"></i> <a
-                                    href="mailto:https://cha-agadir.ma" style="color:#1f3344;">www.cha-agadir.ma</a> </li>
+                                    href="http://cha-agadir.ma" style="color:#1f3344;">www.cha-agadir.ma</a> </li>
                         </ul>
                         <ul class="styled-icons icon-sm icon-dark icon-theme-colored2 icon-circled clearfix mt-10">
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
