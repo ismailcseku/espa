@@ -229,15 +229,15 @@
                                                 Master</a>
                                             <ul class="dropdown">
                                                 <li><a
-                                                        href="{{ route('course.details', 'Water & Sustainaible Horticulture (ang)') }}">Water
+                                                        href="{{ route('course.details', 'Water & Sustainable Horticulture') }}">Water
                                                         & Sustainaible Horticulture (ang)</a></li>
                                                 <li><a
-                                                        href="{{ route('course.details', 'Architecture du Paysage (fr)') }}">
+                                                        href="{{ route('course.details', 'Architecture du Paysage') }}">
                                                         Architecture du Paysage (fr)</a>
                                                 </li>
-                                                <li><a href="{{ route('course.details', 'Locust Science (ang)') }}">
+                                                <li><a href="{{ route('course.details', 'Locust Science') }}">
                                                         Locust Science (ang)</a></li>
-                                                <li><a href="{{ route('course.details', ' Locust Science (fr)') }}">
+                                                <li><a href="{{ route('course.details', ' Locust Science') }}">
                                                         Locust Science (fr)</a></li>
                                             </ul>
                                         </li>
