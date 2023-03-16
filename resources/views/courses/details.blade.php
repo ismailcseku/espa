@@ -199,7 +199,7 @@
                                             </ul>
 
                                         </li>
-                                        <li><a href="{{ route('degree.show', 'International Master') }}">International
+                                        <li><a href="{{ route('degree.show', 'Master') }}">International
                                                 Master</a>
                                             <ul class="dropdown">
                                                 <li><a
@@ -216,7 +216,7 @@
                                             </ul>
                                         </li>
 
-                                        <li><a href="{{ route('degree.show', 'Licence professionnelle') }}">Licence
+                                        <li><a href="{{ route('degree.show', 'Licence pro') }}">Licence
                                                 professionnelle</a>
                                             <ul class="dropdown">
                                                 <li><a
@@ -227,7 +227,8 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li><a href="{{ route('degree.show', 'Technicien Spécialisé') }}">Technicien
+                                        <li><a href="{{ route('degree.show', '
+                                            Technicien sp.') }}">Technicien
                                                 Spécialisé</a>
                                             <ul class="dropdown">
                                                 <li><a
