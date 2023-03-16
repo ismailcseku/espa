@@ -55,12 +55,30 @@
             </section>
         </div>
         @if (session()->has('success'))
-            <h6 class='alert alert-success' role="alert">
-                Votre formulaire a été envoyé avec succès et nous vous remercions pour votre intérêt. En cas
-                de besoin, contactez l’administration pour plus d’informations sur les modalités et les
-                conditions de participation.
-            </h6>
+            <div class="container">
+                <div class="row">
+
+
+                    <h6 class='alert alert-success col-xs-12 col-sm-8 col-md-6 ' role="alert">
+                        Votre inscription à notre newsletter a été bien
+                        enregistrée !!
+                    </h6>
+                </div>
+            </div>
         @endif
+        @if ($errors->any())
+        <div class="container">
+            <div class="row">
+            <ul class='alert alert-danger col-xs-12 col-sm-8 col-md-6 ' role="alert">
+                @foreach ($errors->all() as $error)
+                <li>{{$error}}</li>
+                @endforeach
+            </ul>
+            </div>
+        </div>
+        
+        @endif
+
         </section>
         <section class="mb-40">
             <div class="container " style="background-color:#F88147;">

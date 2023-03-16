@@ -50,6 +50,7 @@ class Slide extends Resource
         
         return [
             ID::make()->sortable(),
+            Text::make('Lien','url'),
             Text::make('Sujet','subject'),
             Text::make('Titre','title'),
             Textarea::make('Decription','description'),

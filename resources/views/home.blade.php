@@ -22,30 +22,34 @@
             <ul data-slides>
 
                 @foreach ($slides as $slide)
+                
                     @if ($loop->first)
                         <li class="slide" data-active>
-                            <span class="slidepot"></span>
+                            <span class="slidepot slidepot_item"></span>
                             <img src="{{ url('storage') }}/{{ $slide->photo }}" alt="Nature Image #1">
                             <h3>{{ $slide->subject }}</h2>
                                 <h1>{{ $slide->title }}</h1>
                             </h3>
                             <div> {!! $slide->description !!}</div>
-                            <a href="#"
+                            
+                            <a href="{{ $slide->url }}"
                                 class="btn btn-dark btn-circled btn-theme-colored2 btn-xl mr-10 pr-30 pl-30">Découvrir</a>
-
                         </li>
                     @else
                         <li class="slide">
-                            <span class="slidepot"></span>
+                            <span class="slidepot slidepot_item"></span>
                             <img src="{{ url('storage') }}/{{ $slide->photo }}" alt="Nature Image #2">
                             <h3>{{ $slide->subject }}</h2>
                                 <h1>{{ $slide->title }}</h1>
                             </h3>
                             <div> {{ $slide->description }}</div>
-                            <a href="{{ route('course.index') }}"
-                                class="btn btn-dark btn-circled btn-theme-colored2 btn-xl mr-10 pr-30 pl-30">Découvrir</a>
+                            
+                           
+                            <a href="{{ $slide->url}}"
+                                class=" btn btn-dark btn-circled btn-theme-colored2 btn-xl mr-10 pr-30 pl-30">Découvrir</a>
                         </li>
                     @endif
+                    
                 @endforeach
 
             </ul>
@@ -86,7 +90,6 @@
             object-fit: cover;
             object-position: center;
         }
-
         .slidepot {
             position: absolute;
             top: 0%;
@@ -136,8 +139,8 @@
 
         .slide a {
             position: absolute;
-
             left: 10%;
+            
 
 
         }
@@ -165,7 +168,7 @@
 
             .slide a {
                 top: 68%;
-                z-index: 3;
+                z-index: 2;
             }
         }
 
@@ -257,14 +260,12 @@
         })
 
         let getBtn = document.querySelector('.next');
-        let getSlide = document.querySelectorAll('.slidepot');
+        let getSlide = document.querySelectorAll('.slidepot_item');
         let isEnter = true;
         let timer;
 
         function autoClick_btn() {
-
             getBtn.click()
-
         }
         getSlide.forEach(slide => {
             slide.addEventListener('mouseenter', () => {

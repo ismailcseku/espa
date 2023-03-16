@@ -56,11 +56,6 @@
                 <form id="mailchimp-subscription-form-footer" class="newsletter-form"
                     action="{{ route('newsletter.store') }}" method="post">
                     @csrf
-                    @if (session()->has('successNewsletter'))
-                        <h6 class='alert alert-success' role="alert">
-                            Felicitation !! Vous avez êtes désormais abonnée.
-                        </h6>
-                    @endif
                     <div class="input-group">
                         <input type="email" id="mce-EMAIL" data-height="45px" class="form-control input-xs"
                             placeholder="Votre email" name="email" value="{{ old('email') }}">

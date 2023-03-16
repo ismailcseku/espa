@@ -286,6 +286,31 @@
                 </div>
             </div>
         </header>
+        @if (session()->has('successNewsletter'))
+        <div class="container">
+            <div class="row">
+    
+           
+                <h6 class='alert alert-success col-xs-12 col-sm-8 col-md-6 ' role="alert">
+                    Votre inscription à notre newsletter a été bien
+                    enregistrée !!
+                </h6>
+            </div>
+        </div>
+        @endif
+        @if ($errors->any())
+        <div class="container">
+            <div class="row">
+            <ul class='alert alert-danger col-xs-12 col-sm-8 col-md-6 ' role="alert">
+                @foreach ($errors->all() as $error)
+                <li>{{$error}}</li>
+                @endforeach
+            </ul>
+            </div>
+        </div>
+        @endif
+
+
         <div class="main-content">
             <!-- Section: inner-header -->
             <section class="inner-header divider " style="background-color:rgb(45, 69, 88);">
@@ -371,8 +396,8 @@
 
 
                                     <style>
-                                         screen and (max-width: 768px) {
-@media
+                                        @media screen and (max-width: 768px) {
+
                                             #myTab,
                                             #myTabContent {
                                                 display: none;
@@ -1852,24 +1877,20 @@
                         <form id="mailchimp-subscription-form-footer" class="newsletter-form"
                             action="{{ route('newsletter.store') }}" method="post">
                             @csrf
-                            @if (session()->has('successNewsletter'))
-                                <h6 class='alert alert-success' role="alert">
-                                    Felicitation !! Vous avez êtes désormais abonnée.
-                                </h6>
-                            @endif
+
                             <div class="input-group">
                                 <input type="email" id="mce-EMAIL" data-height="45px"
                                     class="form-control input-xs" placeholder="Votre email" name="email"
                                     value="{{ old('email') }}">
-                               
+
                                 <span class="input-group-btn">
                                     <button type="submit" class="btn btn-colored btn-theme-colored2 btn-sm m-0"
                                         data-height="45px">OK</button>
                                 </span>
                             </div>
                             @if ($errors->has('email'))
-                            <span class="text-danger">{{ $errors->first('email') }}</span>
-                        @endif
+                                <span class="text-danger">{{ $errors->first('email') }}</span>
+                            @endif
                         </form>
                         <!-- Mailchimp Subscription Form Validation-->
 

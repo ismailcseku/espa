@@ -14,6 +14,7 @@ class Slide extends Model
         'title',
         'description',
         'photo',
+        'url'
     ];
 
 

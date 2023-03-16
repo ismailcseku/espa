@@ -37,8 +37,7 @@ class HomeController extends Controller
         ->orderBy('courses.position','Asc')
         ->limit(3)
         ->get();
-        $slides=Slide::all();
-    
+        $slides=Slide::all();    
         $degrees=Degree::all();
         
         
