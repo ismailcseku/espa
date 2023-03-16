@@ -9,25 +9,30 @@
 
         }
     </style>
+    <div style="background-color:white;border-top:solid 2px rgb(45, 69, 88) ; padding-bottom:14px;"></div>
 
-    <div class="main-content">
+  
 
         <div class="main-content">
-            <section class="inner-header divider " style="background-color:white;border-top:solid 2px rgb(45, 69, 88) ;">
-                <div class=" pt-10 pb-10 ">
-                    <!-- Section Content -->
-                    <div class="section-content ml-90 ">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <ol class="breadcrumb text-left mt-10" style="color:rgb(45, 69, 88);font-weight:bold;">
-                                    <li><a href="/">Accueil</a></li>
-                                    <li>Corps professoral et staff </li>
-                                </ol>
+            <div class="container">
+
+
+                <section class="inner-header divider " >
+                    <div class=" pt-10 pb-10 ">
+                        <!-- Section Content -->
+                        <div class="section-content  ">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ol class="breadcrumb text-left mt-10" style="color:rgb(45, 69, 88);font-weight:bold;">
+                                        <li><a href="/">Accueil</a></li>
+                                        <li>Corps professoral et staff </li>
+                                    </ol>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
             @if (count($responsables) > 0)
                 <!-- Section: team -->
                 <section id="team">
