@@ -60,23 +60,23 @@
 
 
                     <h6 class='alert alert-success col-xs-12 col-sm-8 col-md-6 ' role="alert">
-                        Votre inscription à notre newsletter a été bien
-                        enregistrée !!
+                        Nous avons bien reçu votre pré-inscription et nous vous remercions pour votre intérêt à participer à
+                        notre évènement. En cas de besoin, contactez l’administration pour plus d’informations sur les
+                        modalités et les conditions de participation.
                     </h6>
                 </div>
             </div>
         @endif
         @if ($errors->any())
-        <div class="container">
-            <div class="row">
-            <ul class='alert alert-danger col-xs-12 col-sm-8 col-md-6 ' role="alert">
-                @foreach ($errors->all() as $error)
-                <li>{{$error}}</li>
-                @endforeach
-            </ul>
+            <div class="container">
+                <div class="row">
+                    <ul class='alert alert-danger col-xs-12 col-sm-8 col-md-6 ' role="alert">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
             </div>
-        </div>
-        
         @endif
 
         </section>
