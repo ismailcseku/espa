@@ -237,7 +237,7 @@
                                                 </li>
                                                 <li><a href="{{ route('course.details', 'Locust Science') }}">
                                                         Locust Science (ang)</a></li>
-                                                <li><a href="{{ route('course.details', ' Locust Science') }}">
+                                                <li><a href="{{ route('course.details', 'Locust Science') }}">
                                                         Locust Science (fr)</a></li>
                                             </ul>
                                         </li>
