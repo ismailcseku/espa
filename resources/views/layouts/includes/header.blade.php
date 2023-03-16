@@ -272,7 +272,7 @@
                                             </ul>
                                         </li>
                                         <li><a href="{{ route('degree.show', 'Programme Doctoral') }}">Programme
-                                                doctoral</a>
+                                                Doctoral</a>
 
                                         </li>
                                         <li><a href="{{ route('degree.show', 'Formation Exécutive') }}">Formation
