@@ -18,7 +18,7 @@
                     </li>
                     <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o mr-5"></i> <a
                             href="mailto:contact@cha-agadir.ma" style="color:#1f3344;">contact@cha-agadir.ma</a> </li>
-                    <li class="m-0 pl-10 pr-10"> <i class="fa fa-globe mr-5"></i> <a href="http://cha-agadir.ma"
+                    <li class="m-0 pl-10 pr-10"> <i class="fa fa-globe mr-5"></i> <a href="#"
                             style="color:#1f3344;">www.cha-agadir.ma</a> </li>
                 </ul>
                 <ul class="styled-icons icon-sm icon-dark icon-theme-colored2 icon-circled clearfix mt-10">
