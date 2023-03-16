@@ -151,8 +151,8 @@
                                         </svg>
                                     </li>
 
-                                    <li>
-                                        <a class="text-white" href="#">(+212) 0528-241-006 / 240-155</a>
+                                    <li class="text-white" style="font-weight:bold;">
+                                        (+212) 0528-241-006 / 240-155
                                     </li>
                                     <li>
                                         <a href="{{ route('course.index') }}"
