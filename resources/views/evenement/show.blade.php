@@ -8,6 +8,7 @@
 
 
         }
+
         .divider .container {
             padding-top: 0px;
             padding-bottom: 0px;
@@ -40,7 +41,7 @@
                             <div class="col-md-6">
                                 <ol class="breadcrumb text-left mt-10" style="color:rgb(45, 69, 88);font-weight:bold;">
                                     <li><a href="/">Acceuil</a></li>
-                                    <li><a href="{{ route('course.index') }}">Évènements</a></li>
+                                    <li><a href="{{ route('evenement.index') }}">Évènements</a></li>
                                     <li>
                                         @if ($evenements->title)
                                             {{ $evenements->title }}
@@ -53,6 +54,13 @@
                 </div>
             </section>
         </div>
+        @if (session()->has('success'))
+            <h6 class='alert alert-success' role="alert">
+                Votre formulaire a été envoyé avec succès et nous vous remercions pour votre intérêt. En cas
+                de besoin, contactez l’administration pour plus d’informations sur les modalités et les
+                conditions de participation.
+            </h6>
+        @endif
         </section>
         <section class="mb-40">
             <div class="container " style="background-color:#F88147;">
@@ -214,7 +222,8 @@
                 <div class="row mt-60">
                     <div class="col-md-12">
                         <h4 class="mt-0">{{ $evenements->title }}</h4>
-                        <div style="text-align:justify;hyphens:auto;font-size:16px; color:#1f3344;">{!! $evenements->description !!}</div> 
+                        <div style="text-align:justify;hyphens:auto;font-size:16px; color:#1f3344;">{!! $evenements->description !!}
+                        </div>
                     </div>
 
                 </div>
@@ -234,13 +243,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3">
-                        @if (session()->has('success'))
-                            <h6 class='alert alert-success' role="alert">
-                                Votre formulaire a été envoyé avec succès et nous vous remercions pour votre intérêt. En cas
-                                de besoin, contactez l’administration pour plus d’informations sur les modalités et les
-                                conditions de participation.
-                            </h6>
-                        @endif
+
                         <form id="booking-form" name="booking-form" method="post"
                             action="{{ route('evenement.signin', $evenements->id) }}" enctype="multipart/form-data">
                             @csrf

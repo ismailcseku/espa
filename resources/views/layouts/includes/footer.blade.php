@@ -56,7 +56,7 @@
                 <form id="mailchimp-subscription-form-footer" class="newsletter-form"
                     action="{{ route('newsletter.store') }}" method="post">
                     @csrf
-                    @if (session()->has('success'))
+                    @if (session()->has('successNewsletter'))
                         <h6 class='alert alert-success' role="alert">
                             Felicitation !! Vous avez êtes désormais abonnée.
                         </h6>

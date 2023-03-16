@@ -294,78 +294,80 @@
     </script>
 
     <!-- pop up -->
-    @if (count($popup)>0)
-    <div class="main-content">
+    @if (count($popup) > 0)
+        <div class="main-content">
 
-        <!-- Section:  -->
-        <section>
+            <!-- Section:  -->
+            <section>
 
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-
-
-                        <!-- popup modal click trigger -->
-                        <!-- <a href="#promoModal1" data-lightbox="inline" class="btn btn-default">Trigger Modal</a>-->
-                        <!-- popup modal -->
-                        <div id="promoModal1" class="modal-promo-box mfp-hide bg-img-cover"
-                            data-bg-img="{{ asset('images/popup.jpg') }}">
-
-                            <button id="hide_popup" class="btn btn-colored btn-theme-colored btn-md m-0" data-height="40px">
-                                Ne plus afficher</button>
-
-                            @foreach ($popup as $item)
-                                @if (isset($item->title))
-                                    <h3 class="text-white mt-0">{{ $item->title }}</h3>
-                                @endif
-                                @if (isset($item->description))
-                                    <h5 class="text-white mb-0">{{ $item->description }}</h5>
-                                @endif
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
 
 
-                                <div style="display:flex;justify-content:flex-end;gap:4px;margin-top:20px;">
-                                    @if (isset($item->url))
-                                        <a href="{{ $item->url }}" class="btn btn-colored btn-theme-colored2 btn-md m-0"
-                                            data-height="40px" target="_blank">Découvrir</a>
+                            <!-- popup modal click trigger -->
+                            <!-- <a href="#promoModal1" data-lightbox="inline" class="btn btn-default">Trigger Modal</a>-->
+                            <!-- popup modal -->
+                            <div id="promoModal1" class="modal-promo-box mfp-hide bg-img-cover"
+                                data-bg-img="{{ asset('images/popup.jpg') }}">
+
+                                <button id="hide_popup" class="btn btn-colored btn-theme-colored btn-md m-0"
+                                    data-height="40px">
+                                    Ne plus afficher</button>
+
+                                @foreach ($popup as $item)
+                                    @if (isset($item->title))
+                                        <h3 class="text-white mt-0">{{ $item->title }}</h3>
                                     @endif
-                                    @if (isset($item->file))
-                                        <a href="{{ url('storage') }}/{{ $item->file }}"
-                                            class="btn btn-colored btn-theme-colored2 btn-md m-0" data-height="40px"
-                                            target="_blank">Télécharger</a>
+                                    @if (isset($item->description))
+                                        <h5 class="text-white mb-0">{{ $item->description }}</h5>
                                     @endif
 
 
+                                    <div style="display:flex;justify-content:flex-end;gap:4px;margin-top:20px;">
+                                        @if (isset($item->url))
+                                            <a href="{{ $item->url }}"
+                                                class="btn btn-colored btn-theme-colored2 btn-md m-0" data-height="40px"
+                                                target="_blank">Découvrir</a>
+                                        @endif
+                                        @if (isset($item->file))
+                                            <a href="{{ url('storage') }}/{{ $item->file }}"
+                                                class="btn btn-colored btn-theme-colored2 btn-md m-0" data-height="40px"
+                                                target="_blank">Télécharger</a>
+                                        @endif
 
-                                </div>
-                            @endforeach
+
+
+                                    </div>
+                                @endforeach
+
+                            </div>
+
+                            <!-- popup modal onLoad trigger -->
+
+                            <div data-target="#promoModal1" id='oncePopup'></div>
+                            <script>
+                                const oncePopup = document.getElementById('oncePopup');
+                                const hide_popup = document.getElementById('hide_popup')
+
+                                $(document).ready(function() {
+                                    let getLocal = localStorage.getItem('cha-popup');
+                                    if (getLocal == null) {
+                                        oncePopup.classList.add('on-pageload-popup-promobox')
+                                    }
+                                    hide_popup.addEventListener('click', () => {
+                                        localStorage.setItem('cha-popup', 'on-pageload-popup-promobox');
+                                        hide_popup.style.display = 'none'
+                                    })
+                                });
+                            </script>
+
 
                         </div>
-
-                        <!-- popup modal onLoad trigger -->
-                        
-                        <div data-target="#promoModal1" id='oncePopup'></div>
-                        <script>
-                            const oncePopup = document.getElementById('oncePopup');
-                            const hide_popup = document.getElementById('hide_popup')
-
-                            $(document).ready(function() {
-                                let getLocal = localStorage.getItem('cha-popup');
-                                if (getLocal == null) {
-                                    oncePopup.classList.add('on-pageload-popup-promobox')
-                                }
-                                hide_popup.addEventListener('click', () => {
-                                    localStorage.setItem('cha-popup', 'on-pageload-popup-promobox');
-                                    hide_popup.style.display = 'none'
-                                })
-                            });
-                        </script>
-
-
                     </div>
                 </div>
-            </div>
-        </section>
-    </div>
+            </section>
+        </div>
     @endif
     <!-- Section: Courses -->
     <section id="courses" style="padding-top:40px;">
@@ -409,71 +411,47 @@
             </div>
             <div class="section-content">
                 <div class="row">
-                    <div class="col-md-12">
-
-                        <div class="gallery-isotope default-animation-effect grid-3 gutter-small clearfix"
-                            data-lightbox="gallery">
-                            <!-- Portfolio Item Start -->
-
-                            @foreach ($courses as $course)
-                                <div class="item gallery-item  a{{ $course->degree_id }}">
-                                    <div class="course-single-item bg-white border-1px clearfix">
-                                        <a href="{{ route('course.details', $course->name) }}" class="course-thumb">
-                                            <img class="img-fullwidth" alt=""
-                                                src="{{ url('storage') }}/{{ $course->photo }}">
-
+                    @foreach ($courses as $course)
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                            <div class="course-single-item bg-white border-1px clearfix mb-md-40">
+                                <a href="{{ route('course.details', $course->name) }}" style="display:block;" class="course-thumb">
+                                    <img class="img-fullwidth" alt=""
+                                        src="{{ url('storage') }}/{{ $course->photo }}">
+                                </a>
+                                <div class="course-details clearfix p-20 pt-15">
+                                    <div class="course-top-part">
+                                        <a href="{{ route('course.details', $course->name) }}">
+                                            <h4 class="mt-5 mb-5">{{ $course->name }}</h4>
                                         </a>
-                                        <div class="course-details clearfix p-20 pt-15">
-                                            <div class="course-top-part">
-                                                <a href="{{ route('course.details', $course->name) }}">
-                                                    <h4 class="mt-5 mb-5">
-                                                        {{ $course->name }}</h4>
-                                                </a>
-
-                                                <a href="{{ route('course.details', $course->name) }}">
-                                                    <h4 class="mt-5 mb-5">
-                                                        {{ $course->degrees_name }}
-                                                    </h4>
-                                                </a>
-                                            </div>
-                                            <a
-                                                href="{{ route('course.details', $course->name) }}"class="course-description mt-15 mb-0">
-                                                <p style="font-weight:normal;text-align:justify;hyphens:auto;">
-                                                    {{ $course->accroche }} [...]</p>
-                                            </a>
-                                            <!--  <div class="author-thumb">
-                                                                                                                        <img src="{{ url('storage') }}/{{ $course->responsables_photo }}"
-                                                                                                                            alt="" class="img-circle">
-                                                                                                                    </div>-->
-                                        </div>
-                                        <a href="{{ route('course.details', $course->name) }}" style="display: block"
-                                            class="course-meta">
-                                            <ul class="list-inline">
-                                                <li><i class="ficon-clock font-18"></i>
-                                                    {{ $course->duration }} Mois
-
-                                                </li>
-                                                <li>
-                                                    <i class="pe-7s-notebook font-18"></i>
-                                                    {{ $course->languages_name }}
-                                                </li>
-                                            </ul>
-                                            <div class="course-tag">
-
-                                                <h5>Détail</h5>
-                                            </div>
+                                        <a href="{{ route('course.details', $course->name) }}">
+                                            <h4 class="mt-5 mb-5">{{ $course->degrees_name }}</h4>
                                         </a>
                                     </div>
+                                    <a href="{{ route('course.details', $course->name) }}"
+                                        class="course-description mt-15 mb-0" style="display:block">
+                                        <p class="course-description mt-15 mb-0"
+                                            style="font-weight:normal;text-align:justify;hyphens:auto;">
+                                            {{ $course->accroche }} [...]</p>
+                                    </a>
+                                    
+                                   
                                 </div>
-                            @endforeach
-
-
+                                <div class="course-meta">
+                                    <ul class="list-inline">
+                                        <li><i class="ficon-clock font-18"></i> {{ $course->duration }} Mois</li>
+                                        <li><i class="pe-7s-notebook font-18"></i>{{ $course->languages_name }}</li>
+                                    </ul>
+                                    <div class="course-tag">
+                                        <h5>Détail</h5>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                    @endforeach
 
-                    </div>
                 </div>
-
             </div>
+       
         </div>
         <div class="container btn_course2">
 

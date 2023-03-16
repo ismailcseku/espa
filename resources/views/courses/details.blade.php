@@ -371,8 +371,8 @@
 
 
                                     <style>
-                                        @media screen and (max-width: 768px) {
-
+                                         screen and (max-width: 768px) {
+@media
                                             #myTab,
                                             #myTabContent {
                                                 display: none;
@@ -1416,7 +1416,6 @@
                                                         </p>
                                                     @endif
                                                 </div>
-
                                                 <div
                                                     style="hyphens:auto;font-size:16px;padding-right:10px;padding-left:10px;">
                                                     {!! $program->description !!} </div>
@@ -1853,7 +1852,7 @@
                         <form id="mailchimp-subscription-form-footer" class="newsletter-form"
                             action="{{ route('newsletter.store') }}" method="post">
                             @csrf
-                            @if (session()->has('success'))
+                            @if (session()->has('successNewsletter'))
                                 <h6 class='alert alert-success' role="alert">
                                     Felicitation !! Vous avez êtes désormais abonnée.
                                 </h6>

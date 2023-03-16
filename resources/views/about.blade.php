@@ -82,7 +82,7 @@
                             <div style="text-align:justify;hyphens:auto;">{!! $data->content !!}</div>
                         </div>
                     @endforeach
-                    <button class="accordion">TELECHARGER</button>
+                    <button class="accordion">TÉLÉCHARGER</button>
                     <div class="panel">
                         @foreach ($downloads as $key => $download)
                             <div><a href="{{ url('storage') }}/{{ $download->file }}"

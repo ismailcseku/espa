@@ -20,6 +20,6 @@ class NewsletterController extends Controller
             'email'=>'email|required|unique:App\Models\Newsletter,email',
         ]);
         Newsletter::create($data);
-        return redirect()->back()->with('success','succès');
+        return redirect()->back()->with('successNewsletter','succès');
     }
 }
