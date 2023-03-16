@@ -14,8 +14,7 @@
 
                 <ul class="list-inline">
                     <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone mr-5"></i> <a href="#"
-                            style="color:#1f3344;">(+212) 0528-241-006
-                            / 240-155</a>
+                            style="color:#1f3344;">(+212)0528241006/240155</a>
                     </li>
                     <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o mr-5"></i> <a
                             href="mail:contact@cha-agadir.ma" style="color:#1f3344;">contact@cha-agadir.ma</a> </li>
