@@ -64,14 +64,17 @@
                     <div class="input-group">
                         <input type="email" id="mce-EMAIL" data-height="45px" class="form-control input-xs"
                             placeholder="Votre email" name="email" value="{{ old('email') }}">
-                        @if ($errors->has('email'))
-                            <span class="text-danger">{{ $errors->first('email') }}</span>
-                        @endif
+
                         <span class="input-group-btn">
                             <button type="submit" class="btn btn-colored btn-theme-colored2 btn-sm m-0"
                                 data-height="45px">OK</button>
                         </span>
+                      
+
                     </div>
+                    @if ($errors->has('email'))
+                    <span class="text-danger">{{ $errors->first('email') }}</span>
+                @endif
                 </form>
                 <!-- Mailchimp Subscription Form Validation-->
 
