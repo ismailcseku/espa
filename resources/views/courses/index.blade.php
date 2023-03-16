@@ -39,7 +39,7 @@
                                 <!-- Portfolio Item Start -->
 
                                 @foreach ($courses as $course)
-                                    <div class="item gallery-item  a{{ $course->degree_id }}" style="margin-bottom:4px;">
+                                    <div class="item gallery-item  a{{ $course->degree_id }}" style="margin-bottom:10px;">
                                         <div class="course-single-item bg-white border-1px clearfix">
                                             <a href="{{ route('course.details', $course->name) }}" class="course-thumb">
                                                 <img class="img-fullwidth" alt=""
