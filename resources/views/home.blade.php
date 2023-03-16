@@ -434,8 +434,6 @@
                                             style="font-weight:normal;text-align:justify;hyphens:auto;">
                                             {{ $course->accroche }} [...]</p>
                                     </a>
-                                    
-                                   
                                 </div>
                                 <div class="course-meta">
                                     <ul class="list-inline">
