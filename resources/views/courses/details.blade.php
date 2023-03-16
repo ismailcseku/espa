@@ -1968,7 +1968,7 @@
                                     </li>
                                     <li>|</li>
                                     <li>
-                                        <a href="#">Nous joindre</a>
+                                        <a href="{{route('about.index')}}">Nous joindre</a>
                                     </li>
                                     <li>|</li>
                                     <li class="text-white" style="position:relative; top:3px;">
