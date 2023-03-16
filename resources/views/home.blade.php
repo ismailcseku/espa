@@ -442,9 +442,9 @@
                                         <li><i class="ficon-clock font-18"></i> {{ $course->duration }} Mois</li>
                                         <li><i class="pe-7s-notebook font-18"></i>{{ $course->languages_name }}</li>
                                     </ul>
-                                    <div class="course-tag">
+                                    <a  href="{{ route('course.details', $course->name) }}" style="display:block;" class="course-tag">
                                         <h5>Détail</h5>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
