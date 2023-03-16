@@ -227,8 +227,7 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li><a href="{{ route('degree.show', '
-                                            Technicien sp.') }}">Technicien
+                                        <li><a href="{{ route('degree.show', 'Technicien sp.') }}">Technicien
                                                 Spécialisé</a>
                                             <ul class="dropdown">
                                                 <li><a
