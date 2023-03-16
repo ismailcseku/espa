@@ -55,13 +55,14 @@ class DegreeController extends Controller
        // dd($getId[0]->id);
         
         if (count($getId)>0) {
-            $courses=DB::table('courses')->where('courses.degree_id',2)->join('modalities','modalities.id','=','courses.modality_id')
+            $courses=DB::table('courses')->where('courses.degree_id',$getId[0]->id)->join('modalities','modalities.id','=','courses.modality_id')
             ->join('degrees','degrees.id','=','courses.degree_id')
             ->join('languages','languages.id','=','courses.language_id')
             ->join('modes','modes.id','=','courses.mode_id')
             ->leftjoin('responsables','responsables.id','=','courses.responsable_id')
             ->select('courses.*','modalities.name as modalitiy_name','degrees.name as degrees_name','languages.name as languages_name','modes.name as modes_name','responsables.photo as responsables_photo','responsables.surname as responsables_surname')
             ->get();
+           
            
             
             foreach ($courses as $key => $item) {
@@ -70,11 +71,11 @@ class DegreeController extends Controller
             } 
         }
   
+  
         
         return view('degree.show')->with([
             'courses'=>$courses,
             'degrees_name'=>$res,
-            
         ]);
     }
 
