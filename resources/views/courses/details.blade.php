@@ -116,7 +116,7 @@
 
                                     <li class="text-white">|</li>
                                     <li>
-                                        <a class="text-white" href="{{ route('about.index') }}">À propos</a>
+                                        <a class="text-white" href="{{ route('contact.create') }}">À propos</a>
                                     </li>
                                     <li class="text-white">|</li>
                                     <li class="text-white" style="position:relative; top:3px;">
