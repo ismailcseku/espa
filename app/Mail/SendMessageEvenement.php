@@ -6,6 +6,7 @@ use App\Models\Evenementpage;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Attachment;
+use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Mail\Mailables\Envelope;
@@ -45,6 +46,7 @@ class SendMessageEvenement extends Mailable
     public function envelope()
     {
         return new Envelope(
+            from: new Address('contact@cha-agadir.com', 'Cha Agadir'),
             subject: 'Inscription évènement',
         );
     }
