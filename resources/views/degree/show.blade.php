@@ -33,7 +33,6 @@
                                                 src="{{ url('storage') }}/{{ $course->photo }}">
 
                                         </a>
-
                                         <div class="course-details clearfix p-20 pt-15">
                                             <div class="course-top-part">
                                                 <a href="{{ route('course.details', $course->name) }}">
