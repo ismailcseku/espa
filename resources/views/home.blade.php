@@ -326,7 +326,7 @@
                                     @endif
 
 
-                                    <div style="display:flex;justify-content:flex-end;gap:4px;margin-top:20px;">
+                                    <div style="position:relative;top:65px;display:flex;justify-content:flex-end;gap:4px;margin-top:20px;">
                                         @if (isset($item->url))
                                             <a href="{{ $item->url }}"
                                                 class="btn btn-colored btn-theme-colored2 btn-md m-0" data-height="40px"
