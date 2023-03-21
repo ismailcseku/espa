@@ -309,14 +309,15 @@
                             <!-- popup modal click trigger -->
                             <!-- <a href="#promoModal1" data-lightbox="inline" class="btn btn-default">Trigger Modal</a>-->
                             <!-- popup modal -->
+                            @foreach ($popup as $item)
                             <div id="promoModal1" class="modal-promo-box mfp-hide bg-img-cover"
-                                data-bg-img="{{ asset('images/popup.jpg') }}">
+                                data-bg-img="{{url('storage')}}/{{ $item->image }}">
 
                                 <button id="hide_popup" class="btn btn-colored btn-theme-colored btn-md m-0"
                                     data-height="40px">
                                     Ne plus afficher</button>
 
-                                @foreach ($popup as $item)
+                               
                                     @if (isset($item->title))
                                         <h3 class="text-white mt-0">{{ $item->title }}</h3>
                                     @endif
@@ -340,9 +341,9 @@
 
 
                                     </div>
-                                @endforeach
 
                             </div>
+                            @endforeach
 
                             <!-- popup modal onLoad trigger -->
 

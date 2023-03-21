@@ -13,6 +13,7 @@ class Popup extends Model
         'title',
         'description',
         'url',
-        'file'
+        'file',
+        'image',
     ];
 }

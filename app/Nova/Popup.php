@@ -6,6 +6,7 @@ use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\File;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
@@ -48,6 +49,10 @@ class Popup extends Resource
             Boolean::make('Activer','active'),
             Text::make('Titre','title'),
             Text::make('Lien','url'),
+            Image::make('Image de fond','image')->disk('public')
+            ->storeAs(function (Request $request) {
+                    return $request->image->getClientOriginalName();
+            }),
             Textarea::make('Description','description'),
             File::make('Un fichier','file')->disk('public')
             ->storeAs(function (Request $request) {
@@ -55,7 +60,6 @@ class Popup extends Resource
                  }),
         ];
     }
-
     /**
      * Get the cards available for the request.
      *
