@@ -249,6 +249,9 @@
             </div>
         </section>
 
+        @if ( $evenements->active)
+            
+        
         <!-- Section: Registration Form -->
         <section style="background-color:#1f3344;">
             <div class="container-fluid">
@@ -327,6 +330,7 @@
                 </div>
             </div>
         </section>
+        @endif
 
 
     </div>

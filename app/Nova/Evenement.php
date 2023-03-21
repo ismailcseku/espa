@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Laravel\Nova\Fields\File;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Image;
+use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\Textarea;
@@ -48,6 +49,7 @@ class Evenement extends Resource
     {
         return [
             ID::make()->sortable(),
+            Boolean::make('Activation d\'inscription ','active'),
             Text::make('Titre','title'),
             NovaTinyMCE::make('Description','description')->options([
                 'plugins' => [
