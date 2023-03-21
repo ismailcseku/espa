@@ -19,7 +19,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <ol class="breadcrumb text-left" style="color:rgb(45, 69, 88);font-weight:bold;">
-                                <li><a href="/">Accueils</a></li>
+                                <li><a href="/">Accueil</a></li>
                                 <li>Mot du directeur</li>
                             </ol>
                         </div>
