@@ -400,7 +400,7 @@
                 <div class="row">
                     <div class="col-md-12" style="display:flex; justify-content:space-between; align-items: center;">
                         <a href="{{ route('course.index') }}" class="text-uppercase title">
-                            <h2> Nos <span class="text-theme-colored2">Formation</span></h2>
+                            <h2> No <span class="text-theme-colored2">Formation</span></h2>
                         </a>
                         <a href="{{ route('course.index') }}" class="btn_course1 font-16"
                             style="font-style:normal; color:#1f3344;transform:translateY(30px)">
