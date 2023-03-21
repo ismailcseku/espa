@@ -314,7 +314,7 @@
                                 data-bg-img="{{url('storage')}}/{{ $item->image }}">
 
                                 <button id="hide_popup" class="btn btn-colored btn-theme-colored btn-md m-0"
-                                    data-height="40px">
+                                    data-height="40px" style="position:relative;top:-50px;">
                                     Ne plus afficher</button>
 
                                
