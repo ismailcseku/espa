@@ -139,7 +139,7 @@
                     <div class="widget no-border m-0">
                         <ul class="list-inline sm-text-center mt-5 font-14">
                             <li>
-                                <a href="#">Mentions légales</a>
+                                <a href="{{route('mention.index')}}">Mentions légales</a>
                             </li>
                             <li>|</li>
                             <li>

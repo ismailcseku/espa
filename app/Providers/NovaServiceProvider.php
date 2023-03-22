@@ -20,6 +20,7 @@ use App\Nova\Design;
 use App\Nova\Impact;
 use App\Nova\Search;
 use App\Nova\Contact;
+use App\Nova\Mention;
 use App\Nova\Partner;
 use App\Nova\Program;
 use App\Nova\Business;
@@ -121,6 +122,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                         MenuItem::resource(Experience::class),
                         MenuItem::resource(Impact::class),
                         MenuItem::resource(Business::class),
+                        MenuItem::resource(Mention::class),
                         
                     ])->collapsable(),
                     MenuItem::resource(Downloadpage::class),

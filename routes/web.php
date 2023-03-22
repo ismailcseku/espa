@@ -13,6 +13,7 @@ use App\Http\Controllers\DegreeController;
 use App\Http\Controllers\ImpactController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\MentionController;
 use App\Http\Controllers\BusinessController;
 use App\Http\Controllers\DirectorController;
 use App\Http\Controllers\EvenementController;
@@ -57,6 +58,7 @@ Route::get('/corps-professoral-staff', [ResponsableController::class, '__invoke'
 Route::get('/galerie', [MediaController::class, '__invoke'])->name('media.index');
 Route::get('/videos', [VideoController::class, '__invoke'])->name('video.index');
 Route::get('/vie-estudiantine', [CampusController::class, '__invoke'])->name('campus.index');
+Route::get('/mentions-legales', [MentionController::class, '__invoke'])->name('mention.index');
 
 
 // static 
