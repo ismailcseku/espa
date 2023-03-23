@@ -121,6 +121,85 @@
             "install-path": "../brick/money"
         },
         {
+            "name": "composer/ca-bundle",
+            "version": "1.3.5",
+            "version_normalized": "1.3.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/ca-bundle.git",
+                "reference": "74780ccf8c19d6acb8d65c5f39cd72110e132bbd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/74780ccf8c19d6acb8d65c5f39cd72110e132bbd",
+                "reference": "74780ccf8c19d6acb8d65c5f39cd72110e132bbd",
+                "shasum": ""
+            },
+            "require": {
+                "ext-openssl": "*",
+                "ext-pcre": "*",
+                "php": "^5.3.2 || ^7.0 || ^8.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^0.12.55",
+                "psr/log": "^1.0",
+                "symfony/phpunit-bridge": "^4.2 || ^5",
+                "symfony/process": "^2.5 || ^3.0 || ^4.0 || ^5.0 || ^6.0"
+            },
+            "time": "2023-01-11T08:27:00+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Composer\\CaBundle\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be"
+                }
+            ],
+            "description": "Lets you find a path to the system CA bundle, and includes a fallback to the Mozilla CA bundle.",
+            "keywords": [
+                "cabundle",
+                "cacert",
+                "certificate",
+                "ssl",
+                "tls"
+            ],
+            "support": {
+                "irc": "irc://irc.freenode.org/composer",
+                "issues": "https://github.com/composer/ca-bundle/issues",
+                "source": "https://github.com/composer/ca-bundle/tree/1.3.5"
+            },
+            "funding": [
+                {
+                    "url": "https://packagist.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/composer",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                    "type": "tidelift"
+                }
+            ],
+            "install-path": "./ca-bundle"
+        },
+        {
             "name": "composer/semver",
             "version": "3.3.2",
             "version_normalized": "3.3.2.0",
@@ -1012,6 +1091,82 @@
                 }
             ],
             "install-path": "../egulias/email-validator"
+        },
+        {
+            "name": "embed/embed",
+            "version": "v3.4.18",
+            "version_normalized": "3.4.18.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oscarotero/Embed.git",
+                "reference": "fe379f61d3ecca7a0824c4bb3839ebe0a1819520"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/fe379f61d3ecca7a0824c4bb3839ebe0a1819520",
+                "reference": "fe379f61d3ecca7a0824c4bb3839ebe0a1819520",
+                "shasum": ""
+            },
+            "require": {
+                "composer/ca-bundle": "^1.0",
+                "ext-curl": "*",
+                "ext-dom": "*",
+                "ext-mbstring": "*",
+                "php": "^5.6|^7.0|^8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.0",
+                "phpunit/phpunit": "^5.7|^6.0|^7.0"
+            },
+            "time": "2022-07-15T09:34:07+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Embed\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oscar Otero",
+                    "email": "oom@oscarotero.com",
+                    "homepage": "http://oscarotero.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP library to retrieve page info using oembed, opengraph, etc",
+            "homepage": "https://github.com/oscarotero/Embed",
+            "keywords": [
+                "embed",
+                "embedly",
+                "oembed",
+                "opengraph",
+                "twitter cards"
+            ],
+            "support": {
+                "email": "oom@oscarotero.com",
+                "issues": "https://github.com/oscarotero/Embed/issues",
+                "source": "https://github.com/oscarotero/Embed/tree/v3.4.18"
+            },
+            "funding": [
+                {
+                    "url": "https://paypal.me/oscarotero",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/oscarotero",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/misteroom",
+                    "type": "patreon"
+                }
+            ],
+            "install-path": "../embed/embed"
         },
         {
             "name": "emilianotisato/nova-tinymce",
@@ -2082,6 +2237,59 @@
                 }
             ],
             "install-path": "../intervention/image"
+        },
+        {
+            "name": "jangvel/nova-gutenberg",
+            "version": "v1.0.1",
+            "version_normalized": "1.0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nickjangveladze/nova-gutenberg.git",
+                "reference": "0e9f5ba47754a26e04a0de320fead3105cab8598"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nickjangveladze/nova-gutenberg/zipball/0e9f5ba47754a26e04a0de320fead3105cab8598",
+                "reference": "0e9f5ba47754a26e04a0de320fead3105cab8598",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^8.0|^9.0|^10.0",
+                "laravel/nova": "^4.0",
+                "php": ">=8.0",
+                "van-ons/laraberg": "^2.0"
+            },
+            "time": "2023-02-24T13:04:52+00:00",
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Jangvel\\NovaGutenberg\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Jangvel\\NovaGutenberg\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Implementation of the Gutenberg editor as a Laravel Nova Field based on Laraberg.",
+            "keywords": [
+                "gutenberg",
+                "laraberg",
+                "laravel",
+                "nova"
+            ],
+            "support": {
+                "issues": "https://github.com/nickjangveladze/nova-gutenberg/issues",
+                "source": "https://github.com/nickjangveladze/nova-gutenberg/tree/v1.0.1"
+            },
+            "install-path": "../jangvel/nova-gutenberg"
         },
         {
             "name": "jorenvanhocht/laravel-share",
@@ -4432,56 +4640,6 @@
                 "source": "https://github.com/nikic/PHP-Parser/tree/v4.15.3"
             },
             "install-path": "../nikic/php-parser"
-        },
-        {
-            "name": "numaxlab/nova-ckeditor5-classic",
-            "version": "1.1.2",
-            "version_normalized": "1.1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/numaxlab/nova-ckeditor5-classic.git",
-                "reference": "012696fc66860667e35e78947289d8684f2629ce"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/numaxlab/nova-ckeditor5-classic/zipball/012696fc66860667e35e78947289d8684f2629ce",
-                "reference": "012696fc66860667e35e78947289d8684f2629ce",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.1.0"
-            },
-            "time": "2020-11-12T12:40:30+00:00",
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "NumaxLab\\NovaCKEditor5Classic\\FieldServiceProvider"
-                    ]
-                }
-            },
-            "installation-source": "dist",
-            "autoload": {
-                "psr-4": {
-                    "NumaxLab\\NovaCKEditor5Classic\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "A Laravel Nova CKEditor5 Classic Field.",
-            "keywords": [
-                "ckeditor5",
-                "laravel",
-                "nova",
-                "wysiwyg"
-            ],
-            "support": {
-                "issues": "https://github.com/numaxlab/nova-ckeditor5-classic/issues",
-                "source": "https://github.com/numaxlab/nova-ckeditor5-classic/tree/1.1.2"
-            },
-            "install-path": "../numaxlab/nova-ckeditor5-classic"
         },
         {
             "name": "nunomaduro/collision",
@@ -10320,6 +10478,58 @@
                 "source": "https://github.com/UniSharp/laravel-filemanager/tree/v2.6.0"
             },
             "install-path": "../unisharp/laravel-filemanager"
+        },
+        {
+            "name": "van-ons/laraberg",
+            "version": "v2.0.4",
+            "version_normalized": "2.0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/VanOns/laraberg.git",
+                "reference": "bdc23df8fb8bed21ad40489ef278e728113b84be"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/VanOns/laraberg/zipball/bdc23df8fb8bed21ad40489ef278e728113b84be",
+                "reference": "bdc23df8fb8bed21ad40489ef278e728113b84be",
+                "shasum": ""
+            },
+            "require": {
+                "embed/embed": "^3.3"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^3.7",
+                "phpunit/phpunit": "^7.0"
+            },
+            "time": "2023-01-24T09:28:27+00:00",
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": "VanOns\\Laraberg\\LarabergServiceProvider"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "VanOns\\Laraberg\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Maurice Wijnia",
+                    "email": "maurice@van-ons.nl"
+                }
+            ],
+            "description": "A Gutenberg implementation for Laravel",
+            "support": {
+                "issues": "https://github.com/VanOns/laraberg/issues",
+                "source": "https://github.com/VanOns/laraberg/tree/v2.0.4"
+            },
+            "install-path": "../van-ons/laraberg"
         },
         {
             "name": "vlucas/phpdotenv",

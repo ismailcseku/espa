@@ -55,6 +55,10 @@ class ComposerStaticInit8e002b5a0e483662cc63bf31cc950f31
             'Whoops\\' => 7,
             'Webmozart\\Assert\\' => 17,
         ),
+        'V' => 
+        array (
+            'VanOns\\Laraberg\\' => 16,
+        ),
         'U' => 
         array (
             'UniSharp\\LaravelFilemanager\\' => 28,
@@ -128,7 +132,6 @@ class ComposerStaticInit8e002b5a0e483662cc63bf31cc950f31
         'N' => 
         array (
             'NunoMaduro\\Collision\\' => 21,
-            'NumaxLab\\NovaCKEditor5Classic\\' => 30,
         ),
         'M' => 
         array (
@@ -157,6 +160,7 @@ class ComposerStaticInit8e002b5a0e483662cc63bf31cc950f31
         'J' => 
         array (
             'Jorenvh\\Share\\' => 14,
+            'Jangvel\\NovaGutenberg\\' => 22,
         ),
         'I' => 
         array (
@@ -183,6 +187,7 @@ class ComposerStaticInit8e002b5a0e483662cc63bf31cc950f31
         'E' => 
         array (
             'Emilianotisato\\NovaTinyMCE\\' => 27,
+            'Embed\\' => 6,
             'Egulias\\EmailValidator\\' => 23,
         ),
         'D' => 
@@ -204,6 +209,7 @@ class ComposerStaticInit8e002b5a0e483662cc63bf31cc950f31
         array (
             'Cron\\' => 5,
             'Composer\\Semver\\' => 16,
+            'Composer\\CaBundle\\' => 18,
             'Complex\\' => 8,
             'ColorThief\\' => 11,
             'Carbon\\' => 7,
@@ -235,6 +241,10 @@ class ComposerStaticInit8e002b5a0e483662cc63bf31cc950f31
         'Webmozart\\Assert\\' => 
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
+        ),
+        'VanOns\\Laraberg\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/van-ons/laraberg/src',
         ),
         'UniSharp\\LaravelFilemanager\\' => 
         array (
@@ -449,10 +459,6 @@ class ComposerStaticInit8e002b5a0e483662cc63bf31cc950f31
         array (
             0 => __DIR__ . '/..' . '/nunomaduro/collision/src',
         ),
-        'NumaxLab\\NovaCKEditor5Classic\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/numaxlab/nova-ckeditor5-classic/src',
-        ),
         'MyCLabs\\Enum\\' => 
         array (
             0 => __DIR__ . '/..' . '/myclabs/php-enum/src',
@@ -529,6 +535,10 @@ class ComposerStaticInit8e002b5a0e483662cc63bf31cc950f31
         array (
             0 => __DIR__ . '/..' . '/jorenvanhocht/laravel-share/src',
         ),
+        'Jangvel\\NovaGutenberg\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jangvel/nova-gutenberg/src',
+        ),
         'Intervention\\Image\\' => 
         array (
             0 => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image',
@@ -586,6 +596,10 @@ class ComposerStaticInit8e002b5a0e483662cc63bf31cc950f31
         'Emilianotisato\\NovaTinyMCE\\' => 
         array (
             0 => __DIR__ . '/..' . '/emilianotisato/nova-tinymce/src',
+        ),
+        'Embed\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/embed/embed/src',
         ),
         'Egulias\\EmailValidator\\' => 
         array (
@@ -648,6 +662,10 @@ class ComposerStaticInit8e002b5a0e483662cc63bf31cc950f31
         'Composer\\Semver\\' => 
         array (
             0 => __DIR__ . '/..' . '/composer/semver/src',
+        ),
+        'Composer\\CaBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/composer/ca-bundle/src',
         ),
         'Complex\\' => 
         array (
@@ -717,6 +735,7 @@ class ComposerStaticInit8e002b5a0e483662cc63bf31cc950f31
         'App\\Http\\Controllers\\LanguageController' => __DIR__ . '/../..' . '/app/Http/Controllers/LanguageController.php',
         'App\\Http\\Controllers\\LocationController' => __DIR__ . '/../..' . '/app/Http/Controllers/LocationController.php',
         'App\\Http\\Controllers\\MediaController' => __DIR__ . '/../..' . '/app/Http/Controllers/MediaController.php',
+        'App\\Http\\Controllers\\MentionController' => __DIR__ . '/../..' . '/app/Http/Controllers/MentionController.php',
         'App\\Http\\Controllers\\ModalityController' => __DIR__ . '/../..' . '/app/Http/Controllers/ModalityController.php',
         'App\\Http\\Controllers\\NewsletterController' => __DIR__ . '/../..' . '/app/Http/Controllers/NewsletterController.php',
         'App\\Http\\Controllers\\ResponsableController' => __DIR__ . '/../..' . '/app/Http/Controllers/ResponsableController.php',
@@ -746,6 +765,7 @@ class ComposerStaticInit8e002b5a0e483662cc63bf31cc950f31
         'App\\Models\\Campus' => __DIR__ . '/../..' . '/app/Models/Campus.php',
         'App\\Models\\CategoryBlog' => __DIR__ . '/../..' . '/app/Models/CategoryBlog.php',
         'App\\Models\\CategoryMedia' => __DIR__ . '/../..' . '/app/Models/CategoryMedia.php',
+        'App\\Models\\CategoryVideo' => __DIR__ . '/../..' . '/app/Models/CategoryVideo.php',
         'App\\Models\\Center' => __DIR__ . '/../..' . '/app/Models/Center.php',
         'App\\Models\\CommentBlog' => __DIR__ . '/../..' . '/app/Models/CommentBlog.php',
         'App\\Models\\Contact' => __DIR__ . '/../..' . '/app/Models/Contact.php',
@@ -767,6 +787,7 @@ class ComposerStaticInit8e002b5a0e483662cc63bf31cc950f31
         'App\\Models\\Logo' => __DIR__ . '/../..' . '/app/Models/Logo.php',
         'App\\Models\\Media' => __DIR__ . '/../..' . '/app/Models/Media.php',
         'App\\Models\\Mediavideo' => __DIR__ . '/../..' . '/app/Models/Mediavideo.php',
+        'App\\Models\\Mention' => __DIR__ . '/../..' . '/app/Models/Mention.php',
         'App\\Models\\MessageNewsletter' => __DIR__ . '/../..' . '/app/Models/MessageNewsletter.php',
         'App\\Models\\Modality' => __DIR__ . '/../..' . '/app/Models/Modality.php',
         'App\\Models\\Mode' => __DIR__ . '/../..' . '/app/Models/Mode.php',
@@ -789,6 +810,7 @@ class ComposerStaticInit8e002b5a0e483662cc63bf31cc950f31
         'App\\Nova\\Campus' => __DIR__ . '/../..' . '/app/Nova/Campus.php',
         'App\\Nova\\CategoryBlog' => __DIR__ . '/../..' . '/app/Nova/CategoryBlog.php',
         'App\\Nova\\CategoryMedia' => __DIR__ . '/../..' . '/app/Nova/CategoryMedia.php',
+        'App\\Nova\\CategoryVideo' => __DIR__ . '/../..' . '/app/Nova/CategoryVideo.php',
         'App\\Nova\\Center' => __DIR__ . '/../..' . '/app/Nova/Center.php',
         'App\\Nova\\Contact' => __DIR__ . '/../..' . '/app/Nova/Contact.php',
         'App\\Nova\\Course' => __DIR__ . '/../..' . '/app/Nova/Course.php',
@@ -810,6 +832,7 @@ class ComposerStaticInit8e002b5a0e483662cc63bf31cc950f31
         'App\\Nova\\Logo' => __DIR__ . '/../..' . '/app/Nova/Logo.php',
         'App\\Nova\\Media' => __DIR__ . '/../..' . '/app/Nova/Media.php',
         'App\\Nova\\Mediavideo' => __DIR__ . '/../..' . '/app/Nova/Mediavideo.php',
+        'App\\Nova\\Mention' => __DIR__ . '/../..' . '/app/Nova/Mention.php',
         'App\\Nova\\MessageNewsletter' => __DIR__ . '/../..' . '/app/Nova/MessageNewsletter.php',
         'App\\Nova\\Modality' => __DIR__ . '/../..' . '/app/Nova/Modality.php',
         'App\\Nova\\Mode' => __DIR__ . '/../..' . '/app/Nova/Mode.php',
@@ -974,6 +997,7 @@ class ComposerStaticInit8e002b5a0e483662cc63bf31cc950f31
         'Complex\\Exception' => __DIR__ . '/..' . '/markbaker/complex/classes/src/Exception.php',
         'Complex\\Functions' => __DIR__ . '/..' . '/markbaker/complex/classes/src/Functions.php',
         'Complex\\Operations' => __DIR__ . '/..' . '/markbaker/complex/classes/src/Operations.php',
+        'Composer\\CaBundle\\CaBundle' => __DIR__ . '/..' . '/composer/ca-bundle/src/CaBundle.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Composer\\Semver\\Comparator' => __DIR__ . '/..' . '/composer/semver/src/Comparator.php',
         'Composer\\Semver\\CompilingMatcher' => __DIR__ . '/..' . '/composer/semver/src/CompilingMatcher.php',
@@ -1553,6 +1577,101 @@ class ComposerStaticInit8e002b5a0e483662cc63bf31cc950f31
         'Egulias\\EmailValidator\\Warning\\QuotedString' => __DIR__ . '/..' . '/egulias/email-validator/src/Warning/QuotedString.php',
         'Egulias\\EmailValidator\\Warning\\TLD' => __DIR__ . '/..' . '/egulias/email-validator/src/Warning/TLD.php',
         'Egulias\\EmailValidator\\Warning\\Warning' => __DIR__ . '/..' . '/egulias/email-validator/src/Warning/Warning.php',
+        'Embed\\Adapters\\Adapter' => __DIR__ . '/..' . '/embed/embed/src/Adapters/Adapter.php',
+        'Embed\\Adapters\\Archive' => __DIR__ . '/..' . '/embed/embed/src/Adapters/Archive.php',
+        'Embed\\Adapters\\Cadenaser' => __DIR__ . '/..' . '/embed/embed/src/Adapters/Cadenaser.php',
+        'Embed\\Adapters\\Carto' => __DIR__ . '/..' . '/embed/embed/src/Adapters/Carto.php',
+        'Embed\\Adapters\\Cnn' => __DIR__ . '/..' . '/embed/embed/src/Adapters/Cnn.php',
+        'Embed\\Adapters\\Facebook' => __DIR__ . '/..' . '/embed/embed/src/Adapters/Facebook.php',
+        'Embed\\Adapters\\File' => __DIR__ . '/..' . '/embed/embed/src/Adapters/File.php',
+        'Embed\\Adapters\\Flickr' => __DIR__ . '/..' . '/embed/embed/src/Adapters/Flickr.php',
+        'Embed\\Adapters\\Github' => __DIR__ . '/..' . '/embed/embed/src/Adapters/Github.php',
+        'Embed\\Adapters\\Google' => __DIR__ . '/..' . '/embed/embed/src/Adapters/Google.php',
+        'Embed\\Adapters\\Howcast' => __DIR__ . '/..' . '/embed/embed/src/Adapters/Howcast.php',
+        'Embed\\Adapters\\Ideone' => __DIR__ . '/..' . '/embed/embed/src/Adapters/Ideone.php',
+        'Embed\\Adapters\\Imageshack' => __DIR__ . '/..' . '/embed/embed/src/Adapters/Imageshack.php',
+        'Embed\\Adapters\\Instagram' => __DIR__ . '/..' . '/embed/embed/src/Adapters/Instagram.php',
+        'Embed\\Adapters\\Jsfiddle' => __DIR__ . '/..' . '/embed/embed/src/Adapters/Jsfiddle.php',
+        'Embed\\Adapters\\Lavozdegalicia' => __DIR__ . '/..' . '/embed/embed/src/Adapters/Lavozdegalicia.php',
+        'Embed\\Adapters\\Line' => __DIR__ . '/..' . '/embed/embed/src/Adapters/Line.php',
+        'Embed\\Adapters\\N500px' => __DIR__ . '/..' . '/embed/embed/src/Adapters/N500px.php',
+        'Embed\\Adapters\\Parleys' => __DIR__ . '/..' . '/embed/embed/src/Adapters/Parleys.php',
+        'Embed\\Adapters\\Pastebin' => __DIR__ . '/..' . '/embed/embed/src/Adapters/Pastebin.php',
+        'Embed\\Adapters\\Pastie' => __DIR__ . '/..' . '/embed/embed/src/Adapters/Pastie.php',
+        'Embed\\Adapters\\Pinterest' => __DIR__ . '/..' . '/embed/embed/src/Adapters/Pinterest.php',
+        'Embed\\Adapters\\Sassmeister' => __DIR__ . '/..' . '/embed/embed/src/Adapters/Sassmeister.php',
+        'Embed\\Adapters\\Slides' => __DIR__ . '/..' . '/embed/embed/src/Adapters/Slides.php',
+        'Embed\\Adapters\\Snipplr' => __DIR__ . '/..' . '/embed/embed/src/Adapters/Snipplr.php',
+        'Embed\\Adapters\\Twitter' => __DIR__ . '/..' . '/embed/embed/src/Adapters/Twitter.php',
+        'Embed\\Adapters\\Vimeo' => __DIR__ . '/..' . '/embed/embed/src/Adapters/Vimeo.php',
+        'Embed\\Adapters\\Webpage' => __DIR__ . '/..' . '/embed/embed/src/Adapters/Webpage.php',
+        'Embed\\Adapters\\Wikipedia' => __DIR__ . '/..' . '/embed/embed/src/Adapters/Wikipedia.php',
+        'Embed\\Adapters\\Youtube' => __DIR__ . '/..' . '/embed/embed/src/Adapters/Youtube.php',
+        'Embed\\Bag' => __DIR__ . '/..' . '/embed/embed/src/Bag.php',
+        'Embed\\DataInterface' => __DIR__ . '/..' . '/embed/embed/src/DataInterface.php',
+        'Embed\\Embed' => __DIR__ . '/..' . '/embed/embed/src/Embed.php',
+        'Embed\\Exceptions\\EmbedException' => __DIR__ . '/..' . '/embed/embed/src/Exceptions/EmbedException.php',
+        'Embed\\Exceptions\\InvalidUrlException' => __DIR__ . '/..' . '/embed/embed/src/Exceptions/InvalidUrlException.php',
+        'Embed\\Http\\AbstractResponse' => __DIR__ . '/..' . '/embed/embed/src/Http/AbstractResponse.php',
+        'Embed\\Http\\CurlDispatcher' => __DIR__ . '/..' . '/embed/embed/src/Http/CurlDispatcher.php',
+        'Embed\\Http\\CurlResult' => __DIR__ . '/..' . '/embed/embed/src/Http/CurlResult.php',
+        'Embed\\Http\\DispatcherInterface' => __DIR__ . '/..' . '/embed/embed/src/Http/DispatcherInterface.php',
+        'Embed\\Http\\ImageResponse' => __DIR__ . '/..' . '/embed/embed/src/Http/ImageResponse.php',
+        'Embed\\Http\\Redirects' => __DIR__ . '/..' . '/embed/embed/src/Http/Redirects.php',
+        'Embed\\Http\\Response' => __DIR__ . '/..' . '/embed/embed/src/Http/Response.php',
+        'Embed\\Http\\Url' => __DIR__ . '/..' . '/embed/embed/src/Http/Url.php',
+        'Embed\\Providers\\Api\\Archive' => __DIR__ . '/..' . '/embed/embed/src/Providers/Api/Archive.php',
+        'Embed\\Providers\\Api\\Facebook' => __DIR__ . '/..' . '/embed/embed/src/Providers/Api/Facebook.php',
+        'Embed\\Providers\\Api\\Gist' => __DIR__ . '/..' . '/embed/embed/src/Providers/Api/Gist.php',
+        'Embed\\Providers\\Api\\GoogleMaps' => __DIR__ . '/..' . '/embed/embed/src/Providers/Api/GoogleMaps.php',
+        'Embed\\Providers\\Api\\Imageshack' => __DIR__ . '/..' . '/embed/embed/src/Providers/Api/Imageshack.php',
+        'Embed\\Providers\\Api\\Soundcloud' => __DIR__ . '/..' . '/embed/embed/src/Providers/Api/Soundcloud.php',
+        'Embed\\Providers\\Api\\Wikipedia' => __DIR__ . '/..' . '/embed/embed/src/Providers/Api/Wikipedia.php',
+        'Embed\\Providers\\Dcterms' => __DIR__ . '/..' . '/embed/embed/src/Providers/Dcterms.php',
+        'Embed\\Providers\\Html' => __DIR__ . '/..' . '/embed/embed/src/Providers/Html.php',
+        'Embed\\Providers\\Linkpulse' => __DIR__ . '/..' . '/embed/embed/src/Providers/Linkpulse.php',
+        'Embed\\Providers\\OEmbed' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed.php',
+        'Embed\\Providers\\OEmbed\\Amcharts' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed/Amcharts.php',
+        'Embed\\Providers\\OEmbed\\Bambuser' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed/Bambuser.php',
+        'Embed\\Providers\\OEmbed\\DOM' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed/DOM.php',
+        'Embed\\Providers\\OEmbed\\Dailymotion' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed/Dailymotion.php',
+        'Embed\\Providers\\OEmbed\\Deviantart' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed/Deviantart.php',
+        'Embed\\Providers\\OEmbed\\Dotsub' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed/Dotsub.php',
+        'Embed\\Providers\\OEmbed\\Embedly' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed/Embedly.php',
+        'Embed\\Providers\\OEmbed\\EndPoint' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed/EndPoint.php',
+        'Embed\\Providers\\OEmbed\\EndPointInterface' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed/EndPointInterface.php',
+        'Embed\\Providers\\OEmbed\\Facebook' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed/Facebook.php',
+        'Embed\\Providers\\OEmbed\\Flickr' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed/Flickr.php',
+        'Embed\\Providers\\OEmbed\\Iframely' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed/Iframely.php',
+        'Embed\\Providers\\OEmbed\\Imgur' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed/Imgur.php',
+        'Embed\\Providers\\OEmbed\\Infogram' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed/Infogram.php',
+        'Embed\\Providers\\OEmbed\\Instagram' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed/Instagram.php',
+        'Embed\\Providers\\OEmbed\\Jsbin' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed/Jsbin.php',
+        'Embed\\Providers\\OEmbed\\Kickstarter' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed/Kickstarter.php',
+        'Embed\\Providers\\OEmbed\\Meetup' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed/Meetup.php',
+        'Embed\\Providers\\OEmbed\\Mixcloud' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed/Mixcloud.php',
+        'Embed\\Providers\\OEmbed\\Photobucket' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed/Photobucket.php',
+        'Embed\\Providers\\OEmbed\\Poll' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed/Poll.php',
+        'Embed\\Providers\\OEmbed\\Polldaddy' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed/Polldaddy.php',
+        'Embed\\Providers\\OEmbed\\Reddit' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed/Reddit.php',
+        'Embed\\Providers\\OEmbed\\Scribd' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed/Scribd.php',
+        'Embed\\Providers\\OEmbed\\Shoudio' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed/Shoudio.php',
+        'Embed\\Providers\\OEmbed\\Smugmug' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed/Smugmug.php',
+        'Embed\\Providers\\OEmbed\\Soundcloud' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed/Soundcloud.php',
+        'Embed\\Providers\\OEmbed\\Spotify' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed/Spotify.php',
+        'Embed\\Providers\\OEmbed\\Tiktok' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed/Tiktok.php',
+        'Embed\\Providers\\OEmbed\\Tumblr' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed/Tumblr.php',
+        'Embed\\Providers\\OEmbed\\Twitch' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed/Twitch.php',
+        'Embed\\Providers\\OEmbed\\Twitter' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed/Twitter.php',
+        'Embed\\Providers\\OEmbed\\Ustream' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed/Ustream.php',
+        'Embed\\Providers\\OEmbed\\Vimeo' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed/Vimeo.php',
+        'Embed\\Providers\\OEmbed\\Wordpress' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed/Wordpress.php',
+        'Embed\\Providers\\OEmbed\\Youtube' => __DIR__ . '/..' . '/embed/embed/src/Providers/OEmbed/Youtube.php',
+        'Embed\\Providers\\OpenGraph' => __DIR__ . '/..' . '/embed/embed/src/Providers/OpenGraph.php',
+        'Embed\\Providers\\Provider' => __DIR__ . '/..' . '/embed/embed/src/Providers/Provider.php',
+        'Embed\\Providers\\Sailthru' => __DIR__ . '/..' . '/embed/embed/src/Providers/Sailthru.php',
+        'Embed\\Providers\\TwitterCards' => __DIR__ . '/..' . '/embed/embed/src/Providers/TwitterCards.php',
+        'Embed\\Utils' => __DIR__ . '/..' . '/embed/embed/src/Utils.php',
         'Emilianotisato\\NovaTinyMCE\\Console\\SupportFileManagerCommand' => __DIR__ . '/..' . '/emilianotisato/nova-tinymce/src/Console/SupportFileManagerCommand.php',
         'Emilianotisato\\NovaTinyMCE\\FieldServiceProvider' => __DIR__ . '/..' . '/emilianotisato/nova-tinymce/src/FieldServiceProvider.php',
         'Emilianotisato\\NovaTinyMCE\\NovaTinyMCE' => __DIR__ . '/..' . '/emilianotisato/nova-tinymce/src/NovaTinyMCE.php',
@@ -3860,6 +3979,8 @@ class ComposerStaticInit8e002b5a0e483662cc63bf31cc950f31
         'Intervention\\Image\\Response' => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image/Response.php',
         'Intervention\\Image\\Size' => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image/Size.php',
         'IntlDateFormatter' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/Resources/stubs/IntlDateFormatter.php',
+        'Jangvel\\NovaGutenberg\\FieldServiceProvider' => __DIR__ . '/..' . '/jangvel/nova-gutenberg/src/FieldServiceProvider.php',
+        'Jangvel\\NovaGutenberg\\NovaGutenberg' => __DIR__ . '/..' . '/jangvel/nova-gutenberg/src/NovaGutenberg.php',
         'Jorenvh\\Share\\Providers\\ShareServiceProvider' => __DIR__ . '/..' . '/jorenvanhocht/laravel-share/src/Providers/ShareServiceProvider.php',
         'Jorenvh\\Share\\Share' => __DIR__ . '/..' . '/jorenvanhocht/laravel-share/src/Share.php',
         'Jorenvh\\Share\\ShareFacade' => __DIR__ . '/..' . '/jorenvanhocht/laravel-share/src/ShareFacade.php',
@@ -5179,16 +5300,6 @@ class ComposerStaticInit8e002b5a0e483662cc63bf31cc950f31
         'Nette\\Utils\\UnknownImageFileException' => __DIR__ . '/..' . '/nette/utils/src/Utils/exceptions.php',
         'Nette\\Utils\\Validators' => __DIR__ . '/..' . '/nette/utils/src/Utils/Validators.php',
         'Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',
-        'NumaxLab\\NovaCKEditor5Classic\\CKEditor5Classic' => __DIR__ . '/..' . '/numaxlab/nova-ckeditor5-classic/src/CKEditor5Classic.php',
-        'NumaxLab\\NovaCKEditor5Classic\\FieldServiceProvider' => __DIR__ . '/..' . '/numaxlab/nova-ckeditor5-classic/src/FieldServiceProvider.php',
-        'NumaxLab\\NovaCKEditor5Classic\\Handlers\\DiscardPendingAttachments' => __DIR__ . '/..' . '/numaxlab/nova-ckeditor5-classic/src/Handlers/DiscardPendingAttachments.php',
-        'NumaxLab\\NovaCKEditor5Classic\\Handlers\\StorePendingAttachment' => __DIR__ . '/..' . '/numaxlab/nova-ckeditor5-classic/src/Handlers/StorePendingAttachment.php',
-        'NumaxLab\\NovaCKEditor5Classic\\Http\\Controllers\\UploadController' => __DIR__ . '/..' . '/numaxlab/nova-ckeditor5-classic/src/Http/Controllers/UploadController.php',
-        'NumaxLab\\NovaCKEditor5Classic\\Jobs\\PruneStaleAttachments' => __DIR__ . '/..' . '/numaxlab/nova-ckeditor5-classic/src/Jobs/PruneStaleAttachments.php',
-        'NumaxLab\\NovaCKEditor5Classic\\Models\\Attachment' => __DIR__ . '/..' . '/numaxlab/nova-ckeditor5-classic/src/Models/Attachment.php',
-        'NumaxLab\\NovaCKEditor5Classic\\Models\\DeleteAttachments' => __DIR__ . '/..' . '/numaxlab/nova-ckeditor5-classic/src/Models/DeleteAttachments.php',
-        'NumaxLab\\NovaCKEditor5Classic\\Models\\DetachAttachment' => __DIR__ . '/..' . '/numaxlab/nova-ckeditor5-classic/src/Models/DetachAttachment.php',
-        'NumaxLab\\NovaCKEditor5Classic\\Models\\PendingAttachment' => __DIR__ . '/..' . '/numaxlab/nova-ckeditor5-classic/src/Models/PendingAttachment.php',
         'NumberFormatter' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/Resources/stubs/NumberFormatter.php',
         'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider' => __DIR__ . '/..' . '/nunomaduro/collision/src/Adapters/Laravel/CollisionServiceProvider.php',
         'NunoMaduro\\Collision\\Adapters\\Laravel\\Commands\\TestCommand' => __DIR__ . '/..' . '/nunomaduro/collision/src/Adapters/Laravel/Commands/TestCommand.php',
@@ -8299,6 +8410,18 @@ class ComposerStaticInit8e002b5a0e483662cc63bf31cc950f31
         'UniSharp\\LaravelFilemanager\\Middlewares\\CreateDefaultFolder' => __DIR__ . '/..' . '/unisharp/laravel-filemanager/src/Middlewares/CreateDefaultFolder.php',
         'UniSharp\\LaravelFilemanager\\Middlewares\\MultiUser' => __DIR__ . '/..' . '/unisharp/laravel-filemanager/src/Middlewares/MultiUser.php',
         'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
+        'VanOns\\Laraberg\\Blocks\\Block' => __DIR__ . '/..' . '/van-ons/laraberg/src/Blocks/Block.php',
+        'VanOns\\Laraberg\\Blocks\\BlockParser' => __DIR__ . '/..' . '/van-ons/laraberg/src/Blocks/BlockParser.php',
+        'VanOns\\Laraberg\\Blocks\\BlockType' => __DIR__ . '/..' . '/van-ons/laraberg/src/Blocks/BlockType.php',
+        'VanOns\\Laraberg\\Blocks\\BlockTypeRegistry' => __DIR__ . '/..' . '/van-ons/laraberg/src/Blocks/BlockTypeRegistry.php',
+        'VanOns\\Laraberg\\Blocks\\ContentRenderer' => __DIR__ . '/..' . '/van-ons/laraberg/src/Blocks/ContentRenderer.php',
+        'VanOns\\Laraberg\\Controllers\\BlockRendererController' => __DIR__ . '/..' . '/van-ons/laraberg/src/Controllers/BlockRendererController.php',
+        'VanOns\\Laraberg\\Controllers\\OEmbedController' => __DIR__ . '/..' . '/van-ons/laraberg/src/Controllers/OEmbedController.php',
+        'VanOns\\Laraberg\\Exceptions\\OEmbedFetchException' => __DIR__ . '/..' . '/van-ons/laraberg/src/Exceptions/OEmbedFetchException.php',
+        'VanOns\\Laraberg\\Laraberg' => __DIR__ . '/..' . '/van-ons/laraberg/src/Laraberg.php',
+        'VanOns\\Laraberg\\LarabergServiceProvider' => __DIR__ . '/..' . '/van-ons/laraberg/src/LarabergServiceProvider.php',
+        'VanOns\\Laraberg\\Services\\OEmbedService' => __DIR__ . '/..' . '/van-ons/laraberg/src/Services/OEmbedService.php',
+        'VanOns\\Laraberg\\Traits\\RendersContent' => __DIR__ . '/..' . '/van-ons/laraberg/src/Traits/RendersContent.php',
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
         'Webmozart\\Assert\\InvalidArgumentException' => __DIR__ . '/..' . '/webmozart/assert/src/InvalidArgumentException.php',
         'Webmozart\\Assert\\Mixin' => __DIR__ . '/..' . '/webmozart/assert/src/Mixin.php',

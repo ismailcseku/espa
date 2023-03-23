@@ -8,6 +8,7 @@ use Laravel\Nova\Fields\Image;
 use Emilianotisato\NovaTinyMCE\NovaTinyMCE;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
+
 class Director extends Resource
 {
     /**
@@ -47,6 +48,9 @@ class Director extends Resource
             ->storeAs(function (Request $request) {
                     return $request->photo->getClientOriginalName();
             }),
+            
+            
+            
             NovaTinyMCE::make('contenu','content')->options([
                 'plugins' => [
                     'lists','preview','anchor','pagebreak','image','wordcount','fullscreen','directionality'
@@ -54,6 +58,7 @@ class Director extends Resource
                 'toolbar' => 'undo redo | styles | bold italic forecolor backcolor | alignleft aligncenter alignright alignjustify | image | bullist numlist outdent indent | link',
                 'use_lfm' => true
             ]),
+            
         ];
     }
 

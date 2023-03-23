@@ -14,12 +14,15 @@ use App\Models\Interested;
 use App\Models\Responsable;
 use App\Models\TrainingType;
 use Illuminate\Database\Eloquent\Model;
+use VanOns\Laraberg\Traits\RendersContent;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Course extends Model
 {
     use HasFactory;
+    use RendersContent;
+    protected $contentColumn = 'content';
     protected $fillable=[
         'position',
         'name',

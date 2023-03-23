@@ -9,6 +9,7 @@
         "emilianotisato/nova-tinymce": "^2.0",
         "formfeed-uk/nova-logo-url": "^1.0",
         "guzzlehttp/guzzle": "^7.2",
+        "jangvel/nova-gutenberg": "^1.0",
         "jorenvanhocht/laravel-share": "^4.2",
         "laravel/framework": "^9.19",
         "laravel/nova": "~4.0",
@@ -16,7 +17,6 @@
         "laravel/tinker": "^2.7",
         "maatwebsite/laravel-nova-excel": "^1.3",
         "mostafaznv/nova-video": "^4.0",
-        "numaxlab/nova-ckeditor5-classic": "^1.1",
         "outl1ne/nova-color-field": "^2.0",
         "unisharp/laravel-filemanager": "^2.6"
     },
