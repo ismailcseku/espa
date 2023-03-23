@@ -13,11 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('mediavideos', function (Blueprint $table) {
-            $table->id();
-            $table->string('title');
-            $table->text('video');
-            $table->timestamps();
+        Schema::table('mediavideos', function (Blueprint $table) {
+            $table->foreignId('category_video_id');
+            $table->foreign('category_video_id')->references('id')->on('category_videos')->onDelete('cascade');
         });
     }
 
@@ -28,6 +26,9 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mediavideos');
+        Schema::table('mediavideos', function (Blueprint $table) {
+            $table->dropColumn('category_video_id');
+           
+        });
     }
 };

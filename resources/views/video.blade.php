@@ -39,26 +39,19 @@
                 <div class="section-content">
                     <div class="row">
                         <div class="col-md-12">
-
+                     
 
 
                             <div class="gallery-isotope default-animation-effect grid-3 gutter-small clearfix"
                                 data-lightbox="gallery">
                                 <!-- Portfolio Item Start -->
                                 @foreach ($videos as $video)
-                                    <div class="gallery-item ">
-                                        <div class="thumb" style="text-align: center;">
-                                            <video class="img-fullwidth" style="postion:relative;"
-                                                src="{{ url('storage') }}/{{ $video->video }}" controls></video>
-                                            <p class="font-16 " style="color:rgb(45, 69, 88);">{{ $video->title }}</p>
-
-                                        </div>
+                                    <div class="gallery-item">
+                                        <iframe width="420" height="345"
+                                            src="https://www.youtube.com/embed/{{ $video->video }}">
+                                        </iframe>
                                     </div>
                                 @endforeach
-
-
-
-
                             </div>
                             <!-- End Portfolio Gallery Grid -->
 
@@ -82,6 +75,10 @@
                 flex-direction: column;
                 align-items: center;
             }
+        }
+        .gallery-item{
+            padding-left: 7px;
+            margin-bottom: 7px;
         }
     </style>
 @endsection

@@ -41,6 +41,7 @@ use App\Nova\CategoryBlog;
 use App\Nova\Downloadpage;
 use App\Nova\TrainingType;
 use App\Nova\CategoryMedia;
+use App\Nova\CategoryVideo;
 use App\Nova\Evenementpage;
 use App\Nova\MessageNewsletter;
 use Laravel\Nova\Menu\MenuItem;
@@ -110,6 +111,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                     ])->collapsable(),
                     MenuSection::make('Media', [
                         MenuItem::resource(CategoryMedia::class),
+                        MenuItem::resource(CategoryVideo::class),
                         MenuItem::resource(Media::class),
                         MenuItem::resource(Mediavideo::class),
                     ])->collapsable(),

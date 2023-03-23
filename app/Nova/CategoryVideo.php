@@ -5,25 +5,24 @@ namespace App\Nova;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
-use Mostafaznv\NovaVideo\Video;
-use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Mediavideo extends Resource
+class CategoryVideo extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\Mediavideo>
+     * @var class-string<\App\Models\CategoryVideo>
      */
-    public static $model = \App\Models\Mediavideo::class;
+    public static $model = \App\Models\CategoryVideo::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'name';
 
     /**
      * The columns that should be searched.
@@ -44,16 +43,8 @@ class Mediavideo extends Resource
     {
         return [
             ID::make()->sortable(),
-            BelongsTo::make('Catégories','vidéos','App\Nova\CategoryVideo'),
-            Text::make('Titre','title'),
-            Text::make('Url youtube','video'),
-            /*Video::make('Une Vidéo','video')->disk('public')
-            ->storeAs(function (Request $request) {
-                return $request->video->getClientOriginalName();
-             })->rules('file', 'max:600000', 'mimes:mp4,avi,mpeg,quicktime', 'mimetypes:video/mp4,video/avi,video/mpeg,video/quicktime')
-                ->creationRules('required')
-                ->updateRules('nullable'),
-                */
+            Text::make('Nom','name'),
+            HasMany::make('Catégories','video','App\Nova\Mediavideo'),
         ];
     }
 
@@ -102,6 +93,6 @@ class Mediavideo extends Resource
     }
     public static function label()
     {
-        return 'Les vidéos';
+        return 'Catégories vidéo';
     }
 }

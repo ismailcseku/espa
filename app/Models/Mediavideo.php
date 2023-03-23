@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\CategoryVideo;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Mediavideo extends Model
 {
@@ -12,4 +13,8 @@ class Mediavideo extends Model
         'title',
         'video'
     ];
+   public function vidéos()
+    {
+        return $this->belongsTo(CategoryVideo::class, 'category_video_id');
+    }
 }
