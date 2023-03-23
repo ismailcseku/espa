@@ -40,13 +40,20 @@
                     <div class="row">
                         <div class="col-md-12">
                      
-
+                            <div class="portfolio-filter">
+                                <a href="#" class="active" data-filter="*">Tous</a>
+                                @foreach ($categories as $category)
+                                    <a href="#a{{ $category->id }}" class=""
+                                        data-filter=".a{{ $category->id }}">{{ $category->name }}</a>
+                                @endforeach
+                            </div>
 
                             <div class="gallery-isotope default-animation-effect grid-3 gutter-small clearfix"
                                 data-lightbox="gallery">
                                 <!-- Portfolio Item Start -->
                                 @foreach ($videos as $video)
-                                    <div class="gallery-item">
+                               
+                                    <div class="gallery-item  a{{ $video->category_video_id }}">
                                         <iframe width="420" height="345"
                                             src="https://www.youtube.com/embed/{{ $video->video }}">
                                         </iframe>
